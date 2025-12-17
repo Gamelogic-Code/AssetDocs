@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How to use post effects | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How to use post effects | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/common/docs/how-to-use-post-effects.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-use-post-effects">How to use post effects</h1>
+
+<h2 id="built-in-render-pipeline">Built-in Render Pipeline</h2>
+<p>Post effects for the Built-in Render Pipeline are those components that implement the <code>IPostProcess</code> interface.</p>
+<h3 id="adding-an-effect-directly-to-a-camera">Adding an effect directly to a camera</h3>
+<ol>
+<li>Add the post-process component directly to the camera you want it to affect.</li>
+</ol>
+<h3 id="using-postprocessrunner">Using <code>PostProcessRunner</code></h3>
+<ol>
+<li>Create an empty <code>GameObject</code> to hold your post effects (for example, name it <strong>PostEffects</strong>).
+Add the effect components to this object or to its children.</li>
+<li>Add a <code>PostProcessRunner</code> component to your camera.</li>
+<li>Assign the <strong>PostEffects</strong> object to the <code>EffectsRoot</code> field of the <code>PostProcessRunner</code>.</li>
+</ol>
+<p>This workflow is useful when you have multiple cameras or when you want to enable and disable many effects while experimenting.</p>
+<h3 id="using-your-own-post-process-component">Using your own post-process component</h3>
+<p>You can also use the shader inside a custom post-process component.
+Here is an example:</p>
+<pre><code class="lang-csharp">using UnityEngine;
+
+namespace Gamelogic.Fx.Samples.BuiltIn
+{
+    /// &lt;summary&gt;
+    /// This is an example of how to write a post process component to use one opf the post-process shaders meant for the
+    /// Built-in Render Pipeline. 
+    /// &lt;/summary&gt;
+    [ExecuteInEditMode]
+    [RequireComponent(typeof(Camera))]
+    public class MyAdjustGamma : MonoBehaviour
+    {
+        // Expose properties in the inspector you want the user to control 
+        [Range(0.1f, 5f)]
+        [SerializeField] private float gamma = 2.2f;
+    
+        [SerializeField] private Shader shader;
+
+        private Material material;
+
+        private void OnEnable()
+        {
+            // Find the shader to use. 
+            if (shader == null)
+            {
+                shader = Shader.Find(&quot;Gamelogic/Fx/BuiltIn/AdjustGamma&quot;);
+            }
+
+            // Create a material for the shader.  
+            if (shader != null &amp;&amp; material == null)
+            {
+                material = new Material(shader)
+                {
+                    hideFlags = HideFlags.DontSave
+                };
+            }
+        }
+
+        // The work happens here. If this component is attached to a camera, this method is called automatically by Unity.
+        private void OnRenderImage(RenderTexture src, RenderTexture dest)
+        {
+            // If the material is not ready, just blit the source to destination.
+            if (material == null)
+            {
+                Graphics.Blit(src, dest);
+                return;
+            }
+
+            // SetTextureTiling the properties on the material and do the blit.
+            material.SetFloat(&quot;_Gamma&quot;, gamma);
+            Graphics.Blit(src, dest, material);
+        }
+
+        private void OnDisable()
+        {
+            // Cleanup the material.
+            if (material != null)
+            {
+                DestroyImmediate(material);
+            }
+        }
+    }
+}
+</code></pre><h2 id="universal-render-pipeline-urp">Universal Render Pipeline (URP)</h2>
+<p>⚠️ Note: Currently URP post process shaders do not work with <code>RenderGraph</code>, and you have to enable <strong>Compatibility
+Mode</strong>:</p>
+<blockquote>
+<p>Project Settings → Graphics → URP → Compatibility Mode (Disable Render Graph)</p>
+</blockquote>
+<p>Post effects are implemented as <code>ScriptableRendererFeature</code> components in URP, and you can add them directly to your
+URP renderer asset.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

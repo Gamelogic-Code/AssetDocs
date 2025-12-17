@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Pattern Texture Generator | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Pattern Texture Generator | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/common/docs/pattern-texture-generator.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="pattern-texture-generator">Pattern Texture Generator</h1>
+
+<p>The <strong>Pattern Texture Generator</strong> is one of the texture generation editor tools that allows you to create a wide
+variety of procedural pattern textures directly inside Unity.</p>
+<p>Open it via:</p>
+<pre><code>Gamelogic → Tools → Texture Generation → Pattern Texture Generator
+</code></pre>
+<h2 id="overview">Overview</h2>
+<p>The tool supports the following pattern types:</p>
+<ul>
+<li>Checkerboard</li>
+<li>White Noise</li>
+<li>Multi-Channel White Noise</li>
+<li>Color List Noise</li>
+<li>HSL Color Map</li>
+<li>Sine Grid</li>
+</ul>
+<p>Each pattern offers its own set of controls, detailed below.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ol>
+<li>Select the <strong>Pattern Type</strong>.</li>
+<li>Adjust the <strong>Pattern Settings</strong>.</li>
+<li>Review the <strong>Preview</strong> (updates automatically).</li>
+<li>Click <strong>Save Texture</strong> to export as PNG.</li>
+</ol>
+<p><a href="texture-generation-tools.html">Texture generation tools</a> explain the workflow and global settings.</p>
+<h2 id="pattern-types">Pattern Types</h2>
+<p>Below are all available pattern types and their configurable properties.</p>
+<h3 id="checkerboard">CheckerBoard</h3>
+<p>Generates a two-color tiling pattern.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Color 1</strong></td>
+<td>🎨</td>
+<td>Color of the first tile.</td>
+</tr>
+<tr>
+<td><strong>Color 2</strong></td>
+<td>🎨</td>
+<td>Color of the second tile.</td>
+</tr>
+<tr>
+<td><strong>Cell Dimensions</strong></td>
+<td>Integers ≥ 1</td>
+<td>Pixel width and height of each checker cell.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/checkerboard.png" alt=""></p>
+<hr>
+<h3 id="white-noise">White Noise</h3>
+<p>Generates pure grayscale or color noise by interpolating between two colors.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Color 1</strong></td>
+<td>🎨</td>
+<td>Lower bound for noise interpolation.</td>
+</tr>
+<tr>
+<td><strong>Color 2</strong></td>
+<td>🎨</td>
+<td>Upper bound for noise interpolation.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/white_noise.png" alt=""></p>
+<hr>
+<h3 id="multi-channel-white-noise">Multi-Channel White Noise</h3>
+<p>Generates independent white noise for Red, Green, and Blue, with channel isolation options.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Value Range (Min)</strong></td>
+<td>[–1, 1]</td>
+<td>Minimum sampling range for noise values.</td>
+</tr>
+<tr>
+<td><strong>Value Range (Max)</strong></td>
+<td>[–1, 1]</td>
+<td>Maximum sampling range for noise values.</td>
+</tr>
+<tr>
+<td><strong>Channel View</strong></td>
+<td>{All, Red, Green,  Blue}</td>
+<td>Choose which channel(s) to visualize.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/multi_channel_white_noise.png" alt=""></p>
+<hr>
+<h3 id="color-list-noise">Color List Noise</h3>
+<p>Creates noise where each pixel is randomly assigned either a background color or a color chosen from a customizable list.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Background Color</strong></td>
+<td>🎨</td>
+<td>Base color for most pixels.</td>
+</tr>
+<tr>
+<td><strong>Foreground Colors</strong></td>
+<td>🎨*</td>
+<td>Editable list of possible foreground colors.</td>
+</tr>
+<tr>
+<td><strong>Foreground Probability</strong></td>
+<td>[0, 1]</td>
+<td>Probability that a pixel uses a foreground color instead of the background.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/color_list_noise.png" alt=""></p>
+<hr>
+<h3 id="hue-lightness-sheet">Hue-Lightness Sheet</h3>
+<p>Generates an hue-lightness color sheet:</p>
+<ul>
+<li>Horizontal axis: Hue</li>
+<li>Vertical axis: Lightness (Black → Hue → White)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(No additional controls)</em></td>
+<td>–</td>
+<td>Texture is fully determined by UV mapping.</td>
+</tr>
+</tbody>
+</table>
+<p>!(../images/texture_generation/hsl_color.png)</p>
+<hr>
+<h3 id="sine-grid">Sine Grid</h3>
+<p>Creates smooth grid pattern using sin(2πfx) * sin(2πfy).</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>[0, ∞]</td>
+<td>Number of oscillations across the texture.</td>
+</tr>
+<tr>
+<td><strong>Color 1</strong></td>
+<td>🎨</td>
+<td>Color for low values (0).</td>
+</tr>
+<tr>
+<td><strong>Color 2</strong></td>
+<td>🎨</td>
+<td>Color for high values (1).</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/sine_grid.png" alt=""></p>
+<p>Here are the <strong>missing documentation sections</strong> for the patterns your tool supports but your documentation page does <em>not</em> yet include:</p>
+<h2 id="multi-sine-grid">Multi-Sine Grid</h2>
+<p>Adds three smooth grid patterns made from sin(2πfx) * sin(2πfy) each at a different frequency.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency 1</strong></td>
+<td>[0, ∞]</td>
+<td>Frequency of the first sine pair.</td>
+</tr>
+<tr>
+<td><strong>Amplitude 1</strong></td>
+<td>any</td>
+<td>Contribution strength of the first sine pair.</td>
+</tr>
+<tr>
+<td><strong>Offset 1</strong></td>
+<td>any</td>
+<td>Phase offset applied to the first sine pair.</td>
+</tr>
+<tr>
+<td><strong>Frequency 2</strong></td>
+<td>[0, ∞]</td>
+<td>Frequency of the second sine pair.</td>
+</tr>
+<tr>
+<td><strong>Amplitude 2</strong></td>
+<td>any</td>
+<td>Contribution strength of the second sine pair.</td>
+</tr>
+<tr>
+<td><strong>Offset 2</strong></td>
+<td>any</td>
+<td>Phase offset applied to the second sine pair.</td>
+</tr>
+<tr>
+<td><strong>Frequency 3</strong></td>
+<td>[0, ∞]</td>
+<td>Frequency of the third sine pair.</td>
+</tr>
+<tr>
+<td><strong>Amplitude 3</strong></td>
+<td>any</td>
+<td>Contribution strength of the third sine pair.</td>
+</tr>
+<tr>
+<td><strong>Offset 3</strong></td>
+<td>any</td>
+<td>Phase offset applied to the third sine pair.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/multi-sine.png" alt=""></p>
+<hr>
+<h2 id="value-noise">Value Noise</h2>
+<p>Generates a smooth noise texture by sampling a coarse grid of white noise and bilinearly interpolating between them.
+Gamma can be applied to bias the distribution toward light or dark values.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency Power</strong></td>
+<td>[0, 12]</td>
+<td>Determines grid resolution: cell size = textureSize / 2^N.</td>
+</tr>
+<tr>
+<td><strong>Log Gamma</strong></td>
+<td>[–1, 1]</td>
+<td>Applies a gamma bias: value = pow(noise, 10^{–logGamma}).</td>
+</tr>
+<tr>
+<td><strong>Color 1</strong></td>
+<td>🎨</td>
+<td>Low end of the color mapping.</td>
+</tr>
+<tr>
+<td><strong>Color 2</strong></td>
+<td>🎨</td>
+<td>High end of the color mapping.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/value-noise.png" alt=""></p>
+<hr>
+<h2 id="multi-channel-value-noise">Multi-Channel Value Noise</h2>
+<p>Like Value Noise, but each of the RGB channels is generated independently, producing colored smooth noise.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency Power</strong></td>
+<td>[0, 12]</td>
+<td>Determines grid resolution per channel.</td>
+</tr>
+<tr>
+<td><strong>Log Gamma</strong></td>
+<td>[–1, 1]</td>
+<td>Gamma bias applied independently to each channel.</td>
+</tr>
+<tr>
+<td><strong>Color 1</strong> / <strong>Color 2</strong></td>
+<td>🎨</td>
+<td>(Not used for this mode — output comes from RGB noise.)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/multi-channel-value-noise.png" alt=""></p>
+<h3 id="voronoi">Voronoi</h3>
+<p>Generates a Voronoi diagram using Poisson-disk sampling for site placement and Delaunay triangulation for cell construction.
+Each Voronoi region is filled with a color chosen from a user-defined palette, ensuring adjacent regions receive different colors.</p>
+<p>This pattern is useful for generating cellular textures, organic tiling, stylized maps, or region-based masks.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Poisson Radius</strong></td>
+<td>(0, ∞)</td>
+<td>Minimum distance between Voronoi sites. Larger values produce fewer, larger cells; smaller values produce denser, finer regions.</td>
+</tr>
+<tr>
+<td><strong>Foreground Colors</strong></td>
+<td>🎨*</td>
+<td>Palette of colors used to fill Voronoi regions. Adjacent regions are colored differently when possible.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>Sites are generated using Poisson-disk sampling for even spatial distribution.</li>
+<li>A Delaunay triangulation is constructed from the sites.</li>
+<li>Voronoi cells are built from triangle circumcenters.</li>
+<li>Regions are graph-colored using the DSATUR algorithm to minimize color clashes.</li>
+<li>Each region is rasterized into the output texture.</li>
+</ol>
+<p><img src="../images/texture_generation/voronoi.png" alt=""></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

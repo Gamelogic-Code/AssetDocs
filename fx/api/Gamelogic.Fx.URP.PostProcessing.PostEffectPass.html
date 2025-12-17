@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PostEffectPass | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PostEffectPass | Gamelogic Fx ">
+      
+      <meta name="description" content="Implements a basic pass that for .">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_URP_PostProcessing_PostEffectPass.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.PostProcessing.PostEffectPass%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass">
+
+
+
+  <h1 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass" class="text-break">
+Class PostEffectPass  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.URP.html">URP</a>.<a class="xref" href="Gamelogic.Fx.URP.PostProcessing.html">PostProcessing</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Fx.URP.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Implements a basic pass that for <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html">PostProcessRenderFeature</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class PostEffectPass : ScriptableRenderPass</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ScriptableRenderPass</span></div>
+      <div><span class="xref">PostEffectPass</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">ScriptableRenderPass.renderPassEvent</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.colorAttachments</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.colorAttachment</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.depthAttachment</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.colorStoreActions</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.depthStoreAction</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.input</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.clearFlag</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.clearColor</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.profilingSampler</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureInput(ScriptableRenderPassInput)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">ScriptableRenderPass.ConfigureColorStoreAction(RenderBufferStoreAction, uint)</a>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureColorStoreActions(RenderBufferStoreAction[])</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureDepthStoreAction(RenderBufferStoreAction)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ResetTarget()</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureTarget(RenderTargetIdentifier, RenderTargetIdentifier)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureTarget(RenderTargetIdentifier[], RenderTargetIdentifier)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureTarget(RenderTargetIdentifier)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureTarget(RenderTargetIdentifier[])</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.ConfigureClear(ClearFlag, Color)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.OnCameraSetup(CommandBuffer, ref RenderingData)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.Configure(CommandBuffer, RenderTextureDescriptor)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.OnCameraCleanup(CommandBuffer)</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.OnFinishCameraStackRendering(CommandBuffer)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">ScriptableRenderPass.Blit(CommandBuffer, RenderTargetIdentifier, RenderTargetIdentifier, Material, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">ScriptableRenderPass.Blit(CommandBuffer, ref RenderingData, Material, int)</a>
+    </div>
+    <div>
+      <span class="xref">ScriptableRenderPass.CreateDrawingSettings(ShaderTagId, ref RenderingData, SortingCriteria)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">ScriptableRenderPass.CreateDrawingSettings(List&lt;ShaderTagId&gt;, ref RenderingData, SortingCriteria)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Although this class is easy to extend, in many cases <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_CreateSimplePass_System_String_System_Action_UnityEngine_Material__">CreateSimplePass(string, Action&lt;Material&gt;)</a>
+will be sufficient.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass__ctor_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.#ctor*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass__ctor_UnityEngine_Material_UnityEngine_Rendering_Universal_RenderPassEvent_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.#ctor(UnityEngine.Material,UnityEngine.Rendering.Universal.RenderPassEvent)">
+  PostEffectPass(Material, RenderPassEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.html">PostEffectPass</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PostEffectPass(Material material, RenderPassEvent injectionPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>material</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
+    <dd><p>The material to use for the effect.</p>
+</dd>
+    <dt><code>injectionPoint</code> <span class="xref">RenderPassEvent</span></dt>
+    <dd><p>The render pass event to inject the effect at.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_CommandName_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.CommandName*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_CommandName" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.CommandName">
+  CommandName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the command buffer used for this pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract string CommandName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_Execute_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.Execute*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_Execute_UnityEngine_Rendering_ScriptableRenderContext_UnityEngine_Rendering_Universal_RenderingData__" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.Execute(UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData@)">
+  Execute(ScriptableRenderContext, ref RenderingData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Execute the pass. This is where custom rendering occurs. Specific details are left to the implementation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Rendering.ScriptableRenderContext.html">ScriptableRenderContext</a></dt>
+    <dd><p>Use this render context to issue any draw commands during execution</p>
+</dd>
+    <dt><code>renderingData</code> <span class="xref">RenderingData</span></dt>
+    <dd><p>Current rendering state information</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_SetMaterialProperties_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.SetMaterialProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.SetMaterialProperties(UnityEngine.Material)">
+  SetMaterialProperties(Material)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This sets properties on the given material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetMaterialProperties(Material material)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>material</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
+    <dd><p>The material to set properties on.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_SetMaterialProperties_UnityEngine_Material__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementors: override this to set the properties needed for your effect.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

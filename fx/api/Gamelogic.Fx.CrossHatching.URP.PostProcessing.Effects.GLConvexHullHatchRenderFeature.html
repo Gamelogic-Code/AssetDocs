@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GLConvexHullHatchRenderFeature | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GLConvexHullHatchRenderFeature | Gamelogic Fx ">
+      
+      <meta name="description" content="A post-process that maps each pixel&#39;s color toward a set of primary colors but modulates the projection with a hatching texture.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature">
+
+
+
+  <h1 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature" class="text-break">
+Class GLConvexHullHatchRenderFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.html">CrossHatching</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.URP.html">URP</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.URP.PostProcessing.html">PostProcessing</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.html">Effects</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Fx.CrossHatching.URP.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A post-process that maps each pixel's color toward a set of primary colors but modulates
+the projection with a hatching texture.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/cross-hatching/docs/effects-reference-crosshatching.html#convex-hull-hatch&quot;)]
+[Version(1, 0, 0)]
+public sealed class GLConvexHullHatchRenderFeature : PostProcessRenderFeature, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
+      <div><span class="xref">ScriptableRendererFeature</span></div>
+      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html">PostProcessRenderFeature</a></div>
+      <div><span class="xref">GLConvexHullHatchRenderFeature</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_OnEnable">PostProcessRenderFeature.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_Create">PostProcessRenderFeature.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">PostProcessRenderFeature.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
+    </div>
+    <div>
+      <span class="xref">ScriptableRendererFeature.isActive</span>
+    </div>
+    <div>
+      <span class="xref">ScriptableRendererFeature.OnCameraPreCull(ScriptableRenderer, in CameraData)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">ScriptableRendererFeature.SetActive(bool)</a>
+    </div>
+    <div>
+      <span class="xref">ScriptableRendererFeature.Dispose()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.SetDirty.html">ScriptableObject.SetDirty()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ScriptableObject.CreateInstance(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">ScriptableObject.CreateInstance(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.CreateInstance.html">ScriptableObject.CreateInstance&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetInstanceID.html">Object.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetHashCode.html">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Object.Instantiate(Object, Vector3, Quaternion, Transform)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">Object.DontDestroyOnLoad(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectsByType.html">Object.FindObjectsByType&lt;T&gt;(FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectsByType.html">Object.FindObjectsByType&lt;T&gt;(FindObjectsInactive, FindObjectsSortMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">Object.FindObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindFirstObjectByType.html">Object.FindFirstObjectByType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindAnyObjectByType.html">Object.FindAnyObjectByType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindFirstObjectByType.html">Object.FindFirstObjectByType&lt;T&gt;(FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindAnyObjectByType.html">Object.FindAnyObjectByType&lt;T&gt;(FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindFirstObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindAnyObjectByType(Type, FindObjectsInactive)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.ToString.html">Object.ToString()</a>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_BackgroundColor_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.BackgroundColor*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_BackgroundColor" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.BackgroundColor">
+  BackgroundColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the background reference color used as the starting point
+for convex-hull color projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BackgroundColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_BaseOrientation_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.BaseOrientation*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_BaseOrientation" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.BaseOrientation">
+  BaseOrientation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the base rotation angle, in degrees, applied before per-layer orientation is added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BaseOrientation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchStrength_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchStrength*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchStrength" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchStrength">
+  HatchStrength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how strongly the hatch pattern influences the convex-hull projection.
+Higher values increase the impact of the hatching texture on color mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HatchStrength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchTexture_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchTexture" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchTexture">
+  HatchTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the hatch texture used to modulate convex-hull projection.
+Typically, a tileable line or stipple pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture2D HatchTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture2D.html">Texture2D</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchTextureTilingOffset_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchTextureTilingOffset*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchTextureTilingOffset" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchTextureTilingOffset">
+  HatchTextureTilingOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling offset applied to the hatch texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 HatchTextureTilingOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchTextureTilingScale_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchTextureTilingScale*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_HatchTextureTilingScale" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.HatchTextureTilingScale">
+  HatchTextureTilingScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling scale applied to the hatch texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 HatchTextureTilingScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_LayerCount_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.LayerCount*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_LayerCount" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.LayerCount">
+  LayerCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the number of hatching layers used to modulate the convex-hull projection.
+Higher values increase texture density and color modulation in darker regions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LayerCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_LayerOffset_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.LayerOffset*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_LayerOffset" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.LayerOffset">
+  LayerOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the per-layer UV offset applied to the hatch texture.
+The offset is multiplied by the current layer index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 LayerOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationFromTexture_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationFromTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationFromTexture" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationFromTexture">
+  OrientationFromTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether hatch orientation should be sampled from an orientation texture
+instead of being derived solely from the orientation scheme.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OrientationFromTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationScheme_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationScheme*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationScheme" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationScheme">
+  OrientationScheme
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the orientation scheme used to rotate hatching layers.
+This controls how hatch angles vary across successive layers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrientationScheme OrientationScheme { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.CrossHatching.OrientationScheme.html">OrientationScheme</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationTexture_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationTexture" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationTexture">
+  OrientationTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the texture used to sample per-region hatch orientation
+when <a class="xref" href="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.html#Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationFromTexture">OrientationFromTexture</a> is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture2D OrientationTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture2D.html">Texture2D</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationTextureTilingOffset_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationTextureTilingOffset*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationTextureTilingOffset" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationTextureTilingOffset">
+  OrientationTextureTilingOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling offset applied to the orientation texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 OrientationTextureTilingOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationTextureTilingScale_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationTextureTilingScale*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OrientationTextureTilingScale" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OrientationTextureTilingScale">
+  OrientationTextureTilingScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling scale applied to the orientation texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 OrientationTextureTilingScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_PrimaryColors_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.PrimaryColors*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_PrimaryColors" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.PrimaryColors">
+  PrimaryColors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the collection of primary colors that define the convex hull.
+These colors act as anchors toward which pixel colors are iteratively projected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Color&gt; PrimaryColors { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_ShaderName_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.ShaderName*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_ShaderName" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.ShaderName">
+  ShaderName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the shader that implements this feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override string ShaderName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_ShaderName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementers: override this to specify the shader to use for the implementation of the effect.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_Awake_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.Awake*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_Awake" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_GetPass_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.GetPass*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_GetPass" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.GetPass">
+  GetPass()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the pass used to implement this effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override PostEffectPass GetPass()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.html">PostEffectPass</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_GetPass_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This assumes effects are single pass.</p>
+<p>Implementors: return the pass that implements the effect you are creating.
+For simple passes (that only need to set material properties), you can use <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_CreateSimplePass_System_String_System_Action_UnityEngine_Material__">CreateSimplePass(string, Action&lt;Material&gt;)</a> to
+create the pass.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OnValidate_" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OnValidate*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_URP_PostProcessing_Effects_GLConvexHullHatchRenderFeature_OnValidate" data-uid="Gamelogic.Fx.CrossHatching.URP.PostProcessing.Effects.GLConvexHullHatchRenderFeature.OnValidate">
+  OnValidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/URP/Scripts/PostProcessing/Effects/GLConvexHullHatchRenderFeature.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnValidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

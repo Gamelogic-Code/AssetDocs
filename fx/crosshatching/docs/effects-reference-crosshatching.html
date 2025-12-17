@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Effects reference: Cross-hatching | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Effects reference: Cross-hatching | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/crosshatching/docs/effects-reference-crosshatching.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="effects-reference-cross-hatching">Effects reference: Cross-hatching</h1>
+
+<h2 id="convex-hull-hatch">Convex Hull Hatch</h2>
+<p>Maps each pixel’s color toward a set of primary colors using iterative convex-hull projection, while applying <strong>layered cross-hatching</strong> to modulate how strongly each primary influences the result.
+This produces stylized, textured palette mapping that blends palette reduction with drawing-like shading.</p>
+<p>Hatching is applied across multiple layers, each rotated according to the selected <strong>orientation scheme</strong>, allowing effects ranging from classic engraving to organic irregular cross-hatching.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Layer Count</strong></td>
+<td>[1, 10]</td>
+<td>Number of hatching layers used to modulate convex-hull projection. More layers increase texture density and color variation.</td>
+</tr>
+<tr>
+<td><strong>Background Color</strong></td>
+<td>🎨</td>
+<td>Base reference color used as the starting point for convex-hull projection.</td>
+</tr>
+<tr>
+<td><strong>Primary Colors (0–9)</strong></td>
+<td>🎨</td>
+<td>Palette colors that define the convex hull. Each pixel is iteratively projected toward these anchors.</td>
+</tr>
+<tr>
+<td><strong>Orientation Scheme</strong></td>
+<td>Fixed, Uniform, Golden, Parallel</td>
+<td>Determines how hatch angles are rotated across successive layers.</td>
+</tr>
+<tr>
+<td><strong>Base Orientation</strong></td>
+<td>[0, 180]</td>
+<td>Base rotation offset in degrees applied before layer-based orientation.</td>
+</tr>
+<tr>
+<td><strong>Orientation From Texture</strong></td>
+<td>true / false</td>
+<td>When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.</td>
+</tr>
+<tr>
+<td><strong>Orientation Texture</strong></td>
+<td>🔳</td>
+<td>Texture used to control per-region hatch orientation when <em>Orientation From Texture</em> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Hatch Texture</strong></td>
+<td>🔳</td>
+<td>Tileable line or stipple texture used to modulate convex-hull projection.</td>
+</tr>
+<tr>
+<td><strong>Layer Offset</strong></td>
+<td>[0, 0.5]</td>
+<td>Per-layer UV offset applied to the hatch texture. When locked, Y follows X.</td>
+</tr>
+<tr>
+<td><strong>Hatch Strength</strong></td>
+<td>[0, 5]</td>
+<td>Controls how how dark the hatch layers are.</td>
+</tr>
+<tr>
+<td><strong>Background Strength</strong></td>
+<td>[0, 1]</td>
+<td>Hw much of the orginal image to show compared to the background color.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="effects/images/convex-hull-hatch.png" alt=""></p>
+<h2 id="mixbox-convex-hull-hatch">Mixbox Convex Hull Hatch</h2>
+<blockquote>
+<p>Requires <a href="../../common/docs/mixbox.html">Mixbox</a>.</p>
+</blockquote>
+<p>Applies convex-hull palette projection modulated by a hatching texture, but performs all color blending using <strong>Mixbox</strong>, a perceptually accurate subtractive color model.
+This produces pigment-like transitions, watercolor and gouache–style layering, and more natural blending than standard linear interpolation.</p>
+<p>Hatching is applied across multiple layers, each rotated according to the selected orientation scheme, allowing expressive, drawing-like texture embedded into the palette projection.</p>
+<p>If Mixbox is unavailable, the shader outputs a flat yellow fallback.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Layer Count</strong></td>
+<td>[1, 10]</td>
+<td>Number of hatching layers used to modulate the convex-hull palette projection. Higher values increase texture density and layering depth.</td>
+</tr>
+<tr>
+<td><strong>Background Color</strong></td>
+<td>🎨</td>
+<td>Base reference color used as the starting point for convex-hull projection before Mixbox blending.</td>
+</tr>
+<tr>
+<td><strong>Primary Colors (0–9)</strong></td>
+<td>🎨</td>
+<td>Palette colors that define the convex hull. Pixels are iteratively blended toward these anchors using Mixbox.</td>
+</tr>
+<tr>
+<td><strong>Mixbox LUT</strong></td>
+<td>🔳</td>
+<td>Lookup texture required for Mixbox’s perceptually accurate subtractive color blending.</td>
+</tr>
+<tr>
+<td><strong>Orientation Scheme</strong></td>
+<td>Fixed, Uniform, Golden, Parallel</td>
+<td>Determines how hatch angles are rotated across successive layers.</td>
+</tr>
+<tr>
+<td><strong>Base Orientation</strong></td>
+<td>[0, 180]</td>
+<td>Base rotation offset in degrees applied before per-layer orientation is added.</td>
+</tr>
+<tr>
+<td><strong>Orientation From Texture</strong></td>
+<td>true / false</td>
+<td>When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.</td>
+</tr>
+<tr>
+<td><strong>Orientation Texture</strong></td>
+<td>🔳</td>
+<td>Texture used to control per-region hatch orientation when <em>Orientation From Texture</em> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Hatch Texture</strong></td>
+<td>🔳</td>
+<td>Tileable line or stipple texture used to modulate Mixbox convex-hull projection.</td>
+</tr>
+<tr>
+<td><strong>Layer Offset</strong></td>
+<td>[0, 0.5]</td>
+<td>Per-layer UV offset applied to the hatch texture. When locked, Y follows X.</td>
+</tr>
+<tr>
+<td><strong>Hatch Strength</strong></td>
+<td>[0, 5]</td>
+<td>Controls how strongly the hatch pattern influences Mixbox color projection.</td>
+</tr>
+<tr>
+<td><strong>Background Strength</strong></td>
+<td>[0, 1]</td>
+<td>Blends between the original pixel color and the background color.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="effects/images/mixbox-convex-hull-hatch.png" alt=""></p>
+<h2 id="simple-hatch">Simple Hatch</h2>
+<p>Applies layered cross-hatching based on image brightness.
+Darker regions receive more hatch layers; bright regions remain mostly untouched.
+The hatch texture is rotated per layer according to the selected orientation scheme, producing rich, multidirectional hatching styles.</p>
+<p>This shader mixes colors using <code>A + B - 1</code>, visually similar to multiplicative blending (<code>A * B</code>) for values in the <code>[0,1]</code> range.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Layer Count</strong></td>
+<td>[1, 10]</td>
+<td>Number of hatch layers. Darker areas accumulate more layers.</td>
+</tr>
+<tr>
+<td><strong>Black Level</strong></td>
+<td>[0, 1]</td>
+<td>Brightness threshold below which pixels are fully hatched.</td>
+</tr>
+<tr>
+<td><strong>White Level</strong></td>
+<td>[0, 1]</td>
+<td>Brightness threshold above which pixels receive no hatching.</td>
+</tr>
+<tr>
+<td><strong>Orientation Scheme</strong></td>
+<td>Fixed, Uniform, Golden, Parallel</td>
+<td>Determines how hatch angles are rotated across layers.</td>
+</tr>
+<tr>
+<td><strong>Base Orientation</strong></td>
+<td>[0, 180]</td>
+<td>Base rotation in degrees applied before layer-based rotation.</td>
+</tr>
+<tr>
+<td><strong>Orientation From Texture</strong></td>
+<td>true / false</td>
+<td>When enabled, hatch orientation is sampled from the orientation texture instead of using the base angle.</td>
+</tr>
+<tr>
+<td><strong>Orientation Texture</strong></td>
+<td>🔳</td>
+<td>Texture used to control per-region hatch orientation when <em>Orientation From Texture</em> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Hatch Texture</strong></td>
+<td>🔳</td>
+<td>The texture used for hatching. Typically a tileable line or stipple pattern.</td>
+</tr>
+<tr>
+<td><strong>Layer Offset</strong></td>
+<td>[0, 0.5]</td>
+<td>Per-layer UV offset applied to the hatch texture. When locked, Y follows X.</td>
+</tr>
+<tr>
+<td><strong>Hatch Strength</strong></td>
+<td>[0, 5]</td>
+<td>Controls the darkness of each hatch layer.</td>
+</tr>
+<tr>
+<td><strong>Background Strength</strong></td>
+<td>[0, 1]</td>
+<td>Controls the amount of background tone visible in the background layer.</td>
+</tr>
+<tr>
+<td><strong>Smoothness</strong></td>
+<td>[0, 1]</td>
+<td>Blends transitions between hatch layers for smoother tonal changes.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="effects/images/simple-hatch.png" alt=""></p>
+<p><img src="effects/images/simple-hatch.png" alt=""></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

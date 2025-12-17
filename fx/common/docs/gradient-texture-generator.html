@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Gradient Texture Generator | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Gradient Texture Generator | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/common/docs/gradient-texture-generator.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="gradient-texture-generator">Gradient Texture Generator</h1>
+
+<p>The <strong>Gradient Texture Generator</strong> is an editor tool that allows you to create 1D and 2D gradient-based textures inside Unity. These textures are ideal for shaders, lookup tables, color ramps, toon shading, stylized effects, masks, UI gradients, and learning color transitions.</p>
+<p>Open it via:</p>
+<pre><code>Gamelogic → Tools → Texture Generation → Gradient Texture Generator
+</code></pre>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>The tool supports the following gradient types:</p>
+<ul>
+<li>Single Color</li>
+<li>Gradient</li>
+<li>Curve-Based</li>
+<li>Sine-Based</li>
+</ul>
+<p>It also supports multiple sampling modes (X/Y/Radial/Angular), discrete step ramps, circular gradients, and more.</p>
+<hr>
+<h2 id="how-it-works">How It Works</h2>
+<ol>
+<li>Select the <strong>Gradient Type</strong>.</li>
+<li>Adjust the <strong>Sample Settings</strong> (color source, curves, sine controls).</li>
+<li>Adjust the <strong>Generation Settings</strong> (direction, angular options, flipping, discrete steps).</li>
+<li>Review the <strong>Preview</strong> (updates automatically).</li>
+<li>Click <strong>Save Texture</strong> to export as PNG.</li>
+</ol>
+<p><a href="texture-generation-tools.html">Texture generation tools</a> explain the workflow and global settings.</p>
+<hr>
+<h2 id="gradient-types">Gradient Types</h2>
+<p>Below are all available gradient modes and their configurable properties.</p>
+<hr>
+<h3 id="single-color">Single Color</h3>
+<p>Produces a solid-color texture.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Color</strong></td>
+<td>🎨</td>
+<td>Output color for all pixels.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/single_color.png" alt=""></p>
+<hr>
+<h3 id="gradient">Gradient</h3>
+<p>Uses Unity’s built-in <code>Gradient</code> object to produce a smooth blend between color keys.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gradient</strong></td>
+<td>🌈</td>
+<td>Standard Unity gradient editor.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/gradient_smooth_x.png" alt=""></p>
+<hr>
+<h3 id="curve-based">Curve-Based</h3>
+<p>Uses two animation curves (one for color interpolation, one for alpha) and a list of sampled colors.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Curve</strong></td>
+<td>Curve</td>
+<td>Controls the sampling position from the color list.</td>
+</tr>
+<tr>
+<td><strong>Alpha Curve</strong></td>
+<td>Curve</td>
+<td>Controls opacity over <em>t</em>.</td>
+</tr>
+<tr>
+<td><strong>Colors</strong></td>
+<td>🎨*</td>
+<td>List of colors sampled evenly along the curve output.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/curve.png" alt=""></p>
+<hr>
+<h3 id="sine-based">Sine-Based</h3>
+<p>Creates a periodic gradient using a sine wave, combined with a color list.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>[0, ∞]</td>
+<td>Number of sine oscillations.</td>
+</tr>
+<tr>
+<td><strong>Phase Fraction</strong></td>
+<td>[0, 1]</td>
+<td>Starting phase offset of the sine wave.</td>
+</tr>
+<tr>
+<td><strong>Amplitude</strong></td>
+<td>[0, ∞]</td>
+<td>Sine amplitude (vertical scaling).</td>
+</tr>
+<tr>
+<td><strong>Amplitude Offset</strong></td>
+<td>[-∞, ∞]</td>
+<td>Vertical offset applied before clamping.</td>
+</tr>
+<tr>
+<td><strong>Colors</strong></td>
+<td>🎨*</td>
+<td>List of colors sampled after sine evaluation.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/sine.png" alt=""></p>
+<hr>
+<h2 id="generation-settings">Generation Settings</h2>
+<p>These settings modify how the gradient is mapped into texture space.</p>
+<hr>
+<h3 id="direction">Direction</h3>
+<p>Defines how <em>t</em> is computed across the texture.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direction</strong></td>
+<td>{X, Y, Radial, Angular}</td>
+<td>Sampling direction used to compute <em>t</em>.</td>
+</tr>
+<tr>
+<td><strong>Flip T</strong></td>
+<td>{true, false}</td>
+<td>Inverts the gradient (t → 1−t).</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/gradient_smooth_x.png" alt="">
+<img src="../images/texture_generation/gradient_smooth_y.png" alt="">
+<img src="../images/texture_generation/gradient_smooth_radial.png" alt="">
+<img src="../images/texture_generation/gradient_smooth_angular.png" alt=""></p>
+<hr>
+<h3 id="angular-settings">Angular Settings</h3>
+<p>Only visible when <strong>Direction = Angular</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Offset Angle</strong></td>
+<td>Degrees</td>
+<td>Rotates the angular gradient around center.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="discrete-steps">Discrete Steps</h3>
+<p>Allows the gradient to become a stepped ramp.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discrete Steps</strong></td>
+<td>{true, false}</td>
+<td>Enables stepped mode.</td>
+</tr>
+<tr>
+<td><strong>Steps</strong></td>
+<td>Integers ≥ 1</td>
+<td>Number of steps in the gradient (1 = flat).</td>
+</tr>
+<tr>
+<td><strong>Circular Gradient</strong></td>
+<td>{true, false}</td>
+<td>Wraps the highest step back to the first (cyclic).</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../images/texture_generation/gradient_discrete_x.png" alt="">
+<img src="../images/texture_generation/gradient_discrete_y.png" alt="">
+<img src="../images/texture_generation/gradient_discrete_radial.png" alt="">
+<img src="../images/texture_generation/gradient_discrete_angular.png" alt=""></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/common/docs/effects/combined.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="add-texture">Add Texture</h2>
+<p>Adds a texture (remapped to specified min amd max) to the image.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlay Texture</td>
+<td>🔳</td>
+<td>The texture image to add.</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>[-1, 1]</td>
+<td>The minimum value to remap the texture to.</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>[-1, 1]</td>
+<td>The maximum value to remap the texture to.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To ignore a channel, make the two values equal for that channel.
+For example, <code>Min = (-.1, -.1, -.1, 0)</code> and <code>Max = (.1, .1, .1, 0)</code> will leave
+the alpha channel in tact.</p>
+</div>
+<p><img src="images/add_texture.png" alt="">
+﻿## Adjust Gamma</p>
+<p>Adjust the gamma of the image.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description                                                                                            <br></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gamma</td>
+<td>(0, ∞)</td>
+<td>When 1.0, no change is made. Values less than 1.0 darken the image, while values greater than 1.0 lighten it.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/adjust_gamma_low.png" alt="">
+<img src="images/adjust_gamma_high.png" alt="">
+﻿## Blend Texture
+Blends an overlay texture with the image based on its alpha and the specified opacity.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overlay Texture</td>
+<td>🔳</td>
+<td>The texture to blend with the image. The original alpha is respected.</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>[0, 1]</td>
+<td>Controls the strength of the blend. A value of 0 shows only the original image, while 1 applies the overlay fully (modulated by the overlay’s alpha).</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Use this for setting constant, full-screen textures (with opacity 1). This is useful for debugging
+&gt; or tweaking post effects.</li>
+<li>This is also useful to add noise, an important ingredient in many effects.</li>
+</ul>
+</div>
+<p><img src="images/blend_texture.png" alt="">
+﻿## Box Blur</p>
+<blockquote>
+<p><a href="separable.md">Separable</a></p>
+</blockquote>
+<p>Applies a uniform blur by averaging samples.</p>
+<h3 id="separable-properties">Separable Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel Size</td>
+<td>[0, ∞)</td>
+<td>The number of pixels sampled.</td>
+</tr>
+<tr>
+<td>KernelOffset</td>
+<td>(-∞, ∞)</td>
+<td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>(0, ∞)</td>
+<td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>—</td>
+<td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
+</div>
+
+<p><img src="images/box_blur.png" alt="">
+﻿## Convex Hull Map</p>
+<p>Maps each pixel’s color toward a set of primary colors using iterative convex‐hull projection.
+This effect gradually shifts colors toward the provided primaries, producing posterized, clustered, or palette–constrained looks.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level Count</td>
+<td>[1, ∞)</td>
+<td>Number of refinement iterations. Higher values move colors closer to the convex hull of the primary colors.</td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td>🎨</td>
+<td>Starting reference color used in the projection process.</td>
+</tr>
+<tr>
+<td>Primary Color 0–9</td>
+<td>🎨</td>
+<td>The palette colors that define the convex hull. Colors gravitate toward these.</td>
+</tr>
+<tr>
+<td>Primary Color Count</td>
+<td>[1, 10]</td>
+<td>How many of the primary colors are active in the hull.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Use this to constrain an image to a defined palette without hard quantization.</li>
+<li>Increasing <code>Level Count</code> produces stronger convergence toward the chosen colors.</li>
+<li>Works well for stylized looks: painterly clusters, reduced palettes, or “vectorized” color fields.</li>
+</ul>
+</div>
+<p><img src="images/convex_hull_map.png" alt="">
+﻿## Desaturate
+Removes color saturation from the image, producing a grayscale result based on luminance.</p>
+<p>(This effect has no adjustable properties. It fully desaturates the image according to its luminance.)</p>
+<p><img src="images/desaturate.png" alt="">
+﻿## Gaussian Blur</p>
+<blockquote>
+<p><a href="separable.md">Separable</a></p>
+</blockquote>
+<p>Applies a smooth, natural-looking blur using a Gaussian weight curve.</p>
+<h3 id="separable-properties">Separable Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel Size</td>
+<td>[0, ∞)</td>
+<td>The number of pixels sampled.</td>
+</tr>
+<tr>
+<td>KernelOffset</td>
+<td>(-∞, ∞)</td>
+<td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>(0, ∞)</td>
+<td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>—</td>
+<td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
+</div>
+<h3 id="other-properties">Other properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sigma</td>
+<td>(0, ∞)</td>
+<td>Controls how quickly the Gaussian curve falls off. Higher values produce a softer, more spread-out blur.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Typically, you can use <code>Sigma = Kernel Size  / 6</code>.</li>
+</ul>
+</div>
+<p><img src="images/gaussian_blur.png" alt="">
+﻿## Max Filter</p>
+<blockquote>
+<p><a href="separable.md">Separable</a></p>
+</blockquote>
+<p>Replaces each pixel with the maximum color value found in its neighborhood.</p>
+<p>This effect behaves like a <strong>morphological dilation</strong> on color channels.</p>
+<h3 id="separable-properties">Separable Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel Size</td>
+<td>[0, ∞)</td>
+<td>The number of pixels sampled.</td>
+</tr>
+<tr>
+<td>KernelOffset</td>
+<td>(-∞, ∞)</td>
+<td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>(0, ∞)</td>
+<td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>—</td>
+<td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
+</div>
+
+<p><img src="images/max_filter.png" alt="">
+﻿## Min Filter</p>
+<blockquote>
+<p><a href="separable.md">Separable</a></p>
+</blockquote>
+<p>Replaces each pixel with the minimum color value found in its neighborhood.</p>
+<p>This effect behaves like a <strong>morphological erosion</strong> on color channels.</p>
+<h3 id="separable-properties">Separable Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel Size</td>
+<td>[0, ∞)</td>
+<td>The number of pixels sampled.</td>
+</tr>
+<tr>
+<td>KernelOffset</td>
+<td>(-∞, ∞)</td>
+<td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>(0, ∞)</td>
+<td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>—</td>
+<td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
+</div>
+
+<p><img src="images/min_filter.png" alt="">
+﻿## Mixbox Convex Hull Map</p>
+<blockquote>
+<p>Requires <a href="../mixbox.html">Mixbox</a>.</p>
+</blockquote>
+<p>Maps each pixel’s color toward a set of primary colors using iterative convex-hull projection,
+but blends using <strong>Mixbox</strong>, a perceptually accurate subtractive color-mixing model.
+This produces smoother, more natural transitions than standard linear interpolation.</p>
+<p>If Mixbox is unavailable, the shader outputs a flat yellow fallback.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mixbox LUT</td>
+<td>🔳</td>
+<td>Lookup texture used by the Mixbox color model. Required for proper operation.</td>
+</tr>
+<tr>
+<td>Level Count</td>
+<td>[1, ∞)</td>
+<td>Number of refinement iterations. Higher values move colors closer to the convex hull of the primaries.</td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td>🎨</td>
+<td>Starting reference color for convex-hull projection.</td>
+</tr>
+<tr>
+<td>Primary Color 0-9</td>
+<td>🎨</td>
+<td>Palette colors used as convex-hull vertices. Colors gravitate toward these.</td>
+</tr>
+<tr>
+<td>Primary Color Count</td>
+<td>[1, 10]</td>
+<td>How many of the listed primary colors are active.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Produces richer, more paint-like results than the standard Convex Hull Map thanks to Mixbox’s subtractive mixing.</li>
+<li>Ideal for watercolor, gouache, and ink-style looks.</li>
+<li>Increase <code>Level Count</code> for stronger palette attraction.</li>
+<li>Try limiting the primary set (e.g., only 3–5 colors) for highly stylized palettes.</li>
+</ul>
+</div>
+<p><img src="images/mixbox_convex_hull_map.png" alt="">
+﻿## Pixelate
+Applies a pixelation effect to the image by sampling blocks of pixels instead of individual texels.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixel Size</td>
+<td>(1, ∞)</td>
+<td>Controls the pixelation density along the X and Y axes. Higher values produce larger blocks and a more pixelated look.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/pixelate.png" alt="">
+﻿## Power Mean</p>
+<blockquote>
+<p><a href="separable.md">Separable</a></p>
+</blockquote>
+<p>Blurs the image by computing a <strong>power mean (p-norm mean)</strong> of neighboring pixels.</p>
+<p>Different <code>Power</code> values interpolate smoothly between familiar filters:</p>
+<ul>
+<li><strong>Power = 1</strong> → arithmetic mean, standard <a href="box-blur.html">box blur</a></li>
+<li><strong>Power = 2</strong> → RMS-like mean (stronger emphasis on brighter values)</li>
+<li><strong>Power → ∞</strong> → approaches a <a href="max.html">max</a> filter</li>
+<li><strong>Power → -∞</strong> → approaches a <a href="min.html">Min</a> filter</li>
+</ul>
+<h3 id="separable-properties">Separable Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel Size</td>
+<td>[0, ∞)</td>
+<td>The number of pixels sampled.</td>
+</tr>
+<tr>
+<td>KernelOffset</td>
+<td>(-∞, ∞)</td>
+<td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>(0, ∞)</td>
+<td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>—</td>
+<td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
+</div>
+<h3 id="other-properties-1">Other Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power</td>
+<td>(-∞, ∞)</td>
+<td>Controls the type of mean. Lower values emphasize dark tones, higher values emphasize bright tones.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Can be used for &quot;soft&quot; min or max filters.</li>
+</ul>
+</div>
+<p><img src="images/power_mean.png" alt="">
+﻿</p>
+<h2 id="quantize">Quantize</h2>
+<p>Reduces the number of distinct color values in the image, creating a posterized or stylized effect.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level Count</td>
+<td>[2, ∞)</td>
+<td>Specifies the number of quantization levels for each color channel (R, G, B). Higher values preserve more detail.</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>[0, 1]</td>
+<td>Controls the softness of transitions between quantized levels. A value of 0 produces hard edges, while higher values blend the steps smoothly.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>With a low number of levels, many of the resulting colors turn out gray if each channel has the same number of level,
+leading to a dull result. By setting a different number of levels for at least one channel you get a more
+colorful result.</p>
+</div>
+<p><img src="images/quantize_hard.png" alt=""></p>
+<p><em>This is with Smoothness = 0 (hard transitions). The level count is 2 for red, 4 for the other 2.</em></p>
+<p><img src="images/quantize_smooth.png" alt=""></p>
+<p><em>This is with Smoothness = 0.1 (smooth transitions).</em>
+﻿### Separable Properties</p>
+<table>
+<thead>
+<tr>
+<th>Properties</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kernel Size</td>
+<td>[0, ∞)</td>
+<td>The number of pixels sampled.</td>
+</tr>
+<tr>
+<td>KernelOffset</td>
+<td>(-∞, ∞)</td>
+<td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>(0, ∞)</td>
+<td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>—</td>
+<td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.<br>
+﻿# Separable Effects</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is an implementation detail relevant when using separable shaders directly,
+rather than through <code>PostProcess</code> components or <code>RenderFeatures</code>.</p>
+</div>
+<p>An effect that samples a square neighborhood—such as a box blur—is <strong>separable</strong> if it can be computed by running two one-dimensional passes instead of a full two-dimensional pass.
+The idea is simple:</p>
+<ul>
+<li>First pass: sample only horizontally.</li>
+<li>Second pass: sample only vertically.</li>
+</ul>
+<p>This approach reduces the cost from <strong>quadratic</strong> (sampling a 2D kernel) to <strong>linear</strong> in the kernel size, which is a major performance win.</p>
+<p>Some effects are implemented with this two-pass scheme even when they are not strictly separable; in many cases the visual results are still more than good enough.</p>
+<hr>
+<p>If you want, I can also rewrite it in a more formal, more casual, or more mathematical tone.
+﻿## Tri-tone Map
+Maps the image’s tones to three colors (low, mid, and high) based on lightness, smoothly blending between them using inverse linear interpolation.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low Color</td>
+<td>🎨</td>
+<td>The color applied to the darkest areas of the image.</td>
+</tr>
+<tr>
+<td>Mid Color</td>
+<td>🎨</td>
+<td>The color applied to mid-range tones.</td>
+</tr>
+<tr>
+<td>High Color</td>
+<td>🎨</td>
+<td>The color applied to the brightest areas of the image.</td>
+</tr>
+<tr>
+<td>Low Value</td>
+<td>[0, 1]</td>
+<td>The threshold below which pixels are tinted entirely with the Low Color.</td>
+</tr>
+<tr>
+<td>Mid Value</td>
+<td>[0, 1]</td>
+<td>The midpoint that controls the blend between low and high regions.</td>
+</tr>
+<tr>
+<td>High Value</td>
+<td>[0, 1]</td>
+<td>The threshold above which pixels are tinted entirely with the High Color.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Use this effect for quick-and-dirty color grading.</li>
+<li>This is an easy way to make monochromatic effects more lively.</li>
+</ul>
+</div>
+<p><img src="images/tri_tone_map.png" alt=""></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
