@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/vue7151q1z2w/public_html/docs
+    - /bin/cp -R * $DEPLOYPATH
