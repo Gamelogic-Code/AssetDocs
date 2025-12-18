@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProceduralPalette | Gamelogic Colors </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProceduralPalette | Gamelogic Colors ">
+      
+      <meta name="description" content="Contains functions for generating palettes of Colors using various algorithms.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Colors">
+            Gamelogic Colors
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Colors.ProceduralPalette">
+
+
+
+  <h1 id="Gamelogic_Colors_ProceduralPalette" data-uid="Gamelogic.Colors.ProceduralPalette" class="text-break">
+Class ProceduralPalette  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/colorsunity/src/master/Packages/za.co.gamelogic.colors/Runtime/Scripts/ProceduralPalette/ProceduralPalette.cs#lines-14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Colors.html">Colors</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Colors.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains functions for generating palettes of Colors using various algorithms.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public static class ProceduralPalette</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProceduralPalette</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsEvenGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsEvenGradient_System_Int32_Gamelogic_Colors_GradientHSL_System_Single_">GenerateColorsEvenGradient(int, GradientHSL, float)</a></dt>
+    <dd><p>Generate colors evely spaced out on a given gradient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsEvenGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsEvenGradient_System_Int32_UnityEngine_Gradient_System_Single_">GenerateColorsEvenGradient(int, Gradient, float)</a></dt>
+    <dd><p>Generate colors evely spaced out on a given gradient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsEvenGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsEvenGradient__1_System_Int32_Gamelogic_Colors_Gradient___0__System_Single_">GenerateColorsEvenGradient&lt;TColor&gt;(int, Gradient&lt;TColor&gt;, float)</a></dt>
+    <dd><p>Generate colors evely spaced out on a given gradient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsGoldenRatioGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsGoldenRatioGradient_System_Int32_Gamelogic_Colors_GradientHSL_">GenerateColorsGoldenRatioGradient(int, GradientHSL)</a></dt>
+    <dd><p>Gives a list of colors where that maximises distance on
+the gradient between consecutive colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsGoldenRatioGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsGoldenRatioGradient_System_Int32_UnityEngine_Gradient_">GenerateColorsGoldenRatioGradient(int, Gradient)</a></dt>
+    <dd><p>Gives a list of colors where that maximises distance on
+the gradient between consecutive colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsGoldenRatioGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsGoldenRatioGradient__1_System_Int32_Gamelogic_Colors_Gradient___0__">GenerateColorsGoldenRatioGradient&lt;TColor&gt;(int, Gradient&lt;TColor&gt;)</a></dt>
+    <dd><p>Gives a list of colors where that maximises distance on
+the gradient between consecutive colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsRandomGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsRandomGradient_System_Int32_Gamelogic_Colors_GradientHSL_">GenerateColorsRandomGradient(int, GradientHSL)</a></dt>
+    <dd><p>Generates a list of colours randomly sampled from a gradient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsRandomGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsRandomGradient_System_Int32_UnityEngine_Gradient_">GenerateColorsRandomGradient(int, Gradient)</a></dt>
+    <dd><p>Generates a list of colours randomly sampled from a gradient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateColorsRandomGradient.html#Gamelogic_Colors_ProceduralPalette_GenerateColorsRandomGradient__1_System_Int32_Gamelogic_Colors_Gradient___0__">GenerateColorsRandomGradient&lt;TColor&gt;(int, Gradient&lt;TColor&gt;)</a></dt>
+    <dd><p>Generates a list of colours randomly sampled from a gradient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateHarmony.html#Gamelogic_Colors_ProceduralPalette_GenerateHarmony_System_Int32_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_">GenerateHarmony(int, float, float, float, float, float, float, float, float, float)</a></dt>
+    <dd><p>Generates a random triadic color harmony. You can specify two angle offsets (from a
+randomly selected reference), and an angle range around each of those.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateHarmony.html#Gamelogic_Colors_ProceduralPalette_GenerateHarmony_System_Int32_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_">GenerateHarmony(int, float, float, float, float, float, float, float, float, float, float)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateInAffineCircle.html#Gamelogic_Colors_ProceduralPalette_GenerateInAffineCircle_System_Int32_UnityEngine_Color_UnityEngine_Color_UnityEngine_Color_System_Single_System_Single_">GenerateInAffineCircle(int, Color, Color, Color, float, float)</a></dt>
+    <dd><p>Generate colors evenly spaced on a circle transformed by an affine mapping defined by the three given colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomHue.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomHue_System_Int32_System_Single_System_Single_">GenerateRandomHue(int, float, float)</a></dt>
+    <dd><p>Generates a list of colours with random hue, given saturation and given luminance.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomHueInRange.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomHueInRange_System_Int32_System_Single_System_Single_System_Single_System_Single_">GenerateRandomHueInRange(int, float, float, float, float)</a></dt>
+    <dd><p>Generates a color with random hue in the given range, given saturation and given luminance.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomLuminance.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomLuminance_System_Int32_System_Single_System_Single_">GenerateRandomLuminance(int, float, float)</a></dt>
+    <dd><p>Generates a list of colours with given hue, given saturation and random luminance.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomMix.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomMix_System_Int32_UnityEngine_Color_UnityEngine_Color_UnityEngine_Color_System_Single_Gamelogic_Colors_ColorSpace_">GenerateRandomMix(int, Color, Color, Color, float, ColorSpace)</a></dt>
+    <dd><p>Generates a list of colors that are a random mix of the given colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomOffset.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomOffset_System_Int32_UnityEngine_Color_System_Single_System_Single_">GenerateRandomOffset(int, Color, float, float)</a></dt>
+    <dd><p>Generates a list of colours that are randomly offset from a given color.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomSaturation.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomSaturation_System_Int32_System_Single_System_Single_">GenerateRandomSaturation(int, float, float)</a></dt>
+    <dd><p>Generates a list of colours with given hue, random saturation and given luminance.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomSaturationLuminance.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomSaturationLuminance_System_Int32_System_Single_">GenerateRandomSaturationLuminance(int, float)</a></dt>
+    <dd><p>Generates a list of colours with given hue, random saturation and random luminance.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateRandomWalk.html#Gamelogic_Colors_ProceduralPalette_GenerateRandomWalk_System_Int32_UnityEngine_Color_System_Single_System_Single_System_Boolean_">GenerateRandomWalk(int, Color, float, float, bool)</a></dt>
+    <dd><p>Generates a sequence of colors where the next color is a random offset from the previous color.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateUniform.html#Gamelogic_Colors_ProceduralPalette_GenerateUniform_System_Int32_">GenerateUniform(int)</a></dt>
+    <dd><p>Generates a list of colors. For each color, RGB values are chosen randomly.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateUniformHSL.html#Gamelogic_Colors_ProceduralPalette_GenerateUniformHSL_System_Int32_">GenerateUniformHSL(int)</a></dt>
+    <dd><p>Generates a list of colors. For each color, HSL values are chosen randomly.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.GenerateUniformLAB.html#Gamelogic_Colors_ProceduralPalette_GenerateUniformLAB_System_Int32_">GenerateUniformLAB(int)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.Mix.html#Gamelogic_Colors_ProceduralPalette_Mix_UnityEngine_Color_UnityEngine_Color_UnityEngine_Color_System_Single_System_Int32_System_Single_System_Single_System_Single_Gamelogic_Colors_ColorSpace_">Mix(Color, Color, Color, float, int, float, float, float, ColorSpace)</a></dt>
+    <dd><p>Gives a color that is a random mix of the given colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.RandomMix.html#Gamelogic_Colors_ProceduralPalette_RandomMix_UnityEngine_Color_UnityEngine_Color_UnityEngine_Color_System_Single_Gamelogic_Colors_ColorSpace_">RandomMix(Color, Color, Color, float, ColorSpace)</a></dt>
+    <dd><p>Generates a color that is a random mix of the given colors.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ProceduralPalette.SaturateToByte.html#Gamelogic_Colors_ProceduralPalette_SaturateToByte_System_Single_">SaturateToByte(float)</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/gamelogic/colorsunity/src/master/Packages/za.co.gamelogic.colors/Runtime/Scripts/ProceduralPalette/ProceduralPalette.cs#lines-14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

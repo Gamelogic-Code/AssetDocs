@@ -1,0 +1,4648 @@
+{
+  "source_base_path": "C:/Work/Repos/colorsunity/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleNode.offset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleNode.radius.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleNode.count.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleProperties.color2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleProperties.color1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleProperties.color3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleProperties.radius.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleProperties.offsetInDegrees.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.AffineCircleProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.AffineCircleProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerationAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerationAlgorithm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.RGB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.Choose.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.UniformRandom.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.UniformRandomWalk.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.RandomWalk.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.WithAlpha.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.ToHSL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.ToRGB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.InvertLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.Invert.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.InvertSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.Mix2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.WithLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.WithHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.UniformOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.Mix3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.WithSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.OffsetLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.OffsetHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorGenerator.OffsetSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.ToString.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.Invert.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.InvertLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.GetShades.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.L.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.GetTints.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.InvertSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.WithSaturationOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.S.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.WithLuminanceOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.Color.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.H.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.Lerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.WithHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.White.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.WithLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.WithSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.Black.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorHSL.WithHueOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.Black.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.Color.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.Lerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.RGBtoLAB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorLAB.White.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorPaletteProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorPaletteProperties.colorCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorPaletteProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorPaletteProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorSpace.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorTransformNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorTransformNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ColorTransformRandomNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ColorTransformRandomNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConcatenateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConcatenateNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConcatenateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConcatenateNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConcatenateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConcatenateNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConstantColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConstantColorNode.colors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConstantColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConstantColorNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConstantColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConstantColorNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ConstantColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ConstantColorNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientHSLNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientHSLNode.FromColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientHSLNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientHSLNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientLABNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientLABNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientLABNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientLABNode.FromColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.ExecuteSingle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.FromColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode.ExecuteSingle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.CreateGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.CreateGradientNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ColorGraphEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ColorGraphEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ColorGraphPropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ColorGraphPropertyDrawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ColorGraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ColorGraphWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ColorGraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ColorGraphWindow.DrawNodeOutputPreview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ColorGraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ColorGraphWindow.DrawApplicationButtons.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.EditorUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.EditorUtils.DrawColors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.EditorUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.EditorUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.EditorUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.EditorUtils.DrawNodeCurve.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphEditor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphEditor-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphEditor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphEditor-1.OnInspectorGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphPropertyDrawer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphPropertyDrawer-1.GetPropertyHeight.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphPropertyDrawer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphPropertyDrawer-1.OnGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphPropertyDrawer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphPropertyDrawer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.DrawNodeButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.DrawApplicationButtons.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.ShowEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.OnEnable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.OnGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.OnDisable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.GraphWindow.DrawNodeOutputPreview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.OnGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.GetPropertyHeight.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.CanCacheInspectorGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.InspectableColorNodePropertyDrawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.Internal.GLEditorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.Internal.GLEditorExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.Internal.GLEditorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.Internal.GLEditorExtensions.MakeNewColorGraph.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.Internal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.PaletteGeneratorEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.PaletteGeneratorEditor.OnInspectorGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.PaletteGeneratorEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.PaletteGeneratorEditor.OnEnable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.PaletteGeneratorEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.PaletteGeneratorEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ReadonlyColorListPropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ReadonlyColorListPropertyDrawer.OnGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ReadonlyColorListPropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ReadonlyColorListPropertyDrawer.GetPropertyHeight.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.ReadonlyColorListPropertyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.ReadonlyColorListPropertyDrawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GLColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GLColor.Parse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GLColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GLColor.TryParse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GLColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GLColor.ParseHex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GLColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GLColor.TryParseHex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GLColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GLColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.ResponseCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.ResponseCurve.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.ResponseCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.ResponseCurve.Lerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.ResponseCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.ResponseCurve.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.SetKeys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.Evaluate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.SampleEvenly.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.GetLerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Gradient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Gradient-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientExtensions.SampleEvenly.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientExtensions.GetLerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSL.GetLerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSL.SetKeys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSL.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSLColorKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSLColorKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSLColorKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSLColorKey.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSLExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSLExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSLExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSLExtensions.GetLerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientHSLExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientHSLExtensions.SampleEvenly.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientKey-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientKey-1.time.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientKey-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientKey-1.color.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientKey-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientKey-1.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientKey-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientKey-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientLAB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientLAB.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientLAB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientLAB.GetLerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.GradientSelectionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.GradientSelectionMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Graph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Graph.Recomputed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Graph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Graph.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Graph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Graph.Nodes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Graph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Graph.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HSLColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HSLColorExtensions.GetSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HSLColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HSLColorExtensions.GetHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HSLColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HSLColorExtensions.GetLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HSLColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HSLColorExtensions.ToHSL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HSLColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HSLColorExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.saturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.saturationRange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.rangeAngle2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.rangeAngle1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.rangeAngle0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.offsetAngle0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.offsetAngle1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.luminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.offsetAngle2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.HarmonyProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.HarmonyProperties.luminanceRange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InspectableColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InspectableColorNode.graph.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InspectableColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InspectableColorNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InspectableColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InspectableColorNode.Colors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InspectableColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InspectableColorNode.selectedNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertColorNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertColorNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertColorNode.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertLuminosityNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertLuminosityNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertLuminosityNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertLuminosityNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertLuminosityNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertLuminosityNode.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertSaturationNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertSaturationNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertSaturationNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertSaturationNode.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.InvertSaturationNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.InvertSaturationNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.LABColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.LABColorExtensions.ToLAB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.LABColorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.LABColorExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Mix2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Mix2Node.ExecuteSingle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Mix2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Mix2Node.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Mix2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Mix2Node.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Mix2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Mix2Node.mixMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Mix2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Mix2Node.t.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.MixNode2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.MixNode2.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.MixNode2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.MixNode2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.MixNode2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.MixNode2.mixMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.MixNode2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.MixNode2.ExecuteSingle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.MixNode2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.MixNode2.t.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-1.output.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-1.Output_1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.inputNodes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.RemoveNodeInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.InputItemCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.UpdateStatic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.Inputs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.AddNodeInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.Inputs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.HasOutput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.Init.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.AddNodeInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.RemoveNodeInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.UpdateStatic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.OnEnable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Node.rect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.None.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.None.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetHue.hueOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetHue.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetHue.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetLuminance.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetLuminance.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetLuminance.luminanceOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetSaturation.saturationOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetSaturation.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.OffsetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.OffsetSaturation.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Palette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Palette.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Palette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Palette.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Palette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Palette.colors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.uniform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.randomSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.randomMix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.randomLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.randomWalk.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.algorithm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.randomHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.randomSaturationLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.offset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.affineCircle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.tints.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.shades.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.palette.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.Awake.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.Generate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.gradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.PaletteGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.PaletteGenerator.harmonyProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateUniform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateUniformLAB.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateHarmony.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomWalk.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateUniformHSL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.SaturateToByte.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateInAffineCircle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateColorsEvenGradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateColorsRandomGradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.Mix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.RandomMix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomMix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomOffset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomHueInRange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateRandomSaturationLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ProceduralPalette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ProceduralPalette.GenerateColorsGoldenRatioGradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomColorNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomColorNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomColorNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomColorNode.colorCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomColorNode.colorSpace.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomGradientProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomGradientProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomGradientProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomGradientProperties.jitter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomGradientProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomGradientProperties.selectionMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomGradientProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomGradientProperties.gradient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomHueProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomHueProperties.luminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomHueProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomHueProperties.saturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomHueProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomHueProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomLuminance.hue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomLuminance.saturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMix3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMix3Node.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMix3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMix3Node.mixMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMix3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMix3Node.colorCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMix3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMix3Node.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMix3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMix3Node.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMix3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMix3Node.greyControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMixProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMixProperties.greyControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMixProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMixProperties.mixMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMixProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMixProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMixProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMixProperties.color2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMixProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMixProperties.color1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomMixProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomMixProperties.color3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetNode.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetNode.count.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetNode.multi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetProperties.offset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomOffsetProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomOffsetProperties.baseColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomSaturation.hue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomSaturation.luminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomSaturationLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomSaturationLuminance.hue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomSaturationLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomSaturationLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.offset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.fixLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.colorCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkColorNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkProperties.offset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkProperties.startColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.RandomWalkProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.RandomWalkProperties.fixLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ReadonlyColorList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ReadonlyColorList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.-ctor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.Lerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.GetLerp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.ResponseCurveHSL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientHSLNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientHSLNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientHSLNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientHSLNode.ConvertToColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientLABNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientLABNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientLABNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientLABNode.ConvertToColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.selectionMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.ConvertToColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode-2.colorCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode.selectionMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode.colorCount.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SampleGradientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SampleGradientNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetHue.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetHue.hue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetHue.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetHue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetHue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetLuminance.luminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetLuminance.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetLuminance.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetLuminance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetLuminance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetSaturation.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetSaturation.range.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetSaturation.saturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SetSaturation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SetSaturation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Shades.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Shades.color.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Shades.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Shades.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SimpleNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SimpleNode-2.ExecuteSingle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SimpleNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SimpleNode-2.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.SimpleNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.SimpleNode-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeAtIndicesNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeAtIndicesNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeAtIndicesNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeAtIndicesNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeAtIndicesNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeAtIndicesNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeRandomNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeRandomNode.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeRandomNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeRandomNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TakeRandomNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TakeRandomNode.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Tints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Tints.color.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.Tints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.Tints.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformNode-2.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformNode-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformNode-2.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.Recompute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.Execute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.Transform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.count.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.TransformRandomNode-2.multi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.UniformProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.UniformProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.UniformProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.UniformProperties.colorSpace.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Colors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Colors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/Samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/Samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/algorithm-reference.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/algorithm-reference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/changes.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/changes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/node-reference.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/node-reference.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/procedural-palette-generator.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/procedural-palette-generator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "content/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "content/toc.html"
+        },
+        ".json": {
+          "relative_path": "content/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/using-the-node-editor.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/using-the-node-editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Gradient_Even.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Gradient_Even.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Gradient_GoldenRatio.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Gradient_GoldenRatio.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Gradient_Jitter.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Gradient_Jitter.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Gradient_Random.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Gradient_Random.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Harmony.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Harmony.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PalleteGenerator.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/PalleteGenerator.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomHue_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomHue_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomHue_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomHue_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomLum_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomLum_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomLum_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomLum_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomMix.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomMix.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomOffset.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomOffset.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomSaturation_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomSaturation_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomSaturation_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomSaturation_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/RandomWalk.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/RandomWalk.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Random_Sat_Lum_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Random_Sat_Lum_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Random_Sat_Lum_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Random_Sat_Lum_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Shades_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Shades_05.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Tints.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Tints.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/gradient_even.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/gradient_even.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/gradient_golden_ratio.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/gradient_golden_ratio.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/gradient_random.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/gradient_random.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/harmony.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/harmony.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/palette_generator.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/palette_generator.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_hue_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_hue_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_hue_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_hue_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_luminance_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_luminance_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_luminance_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_luminance_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_mix.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_mix.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_offset.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_offset.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_saturation_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_saturation_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_saturation_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_saturation_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_saturation_and_luminance_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_saturation_and_luminance_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_saturation_and_luminance_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_saturation_and_luminance_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/random_walk.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/random_walk.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/shades.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/shades.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/tints.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/tints.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algorithms/uniform_randomness.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/algorithms/uniform_randomness.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gamelogic_favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gamelogic_favicon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gamelogic_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gamelogic_icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/affine_circle.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/affine_circle.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/color-elipse.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/color-elipse.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/combine.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/combine.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/constant_color.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/constant_color.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/gradient.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/gradient.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/gradient_hsl.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/gradient_hsl.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/gradient_lab.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/gradient_lab.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_example_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_example_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_example_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_example_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_example_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_example_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_offset.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_offset.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_offset_hue.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_offset_hue.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_offset_luminance.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_offset_luminance.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_offset_saturation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_offset_saturation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_set.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_set.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_set_hue.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_set_hue.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_set_luminance.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_set_luminance.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/hsl_set_saturation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/hsl_set_saturation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/invert_color.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/invert_color.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/invert_luminance.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/invert_luminance.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/invert_saturation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/invert_saturation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/mixing_nodes_mix_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/mixing_nodes_mix_2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/mixing_nodes_random_mix_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/mixing_nodes_random_mix_3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/random_color.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/random_color.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/take.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/take.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/take_at_indices.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/take_at_indices.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodes/take_random.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodes/take_random.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

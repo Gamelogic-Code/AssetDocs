@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Node Reference | Gamelogic Colors </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Node Reference | Gamelogic Colors ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/colorsunity/src/master/Documentation/content/node-reference.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Colors">
+            Gamelogic Colors
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="node-reference">Node Reference</h1>
+
+<p>In the following, we will use the notation &lt;InputType, OutputType&gt; to
+show what the input and outputs of a node are. None is used where a
+node does not have inputs or outputs.</p>
+<p>You can only connect top nodes &lt;A, B&gt; and &lt;C, D&gt; if B and C are the
+same, for example, you can link &lt;None, Color&gt; to <color gradient="">, but
+you cannot link &lt;None, Color&gt; &lt;Gradient, Color&gt;.</color></p>
+<h2 id="input-nodes">Input Nodes</h2>
+<h3 id="constant-color-none-color">Constant Color &lt;None, Color&gt;</h3>
+<p>Takes the colors selected in the nodes properties, and outputs them.</p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Colors</td>
+    <td>The colors that will become the outputs.</td>
+  </tr>
+</table>
+<img alt="Constant color nodes example" src="../images/nodes/constant_color.png" width="400">
+<h3 id="random-color-none-color">Random Color &lt;None, Color&gt;</h3>
+<p>Generates random colors, and outputs them.</p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Count</td>
+    <td>The number of colors to generate.</td>
+  </tr>
+</table>
+<img alt="Random color nodes example" src="../images/nodes/random_color.png" width="400">
+<h2 id="mixing-nodes">Mixing Nodes</h2>
+<h3 id="mix2-color-color">Mix2 &lt;Color, Color&gt;</h3>
+<p>Takes two colors as input, and mix them together using linear
+interpolation.</p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Blend Factor</td>
+    <td>The blend factor. A value of 0 gives the first color, a value of 1 gives the second, a value of 0.5 gives the color halfway between the two.</td>
+  </tr>
+  <tr>
+    <td>Mix Mode</td>
+    <td>The color space in which to do the interpolation.</td>
+  </tr>
+</table>
+<img alt="Mix2 nodes example" src="../images/nodes/mixing_nodes_mix_2.png" width="400">
+<h3 id="random-mix-3-color-color">Random Mix 3 &lt;Color, Color&gt;</h3>
+<p>Randomly mixes its first three inputs to produce the outputs.</p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Mix Mode</td>
+    <td>The color space in which to do the mixing.</td>
+  </tr>
+  <tr>
+    <td>Grey Control</td>
+    <td>A parameter that determines the effect of one of the three nodes (randomly chosen). When it is 0, one of the inputs have no effect, when it is 1, all three nodes have equal potential effect. When using primary colors as inputs, having low values of this parameter prevents too much greyness in the output colors.</td>
+  </tr>
+</table>
+<img alt="Mix 3 nodes example" src="../images/nodes/mixing_nodes_random_mix_3.png" width="400">
+<h2 id="hsl-channel-nodes">HSL Channel Nodes</h2>
+<h3 id="set-hue-color-color-set-luminance-color-color-set-saturation-color-color">Set Hue &lt;Color, Color&gt;, Set Luminance &lt;Color, Color&gt;, Set Saturation &lt;Color, Color&gt;**</h3>
+<p>These nodes work all the same, except that they operate on different
+channels in the HSL space.</p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Multi</td>
+    <td>When selected, a set of Count random values is generated, where each set is applied to each color in the inputs, resulting in Count x Input# output colors in total. When not selected, only one value is generated for each input color resulting in Input# output colors in total.</td>
+  </tr>
+  <tr>
+    <td>Count</td>
+    <td>The number of random values to create when multi is true. Count only has an effect if multi is true.</td>
+  </tr>
+  <tr>
+    <td>Hue, Luminance, Saturation</td>
+    <td>The random values generated are centered around this value.</td>
+  </tr>
+  <tr>
+    <td>Range</td>
+    <td>The range of the random values generated. Use a range of 0 to set values non-randomly.</td>
+  </tr>
+</table>
+<img alt="Set hue nodes example" src="../images/nodes/hsl_set_hue.png" width="400">
+<img alt="Set luminance nodes example" src="../images/nodes/hsl_set_luminance.png" width="400">
+<img alt="Set saturation nodes example" src="../images/nodes/hsl_set_saturation.png" width="400">
+<h4 id="example">Example</h4>
+<p>If Multi is true, Count is 2, Hue is 0.3, Range is 0.2, and the
+node has 3 inputs, then there will be 6 outputs (two for each input
+color). The hues will vary from 0.2 to 0.4, and the colors 0, 2, and 4 will
+have the same hue, and colors 1, 3, and 5 will have the same hue. The
+other properties will be taken from the input colors, so output colors 0
+and 1 will have the same luminance and saturation as input color 0,
+output colors 2 and 3 will have the same luminance and saturation as
+input color 1, and so on.</p>
+<img alt="HSL example 01" src="../images/nodes/hsl_example_01.png" width="400">
+<h4 id="example-1">Example</h4>
+<p>If Multi is false, Count is 2, Hue is 0.3, Range is 0.2, and the
+node has 3 inputs, there will be 3 outputs. The hues will vary from 0.2
+to 0.4, but this time, they may all be different. The other properties will
+be taken from the three input colors. In this case, count has no effect.</p>
+<img alt="HSL example 02" src="../images/nodes/hsl_example_02.png" width="400">
+<h4 id="example-2">Example</h4>
+<p>If multi is false, Count is 2, Hue is 0.3, Range is 0, and the
+node has 3 inputs, there will be 3 outputs, identical to the input colors
+except that their hues will be set to 0.3.</p>
+<img alt="HSL example 03" src="../images/nodes/hsl_example_03.png" width="400">
+<h3 id="offset-hue-color-color-offset-luminance-color-color-offset-saturation-color-color">Offset Hue &lt;Color, Color&gt;, Offset Luminance &lt;Color, Color&gt;, Offset Saturation &lt;Color, Color&gt;</h3>
+<p>These work exactly the same as the previous three nodes, except that
+instead of setting channel values, they offset them.</p>
+<img alt="Offset hue nodes example" src="../images/nodes/hsl_offset_hue.png" width="400">
+<img alt="Offset luminance nodes example" src="../images/nodes/hsl_offset_luminance.png" width="400">
+<img alt="Offset saturation nodes example" src="../images/nodes/hsl_offset_saturation.png" width="400">
+<h2 id="channel-inversion-nodes">Channel Inversion Nodes</h2>
+<h3 id="invert-color-color-color">Invert Color &lt;Color, Color&gt;</h3>
+<p>Inverts all three RGB channels of each of the inputs.</p>
+<img alt="Invert color nodes example" src="../images/nodes/invert_color.png" width="400">
+<h3 id="invert-luminance-color-color">Invert Luminance &lt;Color, Color&gt;</h3>
+<p>Inverts the luminance channel of each of the inputs.</p>
+<img alt="Invert luminance nodes example" src="../images/nodes/invert_luminance.png" width="400">
+<h3 id="invert-saturation-color-color">Invert Saturation &lt;Color, Color&gt;</h3>
+<p>Inverts the saturation channel of each of the inputs.</p>
+<img alt="Invert saturation nodes example" src="../images/nodes/invert_saturation.png" width="400">
+<h2 id="gradient-nodes">Gradient Nodes</h2>
+<h3 id="gradient-color-gradient-hsl-gradient-color-gradienthsl-lab-gradient-color-gradientlab">Gradient &lt;Color, Gradient&gt;, HSL Gradient &lt;Color, GradientHSL&gt;, LAB Gradient &lt;Color, GradientLAB&gt;</h3>
+<p>These two nodes create gradients from the input colors, placed evenly
+in order. Gradient uses RGB interpolation, HSL Gradient uses HSL
+interpolation, and LAB Gradient uses LAB interpolation.</p>
+<p>A gradient node must always be connected to a sample gradient node of the same type.</p>
+<p>Sample Gradient &lt;Gradient, Color&gt;, Sample HSL Gradient &lt;GradientHSL, Color&gt;, Sample LAB Gradient &lt;GradientLAB, Color&gt;
+These nodes work the same – they sample colors from a gradient –
+except that they operate on different inputs.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>The number of colors to sample from the gradient.</td>
+</tr>
+<tr>
+<td>Selection Mode</td>
+<td>How output colors are selected from the gradient. Even selects the colors evenly in order. Random selects the colors randomly (uniformly distributed), and Golden Ratio gives colors with successive color’s ~0.618 apart (wrapped).</td>
+</tr>
+</tbody>
+</table>
+<img alt="Gradient nodes example" src="../images/nodes/gradient.png" width="400">
+<img alt="HSL gradient nodes example" src="../images/nodes/gradient_hsl.png" width="400">
+<img alt="LAB gradient nodes example" src="../images/nodes/gradient_lab.png" width="400">
+<h2 id="selection-nodes">Selection Nodes</h2>
+<h3 id="combine-color-color">Combine &lt;Color, Color&gt;</h3>
+<p>This node simply outputs all the inputs. This is useful to get the colors of several nodes into one node.</p>
+<img alt="Combine nodes example" src="../images/nodes/combine.png" width="400">
+<h3 id="take-color-color">Take &lt;Color, Color&gt;</h3>
+<p>This node takes the first count colors from the inputs.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>The number of colors to select.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Takes nodes example" src="../images/nodes/take.png" width="400">
+<h3 id="take-at-indices-color-color">Take At Indices &lt;Color, Color&gt;</h3>
+<p>This node takes the colors of the inputs at the indices specified in the indices input. This is most useful to
+select colors from a single node.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Indices</td>
+<td>The indices of the colors to select.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Take at indices nodes example" src="../images/nodes/take_at_indices.png" width="400">
+<h3 id="take-random-color-color">Take Random &lt;Color, Color&gt;</h3>
+<p>This select random colors from the inputs.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Count</td>
+<td>The number of colors to select.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Take random nodes example" src="../images/nodes/take_random.png" width="400">
+<h2 id="other-nodes">Other Nodes</h2>
+<h3 id="affine-circle-color-color">Affine Circle &lt;Color, Color&gt;</h3>
+<img alt="Constant color nodes example" src="../images/nodes/color-elipse.png">
+<p>This node creates a series of ellipse in the RGB color space. The three colors you give determine a plane; all the
+ellipses are &quot;concentric&quot; in this plane around the triangles centroid. The radius determines which ellipse is used to
+sample the colors from. If the radius is 1, the ellipse goes through the provided colors. A radius of zero
+degenerates to the centroid of the triangle.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color1, Color2, Color3</td>
+<td>The colors that define the triangle.</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>The radius of the circle. A radius of 1 corresponds to an ellipse that runs through the colors. If the radius is 0, all the output colors will be the average of the three colors.</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Affine circle nodes example" src="../images/nodes/affine_circle.png" width="400">
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/gamelogic/colorsunity/src/master/Documentation/content/node-reference.md#lines-1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

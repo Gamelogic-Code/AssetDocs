@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct ColorHSL | Gamelogic Colors </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct ColorHSL | Gamelogic Colors ">
+      
+      <meta name="description" content="Class for representing colors in the HSL color space.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Colors">
+            Gamelogic Colors
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Colors.ColorHSL">
+
+
+
+  <h1 id="Gamelogic_Colors_ColorHSL" data-uid="Gamelogic.Colors.ColorHSL" class="text-break">
+Struct ColorHSL  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/colorsunity/src/master/Packages/za.co.gamelogic.colors/Runtime/Scripts/ColorSpaces/HSL/ColorHSL.cs#lines-12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Colors.html">Colors</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Colors.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Class for representing colors in the HSL color space.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public struct ColorHSL</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.-ctor.html#Gamelogic_Colors_ColorHSL__ctor_System_Single_System_Single_System_Single_">ColorHSL(float, float, float)</a></dt>
+    <dd><p>Constructor with ColorHSL</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.-ctor.html#Gamelogic_Colors_ColorHSL__ctor_UnityEngine_Color_">ColorHSL(Color)</a></dt>
+    <dd><p>Constructs a new ColorHSL that represents the given color.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.Black.html">Black</a></dt>
+    <dd><p>ColorHSL that represents black.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.White.html">White</a></dt>
+    <dd><p>ColorHSL that represents white.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.Color.html#Gamelogic_Colors_ColorHSL_Color">Color</a></dt>
+    <dd><p>Convert from the current ColorHSL to an RGB Color.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.H.html#Gamelogic_Colors_ColorHSL_H">H</a></dt>
+    <dd><p>Gets the Hue value</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.L.html#Gamelogic_Colors_ColorHSL_L">L</a></dt>
+    <dd><p>Gets or sets the Luminance value</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.S.html#Gamelogic_Colors_ColorHSL_S">S</a></dt>
+    <dd><p>Gets the Saturation value.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.GetShades.html#Gamelogic_Colors_ColorHSL_GetShades_System_Int32_">GetShades(int)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.GetTints.html#Gamelogic_Colors_ColorHSL_GetTints_System_Int32_">GetTints(int)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.Invert.html#Gamelogic_Colors_ColorHSL_Invert">Invert()</a></dt>
+    <dd><p>Gets a copy of this ColorHSL but inverted.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.InvertLuminance.html#Gamelogic_Colors_ColorHSL_InvertLuminance">InvertLuminance()</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the luminance inverted.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.InvertSaturation.html#Gamelogic_Colors_ColorHSL_InvertSaturation">InvertSaturation()</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the saturation inverted.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.Lerp.html#Gamelogic_Colors_ColorHSL_Lerp_Gamelogic_Colors_ColorHSL_Gamelogic_Colors_ColorHSL_System_Single_">Lerp(ColorHSL, ColorHSL, float)</a></dt>
+    <dd><p>Linearly interpolates between the given colors in HSL color space.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.Lerp.html#Gamelogic_Colors_ColorHSL_Lerp_UnityEngine_Color_UnityEngine_Color_System_Single_">Lerp(Color, Color, float)</a></dt>
+    <dd><p>Linearly interpolates between the given colors in HSL color space.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.ToString.html#Gamelogic_Colors_ColorHSL_ToString">ToString()</a></dt>
+    <dd><p>Gives a string representation of this color.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.WithHue.html#Gamelogic_Colors_ColorHSL_WithHue_System_Single_">WithHue(float)</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the given hue.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.WithHueOffset.html#Gamelogic_Colors_ColorHSL_WithHueOffset_System_Single_">WithHueOffset(float)</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the given hue offset.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.WithLuminance.html#Gamelogic_Colors_ColorHSL_WithLuminance_System_Single_">WithLuminance(float)</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the given luminance.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.WithLuminanceOffset.html#Gamelogic_Colors_ColorHSL_WithLuminanceOffset_System_Single_">WithLuminanceOffset(float)</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the given luminance offset.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.WithSaturation.html#Gamelogic_Colors_ColorHSL_WithSaturation_System_Single_">WithSaturation(float)</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the given saturation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Colors.ColorHSL.WithSaturationOffset.html#Gamelogic_Colors_ColorHSL_WithSaturationOffset_System_Single_">WithSaturationOffset(float)</a></dt>
+    <dd><p>Gets a copy of this ColorHSL with the given saturation offset.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/gamelogic/colorsunity/src/master/Packages/za.co.gamelogic.colors/Runtime/Scripts/ColorSpaces/HSL/ColorHSL.cs#lines-12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

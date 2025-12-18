@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Algorithm Reference | Gamelogic Colors </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Algorithm Reference | Gamelogic Colors ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/colorsunity/src/master/Documentation/content/algorithm-reference.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Colors">
+            Gamelogic Colors
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="algorithm-reference">Algorithm Reference</h1>
+
+<p>This document describes the algorithms available in the Procedural Palette Generator.</p>
+<h2 id="uniform-randomness">Uniform randomness</h2>
+<p>Random values are procedurally chosen from each of the RGB
+channels. Therefore, there is no structure or relationship between the
+colors in the palette.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of uniform randomness" src="../images/algorithms/uniform_randomness.png" width="400">
+<h2 id="random-walk">Random walk</h2>
+<p>Each successive color is randomly offset from the previous color,
+depending on the minimum and maximum offset values that you
+select.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Starting Color</td>
+<td>The color to start the walk from.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The minimum and maximum offset from the previous color.</td>
+</tr>
+<tr>
+<td>Fix Luminance</td>
+<td>If true, all colors in the palette will have the same luminance as the starting color.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random walk" src="../images/algorithms/random_walk.png" width="400">
+<h2 id="gradient">Gradient</h2>
+<p>All colors in this algorithm are selected from a color gradient.</p>
+<ul>
+<li>Select color count</li>
+<li>Select gradient (add, remove and position colors on the
+gradient)</li>
+<li>Select mode</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Gradient</td>
+<td>The gradient to sample colors from.</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>The mode to select colors from the gradient. There are four modes: Even, Random, Golden Ratio, and Random Offset.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Even</td>
+<td>Each color in the palette is evenly spaced across the gradient.</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>Colors are randomly selected from the color gradient.</td>
+</tr>
+<tr>
+<td>Golden Ratio</td>
+<td>Each successive color has a high contrast to the previous color and no color will ever be repeated. Suitable for a GUI where a high contrast is required.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of golden ratio gradient" src="../images/algorithms/gradient_golden_ratio.png" width="400">
+<h2 id="random-offset">Random offset</h2>
+<p>Each color is randomly offset from the base color, depending on the
+minimum and maximum offset values that you select.</p>
+<ul>
+<li>Select color count</li>
+<li>Select starting color</li>
+<li>Select minimum offset and maximum offset</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Starting Color</td>
+<td>The color to start the walk from.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>The minimum and maximum offset from the previous color.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random offset" src="../images/algorithms/random_offset.png" width="400">
+<h2 id="random-mix">Random mix</h2>
+<p>Each color in the palette is generated using a random mix of the three
+colors selected.</p>
+<ul>
+<li>Select color count</li>
+<li>Select color 1, 2 and 3</li>
+<li>Select level of grey</li>
+<li>Choose between paint mode (a slightly different technique with
+a different result) and non-paint mode</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Color 1, Color 2, Color 3</td>
+<td>The colors to mix.</td>
+</tr>
+<tr>
+<td>Grey control</td>
+<td>Closer to 0 avoids mixing all colors evenly (which tends to be grey if the input colors are very different).</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>The mode used to mix colors in.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random mix" src="../images/algorithms/random_mix.png" width="400">
+<h2 id="random-hue">Random hue</h2>
+<p>Generates colors with a random hue.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Saturation</td>
+<td>The level of saturation.</td>
+</tr>
+<tr>
+<td>Luminance</td>
+<td>The level of luminance.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random hue 01" src="../images/algorithms/random_hue_01.png" width="400">
+<img alt="Example of random hue 02" src="../images/algorithms/random_hue_02.png" width="400">
+<h2 id="random-saturation">Random saturation</h2>
+<p>Generates colors with a random level of saturation.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Hue</td>
+<td>The hue of the colors.</td>
+</tr>
+<tr>
+<td>Luminance</td>
+<td>The level of luminance.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random saturation 01" src="../images/algorithms/random_saturation_01.png" width="400">
+<img alt="Example of random saturation 02" src="../images/algorithms/random_saturation_02.png" width="400">
+<h2 id="random-luminance">Random luminance</h2>
+<p>Generates colors with a random level of luminance</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Hue</td>
+<td>The hue of the colors.</td>
+</tr>
+<tr>
+<td>Saturation</td>
+<td>The level of saturation.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random luminance 01" src="../images/algorithms/random_luminance_01.png" width="400">
+<img alt="Example of random luminance 02" src="../images/algorithms/random_luminance_02.png" width="400">
+<h2 id="random-saturation-and-luminance">Random saturation and luminance</h2>
+<p>Generates a random level of saturation and luminance</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Hue</td>
+<td>The hue of the colors.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of random saturation and luminance 01" src="../images/algorithms/random_saturation_and_luminance_01.png" width="400">
+<img alt="Example of random saturation and luminance 02" src="../images/algorithms/random_saturation_and_luminance_02.png" width="400">
+<h2 id="harmony">Harmony</h2>
+<p>A color is randomly selected off the color wheel. You can select too
+angles to offset from that color, resulting in two additional colors. After
+choosing a range for each of the three colors, the palette is randomly
+selected with in those selected ranges of the three colors.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Offset Angle 0</td>
+<td>The angle offset for the first color.</td>
+</tr>
+<tr>
+<td>Offset Angle 1</td>
+<td>The angle offset for the second color.</td>
+</tr>
+<tr>
+<td>Offset Angle 2</td>
+<td>The angle offset for the third color.</td>
+</tr>
+<tr>
+<td>Range Angle 0</td>
+<td>The range of the first color.</td>
+</tr>
+<tr>
+<td>Range Angle 1</td>
+<td>The range of the second color.</td>
+</tr>
+<tr>
+<td>Range Angle 2</td>
+<td>The range of the third color.</td>
+</tr>
+<tr>
+<td>Saturation</td>
+<td>The level of saturation. The saturation falls within Saturation Range from this value.</td>
+</tr>
+<tr>
+<td>Saturation Range</td>
+<td>The range of saturation.</td>
+</tr>
+<tr>
+<td>Luminance</td>
+<td>The level of luminance. The luminance falls within Luminance Range from this value.</td>
+</tr>
+<tr>
+<td>Luminance Range</td>
+<td>The range of luminance.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of harmony" src="../images/algorithms/harmony.png" width="400">
+<h2 id="tints">Tints</h2>
+<p>Generates a palette with a varying level of white in a selected color.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>The color to generate tints from.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of tints" src="../images/algorithms/tints.png" width="400">
+<h2 id="shades">Shades</h2>
+<p>Generates a palette with a varying level of black in a selected color.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color Count</td>
+<td>The number of colors to generate.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>The color to generate shades from.</td>
+</tr>
+</tbody>
+</table>
+<img alt="Example of shades" src="../images/algorithms/shades.png" width="400">
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/gamelogic/colorsunity/src/master/Documentation/content/algorithm-reference.md#lines-1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

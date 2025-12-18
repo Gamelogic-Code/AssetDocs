@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Using the Node Editor | Gamelogic Colors </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Using the Node Editor | Gamelogic Colors ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/colorsunity/src/master/Documentation/content/using-the-node-editor.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Colors">
+            Gamelogic Colors
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="using-the-node-editor">Using the Node Editor</h1>
+
+<h2 id="creating-a-color-graph">Creating a color graph</h2>
+<p>To create a new color graph, select <strong>Assets | Create | Gamelogic | Colors | Graph</strong>, or right click in the project
+view and select <strong>Create | Gamelogic | Colors | Graph</strong>. This will create a new graph asset in your project.</p>
+<p>Once you have created file, click on it in the project view, and select <strong>Edit</strong> in the inspector. The Graph editor
+will open, from where you can add and edit nodes.</p>
+<h2 id="working-with-nodes">Working with nodes</h2>
+<p>To add a node, click one of the node buttons on the left of the window. Note that the first two buttons are not node
+buttons. A new node will appear, which you can drag to a convenient place on the window.</p>
+<p>To remove a node, you can click on the <strong>Remove Node</strong> button on the node.</p>
+<p>To remove all nodes from the graph, click the <strong>Clear</strong> button on the left of the window.</p>
+<p>To add a link from one node to another, click on the first node’s <strong>Add link</strong> button. A link will appear, that you
+can connect to the second node by clicking on it. Not all nodes can be connected; the link will not form if
+it is illegal. Use the node reference to see which nodes are legal. To remove a link, click on the red disk in the
+middle of the link.</p>
+<h2 id="computing-the-output">Computing the output</h2>
+<p>To generate colors, you need to click the <strong>Recompute</strong> button on the left of the window. Colors will only be
+computed for nodes that have the right inputs. Your graph should have at least one input node (<strong>Constant</strong>
+<strong>Color</strong> or <strong>Random Color</strong>). These nodes do not have inputs. All nodes can be used for inputs for other nodes. as
+long as they are of the right type.</p>
+<h2 id="linking-generated-colors-to-your-scene">Linking generated colors to your scene</h2>
+<p>Once you have created a graph with at least one input node, you can link it into your scene through scripting:</p>
+<ol>
+<li><p>Add an <a class="xref" href="../api/Gamelogic.Colors.InspectableColorNode.html">InspectableColorNode</a> serializable field to the script where you want to write the logic.
+This will allow you to link in the graph and select the node from which you want to get the colors from. You can add
+multiple fields of InspectableGraphNode if you want to access more than one node from your script.</p>
+</li>
+<li><p>In code, you can get the colors of the node if the	<a class="xref" href="../api/Gamelogic.Colors.InspectableColorNode.html">InspectableColorNode</a> field using its Colors
+property. This is simply a list of colours. You can now write code to apply these colors to materials, sprites,
+UI images, lights, or anywhere else you can adjust the color.</p>
+</li>
+<li><p>In the Unity editor, drag the graph object in the appropriate field, and select the node you want to work from.</p>
+</li>
+</ol>
+<p>The examples that ship with colors show a simple way to follow these three steps to color different scenes.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://bitbucket.org/gamelogic/colorsunity/src/master/Documentation/content/using-the-node-editor.md#lines-1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
