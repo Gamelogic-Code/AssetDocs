@@ -1,0 +1,324 @@
+body {
+	/*width: 1040px;*/
+	margin: auto;
+}
+
+body, table, div, p, dl {
+	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	/*'Lucida Sans Unicode','Lucida Grande',sans-serif;*/
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 16px;
+
+}
+
+.title {
+	/*font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;*/
+	font-weight: normal;
+	font-size:200%;
+	line-height:36px;
+}
+
+a {
+	color: #2ac0d9;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.el {
+	font-weight: normal;
+}
+
+.contents a:visited {
+	color: #2ac0d9;
+}
+
+#titlearea
+{
+	border-bottom: none;
+	color:#85dbe9;
+}
+
+#top {
+	border-bottom: solid 1px #2ac0d9;
+}
+
+/*
+.memItemLeft {
+	font-family: monospace;
+}
+
+.memItemRight{
+	font-family: monospace;
+}
+
+.memname{
+	font-family: monospace;
+}
+
+.paramtype{
+	font-family: monospace;
+}
+
+.paramname{
+	font-family: monospace;
+}
+*/
+
+h1{
+	font-weight: normal;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+.memdoc, dl.reflist dd{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+
+.memproto, dl.reflist dt {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: none;
+	border-radius: 0;
+	background-color:#ebf9fc;
+}
+
+.memdoc, dl.reflist dd {
+	background-image: none;
+	border: none;
+	border-radius: 0;
+}
+
+dl.note{
+    border-color: #72c522 !important;
+	background-color: #f1f9cc !important;
+}
+
+/**
+	navtree.
+*/
+
+#nav-tree{
+	background-image: none;
+	background-color: #ffffff; /*#f6fdfd;*/
+}
+
+#nav-tree .label{
+	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+	/*'Lucida Sans Unicode','Lucida Grande',sans-serif;*/
+}
+
+#side-nav {
+  /*position: relative;
+  left: 0px;
+  top: 0px !important;
+  margin: 0;*/
+}
+
+.ui-resizable-e{
+	background-image: none;
+	background-color: #2ac0d9;
+}
+
+#nav-tree .selected {
+	background-image:none;
+	background-color: #2ac0d9;
+	text-shadow:none;
+}
+
+#doc-content{
+	/*margin: 0px !important;
+	float: left;*/
+}
+
+.tabs, .tabs2, .tabs3 {
+	background-image: none;
+	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+	font-size:16px;
+}
+
+#navrow1 {
+	background-color: #85dbe9;
+}
+
+#navrow1 .tablist  a{
+	color:#fff;
+}
+
+#navrow2 {
+	background-color: #cdf0f6;
+}
+
+#navrow3 {
+	background-color: #ebf9fc;
+}
+
+#navrow4 {
+	background-color: #f6fdfd;
+}
+.tabs2 {
+	/*background-color: rgb(163, 176, 202);*/
+}
+
+.tablist li {
+	background-image: none;
+}
+
+.tablist a {
+	background-image: none;
+	text-shadow:none;
+}
+
+.tablist a:hover {
+	background-image: none;
+	text-shadow:none;
+	background-color: #2ac0d9;
+}
+
+.tablist li.current a {
+	background-image: none;
+	text-shadow:none;
+	background-color: #2ac0d9;
+}
+
+#navrow1 .tablist li.current a {
+	text-shadow:none;
+	color:#000;
+}
+
+.tablist li.current a {
+	text-shadow:none;
+	color:#000;
+}
+
+#navrow1 li.current a {
+	text-shadow:none;
+	background-color: #cdf0f6;
+}
+
+#navrow2 li.current a {
+	text-shadow:none;
+	background-color: #ebf9fc;
+}
+
+#navrow3 li.current a {
+	text-shadow:none;
+	background-color: #f6fdfd;
+}
+
+#navrow4 li.current a {
+	text-shadow:none;
+	background-color: #ffffff;
+}
+
+.navpath ul {
+	background-image: none;
+}
+
+.memproto, dl.reflist dt{
+	background-image: none;
+}
+
+table.fieldtable {
+	border-radius:0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+.fieldtable th{
+	background-image:none;
+}
+
+div.header {
+	background-image:none;
+	/*background-color:#f6fdfd;*/
+	background-color:#ffffff;
+	border:none;
+	/*border-bottom-color:#2ac0d9;*/
+}
+
+.memitem.glow {
+         box-shadow: 0 0 15px #2ac0d9;
+
+		 
+div.line.glow {
+	background-color: #2ac0d9;
+	box-shadow: 0 0 10px #2ac0d9;
+}
+
+.memberdecls td.glow, .fieldtable tr.glow {
+	background-color: #2ac0d9;
+	box-shadow: 0 0 15px #2ac0d9;
+}
+
+h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+	text-shadow: 0 0 15px #fac0d9;
+}
+
+div.directory {
+	border-bottom-color:#2ac0d9;
+	border-top-color:#2ac0d9;
+}
+
+.directory tr.even {
+	background-image:none;
+}
+
+h2.groupheader {
+	color: #a9bf1b;/*#2ac0d9;*/
+	/*border-bottom-color:#a9bf1b;*/
+	border:none;
+	background-color:#f1f9cc;
+	padding:1em;
+}
+
+.mdescLeft, .mdescRight,
+.memItemLeft, .memItemRight,
+.memTemplItemLeft, .memTemplItemRight, .memTemplParams {
+	background-color: #ffffff;/*#f6fdfd;*/
+}
+
+span.mlabel {
+	background-color: #2ac0d9;
+	border: none;
+	text-shadow: none;
+	border-radius: 0;
+}
+
+pre.fragment, div.fragment {
+	background-color: #f6fdfd;
+	border: 1px solid #2ac0d9;
+}
+
+.directory tr.even {
+	background-color: #f6fdfd;
+}
+
+span.lineno {
+	border: none;
+	background-color: #2ac0d9;
+	color: #fff;
+}
+
+span.lineno  a{
+	border:none;
+	background-color: #fff;
+    color:#2ac0d9;
+}
+
+span.lineno  a:hover{
+	border:none;
+	background-color: #cdf0f6;
+    color:#2ac0d9;
+}
+
+.paramname{
+        font-weight: bold !important;
+        vertical-align: top !important;
+}
+
