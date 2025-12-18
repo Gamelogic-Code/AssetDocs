@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Generator | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Generator | Gamelogic Words ">
+      
+      <meta name="description" content="Contains static methods for creating generators, and extension methods to create generators from existing ones.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Extensions.Algorithms.Generator">
+
+
+
+  <h1 id="Gamelogic_Extensions_Algorithms_Generator" data-uid="Gamelogic.Extensions.Algorithms.Generator" class="text-break">
+Class Generator  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Generators.cs#lines-113"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Extensions.html">Extensions</a>.<a class="xref" href="Gamelogic.Extensions.Algorithms.html">Algorithms</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains static methods for creating generators, and extension methods to
+create generators from existing ones.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(2, 0, 0)]
+public static class Generator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Generator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_Extensions_Algorithms_Generator_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A generator is a class that generates data on demand. In this implementation,
+generators implement the IGenerator interface, and through an extension method supports
+a Next method that returns an element every time it is called.</p>
+<p>Generators are infinite.</p>
+<p>Many methods make methods from existing generators. The existing generators are always
+cloned, so no derived generator will call the
+<a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Next.html#Gamelogic_Extensions_Algorithms_Generator_Next__1_Gamelogic_Extensions_Algorithms_IGenerator___0__">Next&lt;TSource&gt;(IGenerator&lt;TSource&gt;)</a> or
+<a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator.MoveNext.html#Gamelogic_Extensions_Algorithms_IGenerator_MoveNext">MoveNext()</a> methods of an existing generator.
+Clones are always returned in the restarted state.</p>
+<p>Although Generators have almost the same interface as IEnumerator, there are some differences. Generators
+are always in a &quot;valid&quot; state, so calls to <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.Current.html#Gamelogic_Extensions_Algorithms_IGenerator_1_Current">Current</a> will always return a valid
+result, there is no &quot;before first&quot; and &quot;after last&quot; states.</p>
+<p>You can also implement your own generators. There are two ways to do this. The first
+is to simply use the static methods provided; they allow you to make new generators
+by manipulating existing ones.</p>
+<p>The second way is appropriate for more complicated situations, and that is to define your own class
+that implements the <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator&lt;TResult&gt;</a> interface.</p>
+</div>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Aggregate.html#Gamelogic_Extensions_Algorithms_Generator_Aggregate__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0___0___0__">Aggregate&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, TSource, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that generates a running aggregate of the source generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Aggregate.html#Gamelogic_Extensions_Algorithms_Generator_Aggregate__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0___0___0____0_">Aggregate&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, TSource, TSource&gt;, TSource)</a></dt>
+    <dd><p>Makes a generator that generates a running aggregate of the source generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Aggregate.html#Gamelogic_Extensions_Algorithms_Generator_Aggregate__2_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___1___0___1____1_">Aggregate&lt;TSource, TResult&gt;(IGenerator&lt;TSource&gt;, Func&lt;TResult, TSource, TResult&gt;, TResult)</a></dt>
+    <dd><p>Makes a generator that generates a running aggregate of the source generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Apply.html#Gamelogic_Extensions_Algorithms_Generator_Apply__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Action___0__">Apply&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Action&lt;TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that applies a function on the elements it generates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Average.html#Gamelogic_Extensions_Algorithms_Generator_Average_Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">Average(IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a generator the will generate the average of elements generated by another generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Average.html#Gamelogic_Extensions_Algorithms_Generator_Average_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__">Average(IGenerator&lt;float&gt;)</a></dt>
+    <dd><p>Makes a generator the will generate the average of elements generated by another generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Cast.html#Gamelogic_Extensions_Algorithms_Generator_Cast__1_Gamelogic_Extensions_Algorithms_IGenerator_">Cast&lt;TResult&gt;(IGenerator)</a></dt>
+    <dd><p>Makes a generator that will generate elements by casting the elements of a source
+generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.ChooseUniformRandom.html#Gamelogic_Extensions_Algorithms_Generator_ChooseUniformRandom__1_Gamelogic_Extensions_Algorithms_IGenerator___0____">ChooseUniformRandom&lt;TSource&gt;(params IGenerator&lt;TSource&gt;[])</a></dt>
+    <dd><p>Chooses the from the given generators selected uniform randomly.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.ChooseUniformRandom.html#Gamelogic_Extensions_Algorithms_Generator_ChooseUniformRandom__1_System_Collections_Generic_IList_Gamelogic_Extensions_Algorithms_IGenerator___0___">ChooseUniformRandom&lt;TSource&gt;(IList&lt;IGenerator&lt;TSource&gt;&gt;)</a></dt>
+    <dd><p>Makes a generator that selects a random generator from a given element to generate an element from.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.ChooseUniformRandom.html#Gamelogic_Extensions_Algorithms_Generator_ChooseUniformRandom__1_System_Collections_Generic_IList_Gamelogic_Extensions_Algorithms_IGenerator___0___System_Int32_">ChooseUniformRandom&lt;TSource&gt;(IList&lt;IGenerator&lt;TSource&gt;&gt;, int)</a></dt>
+    <dd><p>Chooses the random.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.ChooseUniformRandom.html#Gamelogic_Extensions_Algorithms_Generator_ChooseUniformRandom__1_System_Collections_Generic_IList___0__">ChooseUniformRandom&lt;TSource&gt;(IList&lt;TSource&gt;)</a></dt>
+    <dd><p>Make a generator that randomly generates elements from a list.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.ChooseUniformRandom.html#Gamelogic_Extensions_Algorithms_Generator_ChooseUniformRandom__1_System_Collections_Generic_IList___0__System_Int32_">ChooseUniformRandom&lt;TSource&gt;(IList&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Make a generator that randomly generates elements from a list. Can be seeded.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Choose.html#Gamelogic_Extensions_Algorithms_Generator_Choose__1_System_Collections_Generic_IList_Gamelogic_Extensions_Algorithms_IGenerator___0___Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">Choose&lt;TSource&gt;(IList&lt;IGenerator&lt;TSource&gt;&gt;, IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a generator that uses an index generator to choose a generator to
+generate an element from.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Choose.html#Gamelogic_Extensions_Algorithms_Generator_Choose__1_System_Collections_Generic_IList___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">Choose&lt;TSource&gt;(IList&lt;TSource&gt;, IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a generator that chooses elements from a list using an index generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.ClosedSawTooth.html#Gamelogic_Extensions_Algorithms_Generator_ClosedSawTooth_System_Int32_">ClosedSawTooth(int)</a></dt>
+    <dd><p>Makes a generator that produces evenly spaced floats from 0 to 1, both limits included, and repeats the result.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Combine.html#Gamelogic_Extensions_Algorithms_Generator_Combine__2_System_Collections_Generic_IEnumerable_Gamelogic_Extensions_Algorithms_IGenerator___0___System_Func_System_Collections_Generic_IList___0____1__">Combine&lt;TSource, TResult&gt;(IEnumerable&lt;IGenerator&lt;TSource&gt;&gt;, Func&lt;IList&lt;TSource&gt;, TResult&gt;)</a></dt>
+    <dd><p>Makes a generator that combines the elements of specified generators.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Combine.html#Gamelogic_Extensions_Algorithms_Generator_Combine__3_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__System_Func___0___1___2__">Combine&lt;T1, T2, TResult&gt;(IGenerator&lt;T1&gt;, IGenerator&lt;T2&gt;, Func&lt;T1, T2, TResult&gt;)</a></dt>
+    <dd><p>Combines the specified generators by applying a result selector
+function to the elements of each generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Combine.html#Gamelogic_Extensions_Algorithms_Generator_Combine__4_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__Gamelogic_Extensions_Algorithms_IGenerator___2__System_Func___0___1___2___3__">Combine&lt;T1, T2, T3, TResult&gt;(IGenerator&lt;T1&gt;, IGenerator&lt;T2&gt;, IGenerator&lt;T3&gt;, Func&lt;T1, T2, T3, TResult&gt;)</a></dt>
+    <dd><p>Combines the specified generators by applying a result selector
+function to the elements of each generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Combine.html#Gamelogic_Extensions_Algorithms_Generator_Combine__5_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__Gamelogic_Extensions_Algorithms_IGenerator___2__Gamelogic_Extensions_Algorithms_IGenerator___3__System_Func___0___1___2___3___4__">Combine&lt;T1, T2, T3, T4, TResult&gt;(IGenerator&lt;T1&gt;, IGenerator&lt;T2&gt;, IGenerator&lt;T3&gt;, IGenerator&lt;T4&gt;, Func&lt;T1, T2, T3, T4, TResult&gt;)</a></dt>
+    <dd><p>Combines the specified generators by applying a result selector
+function to the elements of each generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Constant.html#Gamelogic_Extensions_Algorithms_Generator_Constant__1___0_">Constant&lt;TSource&gt;(TSource)</a></dt>
+    <dd><p>Makes a generator that generates a the same item each time.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Count.html#Gamelogic_Extensions_Algorithms_Generator_Count_System_Int32_">Count(int)</a></dt>
+    <dd><p>Makes a generator that generates consecutive integers starting from zero up to a limit, and repeats the cycle.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Dither.html#Gamelogic_Extensions_Algorithms_Generator_Dither_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__System_Int32_System_Collections_Generic_IEnumerable_System_Single__">Dither(IGenerator&lt;float&gt;, int, IEnumerable&lt;float&gt;)</a></dt>
+    <dd><p>Takes the source generator's output, and generate a dithered sequence of integers
+in the range 0 to levels - 1. Uses error diffusion.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.FrequencyRandomInt.html#Gamelogic_Extensions_Algorithms_Generator_FrequencyRandomInt_System_Collections_Generic_IEnumerable_System_Single__">FrequencyRandomInt(IEnumerable&lt;float&gt;)</a></dt>
+    <dd><p>Generates random integers at relative frequencies provided.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.FrequencyRandomInt.html#Gamelogic_Extensions_Algorithms_Generator_FrequencyRandomInt_System_Collections_Generic_IEnumerable_System_Single__System_Int32_">FrequencyRandomInt(IEnumerable&lt;float&gt;, int)</a></dt>
+    <dd><p>Generates random integers at relative frequencies provided.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.FromFunc.html#Gamelogic_Extensions_Algorithms_Generator_FromFunc__1_System_Func___0__">FromFunc&lt;TResult&gt;(Func&lt;TResult&gt;)</a></dt>
+    <dd><p>Makes a new generator from a generator function.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.GaussianRandomFloat.html#Gamelogic_Extensions_Algorithms_Generator_GaussianRandomFloat_System_Single_System_Single_">GaussianRandomFloat(float, float)</a></dt>
+    <dd><p>Makes a generator that generates floats with a Gaussian distribution.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Group.html#Gamelogic_Extensions_Algorithms_Generator_Group__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">Group&lt;TSource&gt;(IGenerator&lt;TSource&gt;, IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a generator that generates groups of items from the source generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Group.html#Gamelogic_Extensions_Algorithms_Generator_Group__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">Group&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Makes a generator that returns groups of elements from the source generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Interleave.html#Gamelogic_Extensions_Algorithms_Generator_Interleave__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___0____">Interleave&lt;TSource&gt;(IGenerator&lt;TSource&gt;, params IGenerator&lt;TSource&gt;[])</a></dt>
+    <dd><p>Makes a generator that interleaves the elements of the specified generators.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Interleave.html#Gamelogic_Extensions_Algorithms_Generator_Interleave__1_System_Collections_Generic_IList_Gamelogic_Extensions_Algorithms_IGenerator___0___">Interleave&lt;TSource&gt;(IList&lt;IGenerator&lt;TSource&gt;&gt;)</a></dt>
+    <dd><p>Makes a generator that interleaves the elements of the specified generators.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.InterpolateDither.html#Gamelogic_Extensions_Algorithms_Generator_InterpolateDither__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">InterpolateDither&lt;TSource&gt;(IGenerator&lt;TSource&gt;, IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Interpolates a sequence, but applies dithering.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Interpolate.html#Gamelogic_Extensions_Algorithms_Generator_Interpolate__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__System_Func___0___0_System_Single___0__">Interpolate&lt;TSource&gt;(IGenerator&lt;TSource&gt;, IGenerator&lt;int&gt;, Func&lt;TSource, TSource, float, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that interpolates between values of a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Interpolate.html#Gamelogic_Extensions_Algorithms_Generator_Interpolate__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_System_Func___0___0_System_Single___0__">Interpolate&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int, Func&lt;TSource, TSource, float, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that interpolates between values of a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Iterate.html#Gamelogic_Extensions_Algorithms_Generator_Iterate__1_System_Collections_Generic_IEnumerable___0__System_Func_System_Collections_Generic_IList___0____0__">Iterate&lt;TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;IList&lt;TSource&gt;, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that uses an iterator function to generate elements.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Iterate.html#Gamelogic_Extensions_Algorithms_Generator_Iterate__1___0_System_Func___0___0__">Iterate&lt;TSource&gt;(TSource, Func&lt;TSource, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that returns iterations of the specified initial element.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Iterate.html#Gamelogic_Extensions_Algorithms_Generator_Iterate__1___0___0_System_Func___0___0___0__">Iterate&lt;TSource&gt;(TSource, TSource, Func&lt;TSource, TSource, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that uses an iterator function to generate elements.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Iterate.html#Gamelogic_Extensions_Algorithms_Generator_Iterate__1___0___0___0_System_Func___0___0___0___0__">Iterate&lt;TSource&gt;(TSource, TSource, TSource, Func&lt;TSource, TSource, TSource, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that uses an iterator function to generate elements.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Iterate.html#Gamelogic_Extensions_Algorithms_Generator_Iterate__1___0___0___0___0_System_Func___0___0___0___0___0__">Iterate&lt;TSource&gt;(TSource, TSource, TSource, TSource, Func&lt;TSource, TSource, TSource, TSource, TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that uses an iterator function to generate elements.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Iterate.html#Gamelogic_Extensions_Algorithms_Generator_Iterate__2___0_Gamelogic_Extensions_Algorithms_IGenerator___1__System_Func___0___1___0__">Iterate&lt;TSource, TSource2&gt;(TSource, IGenerator&lt;TSource2&gt;, Func&lt;TSource, TSource2, TSource&gt;)</a></dt>
+    <dd><p>Applies a function on the last element to produce the next element. The function
+takes twp parameters; the second parameter is supplied by a generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Log.html#Gamelogic_Extensions_Algorithms_Generator_Log__1_Gamelogic_Extensions_Algorithms_IGenerator___0__">Log&lt;TSource&gt;(IGenerator&lt;TSource&gt;)</a></dt>
+    <dd><p>A generator that generates the elements of the source generator, but sends the generated element to the Unity Console.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Log.html#Gamelogic_Extensions_Algorithms_Generator_Log__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Action___0__">Log&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Action&lt;TSource&gt;)</a></dt>
+    <dd><p>A generator that generates the elements of the source generator, but applies a log function to each element as it is generated.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.MarkovRandomInt.html#Gamelogic_Extensions_Algorithms_Generator_MarkovRandomInt_System_Single_0__0___">MarkovRandomInt(float[,])</a></dt>
+    <dd><p>Generates a Markov chain of integers from a transition table.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.MarkovRandomInt.html#Gamelogic_Extensions_Algorithms_Generator_MarkovRandomInt_System_Single_0__0___System_Int32_">MarkovRandomInt(float[,], int)</a></dt>
+    <dd><p>Generates a Markov chain of integers from a transition table.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.MarkovRandomIntStartsWith.html#Gamelogic_Extensions_Algorithms_Generator_MarkovRandomIntStartsWith_System_Single_0__0___System_Int32_">MarkovRandomIntStartsWith(float[,], int)</a></dt>
+    <dd><p>Makes a Markov generator that starts with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.MarkovRandomIntStartsWith.html#Gamelogic_Extensions_Algorithms_Generator_MarkovRandomIntStartsWith_System_Single_0__0___System_Int32_System_Int32_">MarkovRandomIntStartsWith(float[,], int, int)</a></dt>
+    <dd><p>Makes a Markov generator that starts with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.MoveNext.html#Gamelogic_Extensions_Algorithms_Generator_MoveNext__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">MoveNext&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Moves the generator by a specified amount forward.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.NextWhile.html#Gamelogic_Extensions_Algorithms_Generator_NextWhile__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0_System_Boolean__">NextWhile&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, bool&gt;)</a></dt>
+    <dd><p>Generates the elements from the generator while the predicate applied to elements
+hold an return them in an enumerable. After calling this method,
+the next element returned by Next (or the current value of Current) will not satisfy
+the predicate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Next.html#Gamelogic_Extensions_Algorithms_Generator_Next__1_Gamelogic_Extensions_Algorithms_IGenerator___0__">Next&lt;TSource&gt;(IGenerator&lt;TSource&gt;)</a></dt>
+    <dd><p>Returns the next element of the specified generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Next.html#Gamelogic_Extensions_Algorithms_Generator_Next__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">Next&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Returns a list of the next n items from the generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.OfType.html#Gamelogic_Extensions_Algorithms_Generator_OfType__1_Gamelogic_Extensions_Algorithms_IGenerator_">OfType&lt;TResult&gt;(IGenerator)</a></dt>
+    <dd><p>Makes a generator that will generate elements of a source generator that is
+of the given type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.OpenSawTooth.html#Gamelogic_Extensions_Algorithms_Generator_OpenSawTooth_Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">OpenSawTooth(IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a generator that produces evenly spaced floats from 0 (included)
+to 1 (excluded), and repeats the result (but with the number of samples
+each time given by a generator).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.OpenSawTooth.html#Gamelogic_Extensions_Algorithms_Generator_OpenSawTooth_System_Int32_">OpenSawTooth(int)</a></dt>
+    <dd><p>Makes a generator that produces evenly spaced floats from 0 (included)
+to 1 (excluded), and repeats the result.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Pad.html#Gamelogic_Extensions_Algorithms_Generator_Pad__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Collections_Generic_IEnumerable___0__">Pad&lt;TSource&gt;(IGenerator&lt;TSource&gt;, IEnumerable&lt;TSource&gt;)</a></dt>
+    <dd><p>Pads the specified generator with elements from a given list.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Pad.html#Gamelogic_Extensions_Algorithms_Generator_Pad__1_Gamelogic_Extensions_Algorithms_IGenerator___0____0_System_Int32_">Pad&lt;TSource&gt;(IGenerator&lt;TSource&gt;, TSource, int)</a></dt>
+    <dd><p>Pads the specified generator with a constant element repeated a specified number of times.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Poisson.html#Gamelogic_Extensions_Algorithms_Generator_Poisson_System_Int32_System_Int32_">Poisson(int, int)</a></dt>
+    <dd><p>A boolean generator that returns true at intervals uniformly distributed between
+minRadius and maxRadius.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.RandomBoolGenerator.html#Gamelogic_Extensions_Algorithms_Generator_RandomBoolGenerator_System_Single_">RandomBoolGenerator(float)</a></dt>
+    <dd><p>Makes a generator that returns random boolean values, true with the specified
+probability.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.RandomBoolGenerator.html#Gamelogic_Extensions_Algorithms_Generator_RandomBoolGenerator_System_Single_System_Int32_">RandomBoolGenerator(float, int)</a></dt>
+    <dd><p>Makes a generator that returns random boolean values, true with the specified
+probability.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.RepeatEach.html#Gamelogic_Extensions_Algorithms_Generator_RepeatEach__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">RepeatEach&lt;TSource&gt;(IGenerator&lt;TSource&gt;, IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a new generator that will repeat each of the given generators
+elements a number of times.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.RepeatEach.html#Gamelogic_Extensions_Algorithms_Generator_RepeatEach__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">RepeatEach&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Makes a new generator that will repeat each of the given generators
+elements a number of times.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Repeat.html#Gamelogic_Extensions_Algorithms_Generator_Repeat__1_System_Collections_Generic_IEnumerable___0__">Repeat&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a></dt>
+    <dd><p>Makes a generator that repeats elements of the given list over and over.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.SelectMany.html#Gamelogic_Extensions_Algorithms_Generator_SelectMany__2_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0_System_Collections_Generic_IEnumerable___1___">SelectMany&lt;TSource, TResult&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, IEnumerable&lt;TResult&gt;&gt;)</a></dt>
+    <dd><p>For each item in the source generator, a list of items is generated, but the items are generated
+one by one (and not as a list of items).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Select.html#Gamelogic_Extensions_Algorithms_Generator_Select__1_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__Gamelogic_Extensions_Algorithms_ResponseCurveBase___0__">Select&lt;TResult&gt;(IGenerator&lt;float&gt;, ResponseCurveBase&lt;TResult&gt;)</a></dt>
+    <dd><p>Makes a new generator by transforming the elements of a given
+float generator using a response curve.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Select.html#Gamelogic_Extensions_Algorithms_Generator_Select__2_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0___1__">Select&lt;TSource, TResult&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, TResult&gt;)</a></dt>
+    <dd><p>Makes a generator which generates items that are transformed, generated from a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.SkipAndTake.html#Gamelogic_Extensions_Algorithms_Generator_SkipAndTake__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_System_Int32_">SkipAndTake&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int, int)</a></dt>
+    <dd><p>Makes a generator that repeatedly skips over and takes elements from a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Skip.html#Gamelogic_Extensions_Algorithms_Generator_Skip__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">Skip&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Makes a generator that skips over the specified number of elements from the source generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Sum.html#Gamelogic_Extensions_Algorithms_Generator_Sum_Gamelogic_Extensions_Algorithms_IGenerator_System_Int32__">Sum(IGenerator&lt;int&gt;)</a></dt>
+    <dd><p>Makes a generator that will generate partial sums of a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Sum.html#Gamelogic_Extensions_Algorithms_Generator_Sum_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__">Sum(IGenerator&lt;float&gt;)</a></dt>
+    <dd><p>Makes a generator that will generate partial sums of a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.SwitchAfter.html#Gamelogic_Extensions_Algorithms_Generator_SwitchAfter__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_Gamelogic_Extensions_Algorithms_IGenerator___0__">SwitchAfter&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int, IGenerator&lt;TSource&gt;)</a></dt>
+    <dd><p>Generates elements from a source generator for
+the given number of steps, then switches to a second generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.SwitchWhen.html#Gamelogic_Extensions_Algorithms_Generator_SwitchWhen__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0_System_Boolean__Gamelogic_Extensions_Algorithms_IGenerator___0__">SwitchWhen&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, bool&gt;, IGenerator&lt;TSource&gt;)</a></dt>
+    <dd><p>Generates elements from the source generator until a condition is met,
+then generate elements from a second generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.TakeAndSkip.html#Gamelogic_Extensions_Algorithms_Generator_TakeAndSkip__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_System_Int32_">TakeAndSkip&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int, int)</a></dt>
+    <dd><p>Makes a generator that repeatedly takes and skips over elements from a given generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.UniformRandomFloat.html#Gamelogic_Extensions_Algorithms_Generator_UniformRandomFloat">UniformRandomFloat()</a></dt>
+    <dd><p>Makes a generator hat generates floats uniformly between 0 and 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.UniformRandomFloat.html#Gamelogic_Extensions_Algorithms_Generator_UniformRandomFloat_System_Int32_">UniformRandomFloat(int)</a></dt>
+    <dd><p>Makes a generator that generates floats uniformly between 0 and 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.UniformRandomInt.html#Gamelogic_Extensions_Algorithms_Generator_UniformRandomInt_System_Int32_">UniformRandomInt(int)</a></dt>
+    <dd><p>Makes a generator that generates integers uniformly distributed between 0 (included) and
+the specified limit (excluded).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.UniformRandomInt.html#Gamelogic_Extensions_Algorithms_Generator_UniformRandomInt_System_Int32_System_Int32_">UniformRandomInt(int, int)</a></dt>
+    <dd><p>Makes a generator hat generates integers uniformly distributed between 0 (included) and
+the specified limit (excluded).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.UniformVector2InCircle.html#Gamelogic_Extensions_Algorithms_Generator_UniformVector2InCircle_System_Single_">UniformVector2InCircle(float)</a></dt>
+    <dd><p>Generates vectors uniformly distributed in a given circle.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.UniformVector2InRect.html#Gamelogic_Extensions_Algorithms_Generator_UniformVector2InRect_UnityEngine_Vector2_">UniformVector2InRect(Vector2)</a></dt>
+    <dd><p>Generates vectors uniformly distributed in a given rectangle.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.WhereWindow.html#Gamelogic_Extensions_Algorithms_Generator_WhereWindow__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_System_Func___0___System_Boolean__">WhereWindow&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int, Func&lt;TSource[], bool&gt;)</a></dt>
+    <dd><p>Only generates an item if the window of the item passes the predicate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Where.html#Gamelogic_Extensions_Algorithms_Generator_Where__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Boolean__">Where&lt;TSource&gt;(IGenerator&lt;TSource&gt;, IGenerator&lt;bool&gt;)</a></dt>
+    <dd><p>Makes a generator that will only generate elements that pass the predicate generated by the predicate generator.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Where.html#Gamelogic_Extensions_Algorithms_Generator_Where__1_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator_System_Boolean__System_Int32_">Where&lt;T&gt;(IGenerator&lt;T&gt;, IGenerator&lt;bool&gt;, int)</a></dt>
+    <dd><p>Makes a generator that will only generate elements that pass the predicate generated by
+the predicate generator. If the source elements does not provide
+elements that pass the predicate for the given number of maximum iterations, an exception is thrown.
+This is to prevent a stalling the generator forever.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Where.html#Gamelogic_Extensions_Algorithms_Generator_Where__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0_System_Boolean__">Where&lt;TSource&gt;(IGenerator&lt;TSource&gt;, Func&lt;TSource, bool&gt;)</a></dt>
+    <dd><p>Makes a generator that will only generate elements that pass the predicate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Where.html#Gamelogic_Extensions_Algorithms_Generator_Where__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Func___0_System_Boolean__System_Int32_">Where&lt;T&gt;(IGenerator&lt;T&gt;, Func&lt;T, bool&gt;, int)</a></dt>
+    <dd><p>Makes a generator that will only generate elements that pass the predicate. If the source elements does not provide
+elements that pass the predicate for the given number of maximum iterations, an exception is thrown.
+This is to prevent a stalling the generator forever.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Generator.Window.html#Gamelogic_Extensions_Algorithms_Generator_Window__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">Window&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></dt>
+    <dd><p>Makes a generator that generates a moving window of elements over a given generator.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

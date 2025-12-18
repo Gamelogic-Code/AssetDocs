@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method Combine | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method Combine | Gamelogic Words ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine*">
+
+
+
+
+
+<h1 id="Gamelogic_Extensions_Algorithms_Generator_Combine_" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine*" class="text-break">
+Method Combine  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Generators.cs#lines-909"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Extensions.html">Extensions</a>.<a class="xref" href="Gamelogic.Extensions.Algorithms.html">Algorithms</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Gamelogic_Extensions_Algorithms_Generator_Combine_" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine*"></a>
+
+<h3 id="Gamelogic_Extensions_Algorithms_Generator_Combine__3_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__System_Func___0___1___2__" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine``3(Gamelogic.Extensions.Algorithms.IGenerator{``0},Gamelogic.Extensions.Algorithms.IGenerator{``1},System.Func{``0,``1,``2})">
+  Combine&lt;T1, T2, TResult&gt;(IGenerator&lt;T1&gt;, IGenerator&lt;T2&gt;, Func&lt;T1, T2, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Generators.cs#lines-909"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Combines the specified generators by applying a result selector
+function to the elements of each generator.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static IGenerator&lt;TResult&gt; Combine&lt;T1, T2, TResult&gt;(IGenerator&lt;T1&gt; generator1, IGenerator&lt;T2&gt; generator2, Func&lt;T1, T2, TResult&gt; resultSelector)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>generator1</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T1&gt;</dt>
+  <dd><p>The first generator.</p>
+</dd>
+  <dt><code>generator2</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T2&gt;</dt>
+  <dd><p>The second generator.</p>
+</dd>
+  <dt><code>resultSelector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T1, T2, TResult&gt;</dt>
+  <dd><p>The result selector function.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;TResult&gt;</dt>
+  <dd><p>A new generator</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T1</code></dt>
+  <dd><p>The type of elements of the first generator.</p>
+</dd>
+  <dt><code>T2</code></dt>
+  <dd><p>The type of elements of the second generator.</p>
+</dd>
+  <dt><code>TResult</code></dt>
+  <dd><p>The type of the elements of the result generator.</p>
+</dd>
+</dl>
+
+
+
+
+
+<h4 class="section" id="Gamelogic_Extensions_Algorithms_Generator_Combine__3_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__System_Func___0___1___2___examples">Examples</h4>
+<p>The following will code will add the elements of two generators to form its elements.
+<pre><code class="lang-csharp">var generator1 = Generator.Count(3); //generates 0 1 2 0 1 2 0 1 2...
+var generator2 = Generator.Count(2); //generates 0 1 0 1 0 1 0 1 0...
+<pre><code>var generator = Generator.Combine(generator1, generator2, (x, y) =&gt; x + y);
+	//generates 0 2 2 1 1 3 0 2 2...&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+</code></pre>
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p>generator1
+or
+generator2
+or
+resultSelector</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator1</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator2</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>resultSelector</code> is <b>null</b>.</p>
+</dd>
+</dl>
+
+
+
+<a id="Gamelogic_Extensions_Algorithms_Generator_Combine_" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine*"></a>
+
+<h3 id="Gamelogic_Extensions_Algorithms_Generator_Combine__4_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__Gamelogic_Extensions_Algorithms_IGenerator___2__System_Func___0___1___2___3__" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine``4(Gamelogic.Extensions.Algorithms.IGenerator{``0},Gamelogic.Extensions.Algorithms.IGenerator{``1},Gamelogic.Extensions.Algorithms.IGenerator{``2},System.Func{``0,``1,``2,``3})">
+  Combine&lt;T1, T2, T3, TResult&gt;(IGenerator&lt;T1&gt;, IGenerator&lt;T2&gt;, IGenerator&lt;T3&gt;, Func&lt;T1, T2, T3, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Generators.cs#lines-938"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Combines the specified generators by applying a result selector
+function to the elements of each generator.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static IGenerator&lt;TResult&gt; Combine&lt;T1, T2, T3, TResult&gt;(IGenerator&lt;T1&gt; generator1, IGenerator&lt;T2&gt; generator2, IGenerator&lt;T3&gt; generator3, Func&lt;T1, T2, T3, TResult&gt; resultSelector)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>generator1</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T1&gt;</dt>
+  <dd><p>The first generator.</p>
+</dd>
+  <dt><code>generator2</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T2&gt;</dt>
+  <dd><p>The second generator.</p>
+</dd>
+  <dt><code>generator3</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T3&gt;</dt>
+  <dd><p>The third generator.</p>
+</dd>
+  <dt><code>resultSelector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;T1, T2, T3, TResult&gt;</dt>
+  <dd><p>The result selector function.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;TResult&gt;</dt>
+  <dd><p>A new generator</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T1</code></dt>
+  <dd><p>The type of elements of the first generator.</p>
+</dd>
+  <dt><code>T2</code></dt>
+  <dd><p>The type of elements of the second generator.</p>
+</dd>
+  <dt><code>T3</code></dt>
+  <dd><p>The type of elements of the third generator.</p>
+</dd>
+  <dt><code>TResult</code></dt>
+  <dd><p>The type of the elements of the result generator.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator1</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator2</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator3</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>resultSelector</code> is <b>null</b>.</p>
+</dd>
+</dl>
+
+
+
+<a id="Gamelogic_Extensions_Algorithms_Generator_Combine_" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine*"></a>
+
+<h3 id="Gamelogic_Extensions_Algorithms_Generator_Combine__5_Gamelogic_Extensions_Algorithms_IGenerator___0__Gamelogic_Extensions_Algorithms_IGenerator___1__Gamelogic_Extensions_Algorithms_IGenerator___2__Gamelogic_Extensions_Algorithms_IGenerator___3__System_Func___0___1___2___3___4__" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine``5(Gamelogic.Extensions.Algorithms.IGenerator{``0},Gamelogic.Extensions.Algorithms.IGenerator{``1},Gamelogic.Extensions.Algorithms.IGenerator{``2},Gamelogic.Extensions.Algorithms.IGenerator{``3},System.Func{``0,``1,``2,``3,``4})">
+  Combine&lt;T1, T2, T3, T4, TResult&gt;(IGenerator&lt;T1&gt;, IGenerator&lt;T2&gt;, IGenerator&lt;T3&gt;, IGenerator&lt;T4&gt;, Func&lt;T1, T2, T3, T4, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Generators.cs#lines-976"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Combines the specified generators by applying a result selector
+function to the elements of each generator.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static IGenerator&lt;TResult&gt; Combine&lt;T1, T2, T3, T4, TResult&gt;(IGenerator&lt;T1&gt; generator1, IGenerator&lt;T2&gt; generator2, IGenerator&lt;T3&gt; generator3, IGenerator&lt;T4&gt; generator4, Func&lt;T1, T2, T3, T4, TResult&gt; resultSelector)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>generator1</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T1&gt;</dt>
+  <dd><p>The first generator.</p>
+</dd>
+  <dt><code>generator2</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T2&gt;</dt>
+  <dd><p>The second generator.</p>
+</dd>
+  <dt><code>generator3</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T3&gt;</dt>
+  <dd><p>The third generator.</p>
+</dd>
+  <dt><code>generator4</code> <a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;T4&gt;</dt>
+  <dd><p>The fourth generator.</p>
+</dd>
+  <dt><code>resultSelector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;T1, T2, T3, T4, TResult&gt;</dt>
+  <dd><p>The result selector function.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;TResult&gt;</dt>
+  <dd><p>A new generator</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T1</code></dt>
+  <dd><p>The type of elements of the first generator.</p>
+</dd>
+  <dt><code>T2</code></dt>
+  <dd><p>The type of elements of the second generator.</p>
+</dd>
+  <dt><code>T3</code></dt>
+  <dd><p>The type of elements of the third generator.</p>
+</dd>
+  <dt><code>T4</code></dt>
+  <dd><p>The type of elements of the fourth generator.</p>
+</dd>
+  <dt><code>TResult</code></dt>
+  <dd><p>The type of the elements of the result generator.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator1</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator2</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator3</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>generator4</code> is <b>null</b>.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code>resultSelector</code> is <b>null</b>.</p>
+</dd>
+</dl>
+
+
+
+<a id="Gamelogic_Extensions_Algorithms_Generator_Combine_" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine*"></a>
+
+<h3 id="Gamelogic_Extensions_Algorithms_Generator_Combine__2_System_Collections_Generic_IEnumerable_Gamelogic_Extensions_Algorithms_IGenerator___0___System_Func_System_Collections_Generic_IList___0____1__" data-uid="Gamelogic.Extensions.Algorithms.Generator.Combine``2(System.Collections.Generic.IEnumerable{Gamelogic.Extensions.Algorithms.IGenerator{``0}},System.Func{System.Collections.Generic.IList{``0},``1})">
+  Combine&lt;TSource, TResult&gt;(IEnumerable&lt;IGenerator&lt;TSource&gt;&gt;, Func&lt;IList&lt;TSource&gt;, TResult&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Generators.cs#lines-1007"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Makes a generator that combines the elements of specified generators.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static IGenerator&lt;TResult&gt; Combine&lt;TSource, TResult&gt;(IEnumerable&lt;IGenerator&lt;TSource&gt;&gt; generators, Func&lt;IList&lt;TSource&gt;, TResult&gt; resultSelector)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>generators</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;TSource&gt;&gt;</dt>
+  <dd><p>The generators.</p>
+</dd>
+  <dt><code>resultSelector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;TSource&gt;, TResult&gt;</dt>
+  <dd><p>The result selector.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator</a>&lt;TResult&gt;</dt>
+  <dd><p>A new generator.</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>TSource</code></dt>
+  <dd><p>The type of elements of the source generators.</p>
+</dd>
+  <dt><code>TResult</code></dt>
+  <dd><p>The type of elements this generator will generate.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p>generators</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+  <dd><p>Cannot contain null elements;generators</p>
+</dd>
+</dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

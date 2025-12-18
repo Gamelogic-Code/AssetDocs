@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method FillGridWithWords | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method FillGridWithWords | Gamelogic Words ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Words.Grids.GridAlgorithms.FillGridWithWords*">
+
+
+
+
+
+<h1 id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_" data-uid="Gamelogic.Words.Grids.GridAlgorithms.FillGridWithWords*" class="text-break">
+Method FillGridWithWords  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.words/Runtime/Scripts/Grids/GridAlgorithms.cs#lines-162"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Words.html">Words</a>.<a class="xref" href="Gamelogic.Words.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Words.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_" data-uid="Gamelogic.Words.Grids.GridAlgorithms.FillGridWithWords*"></a>
+
+<h3 id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2_System_String__Gamelogic_Words_IWordAlphabet_System_Collections_Generic_IEnumerable_Gamelogic_Words_Word__System_Func_Gamelogic_Grids2_GridPoint2_System_Int32_System_Boolean_Gamelogic_Grids2_GridPoint2__System_Int32_Gamelogic_Extensions_IRandom_" data-uid="Gamelogic.Words.Grids.GridAlgorithms.FillGridWithWords(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,System.String},Gamelogic.Words.IWordAlphabet,System.Collections.Generic.IEnumerable{Gamelogic.Words.Word},System.Func{Gamelogic.Grids2.GridPoint2,System.Int32,System.Boolean,Gamelogic.Grids2.GridPoint2},System.Int32,Gamelogic.Extensions.IRandom)">
+  FillGridWithWords(IGrid&lt;GridPoint2, string&gt;, IWordAlphabet, IEnumerable&lt;Word&gt;, Func&lt;GridPoint2, int, bool, GridPoint2&gt;, int, IRandom)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.words/Runtime/Scripts/Grids/GridAlgorithms.cs#lines-162"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Fills a grid with a given collection of words, providing the valid reading directions for the words</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static List&lt;Word&gt; FillGridWithWords(IGrid&lt;GridPoint2, string&gt; grid, IWordAlphabet alphabet, IEnumerable&lt;Word&gt; words, Func&lt;GridPoint2, int, bool, GridPoint2&gt; directionFunction, int directionCount, IRandom random)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+  <dd><p>The grid to fill. Must be a grid of strings</p>
+</dd>
+  <dt><code>alphabet</code> <a class="xref" href="Gamelogic.Words.IWordAlphabet.html">IWordAlphabet</a></dt>
+  <dd><p>The alphabet to use</p>
+</dd>
+  <dt><code>words</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Words.Word.html">Word</a>&gt;</dt>
+  <dd><p>The words to attempt to place inside the grid</p>
+</dd>
+  <dt><code>directionFunction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+  <dd><p>A function to walk the given grid in a direction specified by some index</p>
+</dd>
+  <dt><code>directionCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>The number of valid indices to <code class="paramref">directionFunction</code></p>
+</dd>
+  <dt><code>random</code> <a class="xref" href="Gamelogic.Extensions.IRandom.html">IRandom</a></dt>
+  <dd><p>The random generator to use.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Gamelogic.Words.Word.html">Word</a>&gt;</dt>
+  <dd><p>The words successfully added to the grid</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section" id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2_System_String__Gamelogic_Words_IWordAlphabet_System_Collections_Generic_IEnumerable_Gamelogic_Words_Word__System_Func_Gamelogic_Grids2_GridPoint2_System_Int32_System_Boolean_Gamelogic_Grids2_GridPoint2__System_Int32_Gamelogic_Extensions_IRandom__remarks">Remarks</h4>
+<div class="markdown level1 remarks"><p>This function will not clear the grid in advance. It will attempt
+to place words in null or empty cells in the grid, around existing
+elements if they exist. It is not guaranteed to fit all the words in the grid</p>
+</div>
+
+
+
+
+<a id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_" data-uid="Gamelogic.Words.Grids.GridAlgorithms.FillGridWithWords*"></a>
+
+<h3 id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_Gamelogic_Grids2_AbstractGrid_Gamelogic_Grids2_GridPoint2_System_String__Gamelogic_Words_IWordAlphabet_System_Collections_Generic_IEnumerable_Gamelogic_Words_Word__Gamelogic_Extensions_IRandom_" data-uid="Gamelogic.Words.Grids.GridAlgorithms.FillGridWithWords(Gamelogic.Grids2.AbstractGrid{Gamelogic.Grids2.GridPoint2,System.String},Gamelogic.Words.IWordAlphabet,System.Collections.Generic.IEnumerable{Gamelogic.Words.Word},Gamelogic.Extensions.IRandom)">
+  FillGridWithWords(AbstractGrid&lt;GridPoint2, string&gt;, IWordAlphabet, IEnumerable&lt;Word&gt;, IRandom)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.words/Runtime/Scripts/Grids/GridAlgorithms.cs#lines-238"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Fills a grid with a given collection of words</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static List&lt;Word&gt; FillGridWithWords(AbstractGrid&lt;GridPoint2, string&gt; grid, IWordAlphabet alphabet, IEnumerable&lt;Word&gt; words, IRandom random)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.html">AbstractGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+  <dd><p>The grid to fill. Must be a grid of strings</p>
+</dd>
+  <dt><code>alphabet</code> <a class="xref" href="Gamelogic.Words.IWordAlphabet.html">IWordAlphabet</a></dt>
+  <dd><p>The alphabet to use</p>
+</dd>
+  <dt><code>words</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Words.Word.html">Word</a>&gt;</dt>
+  <dd><p>The words to attempt to place inside the grid</p>
+</dd>
+  <dt><code>random</code> <a class="xref" href="Gamelogic.Extensions.IRandom.html">IRandom</a></dt>
+  <dd><p>The random generator to use.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Gamelogic.Words.Word.html">Word</a>&gt;</dt>
+  <dd></dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section" id="Gamelogic_Words_Grids_GridAlgorithms_FillGridWithWords_Gamelogic_Grids2_AbstractGrid_Gamelogic_Grids2_GridPoint2_System_String__Gamelogic_Words_IWordAlphabet_System_Collections_Generic_IEnumerable_Gamelogic_Words_Word__Gamelogic_Extensions_IRandom__remarks">Remarks</h4>
+<div class="markdown level1 remarks"><p>This function will not clear the grid in advance. It will attempt
+to place words in null or empty cells in the grid, around existing
+elements if they exist. It is not guaranteed to fit all the words in the grid</p>
+</div>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

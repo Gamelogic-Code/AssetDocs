@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Gamelogic Words | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Gamelogic Words | Gamelogic Words ">
+      
+      
+      <link rel="icon" href="images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/wordsunity/src/master/Documentation/index.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="gamelogic-words">Gamelogic Words</h1>
+
+<p>Words is a library with algorithms that are useful for word games.</p>
+<p>Most algorithms require a dictionary – a data structure that can do quick lookups on large lists of words. Dictionaries
+can be loaded from simple text files.</p>
+<p>Words can be configured to work with different alphabets, including alphabets that treat multiple characters as a single
+letter. This is also occasionally useful even in English games. For example, in many word games, the character pair <code>qu</code>
+is treated as a single letter. Algorithms on words that don't require a dictionary usually require you to specify the
+alphabet.</p>
+<p>These are the basic class types in Words, and most methods revolve around them.</p>
+<p>There are also some algorithms that work with grids, the principle class type of our Grids 2 library. Grids is a rich
+library with many concepts of its own. If you are making a grid game with words, you should also read the Grids
+documentation here: <a href="http://gamelogic.co.za/documentation/grids2/">Grids 2 API</a>.</p>
+<p>Words also uses our Extensions library, which is documented here:
+<a href="http://www.gamelogic.co.za/documentation/extensions/">Extensions API</a>.</p>
+<h2 id="dictionaries">Dictionaries</h2>
+<h3 id="general">General</h3>
+<p>The main functionality provided by dictionaries is documented in the <a class="xref" href="api/Gamelogic.Words.IWordDictionary.html">IWordDictionary</a> interface.</p>
+<p>We also define some extension methods on <a class="xref" href="api/Gamelogic.Words.IWordDictionary.html">IWordDictionary</a>.</p>
+<p>Our concrete implementation of this interface is the <a class="xref" href="api/Gamelogic.Words.TrieDictionary.html">TrieDictionary</a> class. It can perform fast lookups
+of words and prefixes, but also supports various other searches.</p>
+<h3 id="loading-dictionaries">Loading dictionaries</h3>
+<p>There are two main ways of creating dictionaries:</p>
+<ul>
+<li><p>Construct a new <a class="xref" href="api/Gamelogic.Words.TrieDictionary.html">TrieDictionary</a> and load words into it in code using one of the extension methods
+defined on <a class="xref" href="api/Gamelogic.Words.IWordDictionary.html">IWordDictionary</a>. Note that you need to specify an alphabet; this is explained in a section
+below.</p>
+</li>
+<li><p>Add an empty game object to your scene, add the <a class="xref" href="api/Gamelogic.Words.WordsDefaultDictionaryComponent.html">WordsDefaultDictionaryComponent</a> component to it, and
+attach your text asset containing your list of words. You can then access the dictionary through the <strong>Dictionary</strong>
+property of this component. It also allows some basic filtering and lets you select the alphabet from a drop-down list.</p>
+</li>
+</ul>
+<h3 id="filtering-dictionaries">Filtering Dictionaries</h3>
+<p>In some cases, you may want to create a new word list file by filtering a larger word list. We provide some basic
+filtering through a wizard that you can access through the menu: <strong>Tools | Gamelogic | Words | Dictionary Filter.</strong></p>
+<h3 id="setting-up-the-alphabet">Setting up the alphabet</h3>
+<p>For English games, we provide the <a class="xref" href="api/Gamelogic.Words.LatinAlphabet.html">LatinAlphabet</a> class with two constants of letters defined: one is the normal
+26-letter alphabet, the other is one where instead of the letter <code>q</code>, the letter <code>qu</code> is used.</p>
+<p>You can also provide your own characters when constructing the alphabet, which should be useful for many other
+languages.</p>
+<h3 id="searching-in-the-dictionary">Searching in the dictionary</h3>
+<p>The @Gamelogic.Words.IDictionary provides several lookups. For ordinary words, these work as you would expect. But the
+dictionary also allows you to search for patterns (somewhat simplified regular expressions):</p>
+<h2 id="character-matches">Character Matches</h2>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Matches</th>
+<th>Example pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>?</code></td>
+<td>Any single letter.</td>
+<td><code>at???</code></td>
+<td>All words that start with <code>at</code> and have five letters, such as <code>atoms</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Zero or more letters.</td>
+<td><code>at*</code></td>
+<td>All words that start with <code>at</code>, including <code>at</code> itself</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>One or more letters.</td>
+<td><code>at+</code></td>
+<td>All words that start with <code>at</code>, except for <code>at</code> itself.</td>
+</tr>
+</tbody>
+</table>
+<p>The dictionary does not support more general regular expressions directly. However, dictionaries work with LINQ, so
+you can always perform (somewhat slow) arbitrary searches like this:</p>
+<pre><code class="lang-csharp">var matches = dictionary.Where(w =&gt; WordSatisfiesSomeCondition(w));
+</code></pre>
+<p>which may include matches against full-blown regular expressions.</p>
+<h3 id="other-dictionary-functions">Other Dictionary Functions</h3>
+<p>Dictionaries also have some other functions. Consult the API documentation for more detailed explanations.</p>
+<ul>
+<li>Adding words</li>
+<li>Whether words with a given prefix exist</li>
+<li>Finding anagrams and anagrams of subsets</li>
+<li>Finding subwords</li>
+</ul>
+<h2 id="generators">Generators</h2>
+<p>A generator is a simple class that has a single method <code>Next</code> that gives you &quot;the next item&quot;. The particular generator
+determines what &quot;the next item&quot; means.</p>
+<p>Our Extensions library comes with a whole bunch of useful generators, and some extension methods that make them very
+powerful. You can read more about generators here: <a href="http://www.gamelogic.co.za/documentation/extensions/content/Generators.html">Generators</a>.</p>
+<p>Words come with word and letter generators to generate random elements from the dictionary or alphabet. For example,
+the following will return random words that have more than 4 letters, and convert them to uppercase:</p>
+<pre><code class="lang-csharp">var generator = WordGenerator
+    .Uniform(dictionary)
+    .Where(w =&gt; w.Length &gt; 4)
+    .Select(s =&gt; s.ToUpper());
+</code></pre>
+<p>The shuffle generator shuffles the letters of words, and mutation generators that shuffle words with so that the edit
+distance between the shuffled word and edit distance is at least a given value. (This is useful for anagram games,
+where you don’t want random shuffles that are too close to the original).</p>
+<p>Letter generators also support generating letters with specific frequencies, and specific conditional frequencies.
+These are useful for procedurally constructing puzzles with high probability of having words or having letters that can
+be used to form words.</p>
+<p>See the following for more information:</p>
+<ul>
+<li><a class="xref" href="api/Gamelogic.Words.LetterGenerator.html">LetterGenerator</a></li>
+<li><a class="xref" href="api/Gamelogic.Words.WordGenerator.html">WordGenerator</a></li>
+</ul>
+<h2 id="algorithms">Algorithms</h2>
+<p>The WordAlgorithms class provides various algorithms for words, including these:</p>
+<ul>
+<li>Edit Distance</li>
+<li>Word mutation</li>
+<li>Largest Common Substring</li>
+<li>Largest Overlap</li>
+</ul>
+<p>See here for more detail:  <a class="xref" href="api/Gamelogic.Words.WordAlgorithms.html">WordAlgorithms</a>.</p>
+<h2 id="grid-algorithms">Grid Algorithms</h2>
+<p>The GridAlgorithms class provides some functions for working with words in grids, including these:</p>
+<ul>
+<li>Filling grids with words that cross</li>
+<li>Determining whether placement of a word in a partially filled grid is legal (as in Scrabble)</li>
+<li>Finding lines of connected words</li>
+<li>Finding a word in a grid at a point</li>
+</ul>
+<p>See here for more detail: <a class="xref" href="api/Gamelogic.Words.Grids.GridAlgorithms.html">GridAlgorithms</a>.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

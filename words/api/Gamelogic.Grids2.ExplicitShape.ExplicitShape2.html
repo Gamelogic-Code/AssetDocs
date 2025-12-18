@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ExplicitShape.ExplicitShape2 | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ExplicitShape.ExplicitShape2 | Gamelogic Words ">
+      
+      <meta name="description" content="Concrete implementation of a 2D ExplicitShape.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.ExplicitShape.ExplicitShape2">
+
+
+
+  <h1 id="Gamelogic_Grids2_ExplicitShape_ExplicitShape2" data-uid="Gamelogic.Grids2.ExplicitShape.ExplicitShape2" class="text-break">
+Class ExplicitShape.ExplicitShape2  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Shapes/ExplicitShape.cs#lines-340"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Grids2.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Concrete implementation of a 2D ExplicitShape.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public sealed class ExplicitShape.ExplicitShape2 : IExplicitShape&lt;GridPoint2&gt;, IImplicitShape&lt;GridPoint2&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ExplicitShape.ExplicitShape2</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.CenterOnOrigin.html#Gamelogic_Grids2_ExplicitShape_CenterOnOrigin_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__">ExplicitShape.CenterOnOrigin(IExplicitShape&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Layer.html#Gamelogic_Grids2_ExplicitShape_Layer_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__System_Int32_">ExplicitShape.Layer(IExplicitShape&lt;GridPoint2&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.ReflectXInBounds.html#Gamelogic_Grids2_ExplicitShape_ReflectXInBounds_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__">ExplicitShape.ReflectXInBounds(IExplicitShape&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.ReflectYInBounds.html#Gamelogic_Grids2_ExplicitShape_ReflectYInBounds_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__">ExplicitShape.ReflectYInBounds(IExplicitShape&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Select.html#Gamelogic_Grids2_ExplicitShape_Select_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__System_Func_Gamelogic_Grids2_GridPoint2_System_Boolean__">ExplicitShape.Select(IExplicitShape&lt;GridPoint2&gt;, Func&lt;GridPoint2, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.SwapXY.html#Gamelogic_Grids2_ExplicitShape_SwapXY_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__">ExplicitShape.SwapXY(IExplicitShape&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Translate.html#Gamelogic_Grids2_ExplicitShape_Translate_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridPoint2_">ExplicitShape.Translate(IExplicitShape&lt;GridPoint2&gt;, GridPoint2)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Where.html#Gamelogic_Grids2_ExplicitShape_Where_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__System_Func_Gamelogic_Grids2_GridPoint2_System_Boolean__">ExplicitShape.Where(IExplicitShape&lt;GridPoint2&gt;, Func&lt;GridPoint2, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.ToGrid.html#Gamelogic_Grids2_GridExtensions_ToGrid__1_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__">GridExtensions.ToGrid&lt;TCell&gt;(IExplicitShape&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.Product.html#Gamelogic_Grids2_ImplicitShape_Product_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridPoint2_">ImplicitShape.Product(IExplicitShape&lt;GridPoint2&gt;, IImplicitShape&lt;GridPoint2&gt;, GridPoint2)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.ToExplicit.html#Gamelogic_Grids2_ExplicitShape_ToExplicit_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_AbstractBounds_Gamelogic_Grids2_GridPoint2__">ExplicitShape.ToExplicit(IImplicitShape&lt;GridPoint2&gt;, AbstractBounds&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.Layer.html#Gamelogic_Grids2_ImplicitShape_Layer_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__System_Int32_">ImplicitShape.Layer(IImplicitShape&lt;GridPoint2&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.ReverseSelect.html#Gamelogic_Grids2_ImplicitShape_ReverseSelect__1_Gamelogic_Grids2_IImplicitShape___0__System_Func___0___0__">ImplicitShape.ReverseSelect&lt;TPoint&gt;(IImplicitShape&lt;TPoint&gt;, Func&lt;TPoint, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.SwapXY.html#Gamelogic_Grids2_ImplicitShape_SwapXY_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__">ImplicitShape.SwapXY(IImplicitShape&lt;GridPoint2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.Translate.html#Gamelogic_Grids2_ImplicitShape_Translate_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridPoint2_">ImplicitShape.Translate(IImplicitShape&lt;GridPoint2&gt;, GridPoint2)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.-ctor.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2__ctor_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_AbstractBounds_Gamelogic_Grids2_GridPoint2__">ExplicitShape2(IImplicitShape&lt;GridPoint2&gt;, AbstractBounds&lt;GridPoint2&gt;)</a></dt>
+    <dd><p>Constructs a new explicit shape from the given implicit shape
+and bounds.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.BigRect.html">BigRect</a></dt>
+    <dd><p>A big rectangle centered at the origin.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Empty.html">Empty</a></dt>
+    <dd><p>Holds an empty shape.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Bounds.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_Bounds">Bounds</a></dt>
+    <dd><p>Returns a bounding shape that contains this explicit shape.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Points.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_Points">Points</a></dt>
+    <dd><p>Gets all the points this shape contains.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Contains.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_Contains_Gamelogic_Grids2_GridPoint2_">Contains(GridPoint2)</a></dt>
+    <dd><p>Determines whether this implicit shape contains the specified point.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Intersection.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_Intersection_Gamelogic_Grids2_ExplicitShape_ExplicitShape2_">Intersection(ExplicitShape2)</a></dt>
+    <dd><p>Creates a new explicit shape that is the intersection of this shape and another shape.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.InverseInRect.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_InverseInRect">InverseInRect()</a></dt>
+    <dd><p>Creates a new explicit shape that is the inverse of this shape within its rectangular bounds.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Translate.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_Translate_Gamelogic_Grids2_GridPoint2_">Translate(GridPoint2)</a></dt>
+    <dd><p>Translates the shape by a specified offset.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.ExplicitShape.ExplicitShape2.Union.html#Gamelogic_Grids2_ExplicitShape_ExplicitShape2_Union_Gamelogic_Grids2_ExplicitShape_ExplicitShape2_">Union(ExplicitShape2)</a></dt>
+    <dd><p>Creates a new explicit shape that is the union of this shape and another shape.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

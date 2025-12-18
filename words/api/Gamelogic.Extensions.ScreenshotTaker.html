@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ScreenshotTaker | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ScreenshotTaker | Gamelogic Words ">
+      
+      <meta name="description" content="Provides a generic implementation of a singleton-like pattern for  classes. This class automatically searches for an existing instance in the scene or logs an error if none or more than one are found.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Extensions.ScreenshotTaker">
+
+
+
+  <h1 id="Gamelogic_Extensions_ScreenshotTaker" data-uid="Gamelogic.Extensions.ScreenshotTaker" class="text-break">
+Class ScreenshotTaker  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/wordsunity/src/master/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/ScreenshotTaker.cs#lines-14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Extensions.html">Extensions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a generic implementation of a singleton-like pattern for <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> classes.
+This class automatically searches for an existing instance in the scene or logs an error if none or more than one
+are found.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AddComponentMenu(&quot;Gamelogic/Extensions/ScreenshotTaker&quot;)]
+[ExecuteInEditMode]
+public sealed class ScreenshotTaker : Singleton&lt;ScreenshotTaker&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
+      <div><a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html">GLMonoBehaviour</a></div>
+      <div><a class="xref" href="Gamelogic.Extensions.Singleton-1.html">Singleton</a>&lt;<a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.html">ScreenshotTaker</a>&gt;</div>
+      <div><span class="xref">ScreenshotTaker</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.Singleton-1.Instance_1.html#Gamelogic_Extensions_Singleton_1_Instance">Singleton&lt;ScreenshotTaker&gt;.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.Singleton-1.IsReady.html#Gamelogic_Extensions_Singleton_1_IsReady">Singleton&lt;ScreenshotTaker&gt;.IsReady</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.Singleton-1.HasInstanceInOpenScenes.html#Gamelogic_Extensions_Singleton_1_HasInstanceInOpenScenes">Singleton&lt;ScreenshotTaker&gt;.HasInstanceInOpenScenes</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.Singleton-1.OnDestroy.html#Gamelogic_Extensions_Singleton_1_OnDestroy">Singleton&lt;ScreenshotTaker&gt;.OnDestroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.Singleton-1.FindAndConnectInstance.html#Gamelogic_Extensions_Singleton_1_FindAndConnectInstance">Singleton&lt;ScreenshotTaker&gt;.FindAndConnectInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_GameObject_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, GameObject, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_">GLMonoBehaviour.Instantiate(GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate(GameObject, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_UnityEngine_GameObject_">GLMonoBehaviour.Instantiate(GameObject, GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate(GameObject, GameObject, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.FindObjectsOfInterface.html#Gamelogic_Extensions_GLMonoBehaviour_FindObjectsOfInterface__1">GLMonoBehaviour.FindObjectsOfInterface&lt;TInterface&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.FindRequiredObjectOfType.html#Gamelogic_Extensions_GLMonoBehaviour_FindRequiredObjectOfType__1">GLMonoBehaviour.FindRequiredObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Invoke.html#Gamelogic_Extensions_GLMonoBehaviour_Invoke_System_Action_System_Single_">GLMonoBehaviour.Invoke(Action, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.InvokeRepeating.html#Gamelogic_Extensions_GLMonoBehaviour_InvokeRepeating_System_Action_System_Single_System_Single_">GLMonoBehaviour.InvokeRepeating(Action, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.InvokeRepeating.html#Gamelogic_Extensions_GLMonoBehaviour_InvokeRepeating_System_Action_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__">GLMonoBehaviour.InvokeRepeating(Action, IGenerator&lt;float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Tween.html#Gamelogic_Extensions_GLMonoBehaviour_Tween__1___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__System_Func_System_Single__">GLMonoBehaviour.Tween&lt;T&gt;(T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;, Func&lt;float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.Tween.html#Gamelogic_Extensions_GLMonoBehaviour_Tween__1___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__">GLMonoBehaviour.Tween&lt;T&gt;(T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.GetRequiredComponent.html#Gamelogic_Extensions_GLMonoBehaviour_GetRequiredComponent__1">GLMonoBehaviour.GetRequiredComponent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.GetRequiredComponentInChildren.html#Gamelogic_Extensions_GLMonoBehaviour_GetRequiredComponentInChildren__1">GLMonoBehaviour.GetRequiredComponentInChildren&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.DestroyUniversal.html#Gamelogic_Extensions_GLMonoBehaviour_DestroyUniversal_UnityEngine_Object_">GLMonoBehaviour.DestroyUniversal(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.IsInvoking.html">MonoBehaviour.IsInvoking()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.CancelInvoke.html">MonoBehaviour.CancelInvoke()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.StopCoroutine.html">MonoBehaviour.StopCoroutine(Coroutine)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.StopAllCoroutines.html">MonoBehaviour.StopAllCoroutines()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour-useGUILayout.html">MonoBehaviour.useGUILayout</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">Behaviour.enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-isActiveAndEnabled.html">Behaviour.isActiveAndEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.TryGetComponent.html">Component.TryGetComponent&lt;T&gt;(out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.GetComponentInParent.html">Component.GetComponentInParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.GetComponents.html">Component.GetComponents&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetInstanceID.html">Object.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetHashCode.html">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Object.Instantiate(Object, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">Object.DontDestroyOnLoad(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">Object.FindObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object-name.html">Object.name</a>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Clone.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_">MonoBehaviourExtensions.Clone&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Clone.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_System_Int32_">MonoBehaviourExtensions.Clone&lt;T&gt;(T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.ThrowIfNull.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.FindChild.html#Gamelogic_Extensions_MonoBehaviourExtensions_FindChild_UnityEngine_Component_System_String_">MonoBehaviourExtensions.FindChild(Component, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.FindChild.html#Gamelogic_Extensions_MonoBehaviourExtensions_FindChild_UnityEngine_Component_System_String_System_Boolean_">MonoBehaviourExtensions.FindChild(Component, string, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.GetComponentInChildrenAlways.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetComponentInChildrenAlways__1_UnityEngine_Component_">MonoBehaviourExtensions.GetComponentInChildrenAlways&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.GetComponentsInChildrenAlways.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetComponentsInChildrenAlways__1_UnityEngine_Component_">MonoBehaviourExtensions.GetComponentsInChildrenAlways&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.GetInterfaceComponent.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetInterfaceComponent__1_UnityEngine_Component_">MonoBehaviourExtensions.GetInterfaceComponent&lt;TInterface&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.GetRequiredComponentInChildren.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetRequiredComponentInChildren__1_UnityEngine_Component_">MonoBehaviourExtensions.GetRequiredComponentInChildren&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.GetRequiredComponent.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetRequiredComponent__1_UnityEngine_Component_">MonoBehaviourExtensions.GetRequiredComponent&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.CancelInvoke.html#Gamelogic_Extensions_MonoBehaviourExtensions_CancelInvoke_UnityEngine_MonoBehaviour_System_Action_">MonoBehaviourExtensions.CancelInvoke(MonoBehaviour, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Invoke.html#Gamelogic_Extensions_MonoBehaviourExtensions_Invoke_UnityEngine_MonoBehaviour_System_Action_System_Single_">MonoBehaviourExtensions.Invoke(MonoBehaviour, Action, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.InvokeRepeating.html#Gamelogic_Extensions_MonoBehaviourExtensions_InvokeRepeating_UnityEngine_MonoBehaviour_System_Action_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__">MonoBehaviourExtensions.InvokeRepeating(MonoBehaviour, Action, IGenerator&lt;float&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.InvokeRepeating.html#Gamelogic_Extensions_MonoBehaviourExtensions_InvokeRepeating_UnityEngine_MonoBehaviour_System_Action_System_Single_System_Single_">MonoBehaviourExtensions.InvokeRepeating(MonoBehaviour, Action, float, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.IsInvoking.html#Gamelogic_Extensions_MonoBehaviourExtensions_IsInvoking_UnityEngine_MonoBehaviour_System_Action_">MonoBehaviourExtensions.IsInvoking(MonoBehaviour, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Tween.html#Gamelogic_Extensions_MonoBehaviourExtensions_Tween__1_UnityEngine_MonoBehaviour___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__">MonoBehaviourExtensions.Tween&lt;T&gt;(MonoBehaviour, T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Tween.html#Gamelogic_Extensions_MonoBehaviourExtensions_Tween__1_UnityEngine_MonoBehaviour___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__System_Func_System_Single__">MonoBehaviourExtensions.Tween&lt;T&gt;(MonoBehaviour, T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;, Func&lt;float&gt;)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Gamelogic_Extensions_ScreenshotTaker_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Singletons usually manage their own creation, but it is common in Unity projects to have a singleton
+already placed in the scene. In this sense, this class really checks whether an instance can be used as a
+singleton, and then provides access to the instance.</p>
+<pre><code>If you want to create a singleton that is not already placed in the scene, you can use put
+&lt;xref href=&quot;Gamelogic.Extensions.SingletonSpawner%601&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt; in the scene instead.
+</code></pre>
+</div>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.Start.html#Gamelogic_Extensions_ScreenshotTaker_Start">Start()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.Take.html#Gamelogic_Extensions_ScreenshotTaker_Take">Take()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.TakeClean.html#Gamelogic_Extensions_ScreenshotTaker_TakeClean">TakeClean()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.TakeTexture.html#Gamelogic_Extensions_ScreenshotTaker_TakeTexture">TakeTexture()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.Update.html#Gamelogic_Extensions_ScreenshotTaker_Update">Update()</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

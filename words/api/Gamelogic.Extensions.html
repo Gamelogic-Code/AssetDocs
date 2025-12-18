@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Gamelogic.Extensions | Gamelogic Words </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Gamelogic.Extensions | Gamelogic Words ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Words">
+            Gamelogic Words
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Extensions">
+
+  <h1 id="Gamelogic_Extensions" data-uid="Gamelogic.Extensions" class="text-break">Namespace Gamelogic.Extensions</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Clock.html">Clock</a></dt>
+      <dd><p>Represents a clock that expires after a given time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ColorExtensions.html">ColorExtensions</a></dt>
+      <dd><p>Provides some utility functions for Colors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ColorList.html">ColorList</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>Color</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.CommentAttribute.html">CommentAttribute</a></dt>
+      <dd><p>Used to mark a field to add a comment above the field in the inspector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.DiskCache-2.html">DiskCache&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>A cache maintained on disk.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.DummyAttribute.html">DummyAttribute</a></dt>
+      <dd><p>Used to mark the last field in a MonoBehaviour
+as a dummy so that it is not drawn. This is
+useful to add a decorator that should be displayed
+below all fields.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.FixedSizeMemoryCache-2.html">FixedSizeMemoryCache&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>A cache maintained in memory that stays fixed in size.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.FloatList.html">FloatList</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>float</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.GLDebug.html">GLDebug</a></dt>
+      <dd><p>Class that contains methods useful for debugging.
+All methods are only compiled if the DEBUG symbol is defined.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.GLMathf.html">GLMathf</a></dt>
+      <dd><p>Methods for additional math functions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html">GLMonoBehaviour</a></dt>
+      <dd><p>Provides some additional functions for MonoBehaviour.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.GLPlayerPrefs.html">GLPlayerPrefs</a></dt>
+      <dd><p>An alternative to PlayerPrefs that provides methods
+for setting bool and array preferences.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.GLRandom.html">GLRandom</a></dt>
+      <dd><p>Some convenience functions for random bools and integers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.GameObjectExtensions.html">GameObjectExtensions</a></dt>
+      <dd><p>Provides useful extension methods for GameObjects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Geometry.html">Geometry</a></dt>
+      <dd><p>Provides utility methods for doing geometry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.HighlightAttribute.html">HighlightAttribute</a></dt>
+      <dd><p>Mark simple types to be highligted in the inspector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.InspectorButtonAttribute.html">InspectorButtonAttribute</a></dt>
+      <dd><p><span class="xref">Gamelogic.Extensions.Editor.Internal.GLEditor`1.DrawInspectorButtons</span> draws a button for
+each method marked with this attribute. This is also used by
+<a class="xref" href="Gamelogic.Extensions.Editor.GLMonoBehaviourEditor.html">GLMonoBehaviourEditor</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.InspectorFlagsAttribute.html">InspectorFlagsAttribute</a></dt>
+      <dd><p>Mark fields that should be displayed as bit field mask in the inspector</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.InspectorList.html">InspectorList</a></dt>
+      <dd><p>The base class for the generic InspectorList. This class exists so that
+a single property drawer can be used for all subclasses.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.InspectorList-1.html">InspectorList&lt;T&gt;</a></dt>
+      <dd><p>Exactly the same as generic <code>List</code>, but has a custom property drawer
+that draws a re-orderable list in the inspector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.IntList.html">IntList</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>int</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.LabelFieldAttribute.html">LabelFieldAttribute</a></dt>
+      <dd><p>Specifies a field to use as label for an item in the inspector. This is especially useful for arrays of compound types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.LayeredCache-2.html">LayeredCache&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>Represents a cache made out of two layers: a fast primary cache and a slow secondary cache.
+Things requested that are in the slow cache gets moved to the fast cache, and the
+oldest item in the fast cache moves to the slow cache.</p>
+<p>New things are always added to the primary cache. The oldest item is moved to the slow cache
+if the primary cache is full.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.MinMaxFloat.html">MinMaxFloat</a></dt>
+      <dd><p>Class for representing a bounded range.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a></dt>
+      <dd><p>Class for representing a bounded range.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html">MonoBehaviourExtensions</a></dt>
+      <dd><p>Provides useful extension methods for MonoBehaviours.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourList.html">MonoBehaviourList</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>MonoBehaviour</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourPool-1.html">MonoBehaviourPool&lt;T&gt;</a></dt>
+      <dd><p>A pool suitable for MonoBehaviour objects that can be instantiated from a given prefab.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.NonNegativeAttribute.html">NonNegativeAttribute</a></dt>
+      <dd><p>Mark numeric values that should always be non-negative.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.NotImplementedByException.html">NotImplementedByException</a></dt>
+      <dd><p>A version of NotImplementedException that takes the throwing type as argument. This is useful in class hierarchies
+where methods are meant to be overridden by derived types but cannot be made abstract (for example, because of
+Unity limitations). The exception, when thrown, indicates which class should have implemented the method, but hasn't.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html">ObjectExtensions</a></dt>
+      <dd><p>Provides extensions for objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ObjectList.html">ObjectList</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>Object</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ObservedValue-1.html">ObservedValue&lt;T&gt;</a></dt>
+      <dd><p>Wraps a variable in a class that triggers an
+event if the value changes. This is useful when
+values can be meaningfully compared using Equals,
+and when the variable changes infrequently in
+comparison to the number of times it is updated.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Optional.html">Optional</a></dt>
+      <dd><p>The base class of the generic Optional class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalFloat.html">OptionalFloat</a></dt>
+      <dd><p>Represents an optional float value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalGameObject.html">OptionalGameObject</a></dt>
+      <dd><p>Represents an optional GameObject.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalInt.html">OptionalInt</a></dt>
+      <dd><p>Represents an optional int value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalMonoBehaviour.html">OptionalMonoBehaviour</a></dt>
+      <dd><p>Represents an optional MonoBehaviour.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalString.html">OptionalString</a></dt>
+      <dd><p>Represents an optional string value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalVector2.html">OptionalVector2</a></dt>
+      <dd><p>Represents an optional Vector2 value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.OptionalVector3.html">OptionalVector3</a></dt>
+      <dd><p>Represents an optional Vector3 value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Optional-1.html">Optional&lt;T&gt;</a></dt>
+      <dd><p>Useful for displaying optional values in the inspector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a></dt>
+      <dd><p>A light-weight pool class. Can  be used out of the box, or as base for more sophisticated pools.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.PositiveAttribute.html">PositiveAttribute</a></dt>
+      <dd><p>Mark fields that should always be positive with this attribute.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.PushdownAutomaton-1.html">PushdownAutomaton&lt;TLabel&gt;</a></dt>
+      <dd><p>This class is a state machine that has the ability to remember previous states
+and transition back to them (FIFO).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ReadOnlyAttribute.html">ReadOnlyAttribute</a></dt>
+      <dd><p>Used to mark inspectable fields as read-only (that is, making them uneditable, even if they are visible).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ResourceNotFoundException.html">ResourceNotFoundException</a></dt>
+      <dd><p>Thrown when trying to load a resource (using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Load(string)</a> and variants) but the resource is not found.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.html">ScreenshotTaker</a></dt>
+      <dd><p>Provides a generic implementation of a singleton-like pattern for <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> classes.
+This class automatically searches for an existing instance in the scene or logs an error if none or more than one
+are found.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Singleton.html">Singleton</a></dt>
+      <dd><p>Provides support for <a class="xref" href="Gamelogic.Extensions.Singleton-1.html">Singleton&lt;T&gt;</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.SingletonSpawner-1.html">SingletonSpawner&lt;T&gt;</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Singleton-1.html">Singleton&lt;T&gt;</a></dt>
+      <dd><p>Provides a generic implementation of a singleton-like pattern for <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> classes.
+This class automatically searches for an existing instance in the scene or logs an error if none or more than one
+are found.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.StateMachine-1.html">StateMachine&lt;TLabel&gt;</a></dt>
+      <dd><p>A lightweight state machine.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.StateTracker-1.html">StateTracker&lt;TStateData&gt;</a></dt>
+      <dd><p>Tracks a number of states. Events are raised when any state is started, and when all has stopped.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.StringList.html">StringList</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>string</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.TimedStateTracker-1.html">TimedStateTracker&lt;TStateData&gt;</a></dt>
+      <dd><p>The same as StateTracker, but states can also time out.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.html">TransformExtensions</a></dt>
+      <dd><p>Contains useful extensions for Select.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.TypeArgumentException.html">TypeArgumentException</a></dt>
+      <dd><p>Thrown when a method is called with illegal type parameters, or a class is constructed with
+illegal type parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Vector2List.html">Vector2List</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>Vector2</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Vector3List.html">Vector3List</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>Vector3</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Vector4List.html">Vector4List</a></dt>
+      <dd><p>An <code>InspectorList</code> of type <code>Vector4</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.html">VectorExtensions</a></dt>
+      <dd><p>Contains useful extension methods for vectors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a></dt>
+      <dd><p>Mark fields in a MonoBehaviour with this attribute to give a specific warning
+when the field is not set.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.ICache-2.html">ICache&lt;TKey, TValue&gt;</a></dt>
+      <dd><p>A data structure that can be used as a cache.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.IRandom.html">IRandom</a></dt>
+      <dd><p>Represents a random generator.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.IStateToken-1.html">IStateToken&lt;TStateData&gt;</a></dt>
+      <dd><p>When a new state is started in a tracker, a token is created
+that wraps custom data, and can be used to stop the state later.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.Singleton.FindResult.html">Singleton.FindResult</a></dt>
+      <dd><p>The result of the search for an instance of the singleton.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
