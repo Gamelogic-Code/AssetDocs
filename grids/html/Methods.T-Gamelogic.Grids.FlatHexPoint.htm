@@ -1,0 +1,887 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="save" content="history" />
+    <title>FlatHexPoint Methods</title>
+    <link rel="stylesheet" type="text/css" href="../styles/lightweight.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <link rel="stylesheet" type="text/css" href="../styles/lw-code.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <script type="text/javascript" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" src="../scripts/languageSelector.js"> </script>
+    <meta name="container" content="Gamelogic.Grids" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="file" content="Methods.T-Gamelogic.Grids.FlatHexPoint" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="guid" content="Methods.T-Gamelogic.Grids.FlatHexPoint" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <xml xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <MSHelp:Attr Name="AssetID" Value="Methods.T:Gamelogic.Grids.FlatHexPoint" />
+      <MSHelp:TOCTitle Title="FlatHexPoint Methods" />
+      <MSHelp:RLTitle Title="FlatHexPoint Methods (Gamelogic.Grids)" />
+      <MSHelp:Keyword Index="A" Term="Methods.T:Gamelogic.Grids.FlatHexPoint" />
+      <MSHelp:Keyword Index="A" Term="frlrfGamelogicGridsFlatHexPointMethodsTopic" />
+      <MSHelp:Keyword Index="K" Term="FlatHexPoint structure, methods" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="" />
+    </xml>
+  </head>
+  <body>
+    <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <div class="content">
+        <div class="topicContainer">
+          <div class="topic">
+            <p class="majorTitle" />
+            <h1 class="title">FlatHexPoint Methods</h1>
+            <div id="mainSection">
+              <div id="mainBody">
+                <p>The <a href="T-Gamelogic.Grids.FlatHexPoint.htm">FlatHexPoint</a> type exposes the following members.</p>
+                <div class="LW_CollapsibleArea_Container">
+                  <div class="LW_CollapsibleArea_TitleDiv">
+                    <h2 class="LW_CollapsibleArea_Title">Methods</h2>
+                    <div class="LW_CollapsibleArea_HrDiv">
+                      <hr class="LW_CollapsibleArea_Hr" />
+                    </div>
+                  </div>
+                  <a id="methodTableSection">
+                    <!---->
+                  </a>
+                  <table class="members">
+                    <tr>
+                      <th class="iconColumn">
+               
+            </th>
+                      <th class="nameColumn">Name</th>
+                      <th class="descriptionColumn">Description</th>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.__GetColor__ReferenceImplementation.htm">__GetColor__ReferenceImplementation</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Gives a coloring of the grid such that
+  	if a point p has color k, then all points
+  	p + m[ux, 0] + n[vx, vy] have the same color
+  	for any integers a and b.
+  
+  	More information anout grid colorings:
+  	http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/
+  
+  	Since version 1.7
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.DistanceFrom.htm">DistanceFrom</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   The lattice distance from this point to the other.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Div.htm">Div</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Gives a new point that represents the
+  	first point divided by the second point
+  	component-wise. The division is integer
+  	division.
+  
+  	Since version 1.6 (Rect)
+  	Since version 1.7 (other)
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Dot.htm">Dot</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Equals.htm">Equals(FlatHexPoint)</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Equals_1.htm">Equals(Object)</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor.htm">GetColor</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Gives a coloring of the grid such that
+  	if a point p has color k, then all points
+  	p + m[ux, 0] + n[vx, vy] have the same color
+  	for any integers a and b.
+  
+  	More information anout grid colorings:
+  	http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/
+  
+  	Since version 1.7
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor1_1.htm">GetColor1_1</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color1_1.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor1_2.htm">GetColor1_2</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color1_2.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor1_3.htm">GetColor1_3</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color1_3.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor2_2.htm">GetColor2_2</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color2_2.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor2_4.htm">GetColor2_4</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color2_4.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor3_2.htm">GetColor3_2</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color3_2.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor3_7.htm">GetColor3_7</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Generates a coloring with the following pattern:
+  
+  	<img src="fh_color3_7.png" />
+  
+  	Light Blue corresponds to 0.
+  	Light Green corresponds to 1.
+  	Light Yellow corresponds to 2.
+  	Light Red corresponds to 3.
+  	Blue corresponds to 4.
+  	Green corresponds to 5.
+  	Yellow corresponds to 6.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor5_5.htm">GetColor5_5</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Since version 1.7
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetColor6.htm">GetColor6</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Since version 1.7
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetEdgeAnchor.htm">GetEdgeAnchor</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetEdges.htm">GetEdges</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetHashCode.htm">GetHashCode</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetVertexAnchor.htm">GetVertexAnchor</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetVertexFaceAnchor.htm">GetVertexFaceAnchor</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetVertexFaces.htm">GetVertexFaces</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.GetVertices.htm">GetVertices</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsEquivalentUnderTransformsAndTranslation.htm">IsEquivalentUnderTransformsAndTranslation</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneX.htm">IsInNegativeHalfPlaneX</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+                          <font color="red">Badly formed XML comment.</font>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneY.htm">IsInNegativeHalfPlaneY</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+                          <font color="red">Badly formed XML comment.</font>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneZ.htm">IsInNegativeHalfPlaneZ</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+                          <font color="red">Badly formed XML comment.</font>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneX.htm">IsInPositiveHalfPlaneX</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Whether this point is inside the half plane x &gt;= x0.
+  
+  	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+  
+  	Since version 1.3
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneY.htm">IsInPositiveHalfPlaneY</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Whether this point is inside the half plane y &gt;= x0.
+  
+  	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+  
+  	Since version 1.3
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneZ.htm">IsInPositiveHalfPlaneZ</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Whether this point is inside the half plane z &gt;= z0.
+  
+  	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+  
+  	Since version 1.3
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInsideHexagon.htm">IsInsideHexagon(Int32)</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Whether this point is in the hexagon with the given radius
+  	and center at the origin.
+  
+  	The origin is considered the hexagon with zero radius.
+  
+  	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+  
+  	Since version 1.3
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInsideHexagon_1.htm">IsInsideHexagon(FlatHexPoint, Int32)</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Whether this point is in the hexagon with the given radius
+  	and given center.
+  
+  	A single point is considered a hexagon with zero radius.
+  
+  	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+  
+  	Since version 1.3
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInsidePolygon.htm">IsInsidePolygon</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+                          <font color="red">Badly formed XML comment.</font>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.IsInsideTriangle.htm">IsInsideTriangle</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+                          <font color="red">Badly formed XML comment.</font>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Magnitude.htm">Magnitude</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   The magnitude of a hex point is the hex-distance between the point and the origin.
+   This notation makes using hex points useful to use as vectors.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Mod.htm">Mod</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Gives a new point that represents the
+  	reminder when the first point is divided
+  	by the second point	component-wise. The
+  	division is integer division.
+  
+  	Since version 1.6 (Rect)
+  	Since version 1.7 (other)
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.MoveBackBy.htm">MoveBackBy</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.MoveBy.htm">MoveBy</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Mul.htm">Mul</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Gives a new point that represents the
+  	first point multiplied by the second point
+  	component-wise.
+  
+  	Since version 1.6 (Rect)
+  	Since version 1.7 (other)
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Negate.htm">Negate</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Perp.htm">Perp</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.PerpDot.htm">PerpDot</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.PointFromVertexAnchor.htm">PointFromVertexAnchor</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.ReflectAboutX.htm">ReflectAboutX</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.ReflectAboutY.htm">ReflectAboutY</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate120.htm">Rotate120</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate120AndReflectAboutY.htm">Rotate120AndReflectAboutY</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate180.htm">Rotate180</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate180AndReflectAboutY.htm">Rotate180AndReflectAboutY</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate240.htm">Rotate240</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate240AndReflectAboutY.htm">Rotate240AndReflectAboutY</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate300.htm">Rotate300</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate300AndReflectAboutY.htm">Rotate300AndReflectAboutY</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate60.htm">Rotate60</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Rotate60AndReflectAboutY.htm">Rotate60AndReflectAboutY</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.ScaleDown.htm">ScaleDown</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.ScaleUp.htm">ScaleUp</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Subtract.htm">Subtract</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Subtracts the other point from this point, and returns the result.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.ToCanonicalPosition.htm">ToCanonicalPosition</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.ToString.htm">ToString</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-Gamelogic.Grids.FlatHexPoint.Translate.htm">Translate</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   This is a norm defined on the point, such that `p1.Difference(p2).Abs()` is equal to
+  	`p1.DistanceFrom(p2)`.
+   </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="LW_CollapsibleArea_Container">
+                  <div class="LW_CollapsibleArea_TitleDiv">
+                    <h2 class="LW_CollapsibleArea_Title">See Also</h2>
+                    <div class="LW_CollapsibleArea_HrDiv">
+                      <hr class="LW_CollapsibleArea_Hr" />
+                    </div>
+                  </div>
+                  <a id="seeAlsoSection">
+                    <!---->
+                  </a>
+                  <div class="seeAlsoStyle">
+                    <a href="T-Gamelogic.Grids.FlatHexPoint.htm">FlatHexPoint Structure</a>
+                  </div>
+                  <div class="seeAlsoStyle">
+                    <a href="N-Gamelogic.Grids.htm">Gamelogic.Grids Namespace</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div id="footer" class="footerContainer">
+          <div class="footerLogoContainer">
+            <div style="margin-top:5px">
+              <span class="customCopyrightFooter" />
+            </div>
+            <div style="margin-top:5px" class="copyrightFooter">Help File generated with GhostDoc</div>
+            <div> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

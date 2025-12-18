@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="save" content="history" />
+    <title>AbstractUniformGrid(TCell, TPoint) Constructor </title>
+    <link rel="stylesheet" type="text/css" href="../styles/lightweight.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <link rel="stylesheet" type="text/css" href="../styles/lw-code.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <script type="text/javascript" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" src="../scripts/languageSelector.js"> </script>
+    <meta name="container" content="Gamelogic.Grids" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="file" content="M-Gamelogic.Grids.AbstractUniformGrid-2.-ctor" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="guid" content="M-Gamelogic.Grids.AbstractUniformGrid-2.-ctor" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <xml xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <MSHelp:Attr Name="AssetID" Value="M:Gamelogic.Grids.AbstractUniformGrid`2.#ctor(System.Int32,System.Int32,Func{`1, System.Boolean},Func{`1, `1},Func{`1, `1},IEnumerable{`1})" />
+      <MSHelp:TOCTitle Title="AbstractUniformGrid(TCell, TPoint) Constructor " />
+      <MSHelp:RLTitle Title="AbstractUniformGrid(TCell, TPoint) Constructor  (Gamelogic.Grids)" />
+      <MSHelp:Keyword Index="A" Term="M:Gamelogic.Grids.AbstractUniformGrid`2.#ctor(System.Int32,System.Int32,Func{`1, System.Boolean},Func{`1, `1},Func{`1, `1},IEnumerable{`1})" />
+      <MSHelp:Keyword Index="A" Term="frlrfGamelogicGridsAbstractUniformGrid2ClassctorTopic" />
+      <MSHelp:Keyword Index="K" Term="AbstractUniformGrid%3CTCell%2C TPoint%3E class, constructor" />
+      <MSHelp:Keyword Index="K" Term="AbstractUniformGrid(Of TCell%2C TPoint) class, constructor" />
+      <MSHelp:Keyword Index="K" Term="AbstractUniformGrid%3CTCell%2C TPoint%3E.AbstractUniformGrid constructor" />
+      <MSHelp:Keyword Index="K" Term="AbstractUniformGrid(Of TCell%2C TPoint).AbstractUniformGrid constructor" />
+      <MSHelp:Keyword Index="F" Term="Gamelogic.Grids.AbstractUniformGrid`2.AbstractUniformGrid`2" />
+      <MSHelp:Attr Name="APIType" Value="Managed" />
+      <MSHelp:Attr Name="APILocation" Value="Grids 1.dll" />
+      <MSHelp:Attr Name="APIName" Value="Gamelogic.Grids.AbstractUniformGrid`2..ctor" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="Constructs a new hex grid with a shape determined by the IsInsider shape." />
+      <MSHelp:Attr Name="AssemblyVersion" Value="" />
+    </xml>
+  </head>
+  <body>
+    <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <div class="content">
+        <div class="topicContainer">
+          <div class="topic">
+            <p class="majorTitle" />
+            <h1 class="title">AbstractUniformGrid<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">TCell</span>, <span class="typeparameter">TPoint</span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span> Constructor </h1>
+            <div id="mainSection">
+              <div id="mainBody">
+                <div class="summary">
+   Constructs a new hex grid with a shape determined by the IsInsider shape.
+   </div>
+                <p />
+    <b>Namespace:</b> 
+   <a href="N-Gamelogic.Grids.htm">Gamelogic.Grids</a><br />
+    <b>Assembly:</b>
+   <span sdata="assembly">Grids 1</span> (in Grids 1.dll)<div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Syntax</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="syntaxSection"><!----></a><div class="CodeSnippetContainer"><div class="CodeSnippetContainerTabs"><div class="CodeSnippetContainerTabLeft"><!----></div><div class="CodeSnippetContainerTabFirst CSharpTab" id="CSharpTabId" style="background:white;border-bottom-color:white"><a href="javascript:setActiveTab('CodeSnippetContainerCode','CSharpCode','CSharpTabId');" title="C#">C#</a></div><div class="CodeSnippetContainerTabRight"><!----></div></div><div class="CodeSnippetContainerCodeCollection"><div class="CodeSnippetToolBar"><div class="CodeSnippetToolBarText" /></div><div class="CodeSnippetContainerCode CSharpCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">protected</span> <span class="identifier">AbstractUniformGrid</span>(
+	<a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">int</a> <span class="parameter">width</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">int</a> <span class="parameter">height</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a>&lt;TPoint, <a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">bool</a>&gt; <span class="parameter">isInsideTest</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a>&lt;TPoint, TPoint&gt; <span class="parameter">gridPointTransform</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a>&lt;TPoint, TPoint&gt; <span class="parameter">inverseGridPointTransform</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/9eekhta0.aspx" target="_blank">IEnumerable</a>&lt;TPoint&gt; <span class="parameter">neighborDirections</span>
+)</pre></div></div></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="width"><dt><span class="parameterItalic">width</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">Int32</a><br />The with of the hex rectangle that will contain the grid.</dd></dl><dl paramName="height"><dt><span class="parameterItalic">height</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">Int32</a><br />The height of the hex rectangle that will contain the grid.</dd></dl><dl paramName="isInsideTest"><dt><span class="parameterItalic">isInsideTest</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm"><span class="typeparam">TPoint</span></a>, <a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">Boolean</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />A function that tests whether a given point is inside
+   the grid.This function should not rely on the points given to it to be limited
+   in any way by the specified with and height.</dd></dl><dl paramName="gridPointTransform"><dt><span class="parameterItalic">gridPointTransform</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm"><span class="typeparam">TPoint</span></a>, <a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm"><span class="typeparam">TPoint</span></a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />Points returned by tis grid are transformed first with this delagate.</dd></dl><dl paramName="inverseGridPointTransform"><dt><span class="parameterItalic">inverseGridPointTransform</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm"><span class="typeparam">TPoint</span></a>, <a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm"><span class="typeparam">TPoint</span></a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />This must be the inverse of the gridPointTransform function.
+   Together, these functions make it possible to do things such as flip axes.</dd></dl><dl paramName="neighborDirections"><dt><span class="parameterItalic">neighborDirections</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/9eekhta0.aspx" target="_blank">IEnumerable</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm"><span class="typeparam">TPoint</span></a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />Possible direction of the neighbor</dd></dl></div></div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><a href="T-Gamelogic.Grids.AbstractUniformGrid-2.htm">AbstractUniformGrid<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span>TCell, TPoint<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span> Class</a></div><div class="seeAlsoStyle"><a href="N-Gamelogic.Grids.htm">Gamelogic.Grids Namespace</a></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div id="footer" class="footerContainer">
+          <div class="footerLogoContainer">
+            <div style="margin-top:5px">
+              <span class="customCopyrightFooter" />
+            </div>
+            <div style="margin-top:5px" class="copyrightFooter">Help File generated with GhostDoc</div>
+            <div> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

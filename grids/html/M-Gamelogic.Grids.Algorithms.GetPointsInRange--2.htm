@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="save" content="history" />
+    <title>GetPointsInRange(TCell, TPoint) Method (IGrid(TCell, TPoint), TPoint, Func(TCell, Boolean), Func(TPoint, TPoint, Single), Single)</title>
+    <link rel="stylesheet" type="text/css" href="../styles/lightweight.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <link rel="stylesheet" type="text/css" href="../styles/lw-code.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <script type="text/javascript" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" src="../scripts/languageSelector.js"> </script>
+    <meta name="container" content="Gamelogic.Grids" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="file" content="M-Gamelogic.Grids.Algorithms.GetPointsInRange--2" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="guid" content="M-Gamelogic.Grids.Algorithms.GetPointsInRange--2" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <xml xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <MSHelp:Attr Name="AssetID" Value="M:Gamelogic.Grids.Algorithms.GetPointsInRange``2(IGrid{``0, ``1},``1,Func{``0, System.Boolean},Func{``1, ``1, System.Single},System.Single)" />
+      <MSHelp:TOCTitle Title="GetPointsInRange(TCell, TPoint) Method (IGrid(TCell, TPoint), TPoint, Func(TCell, Boolean), Func(TPoint, TPoint, Single), Single)" />
+      <MSHelp:RLTitle Title="Algorithms.GetPointsInRange(TCell, TPoint) Method (IGrid(TCell, TPoint), TPoint, Func(TCell, Boolean), Func(TPoint, TPoint, Single), Single) (Gamelogic.Grids)" />
+      <MSHelp:Keyword Index="A" Term="M:Gamelogic.Grids.Algorithms.GetPointsInRange``2(IGrid{``0, ``1},``1,Func{``0, System.Boolean},Func{``1, ``1, System.Single},System.Single)" />
+      <MSHelp:Attr Name="APIType" Value="Managed" />
+      <MSHelp:Attr Name="APILocation" Value="Grids 1.dll" />
+      <MSHelp:Attr Name="APIName" Value="Gamelogic.Grids.Algorithms.GetPointsInRange" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="A generic function that returns the points in range based on a given start point, moveRange, and a function that returns the cost of moving between neighboring cells. author Justin Kivak" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="" />
+    </xml>
+    <link type="text/css" rel="stylesheet" href="../styles/highlight.css" />
+  </head>
+  <body>
+    <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <div class="content">
+        <div class="topicContainer">
+          <div class="topic">
+            <p class="majorTitle" />
+            <h1 class="title">Algorithms<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>GetPointsInRange<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">TCell</span>, <span class="typeparameter">TPoint</span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span> Method (IGrid<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">TCell</span>, <span class="typeparameter">TPoint</span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span>, <span class="typeparameter">TPoint</span>, Func<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">TCell</span>, Boolean<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span>, Func<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">TPoint</span>, <span class="typeparameter">TPoint</span>, Single<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span>, Single)</h1>
+            <div id="mainSection">
+              <div id="mainBody">
+                <div class="summary">
+   A generic function that returns the points in range
+   based on a given start point, moveRange, and a function that returns the
+   cost of moving between neighboring cells.
+  
+   author Justin Kivak
+   </div>
+                <p />
+    <b>Namespace:</b> 
+   <a href="N-Gamelogic.Grids.htm">Gamelogic.Grids</a><br />
+    <b>Assembly:</b>
+   <span sdata="assembly">Grids 1</span> (in Grids 1.dll)<div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Syntax</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="syntaxSection"><!----></a><div class="CodeSnippetContainer"><div class="CodeSnippetContainerTabs"><div class="CodeSnippetContainerTabLeft"><!----></div><div class="CodeSnippetContainerTabFirst CSharpTab" id="CSharpTabId" style="background:white;border-bottom-color:white"><a href="javascript:setActiveTab('CodeSnippetContainerCode','CSharpCode','CSharpTabId');" title="C#">C#</a></div><div class="CodeSnippetContainerTabRight"><!----></div></div><div class="CodeSnippetContainerCodeCollection"><div class="CodeSnippetToolBar"><div class="CodeSnippetToolBarText" /></div><div class="CodeSnippetContainerCode CSharpCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">public</span> <span class="keyword">static</span> <a href="http://msdn.microsoft.com/en-us/library/9eekhta0.aspx" target="_blank">IEnumerable</a>&lt;TPoint&gt; <span class="identifier">GetPointsInRange</span>&lt;TCell, TPoint&gt;(
+	<a href="T-Gamelogic.Grids.IGrid-2.htm">IGrid</a>&lt;TCell, TPoint&gt; <span class="parameter">grid</span>,
+	TPoint <span class="parameter">start</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a>&lt;TCell, <a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">bool</a>&gt; <span class="parameter">isAcessible</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/bb534647.aspx" target="_blank">Func</a>&lt;TPoint, TPoint, <a href="http://msdn.microsoft.com/en-us/library/system.single.aspx" target="_blank">float</a>&gt; <span class="parameter">getCellMoveCost</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/system.single.aspx" target="_blank">float</a> <span class="parameter">moveRange</span>
+)
+<span class="keyword">where</span> TPoint : <span class="nolink">IGridPoint</span>&lt;TPoint&gt;, <span class="nolink">IGridPoint</span>&lt;TPoint&gt;
+</pre></div></div></div><h4 class="subHeading">Type Parameters</h4><dl><dt><span class="parameterItalic">TCell</span></dt><dd /><dt><span class="parameterItalic">TPoint</span></dt><dd /></dl><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="grid"><dt><span class="parameterItalic">grid</span></dt><dd>Type: <a href="T-Gamelogic.Grids.IGrid-2.htm">Gamelogic.Grids<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>IGrid</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="selflink"><span class="typeparam">TCell</span></span>, <span class="selflink"><span class="typeparam">TPoint</span></span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />The grid to use for the calculations</dd></dl><dl paramName="start"><dt><span class="parameterItalic">start</span></dt><dd>Type: <span class="selflink"><span class="typeparam">TPoint</span></span><br />The starting point for the range calculation</dd></dl><dl paramName="isAcessible"><dt><span class="parameterItalic">isAcessible</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/bb549151.aspx" target="_blank">Func</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="selflink"><span class="typeparam">TCell</span></span>, <a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">Boolean</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />Whether the given cell can be reached</dd></dl><dl paramName="getCellMoveCost"><dt><span class="parameterItalic">getCellMoveCost</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/bb534647.aspx" target="_blank">Func</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="selflink"><span class="typeparam">TPoint</span></span>, <span class="selflink"><span class="typeparam">TPoint</span></span>, <a href="http://msdn.microsoft.com/en-us/library/system.single.aspx" target="_blank">Single</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />A function that returns the move cost given a cell</dd></dl><dl paramName="moveRange"><dt><span class="parameterItalic">moveRange</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.single.aspx" target="_blank">Single</a><br />The range from which to return cells</dd></dl></div></div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Examples</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="exampleSection"><!----></a>
+   Example usage:
+   <span id="cbc_1" x-lang="CSharp" codeLanguage="CSharp"><div class="highlight-title"><span class="highlight-copycode" tabindex="0"></span>C#</div><div class="code"><pre xml:space="preserve"><span class="highlight-keyword">var</span> tilesInRange = Algorithms.GetPointsInRange(
+       grid,
+       start,
+       tile1, tile2 =&gt; DistanceBetween(tile1, tile2),
+       <span class="highlight-number">5</span>f);</pre></div></span></div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><a href="T-Gamelogic.Grids.Algorithms.htm">Algorithms Class</a></div><div class="seeAlsoStyle"><a href="Overload-Gamelogic.Grids.Algorithms.GetPointsInRange-.htm">GetPointsInRange Overload</a></div><div class="seeAlsoStyle"><a href="N-Gamelogic.Grids.htm">Gamelogic.Grids Namespace</a></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div id="footer" class="footerContainer">
+          <div class="footerLogoContainer">
+            <div style="margin-top:5px">
+              <span class="customCopyrightFooter" />
+            </div>
+            <div style="margin-top:5px" class="copyrightFooter">Help File generated with GhostDoc</div>
+            <div> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

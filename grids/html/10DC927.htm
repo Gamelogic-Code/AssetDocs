@@ -1,0 +1,219 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>PointyHexPoint Structure</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="PointyHexPoint structure" /><meta name="System.Keywords" content="Gamelogic.Grids.PointyHexPoint structure" /><meta name="System.Keywords" content="PointyHexPoint structure, about PointyHexPoint structure" /><meta name="Microsoft.Help.F1" content="Gamelogic.Grids.PointyHexPoint" /><meta name="Microsoft.Help.Id" content="T:Gamelogic.Grids.PointyHexPoint" /><meta name="Description" content="Represents coordinates of the faces in a regular hexagonal lattice.The hexagons have the Pointy orientation." /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="BrandingAware" content="true" /><meta name="container" content="Gamelogic.Grids" /><meta name="file" content="10DC927" /><meta name="guid" content="10DC927" /><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script><script type="text/javascript" src="../scripts/clipboard.min.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Gamelogic Grids 1 Documentation [Deprecated]<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="EBFD7167.htm" title="Gamelogic Grids 1 Documentation [Deprecated]" tocid="roottoc">Gamelogic Grids 1 Documentation [Deprecated]</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="572EC2E3.htm" title="Gamelogic.Grids" tocid="572EC2E3">Gamelogic.Grids</a></div><div class="toclevel1 current" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="10DC927.htm" title="PointyHexPoint Structure" tocid="10DC927">PointyHexPoint Structure</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="FCBEAB27.htm" title="PointyHexPoint Constructor " tocid="FCBEAB27">PointyHexPoint Constructor </a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="1B95D9CC.htm" title="PointyHexPoint Properties" tocid="1B95D9CC">PointyHexPoint Properties</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="D62C38E0.htm" title="PointyHexPoint Methods" tocid="D62C38E0">PointyHexPoint Methods</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="EA02ED4A.htm" title="PointyHexPoint Operators" tocid="EA02ED4A">PointyHexPoint Operators</a></div><div class="toclevel2" data-toclevel="2"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="21482374.htm" title="PointyHexPoint Fields" tocid="21482374">PointyHexPoint Fields</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="logoColumn"><img src="../icons/Gamelogic.png" /></td><td class="titleColumn"><h1>PointyHexPoint Structure</h1></td></tr></table><span class="introStyle"></span> <div class="summary">
+            Represents coordinates of the faces in a regular hexagonal
+            lattice.The hexagons have the Pointy orientation.
+            </div><p> </p>
+    <strong>Namespace:</strong> 
+   <a href="572EC2E3.htm">Gamelogic.Grids</a><br />
+    <strong>Assembly:</strong>
+   Assembly-CSharp (in Assembly-CSharp.dll) Version: 0.0.0.0<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EACA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EACA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EACA');return false;" title="Copy">Copy</a></div></div><div id="ID0EACA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">[<span class="identifier">SerializableAttribute</span>]
+[<span class="identifier">VersionAttribute</span>(1, 0, 0)]
+[<span class="identifier">ImmutableAttribute</span>]
+<span class="keyword">public</span> <span class="keyword">struct</span> <span class="identifier">PointyHexPoint</span> : <span class="identifier">IGridPoint</span>&lt;<span class="identifier">PointyHexPoint</span>&gt;, 
+	<span class="identifier">IEquatable</span>&lt;<span class="identifier">PointyHexPoint</span>&gt;, <span class="identifier">IGridPoint</span>, <span class="identifier">IVectorPoint</span>&lt;<span class="identifier">PointyHexPoint</span>&gt;, 
+	<span class="identifier">ISplicedVectorPoint</span>&lt;<span class="identifier">PointyHexPoint</span>, <span class="identifier">PointyHexPoint</span>&gt;, <span class="identifier">IVertex</span>&lt;<span class="identifier">FlatTriPoint</span>&gt;</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EACA");</script></div><p>The <span class="selflink">PointyHexPoint</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Constructors</span></div><div id="ID2RBSection" class="collapsibleSection"><table class="members" id="constructorList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="FCBEAB27.htm">PointyHexPoint</a></td><td><div class="summary">
+            Constructs a new PointyHexPoint with the given coordinates.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID3RBSection" class="collapsibleSection"><table class="members" id="propertyList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="FCBF3130.htm">BasePoint</a></td><td><div class="summary">
+            A Uniform point's base point is simply the point itself.
+            Makes it easier to implement generic algorithms.
+            Since version 1.1
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="6C491C4A.htm">SpliceCount</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="AAC41EF2.htm">SpliceIndex</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="61C1D7D5.htm">X</a></td><td><div class="summary">
+            The x-coordinate of this point. This need to be in XML
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="61C2D7D5.htm">Y</a></td><td><div class="summary">
+            The y-coordinate of this point.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="61C3D7D5.htm">Z</a></td><td><div class="summary">
+            Gets the Z coordinate of the point. The Z-coordinate is redundant, but is used for convenience 
+            by some algorithms.The coordinates satisfy \f$x + y + z = 0\f$. 
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID4RBSection" class="collapsibleSection"><table class="members" id="methodList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="B7AFB5E8.htm">__GetColor__ReferenceImplementation</a></td><td><div class="summary">
+             Gives a coloring of the grid such that 
+            	if a point p has color k, then all points
+            	p + m[ux, 0] + n[vx, vy] have the same color
+            	for any integers a and b.
+            
+            	More information anout grid colorings:
+            	http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/
+            
+            	Since version 1.7
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="DA0D1933.htm">DistanceFrom</a></td><td><div class="summary">
+            The lattice distance from this point to the other.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="954D7B29.htm">Div</a></td><td><div class="summary">
+             Gives a new point that represents the 
+            	first point divided by the second point
+            	component-wise. The division is integer
+            	division.
+            
+            	Since version 1.6 (Rect)
+            	Since version 1.7 (other)
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="AE96BF87.htm">Dot</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="DFF833DB.htm">Equals(Object)</a></td><td> (Overrides <a href="http://msdn2.microsoft.com/en-us/library/2dts52z7" target="_blank">ValueType<span id="LST10DC927_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST10DC927_0?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Equals(Object)</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="2C80B1F4.htm">Equals(PointyHexPoint)</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D6A37281.htm">GetColor</a></td><td><div class="summary">
+             Gives a coloring of the grid such that 
+            	if a point p has color k, then all points
+            	p + m[ux, 0] + n[vx, vy] have the same color
+            	for any integers a and b.
+            
+            	More information anout grid colorings:
+            	http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/
+            
+            	Since version 1.7
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="30F6FEBE.htm">GetColor1_1</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color1_1.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D325FEBE.htm">GetColor1_2</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color1_2.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="47C0FEBE.htm">GetColor1_3</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color1_3.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D326FEBE.htm">GetColor2_2</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color2_2.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="E9F0FEBE.htm">GetColor2_4</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color2_4.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D327FEBE.htm">GetColor3_2</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color3_2.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="7556FEBE.htm">GetColor3_7</a></td><td><div class="summary">
+            Generates a coloring with the following pattern:
+            
+            <img src="fh_color3_7.png" />
+            
+            Light Blue corresponds to 0. 
+            Light Green corresponds to 1. 
+            Light Yellow corresponds to 2. 
+            Light Red corresponds to 3. 
+            Blue corresponds to 4. 
+            Green corresponds to 5. 
+            Yellow corresponds to 6. 
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="5E8EFEBE.htm">GetColor5_5</a></td><td><div class="summary">
+            Since version 1.7
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D6997281.htm">GetColor6</a></td><td><div class="summary">
+            Since version 1.7
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="287C4DD1.htm">GetEdgeAnchor</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D82CA201.htm">GetEdges</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="10010.htm">GetHashCode</a></td><td> (Overrides <a href="http://msdn2.microsoft.com/en-us/library/y3509fc2" target="_blank">ValueType<span id="LST10DC927_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST10DC927_1?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>GetHashCode<span id="LST10DC927_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST10DC927_2?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="BE73CD89.htm">GetNeighbors</a></td><td /></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/dfwy45w9" target="_blank">GetType</a></td><td> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="FA6FE55C.htm">GetVertexAnchor</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="A816A2E2.htm">GetVertexFaceAnchor</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="365E8609.htm">GetVertexFaces</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="A67595D8.htm">GetVertices</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="2F9767D6.htm">IsEquivalentUnderTransformsAndTranslation</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="402A6CC3.htm">IsInNegativeHalfPlaneX</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="E2D1E15E.htm">IsInNegativeHalfPlaneY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="FADB838D.htm">IsInNegativeHalfPlaneZ</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="23022C63.htm">IsInPositiveHalfPlaneX</a></td><td><div class="summary">
+             Whether this point is inside the half plane x &gt;= x0.
+            
+            	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+            
+            	Since version 1.3
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="C5A9A0FE.htm">IsInPositiveHalfPlaneY</a></td><td><div class="summary">
+             Whether this point is inside the half plane y &gt;= x0.
+            
+            	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+            
+            	Since version 1.3
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="68511599.htm">IsInPositiveHalfPlaneZ</a></td><td><div class="summary">
+             Whether this point is inside the half plane z &gt;= z0.
+            
+            	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+            
+            	Since version 1.3
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="48A66E3E.htm">IsInsideHexagon(Int32)</a></td><td><div class="summary">
+             Whether this point is in the hexagon with the given radius 
+            	and center at the origin.
+            
+            	The origin is considered the hexagon with zero radius.
+            
+            	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+            
+            	Since version 1.3
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="65E51344.htm">IsInsideHexagon(PointyHexPoint, Int32)</a></td><td><div class="summary">
+             Whether this point is in the hexagon with the given radius 
+            	and given center.
+            
+            	A single point is considered a hexagon with zero radius.
+            
+            	see http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/
+            
+            	Since version 1.3
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="2388A81E.htm">IsInsidePolygon</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="D1F2B863.htm">IsInsideTriangle</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="764B8D10.htm">Magnitude</a></td><td><div class="summary">
+            The magnitude of a hex point is the hex-distance between the point and the origin.
+            This notation makes using hex points useful to use as vectors.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="64EDBF87.htm">Mod</a></td><td><div class="summary">
+             Gives a new point that represents the 
+            	reminder when the first point is divided
+            	by the second point	component-wise. The
+            	division is integer division.
+            
+            	Since version 1.6 (Rect)
+            	Since version 1.7 (other)
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="4FF761B6.htm">MoveBackBy</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="9E2EB124.htm">MoveBy</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="1AA04D95.htm">Mul</a></td><td><div class="summary">
+             Gives a new point that represents the 
+            	first point multiplied by the second point
+            	component-wise. 
+            
+            	Since version 1.6 (Rect)
+            	Since version 1.7 (other)
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="80B40632.htm">Negate</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="9E22C210.htm">Perp</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="44DE7835.htm">PerpDot</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="7C996B9F.htm">PointFromVertexAnchor</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="8942186C.htm">ReflectAboutX</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="8943186C.htm">ReflectAboutY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="9433057C.htm">Rotate120</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3673ADA4.htm">Rotate120AndReflectAboutY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="94330582.htm">Rotate180</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="36C43DA2.htm">Rotate180AndReflectAboutY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="1F980576.htm">Rotate240</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="CB8E2FA7.htm">Rotate240AndReflectAboutY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="AAFD057A.htm">Rotate300</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="8B769198.htm">Rotate300AndReflectAboutY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="F214057A.htm">Rotate60</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="6ED4507A.htm">Rotate60AndReflectAboutY</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="3FA580A5.htm">ScaleDown</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="403C2B65.htm">ScaleUp</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="64ABDB45.htm">Subtract</a></td><td><div class="summary">
+            Subtracts the other point from this point, and returns the result.
+            </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="A37A7080.htm">ToCanonicalPosition</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="8A347DE0.htm">ToString</a></td><td> (Overrides <a href="http://msdn2.microsoft.com/en-us/library/wb77sz3h" target="_blank">ValueType<span id="LST10DC927_3"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST10DC927_3?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>ToString<span id="LST10DC927_4"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST10DC927_4?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="1E59F33D.htm">Translate</a></td><td><div class="summary">
+            This is a norm defined on the point, such that `p1.Difference(p2).Abs()` is equal to 
+            `p1.DistanceFrom(p2)`.
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID5RB')" onkeypress="SectionExpandCollapse_CheckKey('ID5RB', event)" tabindex="0"><img id="ID5RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Operators</span></div><div id="ID5RBSection" class="collapsibleSection"><table class="members" id="operatorList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="6D31F08C.htm">Addition</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="2D8E59D4.htm">Division(PointyHexPoint, PointyHexPoint)</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="6BDC9859.htm">Division(PointyHexPoint, Int32)</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="B9309D4C.htm">Equality</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="956F6A93.htm">Inequality</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="FBB11CC4.htm">Modulus</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="5AFBF424.htm">Multiply(PointyHexPoint, PointyHexPoint)</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="A909FA0B.htm">Multiply(PointyHexPoint, Int32)</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="87AA541.htm">Subtraction</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="5BF091CD.htm">UnaryNegation</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/puboperator.gif" alt="Public operator" title="Public operator" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="50083E20.htm">UnaryPlus</a></td><td /></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID6RB')" onkeypress="SectionExpandCollapse_CheckKey('ID6RB', event)" tabindex="0"><img id="ID6RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Fields</span></div><div id="ID6RBSection" class="collapsibleSection"><table class="members" id="fieldList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="C5F8B9E8.htm">East</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="4C60F770.htm">EdgeDirections</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="BCE34CC1.htm">MainDirections</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="E3C746B6.htm">NorthEast</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="2C32E63C.htm">NorthWest</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="FF7F46BD.htm">SouthEast</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="ECC2E643.htm">SouthWest</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="9D50F7AE.htm">VertexDirections</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="DE147653.htm">VertexFaceDirections</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="3D28E77C.htm">West</a></td><td /></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="B160E781.htm">Zero</a></td><td><div class="summary">
+            The zero point (0, 0).
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID7RB')" onkeypress="SectionExpandCollapse_CheckKey('ID7RB', event)" tabindex="0"><img id="ID7RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Extension Methods</span></div><div id="ID7RBSection" class="collapsibleSection"><table class="members" id="extensionMethodList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="10D5574C.htm">ThrowIfNull</a></td><td><div class="summary">
+            Throws a NullReferenceException if the object is null.
+            </div> (Defined by <a href="5BC2FE6F.htm">ObjectExtensions</a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID8RB')" onkeypress="SectionExpandCollapse_CheckKey('ID8RB', event)" tabindex="0"><img id="ID8RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID8RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="572EC2E3.htm">Gamelogic.Grids Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"> </div></body></html>
