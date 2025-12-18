@@ -1,0 +1,920 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AbstractShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AbstractShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="The base class of shape info classes">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.AbstractShapeInfo`5">
+
+
+
+  <h1 id="Gamelogic_Grids_AbstractShapeInfo_5" data-uid="Gamelogic.Grids.AbstractShapeInfo`5" class="text-break">
+Class AbstractShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The base class of shape info classes</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public abstract class AbstractShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt; : IShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt; where TShapeInfo : IShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt; where TGrid : IGridSpace&lt;TPoint&gt; where TPoint : ISplicedVectorPoint&lt;TPoint, TVectorPoint&gt;, IGridPoint&lt;TPoint&gt; where TVectorPoint : IVectorPoint&lt;TVectorPoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TShapeInfo</code></dt>
+    <dd></dd>
+    <dt><code>TGrid</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+    <dt><code>TVectorPoint</code></dt>
+    <dd></dd>
+    <dt><code>TShapeOp</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AbstractShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IShapeInfo-5.html">IShapeInfo</a>&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.AbstractSplicedShapeInfo-5.html">AbstractSplicedShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.DiamondShapeInfo-1.html">DiamondShapeInfo&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.FlatHexShapeInfo-1.html">FlatHexShapeInfo&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.LineShapeInfo-1.html">LineShapeInfo&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.PointyHexShapeInfo-1.html">PointyHexShapeInfo&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.RectShapeInfo-1.html">RectShapeInfo&lt;TCell&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5__ctor_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5__ctor_Gamelogic_Grids_ShapeStorageInfo__2__" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.#ctor(Gamelogic.Grids.ShapeStorageInfo{`2})">
+  AbstractShapeInfo(ShapeStorageInfo&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractShapeInfo(ShapeStorageInfo&lt;TPoint&gt; info)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_shapeStorageStorageInfo" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.shapeStorageStorageInfo">
+  shapeStorageStorageInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ShapeStorageInfo&lt;TPoint&gt; shapeStorageStorageInfo</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_ShapeStorageStorageInfo_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.ShapeStorageStorageInfo*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_ShapeStorageStorageInfo" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.ShapeStorageStorageInfo">
+  ShapeStorageStorageInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShapeStorageInfo&lt;TPoint&gt; ShapeStorageStorageInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_ArrayPointFromGridPoint_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.ArrayPointFromGridPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_ArrayPointFromGridPoint__3_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.ArrayPointFromGridPoint(`3)">
+  ArrayPointFromGridPoint(TVectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ArrayPoint ArrayPointFromGridPoint(TVectorPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <span class="xref">TVectorPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_Difference_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Difference*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_Difference" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Difference">
+  Difference()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a shape operator that will form the difference of the
+shape describe by this instance and the shape info generated by one
+of the shape functions of the shape operator returned by this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeOp Difference()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeOp</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_EndShape_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.EndShape*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_EndShape" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.EndShape">
+  EndShape()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This functions is called to end shape construction and returned
+a grid described by this shape info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TGrid EndShape()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TGrid</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_Filter_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Filter*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_Filter_System_Func__2_System_Boolean__" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Filter(System.Func{`2,System.Boolean})">
+  Filter(Func&lt;TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeInfo Filter(Func&lt;TPoint, bool&gt; filter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_GridPointFromArrayPoint_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.GridPointFromArrayPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_GridPointFromArrayPoint_Gamelogic_Grids_ArrayPoint_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.GridPointFromArrayPoint(Gamelogic.Grids.ArrayPoint)">
+  GridPointFromArrayPoint(ArrayPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TVectorPoint GridPointFromArrayPoint(ArrayPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TVectorPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_If_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.If*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_If_System_Boolean_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.If(System.Boolean)">
+  If(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeOp If(bool condition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeOp</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_IfTranslate_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.IfTranslate*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_IfTranslate_System_Boolean_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.IfTranslate(System.Boolean,System.Int32,System.Int32)">
+  IfTranslate(bool, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeInfo IfTranslate(bool condition, int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_Intersection_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Intersection*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_Intersection" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Intersection">
+  Intersection()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a shape operator that will form the intersection of the
+shape describe by this instance and the shape info generated by one
+of the shape functions of the shape operator returned by this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeOp Intersection()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeOp</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_MakeOp_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakeOp*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_MakeOp_Gamelogic_Grids_ShapeStorageInfo__2__System_Func_Gamelogic_Grids_ShapeStorageInfo__2__Gamelogic_Grids_ShapeStorageInfo__2__Gamelogic_Grids_ShapeStorageInfo__2___" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakeOp(Gamelogic.Grids.ShapeStorageInfo{`2},System.Func{Gamelogic.Grids.ShapeStorageInfo{`2},Gamelogic.Grids.ShapeStorageInfo{`2},Gamelogic.Grids.ShapeStorageInfo{`2}})">
+  MakeOp(ShapeStorageInfo&lt;TPoint&gt;, Func&lt;ShapeStorageInfo&lt;TPoint&gt;, ShapeStorageInfo&lt;TPoint&gt;, ShapeStorageInfo&lt;TPoint&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TShapeOp MakeOp(ShapeStorageInfo&lt;TPoint&gt; shapeInfo, Func&lt;ShapeStorageInfo&lt;TPoint&gt;, ShapeStorageInfo&lt;TPoint&gt;, ShapeStorageInfo&lt;TPoint&gt;&gt; combineInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shapeInfo</code> <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>combineInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;, <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;, <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeOp</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_MakePoint_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakePoint*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_MakePoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakePoint(System.Int32,System.Int32)">
+  MakePoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TVectorPoint MakePoint(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TVectorPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_MakeShape_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakeShape*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_MakeShape_System_Int32_System_Int32_System_Func__2_System_Boolean___3_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakeShape(System.Int32,System.Int32,System.Func{`2,System.Boolean},`3)">
+  MakeShape(int, int, Func&lt;TPoint, bool&gt;, TVectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TGrid MakeShape(int x, int y, Func&lt;TPoint, bool&gt; isInside, TVectorPoint offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>offset</code> <span class="xref">TVectorPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TGrid</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_MakeShapeInfo_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakeShapeInfo*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_MakeShapeInfo_Gamelogic_Grids_ShapeStorageInfo__2__" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.MakeShapeInfo(Gamelogic.Grids.ShapeStorageInfo{`2})">
+  MakeShapeInfo(ShapeStorageInfo&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TShapeInfo MakeShapeInfo(ShapeStorageInfo&lt;TPoint&gt; shapeStorageInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shapeStorageInfo</code> <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_SymmetricDifference_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.SymmetricDifference*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_SymmetricDifference" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.SymmetricDifference">
+  SymmetricDifference()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates the symmetric difference of all storged shape info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 1, 0)]
+public TShapeOp SymmetricDifference()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeOp</span></dt>
+    <dd><p>The resulting shape is the union of the first and immediately following shape, minus
+the intersection of the two shapes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_Translate_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Translate*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_Translate_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Translate(System.Int32,System.Int32)">
+  Translate(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeInfo Translate(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_Translate_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Translate*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_Translate__3_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Translate(`3)">
+  Translate(TVectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Assumption:
+ArrayFromGridPoint(p1 + offset) == ArrayFromGridPoint(p1) + ArrayFromGridPoint(offset)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeInfo Translate(TVectorPoint offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <span class="xref">TVectorPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractShapeInfo_5_Union_" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Union*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractShapeInfo_5_Union" data-uid="Gamelogic.Grids.AbstractShapeInfo`5.Union">
+  Union()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a shape operator that will form the union of the
+shape describe by this instance and the shape info generated by one
+of the shape functions of the shape operator returned by this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TShapeOp Union()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TShapeOp</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1721 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Algorithms | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Algorithms | Gamelogic Grids ">
+      
+      <meta name="description" content="This class provide generic functions for common grid operations, such as finding a shortest path or connected shapes.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.Algorithms">
+
+
+
+  <h1 id="Gamelogic_Grids_Algorithms" data-uid="Gamelogic.Grids.Algorithms" class="text-break">
+Class Algorithms  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This class provide generic functions for common grid operations, such as finding a
+shortest path or connected shapes.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public static class Algorithms</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Algorithms</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_Algorithms_AStar2_" data-uid="Gamelogic.Grids.Algorithms.AStar2*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_AStar2__2_Gamelogic_Grids_IGrid___0___1____1___1_System_Func___1___1_System_Single__System_Func___1_System_Boolean__System_Func___1___1_System_Single__" data-uid="Gamelogic.Grids.Algorithms.AStar2``2(Gamelogic.Grids.IGrid{``0,``1},``1,``1,System.Func{``1,``1,System.Single},System.Func{``1,System.Boolean},System.Func{``1,``1,System.Single})">
+  AStar2&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint, Func&lt;TPoint, TPoint, float&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, float&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; AStar2&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, TPoint goal, Func&lt;TPoint, TPoint, float&gt; heuristicCostEstimate, Func&lt;TPoint, bool&gt; isAccessible, Func&lt;TPoint, TPoint, float&gt; neighborToNeighborCost) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>goal</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>heuristicCostEstimate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>isAccessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>neighborToNeighborCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_AStar_" data-uid="Gamelogic.Grids.Algorithms.AStar*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_AStar__2_Gamelogic_Grids_IGrid___0___1____1___1_" data-uid="Gamelogic.Grids.Algorithms.AStar``2(Gamelogic.Grids.IGrid{``0,``1},``1,``1)">
+  AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find the shortest path between a start and goal node.</p>
+<p>The distance between nodes(as defined by TPoint.DistanceFrom)
+are used as the heuristic and actual cost between nodes.In some cases the
+result may be unintuitive, and an overload specifying a different
+cost should be used.</p>
+<p>See AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint, Func&lt;TPoint, TPoint, float&gt;, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, float&gt;)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, TPoint goal) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>goal</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd><p>The list of nodes on the path in order.If no path is possible, null is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_AStar_" data-uid="Gamelogic.Grids.Algorithms.AStar*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_AStar__2_Gamelogic_Grids_IGrid___0___1____1___1_System_Func___1___1_System_Single__System_Func___0_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.AStar``2(Gamelogic.Grids.IGrid{``0,``1},``1,``1,System.Func{``1,``1,System.Single},System.Func{``0,System.Boolean})">
+  AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint, Func&lt;TPoint, TPoint, float&gt;, Func&lt;TCell, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find the shortest path between a start and goal node.</p>
+<p>The distance between nodes(as defined by TPoint.DistanceFrom)
+are used as the actual cost between nodes.In some cases the
+result may be unintuitive, and an overload specifying a different
+cost should be used.</p>
+<p>Using an overload with an appropriate distance function can solve the
+issue.</p>
+<p>See AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint, Func&lt;TPoint, TPoint, float&gt;, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, float&gt;)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use the overload instead that allows you to specify the cost in addition to the cost heuristic&quot;)]
+public static IEnumerable&lt;TPoint&gt; AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, TPoint goal, Func&lt;TPoint, TPoint, float&gt; heuristicCostEstimate, Func&lt;TCell, bool&gt; isAccessible) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>goal</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>heuristicCostEstimate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>isAccessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_AStar_" data-uid="Gamelogic.Grids.Algorithms.AStar*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_AStar__2_Gamelogic_Grids_IGrid___0___1____1___1_System_Func___1___1_System_Single__System_Func___0_System_Boolean__System_Func___1___1_System_Single__" data-uid="Gamelogic.Grids.Algorithms.AStar``2(Gamelogic.Grids.IGrid{``0,``1},``1,``1,System.Func{``1,``1,System.Single},System.Func{``0,System.Boolean},System.Func{``1,``1,System.Single})">
+  AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint, Func&lt;TPoint, TPoint, float&gt;, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, float&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; AStar&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, TPoint goal, Func&lt;TPoint, TPoint, float&gt; heuristicCostEstimate, Func&lt;TCell, bool&gt; isAccessible, Func&lt;TPoint, TPoint, float&gt; neighborToNeighborCost) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>goal</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>heuristicCostEstimate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>isAccessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>neighborToNeighborCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_AggregateNeighborhood_" data-uid="Gamelogic.Grids.Algorithms.AggregateNeighborhood*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_AggregateNeighborhood__2_Gamelogic_Grids_IGrid___0___1__System_Func___1_System_Collections_Generic_IEnumerable___1____0__" data-uid="Gamelogic.Grids.Algorithms.AggregateNeighborhood``2(Gamelogic.Grids.IGrid{``0,``1},System.Func{``1,System.Collections.Generic.IEnumerable{``1},``0})">
+  AggregateNeighborhood&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AggregateNeighborhood&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;, TCell&gt; aggregator) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>aggregator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_AggregateNeighborhood_" data-uid="Gamelogic.Grids.Algorithms.AggregateNeighborhood*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_AggregateNeighborhood__4_Gamelogic_Grids_IGrid___0___1__System_Func___1_System_Collections_Generic_IEnumerable___1____3__" data-uid="Gamelogic.Grids.Algorithms.AggregateNeighborhood``4(Gamelogic.Grids.IGrid{``0,``1},System.Func{``1,System.Collections.Generic.IEnumerable{``1},``3})">
+  AggregateNeighborhood&lt;TCell, TPoint, TResultGrid, TResultCell&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;, TResultCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResultGrid AggregateNeighborhood&lt;TCell, TPoint, TResultGrid, TResultCell&gt;(IGrid&lt;TCell, TPoint&gt; grid, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;, TResultCell&gt; aggregator) where TPoint : IGridPoint&lt;TPoint&gt; where TResultGrid : IGrid&lt;TResultCell, TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>aggregator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;, TResultCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TResultGrid</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+    <dt><code>TResultGrid</code></dt>
+    <dd></dd>
+    <dt><code>TResultCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Contains_" data-uid="Gamelogic.Grids.Algorithms.Contains*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Contains__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Grids.Algorithms.Contains``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+  Contains&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contains&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt; bigShape, IEnumerable&lt;TPoint&gt; smallShape) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bigShape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>smallShape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetBiggestShape_" data-uid="Gamelogic.Grids.Algorithms.GetBiggestShape*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetBiggestShape__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___" data-uid="Gamelogic.Grids.Algorithms.GetBiggestShape``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})">
+  GetBiggestShape&lt;TPoint&gt;(IEnumerable&lt;IEnumerable&lt;TPoint&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the biggest shape (by number of points) in the given list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; GetBiggestShape&lt;TPoint&gt;(IEnumerable&lt;IEnumerable&lt;TPoint&gt;&gt; shapes) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shapes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+    <dd><p>Each shape is represented as a list of points.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the shapes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetConnectedLines_" data-uid="Gamelogic.Grids.Algorithms.GetConnectedLines*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetConnectedLines__3_Gamelogic_Grids_IEvenGrid___0___1___2____1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.GetConnectedLines``3(Gamelogic.Grids.IEvenGrid{``0,``1,``2},``1,System.Func{``1,``1,System.Boolean})">
+  GetConnectedLines&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the longest line of connected points that contains this point.
+<a class="xref" href="Gamelogic.Grids.Algorithms.html#Gamelogic_Grids_Algorithms_GetConnectedRays__2_Gamelogic_Grids_AbstractUniformGrid___0___1____1_System_Func___1___1_System_Boolean__">GetConnectedRays&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IEnumerable&lt;TPoint&gt;&gt; GetConnectedLines&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt; grid, TPoint point, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : ISplicedVectorPoint&lt;TPoint, TBasePoint&gt;, IGridPoint&lt;TPoint&gt; where TBasePoint : IVectorPoint&lt;TBasePoint&gt;, IGridPoint&lt;TBasePoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IEvenGrid-3.html">IEvenGrid</a>&lt;TCell, TPoint, TBasePoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TBasePoint</code></dt>
+    <dd><p>The base type of the point.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetConnectedRays_" data-uid="Gamelogic.Grids.Algorithms.GetConnectedRays*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetConnectedRays__2_Gamelogic_Grids_AbstractUniformGrid___0___1____1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.GetConnectedRays``2(Gamelogic.Grids.AbstractUniformGrid{``0,``1},``1,System.Func{``1,``1,System.Boolean})">
+  GetConnectedRays&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list containing lines connected to the given points. A line is a list of points.
+Only returns correct results for square or hex grids.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IEnumerable&lt;TPoint&gt;&gt; GetConnectedRays&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt; grid, TPoint point, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : IVectorPoint&lt;TPoint&gt;, IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html">AbstractUniformGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A functions that returns true or false, depending on whether
+two points can be considered connected when they are neighbors.For example, if you want
+rays of points that refer to cells of the same color, you can pass in a functions that
+compares the DefaultColors of cells.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_Algorithms_GetConnectedRays__2_Gamelogic_Grids_AbstractUniformGrid___0___1____1_System_Func___1___1_System_Boolean___examples">Examples</h4>
+  <pre><code class="lang-csharp">private bool IsSameColour(point1, point2)
+{
+	return grid[point1].Color == grid[point2].Color;
+}
+
+private SomeMethod()
+{
+	...
+	var rays = GetConnectedRays&lt;ColourCell, PointyHexPoint, PointyHexNeighborIndex&gt;(
+		grid, point, IsSameColour);
+	...
+}</code></pre>
+<p>You can of course also use a lambda expression, like this:</p>
+<pre><code class="lang-csharp">//The following code returns all lines that radiate from the given point 
+GetConnectedRays&lt;ColourCell, PointyHexPoint, PointyHexNeighborIndex&gt;(
+	grid, point, (x, y) =&gt; grid[x].Color == grid[y].Color);</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetConnectedSet_" data-uid="Gamelogic.Grids.Algorithms.GetConnectedSet*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetConnectedSet__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.GetConnectedSet``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``1,``1,System.Boolean})">
+  GetConnectedSet&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HashSet&lt;TPoint&gt; GetConnectedSet&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint point, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>The function to use to check whether two neighbors are connected</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;TPoint&gt;</dt>
+    <dd><p>Returns a list of points connected to the given point.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetLongestConnectedLine_" data-uid="Gamelogic.Grids.Algorithms.GetLongestConnectedLine*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetLongestConnectedLine__3_Gamelogic_Grids_IEvenGrid___0___1___2____1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.GetLongestConnectedLine``3(Gamelogic.Grids.IEvenGrid{``0,``1,``2},``1,System.Func{``1,``1,System.Boolean})">
+  GetLongestConnectedLine&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the longest line of points connected to the given point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; GetLongestConnectedLine&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt; grid, TPoint point, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : ISplicedVectorPoint&lt;TPoint, TBasePoint&gt;, IGridPoint&lt;TPoint&gt; where TBasePoint : IVectorPoint&lt;TBasePoint&gt;, IGridPoint&lt;TBasePoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IEvenGrid-3.html">IEvenGrid</a>&lt;TCell, TPoint, TBasePoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TBasePoint</code></dt>
+    <dd><p>The base type of the point.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetLongestConnectedRay_" data-uid="Gamelogic.Grids.Algorithms.GetLongestConnectedRay*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetLongestConnectedRay__2_Gamelogic_Grids_AbstractUniformGrid___0___1____1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.GetLongestConnectedRay``2(Gamelogic.Grids.AbstractUniformGrid{``0,``1},``1,System.Func{``1,``1,System.Boolean})">
+  GetLongestConnectedRay&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the longest of the rays connected to this cell.
+<a class="xref" href="Gamelogic.Grids.Algorithms.html#Gamelogic_Grids_Algorithms_GetConnectedRays__2_Gamelogic_Grids_AbstractUniformGrid___0___1____1_System_Func___1___1_System_Boolean__">GetConnectedRays&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; GetLongestConnectedRay&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt; grid, TPoint point, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : IVectorPoint&lt;TPoint&gt;, IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html">AbstractUniformGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetLongestConnected_" data-uid="Gamelogic.Grids.Algorithms.GetLongestConnected*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetLongestConnected__3_Gamelogic_Grids_IEvenGrid___0___1___2____1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.GetLongestConnected``3(Gamelogic.Grids.IEvenGrid{``0,``1,``2},``1,System.Func{``1,``1,System.Boolean})">
+  GetLongestConnected&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="Gamelogic.Grids.Algorithms.html#Gamelogic_Grids_Algorithms_GetLongestConnectedLine__3_Gamelogic_Grids_IEvenGrid___0___1___2____1_System_Func___1___1_System_Boolean__">GetLongestConnectedLine&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt;, TPoint, Func&lt;TPoint, TPoint, bool&gt;)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GetLongestConnectedLine instead. Will be removed in a future version.&quot;)]
+public static IEnumerable&lt;TPoint&gt; GetLongestConnected&lt;TCell, TPoint, TBasePoint&gt;(IEvenGrid&lt;TCell, TPoint, TBasePoint&gt; grid, TPoint point, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : ISplicedVectorPoint&lt;TPoint, TBasePoint&gt;, IGridPoint&lt;TPoint&gt; where TBasePoint : IVectorPoint&lt;TBasePoint&gt;, IGridPoint&lt;TBasePoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IEvenGrid-3.html">IEvenGrid</a>&lt;TCell, TPoint, TBasePoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+    <dt><code>TBasePoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetPointsInRangeCost_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRangeCost*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetPointsInRangeCost__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__System_Func___1___1_System_Int32__System_Int32_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRangeCost``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``0,System.Boolean},System.Func{``1,``1,System.Int32},System.Int32)">
+  GetPointsInRangeCost&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, int&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;TPoint, int&gt; GetPointsInRangeCost&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, Func&lt;TCell, bool&gt; isAcessible, Func&lt;TPoint, TPoint, int&gt; getCellMoveCost, int moveRange) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isAcessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>getCellMoveCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>moveRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetPointsInRangeCost_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRangeCost*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetPointsInRangeCost__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__System_Func___1___1_System_Single__System_Single_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRangeCost``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``0,System.Boolean},System.Func{``1,``1,System.Single},System.Single)">
+  GetPointsInRangeCost&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, float&gt;, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A generic function that returns the points in range
+based on a given start point, moveRange, and a function that returns the
+cost of moving between neighboring cells.</p>
+<p>author Justin Kivak</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static Dictionary&lt;TPoint, float&gt; GetPointsInRangeCost&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, Func&lt;TCell, bool&gt; isAcessible, Func&lt;TPoint, TPoint, float&gt; getCellMoveCost, float moveRange) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd><p>The grid to use for the calculations</p>
+</dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd><p>The starting point for the range calculation</p>
+</dd>
+    <dt><code>isAcessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>getCellMoveCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>A function that returns the move cost given a cell</p>
+</dd>
+    <dt><code>moveRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The range from which to return cells</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_Algorithms_GetPointsInRangeCost__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__System_Func___1___1_System_Single__System_Single__examples">Examples</h4>
+  <p>Example usage:</p>
+<pre><code class="lang-csharp">var costs = Algorithms.GetPointsInRangeCost(
+	grid,
+	start,
+	tile1, tile2 =&gt; DistanceBetween(tile1, tile2),
+	5f);</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetPointsInRange_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRange*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetPointsInRange__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__System_Func___1___1_System_Int32__System_Int32_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRange``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``0,System.Boolean},System.Func{``1,``1,System.Int32},System.Int32)">
+  GetPointsInRange&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, int&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; GetPointsInRange&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, Func&lt;TCell, bool&gt; isAcessible, Func&lt;TPoint, TPoint, int&gt; getCellMoveCost, int moveRange) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>isAcessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>getCellMoveCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>moveRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_GetPointsInRange_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRange*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_GetPointsInRange__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__System_Func___1___1_System_Single__System_Single_" data-uid="Gamelogic.Grids.Algorithms.GetPointsInRange``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``0,System.Boolean},System.Func{``1,``1,System.Single},System.Single)">
+  GetPointsInRange&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;, Func&lt;TPoint, TPoint, float&gt;, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A generic function that returns the points in range
+based on a given start point, moveRange, and a function that returns the
+cost of moving between neighboring cells.</p>
+<p>author Justin Kivak</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static IEnumerable&lt;TPoint&gt; GetPointsInRange&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint start, Func&lt;TCell, bool&gt; isAcessible, Func&lt;TPoint, TPoint, float&gt; getCellMoveCost, float moveRange) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd><p>The grid to use for the calculations</p>
+</dd>
+    <dt><code>start</code> <span class="xref">TPoint</span></dt>
+    <dd><p>The starting point for the range calculation</p>
+</dd>
+    <dt><code>isAcessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Whether the given cell can be reached</p>
+</dd>
+    <dt><code>getCellMoveCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd><p>A function that returns the move cost given a cell</p>
+</dd>
+    <dt><code>moveRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The range from which to return cells</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_Algorithms_GetPointsInRange__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__System_Func___1___1_System_Single__System_Single__examples">Examples</h4>
+  <p>Example usage:</p>
+<pre><code class="lang-csharp">var tilesInRange = Algorithms.GetPointsInRange(
+	grid,
+	start,
+	tile1, tile2 =&gt; DistanceBetween(tile1, tile2),
+	5f);</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_IsConnected_" data-uid="Gamelogic.Grids.Algorithms.IsConnected*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_IsConnected__2_Gamelogic_Grids_IGrid___0___1__System_Collections_Generic_IEnumerable___1__System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.IsConnected``2(Gamelogic.Grids.IGrid{``0,``1},System.Collections.Generic.IEnumerable{``1},System.Func{``1,``1,System.Boolean})">
+  IsConnected&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, IEnumerable&lt;TPoint&gt;, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The set is connected if
+the set of points are neighbor-connected, and isNeighborsConnected return true for each
+two neighbors in the set.Two points are connected if they are neighbors, or one point has
+a neighbor that is neighbor-connected with the other point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsConnected&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, IEnumerable&lt;TPoint&gt; points, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd><p>The grid on which to do the check</p>
+</dd>
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd><p>The set of points to check. It is assumed all points are in the grid.</p>
+</dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>The function to use to check whether two neighbors are connected</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns true if the collection of points are connected.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_Algorithms_IsConnected__2_Gamelogic_Grids_IGrid___0___1__System_Collections_Generic_IEnumerable___1__System_Func___1___1_System_Boolean___examples">Examples</h4>
+  <p>checks whether the list of points are connected by color.</p>
+<pre><code class="lang-csharp">IsConnected(grid, points, (p, q) =&gt; grid[p].Color == grid[q].Color)</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_IsConnected_" data-uid="Gamelogic.Grids.Algorithms.IsConnected*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_IsConnected__2_Gamelogic_Grids_IGrid___0___1____1___1_System_Func___1___1_System_Boolean__" data-uid="Gamelogic.Grids.Algorithms.IsConnected``2(Gamelogic.Grids.IGrid{``0,``1},``1,``1,System.Func{``1,``1,System.Boolean})">
+  IsConnected&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TPoint, Func&lt;TPoint, TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The set is connected if
+the set of points are neighbor-connected, and isNeighborsConnected return true for each
+two neighbors in the set.Two points are connected if they are neighbors, or one point has</p>
+<p>a neighbor that is neighbor-connected with the other point.</p>
+<p>Another way to put this is, this function returns true if there is a set that connects point1
+to point2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsConnected&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt; grid, TPoint point1, TPoint point2, Func&lt;TPoint, TPoint, bool&gt; isNeighborsConnected) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd><p>The grid on which to do the check</p>
+</dd>
+    <dt><code>point1</code> <span class="xref">TPoint</span></dt>
+    <dd><p>The first point to check.</p>
+</dd>
+    <dt><code>point2</code> <span class="xref">TPoint</span></dt>
+    <dd><p>The second point to check.</p>
+</dd>
+    <dt><code>isNeighborsConnected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>The function to use to check whether two neighbors are connected.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns true if the two points are in a connected set.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The type of cell of the grid that this algorithm takes.</p>
+</dd>
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this algorithm takes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_Algorithms_IsConnected__2_Gamelogic_Grids_IGrid___0___1____1___1_System_Func___1___1_System_Boolean___examples">Examples</h4>
+  <p>checks whether the two points are connected by color.</p>
+<pre><code class="lang-csharp">IsConnected(grid, p1, p2, (p, q) =&gt; grid[p].Color == grid[q].Color)</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_IsEquivalentUnderTransformsAndTranslation_" data-uid="Gamelogic.Grids.Algorithms.IsEquivalentUnderTransformsAndTranslation*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_IsEquivalentUnderTransformsAndTranslation__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable_System_Func___0___0___System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___" data-uid="Gamelogic.Grids.Algorithms.IsEquivalentUnderTransformsAndTranslation``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.Func{``0,``0}},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}})">
+  IsEquivalentUnderTransformsAndTranslation&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;, IEnumerable&lt;Func&lt;TPoint, TPoint&gt;&gt;, Func&lt;IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEquivalentUnderTransformsAndTranslation&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt; shape1, IEnumerable&lt;TPoint&gt; shape2, IEnumerable&lt;Func&lt;TPoint, TPoint&gt;&gt; pointTransformations, Func&lt;IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;&gt; toCanonicalPosition) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>shape2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>pointTransformations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>toCanonicalPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_IsEquivalentUnderTranslation_" data-uid="Gamelogic.Grids.Algorithms.IsEquivalentUnderTranslation*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_IsEquivalentUnderTranslation__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Func_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___" data-uid="Gamelogic.Grids.Algorithms.IsEquivalentUnderTranslation``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Func{System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}})">
+  IsEquivalentUnderTranslation&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;, Func&lt;IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEquivalentUnderTranslation&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt; shape1, IEnumerable&lt;TPoint&gt; shape2, Func&lt;IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;&gt; toCanonicalPosition) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>shape2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>toCanonicalPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_IsEquivalent_" data-uid="Gamelogic.Grids.Algorithms.IsEquivalent*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_IsEquivalent__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Grids.Algorithms.IsEquivalent``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+  IsEquivalent&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEquivalent&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt; shape1, IEnumerable&lt;TPoint&gt; shape2) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>shape2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Rotate120About_" data-uid="Gamelogic.Grids.Algorithms.Rotate120About*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Rotate120About_System_Collections_Generic_IEnumerable_Gamelogic_Grids_FlatHexPoint__Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.Algorithms.Rotate120About(System.Collections.Generic.IEnumerable{Gamelogic.Grids.FlatHexPoint},Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  Rotate120About(IEnumerable&lt;FlatHexPoint&gt;, FlatHexPoint, FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a shape 120 degrees around the vertice shared by the three given points.</p>
+<p>The three points must form a close triangle (they must share a vertex).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;FlatHexPoint&gt; Rotate120About(IEnumerable&lt;FlatHexPoint&gt; shape, FlatHexPoint p1, FlatHexPoint p2, FlatHexPoint p3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>p1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p3</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Rotate120About_" data-uid="Gamelogic.Grids.Algorithms.Rotate120About*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Rotate120About_System_Collections_Generic_IEnumerable_Gamelogic_Grids_PointyHexPoint__Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.Algorithms.Rotate120About(System.Collections.Generic.IEnumerable{Gamelogic.Grids.PointyHexPoint},Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint)">
+  Rotate120About(IEnumerable&lt;PointyHexPoint&gt;, PointyHexPoint, PointyHexPoint, PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a shape 120 degrees around the vertice shared by the three given points.</p>
+<p>The three points must form a close triangle (they must share a vertex).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PointyHexPoint&gt; Rotate120About(IEnumerable&lt;PointyHexPoint&gt; shape, PointyHexPoint p1, PointyHexPoint p2, PointyHexPoint p3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>p1</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p2</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p3</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Rotate180About_" data-uid="Gamelogic.Grids.Algorithms.Rotate180About*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Rotate180About_System_Collections_Generic_IEnumerable_Gamelogic_Grids_FlatHexPoint__Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.Algorithms.Rotate180About(System.Collections.Generic.IEnumerable{Gamelogic.Grids.FlatHexPoint},Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  Rotate180About(IEnumerable&lt;FlatHexPoint&gt;, FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a shape 180 degrees around the edge shared by the two given points.</p>
+<p>The two points must be neighbors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;FlatHexPoint&gt; Rotate180About(IEnumerable&lt;FlatHexPoint&gt; shape, FlatHexPoint p1, FlatHexPoint p2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>p1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Rotate180About_" data-uid="Gamelogic.Grids.Algorithms.Rotate180About*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Rotate180About_System_Collections_Generic_IEnumerable_Gamelogic_Grids_PointyHexPoint__Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.Algorithms.Rotate180About(System.Collections.Generic.IEnumerable{Gamelogic.Grids.PointyHexPoint},Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint)">
+  Rotate180About(IEnumerable&lt;PointyHexPoint&gt;, PointyHexPoint, PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a shape 180 degrees around the edge shared by the two given points.</p>
+<p>The two points must be neighbors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PointyHexPoint&gt; Rotate180About(IEnumerable&lt;PointyHexPoint&gt; shape, PointyHexPoint p1, PointyHexPoint p2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>p1</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p2</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Rotate240About_" data-uid="Gamelogic.Grids.Algorithms.Rotate240About*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Rotate240About_System_Collections_Generic_IEnumerable_Gamelogic_Grids_FlatHexPoint__Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.Algorithms.Rotate240About(System.Collections.Generic.IEnumerable{Gamelogic.Grids.FlatHexPoint},Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  Rotate240About(IEnumerable&lt;FlatHexPoint&gt;, FlatHexPoint, FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a shape 240 degrees around the vertice shared by the three given points.</p>
+<p>The three points must form a close triangle (they must share a vertex).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;FlatHexPoint&gt; Rotate240About(IEnumerable&lt;FlatHexPoint&gt; shape, FlatHexPoint p1, FlatHexPoint p2, FlatHexPoint p3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>p1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p3</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_Rotate240About_" data-uid="Gamelogic.Grids.Algorithms.Rotate240About*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_Rotate240About_System_Collections_Generic_IEnumerable_Gamelogic_Grids_PointyHexPoint__Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.Algorithms.Rotate240About(System.Collections.Generic.IEnumerable{Gamelogic.Grids.PointyHexPoint},Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint)">
+  Rotate240About(IEnumerable&lt;PointyHexPoint&gt;, PointyHexPoint, PointyHexPoint, PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates a shape 240 degrees around the vertice shared by the three given points.</p>
+<p>The three points must form a close triangle (they must share a vertex).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;PointyHexPoint&gt; Rotate240About(IEnumerable&lt;PointyHexPoint&gt; shape, PointyHexPoint p1, PointyHexPoint p2, PointyHexPoint p3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>p1</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p2</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>p3</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Algorithms_TransformShape_" data-uid="Gamelogic.Grids.Algorithms.TransformShape*"></a>
+
+  <h3 id="Gamelogic_Grids_Algorithms_TransformShape__1_System_Collections_Generic_IEnumerable___0__System_Func___0___0__" data-uid="Gamelogic.Grids.Algorithms.TransformShape``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0})">
+  TransformShape&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, Func&lt;TPoint, TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transform each point in the list with the give point transformation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; TransformShape&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt; shape, Func&lt;TPoint, TPoint&gt; pointTransformation) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>pointTransformation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

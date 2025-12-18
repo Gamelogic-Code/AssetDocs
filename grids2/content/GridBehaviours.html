@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Introduction | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Introduction | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/GridBehaviours.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction">Introduction</h1>
+
+<p>The easiest way to reference your grid in code is to use a grid behaviour – a component attached to the grid builder.</p>
+<p>To make a grid behaviour, make a new component that extends from <a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-1.html">GridBehaviour&lt;TCell&gt;</a> or <a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-2.html">GridBehaviour&lt;TPoint, TCell&gt;</a>. You need to specify
+two type parameters</p>
+<ul>
+<li>The first type parameter can be one of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.html">GridPoint2</a> , or <a class="xref" href="../api/Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>
+depending on whether you have a 1D, 2D, or
+3D grid.</li>
+<li>The second type parameter depends on whether you have a tile grid (a grid where each cell is a separate game object,
+such as a sprite or mesh) or a mesh grid (where the entire grid is a single mesh). The two options are
+<a class="xref" href="../api/Gamelogic.Grids2.TileCell.html">TileCell</a> and  <a class="xref" href="../api/Gamelogic.Grids2.MeshCell.html">MeshCell</a> .</li>
+<li>You can override the <a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-1.InitGrid.html">InitGrid</a> method to perform actions just after the grid has
+been built. This is useful for
+additional initialization steps (particularly, to initialize your cells).</li>
+</ul>
+<p>You can access the grid data structure, the grid map, and the grid builder through the properties
+<a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-2.Grid.html#Gamelogic_Grids2_GridBehaviour_2_Grid">Grid</a> , <a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-2.GridMap.html#Gamelogic_Grids2_GridBehaviour_2_GridMap">GridMap</a> ,
+and <a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-2.GridBuilder.html#Gamelogic_Grids2_GridBehaviour_2_GridBuilder">GridBuilder</a> .</p>
+<p>Because the grid contains cells of type  <a class="xref" href="../api/Gamelogic.Grids2.TileCell.html">TileCell</a> , you usually want to make a copy of the grid
+with a more specific
+type (most often, your own cell type).</p>
+<p>Here is how to do it:</p>
+<pre><code class="lang-csharp">IGrid&lt;GridPoint2, MyCell&gt; myGrid = Grid.CloneStructure(p =&gt; Grid[p].GetComponent&lt;MyCell&gt;());
+</code></pre>
+<p>This assumes that your cell prefab has the additional <code>MyCell</code> component attached (a custom cell, not part of the
+library). You only have to do it once, so make it a field so that you can also access it from other methods, and
+initialize it in the <a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-1.InitGrid.html">InitGrid</a> method.</p>
+<p>The GridBehaviour is also a convenient place to handle mouse input to the grid (such as clicks).</p>
+<p>To make your grid interactable, it is necessary to add a <a class="xref" href="../api/Gamelogic.Grids2.GridEventTrigger.html">GridEventTrigger</a> on the same object as your
+grid builder. This
+component allows you to configure which methods should be called (on which components). It is best to define those
+methods in a grid behaviour, so that you have easy access to the grid, and link them in on the event trigger.</p>
+<p>The <a class="xref" href="../api/Gamelogic.Grids2.GridEventTrigger.html">GridEventTrigger</a> also has a <a class="xref" href="../api/Gamelogic.Grids2.GridEventTrigger.MousePosition.html#Gamelogic_Grids2_GridEventTrigger_MousePosition">MousePosition</a> property that
+always has the current mouse position in grid coordinates. You should always check whether this point is actually in
+your grid before using it.</p>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridBehaviour-2.html">GridBehaviour&lt;TPoint, TCell&gt;</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridEventTrigger.html">GridEventTrigger</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

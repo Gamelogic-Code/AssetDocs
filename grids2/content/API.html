@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>API Guide | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="API Guide | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/API.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="api-guide">API Guide</h1>
+
+<p>Grids is a big library. Many of the classes are a bit obscure, and the general user won't need them. This guide will
+point you to the most useful classes for general usage.</p>
+<p>One important pattern that we use a lot in grids is to hide concrete implementations of certain classes, and provide
+static methods to generate instances of these classes. For example, you will always work with <a class="xref" href="../api/Gamelogic.Grids2.IMap-2.html">IMap&lt;TInput, TOutput&gt;</a> ,
+<a class="xref" href="../api/Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape&lt;TPoint&gt;</a> ,
+<a class="xref" href="../api/Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape&lt;TPoint&gt;</a> , but to create instances of these you will use the static methods in
+<a class="xref" href="../api/Gamelogic.Grids2.Map.html">Map</a> ,
+<a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.html">ExplicitShape</a> ,
+<a class="xref" href="../api/Gamelogic.Grids2.ImplicitShape.html">ImplicitShape</a> . The static classes also define manipulations of these classes - often through
+extension methods.</p>
+<p>(The same pattern is used in the Extensions Library for generators: you work with
+<a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IGenerator-1.html">IGenerator&lt;TResult&gt;</a>,
+but use the static methods in <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.html">Generator</a> to create generators.)</p>
+<p>We do this because the implementation of these types require dozens of support classes that differ only on the inside —
+they all look the same on the outside, and you don't need to know the difference.</p>
+<p>For grids, you generally work with the <a class="xref" href="../api/Gamelogic.Grids2.IGrid-2.html">IGrid&lt;TPoint, TCell&gt;</a> interface. However, we do expose the three concrete
+implementations
+<a class="xref" href="../api/Gamelogic.Grids2.Grid1-1.html">Grid1&lt;TCell&gt;</a> , <a class="xref" href="../api/Gamelogic.Grids2.Grid2-1.html">Grid2&lt;TCell&gt;</a> , and <a class="xref" href="../api/Gamelogic.Grids2.Grid3-1.html">Grid3&lt;TCell&gt;</a> (for 1D, 2D and 3D grids
+respectively).</p>
+<h2 id="gamelogic-grids-2-documentation">Gamelogic Grids 2 Documentation</h2>
+<h3 id="gridpoint2"><a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.html"><code>GridPoint2</code></a></h3>
+<p>Represents 2D grid locations, and defines the methods for point arithmetic. Points are how cells in a grid are
+identified, and form the basic element of grid algorithms.</p>
+<p>Note that the same point type is used for rect grids, hex grids, and indeed other 2D grids which allows a uniform
+coordinate structure. There are some methods and constants that are specific to points depending on whether the point is
+used in a hex grid or rect grid. These are provided in static classes <a class="xref" href="../api/Gamelogic.Grids2.RectPoint.html">RectPoint</a> and
+<a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.html">PointyHexPoint</a>.</p>
+<p>For 3D grids, there is <a class="xref" href="../api/Gamelogic.Grids2.GridPoint3.html">GridPoint3</a> (with some static methods and constants provided in
+<a class="xref" href="../api/Gamelogic.Grids2.BlockPoint.html">BlockPoint</a> for grids with cubes as cells). No special class is needed for 1D grids: we simply use
+int. There are some static methods and constants provided for 1D grid points (integers) in
+<a class="xref" href="../api/Gamelogic.Grids2.GridPoint1.html">GridPoint1</a>.</p>
+<h3 id="igrid2"><a class="xref" href="../api/Gamelogic.Grids2.IGrid-2.html"><code>IGrid2</code></a></h3>
+<p>This interface is generally how you work with grids. There are concrete implementations, but in general, you should work
+with this interface instead, and most algorithms are defined in terms of this interface. For example, a 2D grid of
+integers is <a class="xref" href="../api/Gamelogic.Grids2.IGrid-2.html">IGrid&lt;TPoint, TCell&gt;</a>.</p>
+<p>In advanced usages of grids, you may also want to provide your own implementation of this interface.</p>
+<h3 id="algorithms"><a class="xref" href="../api/Gamelogic.Grids2.Algorithms.html"><code>Algorithms</code></a></h3>
+<p>This class contains various algorithms that operate on grids, such as path finding, connected shapes, and range finding.
+Usually, these algorithms require knowledge of the cells (that is, the data in the grid). Algorithms that only work on
+the grid shape is contained in either <a class="xref" href="../api/Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape&lt;TPoint&gt;</a> or <a class="xref" href="../api/Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape&lt;TPoint&gt;</a> .</p>
+<h3 id="map"><a class="xref" href="../api/Gamelogic.Grids2.Map.html"><code>Map</code></a></h3>
+<p>This class defines methods for creating and manipulating maps in code. Generally, you would only use this class if you
+create grids in code. For grids created with grid builders, maps are built from the node-based space maps and the round
+map setting in the grid builder.</p>
+<p>See also <a href="SpaceMaps.html">Space Maps</a>.</p>
+<h3 id="imap2"><a class="xref" href="../api/Gamelogic.Grids2.IMap-2.html"><code>IMap2</code></a></h3>
+<p>This is the type of maps (space maps, round maps, and other maps). As a general rule, the library hides the concrete
+implementations, and provides the Map class above for getting instances of IMaps.</p>
+<h3 id="explicitshape"><a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.html"><code>ExplicitShape</code></a></h3>
+<p>This class provides methods for creating and transforming explicit shapes in code. For grids built using grid builders,
+you will normally not need this class, since the shape is built using the node-based editor.</p>
+<h3 id="explicitshape-1"><a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.html"><code>ExplicitShape</code></a></h3>
+<p>This is the type of explicit shapes, and what you use to work with them once they are created.</p>
+<h3 id="implicitshape"><a class="xref" href="../api/Gamelogic.Grids2.ImplicitShape.html"><code>ImplicitShape</code></a></h3>
+<p>This class provides methods for creating and transforming implicit shapes in code. For grids built using grid builders,
+you will normally not need this class, since the shape is built using the node-based editor.</p>
+<h3 id="iimplicitshape"><a class="xref" href="../api/Gamelogic.Grids2.IImplicitShape-1.html"><code>IImplicitShape</code></a></h3>
+<p>This is the type of implicit shapes, and what you use to work with them once they are created.</p>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a href="KeyConcepts.html">Key Concepts</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

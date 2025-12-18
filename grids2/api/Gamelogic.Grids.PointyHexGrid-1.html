@@ -1,0 +1,1819 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PointyHexGrid&lt;TCell&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PointyHexGrid&lt;TCell&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="A grid for pointy hexagons, that is, hexagons with two vertical edges.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.PointyHexGrid`1">
+
+
+
+  <h1 id="Gamelogic_Grids_PointyHexGrid_1" data-uid="Gamelogic.Grids.PointyHexGrid`1" class="text-break">
+Class PointyHexGrid&lt;TCell&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A grid for pointy hexagons, that is, hexagons with two vertical edges.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public class PointyHexGrid&lt;TCell&gt; : AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;, IEvenGrid&lt;TCell, PointyHexPoint, PointyHexPoint&gt;, IVectorGrid&lt;TCell, PointyHexPoint, PointyHexPoint&gt;, IGrid&lt;TCell, PointyHexPoint&gt;, IGrid&lt;PointyHexPoint&gt;, IGridSpace&lt;PointyHexPoint&gt;, IEnumerable&lt;PointyHexPoint&gt;, IEnumerable, ISupportsVertexGrid&lt;FlatTriPoint&gt;, ISupportsEdgeGrid&lt;PointyRhombPoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html">AbstractUniformGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><span class="xref">PointyHexGrid&lt;TCell&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IEvenGrid-3.html">IEvenGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IVectorGrid-3.html">IVectorGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridSpace-1.html">IGridSpace</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.ISupportsVertexGrid-1.html">ISupportsVertexGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatTriPoint.html">FlatTriPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.ISupportsEdgeGrid-1.html">ISupportsEdgeGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyRhombPoint.html">PointyRhombPoint</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_width">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.width</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_height">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.height</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_contains">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.contains</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_Item__1_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.this[PointyHexPoint]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_GridOrigin">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.GridOrigin</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_Values">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_PointTransform">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.PointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_InversePointTransform">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.InversePointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_NeighborDirections">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.NeighborDirections</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_SetGridPointTransforms_System_Func__1__1__System_Func__1__1__">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.SetGridPointTransforms(Func&lt;PointyHexPoint, PointyHexPoint&gt;, Func&lt;PointyHexPoint, PointyHexPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_GetEnumerator">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_GetStoragePoints">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.GetStoragePoints()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_GetLargeSet_System_Int32_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.GetLargeSet(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_Contains__1_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.Contains(PointyHexPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_GetAllNeighbors__1_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.GetAllNeighbors(PointyHexPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_GetNeighborDirections_System_Int32_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.GetNeighborDirections(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_CloneStructure__1">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.CloneStructure&lt;TNewCell&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_PointFromArrayPoint_System_Int32_System_Int32_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.PointFromArrayPoint(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_ArrayPointFromPoint_System_Int32_System_Int32_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.ArrayPointFromPoint(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html#Gamelogic_Grids_AbstractUniformGrid_2_ArrayPointFromPoint__1_">AbstractUniformGrid&lt;TCell, PointyHexPoint&gt;.ArrayPointFromPoint(PointyHexPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGridObsoleteExtensions.html#Gamelogic_Grids_AbstractUniformGridObsoleteExtensions_GetNeighborDirections__2_Gamelogic_Grids_AbstractUniformGrid___0___1__">AbstractUniformGridObsoleteExtensions.GetNeighborDirections&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CastValues__2_Gamelogic_Grids_IGrid___1__">GridExtensions.CastValues&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1__System_Func___1___0__">GridExtensions.CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TPoint, TNewCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1__System_Func___0__">GridExtensions.CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TNewCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1____0_">GridExtensions.CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, TNewCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Apply__2_Gamelogic_Grids_IGrid___0___1__System_Action___0__">GridExtensions.Apply&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Action&lt;TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Clone__2_Gamelogic_Grids_IGrid___0___1__">GridExtensions.Clone&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1__System_Func___1___0__">GridExtensions.Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TPoint, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1__System_Func___0__">GridExtensions.Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1____0_">GridExtensions.Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetAllNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1_System_Boolean__">GridExtensions.GetAllNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetCell__2_Gamelogic_Grids_IGrid___0___1____1_">GridExtensions.GetCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_">GridExtensions.GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1_System_Boolean__">GridExtensions.GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__">GridExtensions.GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_IsOutside__2_Gamelogic_Grids_IGrid___0___1____1_">GridExtensions.IsOutside&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_SelectValuesAt__2_Gamelogic_Grids_IGrid___0___1__System_Collections_Generic_IEnumerable___1__">GridExtensions.SelectValuesAt&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, IEnumerable&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_SetCell__2_Gamelogic_Grids_IGrid___0___1____1___0_">GridExtensions.SetCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Shuffle__2_Gamelogic_Grids_IGrid___0___1__">GridExtensions.Shuffle&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_TransformValues__2_Gamelogic_Grids_IGrid___0___1__System_Func___0___0__">GridExtensions.TransformValues&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_WhereCell__2_Gamelogic_Grids_IGrid___0___1__System_Func___0_System_Boolean__">GridExtensions.WhereCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ButFirst__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.ButFirst&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ButLast__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.ButLast&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ListToString__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.ListToString&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_IComparable__">CollectionExtensions.MaxBy&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, IComparable&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">CollectionExtensions.MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">CollectionExtensions.MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">CollectionExtensions.MinBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">CollectionExtensions.MinBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem__1_System_Collections_Generic_IEnumerable___0__Gamelogic_Extensions_IRandom_">CollectionExtensions.RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;, IRandom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateLeft__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.RotateLeft&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateRight__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.RotateRight&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_">CollectionExtensions.SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_Gamelogic_Extensions_IRandom_">CollectionExtensions.SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;, int, IRandom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeHalf__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.TakeHalf&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeLast__1_System_Collections_Generic_IEnumerable___0__System_Int32_">CollectionExtensions.TakeLast&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Combinations__1_System_Collections_Generic_IEnumerable___0__System_Int32_">Combinatorial.Combinations&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Partitions__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.Partitions&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Permutations__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.Permutations&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_PowerSet__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.PowerSet&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Tuples__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.Tuples&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IEnumerableExtensions.html#Gamelogic_Grids_IEnumerableExtensions_ToPointList__1_System_Collections_Generic_IEnumerable___0__">IEnumerableExtensions.ToPointList&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.EnumerableExtensions.ToStructList.html#Gamelogic_Grids2_EnumerableExtensions_ToStructList__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.ToStructList&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html#Gamelogic_Grids2_Examples_RectFEV_NthOrLast__1_System_Collections_Generic_IEnumerable___0__System_Int32_">RectFEV.NthOrLast&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html#Gamelogic_Grids2_Examples_RectFEV_RandomItem__1_System_Collections_Generic_IEnumerable___0__System_Single_">RectFEV.RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html#Gamelogic_Grids2_Examples_RectFEV_SampleRandom__1_System_Collections_Generic_IEnumerable___0__">RectFEV.SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.In.html#Gamelogic_Grids2_GridExtensions_In__1_System_Collections_Generic_IEnumerable___0__Gamelogic_Grids2_IImplicitShape___0__">GridExtensions.In&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IImplicitShape&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1__ctor_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1__ctor_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor(System.Int32,System.Int32)">
+  PointyHexGrid(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new grid in the default shape with the given width and height.
+No transformations are applied to the grid.</p>
+<p>Normally, the static factory methods or shape building methods should be used to create grids.
+These constructors are provided for advanced usage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexGrid(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1__ctor_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1__ctor_System_Int32_System_Int32_System_Func_Gamelogic_Grids_PointyHexPoint_System_Boolean__" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor(System.Int32,System.Int32,System.Func{Gamelogic.Grids.PointyHexPoint,System.Boolean})">
+  PointyHexGrid(int, int, Func&lt;PointyHexPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new grid whose cells are determined by the given test function.</p>
+<p>The test function should only return true for points within the bounds of the default shape.</p>
+<p>No transformations are applied to the grid.</p>
+<p>Normally, the static factory methods or shape building methods should be used to create grids.
+These constructors are provided for advanced usage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexGrid(int width, int height, Func&lt;PointyHexPoint, bool&gt; isInside)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1__ctor_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1__ctor_System_Int32_System_Int32_System_Func_Gamelogic_Grids_PointyHexPoint_System_Boolean__Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor(System.Int32,System.Int32,System.Func{Gamelogic.Grids.PointyHexPoint,System.Boolean},Gamelogic.Grids.PointyHexPoint)">
+  PointyHexGrid(int, int, Func&lt;PointyHexPoint, bool&gt;, PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new grid whose cells are determined by the given test function.</p>
+<p>The function should only return true for points within the bounds of the rectangle when
+the given transforms are applied to them.</p>
+<p>Normally, the static factory methods or shape building methods should be used to create grids.
+These constructors are provided for advanced usage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexGrid(int width, int height, Func&lt;PointyHexPoint, bool&gt; isInside, PointyHexPoint offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>offset</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1__ctor_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1__ctor_System_Int32_System_Int32_System_Func_Gamelogic_Grids_PointyHexPoint_System_Boolean__System_Func_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint__System_Func_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor(System.Int32,System.Int32,System.Func{Gamelogic.Grids.PointyHexPoint,System.Boolean},System.Func{Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint},System.Func{Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint})">
+  PointyHexGrid(int, int, Func&lt;PointyHexPoint, bool&gt;, Func&lt;PointyHexPoint, PointyHexPoint&gt;, Func&lt;PointyHexPoint, PointyHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexGrid(int width, int height, Func&lt;PointyHexPoint, bool&gt; isInside, Func&lt;PointyHexPoint, PointyHexPoint&gt; gridPointTransform, Func&lt;PointyHexPoint, PointyHexPoint&gt; inverseGridPointTransform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>gridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>inverseGridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1__ctor_" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1__ctor_System_Int32_System_Int32_System_Func_Gamelogic_Grids_PointyHexPoint_System_Boolean__System_Func_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint__System_Func_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint__System_Collections_Generic_IEnumerable_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.PointyHexGrid`1.#ctor(System.Int32,System.Int32,System.Func{Gamelogic.Grids.PointyHexPoint,System.Boolean},System.Func{Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint},System.Func{Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint},System.Collections.Generic.IEnumerable{Gamelogic.Grids.PointyHexPoint})">
+  PointyHexGrid(int, int, Func&lt;PointyHexPoint, bool&gt;, Func&lt;PointyHexPoint, PointyHexPoint&gt;, Func&lt;PointyHexPoint, PointyHexPoint&gt;, IEnumerable&lt;PointyHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexGrid(int width, int height, Func&lt;PointyHexPoint, bool&gt; isInside, Func&lt;PointyHexPoint, PointyHexPoint&gt; gridPointTransform, Func&lt;PointyHexPoint, PointyHexPoint&gt; inverseGridPointTransform, IEnumerable&lt;PointyHexPoint&gt; neighborDirections)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>gridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>inverseGridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>neighborDirections</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_GridOrigin_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GridOrigin*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_GridOrigin" data-uid="Gamelogic.Grids.PointyHexGrid`1.GridOrigin">
+  GridOrigin
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives the Zero point as transform by this grids transforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override PointyHexPoint GridOrigin { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_ArrayPointFromGridPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ArrayPointFromGridPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_ArrayPointFromGridPoint_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ArrayPointFromGridPoint(Gamelogic.Grids.PointyHexPoint)">
+  ArrayPointFromGridPoint(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArrayPoint ArrayPointFromGridPoint(PointyHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_ArrayPointFromPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ArrayPointFromPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_ArrayPointFromPoint_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ArrayPointFromPoint(Gamelogic.Grids.PointyHexPoint)">
+  ArrayPointFromPoint(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ArrayPoint ArrayPointFromPoint(PointyHexPoint hexPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hexPoint</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_ArrayPointFromPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ArrayPointFromPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_ArrayPointFromPoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ArrayPointFromPoint(System.Int32,System.Int32)">
+  ArrayPointFromPoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ArrayPoint ArrayPointFromPoint(int hX, int hY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>hY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_BeginShape_" data-uid="Gamelogic.Grids.PointyHexGrid`1.BeginShape*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_BeginShape" data-uid="Gamelogic.Grids.PointyHexGrid`1.BeginShape">
+  BeginShape()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use this method to begin a shape building sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexOp&lt;TCell&gt; BeginShape()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexOp-1.html">PointyHexOp</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_CalculateStorage_" data-uid="Gamelogic.Grids.PointyHexGrid`1.CalculateStorage*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_CalculateStorage_System_Collections_Generic_IEnumerable_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.PointyHexGrid`1.CalculateStorage(System.Collections.Generic.IEnumerable{Gamelogic.Grids.PointyHexPoint})">
+  CalculateStorage(IEnumerable&lt;PointyHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IntRect CalculateStorage(IEnumerable&lt;PointyHexPoint&gt; points)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IntRect.html">IntRect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_CloneStructure_" data-uid="Gamelogic.Grids.PointyHexGrid`1.CloneStructure*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_CloneStructure__1" data-uid="Gamelogic.Grids.PointyHexGrid`1.CloneStructure``1">
+  CloneStructure&lt;TNewCellType&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a grid in the same shape, but with contents in the new type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IGrid&lt;TNewCellType, PointyHexPoint&gt; CloneStructure&lt;TNewCellType&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCellType, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCellType</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Default_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Default*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Default_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Default(System.Int32,System.Int32)">
+  Default(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Default(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_DefaultContains_" data-uid="Gamelogic.Grids.PointyHexGrid`1.DefaultContains*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_DefaultContains_Gamelogic_Grids_PointyHexPoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.DefaultContains(Gamelogic.Grids.PointyHexPoint,System.Int32,System.Int32)">
+  DefaultContains(PointyHexPoint, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DefaultContains(PointyHexPoint point, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Diamond_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Diamond*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Diamond_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Diamond(System.Int32)">
+  Diamond(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Diamond(int side)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>side</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_DownTriangle_" data-uid="Gamelogic.Grids.PointyHexGrid`1.DownTriangle*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_DownTriangle_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.DownTriangle(System.Int32)">
+  DownTriangle(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; DownTriangle(int side)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>side</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_FatRectangle_" data-uid="Gamelogic.Grids.PointyHexGrid`1.FatRectangle*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_FatRectangle_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.FatRectangle(System.Int32,System.Int32)">
+  FatRectangle(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; FatRectangle(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_GetPrincipleNeighborDirections_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GetPrincipleNeighborDirections*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_GetPrincipleNeighborDirections" data-uid="Gamelogic.Grids.PointyHexGrid`1.GetPrincipleNeighborDirections">
+  GetPrincipleNeighborDirections()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is the set of neighbor directions so that it contains only one of
+the neighbor directions of a pair of opposites.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;PointyHexPoint&gt; GetPrincipleNeighborDirections()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_GetSpiralIterator_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GetSpiralIterator*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_GetSpiralIterator_Gamelogic_Grids_PointyHexPoint_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GetSpiralIterator(Gamelogic.Grids.PointyHexPoint,System.Int32)">
+  GetSpiralIterator(PointyHexPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>An iterator that spirals anti-clockwise around the given origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public IEnumerable&lt;PointyHexPoint&gt; GetSpiralIterator(PointyHexPoint origin, int ringCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>origin</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>ringCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_PointyHexGrid_1_GetSpiralIterator_Gamelogic_Grids_PointyHexPoint_System_Int32__examples">Examples</h4>
+  <pre><code class="lang-csharp">int k = 0;
+
+foreach(var point in grid.GetSpiralIterator(point, 3))
+{
+	grid[point].name = k.ToString();
+}</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_GetSpiralIterator_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GetSpiralIterator*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_GetSpiralIterator_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GetSpiralIterator(System.Int32)">
+  GetSpiralIterator(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>An iterator that spirals anti-clockwise around the grid origin (0, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public IEnumerable&lt;PointyHexPoint&gt; GetSpiralIterator(int ringCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ringCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_GridPointFromArrayPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GridPointFromArrayPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_GridPointFromArrayPoint_Gamelogic_Grids_ArrayPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.GridPointFromArrayPoint(Gamelogic.Grids.ArrayPoint)">
+  GridPointFromArrayPoint(ArrayPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexPoint GridPointFromArrayPoint(ArrayPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Hexagon_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Hexagon*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Hexagon_Gamelogic_Grids_PointyHexPoint_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Hexagon(Gamelogic.Grids.PointyHexPoint,System.Int32)">
+  Hexagon(PointyHexPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Hexagon(PointyHexPoint centre, int side)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>centre</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>side</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Hexagon_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Hexagon*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Hexagon_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Hexagon(System.Int32)">
+  Hexagon(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Hexagon(int side)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>side</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_HorizontallyWrappedParallelogram_" data-uid="Gamelogic.Grids.PointyHexGrid`1.HorizontallyWrappedParallelogram*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_HorizontallyWrappedParallelogram_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.HorizontallyWrappedParallelogram(System.Int32,System.Int32)">
+  HorizontallyWrappedParallelogram(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a grid wrapped horizontally along a parallelogram.</p>
+<p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WrappedGrid&lt;TCell, PointyHexPoint&gt; HorizontallyWrappedParallelogram(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.WrappedGrid-2.html">WrappedGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_HorizontallyWrappedRectangle_" data-uid="Gamelogic.Grids.PointyHexGrid`1.HorizontallyWrappedRectangle*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_HorizontallyWrappedRectangle_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.HorizontallyWrappedRectangle(System.Int32,System.Int32)">
+  HorizontallyWrappedRectangle(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a grid wrapped horizontally along a parallelogram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static WrappedGrid&lt;TCell, PointyHexPoint&gt; HorizontallyWrappedRectangle(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.WrappedGrid-2.html">WrappedGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_MakeEdgeGrid_" data-uid="Gamelogic.Grids.PointyHexGrid`1.MakeEdgeGrid*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_MakeEdgeGrid__1" data-uid="Gamelogic.Grids.PointyHexGrid`1.MakeEdgeGrid``1">
+  MakeEdgeGrid&lt;TNewCell&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes an edge grid for this grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGrid&lt;TNewCell, PointyRhombPoint&gt; MakeEdgeGrid&lt;TNewCell&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, <a class="xref" href="Gamelogic.Grids.PointyRhombPoint.html">PointyRhombPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_MakeVertexGrid_" data-uid="Gamelogic.Grids.PointyHexGrid`1.MakeVertexGrid*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_MakeVertexGrid__1" data-uid="Gamelogic.Grids.PointyHexGrid`1.MakeVertexGrid``1">
+  MakeVertexGrid&lt;TNewCell&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes a grid that corresponds to the vertices of this grid.</p>
+<p>If point is inside this grid, then all of point.GetVertices()
+are in the grid returned by this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGrid&lt;TNewCell, FlatTriPoint&gt; MakeVertexGrid&lt;TNewCell&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, <a class="xref" href="Gamelogic.Grids.FlatTriPoint.html">FlatTriPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Parallelogram_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Parallelogram*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Parallelogram_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Parallelogram(System.Int32,System.Int32)">
+  Parallelogram(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Parallelogram(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_PointFromArrayPoint_" data-uid="Gamelogic.Grids.PointyHexGrid`1.PointFromArrayPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_PointFromArrayPoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.PointFromArrayPoint(System.Int32,System.Int32)">
+  PointFromArrayPoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override PointyHexPoint PointFromArrayPoint(int aX, int aY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>aY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Rectangle_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Rectangle*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Rectangle_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Rectangle(System.Int32,System.Int32)">
+  Rectangle(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Rectangle(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_Single_" data-uid="Gamelogic.Grids.PointyHexGrid`1.Single*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_Single" data-uid="Gamelogic.Grids.PointyHexGrid`1.Single">
+  Single()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; Single()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_ThinRectangle_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ThinRectangle*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_ThinRectangle_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ThinRectangle(System.Int32,System.Int32)">
+  ThinRectangle(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; ThinRectangle(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_ToString_" data-uid="Gamelogic.Grids.PointyHexGrid`1.ToString*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_ToString" data-uid="Gamelogic.Grids.PointyHexGrid`1.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_UpTriangle_" data-uid="Gamelogic.Grids.PointyHexGrid`1.UpTriangle*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_UpTriangle_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.UpTriangle(System.Int32)">
+  UpTriangle(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexGrid&lt;TCell&gt; UpTriangle(int side)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>side</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_VerticallyWrappedParallelogram_" data-uid="Gamelogic.Grids.PointyHexGrid`1.VerticallyWrappedParallelogram*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_VerticallyWrappedParallelogram_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.VerticallyWrappedParallelogram(System.Int32,System.Int32)">
+  VerticallyWrappedParallelogram(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a grid wrapped vertically along a parallelogram.</p>
+<p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WrappedGrid&lt;TCell, PointyHexPoint&gt; VerticallyWrappedParallelogram(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.WrappedGrid-2.html">WrappedGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_WrappedHexagon_" data-uid="Gamelogic.Grids.PointyHexGrid`1.WrappedHexagon*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_WrappedHexagon_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.WrappedHexagon(System.Int32)">
+  WrappedHexagon(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new grid, wrapped along a Hexagon with the given side length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static WrappedGrid&lt;TCell, PointyHexPoint&gt; WrappedHexagon(int side)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>side</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.WrappedGrid-2.html">WrappedGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyHexGrid_1_WrappedParallelogram_" data-uid="Gamelogic.Grids.PointyHexGrid`1.WrappedParallelogram*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyHexGrid_1_WrappedParallelogram_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyHexGrid`1.WrappedParallelogram(System.Int32,System.Int32)">
+  WrappedParallelogram(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a grid wrapped along a parallelogram.</p>
+<p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WrappedGrid&lt;TCell, PointyHexPoint&gt; WrappedParallelogram(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.WrappedGrid-2.html">WrappedGrid</a>&lt;TCell, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PolarPointyBrickMap | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PolarPointyBrickMap | Gamelogic Grids ">
+      
+      <meta name="description" content="This map can be used with a horizontally wrapped PointyHexGrid. For now, alignment does not work as with the other maps.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.PolarPointyBrickMap">
+
+
+
+  <h1 id="Gamelogic_Grids_PolarPointyBrickMap" data-uid="Gamelogic.Grids.PolarPointyBrickMap" class="text-break">
+Class PolarPointyBrickMap  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This map can be used with a horizontally wrapped PointyHexGrid.</p>
+<p>For now, alignment does not work as with the other maps.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public class PolarPointyBrickMap : AbstractMap&lt;PointyHexPoint&gt;, IPolarMap&lt;PointyHexPoint&gt;, IMap&lt;PointyHexPoint&gt;, IGridToWorldMap&lt;PointyHexPoint&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.AbstractMap-1.html">AbstractMap</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><span class="xref">PolarPointyBrickMap</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IPolarMap-1.html">IPolarMap</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IMap-1.html">IMap</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridToWorldMap-1.html">IGridToWorldMap</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_cellDimensions">AbstractMap&lt;PointyHexPoint&gt;.cellDimensions</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_anchorTranslation">AbstractMap&lt;PointyHexPoint&gt;.anchorTranslation</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_gridPointTransform">AbstractMap&lt;PointyHexPoint&gt;.gridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_inverseGridPointTransform">AbstractMap&lt;PointyHexPoint&gt;.inverseGridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GetCellDimensions">AbstractMap&lt;PointyHexPoint&gt;.GetCellDimensions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GetAnchorTranslation">AbstractMap&lt;PointyHexPoint&gt;.GetAnchorTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Item__0_">AbstractMap&lt;PointyHexPoint&gt;.this[PointyHexPoint]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Item_UnityEngine_Vector2_">AbstractMap&lt;PointyHexPoint&gt;.this[Vector2]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GridPointTransform">AbstractMap&lt;PointyHexPoint&gt;.GridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_InverseGridPointTransform">AbstractMap&lt;PointyHexPoint&gt;.InverseGridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GetCellDimensions__0_">AbstractMap&lt;PointyHexPoint&gt;.GetCellDimensions(PointyHexPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_CalcAnchorBottomLeft_Gamelogic_Grids_IGridSpace__0__">AbstractMap&lt;PointyHexPoint&gt;.CalcAnchorBottomLeft(IGridSpace&lt;PointyHexPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_CalcAnchorDimensions_Gamelogic_Grids_IGridSpace__0__">AbstractMap&lt;PointyHexPoint&gt;.CalcAnchorDimensions(IGridSpace&lt;PointyHexPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Translate_UnityEngine_Vector2_">AbstractMap&lt;PointyHexPoint&gt;.Translate(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Translate_System_Single_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.Translate(float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_TranslateX_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.TranslateX(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_TranslateY_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.TranslateY(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_ReflectAboutY">AbstractMap&lt;PointyHexPoint&gt;.ReflectAboutY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_ReflectAboutX">AbstractMap&lt;PointyHexPoint&gt;.ReflectAboutX()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_FlipXY">AbstractMap&lt;PointyHexPoint&gt;.FlipXY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Rotate_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.Rotate(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_RotateAround_System_Single_UnityEngine_Vector2_">AbstractMap&lt;PointyHexPoint&gt;.RotateAround(float, Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Rotate90">AbstractMap&lt;PointyHexPoint&gt;.Rotate90()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Rotate180">AbstractMap&lt;PointyHexPoint&gt;.Rotate180()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Scale_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.Scale(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Scale_System_Single_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.Scale(float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Scale_UnityEngine_Vector2_">AbstractMap&lt;PointyHexPoint&gt;.Scale(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_SetGridPointTransforms_System_Func__0__0__System_Func__0__0__">AbstractMap&lt;PointyHexPoint&gt;.SetGridPointTransforms(Func&lt;PointyHexPoint, PointyHexPoint&gt;, Func&lt;PointyHexPoint, PointyHexPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_WithWindow_UnityEngine_Rect_">AbstractMap&lt;PointyHexPoint&gt;.WithWindow(Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellLeft">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellCenter">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellRight">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTop">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellTop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottom">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellBottom()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddle">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellMiddle()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTopLeft">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellTopLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTopCenter">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellTopCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTopRight">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellTopRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddleLeft">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellMiddleLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddleCenter">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellMiddleCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddleRight">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellMiddleRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottomLeft">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellBottomLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottomCenter">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellBottomCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottomRight">AbstractMap&lt;PointyHexPoint&gt;.AnchorCellBottomRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Animate_System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">AbstractMap&lt;PointyHexPoint&gt;.Animate(Func&lt;Vector2, float, Vector2&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXY_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.To3DXY(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXY">AbstractMap&lt;PointyHexPoint&gt;.To3DXY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXZ_System_Single_">AbstractMap&lt;PointyHexPoint&gt;.To3DXZ(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXZ">AbstractMap&lt;PointyHexPoint&gt;.To3DXZ()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelCenter__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelCenter&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelLeft__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelLeft&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelRight__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelRight&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html#Gamelogic_Grids_MapAnimationExtensions_Animate__1_Gamelogic_Grids_IMap___0__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">MapAnimationExtensions.Animate&lt;TPoint&gt;(IMap&lt;TPoint&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html#Gamelogic_Grids_MapAnimationExtensions_Animate__1_Gamelogic_Grids_IMap___0__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">MapAnimationExtensions.Animate&lt;TPoint&gt;(IMap&lt;TPoint&gt;, Func&lt;Vector2, float, Vector2&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapExtensions.html#Gamelogic_Grids_MapExtensions_GetLine__1_Gamelogic_Grids_IMap___0____0___0_">MapExtensions.GetLine&lt;TPoint&gt;(IMap&lt;TPoint&gt;, TPoint, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+  <h2 id="Gamelogic_Grids_PolarPointyBrickMap_examples">Examples</h2>
+  <p>Example:</p>
+<pre><code class="lang-csharp">IGrid%lt;PointyHexPoint&gt; grid;
+IMap3D map;
+
+private void BuildGrid()
+{
+	grid = PointyHexGrid&lt;TCell&gt;.HorizontallyWrappedParallelogram(width, height);
+	map = new PolarPointyBrickMap(Vector3.zero, 10, 110, newRectPoint(5, 10).To3DXY();
+
+	foreach (var point in grid)
+	{
+		var cell = Instantiate(cellPrefab);
+		cell.transform.localPosition = map[
+	}
+}
+
+public void Click(Vector3 worldPoint)
+{
+	var gridPoint = map[worldPoint]
+
+	if (grid.Contains(gridPoint))
+	{
+		ClickCell(grid[gridPoint]);
+	}
+}</code></pre>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap__ctor_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap__ctor_UnityEngine_Vector2_System_Single_System_Single_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.#ctor(UnityEngine.Vector2,System.Single,System.Single,Gamelogic.Grids.VectorPoint)">
+  PolarPointyBrickMap(Vector2, float, float, VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PolarPointyBrickMap(Vector2 center, float innerRadius, float outerRadius, VectorPoint sectorsAndBands)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+    <dt><code>innerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>outerRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>sectorsAndBands</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_Center_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.Center*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_Center" data-uid="Gamelogic.Grids.PolarPointyBrickMap.Center">
+  Center
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Center { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_InnerRadius_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.InnerRadius*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_InnerRadius" data-uid="Gamelogic.Grids.PolarPointyBrickMap.InnerRadius">
+  InnerRadius
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InnerRadius { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_OuterRadius_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.OuterRadius*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_OuterRadius" data-uid="Gamelogic.Grids.PolarPointyBrickMap.OuterRadius">
+  OuterRadius
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OuterRadius { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_SectorAngle_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.SectorAngle*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_SectorAngle" data-uid="Gamelogic.Grids.PolarPointyBrickMap.SectorAngle">
+  SectorAngle
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SectorAngle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_SectorsAndBands_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.SectorsAndBands*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_SectorsAndBands" data-uid="Gamelogic.Grids.PolarPointyBrickMap.SectorsAndBands">
+  SectorsAndBands
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint SectorsAndBands { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_CalcBottomLeft_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.CalcBottomLeft*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_CalcBottomLeft_Gamelogic_Grids_IGridSpace_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.PolarPointyBrickMap.CalcBottomLeft(Gamelogic.Grids.IGridSpace{Gamelogic.Grids.PointyHexPoint})">
+  CalcBottomLeft(IGridSpace&lt;PointyHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 CalcBottomLeft(IGridSpace&lt;PointyHexPoint&gt; grid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGridSpace-1.html">IGridSpace</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_CalcGridDimensions_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.CalcGridDimensions*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_CalcGridDimensions_Gamelogic_Grids_IGridSpace_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.PolarPointyBrickMap.CalcGridDimensions(Gamelogic.Grids.IGridSpace{Gamelogic.Grids.PointyHexPoint})">
+  CalcGridDimensions(IGridSpace&lt;PointyHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 CalcGridDimensions(IGridSpace&lt;PointyHexPoint&gt; grid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGridSpace-1.html">IGridSpace</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_GetEndAngleZ_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetEndAngleZ*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_GetEndAngleZ_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetEndAngleZ(Gamelogic.Grids.PointyHexPoint)">
+  GetEndAngleZ(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Z angle in degrees of the given grid point at
+the end of the sector.</p>
+<p>This is useful for making a mesh for the sector band, for instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEndAngleZ(PointyHexPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_GetInnerRadius_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetInnerRadius*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_GetInnerRadius_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetInnerRadius(Gamelogic.Grids.PointyHexPoint)">
+  GetInnerRadius(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the inside radius of the band ath the given grid point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetInnerRadius(PointyHexPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_GetOuterRadius_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetOuterRadius*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_GetOuterRadius_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetOuterRadius(Gamelogic.Grids.PointyHexPoint)">
+  GetOuterRadius(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the outside radius of the band ath the given grid point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetOuterRadius(PointyHexPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_GetStartAngleZ_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetStartAngleZ*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_GetStartAngleZ_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GetStartAngleZ(Gamelogic.Grids.PointyHexPoint)">
+  GetStartAngleZ(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Z angle in degrees of the given grid point.</p>
+<p>This can be used to rotate cells appropriately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetStartAngleZ(PointyHexPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_GridToWorld_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GridToWorld*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_GridToWorld_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.GridToWorld(Gamelogic.Grids.PointyHexPoint)">
+  GridToWorld(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method maps a grid point to a world point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 GridToWorld(PointyHexPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_InverseTransform_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.InverseTransform*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_InverseTransform_UnityEngine_Vector2_System_Single_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.InverseTransform(UnityEngine.Vector2,System.Single)">
+  InverseTransform(Vector2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 InverseTransform(Vector2 v, float radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_RawWorldToGrid_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.RawWorldToGrid*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_RawWorldToGrid_UnityEngine_Vector2_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.RawWorldToGrid(UnityEngine.Vector2)">
+  RawWorldToGrid(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method maps a world point to a grid point, assuming that
+the anchor point is centered in the cell.This will allow the
+index accessors[] to give correct results for any anchoring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PointyHexPoint RawWorldToGrid(Vector2 worldPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldPoint</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolarPointyBrickMap_Transform_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.Transform*"></a>
+
+  <h3 id="Gamelogic_Grids_PolarPointyBrickMap_Transform_UnityEngine_Vector2_System_Single_" data-uid="Gamelogic.Grids.PolarPointyBrickMap.Transform(UnityEngine.Vector2,System.Single)">
+  Transform(Vector2, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 Transform(Vector2 v, float radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AbstractUniformGrid&lt;TCell, TPoint&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AbstractUniformGrid&lt;TCell, TPoint&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="This is the base class for grids that are not spliced; in other words, grids that have identical cells, with identical orientation, and in which grid points behave as (integer) vectors.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.AbstractUniformGrid`2">
+
+
+
+  <h1 id="Gamelogic_Grids_AbstractUniformGrid_2" data-uid="Gamelogic.Grids.AbstractUniformGrid`2" class="text-break">
+Class AbstractUniformGrid&lt;TCell, TPoint&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This is the base class for grids that are not spliced; in other words, grids
+that have identical cells, with identical orientation, and in which grid points
+behave as (integer) vectors.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public abstract class AbstractUniformGrid&lt;TCell, TPoint&gt; : IVectorGrid&lt;TCell, TPoint, TPoint&gt;, IGrid&lt;TCell, TPoint&gt;, IGrid&lt;TPoint&gt;, IGridSpace&lt;TPoint&gt;, IEnumerable&lt;TPoint&gt;, IEnumerable where TPoint : IGridPoint&lt;TPoint&gt;, IVectorPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AbstractUniformGrid&lt;TCell, TPoint&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IVectorGrid-3.html">IVectorGrid</a>&lt;TCell, TPoint, TPoint&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridSpace-1.html">IGridSpace</a>&lt;TPoint&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.DiamondGrid-1.html">DiamondGrid&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.FlatHexGrid-1.html">FlatHexGrid&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid&lt;TCell&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.RectGrid-1.html">RectGrid&lt;TCell&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractUniformGridObsoleteExtensions.html#Gamelogic_Grids_AbstractUniformGridObsoleteExtensions_GetNeighborDirections__2_Gamelogic_Grids_AbstractUniformGrid___0___1__">AbstractUniformGridObsoleteExtensions.GetNeighborDirections&lt;TCell, TPoint&gt;(AbstractUniformGrid&lt;TCell, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Apply__2_Gamelogic_Grids_IGrid___0___1__System_Action___0__">GridExtensions.Apply&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Action&lt;TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Clone__2_Gamelogic_Grids_IGrid___0___1__">GridExtensions.Clone&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1__System_Func___0__">GridExtensions.Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1__System_Func___1___0__">GridExtensions.Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TPoint, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1____0_">GridExtensions.Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetAllNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1_System_Boolean__">GridExtensions.GetAllNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetCell__2_Gamelogic_Grids_IGrid___0___1____1_">GridExtensions.GetCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_">GridExtensions.GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__">GridExtensions.GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1_System_Boolean__">GridExtensions.GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_IsOutside__2_Gamelogic_Grids_IGrid___0___1____1_">GridExtensions.IsOutside&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_SelectValuesAt__2_Gamelogic_Grids_IGrid___0___1__System_Collections_Generic_IEnumerable___1__">GridExtensions.SelectValuesAt&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, IEnumerable&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_SetCell__2_Gamelogic_Grids_IGrid___0___1____1___0_">GridExtensions.SetCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_Shuffle__2_Gamelogic_Grids_IGrid___0___1__">GridExtensions.Shuffle&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_TransformValues__2_Gamelogic_Grids_IGrid___0___1__System_Func___0___0__">GridExtensions.TransformValues&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_WhereCell__2_Gamelogic_Grids_IGrid___0___1__System_Func___0_System_Boolean__">GridExtensions.WhereCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CastValues__2_Gamelogic_Grids_IGrid___1__">GridExtensions.CastValues&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1__System_Func___0__">GridExtensions.CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TNewCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1__System_Func___1___0__">GridExtensions.CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TPoint, TNewCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.GridExtensions.html#Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1____0_">GridExtensions.CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, TNewCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ButFirst__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.ButFirst&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ButLast__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.ButLast&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ListToString__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.ListToString&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_IComparable__">CollectionExtensions.MaxBy&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, IComparable&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">CollectionExtensions.MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">CollectionExtensions.MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">CollectionExtensions.MinBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">CollectionExtensions.MinBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem__1_System_Collections_Generic_IEnumerable___0__Gamelogic_Extensions_IRandom_">CollectionExtensions.RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;, IRandom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateLeft__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.RotateLeft&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateRight__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.RotateRight&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_">CollectionExtensions.SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_Gamelogic_Extensions_IRandom_">CollectionExtensions.SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;, int, IRandom)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeHalf__1_System_Collections_Generic_IEnumerable___0__">CollectionExtensions.TakeHalf&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeLast__1_System_Collections_Generic_IEnumerable___0__System_Int32_">CollectionExtensions.TakeLast&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Combinations__1_System_Collections_Generic_IEnumerable___0__System_Int32_">Combinatorial.Combinations&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Partitions__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.Partitions&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Permutations__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.Permutations&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_PowerSet__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.PowerSet&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.html#Gamelogic_Extensions_Algorithms_Combinatorial_Tuples__1_System_Collections_Generic_IEnumerable___0__">Combinatorial.Tuples&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IEnumerableExtensions.html#Gamelogic_Grids_IEnumerableExtensions_ToPointList__1_System_Collections_Generic_IEnumerable___0__">IEnumerableExtensions.ToPointList&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.EnumerableExtensions.ToStructList.html#Gamelogic_Grids2_EnumerableExtensions_ToStructList__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.ToStructList&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html#Gamelogic_Grids2_Examples_RectFEV_NthOrLast__1_System_Collections_Generic_IEnumerable___0__System_Int32_">RectFEV.NthOrLast&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html#Gamelogic_Grids2_Examples_RectFEV_RandomItem__1_System_Collections_Generic_IEnumerable___0__System_Single_">RectFEV.RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html#Gamelogic_Grids2_Examples_RectFEV_SampleRandom__1_System_Collections_Generic_IEnumerable___0__">RectFEV.SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.In.html#Gamelogic_Grids2_GridExtensions_In__1_System_Collections_Generic_IEnumerable___0__Gamelogic_Grids2_IImplicitShape___0__">GridExtensions.In&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IImplicitShape&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2__ctor_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2__ctor_System_Int32_System_Int32_System_Func__1_System_Boolean__System_Func__1__1__System_Func__1__1__System_Collections_Generic_IEnumerable__1__" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.#ctor(System.Int32,System.Int32,System.Func{`1,System.Boolean},System.Func{`1,`1},System.Func{`1,`1},System.Collections.Generic.IEnumerable{`1})">
+  AbstractUniformGrid(int, int, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint&gt;, Func&lt;TPoint, TPoint&gt;, IEnumerable&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a new hex grid with a shape determined by the IsInsider shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractUniformGrid(int width, int height, Func&lt;TPoint, bool&gt; isInsideTest, Func&lt;TPoint, TPoint&gt; gridPointTransform, Func&lt;TPoint, TPoint&gt; inverseGridPointTransform, IEnumerable&lt;TPoint&gt; neighborDirections)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The with of the hex rectangle that will contain the grid.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the hex rectangle that will contain the grid.</p>
+</dd>
+    <dt><code>isInsideTest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A function that tests whether a given point is inside
+the grid.This function should not rely on the points given to it to be limited
+in any way by the specified with and height.</p>
+</dd>
+    <dt><code>gridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd><p>Points returned by tis grid are transformed first with this delagate.</p>
+</dd>
+    <dt><code>inverseGridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd><p>This must be the inverse of the gridPointTransform function.
+Together, these functions make it possible to do things such as flip axes.</p>
+</dd>
+    <dt><code>neighborDirections</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd><p>Possible direction of the neighbor</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_contains" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.contains">
+  contains
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+protected Func&lt;TPoint, bool&gt; contains</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_height" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.height">
+  height
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int height</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_width" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.width">
+  width
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int width</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_GridOrigin_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GridOrigin*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_GridOrigin" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GridOrigin">
+  GridOrigin
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives the Zero point as transform by this grids transforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TPoint GridOrigin { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_InversePointTransform_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.InversePointTransform*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_InversePointTransform" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.InversePointTransform">
+  InversePointTransform
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Func&lt;TPoint, TPoint&gt; InversePointTransform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_Item_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.Item*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_Item__1_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.Item(`1)">
+  this[TPoint]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the cell at the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TCell this[TPoint point] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TCell</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_NeighborDirections_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.NeighborDirections*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_NeighborDirections" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.NeighborDirections">
+  NeighborDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TPoint&gt; NeighborDirections { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_PointTransform_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.PointTransform*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_PointTransform" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.PointTransform">
+  PointTransform
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Func&lt;TPoint, TPoint&gt; PointTransform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_Values_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.Values*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_Values" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.Values">
+  Values
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A enumerable containing all the values of this grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TCell&gt; Values { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_AbstractUniformGrid_2_Values_examples">Examples</h4>
+  <p>For example, the following two pieces of code do the same:</p>
+<pre><code class="lang-csharp">foreach(var point in grid)
+{
+	Debug.Log(grid[point]);
+}
+
+foreach(var value in grid.Values)
+{
+	Debug.Log(value);
+}</code></pre>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_ArrayPointFromPoint_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.ArrayPointFromPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_ArrayPointFromPoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.ArrayPointFromPoint(System.Int32,System.Int32)">
+  ArrayPointFromPoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ArrayPoint ArrayPointFromPoint(int hX, int hY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>hY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_ArrayPointFromPoint_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.ArrayPointFromPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_ArrayPointFromPoint__1_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.ArrayPointFromPoint(`1)">
+  ArrayPointFromPoint(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ArrayPoint ArrayPointFromPoint(TPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_CloneStructure_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.CloneStructure*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_CloneStructure__1" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.CloneStructure``1">
+  CloneStructure&lt;TNewCell&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a grid with exactly the same structure, but potentially holding
+elements of a different type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IGrid&lt;TNewCell, TPoint&gt; CloneStructure&lt;TNewCell&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_Contains_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.Contains*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_Contains__1_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.Contains(`1)">
+  Contains(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the given point is inside the grid, or not.</p>
+<p>This function must be consistent with the enumerator that is returned
+with GetEnumerator(all points returned by the enumerator must be Inside,
+and all points that are inside must be returned by the enumerator).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(TPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_GetAllNeighbors_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetAllNeighbors*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_GetAllNeighbors__1_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetAllNeighbors(`1)">
+  GetAllNeighbors(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the neighbors of this point,
+regardless of whether they are in the grid or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TPoint&gt; GetAllNeighbors(TPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_GetEnumerator_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetEnumerator*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_GetEnumerator" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetEnumerator">
+  GetEnumerator()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;TPoint&gt; GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_GetLargeSet_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetLargeSet*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_GetLargeSet_System_Int32_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetLargeSet(System.Int32)">
+  GetLargeSet(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This functions returns a large number of points around the origin.</p>
+<p>This is useful(when used with big enough n) to determine
+whether a grid that is missing points is doing so becuase of
+an incorrect test function, or an incorrect storage rectangle.</p>
+<p>Use for debugging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 1, 0)]
+public IEnumerable&lt;TPoint&gt; GetLargeSet(int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_GetNeighborDirections_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetNeighborDirections*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_GetNeighborDirections_System_Int32_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetNeighborDirections(System.Int32)">
+  GetNeighborDirections(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The only legal cellIndex to pass to this methid is 0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TPoint&gt; GetNeighborDirections(int cellIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cellIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_GetStoragePoints_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetStoragePoints*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_GetStoragePoints" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.GetStoragePoints">
+  GetStoragePoints()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method returns all points that can be contined by
+the storage rectangle for this grid.</p>
+<p>This is useful for debuggong shape functions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 1, 0)]
+public IEnumerable&lt;TPoint&gt; GetStoragePoints()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_PointFromArrayPoint_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.PointFromArrayPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_PointFromArrayPoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.PointFromArrayPoint(System.Int32,System.Int32)">
+  PointFromArrayPoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TPoint PointFromArrayPoint(int aX, int aY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>aY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_AbstractUniformGrid_2_SetGridPointTransforms_" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.SetGridPointTransforms*"></a>
+
+  <h3 id="Gamelogic_Grids_AbstractUniformGrid_2_SetGridPointTransforms_System_Func__1__1__System_Func__1__1__" data-uid="Gamelogic.Grids.AbstractUniformGrid`2.SetGridPointTransforms(System.Func{`1,`1},System.Func{`1,`1})">
+  SetGridPointTransforms(Func&lt;TPoint, TPoint&gt;, Func&lt;TPoint, TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the GridPointTransform and InverseGridPointTransform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGridPointTransforms(Func&lt;TPoint, TPoint&gt; gridPointTransform, Func&lt;TPoint, TPoint&gt; inverseGridPointTransform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd><p>Points returned by tis grid are transformed first with this delagate.</p>
+</dd>
+    <dt><code>inverseGridPointTransform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TPoint&gt;</dt>
+    <dd><p>This must be the inverse of the gridPointTransform function.
+Together, these functions make it possible to do things such as flip axes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

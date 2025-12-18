@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Grid1&lt;TCell&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Grid1&lt;TCell&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="1D implementation of a .">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.Grid1`1">
+
+
+
+  <h1 id="Gamelogic_Grids2_Grid1_1" data-uid="Gamelogic.Grids2.Grid1`1" class="text-break">
+Class Grid1&lt;TCell&gt;  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/1D/Grid1.cs#lines-9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Grids2.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>1D implementation of a <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid&lt;TPoint, TCell&gt;</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Grid1&lt;TCell&gt; : AbstractGrid&lt;int, TCell&gt;, IGrid&lt;int, TCell&gt;, IGrid&lt;int&gt;, IExplicitShape&lt;int&gt;, IImplicitShape&lt;int&gt;, IEnumerable&lt;PointCellPair&lt;int, TCell&gt;&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd><p>The cell type of this grid.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.html">AbstractGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TCell&gt;</div>
+      <div><span class="xref">Grid1&lt;TCell&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TCell&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids2.PointCellPair-2.html">PointCellPair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TCell&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.Item.html#Gamelogic_Grids2_AbstractGrid_2_Item__0_">AbstractGrid&lt;int, TCell&gt;.this[int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.Points.html#Gamelogic_Grids2_AbstractGrid_2_Points">AbstractGrid&lt;int, TCell&gt;.Points</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.Bounds.html#Gamelogic_Grids2_AbstractGrid_2_Bounds">AbstractGrid&lt;int, TCell&gt;.Bounds</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.Cells.html#Gamelogic_Grids2_AbstractGrid_2_Cells">AbstractGrid&lt;int, TCell&gt;.Cells</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.Contains.html#Gamelogic_Grids2_AbstractGrid_2_Contains__0_">AbstractGrid&lt;int, TCell&gt;.Contains(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.CloneStructure.html#Gamelogic_Grids2_AbstractGrid_2_CloneStructure__1">AbstractGrid&lt;int, TCell&gt;.CloneStructure&lt;TNewCell&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.AbstractGrid-2.GetEnumerator.html#Gamelogic_Grids2_AbstractGrid_2_GetEnumerator">AbstractGrid&lt;int, TCell&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.CenterOnOrigin.html#Gamelogic_Grids2_ExplicitShape_CenterOnOrigin_Gamelogic_Grids2_IExplicitShape_System_Int32__">ExplicitShape.CenterOnOrigin(IExplicitShape&lt;int&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.ReflectXInBounds.html#Gamelogic_Grids2_ExplicitShape_ReflectXInBounds_Gamelogic_Grids2_IExplicitShape_System_Int32__">ExplicitShape.ReflectXInBounds(IExplicitShape&lt;int&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Select.html#Gamelogic_Grids2_ExplicitShape_Select_Gamelogic_Grids2_IExplicitShape_System_Int32__System_Func_System_Int32_System_Boolean__">ExplicitShape.Select(IExplicitShape&lt;int&gt;, Func&lt;int, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Translate.html#Gamelogic_Grids2_ExplicitShape_Translate_Gamelogic_Grids2_IExplicitShape_System_Int32__System_Int32_">ExplicitShape.Translate(IExplicitShape&lt;int&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.Where.html#Gamelogic_Grids2_ExplicitShape_Where_Gamelogic_Grids2_IExplicitShape_System_Int32__System_Func_System_Int32_System_Boolean__">ExplicitShape.Where(IExplicitShape&lt;int&gt;, Func&lt;int, bool&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.ToGrid.html#Gamelogic_Grids2_GridExtensions_ToGrid__1_Gamelogic_Grids2_IExplicitShape_System_Int32__">GridExtensions.ToGrid&lt;TCell&gt;(IExplicitShape&lt;int&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.Product.html#Gamelogic_Grids2_ImplicitShape_Product_Gamelogic_Grids2_IExplicitShape_System_Int32__Gamelogic_Grids2_IImplicitShape_System_Int32__System_Int32_">ImplicitShape.Product(IExplicitShape&lt;int&gt;, IImplicitShape&lt;int&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Apply.html#Gamelogic_Grids2_GridExtensions_Apply__2_Gamelogic_Grids2_IGrid___0___1__System_Action___0__">GridExtensions.Apply&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, Action&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Apply.html#Gamelogic_Grids2_GridExtensions_Apply__2_Gamelogic_Grids2_IGrid___0___1__System_Action___1__">GridExtensions.Apply&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, Action&lt;TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Clone.html#Gamelogic_Grids2_GridExtensions_Clone__2_Gamelogic_Grids2_IGrid___0___1__">GridExtensions.Clone&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Fill.html#Gamelogic_Grids2_GridExtensions_Fill__2_Gamelogic_Grids2_IGrid___0___1__System_Func___0___1__">GridExtensions.Fill&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, Func&lt;TPoint, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Fill.html#Gamelogic_Grids2_GridExtensions_Fill__2_Gamelogic_Grids2_IGrid___0___1__System_Func___1__">GridExtensions.Fill&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, Func&lt;TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Fill.html#Gamelogic_Grids2_GridExtensions_Fill__2_Gamelogic_Grids2_IGrid___0___1____1_">GridExtensions.Fill&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, TCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.GetValue.html#Gamelogic_Grids2_GridExtensions_GetValue__2_Gamelogic_Grids2_IGrid___0___1____0_">GridExtensions.GetValue&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.SetValue.html#Gamelogic_Grids2_GridExtensions_SetValue__2_Gamelogic_Grids2_IGrid___0___1____0___1_">GridExtensions.SetValue&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, TPoint, TCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Transform.html#Gamelogic_Grids2_GridExtensions_Transform__2_Gamelogic_Grids2_IGrid___0___1__System_Func___0___1___1__">GridExtensions.Transform&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, Func&lt;TPoint, TCell, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.Transform.html#Gamelogic_Grids2_GridExtensions_Transform__2_Gamelogic_Grids2_IGrid___0___1__System_Func___1___1__">GridExtensions.Transform&lt;TPoint, TCell&gt;(IGrid&lt;TPoint, TCell&gt;, Func&lt;TCell, TCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.CloneStructure.html#Gamelogic_Grids2_GridExtensions_CloneStructure__2_Gamelogic_Grids2_IGrid___0__System_Func___0___1__">GridExtensions.CloneStructure&lt;TPoint, TNewCell&gt;(IGrid&lt;TPoint&gt;, Func&lt;TPoint, TNewCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.CloneStructure.html#Gamelogic_Grids2_GridExtensions_CloneStructure__2_Gamelogic_Grids2_IGrid___0__System_Func___1__">GridExtensions.CloneStructure&lt;TPoint, TNewCell&gt;(IGrid&lt;TPoint&gt;, Func&lt;TNewCell&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.CloneStructure.html#Gamelogic_Grids2_GridExtensions_CloneStructure__2_Gamelogic_Grids2_IGrid___0____1_">GridExtensions.CloneStructure&lt;TPoint, TNewCell&gt;(IGrid&lt;TPoint&gt;, TNewCell)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.GetPoints.html#Gamelogic_Grids2_GridExtensions_GetPoints__1_Gamelogic_Grids2_IGrid___0__System_Func___0_System_Collections_Generic_IEnumerable___0_____0_">GridExtensions.GetPoints&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ExplicitShape.ToExplicit.html#Gamelogic_Grids2_ExplicitShape_ToExplicit_Gamelogic_Grids2_IImplicitShape_System_Int32__Gamelogic_Grids2_AbstractBounds_System_Int32__">ExplicitShape.ToExplicit(IImplicitShape&lt;int&gt;, AbstractBounds&lt;int&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.ReverseSelect.html#Gamelogic_Grids2_ImplicitShape_ReverseSelect__1_Gamelogic_Grids2_IImplicitShape___0__System_Func___0___0__">ImplicitShape.ReverseSelect&lt;TPoint&gt;(IImplicitShape&lt;TPoint&gt;, Func&lt;TPoint, TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.ImplicitShape.Translate.html#Gamelogic_Grids2_ImplicitShape_Translate_Gamelogic_Grids2_IImplicitShape_System_Int32__System_Int32_">ImplicitShape.Translate(IImplicitShape&lt;int&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.EnumerableExtensions.Select.html#Gamelogic_Grids2_EnumerableExtensions_Select__3_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_PointCellPair___0___1___System_Func___0___1___2__">EnumerableExtensions.Select&lt;TPoint, TCell, TResult&gt;(IEnumerable&lt;PointCellPair&lt;TPoint, TCell&gt;&gt;, Func&lt;TPoint, TCell, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.EnumerableExtensions.ToStructList.html#Gamelogic_Grids2_EnumerableExtensions_ToStructList__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.ToStructList&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids2.GridExtensions.In.html#Gamelogic_Grids2_GridExtensions_In__1_System_Collections_Generic_IEnumerable___0__Gamelogic_Grids2_IImplicitShape___0__">GridExtensions.In&lt;TPoint&gt;(IEnumerable&lt;TPoint&gt;, IImplicitShape&lt;TPoint&gt;)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Grid1-1.-ctor.html#Gamelogic_Grids2_Grid1_1__ctor_Gamelogic_Grids2_IExplicitShape_System_Int32__">Grid1(IExplicitShape&lt;int&gt;)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="Gamelogic.Grids2.Grid1-1.html">Grid1&lt;TCell&gt;</a> class with
+the specified shape.
+Cells are not initialized, they have the default value of type <code>TCell</code>.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Grid1-1.Bounds.html#Gamelogic_Grids2_Grid1_1_Bounds">Bounds</a></dt>
+    <dd><p>Returns a bounding shape that contains this explicit shape.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Grid1-1.Item.html#Gamelogic_Grids2_Grid1_1_Item_System_Int32_">this[int]</a></dt>
+    <dd><p>Gets or sets the cell at the specified point.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Grid1-1.Points.html#Gamelogic_Grids2_Grid1_1_Points">Points</a></dt>
+    <dd><p>Gets all the points this shape contains.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Grid1-1.CloneStructure.html#Gamelogic_Grids2_Grid1_1_CloneStructure__1">CloneStructure&lt;TNewCell&gt;()</a></dt>
+    <dd><p>Returns a grid with exactly the same structure, but potentially holding
+elements of a different type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Grid1-1.Contains.html#Gamelogic_Grids2_Grid1_1_Contains_System_Int32_">Contains(int)</a></dt>
+    <dd><p>Determines whether this implicit shape contains the specified point.</p>
+</dd>
+  </dl>
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;TPoint, TCell&gt;</div>
+  </div>
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

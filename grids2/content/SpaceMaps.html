@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>What are space maps? | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="What are space maps? | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/SpaceMaps.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="what-are-space-maps">What are space maps?</h1>
+
+<p>Space maps are objects that transform 3D space in some way; they scale, rotate, twist, or otherwise transform 3D
+vectors. Mathematically, a space map is a function from Vector3 to Vector3. Space maps can be used in reverse as well;
+so if you apply a space map to a set of points, you can reverse the operation and recover the original points (although
+not always completely).</p>
+<h1 id="where-is-space-maps-used-in-grids-2">Where is space maps used in Grids 2?</h1>
+<p>Ultimately, a grid is a subdivision of space into discrete cells. The simplest way to divide space into discrete cells
+is to say a point (x, y) belongs to the grid point (round(x), round(y)). This gives us a square grid, with cells exactly
+one unit wide and tall.</p>
+<ul>
+<li>Space maps allow us to make square grids with cells of any dimension.</li>
+<li>Space maps allow us to turn square grids into diamond grids (with a 45-degree rotation), isometric grids (with a
+rotation and non-uniform scale) and non-square rectangular grids (with a non-uniform scale).</li>
+<li>Space maps allows us to turn square grids into polar grids (using a polar transform).</li>
+<li>Space maps allow us to turn square grids into hex grids (with a shear) provided we also use a special &quot;hex round&quot;
+operation instead of the simple round described above.</li>
+<li>Space maps allows us to freely distort our grids; for example, to apply a height map, or put the grid on the surface
+of a torus, or to turn the grid into a spiral.</li>
+</ul>
+<p>This all boils down to the following: space maps are used by grid builders to know where your cells are in Unity world
+space.</p>
+<h1 id="why-are-there-not-separate-maps-for-1d-2d-and-3d">Why are there not separate maps for 1D, 2D and 3D?</h1>
+<p>All space maps in Grids 2 are 3D, even ones that are probably only useful for 2D or 1D grids. The short answer is that
+it simplifies the design of space maps and how they are used significantly. (Our first attempt at space maps used
+separate maps for different dimensions; it was extremely messy, and too daunting to complete).</p>
+<p>In the examples above, we talked about space maps as if they are can be 2D – those maps are 3D maps that don’t change
+the z coordinate. A map that changes a rect grid into a hex grid is really a map that changes a cube grid into stacks of
+hex grids.</p>
+<h1 id="what-does-the-space-map-node-editor-do-exactly">What does the space map node editor do exactly?</h1>
+<p>It allows us to build a space map. You can do the same in code, but it is more convenient to do it interactively in the
+editor. Grid builders use these space maps to build grids, but you can also use them for other purposes (for example, to
+build meshes, to animate particles, or even for color transforms).</p>
+<h1 id="how-do-i-use-the-node-editor">How do I use the node editor?</h1>
+<p>To make a new space map graph, you can select Space Map Graph from Assets | Create | Grids in the menu or context menu
+in the project window. To edit the graph, select it, and click on the Edit button in the inspector. To build the space
+map graph, follow these steps:</p>
+<ol>
+<li>Add the nodes you need to make the space map you require, and set their fields to the correct values. To remove a
+node, click on the “Remove” button on the node. To remove all nodes, click the “Clear” button at the top of the node
+editor tool bar.</li>
+<li>Add one output node.</li>
+<li>Link them in sequence, with the output node at the end of the sequence. To link the output of node A to the input of
+node B, click on the “Add link” button on node A, and click on node B. To remove a link, click on the red dot on the
+link.</li>
+<li>In complicated graphs, you may want to rename the nodes so it is easier to know what is going on. You can do this by
+clicking on the node name and typing a new name. (Since Grids 2.1)</li>
+<li>While tweaking the node graph, it may be useful to skip over a node temporarily. You can do this by clicking on the
+&quot;Disable&quot; button. This will make the node simply route its input to its output without processing. (Since Grids 2.1)</li>
+</ol>
+<h1 id="what-does-the-recompute-button-do">What does the Recompute button do?</h1>
+<p>It lets all nodes recompute and save values for internal use. This is specifically designed for nodes with a random
+element, to allow nodes to select new random values. In general, you don’t want these to be recomputed every time the
+map is accessed, otherwise it will give you different results each time you query the grid. Currently, all nodes are
+deterministic, so this feature is not used. We may introduce random nodes in the future, or you may want to add your
+own random nodes.</p>
+<h1 id="what-do-all-the-nodes-do-exactly">What do all the nodes do exactly?</h1>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rect</td>
+<td>This used to be the starting point of all rect-based maps and is the identity map (it leaves Vector3 unchanged). However, we changed nodes to make this unnecessary (all nodes without inputs operate as if they have the identity map as input).</td>
+</tr>
+<tr>
+<td>Diamond</td>
+<td>This makes a rect grid into a diamond grid (a square grid rotated by 45 degrees).</td>
+</tr>
+<tr>
+<td>Isometric</td>
+<td>This makes a rect grid into an isometric grid (where the angles between the axes are 60 degrees).</td>
+</tr>
+<tr>
+<td>Pointy Hex and Flat Hex</td>
+<td>This changes a rect grid into a hex grid (either pointy or flat). This space map is usually combined with the hex round map.</td>
+</tr>
+<tr>
+<td>Translate</td>
+<td>Used to translate points.</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Used to scale points.</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>Used to rotate points around the origin.</td>
+</tr>
+<tr>
+<td>Permute Coordinates</td>
+<td>Used to change the order of coordinates. For example, when selecting XZY, the z and y coordinates are swapped. This is useful, for example, for changing a grid in the XY plane to one in the XZ plane.</td>
+</tr>
+<tr>
+<td>General Matrix</td>
+<td>Used for arbitrary linear transforms. To work correctly, the matrix should be invertible.</td>
+</tr>
+<tr>
+<td>Polar XY Map</td>
+<td>Used to warp points around a circle. The point <code>(X, Y, Z)</code> is transformed to the point <code>(r * cos(f * X * 2 *pi), r * sin(f * X * 2 *pi), Z)</code>, where <code>r</code> is the radius of the node, and <code>f</code> is the frequency.</td>
+</tr>
+<tr>
+<td>Twirl XY</td>
+<td>This rotates points an amount proportional to their distance from the origin.</td>
+</tr>
+<tr>
+<td>Height Map</td>
+<td>Used to add a Z-offset to coordinates based on the gray value of a color in a given texture.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="can-i-create-my-own-space-map-nodes">Can I create my own space map nodes?</h1>
+<p>Yes! Here is how:</p>
+<ol>
+<li>Make a new C# file, and in it define a class that extends from <a class="xref" href="../api/Gamelogic.Grids2.Graph.ProjectSpaceMapNode-2.html">ProjectSpaceMapNode&lt;TInput, TOutput&gt;</a>.</li>
+<li>Override the <a class="xref" href="../api/Gamelogic.Grids2.Graph.ProjectSpaceMapNode-2.Transform.html">Transform</a> method. It takes a <code>IMap&lt;Vector3, Vector3&gt;</code>,
+and returns a <code>IMap&lt;Vector3, Vector3&gt;</code>.</li>
+<li>In the body of the <a class="xref" href="../api/Gamelogic.Grids2.Graph.ProjectSpaceMapNode-2.Transform.html">Transform</a> method, create a new map (use the
+static methods in the <a class="xref" href="../api/Gamelogic.Grids2.Map.html">Map</a> class).</li>
+<li>If the input is null, return the map, otherwise compose the input with the new map and return the result.</li>
+<li>Add the <a class="xref" href="../api/Gamelogic.Grids2.Graph.SpaceMapNode.html">SpaceMapNode</a> attribute to the class. The attribute takes two arguments – a
+string and an integer.</li>
+<li>The string is the name that will be used for the node's button in the graph editor. The integer should be 3 (it's for
+the number of dimensions, but remember all maps are 3D). To have the map appear in a group, give it a name like this: <code>groupName/nodeName</code>.</li>
+<li>Once your project has recompiled in Unity, the new node will be available in the node editor.</li>
+</ol>
+<p>Here is an example implementation:</p>
+<pre><code class="lang-csharp">#region Documentation_Twist
+
+using Gamelogic.Extensions;
+using Gamelogic.Grids2;
+using Gamelogic.Grids2.Graph;
+using UnityEngine;
+
+/// &lt;summary&gt;
+/// A node that rotates vectors around the X-axis an amount proportional to the x-coordinate. 
+/// &lt;/summary&gt;
+[SpaceMapNode(&quot;Polar/Twist X&quot;, 3)] // This makes the node appear in the graph editor.
+// ReuseCandidate
+public class Twist : ProjectSpaceMapNode&lt;Vector3, Vector3&gt;
+{
+    [Tooltip(&quot;The fraction of angle to rotate per unit x-coordinate.&quot;)]
+    public float angle;
+    
+    [Tooltip(&quot;The radius of the twist, essentially a scaling factor along the YZ-plane.&quot;)]
+    [ValidateNotNegative]
+    public float radius = 1;
+    
+    protected override IMap&lt;Vector3, Vector3&gt; Transform(IMap&lt;Vector3, Vector3&gt; input)
+    {
+        var map = Map.Func&lt;Vector3, Vector3&gt;(Forward, Backward);
+        return input.ComposeWith(map);
+    }
+    
+    /// &lt;summary&gt;
+    /// Rotates the input vector around the X-axis an amount proportional to the x-coordinate. The z-coordinate is ignored.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;input&quot;&gt;The input vector.&lt;/param&gt;
+    /// &lt;returns&gt;The rotated vector.&lt;/returns&gt;
+    public Vector3 Forward(Vector3 input)
+    {
+        float newY = input.y * radius * Mathf.Cos(angle * input.x * 2 * Mathf.PI);
+        float newZ = input.y * radius * Mathf.Sin(angle * input.x * 2 * Mathf.PI);
+        return new Vector3(input.x, newY, newZ);
+    }
+    
+    /// &lt;summary&gt;
+    /// Undoes the rotation done by &lt;see cref=&quot;Forward&quot;/&gt;. The z-coordinate is assumed to be 0.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;input&quot;&gt;The input vector.&lt;/param&gt;
+    /// &lt;returns&gt;The unrotated vector.&lt;/returns&gt;
+    public Vector3 Backward(Vector3 input)
+    {
+        float newY = Mathf.Sqrt(input.y * input.y + input.z * input.z) / radius;
+
+        return new Vector3(input.x, newY, 0);
+    }
+}
+#endregion
+</code></pre>
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

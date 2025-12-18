@@ -1,0 +1,1104 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct LinePoint | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct LinePoint | Gamelogic Grids ">
+      
+      <meta name="description" content="Represents 1D grid points. These are auto-convertible to integers, making it possible to write, for example, grid[6] instead of grid[new LinePoint(6)].">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.LinePoint">
+
+
+
+  <h1 id="Gamelogic_Grids_LinePoint" data-uid="Gamelogic.Grids.LinePoint" class="text-break">
+Struct LinePoint  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents 1D grid points. These are auto-convertible to integers, making it possible to
+write, for example, <code>grid[6]</code> instead of <code>grid[new LinePoint(6)]</code>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public struct LinePoint : IGridPoint&lt;LinePoint&gt;, IEquatable&lt;LinePoint&gt;, IGridPoint, IVectorPoint&lt;LinePoint&gt;, ISplicedVectorPoint&lt;LinePoint, LinePoint&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IGridPoint-1.html">IGridPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridPoint.html">IGridPoint</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.IVectorPoint-1.html">IVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.ISplicedVectorPoint-2.html">ISplicedVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a>, <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_SpliceCount__1___0_">GridUtils.SpliceCount&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_LinePoint__ctor_" data-uid="Gamelogic.Grids.LinePoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint__ctor_System_Int32_" data-uid="Gamelogic.Grids.LinePoint.#ctor(System.Int32)">
+  LinePoint(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint(int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_LinePoint_Left" data-uid="Gamelogic.Grids.LinePoint.Left">
+  Left
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add this to another LinePoint to get the point to the left (negative side) of the other point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly LinePoint Left</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_LinePoint_Right" data-uid="Gamelogic.Grids.LinePoint.Right">
+  Right
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add this to another LinePoint to get the point to the right (positive side) of the other point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly LinePoint Right</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_LinePoint_Zero" data-uid="Gamelogic.Grids.LinePoint.Zero">
+  Zero
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly LinePoint Zero</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_LinePoint_SpliceCount_" data-uid="Gamelogic.Grids.LinePoint.SpliceCount*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_SpliceCount" data-uid="Gamelogic.Grids.LinePoint.SpliceCount">
+  SpliceCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the number of slices for all points.</p>
+<p>For Uniform grids, this is always 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SpliceCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_SpliceIndex_" data-uid="Gamelogic.Grids.LinePoint.SpliceIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_SpliceIndex" data-uid="Gamelogic.Grids.LinePoint.SpliceIndex">
+  SpliceIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the index of the splice.</p>
+<p>For Uniform grids, this is always 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SpliceIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_X_" data-uid="Gamelogic.Grids.LinePoint.X*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_X" data-uid="Gamelogic.Grids.LinePoint.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int X { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Y_" data-uid="Gamelogic.Grids.LinePoint.Y*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Y" data-uid="Gamelogic.Grids.LinePoint.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Y { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_LinePoint_DistanceFrom_" data-uid="Gamelogic.Grids.LinePoint.DistanceFrom*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_DistanceFrom_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.DistanceFrom(Gamelogic.Grids.LinePoint)">
+  DistanceFrom(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The lattice distance between two points.</p>
+<p>Two points should have a distance of 1 if and only if they are neighbors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DistanceFrom(LinePoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Div_" data-uid="Gamelogic.Grids.LinePoint.Div*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Div_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.Div(Gamelogic.Grids.LinePoint)">
+  Div(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Integer divides a point by another point component by component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint Div(LinePoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_Div_Gamelogic_Grids_LinePoint__examples">Examples</h4>
+  <p>(-5, 5) Div(2, 2) == (-3, 2)</p>
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_Div_Gamelogic_Grids_LinePoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Remainders are always positive.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Equals_" data-uid="Gamelogic.Grids.LinePoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Equals_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.Equals(Gamelogic.Grids.LinePoint)">
+  Equals(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(LinePoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_GetColor_" data-uid="Gamelogic.Grids.LinePoint.GetColor*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_GetColor_System_Int32_" data-uid="Gamelogic.Grids.LinePoint.GetColor(System.Int32)">
+  GetColor(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor(int colorCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Magnitude_" data-uid="Gamelogic.Grids.LinePoint.Magnitude*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Magnitude" data-uid="Gamelogic.Grids.LinePoint.Magnitude">
+  Magnitude()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Magnitude()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Mod_" data-uid="Gamelogic.Grids.LinePoint.Mod*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Mod_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.Mod(Gamelogic.Grids.LinePoint)">
+  Mod(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Integer divides a point component by component and returns the remainder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint Mod(LinePoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_Mod_Gamelogic_Grids_LinePoint__examples">Examples</h4>
+  <p>(-5, 5) Mod (2, 2) == (1, 1)</p>
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_Mod_Gamelogic_Grids_LinePoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Remainders are always positive.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_MoveBackBy_" data-uid="Gamelogic.Grids.LinePoint.MoveBackBy*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_MoveBackBy_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.MoveBackBy(Gamelogic.Grids.LinePoint)">
+  MoveBackBy(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint MoveBackBy(LinePoint splicedVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>splicedVector</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_MoveBackBy_Gamelogic_Grids_LinePoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><pre><code class="lang-csharp">new SplicedVector(u.B.Subtract(v.B), (SpliceCount + u.I - v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_MoveBy_" data-uid="Gamelogic.Grids.LinePoint.MoveBy*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_MoveBy_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.MoveBy(Gamelogic.Grids.LinePoint)">
+  MoveBy(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I,</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint MoveBy(LinePoint splicedVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>splicedVector</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_MoveBy_Gamelogic_Grids_LinePoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This operation is the same as
+<pre><code class="lang-csharp">new SplicedVector(u.B.Translate(v.B), (u.I + v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Mul_" data-uid="Gamelogic.Grids.LinePoint.Mul*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Mul_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.Mul(Gamelogic.Grids.LinePoint)">
+  Mul(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies two points component by component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint Mul(LinePoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_Mul_Gamelogic_Grids_LinePoint__examples">Examples</h4>
+  <p>(-5, 5) Mul (2, 2) == (-10, 10)</p>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Negate_" data-uid="Gamelogic.Grids.LinePoint.Negate*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Negate" data-uid="Gamelogic.Grids.LinePoint.Negate">
+  Negate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new point with the vector component negated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint Negate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_ScaleDown_" data-uid="Gamelogic.Grids.LinePoint.ScaleDown*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_ScaleDown_System_Int32_" data-uid="Gamelogic.Grids.LinePoint.ScaleDown(System.Int32)">
+  ScaleDown(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales this vector by the given amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint ScaleDown(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_LinePoint_ScaleDown_System_Int32__examples">Examples</h4>
+  <pre><code class="lang-csharp">v.ScaleUp(1)
+v.ScaleUp(n) ==  v.ScaleUp(n - 1).Translate(v)</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_ScaleUp_" data-uid="Gamelogic.Grids.LinePoint.ScaleUp*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_ScaleUp_System_Int32_" data-uid="Gamelogic.Grids.LinePoint.ScaleUp(System.Int32)">
+  ScaleUp(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint ScaleUp(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Subtract_" data-uid="Gamelogic.Grids.LinePoint.Subtract*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Subtract_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.Subtract(Gamelogic.Grids.LinePoint)">
+  Subtract(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translates this point by the negation of the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint Subtract(LinePoint vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_ToString_" data-uid="Gamelogic.Grids.LinePoint.ToString*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_ToString" data-uid="Gamelogic.Grids.LinePoint.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_Translate_" data-uid="Gamelogic.Grids.LinePoint.Translate*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_Translate_Gamelogic_Grids_LinePoint_" data-uid="Gamelogic.Grids.LinePoint.Translate(Gamelogic.Grids.LinePoint)">
+  Translate(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translate this point by the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinePoint Translate(LinePoint vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Gamelogic_Grids_LinePoint_op_Implicit_" data-uid="Gamelogic.Grids.LinePoint.op_Implicit*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_op_Implicit_Gamelogic_Grids_LinePoint__System_Int32" data-uid="Gamelogic.Grids.LinePoint.op_Implicit(Gamelogic.Grids.LinePoint)~System.Int32">
+  implicit operator int(LinePoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator int(LinePoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_LinePoint_op_Implicit_" data-uid="Gamelogic.Grids.LinePoint.op_Implicit*"></a>
+
+  <h3 id="Gamelogic_Grids_LinePoint_op_Implicit_System_Int32__Gamelogic_Grids_LinePoint" data-uid="Gamelogic.Grids.LinePoint.op_Implicit(System.Int32)~Gamelogic.Grids.LinePoint">
+  implicit operator LinePoint(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator LinePoint(int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

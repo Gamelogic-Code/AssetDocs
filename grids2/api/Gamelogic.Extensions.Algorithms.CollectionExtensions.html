@@ -1,0 +1,1424 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CollectionExtensions | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CollectionExtensions | Gamelogic Grids ">
+      
+      <meta name="description" content="This class provides useful extension methods for collections, mostly IEnumerable.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions">
+
+
+
+  <h1 id="Gamelogic_Extensions_Algorithms_CollectionExtensions" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions" class="text-break">
+Class CollectionExtensions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Extensions.html">Extensions</a>.<a class="xref" href="Gamelogic.Extensions.Algorithms.html">Algorithms</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This class provides useful extension methods for collections, mostly IEnumerable.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public static class CollectionExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CollectionExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_AddRange_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.AddRange*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_AddRange__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+  AddRange&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add all elements of other to the given source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddRange&lt;T&gt;(this ICollection&lt;T&gt; collection, IEnumerable&lt;T&gt; other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>collection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_AreSequencesEqual_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.AreSequencesEqual*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_AreSequencesEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.AreSequencesEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+  AreSequencesEqual&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the sequences are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 3, 0)]
+public static bool AreSequencesEqual&lt;T&gt;(IEnumerable&lt;T&gt; s1, IEnumerable&lt;T&gt; s2) where T : IComparable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>s2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the number of elements in the sequences are equal,
+and all the elements compared item by item are equal (using the CompareTo method),
+<code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch__2_System_Collections_Generic_ICollection___0____1_System_Func___0___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch``2(System.Collections.Generic.ICollection{``0},``1,System.Func{``0,``1})">
+  BinarySearch&lt;TCollection, TElement&gt;(ICollection&lt;TCollection&gt;, TElement, Func&lt;TCollection, TElement&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find an element in a collection by binary searching.
+This requires the collection to be sorted on the values returned by getSubElement
+This will compare some derived property of the elements in the collection, rather than the elements
+themselves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int BinarySearch&lt;TCollection, TElement&gt;(this ICollection&lt;TCollection&gt; source, TElement value, Func&lt;TCollection, TElement&gt; getSubElement)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;TCollection&gt;</dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TElement</span></dt>
+    <dd></dd>
+    <dt><code>getSubElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCollection, TElement&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCollection</code></dt>
+    <dd></dd>
+    <dt><code>TElement</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch__2_System_Collections_Generic_ICollection___0____1_System_Func___0___1__System_Collections_Generic_IComparer___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch``2(System.Collections.Generic.ICollection{``0},``1,System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
+  BinarySearch&lt;TCollection, TElement&gt;(ICollection&lt;TCollection&gt;, TElement, Func&lt;TCollection, TElement&gt;, IComparer&lt;TElement&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find an element in a collection by binary searching.
+This requires the collection to be sorted on the values returned by getSubElement
+This will compare some derived property of the elements in the collection, rather than the elements
+themselves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int BinarySearch&lt;TCollection, TElement&gt;(this ICollection&lt;TCollection&gt; source, TElement value, Func&lt;TCollection, TElement&gt; getSubElement, IComparer&lt;TElement&gt; comparer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;TCollection&gt;</dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TElement</span></dt>
+    <dd></dd>
+    <dt><code>getSubElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCollection, TElement&gt;</dt>
+    <dd></dd>
+    <dt><code>comparer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;TElement&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCollection</code></dt>
+    <dd></dd>
+    <dt><code>TElement</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch__2_System_Collections_Generic_ICollection___0____1_System_Func___0___1__System_Int32_System_Int32_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch``2(System.Collections.Generic.ICollection{``0},``1,System.Func{``0,``1},System.Int32,System.Int32)">
+  BinarySearch&lt;TCollection, TElement&gt;(ICollection&lt;TCollection&gt;, TElement, Func&lt;TCollection, TElement&gt;, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find an element in a collection by binary searching.
+This requires the collection to be sorted on the values returned by getSubElement
+This will compare some derived property of the elements in the collection, rather than the elements
+themselves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int BinarySearch&lt;TCollection, TElement&gt;(this ICollection&lt;TCollection&gt; source, TElement value, Func&lt;TCollection, TElement&gt; getSubElement, int index, int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;TCollection&gt;</dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TElement</span></dt>
+    <dd></dd>
+    <dt><code>getSubElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCollection, TElement&gt;</dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCollection</code></dt>
+    <dd></dd>
+    <dt><code>TElement</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_BinarySearch__2_System_Collections_Generic_ICollection___0____1_System_Func___0___1__System_Int32_System_Int32_System_Collections_Generic_IComparer___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.BinarySearch``2(System.Collections.Generic.ICollection{``0},``1,System.Func{``0,``1},System.Int32,System.Int32,System.Collections.Generic.IComparer{``1})">
+  BinarySearch&lt;TCollection, TElement&gt;(ICollection&lt;TCollection&gt;, TElement, Func&lt;TCollection, TElement&gt;, int, int, IComparer&lt;TElement&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find an element in a collection by binary searching.
+This requires the collection to be sorted on the values returned by getSubElement
+This will compare some derived property of the elements in the collection, rather than the elements
+themselves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int BinarySearch&lt;TCollection, TElement&gt;(this ICollection&lt;TCollection&gt; source, TElement value, Func&lt;TCollection, TElement&gt; getSubElement, int index, int length, IComparer&lt;TElement&gt; comparer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;TCollection&gt;</dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TElement</span></dt>
+    <dd></dd>
+    <dt><code>getSubElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCollection, TElement&gt;</dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>comparer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;TElement&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCollection</code></dt>
+    <dd></dd>
+    <dt><code>TElement</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_ButFirst_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.ButFirst*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_ButFirst__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.ButFirst``1(System.Collections.Generic.IEnumerable{``0})">
+  ButFirst&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an enumerable of all elements of the given list	but the first,
+keeping them in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; ButFirst&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_ButLast_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.ButLast*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_ButLast__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.ButLast``1(System.Collections.Generic.IEnumerable{``0})">
+  ButLast&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an enumerable of all elements in the given
+list but the last, keeping them in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; ButLast&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_FilterByType_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.FilterByType*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_FilterByType__2_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.FilterByType``2(System.Collections.Generic.IEnumerable{``0})">
+  FilterByType&lt;T, TFilter&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns all elements of the source which are of FilterType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TFilter&gt; FilterByType&lt;T, TFilter&gt;(this IEnumerable&lt;T&gt; source) where T : class where TFilter : class, T</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TFilter&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+    <dt><code>TFilter</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_IsEmpty_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.IsEmpty*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_IsEmpty__1_System_Collections_Generic_ICollection___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.IsEmpty``1(System.Collections.Generic.ICollection{``0})">
+  IsEmpty&lt;T&gt;(ICollection&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns whether this source is empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;T&gt;(this ICollection&lt;T&gt; collection)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>collection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_ListToString_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.ListToString*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_ListToString__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.ListToString``1(System.Collections.Generic.IEnumerable{``0})">
+  ListToString&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a pretty string representation of the given list. The resulting string looks something like
+<code>[a, b, c]</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ListToString&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_IComparable__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.IComparable})">
+  MaxBy&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, IComparable&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds the maximum element in the source as scored by the given function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T MaxBy&lt;T&gt;(this IEnumerable&lt;T&gt; source, Func&lt;T, IComparable&gt; score)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>score</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+  MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds the minimum element in the source as scored by its projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TSource MaxBy&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; selector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+    <dt><code>selector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TSource</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
+  MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds the minimum element in the source as scored by the given function applied to a projection on the elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TSource MaxBy&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; selector, IComparer&lt;TKey&gt; comparer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+    <dt><code>selector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TKey&gt;</dt>
+    <dd></dd>
+    <dt><code>comparer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TSource</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MinBy*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MinBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+  MinBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds the minimum element in the source as scored by its projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TSource MinBy&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; selector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+    <dt><code>selector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TSource</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MinBy*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MinBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MinBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
+  MinBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds the minimum element in the source as scored by the given function applied to a projection on the elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TSource MinBy&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TKey&gt; selector, IComparer&lt;TKey&gt; comparer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</dt>
+    <dd></dd>
+    <dt><code>selector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TKey&gt;</dt>
+    <dd></dd>
+    <dt><code>comparer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;TKey&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TSource</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSource</code></dt>
+    <dd></dd>
+    <dt><code>TKey</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RandomItem*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RandomItem``1(System.Collections.Generic.IEnumerable{``0})">
+  RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a random element from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T RandomItem&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The list.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>An item randomly selected from the source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items generated from the source.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RandomItem*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RandomItem__1_System_Collections_Generic_IEnumerable___0__Gamelogic_Extensions_IRandom_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RandomItem``1(System.Collections.Generic.IEnumerable{``0},Gamelogic.Extensions.IRandom)">
+  RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;, IRandom)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a random element from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T RandomItem&lt;T&gt;(this IEnumerable&lt;T&gt; source, IRandom random)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The list.</p>
+</dd>
+    <dt><code>random</code> <a class="xref" href="Gamelogic.Extensions.IRandom.html">IRandom</a></dt>
+    <dd><p>The random generator to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>An item randomly selected from the source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items generated from the source.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RemoveAllBut_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RemoveAllBut*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RemoveAllBut__1_System_Collections_Generic_List___0__System_Predicate___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RemoveAllBut``1(System.Collections.Generic.List{``0},System.Predicate{``0})">
+  RemoveAllBut&lt;T&gt;(List&lt;T&gt;, Predicate&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all the elements in the list that does not satisfy the predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveAllBut&lt;T&gt;(this List&lt;T&gt; source, Predicate&lt;T&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd><p>The list to remove elements from.</p>
+</dd>
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;T&gt;</dt>
+    <dd><p>The predicate used to filter elements.
+All elements that don't satisfy the predicate will be matched.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of elements in the list.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateLeft_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RotateLeft*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateLeft__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RotateLeft``1(System.Collections.Generic.IEnumerable{``0})">
+  RotateLeft&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an enumerable with elements in order, but the first element is moved to the end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; RotateLeft&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateRight_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RotateRight*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_RotateRight__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.RotateRight``1(System.Collections.Generic.IEnumerable{``0})">
+  RotateRight&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an enumerable with elements in order, but the last element is moved to the front.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; RotateRight&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.SampleRandom*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.SampleRandom``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+  SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a random sample from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SampleRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source, int sampleCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The source from which to sample.</p>
+</dd>
+    <dt><code>sampleCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of samples to return.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Generates a ransom subset from a given source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of elements of the source.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.SampleRandom*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_SampleRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_Gamelogic_Extensions_IRandom_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.SampleRandom``1(System.Collections.Generic.IEnumerable{``0},System.Int32,Gamelogic.Extensions.IRandom)">
+  SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;, int, IRandom)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a random sample from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SampleRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source, int sampleCount, IRandom random)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The source from which to sample.</p>
+</dd>
+    <dt><code>sampleCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of samples to return.</p>
+</dd>
+    <dt><code>random</code> <a class="xref" href="Gamelogic.Extensions.IRandom.html">IRandom</a></dt>
+    <dd><p>The random generator to use.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Generates a ransom subset from a given source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of elements of the source.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_Shuffle_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.Shuffle*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_Shuffle__1_System_Collections_Generic_IList___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.Shuffle``1(System.Collections.Generic.IList{``0})">
+  Shuffle&lt;T&gt;(IList&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuffles a list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Shuffle&lt;T&gt;(this IList&lt;T&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</dt>
+    <dd><p>The list to shuffle.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the list.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_Shuffle_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.Shuffle*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_Shuffle__1_System_Collections_Generic_IList___0__Gamelogic_Extensions_IRandom_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.Shuffle``1(System.Collections.Generic.IList{``0},Gamelogic.Extensions.IRandom)">
+  Shuffle&lt;T&gt;(IList&lt;T&gt;, IRandom)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuffles a list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Shuffle&lt;T&gt;(this IList&lt;T&gt; list, IRandom random)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</dt>
+    <dd><p>The list to shuffle.</p>
+</dd>
+    <dt><code>random</code> <a class="xref" href="Gamelogic.Extensions.IRandom.html">IRandom</a></dt>
+    <dd><p>The random generator to use.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items in the list.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeHalf_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.TakeHalf*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeHalf__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.TakeHalf``1(System.Collections.Generic.IEnumerable{``0})">
+  TakeHalf&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the first half of elements from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 2, 0)]
+public static IEnumerable&lt;T&gt; TakeHalf&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeLast_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.TakeLast*"></a>
+
+  <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_TakeLast__1_System_Collections_Generic_IEnumerable___0__System_Int32_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.TakeLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+  TakeLast&lt;T&gt;(IEnumerable&lt;T&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the last n elements from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 2, 0)]
+public static IEnumerable&lt;T&gt; TakeLast&lt;T&gt;(this IEnumerable&lt;T&gt; source, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

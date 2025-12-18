@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Amit Patel&#39;s Guide for Hex Grids and Gamelogic Grids | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Amit Patel&#39;s Guide for Hex Grids and Gamelogic Grids | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/AmitPatel.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="amit-patels-guide-for-hex-grids-and-gamelogic-grids">Amit Patel's Guide for Hex Grids and Gamelogic Grids</h1>
+
+<p>If you have done any work with hex grids, the chances are good that you came across the best guide for the mathematics
+and algorithms for hex grids: <a href="https://www.redblobgames.com/grids/hexagons/">Hexagonal Grids</a> by Amit Patel. This is how
+you can do the various things described in that guide with Grids.</p>
+<h2 id="angles-size-and-spacing">Angles, Size and Spacing</h2>
+<p>For the most part, if you use Grids, you don’t have to worry about these low-level details. Conversion to world space
+is handled by <a href="SpaceMaps.html">maps</a>.</p>
+<h2 id="coordinate-systems">Coordinate Systems</h2>
+<p>Grids only work with one coordinate system: axial coordinates. In the very early days of Grids (before it was for sale),
+we used offset coordinates. As we made more examples and implemented more algorithms, we found that the offset
+coordinate system is very clumsy, so we changed it to use axial coordinates instead. The axial coordinate system works
+like a (integer) vector space, and many algorithms are much simpler compared their implementations using offset
+coordinates. In particular, it makes sense to add two points together to get a third (where the second point is
+interpreted as an offset).</p>
+<p>There are two cases where offset coordinates can be useful:</p>
+<ul>
+<li>For display (on certain boards, the coordinates may be more compact and attractive, since they don’t have to have
+negative values, while still having a corner as the origin).</li>
+<li>For certain algorithms (if your game uses for instance rows and wiggly columns)</li>
+</ul>
+<p>In these two cases, you will have to implement a conversion, something which is straightforward to do. (It's a good idea
+to implement this conversion as a <a class="xref" href="../api/Gamelogic.Grids2.IMap-2.html">IMap&lt;TInput, TOutput&gt;</a> .)</p>
+<h2 id="neighbors">Neighbors</h2>
+<p>There are two ways to access the neighbors of a point in a hex grid. To get all the neighbors of the point (regardless
+of whether they lie in some grid or not), use:</p>
+<pre><code class="lang-csharp">var neighbors = PointyHexPoint.GetOrthogonalNeighbors(point);
+</code></pre>
+<p>To get only the neighbors inside a specific grid (or shape), use:</p>
+<pre><code class="lang-csharp">var neighborsInGrid = PointyHexPoint.GetOrthogonalNeighbors(point).In(grid);
+</code></pre>
+<p>Hex grids also have constants defined for each direction a neighbor can be in:
+<a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.NorthWest.html">NorthWest</a> etc. These can be added to a point to get the neighbor:</p>
+<pre><code class="lang-csharp">var northWestNeighbor = point + PointyHexPoint.NorthWest;
+</code></pre>
+<p>Grids 2 also supports more general ideas of &quot;neighbor&quot;, so that you can also consider two cells &quot;neighbors&quot; if they are
+next to each other in the various ways hex-chess pieces can move, for example
+(see <a href="https://en.wikipedia.org/wiki/Hexagonal_chess">Hex Chess</a>).</p>
+<h2 id="diagonals">Diagonals</h2>
+<p>Grids does not support diagonals directly, but it is easy to define your own constants for diagonal directions, for
+example:</p>
+<pre><code class="lang-csharp">readonly PointyHexPoint North = PointyHexPoint.NorthWest + PointyHexPoint.NorthEast;
+</code></pre>
+<p>These can be added to a point to get the neighbor:</p>
+<pre><code class="lang-csharp">var northWestNeighbor = point + PointyHexPoint.NorthWest;
+</code></pre>
+<p>And if you add these to a list, you could use that with the <a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.GetVectorNeighbors.html">GetVectorNeighbors</a> method.</p>
+<h2 id="distances">Distances</h2>
+<p>To get the hex-distance between two grid points, you use the following:</p>
+<pre><code class="lang-csharp">int distance = PointyHexPoint.HexNorm(p1 - p2);
+</code></pre>
+<p>But grids also support several other notions of distance for hex points:</p>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.EuclideanNorm.html">EuclideanNorm</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.HexNorm.html">HexNorm</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.ManhattanNorm.html">ManhattanNorm</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.StarNorm.html">StarNorm</a></li>
+</ul>
+<h2 id="line-drawing">Line drawing</h2>
+<p>There are two basic ways to work with &quot;lines&quot;. You can use the very general &quot;line as a way to get the next point from
+the current point&quot; model, that is described in this topic: <a href="Lines.html">Lines</a>. Or you can work with normal Vector2 lines,
+and use a map to get the grid points.</p>
+<h2 id="coordinate-ranges">Coordinate Ranges</h2>
+<p>To get all the points within a certain distance from a given point, you can use a simple LINQ query:</p>
+<pre><code class="lang-csharp">var pointsInRange = grid.Points.Where(p =&gt; PointyHexPoint.HexNorm(p - center) &lt;= range);
+</code></pre>
+<p>For intersections, you can chain queries:</p>
+<pre><code class="lang-csharp">var pointsInRange = grid.Points
+    .Where(p =&gt; PointyHexPoint.HexNorm(p - center1) &lt;= range1)
+    .Where(p =&gt; PointyHexPoint.HexNorm(p - center2) &lt;= range2);
+</code></pre>
+<p>There are two complications which you may face in your game:</p>
+<ul>
+<li>to use different distance metrics (including weighted costs)</li>
+<li>to take obstacles into account</li>
+</ul>
+<p>For this, we provide additional distance metrics (see above), and the methods <a class="xref" href="../api/Gamelogic.Grids2.Algorithms.GetPointsInRange.html">GetPointsInRange</a>.</p>
+<h2 id="rotation">Rotation</h2>
+<p>There are several rotation functions defined in the static class <a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.html">PointyHexPoint</a> such as
+<a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.Rotate60.html">Rotate60</a>.</p>
+<p>In the Algorithms class, there is also a method for transforming (including rotating) a list of points
+<a class="xref" href="../api/Gamelogic.Grids2.Algorithms.TransformShape.html">TransformShape</a> .
+There is a method <a class="xref" href="../api/Gamelogic.Grids2.ImplicitShape.ReverseSelect.html">ReverseSelect</a> that can be used on shapes and grids to get a
+new transformed shape.</p>
+<p>Grids 2 also have both integer and floating point matrices (2 by 2 and 3 by 3) that allow you to do general linear
+transformations. See for example <a class="xref" href="../api/Gamelogic.Grids2.Matrixf22.html">Matrixf22</a> and <a class="xref" href="../api/Gamelogic.Grids2.Matrixf33.html">Matrixf33</a>.</p>
+<h2 id="rings">Rings</h2>
+<p>You get rings of various shapes by doing suitable LINQ queries using the various norms. Below are a few examples:</p>
+<h3 id="hexagonal-ring">Hexagonal Ring</h3>
+<pre><code class="lang-csharp">var ring = grid.Points
+    .Where(p =&gt; PointyHexPoint.HexNorm(p - center) == radius);
+</code></pre>
+<h3 id="star-ring">Star Ring</h3>
+<pre><code class="lang-csharp">var ring = grid.Points
+    .Where(p =&gt; PointyHexPoint.StarNorm(p - center) == radius);
+</code></pre>
+<h3 id="star-ring-with-range">Star Ring (with range)</h3>
+<pre><code class="lang-csharp">var ring = grid.Points
+    .Where(p =&gt; radius1 &lt; PointyHexPoint.HexNorm(p - center))
+    .Where(p =&gt; PointyHexPoint.HexNorm(p - center) &lt; radius2);
+</code></pre>
+<h2 id="spirals">Spirals</h2>
+<p>You can get a spiral of points from a grid using:</p>
+<pre><code class="lang-csharp">var spiral = PointyHexPoint.GetSpiralIterator(grid, center, ringCount);
+</code></pre>
+<h2 id="hex-to-pixel-and-pixel-to-hex">Hex to Pixel and Pixel to Hex</h2>
+<p>The conversion is done with maps. There are two maps involved: a space map does the basic &quot;skewing&quot;, and a &quot;round map&quot;
+takes the vector and turns it into a grid point. See <a href="SpaceMaps.html">Space Maps</a>.</p>
+<h2 id="rounding-to-nearest-hex">Rounding to nearest hex</h2>
+<p>To round a vector3 to the nearest grid point in a hex grid, you can use a round map. To get a round map, use
+<a class="xref" href="../api/Gamelogic.Grids2.Map.HexRound.html">HexRound</a>.</p>
+<h2 id="map-storage-grid-data-storage">Map Storage (Grid Data Storage)</h2>
+<p>(Note, this &quot;Map&quot; is used in a different sense than we use map. Here it refers to grid data, which is typically a game
+&quot;map&quot;.)</p>
+<p>The beauty of Grids is that you need not worry about storage at all, everything is taken care of behind the scenes. This
+is really convenient when making more complicated shapes using the grid builder functionality. Once the grid is created,
+you can access data like you would from a dictionary, using grid points as keys. You do not need to know how it is
+stored in the background.</p>
+<p>In special cases, you may want to implement your own storage structure, for example, if you have a grid that can grow
+dynamically. In such cases, you can let your implementation <a href="ImplementingIGrid.html">implement the IGrid interface</a>, and
+still have all our algorithms work on your grid, regardless of how you handle storage.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

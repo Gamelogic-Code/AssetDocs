@@ -1,0 +1,927 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MeshDataFromMesh | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MeshDataFromMesh | Gamelogic Grids ">
+      
+      <meta name="description" content="Uses a mesh for an actual cell to generate full mesh data for a grid.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh">
+
+
+
+  <h1 id="Gamelogic_Grids2_Examples_MeshDataFromMesh" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh" class="text-break">
+Class MeshDataFromMesh  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a>.<a class="xref" href="Gamelogic.Grids2.Examples.html">Examples</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Uses a mesh for an actual cell to generate full mesh data for a grid.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;MeshData&quot;, menuName = &quot;Grids/MeshData/From Mesh&quot;)]
+[Version(2, 3, 0)]
+public class MeshDataFromMesh : MeshData</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
+      <div><a class="xref" href="Gamelogic.Grids2.MeshData.html">MeshData</a></div>
+      <div><span class="xref">MeshDataFromMesh</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.SetDirty.html">ScriptableObject.SetDirty()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ScriptableObject.CreateInstance(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">ScriptableObject.CreateInstance(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.CreateInstance.html">ScriptableObject.CreateInstance&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetInstanceID.html">Object.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetHashCode.html">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Object.Instantiate(Object, Vector3, Quaternion, Transform)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">Object.DontDestroyOnLoad(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">Object.FindObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.ToString.html">Object.ToString()</a>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class is suitable for uniform grids with complicated cells.</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_mesh" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.mesh">
+  mesh
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mesh to use for a cell.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh mesh</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_scale" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.scale">
+  scale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The scaling factor to apply to the mesh to get it to &quot;standard&quot; scale. Standard scale for
+1 square cell is 1 by 1 unit. If your mesh is 2by2 units, you can use a scale of 0.5 to
+get correct results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float scale</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetNormals*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint2__System_Boolean_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetNormals(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.GridMap{Gamelogic.Grids2.GridPoint2},System.Boolean)">
+  GetNormals(IExplicitShape&lt;GridPoint2&gt;, GridMap&lt;GridPoint2&gt;, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normals for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector3&gt; GetNormals(IExplicitShape&lt;GridPoint2&gt; explicitShape, GridMap&lt;GridPoint2&gt; gridMap, bool flip)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>explicitShape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>gridMap</code> <a class="xref" href="Gamelogic.Grids2.GridMap-1.html">GridMap</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd><p>The grid map to be used to calculate normals.</p>
+</dd>
+    <dt><code>flip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether normals should be flipped or not.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint2__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetNormals*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint3__System_Boolean_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetNormals(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint3},Gamelogic.Grids2.GridMap{Gamelogic.Grids2.GridPoint3},System.Boolean)">
+  GetNormals(IExplicitShape&lt;GridPoint3&gt;, GridMap&lt;GridPoint3&gt;, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normals for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector3&gt; GetNormals(IExplicitShape&lt;GridPoint3&gt; explicitShape, GridMap&lt;GridPoint3&gt; gridMap, bool flip)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>explicitShape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>gridMap</code> <a class="xref" href="Gamelogic.Grids2.GridMap-1.html">GridMap</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</dt>
+    <dd><p>The grid map to be used to calculate normals.</p>
+</dd>
+    <dt><code>flip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether normals should be flipped or not.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint3__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetNormals*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_Gamelogic_Grids2_IExplicitShape_System_Int32__Gamelogic_Grids2_GridMap_System_Int32__System_Boolean_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetNormals(Gamelogic.Grids2.IExplicitShape{System.Int32},Gamelogic.Grids2.GridMap{System.Int32},System.Boolean)">
+  GetNormals(IExplicitShape&lt;int&gt;, GridMap&lt;int&gt;, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normals for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector3&gt; GetNormals(IExplicitShape&lt;int&gt; shape, GridMap&lt;int&gt; map, bool flip)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>The shape for which to return the normals of.</p>
+</dd>
+    <dt><code>map</code> <a class="xref" href="Gamelogic.Grids2.GridMap-1.html">GridMap</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>flip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether normals should be flipped or not.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetNormals_Gamelogic_Grids2_IExplicitShape_System_Int32__Gamelogic_Grids2_GridMap_System_Int32__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetTriangles*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__System_Boolean_System_Boolean_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetTriangles(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2},System.Boolean,System.Boolean)">
+  GetTriangles(IExplicitShape&lt;GridPoint2&gt;, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of triangle indices for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;int&gt; GetTriangles(IExplicitShape&lt;GridPoint2&gt; shape, bool doubleSided, bool flip)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd><p>The shape for which vertices should be returned.</p>
+</dd>
+    <dt><code>doubleSided</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the returned triangles should be double sided.</p>
+</dd>
+    <dt><code>flip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the returned triangles should be flipped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetTriangles*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__System_Boolean_System_Boolean_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetTriangles(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint3},System.Boolean,System.Boolean)">
+  GetTriangles(IExplicitShape&lt;GridPoint3&gt;, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of triangle indices for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;int&gt; GetTriangles(IExplicitShape&lt;GridPoint3&gt; shape, bool doubleSided, bool flip)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</dt>
+    <dd><p>The shape for which vertices should be returned.</p>
+</dd>
+    <dt><code>doubleSided</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the returned triangles should be double sided.</p>
+</dd>
+    <dt><code>flip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the returned triangles should be flipped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetTriangles*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_Gamelogic_Grids2_IExplicitShape_System_Int32__System_Boolean_System_Boolean_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetTriangles(Gamelogic.Grids2.IExplicitShape{System.Int32},System.Boolean,System.Boolean)">
+  GetTriangles(IExplicitShape&lt;int&gt;, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of triangle indices for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;int&gt; GetTriangles(IExplicitShape&lt;int&gt; shape, bool doubleSided, bool flip)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>The shape for which vertices should be returned.</p>
+</dd>
+    <dt><code>doubleSided</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the returned triangles should be double sided.</p>
+</dd>
+    <dt><code>flip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the returned triangles should be flipped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetTriangles_Gamelogic_Grids2_IExplicitShape_System_Int32__System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetUVs*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetUVs(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2})">
+  GetUVs(IExplicitShape&lt;GridPoint2&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the UVs for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector2&gt; GetUVs(IExplicitShape&lt;GridPoint2&gt; shape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd><p>The shape for which UVs should be returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetUVs*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetUVs(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint3})">
+  GetUVs(IExplicitShape&lt;GridPoint3&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the UVs for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector2&gt; GetUVs(IExplicitShape&lt;GridPoint3&gt; shape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</dt>
+    <dd><p>The shape for which UVs should be returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetUVs*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_Gamelogic_Grids2_IExplicitShape_System_Int32__" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetUVs(Gamelogic.Grids2.IExplicitShape{System.Int32})">
+  GetUVs(IExplicitShape&lt;int&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the UVs for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector2&gt; GetUVs(IExplicitShape&lt;int&gt; shape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>The shape for which UVs should be returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetUVs_Gamelogic_Grids2_IExplicitShape_System_Int32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetVertices*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint2__" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetVertices(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.GridMap{Gamelogic.Grids2.GridPoint2})">
+  GetVertices(IExplicitShape&lt;GridPoint2&gt;, GridMap&lt;GridPoint2&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of vertices of a mesh for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector3&gt; GetVertices(IExplicitShape&lt;GridPoint2&gt; shape, GridMap&lt;GridPoint2&gt; map)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd><p>The shape for which vertices should be returned.</p>
+</dd>
+    <dt><code>map</code> <a class="xref" href="Gamelogic.Grids2.GridMap-1.html">GridMap</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd><p>The map the mesh should be created with, so that centers of cells for a grid
+point match the world space position returned by the map.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint2___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetVertices*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint3__" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetVertices(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint3},Gamelogic.Grids2.GridMap{Gamelogic.Grids2.GridPoint3})">
+  GetVertices(IExplicitShape&lt;GridPoint3&gt;, GridMap&lt;GridPoint3&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of vertices of a mesh for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector3&gt; GetVertices(IExplicitShape&lt;GridPoint3&gt; shape, GridMap&lt;GridPoint3&gt; map)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</dt>
+    <dd><p>The shape for which vertices should be returned.</p>
+</dd>
+    <dt><code>map</code> <a class="xref" href="Gamelogic.Grids2.GridMap-1.html">GridMap</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</dt>
+    <dd><p>The map the mesh should be created with, so that centers of cells for a grid
+point match the world space position returned by the map.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint3___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetVertices*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_Gamelogic_Grids2_IExplicitShape_System_Int32__Gamelogic_Grids2_GridMap_System_Int32__" data-uid="Gamelogic.Grids2.Examples.MeshDataFromMesh.GetVertices(Gamelogic.Grids2.IExplicitShape{System.Int32},Gamelogic.Grids2.GridMap{System.Int32})">
+  GetVertices(IExplicitShape&lt;int&gt;, GridMap&lt;int&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of vertices of a mesh for the given shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Vector3&gt; GetVertices(IExplicitShape&lt;int&gt; shape, GridMap&lt;int&gt; map)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>The shape for which vertices should be returned.</p>
+</dd>
+    <dt><code>map</code> <a class="xref" href="Gamelogic.Grids2.GridMap-1.html">GridMap</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>The map the mesh should be created with, so that centers of cells for a grid
+point match the world space position returned by the map.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids2_Examples_MeshDataFromMesh_GetVertices_Gamelogic_Grids2_IExplicitShape_System_Int32__Gamelogic_Grids2_GridMap_System_Int32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE">
+  <h5>implement</h5>
+  <p>Override this method to support 1D grids.</p>
+</div>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1839 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MeshGridBuilder&lt;TPoint&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MeshGridBuilder&lt;TPoint&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="Base class for tile grid builders where grid is rendered as a single mesh.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.MeshGridBuilder`1">
+
+
+
+  <h1 id="Gamelogic_Grids_MeshGridBuilder_1" data-uid="Gamelogic.Grids.MeshGridBuilder`1" class="text-break">
+Class MeshGridBuilder&lt;TPoint&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base class for tile grid builders where grid is rendered as a single mesh.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 14, 0)]
+[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
+public abstract class MeshGridBuilder&lt;TPoint&gt; : GLMonoBehaviour, ITileGrid&lt;TPoint&gt;, IGridBuilderBase, IGLScriptableObject where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd><p>The type of point of the grid that this builder is building.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
+      <div><a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html">GLMonoBehaviour</a></div>
+      <div><span class="xref">MeshGridBuilder&lt;TPoint&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.ITileGrid-1.html">ITileGrid</a>&lt;TPoint&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridBuilderBase.html">IGridBuilderBase</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.IGLScriptableObject.html">IGLScriptableObject</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.DiamondMeshGridBuilder.html">DiamondMeshGridBuilder</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.FlatHexMeshGridBuilder.html">FlatHexMeshGridBuilder</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.PointyHexMeshGridBuilder.html">PointyHexMeshGridBuilder</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.RectMeshGridBuilder.html">RectMeshGridBuilder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_">GLMonoBehaviour.Instantiate&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_GameObject_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, GameObject, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_">GLMonoBehaviour.Instantiate(GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate(GameObject, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_UnityEngine_GameObject_">GLMonoBehaviour.Instantiate(GameObject, GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate_UnityEngine_GameObject_UnityEngine_GameObject_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate(GameObject, GameObject, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_FindObjectsOfInterface__1">GLMonoBehaviour.FindObjectsOfInterface&lt;TInterface&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Invoke_System_Action_System_Single_">GLMonoBehaviour.Invoke(Action, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_InvokeRepeating_System_Action_System_Single_System_Single_">GLMonoBehaviour.InvokeRepeating(Action, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_InvokeRepeating_System_Action_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__">GLMonoBehaviour.InvokeRepeating(Action, IGenerator&lt;float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Tween__1___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__System_Func_System_Single__">GLMonoBehaviour.Tween&lt;T&gt;(T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;, Func&lt;float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_Tween__1___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__">GLMonoBehaviour.Tween&lt;T&gt;(T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_GetRequiredComponent__1">GLMonoBehaviour.GetRequiredComponent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_GetRequiredComponentInChildren__1">GLMonoBehaviour.GetRequiredComponentInChildren&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html#Gamelogic_Extensions_GLMonoBehaviour_DestroyUniversal_UnityEngine_Object_">GLMonoBehaviour.DestroyUniversal(Object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.CancelInvoke.html">MonoBehaviour.CancelInvoke()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour-useGUILayout.html">MonoBehaviour.useGUILayout</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">Behaviour.enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-isActiveAndEnabled.html">Behaviour.isActiveAndEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.TryGetComponent.html">Component.TryGetComponent&lt;T&gt;(out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.GetComponentInParent.html">Component.GetComponentInParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.GetComponents.html">Component.GetComponents&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetInstanceID.html">Object.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetHashCode.html">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Object.Instantiate(Object, Vector3, Quaternion, Transform)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">Object.DontDestroyOnLoad(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">Object.FindObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.ToString.html">Object.ToString()</a>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_">MonoBehaviourExtensions.Clone&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_System_Int32_">MonoBehaviourExtensions.Clone&lt;T&gt;(T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_FindChild_UnityEngine_Component_System_String_">MonoBehaviourExtensions.FindChild(Component, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_FindChild_UnityEngine_Component_System_String_System_Boolean_">MonoBehaviourExtensions.FindChild(Component, string, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetComponentInChildrenAlways__1_UnityEngine_Component_">MonoBehaviourExtensions.GetComponentInChildrenAlways&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetComponentsInChildrenAlways__1_UnityEngine_Component_">MonoBehaviourExtensions.GetComponentsInChildrenAlways&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetInterfaceComponent__1_UnityEngine_Component_">MonoBehaviourExtensions.GetInterfaceComponent&lt;TInterface&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetRequiredComponentInChildren__1_UnityEngine_Component_">MonoBehaviourExtensions.GetRequiredComponentInChildren&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetRequiredComponent__1_UnityEngine_Component_">MonoBehaviourExtensions.GetRequiredComponent&lt;T&gt;(Component)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_CancelInvoke_UnityEngine_MonoBehaviour_System_Action_">MonoBehaviourExtensions.CancelInvoke(MonoBehaviour, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_Invoke_UnityEngine_MonoBehaviour_System_Action_System_Single_">MonoBehaviourExtensions.Invoke(MonoBehaviour, Action, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_InvokeRepeating_UnityEngine_MonoBehaviour_System_Action_Gamelogic_Extensions_Algorithms_IGenerator_System_Single__">MonoBehaviourExtensions.InvokeRepeating(MonoBehaviour, Action, IGenerator&lt;float&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_InvokeRepeating_UnityEngine_MonoBehaviour_System_Action_System_Single_System_Single_">MonoBehaviourExtensions.InvokeRepeating(MonoBehaviour, Action, float, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_IsInvoking_UnityEngine_MonoBehaviour_System_Action_">MonoBehaviourExtensions.IsInvoking(MonoBehaviour, Action)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_Tween__1_UnityEngine_MonoBehaviour___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__">MonoBehaviourExtensions.Tween&lt;T&gt;(MonoBehaviour, T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.html#Gamelogic_Extensions_MonoBehaviourExtensions_Tween__1_UnityEngine_MonoBehaviour___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__System_Func_System_Single__">MonoBehaviourExtensions.Tween&lt;T&gt;(MonoBehaviour, T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;, Func&lt;float&gt;)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_CenterRect" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CenterRect">
+  CenterRect
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Rect CenterRect</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_alignment" data-uid="Gamelogic.Grids.MeshGridBuilder`1.alignment">
+  alignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;How the anchor of the grid lies relative to the grid.&quot;)]
+protected MapAlignment alignment</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.MapAlignment.html">MapAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_cellDimensions" data-uid="Gamelogic.Grids.MeshGridBuilder`1.cellDimensions">
+  cellDimensions
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 cellDimensions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_cellSpacingFactor" data-uid="Gamelogic.Grids.MeshGridBuilder`1.cellSpacingFactor">
+  cellSpacingFactor
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;A factor that controls the spacing between cells.&quot;)]
+protected Vector2 cellSpacingFactor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_cells" data-uid="Gamelogic.Grids.MeshGridBuilder`1.cells">
+  cells
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+protected MeshCell[] cells</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.MeshCell.html">MeshCell</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_colorFunction" data-uid="Gamelogic.Grids.MeshGridBuilder`1.colorFunction">
+  colorFunction
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;The color function to use to color cells.&quot;)]
+protected ColorFunction colorFunction</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ColorFunction.html">ColorFunction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_colors" data-uid="Gamelogic.Grids.MeshGridBuilder`1.colors">
+  colors
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;The colors to use to color cells.&quot;)]
+[ContextMenuItem(&quot;Reset&quot;, &quot;ResetColors&quot;)]
+protected Color[] colors</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_customMap" data-uid="Gamelogic.Grids.MeshGridBuilder`1.customMap">
+  customMap
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMap3D&lt;TPoint&gt; customMap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMap3D-1.html">IMap3D</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_dimensions" data-uid="Gamelogic.Grids.MeshGridBuilder`1.dimensions">
+  dimensions
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;The width and height of your shape (in cells).&quot;)]
+protected InspectableVectorPoint dimensions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.InspectableVectorPoint.html">InspectableVectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_grid" data-uid="Gamelogic.Grids.MeshGridBuilder`1.grid">
+  grid
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IGrid&lt;MeshCell, TPoint&gt; grid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.MeshCell.html">MeshCell</a>, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_isInteractive" data-uid="Gamelogic.Grids.MeshGridBuilder`1.isInteractive">
+  isInteractive
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;Whether the grid will respond to mouse clicks&quot;)]
+protected bool isInteractive</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_meshMap" data-uid="Gamelogic.Grids.MeshGridBuilder`1.meshMap">
+  meshMap
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMeshMap&lt;TPoint&gt; meshMap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMeshMap-1.html">IMeshMap</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_size" data-uid="Gamelogic.Grids.MeshGridBuilder`1.size">
+  size
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;The size of your shape (in cells).&quot;)]
+protected int size</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_textureHeight" data-uid="Gamelogic.Grids.MeshGridBuilder`1.textureHeight">
+  textureHeight
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int textureHeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_textureWidth" data-uid="Gamelogic.Grids.MeshGridBuilder`1.textureWidth">
+  textureWidth
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int textureWidth</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_updateType" data-uid="Gamelogic.Grids.MeshGridBuilder`1.updateType">
+  updateType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;When to update the grid&quot;)]
+protected UpdateType updateType</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.UpdateType.html">UpdateType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_useColor" data-uid="Gamelogic.Grids.MeshGridBuilder`1.useColor">
+  useColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+[Tooltip(&quot;Whether to set cells colors&quot;)]
+protected bool useColor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Alignment_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Alignment*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Alignment" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Alignment">
+  Alignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapAlignment Alignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.MapAlignment.html">MapAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_CellSpacingFactor_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CellSpacingFactor*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_CellSpacingFactor" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CellSpacingFactor">
+  CellSpacingFactor
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 CellSpacingFactor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_ColorFunction_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.ColorFunction*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_ColorFunction" data-uid="Gamelogic.Grids.MeshGridBuilder`1.ColorFunction">
+  ColorFunction
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorFunction ColorFunction { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ColorFunction.html">ColorFunction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Colors_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Colors*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Colors" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Colors">
+  Colors
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color[] Colors { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Dimensions_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Dimensions*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Dimensions" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Dimensions">
+  Dimensions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the dimensions for this grid if it makes sense for the current shape.</p>
+<p>(The dimension field is hidden in the inspector if it does not make sense).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Dimensions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Grid_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Grid*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Grid" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Grid">
+  Grid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the grid built with this builder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGrid&lt;MeshCell, TPoint&gt; Grid { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.MeshCell.html">MeshCell</a>, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Map_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Map*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Map" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Map">
+  Map
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the map this builder used to built the grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMap3D&lt;TPoint&gt; Map { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMap3D-1.html">IMap3D</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_MousePosition_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.MousePosition*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_MousePosition" data-uid="Gamelogic.Grids.MeshGridBuilder`1.MousePosition">
+  MousePosition
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TPoint MousePosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Size_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Size*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Size" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Size">
+  Size
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the size for this grid if it makes sense for the current shape.</p>
+<p>(The dimension field is hidden in the inspector if it does not make sense).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Size { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_UseColor_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.UseColor*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_UseColor" data-uid="Gamelogic.Grids.MeshGridBuilder`1.UseColor">
+  UseColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_CreateMap_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CreateMap*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_CreateMap" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CreateMap">
+  CreateMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IMap3D&lt;TPoint&gt; CreateMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMap3D-1.html">IMap3D</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_CreateMeshMap_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CreateMeshMap*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_CreateMeshMap" data-uid="Gamelogic.Grids.MeshGridBuilder`1.CreateMeshMap">
+  CreateMeshMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IMeshMap&lt;TPoint&gt; CreateMeshMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMeshMap-1.html">IMeshMap</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_GetAlignedMap_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetAlignedMap*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_GetAlignedMap_Gamelogic_Grids_WindowedMap__0__" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetAlignedMap(Gamelogic.Grids.WindowedMap{`0})">
+  GetAlignedMap(WindowedMap&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMap3D&lt;TPoint&gt; GetAlignedMap(WindowedMap&lt;TPoint&gt; windowedHexMap)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>windowedHexMap</code> <a class="xref" href="Gamelogic.Grids.WindowedMap-1.html">WindowedMap</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMap3D-1.html">IMap3D</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_GetColorFunc_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetColorFunc*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_GetColorFunc_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetColorFunc(System.Int32,System.Int32,System.Int32)">
+  GetColorFunc(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Func&lt;TPoint, int&gt; GetColorFunc(int x0, int x1, int y1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>x1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomGrid_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomGrid*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomGrid" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomGrid">
+  GetCustomGrid()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IGrid&lt;MeshCell, TPoint&gt; GetCustomGrid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.MeshCell.html">MeshCell</a>, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomMap_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomMap*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomMap" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomMap">
+  GetCustomMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected WindowedMap&lt;TPoint&gt; GetCustomMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.WindowedMap-1.html">WindowedMap</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomMap3D_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomMap3D*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomMap3D" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomMap3D">
+  GetCustomMap3D()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMap3D&lt;TPoint&gt; GetCustomMap3D()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMap3D-1.html">IMap3D</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomMeshMap_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomMeshMap*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_GetCustomMeshMap" data-uid="Gamelogic.Grids.MeshGridBuilder`1.GetCustomMeshMap">
+  GetCustomMeshMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMeshMap&lt;TPoint&gt; GetCustomMeshMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IMeshMap-1.html">IMeshMap</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_InitGrid_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.InitGrid*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_InitGrid" data-uid="Gamelogic.Grids.MeshGridBuilder`1.InitGrid">
+  InitGrid()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void InitGrid()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Start_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Start*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Start" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Start">
+  Start()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_Update_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Update*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_Update" data-uid="Gamelogic.Grids.MeshGridBuilder`1.Update">
+  Update()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1_UpdateUVs_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.UpdateUVs*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1_UpdateUVs" data-uid="Gamelogic.Grids.MeshGridBuilder`1.UpdateUVs">
+  UpdateUVs()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateUVs()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_MeshGridBuilder_1___UpdatePresentation_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.__UpdatePresentation*"></a>
+
+  <h3 id="Gamelogic_Grids_MeshGridBuilder_1___UpdatePresentation_System_Boolean_" data-uid="Gamelogic.Grids.MeshGridBuilder`1.__UpdatePresentation(System.Boolean)">
+  __UpdatePresentation(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void __UpdatePresentation(bool forceUpdate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>forceUpdate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1594 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Gamelogic.Grids | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Gamelogic.Grids | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids">
+
+  <h1 id="Gamelogic_Grids" data-uid="Gamelogic.Grids" class="text-break">Namespace Gamelogic.Grids</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractMap-1.html">AbstractMap&lt;TPoint&gt;</a></dt>
+      <dd><p>This class is suitable to use as base class for most maps.</p>
+<p>AbstractMap implements the IMap interface almost completely; you only
+have to implement to methods that correspond to the two calculations: converting
+from world to grid coordinates, and converting from grid to world coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractOp-1.html">AbstractOp&lt;TShapeInfo&gt;</a></dt>
+      <dd><p>The base class for all shape operators.A shape operator provides a mechanism
+to construct grids in a certain shape.Shape operators are used with the shape
+info classes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html">AbstractShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;</a></dt>
+      <dd><p>The base class of shape info classes</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractSplicedGrid-3.html">AbstractSplicedGrid&lt;TCell, TPoint, TBasePoint&gt;</a></dt>
+      <dd><p>A spliced grid represents a simple grid where all cells has been sliced
+in an equal numbers of cells.
+This class implements the common features of tri and rhomb grids.
+It is the most probable class to use to define your own grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractSplicedShapeInfo-5.html">AbstractSplicedShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;</a></dt>
+      <dd><p>This is the base class of all ShapeInfo classes for spliced grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractUniformGridObsoleteExtensions.html">AbstractUniformGridObsoleteExtensions</a></dt>
+      <dd><p>This class provides extensions that implement obsolete methods.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AbstractUniformGrid-2.html">AbstractUniformGrid&lt;TCell, TPoint&gt;</a></dt>
+      <dd><p>This is the base class for grids that are not spliced; in other words, grids
+that have identical cells, with identical orientation, and in which grid points
+behave as (integer) vectors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Algorithms.html">Algorithms</a></dt>
+      <dd><p>This class provide generic functions for common grid operations, such as finding a
+shortest path or connected shapes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.AnimatableMap-1.html">AnimatableMap&lt;TPoint&gt;</a></dt>
+      <dd><p>A map that changes over time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ArchimedeanSpiralMap.html">ArchimedeanSpiralMap</a></dt>
+      <dd><p>A map that maps points of a LineGrid in
+an archimedean spiral.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Block.html">Block</a></dt>
+      <dd><p>A tile that is represented by a simple 3D object (such as a cube),
+typically an object with a single mesh and material.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoGrid-1.html">CairoGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A CiaroGrid is a grid where all the cells are pentagons (so each cell has five neighbors).
+See <a href="http://en.wikipedia.org/wiki/Cairo_pentagonal_tiling">http://en.wikipedia.org/wiki/Cairo_pentagonal_tiling</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoMap.html">CairoMap</a></dt>
+      <dd><p>Maps between world points and CiaroPoints.</p>
+<p>This example shows how to implement a map for a
+grid with arbitrary polygons, using PolygonMap.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoOp-1.html">CairoOp&lt;TCell&gt;</a></dt>
+      <dd><p>Class for making CairoGrids in different shapes.
+Copyright Gamelogic.
+Author Herman Tulleken
+Since version 1.0
+See also AbstractOp</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoShapeInfo-1.html">CairoShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractSplicedShapeInfo to be used with CairoGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoTileGridBuilder.html">CairoTileGridBuilder</a></dt>
+      <dd><p>Class for building a Cairo grid in the Unity editor.
+This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ColorFunction.html">ColorFunction</a></dt>
+      <dd><p>This is an inspectable presentation of a grid coloring,
+using three parameters as explained here:</p>
+<p><a href="http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/">http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/</a></p>
+<p>The three values represent two corners of a parallelogram
+(x0, 0) and(xq, y1) that describe the patch to repeat for
+the coloring.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CompoundMap-1.html">CompoundMap&lt;TPoint&gt;</a></dt>
+      <dd><p>A maps that combines two maps through function composition.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CustomGridBuilder.html">CustomGridBuilder</a></dt>
+      <dd><p>Inherit from this class to implement custom grid shapes.</p>
+<p>This class should return a grid.To have the grid builder
+used this grid, you should set the Shape to Custom in the
+editor, and attached this script to the same game object
+as the grid builder.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CustomMap3DBuilder.html">CustomMap3DBuilder</a></dt>
+      <dd><p>Base class for 3D grid builders using a custom map.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CustomMapBuilder.html">CustomMapBuilder</a></dt>
+      <dd><p>Inherit from this class to implement custom map for an
+grid builder.
+This class should return a map. To have the grid builder
+used this map, you should set the Map to Custom in the
+editor, and attach this script to the same game object
+as the grid builder.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondGrid-1.html">DiamondGrid&lt;TCell&gt;</a></dt>
+      <dd><p>Represents a diamond grid. At its simplest, diamond grids are square grids that
+are rotated 45 degrees.</p>
+<p>By using suitable dimensions in the map, DiamondGrids
+can be used to implement isometric grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondHorizontalWrapper.html">DiamondHorizontalWrapper</a></dt>
+      <dd><p>Wraps points horizontally.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondMap.html">DiamondMap</a></dt>
+      <dd><p>Maps between grid points and world points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondMeshGridBuilder.html">DiamondMeshGridBuilder</a></dt>
+      <dd><p>Builder for building diamond mesh grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondMeshMap.html">DiamondMeshMap</a></dt>
+      <dd><p>Map for diamond mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondOp-1.html">DiamondOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondParallelogramWrapper.html">DiamondParallelogramWrapper</a></dt>
+      <dd><p>Wraps points both horizontally and vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondShapeInfo-1.html">DiamondShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractShapeInfo to be used with DiamondGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondTileGridBuilder.html">DiamondTileGridBuilder</a></dt>
+      <dd><p>Class for building a diamond grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondVerticalWrapper.html">DiamondVerticalWrapper</a></dt>
+      <dd><p>Wraps points vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatBrickMap.html">FlatBrickMap</a></dt>
+      <dd><p>A map that can be used with a PointyHexGrid to get a brick-wall pattern
+(rotated by 90 degrees). The cells are rectangular.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatBrickMeshMap.html">FlatBrickMeshMap</a></dt>
+      <dd><p>Map for flat brick mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexGrid-1.html">FlatHexGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A grid for flat hexagons, that is, hexagons with two horizontal edges.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexHexagonWrapper.html">FlatHexHexagonWrapper</a></dt>
+      <dd><p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexHorizontalWrapper.html">FlatHexHorizontalWrapper</a></dt>
+      <dd><p>Wraps points horizontally.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexMap.html">FlatHexMap</a></dt>
+      <dd><p>The default Map to be used with a FlatHexGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexMeshGridBuilder.html">FlatHexMeshGridBuilder</a></dt>
+      <dd><p>Builder for building flat hex mesh grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexMeshMap.html">FlatHexMeshMap</a></dt>
+      <dd><p>Map for flat hex mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexOp-1.html">FlatHexOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexParallelogramWrapper.html">FlatHexParallelogramWrapper</a></dt>
+      <dd><p>Wraps points both horizontally and vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexShapeInfo-1.html">FlatHexShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractShapeInfo to be used with FlatHexGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexTileGridBuilder.html">FlatHexTileGridBuilder</a></dt>
+      <dd><p>Class for building a flat hex grid in the Unity editor.
+This builder can also make flat brick grids.</p>
+<p>This component should (generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexVerticalWrapper.html">FlatHexVerticalWrapper</a></dt>
+      <dd><p>Wraps points vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombGrid-1.html">FlatRhombGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A rhombille grid in the flat orientation, that is, there are rhombusses with horizontal edges.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombMap.html">FlatRhombMap</a></dt>
+      <dd><p>The default map to be used with FlatRhombGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombOp-1.html">FlatRhombOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombShapeInfo-1.html">FlatRhombShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractSplicedShapeInfo to be used with FlatRhombGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombTileGridBuilder.html">FlatRhombTileGridBuilder</a></dt>
+      <dd><p>Class for building a flat rhomb grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriGrid-1.html">FlatTriGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A grid of triangles in the flat orientation. All triangles have one horizontal edge.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriHexagonWrapper.html">FlatTriHexagonWrapper</a></dt>
+      <dd><p>A wrapper that wraps tri points over a hexagon, similar to the
+way hex points are wrapped in this example:</p>
+<p><a href="http://www.redblobgames.com/grids/hexagons/">http://www.redblobgames.com/grids/hexagons/</a></p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriMap.html">FlatTriMap</a></dt>
+      <dd><p>The default map between world coordinates and FlatTri coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriOp-1.html">FlatTriOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriShapeInfo-1.html">FlatTriShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractSplicedShapeInfo to be used with FlatTriGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriTileGridBuilder.html">FlatTriTileGridBuilder</a></dt>
+      <dd><p>Class for building a flat tri grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.GLGizmos.html">GLGizmos</a></dt>
+      <dd><p>Provides methods for drawing Gizmos in
+for grids in the Unity editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.GridBehaviour-1.html">GridBehaviour&lt;TPoint&gt;</a></dt>
+      <dd><p>Extend from this class to hook in your own grid initialization code.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.GridBuilderUtils.html">GridBuilderUtils</a></dt>
+      <dd><p>Provides utility functions for grid builders.
+Renamed from GridBuilderUtil to GridBuilderUtils(1.8.1)</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.GridBuilder-1.html">GridBuilder&lt;TPoint&gt;</a></dt>
+      <dd><p>Base class for grid builders.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.GridExtensions.html">GridExtensions</a></dt>
+      <dd><p>Defines extension methods for the IGrid interface.
+This is implemented as an extension so that implementers need not
+extend from a common base class, but provide it to their clients.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IEnumerableExtensions.html">IEnumerableExtensions</a></dt>
+      <dd><p>Extensions for IEnumerable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html">IMapObsoleteExtensions</a></dt>
+      <dd><p>This class provides extensions that implement obsolete methods.</p>
+<p>These methods will be removed in a future version of this library.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ImageMap-1.html">ImageMap&lt;TPoint&gt;</a></dt>
+      <dd><p>Map that maps a grid to an image; useful for texturing a grid with a single image, or
+point an image with a grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.InspectableSplicedVectorPoint.html">InspectableSplicedVectorPoint</a></dt>
+      <dd><p>This class provides is a mutable class that can be used to construct
+partial vector points.</p>
+<p>It is provided for use in Unity's inspector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.InspectableVectorPoint.html">InspectableVectorPoint</a></dt>
+      <dd><p>This class provides is a mutable class that can be used to construct
+VectorPoints.</p>
+<p>It is provided for use in Unity's inspector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LayeredGrid-2.html">LayeredGrid&lt;TCell, TPoint&gt;</a></dt>
+      <dd><p>A layered grid is a 3D grid made out of layers of 2D grids with the same point type. Each layer can have a different
+shape.</p>
+<p>Layered grids are accessed through LayeredPoints.</p>
+<p>Note that neighbors are not implemented for this grid.If you need to use neighbor relationships, you need</p>
+<p>to extend this class and configure neighbors.
+See also <a href="http://gamelogic.co.za/2014/05/24/a-new-look-at-layered-grids-setting-up-neighbors/">A new look at layered grids: setting up neighbors</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineGrid-1.html">LineGrid&lt;TCell&gt;</a></dt>
+      <dd><p>Represents a one dimensional grid; essentially an array that can
+work with maps.</p>
+<p>LinePoints are automatically convertible to integers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineMap.html">LineMap</a></dt>
+      <dd><p>The default map for a LineGrid, that maps points in a straight horizontal line.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineOp-1.html">LineOp&lt;TCell&gt;</a></dt>
+      <dd><p>Class for making LineGrids in different shapes.
+<a class="xref" href="Gamelogic.Grids.AbstractOp-1.html">AbstractOp&lt;TShapeInfo&gt;</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineShapeInfo-1.html">LineShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractShapeInfo to be used with LineGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineTileGridBuilder.html">LineTileGridBuilder</a></dt>
+      <dd><p>Class for building a line grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your	
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Map3DExtensions.html">Map3DExtensions</a></dt>
+      <dd><p>Extensions for IMap3D.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Map3DXY-1.html">Map3DXY&lt;TPoint&gt;</a></dt>
+      <dd><p>The default maps for putting a grid in 3D space in the XY-plane.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Map3DXZ-1.html">Map3DXZ&lt;TPoint&gt;</a></dt>
+      <dd><p>The default maps for putting a grid in 3D space in the XZ-plane.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html">MapAnimationExtensions</a></dt>
+      <dd><p>These functions are defined as extensions so that IMap can remain pure (that is, not
+access Time.time).</p>
+<p>These methods are implemented as extension methods so that they do not
+become part of the &quot;pure&quot; interface of IMap. (Time.time is a &quot;non-pure&quot;,
+very Unity-specific feature).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MapExtensions.html">MapExtensions</a></dt>
+      <dd><p>Extensions for IMap.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Mathi.html">Mathi</a></dt>
+      <dd><p>Contains methods for integer arithmetic that works consistently
+for both positive and negative integers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MeshCell.html">MeshCell</a></dt>
+      <dd><p>A cell that can be used in mesh grids. It contains
+information about the texture to use, and
+can be extended to contain other cell information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MeshGridBehaviour-1.html">MeshGridBehaviour&lt;TPoint&gt;</a></dt>
+      <dd><p>Attach this component to Mesh Grid Builders to change the grid's behaviour.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MeshGridBuilder-1.html">MeshGridBuilder&lt;TPoint&gt;</a></dt>
+      <dd><p>Base class for tile grid builders where grid is rendered as a single mesh.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MeshMap.html">MeshMap</a></dt>
+      <dd><p>Contains various mesh maps used by builders.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MeshTileCell.html">MeshTileCell</a></dt>
+      <dd><p>A cell represented by a mesh, such as used by the polar grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MeshUtils.html">MeshUtils</a></dt>
+      <dd><p>Provides methods for making specialised meshes
+that can be used with grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.NestedRectGrid-1.html">NestedRectGrid&lt;TCell&gt;</a></dt>
+      <dd><p>Represents a composite grid, where each cell contains a grid.</p>
+<p>Big points access the &quot;big&quot; cells(which contain grids).
+Small points access the cells of the grids in the big cells.</p>
+<p>The grid can also be accessed with &quot;normal&quot; points.For example:
+suppose the grid is a 3x3 grid, where each cell is a 2x2 grid.
+Then the &quot;normal&quot; point[7, 2] corresponds to &quot;big&quot; point[3, 1] and
+&quot;small&quot; point[1, 1].</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointComparer-1.html">PointComparer&lt;TPoint&gt;</a></dt>
+      <dd><p>Use this class in constructors of HashSets and Dictionaries that
+take point types(such as PointyHexPoint) as keys.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointListMap.html">PointListMap</a></dt>
+      <dd><p>A one-way map map that maps a sequence of LinePoints to an arbitrary list of world points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointListTileGridBuilder.html">PointListTileGridBuilder</a></dt>
+      <dd><p>Class for building a point list grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointList-1.html">PointList&lt;TPoint&gt;</a></dt>
+      <dd><p>An implementation of IList for grid points that is
+safe to use with the AOT compiler.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointStack-1.html">PointStack&lt;TPoint&gt;</a></dt>
+      <dd><p>An implementation of a stack for grid points that is
+safe to use with the AOT compiler.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyBrickMap.html">PointyBrickMap</a></dt>
+      <dd><p>A map that can be used with a PointyHexGrid to get a brick-wall pattern. The cells are rectangular.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyBrickMeshMap.html">PointyBrickMeshMap</a></dt>
+      <dd><p>Map for pointy brick mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexGrid-1.html">PointyHexGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A grid for pointy hexagons, that is, hexagons with two vertical edges.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexHexagonWrapper.html">PointyHexHexagonWrapper</a></dt>
+      <dd><p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexHorizontalRectangleWrapper.html">PointyHexHorizontalRectangleWrapper</a></dt>
+      <dd><p>This wrapper wraps pointy hex points horizontally.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexHorizontalWrapper.html">PointyHexHorizontalWrapper</a></dt>
+      <dd><p>Wraps points horizontally.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexMap.html">PointyHexMap</a></dt>
+      <dd><p>The default Map to be used with a PointyHexGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexMeshGridBuilder.html">PointyHexMeshGridBuilder</a></dt>
+      <dd><p>Builder for building flat hex mesh grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexMeshMap.html">PointyHexMeshMap</a></dt>
+      <dd><p>Map for pointy hex mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexOp-1.html">PointyHexOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexParallelogramWrapper.html">PointyHexParallelogramWrapper</a></dt>
+      <dd><p>Wraps points both horizontally and vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexShapeInfo-1.html">PointyHexShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractShapeInfo to be used with PointyHexGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexTileGridBuilder.html">PointyHexTileGridBuilder</a></dt>
+      <dd><p>Class for building a pointy hex grid in the Unity editor.
+This builder can also make pointy brick grids.</p>
+<p>This component should (generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexVerticalWrapper.html">PointyHexVerticalWrapper</a></dt>
+      <dd><p>Wraps points vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombGrid-1.html">PointyRhombGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A rhombille grid in the pointy orientation, that is, there are rhombusses with vertical edges.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombMap.html">PointyRhombMap</a></dt>
+      <dd><p>The default maps that works with PointyRhombGrids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombOp-1.html">PointyRhombOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombShapeInfo-1.html">PointyRhombShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractSplicedShapeInfo to be used with PointyRhombGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombTileGridBuilder.html">PointyRhombTileGridBuilder</a></dt>
+      <dd><p>Class for building a pointy rhomb grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriGrid-1.html">PointyTriGrid&lt;TCell&gt;</a></dt>
+      <dd><p>A grid of triangles in the pointy orientation. All triangles have one vertical edge.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriHexagonWrapper.html">PointyTriHexagonWrapper</a></dt>
+      <dd><p>A wrapper that wraps tri points over a hexagon, similar to the
+way hex points are wrapped in this example:</p>
+<p><a href="http://www.redblobgames.com/grids/hexagons/">http://www.redblobgames.com/grids/hexagons/</a></p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriMap.html">PointyTriMap</a></dt>
+      <dd><p>The default map between world coordinates and PointyTri coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriOp-1.html">PointyTriOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriShapeInfo-1.html">PointyTriShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractSplicedShapeInfo to be used with PointyTriGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriTileGridBuilder.html">PointyTriTileGridBuilder</a></dt>
+      <dd><p>Class for building a pointy tri grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PoissonDisk.html">PoissonDisk</a></dt>
+      <dd><p>Used to generate Poisson disk sample points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PoissonDiskProperties.html">PoissonDiskProperties</a></dt>
+      <dd><p>Class for holding properties for generating a Poisson disk sample set.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarFlatBrickMap.html">PolarFlatBrickMap</a></dt>
+      <dd><p>This map can be used with a horizontally wrapped FlatHexGrid.
+For now, alignment does not work as with the other maps.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarFlatBrickTileGridBuilder.html">PolarFlatBrickTileGridBuilder</a></dt>
+      <dd><p>Class for building a polar flat brick grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarGridProperties.html">PolarGridProperties</a></dt>
+      <dd><p>A class for storing properties to setup a polar grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarPointyBrickMap.html">PolarPointyBrickMap</a></dt>
+      <dd><p>This map can be used with a horizontally wrapped PointyHexGrid.</p>
+<p>For now, alignment does not work as with the other maps.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarPointyBrickTileGridBuilder.html">PolarPointyBrickTileGridBuilder</a></dt>
+      <dd><p>Class for building a polar pointy brick grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarRectMap.html">PolarRectMap</a></dt>
+      <dd><p>This map can be used with a horizontally wrapped RectGrid.</p>
+<p>For now, alignment does not work as with the other maps.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarRectTileGridBuilder.html">PolarRectTileGridBuilder</a></dt>
+      <dd><p>Class for building a polar rect grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarTileGridBuilder-1.html">PolarTileGridBuilder&lt;TPoint&gt;</a></dt>
+      <dd><p>Base class for polar tile grid builders.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolygonGridMap-2.html">PolygonGridMap&lt;TPoint, TBasePoint&gt;</a></dt>
+      <dd><p>A map that can be used for general spliced grids made from polygons.</p>
+<p>To use this map:
+- Find a rectangular tessellation for your grid.
+- This rectangle will consist out of several polygons, each which represents a (partial) cell of your grid.
+- One of these polygons should correspond to the splice point (0, 0, 0).
+- Find the center of this polygon relative to the rectangle in normalized coordinates, that is, so that the entire rectangle corresponds to (0, 0) -&gt; (1, 1).
+- Label the polygons 0, 1, 2, ... etc.
+- Find the vertices of each polygon in normalized coordinates.
+- Now calculate the spliced vector point offsets for each polygon, relative to the (0, 0, 0)
+polygon, in normalized coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectGrid-1.html">RectGrid&lt;TCell&gt;</a></dt>
+      <dd><p>Represents a rectangular grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectHorizontalWrapper.html">RectHorizontalWrapper</a></dt>
+      <dd><p>Wraps points horizontally.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectMap.html">RectMap</a></dt>
+      <dd><p>Maps between RectPoints grid points and Vector2 world points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectMeshGridBuilder.html">RectMeshGridBuilder</a></dt>
+      <dd><p>Builder for building flat hex mesh grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectMeshMap.html">RectMeshMap</a></dt>
+      <dd><p>Map for rect mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectOp-1.html">RectOp&lt;TCell&gt;</a></dt>
+      <dd><p>Documentation in Op.cs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectParallelogramWrapper.html">RectParallelogramWrapper</a></dt>
+      <dd><p>Wraps points both horizontally and vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectShapeInfo-1.html">RectShapeInfo&lt;TCell&gt;</a></dt>
+      <dd><p>Provides the implementation for AbstractShapeInfo to be used with RectGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectTileGridBuilder.html">RectTileGridBuilder</a></dt>
+      <dd><p>Class for building a rectangular grid in the Unity editor.</p>
+<p>This component should(generally) not be accessed directly.Instead, add your
+own component that inherits from GridBebaviour, and access the grid and map
+through there.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectVerticalWrapper.html">RectVerticalWrapper</a></dt>
+      <dd><p>Wraps points vertically.</p>
+<p>Since version 1.7</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.SerializableRect.html">SerializableRect</a></dt>
+      <dd><p>Class used for keeping the proeprties of a rectangle.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ShapeMethodAttribute.html">ShapeMethodAttribute</a></dt>
+      <dd><p>Methods in an Op (sublcasses of AbstractOp) marked with this
+attribute are automatically added as static methods to the
+appropriate grid class for convenience.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo&lt;TPoint&gt;</a></dt>
+      <dd><p>This class handles how the cells of a grid is represented in memeory.
+This class is used by shape info classes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Shape-1.html">Shape&lt;TPoint&gt;</a></dt>
+      <dd><p>Class that represents a grid shape.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.SimpleLayeredMap-1.html">SimpleLayeredMap&lt;TPoint&gt;</a></dt>
+      <dd><p>A simple map that can be used for Layered Grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.SplicedGrid-2.html">SplicedGrid&lt;TCell, TBasePoint&gt;</a></dt>
+      <dd><p>A SplicedGrid is a grid formed from another grid, where each cell is &quot;spliced&quot; in a certain number of cells. For example, a
+triangular grid can be implemented as a diamond grid where each diamond cell is spliced into two triangles.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.SplicedMap-1.html">SplicedMap&lt;TBasePoint&gt;</a></dt>
+      <dd><p>A one-way map that can be used to make maps for arbitrary spliced grids, where each point is mapped to
+the base point location, plus an offset, where each index has a different offset.</p>
+<p>For example, if the spliced grid is a diamond grid, with each cell spliced into a top and bottom
+triangle, then the two offsets will be above and below the origin (for example, (0, 1) and(0, -1)).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.SpriteCell.html">SpriteCell</a></dt>
+      <dd><p>A tile cell that uses a Unity sprite to render.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.TextureCell.html">TextureCell</a></dt>
+      <dd><p>Similar to a sprite cell, but with custom UV coordinates.
+This type of cell is useful when placing a single texture
+across multiple cells.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.TileCell.html">TileCell</a></dt>
+      <dd><p>A TileCell is a cell that is represented by a single Unity object.</p>
+<p>They can be anything, including Sprites, Models, or compound objects,
+as long as they can be instantiated, and each corresponds to exactly one
+cell in a grid.They are used with TileGrid builders.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.TileGridBuilder-1.html">TileGridBuilder&lt;TPoint&gt;</a></dt>
+      <dd><p>Base class for tile grid builders where all the tiles are the same.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.UIImageCell.html">UIImageCell</a></dt>
+      <dd><p>This component represents a cell that can be used with Unity's GUI system, using an
+Image compoenent to render the cell.</p>
+<p>It expects an Image component in the hierarchy (on the same game object or a child).</p>
+<p>To use it with grid builders:
+Make a new cell prefab with this component
+Add the grid builder to the canvas or to some child of the canvas
+Set the cell prefab proeprty oof the grid builder to the new prefab.</p>
+<p>Grids ships with a few example prefabs that uses UIImageCells; check them out to
+see how they work.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.UIImageTextCell.html">UIImageTextCell</a></dt>
+      <dd><p>This is the same as UIImageCell, except that it supports a text component as well.</p>
+<p>This class is also suitable to use with Unity's Buttons  (since they are rendered with
+Image and Text components).</p>
+<p>In addition to the Image component that is expected down the hierarchy, this component
+also expects a Text component down the hierarchy (on this object or a child).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.UITextCell.html">UITextCell</a></dt>
+      <dd><p>This component represents a cell that can be used with Unity's GUI system, using a
+Text component to render the cell.</p>
+<p>It expects a Text component in the hierarchy (on the same game object or a child).</p>
+<p>To use it with grid builders:
+Make a new cell prefab with this component
+Add the grid builder to the canvas or to some child of the canvas
+Set the cell prefab property oof the grid builder to the new prefab.</p>
+<pre><code>Grids ships with a few example prefabs that uses UITextCells; check them out to
+see how they work.
+</code></pre>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.UVCell.html">UVCell</a></dt>
+      <dd><p>Similar to a sprite cell, but with custom UV coordinates.
+This type of cell is useful when placing a single texture
+across multiple cells.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Vector2Extensions.html">Vector2Extensions</a></dt>
+      <dd><p>Extension methods for Vector2.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Vector2Transforms.html">Vector2Transforms</a></dt>
+      <dd><p>Provides extension methods for transforming Vector2 instances.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.VoronoiMap-1.html">VoronoiMap&lt;TPoint&gt;</a></dt>
+      <dd><p>A map that uses a Voronoi diagram to map points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.WindowedMapObsoleteExtensions.html">WindowedMapObsoleteExtensions</a></dt>
+      <dd><p>This class provides extensions that implement obsolete methods.</p>
+<p>These methods will be removed in a future version of this library.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.WindowedMap-1.html">WindowedMap&lt;TPoint&gt;</a></dt>
+      <dd><p>A WindowedMap maps grid points relative to a window (a rectangle in world space)
+and provides methods that makes alignment with respect to this window simple.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.WrappedGrid-2.html">WrappedGrid&lt;TCell, TPoint&gt;</a></dt>
+      <dd><p>A general implementation of Wrapped grids, that use arbitrary
+internal grids and point wrappers.</p>
+<p>A &quot;true point&quot; of a wrapped grid is a point that stays the same after the wrapping.</p>
+<ul>
+<li>Contains returns true only for true points.</li>
+<li>GetAllNeighbors return true points (that is, the neighbors are already wrapped)</li>
+<li>the index operator takes all points, and wrap them before access</li>
+<li>Iterators iterate over true points</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.__CellType.html">__CellType</a></dt>
+      <dd><p>Place holder class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.__CompilerHints.html">__CompilerHints</a></dt>
+      <dd><p>This class provides static methods that ensure all the code is
+generated by to AOT compiler for iOS.</p>
+<p>The easiest way to use it is to copy the appropriate methods to
+one of your classes, modify the __CellType type, and call the methods.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.__CompilerHintsGL.html">__CompilerHintsGL</a></dt>
+      <dd><p>Compiler hints for our examples.
+Since 1.8</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+      <dd><p>This class is used for accessing 2D arrays.</p>
+<p>It is mainly used as a convenient wrapper for
+returning results of coordinate calculations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoPoint.html">CairoPoint</a></dt>
+      <dd><p>A coordinate for a cell in a CiaroGrid. The base point is a pointy hex point, and indices run from 0 to 3.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+      <dd><p>Class that represents a points of a DiamondGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+      <dd><p>A point of a hexagonal grid, where the hexagons have two horizontal edges.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a></dt>
+      <dd><p>A struct that represents a point of a FlatRhombGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriPoint.html">FlatTriPoint</a></dt>
+      <dd><p>A struct that represents a point of a FlatTriGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IntRect.html">IntRect</a></dt>
+      <dd><p>A rectangle where coordinates are non-negative integers (that is, the corners are ArrayPoints).</p>
+<p>This class is useful for implementing storage operations for shapes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LayeredPoint-1.html">LayeredPoint&lt;TPoint&gt;</a></dt>
+      <dd><p>A point that represent cells in a LayeredGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LinePoint.html">LinePoint</a></dt>
+      <dd><p>Represents 1D grid points. These are auto-convertible to integers, making it possible to
+write, for example, <code>grid[6]</code> instead of <code>grid[new LinePoint(6)]</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.Pair.html">Pair</a></dt>
+      <dd><p>Struct for representing a pair of integers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+      <dd><p>Represents coordinates of the faces in a regular hexagonal
+lattice.The hexagons have the Pointy orientation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombPoint.html">PointyRhombPoint</a></dt>
+      <dd><p>A struct that represents a point of a PointyRhombPoint.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+      <dd><p>A struct that represents a point of a PointyTriGrid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+      <dd><p>The point to be used with rectangular grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.SplicedPoint-1.html">SplicedPoint&lt;TBasePoint&gt;</a></dt>
+      <dd><p>A point that can be use that access a generic SplicedGrid. It has two components, a base point (which is another grid point), and a splice index.
+Note that for these points to be truly immutable, the base point on which they are based must also be immutable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+      <dd><p>A VectorPoint behaves like a vector, except that it's coordinates are integers.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ICell.html">ICell</a></dt>
+      <dd><p>A common interface for all cells.</p>
+<p>This class does not specify any methods, but is used to
+identify cells so they can be handled in a special way by
+the editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IColorableCell.html">IColorableCell</a></dt>
+      <dd><p>Represents a cell whose color can be set.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IEdge-1.html">IEdge&lt;TPoint&gt;</a></dt>
+      <dd><p>A point type implements this interface if that point type can be the edge grid of TPoint.</p>
+<p>For example, FlatRhombPoints are the points of the edge grid for FlatHexPoints, and hence
+FlatRombPoint implements &quot;IEdge&lt;FlatHexPoint&gt;.&quot;
+(This class replaces IEdgeAnchor).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IEvenGrid-3.html">IEvenGrid&lt;TCell, TPoint, TBasePoint&gt;</a></dt>
+      <dd><p>A grid where cells have an even number of neighbors. In an even grid each neighbor has an opposite neighbor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGLScriptableObject.html">IGLScriptableObject</a></dt>
+      <dd><p>Classes that can be edited in the inspector using a custum editor should implement this
+interface to allow the editor to update the presentation when necessary.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGridBuilderBase.html">IGridBuilderBase</a></dt>
+      <dd><p>A common interface implemented by all grid builders to
+allow identification by type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGridPoint.html">IGridPoint</a></dt>
+      <dd><p>Non generic interface for grid points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGridPoint-1.html">IGridPoint&lt;TPoint&gt;</a></dt>
+      <dd><p>Represents a &quot;point&quot; that is used to access a cell in a Grid.</p>
+<p>For built-in 2D grids, these points are often 2D integer vectors, or spliced vectors, and hence they implement
+additional interfaces such as IVectorPoint, ISplicedPoint, andISplicedVectorPoint.These points supports
+arithmetic, <a href="http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/">colorings</a>, and some other geometric operations.</p>
+<p>In general, points do not &quot;know&quot; their neighbors.Use the grid methods IGrid&lt;TCell, TPoint&gt;.GetNeighbors and
+IGrid&lt;TCell, TPoint&gt;.GetAllNeighbors to make queries about a point's neighbors.</p>
+<p>GridPoint base classes must be immutable for many of the algorithms to work correctly.In particular,
+GridPoints are used as keys in dictionaries and sets.</p>
+<p>It is also a good idea to overload the <code>==</code> and <code>!=</code> operators.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGridSpace-1.html">IGridSpace&lt;TPoint&gt;</a></dt>
+      <dd><p>A grid space is an object that can determine whether a point is inside it our not.
+Unlike grids, it does not contain data, and therefore there is no data at points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGridToWorldMap-1.html">IGridToWorldMap&lt;TPoint&gt;</a></dt>
+      <dd><p>A one-way map that converts grid points to worls points. One-way maps are useful
+for maps that can automatically invert the map, such as VoronoiMap.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid&lt;TPoint&gt;</a></dt>
+      <dd><p>A grid interface that is not generic in the cell type. This is useful if you do not
+care about the cell type, and for implementing casting of grid contents.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid&lt;TCell, TPoint&gt;</a></dt>
+      <dd><p>The base class of all types of grids.</p>
+<p>Grids are similar to 2D arrays.Elements in the grid are called <em>cells</em>.Grids support random access to cells through
+grid points(IGridPoint), using square bracket syntax.</p>
+<p>Cell cell = squareGrid[squarePoint];
+Most grids support enumeration of points, making it possible to use<a href="http://msdn.microsoft.com/en-us/library/bb397926.aspx">LINQ</a>
+on grids as well.</p>
+<p>foreach(var point in grid) doSomethingWithCell(grid[point]);
+var pointsThatSatsifyPointPredicate = grid.Where(pointPredicate);</p>
+<p>General algorithms are provided in Algorithms.
+If you want to implement your own grid, you can implement th
+is interface to have your grid work with
+many grid algorithms.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IMap3D-1.html">IMap3D&lt;TPoint&gt;</a></dt>
+      <dd><p>An IMap maps 3D world coordinates to Grid coordinates and vice versa.</p>
+<p>Many grids provide 2D maps, which can be converted to standard 3D maps
+using commands such as To3DXY.</p>
+<p>You can also provide your own maps, either as implementations of IMap, or IMap3D.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IMap-1.html">IMap&lt;TPoint&gt;</a></dt>
+      <dd><p>An IMap maps 2D world coordinates to Grid coordinates and vice versa.</p>
+<p>Most of the methods of this class are meant to be chained to the constructor.The last command
+in the chain is suaully a conversion to IMap3D, which converts the 2D coordinates to 3D for use
+in the game engine.</p>
+<p>The order of chained calls sometimes make a difference.</p>
+<p>The standard order is this:
+- set grid point transforms
+- set cell anchoring
+- set world transforms (such as translate, rotate)
+- do layout (using WithWindow)
+- convert to 3D</p>
+<p>Transformations only apply to the world points returned and processed by the map,
+the grid contents is not transformed.</p>
+<p>For example, applying scale to the map, will not scale the cells<emph> physically</emph>, in the sense
+that if the grid contains GameObjects, cells will remain the same size. The cells will be logically bigger,
+so they will appear further apart from each other.</p>
+<p>Built-in 2D grids generally have associated built-in maps.See the <a href="http://gamelogic.co.za/grids/quick-start-tutorial/grid-index/">Grid Index</a>
+for the list.</p>
+<p>You can also provide your own maps, either as implementations of IMap, or IMap3D.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IMeshMap-1.html">IMeshMap&lt;TPoint&gt;</a></dt>
+      <dd><p>Interface for maps for mesh grids.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IPointWrapper-1.html">IPointWrapper&lt;TPoint&gt;</a></dt>
+      <dd><p>Provides a function for wrapping points that is used
+by wrapped grids.</p>
+<p>Since many such functions require lookup tables,
+it's more suitable to provide it as a class than
+providing it as a delagate.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IPolarMap-1.html">IPolarMap&lt;TPoint&gt;</a></dt>
+      <dd><p>An interface for polar maps that make it easier to build meshes for them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IShapeInfo-5.html">IShapeInfo&lt;TShapeInfo, TGrid, TPoint, TVectorPoint, TShapeOp&gt;</a></dt>
+      <dd><p>All Shape Info classes should implement this interface.
+This provides basic transformations and set operations to combine
+shape info instances.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IShape-1.html">IShape&lt;TPoint&gt;</a></dt>
+      <dd><p>Interface for grid shapes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ISplicedPoint-2.html">ISplicedPoint&lt;TPoint, TBasePoint&gt;</a></dt>
+      <dd><p>Interface for working with compound points.</p>
+<p>Spliced points are used for periodic grids where not all
+faces are identical(see AbstractSplicedGrid).</p>
+<p>Every spliced grid can be seen as a uniform regular grid,
+where each cell has been divided.Therefore, a spliced point
+consists of a coordinate on the base grid, and an index denoting
+the particular cell.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ISplicedVectorPoint-2.html">ISplicedVectorPoint&lt;TPoint, TVectorPoint&gt;</a></dt>
+      <dd><p>A partial vector point is a point that can be translated by &quot;adding&quot; a vector point.</p>
+<p>Partial vectors can be seen as a pair, one of which is a vector(of type TVectorPoint).
+All the operations actually operate on the vector of this pair.</p>
+<p>Partial vector points are used in SplicedGrids, where the second of the pair is an index
+that denotes the sub-cell.For example, for a tri point, the vector is a hex point, and
+the index denotes whether the point refers to the up or down triangle.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ISupportsEdgeGrid-1.html">ISupportsEdgeGrid&lt;TPoint&gt;</a></dt>
+      <dd><p>Indicates that a grid supports an edge grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ISupportsEdges-1.html">ISupportsEdges&lt;TVertexPoint&gt;</a></dt>
+      <dd><p>Used to indicated that grids of this point type can support edge grids.
+Replaces ISupportsEdgeGrid that is now applied to grids, not Interface</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ISupportsVertexGrid-1.html">ISupportsVertexGrid&lt;TPoint&gt;</a></dt>
+      <dd><p>Indicates that a grid supports an vertex grid.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ISupportsVertices-1.html">ISupportsVertices&lt;TVertexPoint&gt;</a></dt>
+      <dd><p>Used to indicate hat grids of this point type can support vertex grids.
+Replaces ISupportsVertexGrid that is now aplied to grids and not points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.ITileGrid-1.html">ITileGrid&lt;TPoint&gt;</a></dt>
+      <dd><p>An interface that all tile grid builder implement.
+This gives common hooks that are used by the grid editors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IVectorGrid-3.html">IVectorGrid&lt;TCell, TPoint, TBasePoint&gt;</a></dt>
+      <dd><p>IVectorGrids are build on (spliced) vector points. They are regular and uniform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IVectorPoint-1.html">IVectorPoint&lt;TPoint&gt;</a></dt>
+      <dd><p>A VectorPoint is a point that is also an algebraic vector.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.IVertex-1.html">IVertex&lt;TPoint&gt;</a></dt>
+      <dd><p>This point type is the type of vertex anchor point of the type parmater.
+The vertex anchor is the point from which all the vertices are calculated.</p>
+<p>For example, if TriPoint implements ISupportsVertexGrid&lt;HexPoint&gt;, then
+HexPoint will implement IVertex&lt;TriPoint&gt;.</p>
+<p>(This class replaces IVertexAnchor).</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoTileGridBuilder.MapType.html">CairoTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.CairoTileGridBuilder.Shape.html">CairoTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondMeshGridBuilder.MapType.html">DiamondMeshGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondMeshGridBuilder.Shape.html">DiamondMeshGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondTileGridBuilder.MapType.html">DiamondTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.DiamondTileGridBuilder.Shape.html">DiamondTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexMeshGridBuilder.MapType.html">FlatHexMeshGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexMeshGridBuilder.Shape.html">FlatHexMeshGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexTileGridBuilder.MapType.html">FlatHexTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatHexTileGridBuilder.Shape.html">FlatHexTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombTileGridBuilder.MapType.html">FlatRhombTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatRhombTileGridBuilder.Shape.html">FlatRhombTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriTileGridBuilder.MapType.html">FlatTriTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.FlatTriTileGridBuilder.Shape.html">FlatTriTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineTileGridBuilder.MapType.html">LineTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.LineTileGridBuilder.Shape.html">LineTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MapAlignment.html">MapAlignment</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.MapPlane.html">MapPlane</a></dt>
+      <dd><p>An enumeration of the two basic types of 2D planes (in 3D space) used in the library.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointListTileGridBuilder.MapType.html">PointListTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointListTileGridBuilder.Shape.html">PointListTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexMeshGridBuilder.MapType.html">PointyHexMeshGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexMeshGridBuilder.Shape.html">PointyHexMeshGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexTileGridBuilder.MapType.html">PointyHexTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyHexTileGridBuilder.Shape.html">PointyHexTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombTileGridBuilder.MapType.html">PointyRhombTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyRhombTileGridBuilder.Shape.html">PointyRhombTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriTileGridBuilder.MapType.html">PointyTriTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PointyTriTileGridBuilder.Shape.html">PointyTriTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarFlatBrickTileGridBuilder.MapType.html">PolarFlatBrickTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarFlatBrickTileGridBuilder.Shape.html">PolarFlatBrickTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarPointyBrickTileGridBuilder.MapType.html">PolarPointyBrickTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarPointyBrickTileGridBuilder.Shape.html">PolarPointyBrickTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarRectTileGridBuilder.MapType.html">PolarRectTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.PolarRectTileGridBuilder.Shape.html">PolarRectTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectMeshGridBuilder.MapType.html">RectMeshGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectMeshGridBuilder.Shape.html">RectMeshGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectNeighborType.html">RectNeighborType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectTileGridBuilder.MapType.html">RectTileGridBuilder.MapType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.RectTileGridBuilder.Shape.html">RectTileGridBuilder.Shape</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Grids.UpdateType.html">UpdateType</a></dt>
+      <dd></dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

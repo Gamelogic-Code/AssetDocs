@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IPolarMap&lt;TPoint&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IPolarMap&lt;TPoint&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="An interface for polar maps that make it easier to build meshes for them.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.IPolarMap`1">
+
+
+
+  <h1 id="Gamelogic_Grids_IPolarMap_1" data-uid="Gamelogic.Grids.IPolarMap`1" class="text-break">
+Interface IPolarMap&lt;TPoint&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An interface for polar maps that make it easier to build meshes for them.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPolarMap&lt;TPoint&gt; : IMap&lt;TPoint&gt;, IGridToWorldMap&lt;TPoint&gt; where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Item_UnityEngine_Vector2_">IMap&lt;TPoint&gt;.this[Vector2]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_GridPointTransform">IMap&lt;TPoint&gt;.GridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_InverseGridPointTransform">IMap&lt;TPoint&gt;.InverseGridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_RawWorldToGrid_UnityEngine_Vector2_">IMap&lt;TPoint&gt;.RawWorldToGrid(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_GridToWorld__0_">IMap&lt;TPoint&gt;.GridToWorld(TPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_CalcGridDimensions_Gamelogic_Grids_IGridSpace__0__">IMap&lt;TPoint&gt;.CalcGridDimensions(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_CalcBottomLeft_Gamelogic_Grids_IGridSpace__0__">IMap&lt;TPoint&gt;.CalcBottomLeft(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_CalcAnchorDimensions_Gamelogic_Grids_IGridSpace__0__">IMap&lt;TPoint&gt;.CalcAnchorDimensions(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_CalcAnchorBottomLeft_Gamelogic_Grids_IGridSpace__0__">IMap&lt;TPoint&gt;.CalcAnchorBottomLeft(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_GetAnchorTranslation">IMap&lt;TPoint&gt;.GetAnchorTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_GetCellDimensions">IMap&lt;TPoint&gt;.GetCellDimensions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_GetCellDimensions__0_">IMap&lt;TPoint&gt;.GetCellDimensions(TPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_SetGridPointTransforms_System_Func__0__0__System_Func__0__0__">IMap&lt;TPoint&gt;.SetGridPointTransforms(Func&lt;TPoint, TPoint&gt;, Func&lt;TPoint, TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellLeft">IMap&lt;TPoint&gt;.AnchorCellLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellRight">IMap&lt;TPoint&gt;.AnchorCellRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellCenter">IMap&lt;TPoint&gt;.AnchorCellCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellTop">IMap&lt;TPoint&gt;.AnchorCellTop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellBottom">IMap&lt;TPoint&gt;.AnchorCellBottom()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellMiddle">IMap&lt;TPoint&gt;.AnchorCellMiddle()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellTopLeft">IMap&lt;TPoint&gt;.AnchorCellTopLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellTopCenter">IMap&lt;TPoint&gt;.AnchorCellTopCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellTopRight">IMap&lt;TPoint&gt;.AnchorCellTopRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellMiddleLeft">IMap&lt;TPoint&gt;.AnchorCellMiddleLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellMiddleCenter">IMap&lt;TPoint&gt;.AnchorCellMiddleCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellMiddleRight">IMap&lt;TPoint&gt;.AnchorCellMiddleRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellBottomLeft">IMap&lt;TPoint&gt;.AnchorCellBottomLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellBottomCenter">IMap&lt;TPoint&gt;.AnchorCellBottomCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_AnchorCellBottomRight">IMap&lt;TPoint&gt;.AnchorCellBottomRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Translate_UnityEngine_Vector2_">IMap&lt;TPoint&gt;.Translate(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Translate_System_Single_System_Single_">IMap&lt;TPoint&gt;.Translate(float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_TranslateX_System_Single_">IMap&lt;TPoint&gt;.TranslateX(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_TranslateY_System_Single_">IMap&lt;TPoint&gt;.TranslateY(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_ReflectAboutY">IMap&lt;TPoint&gt;.ReflectAboutY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_ReflectAboutX">IMap&lt;TPoint&gt;.ReflectAboutX()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_FlipXY">IMap&lt;TPoint&gt;.FlipXY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Rotate_System_Single_">IMap&lt;TPoint&gt;.Rotate(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_RotateAround_System_Single_UnityEngine_Vector2_">IMap&lt;TPoint&gt;.RotateAround(float, Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Rotate90">IMap&lt;TPoint&gt;.Rotate90()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Scale_System_Single_">IMap&lt;TPoint&gt;.Scale(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Scale_UnityEngine_Vector2_">IMap&lt;TPoint&gt;.Scale(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Scale_System_Single_System_Single_">IMap&lt;TPoint&gt;.Scale(float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_Rotate180">IMap&lt;TPoint&gt;.Rotate180()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_WithWindow_UnityEngine_Rect_">IMap&lt;TPoint&gt;.WithWindow(Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_To3DXY_System_Single_">IMap&lt;TPoint&gt;.To3DXY(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_To3DXY">IMap&lt;TPoint&gt;.To3DXY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_To3DXZ_System_Single_">IMap&lt;TPoint&gt;.To3DXZ(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IMap-1.html#Gamelogic_Grids_IMap_1_To3DXZ">IMap&lt;TPoint&gt;.To3DXZ()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.IGridToWorldMap-1.html#Gamelogic_Grids_IGridToWorldMap_1_Item__0_">IGridToWorldMap&lt;TPoint&gt;.this[TPoint]</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelCenter__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelCenter&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelLeft__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelLeft&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelRight__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelRight&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html#Gamelogic_Grids_MapAnimationExtensions_Animate__1_Gamelogic_Grids_IMap___0__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">MapAnimationExtensions.Animate&lt;TPoint&gt;(IMap&lt;TPoint&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html#Gamelogic_Grids_MapAnimationExtensions_Animate__1_Gamelogic_Grids_IMap___0__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">MapAnimationExtensions.Animate&lt;TPoint&gt;(IMap&lt;TPoint&gt;, Func&lt;Vector2, float, Vector2&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_IPolarMap_1_GetEndAngleZ_" data-uid="Gamelogic.Grids.IPolarMap`1.GetEndAngleZ*"></a>
+
+  <h3 id="Gamelogic_Grids_IPolarMap_1_GetEndAngleZ__0_" data-uid="Gamelogic.Grids.IPolarMap`1.GetEndAngleZ(`0)">
+  GetEndAngleZ(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Z angle in degrees of the given grid point at
+the end of the sector.</p>
+<p>This is useful for making a mesh for the sector band, for instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float GetEndAngleZ(TPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_IPolarMap_1_GetInnerRadius_" data-uid="Gamelogic.Grids.IPolarMap`1.GetInnerRadius*"></a>
+
+  <h3 id="Gamelogic_Grids_IPolarMap_1_GetInnerRadius__0_" data-uid="Gamelogic.Grids.IPolarMap`1.GetInnerRadius(`0)">
+  GetInnerRadius(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the inside radius of the band ath the given grid point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float GetInnerRadius(TPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_IPolarMap_1_GetOuterRadius_" data-uid="Gamelogic.Grids.IPolarMap`1.GetOuterRadius*"></a>
+
+  <h3 id="Gamelogic_Grids_IPolarMap_1_GetOuterRadius__0_" data-uid="Gamelogic.Grids.IPolarMap`1.GetOuterRadius(`0)">
+  GetOuterRadius(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the outside radius of the band ath the given grid point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float GetOuterRadius(TPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_IPolarMap_1_GetStartAngleZ_" data-uid="Gamelogic.Grids.IPolarMap`1.GetStartAngleZ*"></a>
+
+  <h3 id="Gamelogic_Grids_IPolarMap_1_GetStartAngleZ__0_" data-uid="Gamelogic.Grids.IPolarMap`1.GetStartAngleZ(`0)">
+  GetStartAngleZ(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Z angle in degrees of the given grid point at
+the start of the sector.</p>
+<p>This is useful for making a mesh for the sector band, for instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float GetStartAngleZ(TPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

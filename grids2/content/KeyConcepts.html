@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Key Concepts | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Key Concepts | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/KeyConcepts.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="key-concepts">Key Concepts</h1>
+
+<p>This is a list of the most important concepts in grids, and is important to understand to work with the library
+effectively.</p>
+<h2 id="a-grid-in-the-scene">A grid in the scene</h2>
+<p>A scene grid is a grid that you can see in your unity scene. It can have one game object per cell (called a tile grid),
+or can be a single game object such as a mesh (called a mesh grid). You can also have your own presentation.</p>
+<p>The scene grid is supported by several classes that makes it &quot;work&quot;. This can seem a bit daunting at first, but this is
+what gives Grids its unique flexibility.</p>
+<p>The most important class is the grid data structure - it works like an array, and holds the cell data, and in the case
+of a tile grid, the game objects that make up the cells.</p>
+<p>The grid map is an object that specifies where your cells are in Unity world space. A grid map has two parts: a space
+map and a round map.</p>
+<ul>
+<li>The space map represents a distortion of 3D space: it can be a scale, or a shear, or a rotation, or something more
+complex. The space map determines where cells are, how big they are, and is one way in which hex grids differ from rect
+grids.</li>
+<li>The round map determines which chunks of space belongs to each cell. It makes 3D continues space discrete. It is what
+gives cells their shape; the difference between rect grid and hex grids, but also the difference between hex grids and
+brick grids.</li>
+</ul>
+<p>The grid map combines these two maps, and with that, you can for every grid point know where it is in Unity world space,
+and for every point in Unity space, which grid point it belongs to.</p>
+<p>Grids themselves have shapes; they can be rectangular, or cross-shaped, or hexagonal. (Don't confuse grid shapes with
+cell shapes!) Grids are constructed from shape objects, and will have the same shape as the one with which it was
+constructed.</p>
+<p>There are two types of shapes: implicit shapes, and explicit shapes.</p>
+<ul>
+<li>Implicit shapes only supports one function: a <a class="xref" href="../api/Gamelogic.Grids2.IImplicitShape-1.Contains.html">Contains</a> method that can check
+if a
+grid point is
+inside the shape.
+These shapes are used to construct explicit shapes, and are useful in some algorithms.</li>
+<li>Explicit shapes are implicit shapes that can also produce all their grid points; that is, you can get an enumeration
+over all points in the shape. Explicit shapes also know their bounds — the interval (1D), rectangle (2D) or bounding
+box
+(3D) that contains them. These bounding shapes are themselves implemented as explicit shapes. Because explicit shapes
+are also implicit shapes, they also supports a Contains method to check whether they contain given grid points.</li>
+</ul>
+<p>Grids are explicit shapes that can hold data for each point inside the shape. In this sense, grids work like
+dictionaries with points as keys and cells as values.</p>
+<p>All these classes come together in a grid builder — a component used to build a grid in the scene. And you access the
+various components using a grid behaviour — a component of your own design where you implement grid logic.</p>
+<h2 id="grids-not-in-the-scene">Grids not in the scene</h2>
+<p>Grids can also be used without a visual representation. These grids are called logic grids, and are used to implement
+gamelogic. Like scene grids, logic grids are supported by several classes that make them work, but not as many!</p>
+<p>Since grids still have shapes, we still need to construct them using shapes. However, we don't need maps, grid builders,
+or grid behaviours.</p>
+<h2 id="terminology">Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid Point</td>
+<td>A grid point is a vector with integer coordinates. Grid points support all the usual vector operations such as addition, subtraction and multiplication with a scalar (which has to be an integer). Grid points can be 2D or 3D. 1D &quot;grid points&quot; are simply integers, and when we use “grid point” when talking about grids of any dimension, we include integers.</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>A grid is a data structure, similar to an array. Grids can be 1D, 2D, or 3D, and are indexed with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> , <a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.html">GridPoint2</a> or <a class="xref" href="../api/Gamelogic.Grids2.GridPoint3.html">GridPoint3</a> . Grids can contain any data (integers, game objects, other grids). We usually talk about the data in the grid as its cells – there is one cell for each grid point that is inside the grid. You can also view grids as dictionaries. The grid points are the keys, and the cells are the values.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Grids have a “shape” – they can be rectangular or cross-shaped or any other collection of cells. Shapes are also useful for other purposes, such as in many grid algorithms. You can think of a shape as a set of grid points.</td>
+</tr>
+<tr>
+<td>Implicit Shape</td>
+<td>An implicit shape is an object that can tell whether a grid point is inside the shape or not. Implicit shapes can be 1D, 2D, or 3D. Both explicit shapes and grids themselves are also implicit shapes, so methods that take implicit shapes as parameters can also take explicit shapes and grids.</td>
+</tr>
+<tr>
+<td>Explicit Shape</td>
+<td>An explicit shape is an object that is an implicit shape, and in addition, can produce the points (as an IEnumerable) inside it and give its bounds as a GridInterval (1D), GridRect (2D), or GridBounds (3D). These three objects are themselves explicit shapes. Grids implement all the methods of explicit shapes, so another way to view grids is that they are explicit shapes with a piece of data associated with each grid point inside the shape. Methods that take explicit shapes as parameters, can also take grids in those parameters.</td>
+</tr>
+<tr>
+<td>Forward Map</td>
+<td>A forward map is an object that converts one thing to another. It is similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func&lt;T, TResult&gt;</a> , but does its calculation through a method called Forward.</td>
+</tr>
+<tr>
+<td>Reverse Map</td>
+<td>A reverse map is also an object that converts one thing to another, but represents an inverse function. It is therefore similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func&lt;T, TResult&gt;</a> , but does its calculation through a method called Reverse.</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>A map is both a forward and reverse function. It can convert one thing to another, and can also covert it back. They are almost like invertible mathematical functions, but they may not necessarily be completely invertible. Maps are internally used for converting between Unity world coordinates to grid coordinates.</td>
+</tr>
+<tr>
+<td>Space Map</td>
+<td>A space map is a map that operates on <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a> . It can, for example, represent a translation, or rotation, or something more interesting like a polar transform.</td>
+</tr>
+<tr>
+<td>Round Map</td>
+<td>A round map is a map that converts a vector (or float) to a grid point (or int). It basically takes continuous space, and makes it discrete. Rounding (as implemented by @System.Math.Round* ) is one type of operation that can be represented with a round map.</td>
+</tr>
+<tr>
+<td>Grid Map</td>
+<td>A grid map is the functional composition of a space map and a round map. That's a complicated way of saying the maps are applied in sequence. The combination of the space and round map is used to do a conversion from Unity world space and grid space (and vice versa). The GridMap class supports methods such us WorldToGrid so that it easier to get the conversion you want. You should seldom need to work with space maps and round maps individually.</td>
+</tr>
+<tr>
+<td>Grid Builder</td>
+<td>As mentioned before, grids can have any type of data, but you usually want some concrete representation of your grid in the game engine. A grid builder is a component that builds such a concrete grid in the editor.</td>
+</tr>
+<tr>
+<td>Tile Grid</td>
+<td>A tile grid is a grid where each cell is a separate game object (typically a sprite or a mesh).</td>
+</tr>
+<tr>
+<td>Mesh Grid</td>
+<td>A mesh grid is a grid that is a single mesh. There is a grid builder for each type of grid.</td>
+</tr>
+<tr>
+<td>Grid Behaviour</td>
+<td>A grid behaviour is a MonoBehaviour (in fact, a <a class="xref" href="../api/Gamelogic.Extensions.GLMonoBehaviour.html">GLMonoBehaviour</a> ) that gives you convenient access to the grid, the grid map, and the grid builder.</td>
+</tr>
+</tbody>
+</table>
+<pre><code>                                                                                                                                                                                                                                                                                                                                                                              |
+</code></pre>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,3387 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct FlatHexPoint | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct FlatHexPoint | Gamelogic Grids ">
+      
+      <meta name="description" content="A point of a hexagonal grid, where the hexagons have two horizontal edges.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.FlatHexPoint">
+
+
+
+  <h1 id="Gamelogic_Grids_FlatHexPoint" data-uid="Gamelogic.Grids.FlatHexPoint" class="text-break">
+Struct FlatHexPoint  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A point of a hexagonal grid, where the hexagons have two horizontal edges.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public struct FlatHexPoint : IGridPoint&lt;FlatHexPoint&gt;, IEquatable&lt;FlatHexPoint&gt;, IGridPoint, IVectorPoint&lt;FlatHexPoint&gt;, ISplicedVectorPoint&lt;FlatHexPoint, FlatHexPoint&gt;, IVertex&lt;PointyTriPoint&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IGridPoint-1.html">IGridPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridPoint.html">IGridPoint</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.IVectorPoint-1.html">IVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.ISplicedVectorPoint-2.html">ISplicedVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IVertex-1.html">IVertex</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_SpliceCount__1___0_">GridUtils.SpliceCount&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint__ctor_" data-uid="Gamelogic.Grids.FlatHexPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint__ctor_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.#ctor(System.Int32,System.Int32)">
+  FlatHexPoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a new FlatHexPoint with the given coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_EdgeDirections" data-uid="Gamelogic.Grids.FlatHexPoint.EdgeDirections">
+  EdgeDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IEnumerable&lt;FlatRhombPoint&gt; EdgeDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_MainDirections" data-uid="Gamelogic.Grids.FlatHexPoint.MainDirections">
+  MainDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IEnumerable&lt;FlatHexPoint&gt; MainDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_North" data-uid="Gamelogic.Grids.FlatHexPoint.North">
+  North
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint North</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_NorthEast" data-uid="Gamelogic.Grids.FlatHexPoint.NorthEast">
+  NorthEast
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint NorthEast</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_NorthWest" data-uid="Gamelogic.Grids.FlatHexPoint.NorthWest">
+  NorthWest
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint NorthWest</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_South" data-uid="Gamelogic.Grids.FlatHexPoint.South">
+  South
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint South</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_SouthEast" data-uid="Gamelogic.Grids.FlatHexPoint.SouthEast">
+  SouthEast
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint SouthEast</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_SouthWest" data-uid="Gamelogic.Grids.FlatHexPoint.SouthWest">
+  SouthWest
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint SouthWest</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_VertexDirections" data-uid="Gamelogic.Grids.FlatHexPoint.VertexDirections">
+  VertexDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IEnumerable&lt;PointyTriPoint&gt; VertexDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_VertexFaceDirections" data-uid="Gamelogic.Grids.FlatHexPoint.VertexFaceDirections">
+  VertexFaceDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IEnumerable&lt;PointyTriPoint&gt; VertexFaceDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Zero" data-uid="Gamelogic.Grids.FlatHexPoint.Zero">
+  Zero
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The zero point (0, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FlatHexPoint Zero</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_BasePoint_" data-uid="Gamelogic.Grids.FlatHexPoint.BasePoint*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_BasePoint" data-uid="Gamelogic.Grids.FlatHexPoint.BasePoint">
+  BasePoint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A Uniform point's base point is simply the point itself.
+Makes it easier to implement generic algorithms.
+Since version 1.1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint BasePoint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_SpliceCount_" data-uid="Gamelogic.Grids.FlatHexPoint.SpliceCount*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_SpliceCount" data-uid="Gamelogic.Grids.FlatHexPoint.SpliceCount">
+  SpliceCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the number of slices for all points.</p>
+<p>For Uniform grids, this is always 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SpliceCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_SpliceIndex_" data-uid="Gamelogic.Grids.FlatHexPoint.SpliceIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_SpliceIndex" data-uid="Gamelogic.Grids.FlatHexPoint.SpliceIndex">
+  SpliceIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the index of the splice.</p>
+<p>For Uniform grids, this is always 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SpliceIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_X_" data-uid="Gamelogic.Grids.FlatHexPoint.X*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_X" data-uid="Gamelogic.Grids.FlatHexPoint.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The x-coordinate of this point. This need to be in XML</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int X { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Y_" data-uid="Gamelogic.Grids.FlatHexPoint.Y*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Y" data-uid="Gamelogic.Grids.FlatHexPoint.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The y-coordinate of this point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Y { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Z_" data-uid="Gamelogic.Grids.FlatHexPoint.Z*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Z" data-uid="Gamelogic.Grids.FlatHexPoint.Z">
+  Z
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Z coordinate of the point. The Z-coordinate is redundent, but is used for convenience
+by some algorithms.The coordinates satisfy \f$x + y + z = 0\f$.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Z { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_DistanceFrom_" data-uid="Gamelogic.Grids.FlatHexPoint.DistanceFrom*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_DistanceFrom_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.DistanceFrom(Gamelogic.Grids.FlatHexPoint)">
+  DistanceFrom(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The lattice distance from this point to the other.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DistanceFrom(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Div_" data-uid="Gamelogic.Grids.FlatHexPoint.Div*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Div_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Div(Gamelogic.Grids.FlatHexPoint)">
+  Div(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a new point that represents the
+first point divided by the second point
+component-wise. The division is integer
+division.</p>
+<p>Since version 1.6 (Rect)
+Since version 1.7 (other)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Div(FlatHexPoint otherPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>otherPoint</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Dot_" data-uid="Gamelogic.Grids.FlatHexPoint.Dot*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Dot_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Dot(Gamelogic.Grids.FlatHexPoint)">
+  Dot(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public int Dot(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Equals_" data-uid="Gamelogic.Grids.FlatHexPoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Equals_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Equals(Gamelogic.Grids.FlatHexPoint)">
+  Equals(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Equals_" data-uid="Gamelogic.Grids.FlatHexPoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Equals_System_Object_" data-uid="Gamelogic.Grids.FlatHexPoint.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor(System.Int32,System.Int32,System.Int32)">
+  GetColor(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a coloring of the grid such that
+if a point p has color k, then all points
+p + m[ux, 0] + n[vx, vy] have the same color
+for any integers a and b.</p>
+<p>More information anout grid colorings:
+<a href="http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/">http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/</a></p>
+<p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor(int ux, int vx, int vy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ux</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>vx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>vy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor1_1_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor1_1*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor1_1" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor1_1">
+  GetColor1_1()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color1_1.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor1_1()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor1_2_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor1_2*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor1_2" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor1_2">
+  GetColor1_2()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color1_2.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor1_2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor1_3_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor1_3*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor1_3" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor1_3">
+  GetColor1_3()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color1_3.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor1_3()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor2_2_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor2_2*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor2_2" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor2_2">
+  GetColor2_2()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color2_2.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor2_2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor2_4_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor2_4*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor2_4" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor2_4">
+  GetColor2_4()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color2_4.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor2_4()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor3_2_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor3_2*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor3_2" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor3_2">
+  GetColor3_2()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color3_2.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor3_2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor3_7_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor3_7*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor3_7" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor3_7">
+  GetColor3_7()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generates a coloring with the following pattern:</p>
+<img src="fh_color3_7.png">
+<p>Light Blue corresponds to 0.
+Light Green corresponds to 1.
+Light Yellow corresponds to 2.
+Light Red corresponds to 3.
+Blue corresponds to 4.
+Green corresponds to 5.
+Yellow corresponds to 6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor3_7()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor5_5_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor5_5*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor5_5" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor5_5">
+  GetColor5_5()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor5_5()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetColor6_" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor6*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetColor6" data-uid="Gamelogic.Grids.FlatHexPoint.GetColor6">
+  GetColor6()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor6()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetEdgeAnchor_" data-uid="Gamelogic.Grids.FlatHexPoint.GetEdgeAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetEdgeAnchor" data-uid="Gamelogic.Grids.FlatHexPoint.GetEdgeAnchor">
+  GetEdgeAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatRhombPoint GetEdgeAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetEdges_" data-uid="Gamelogic.Grids.FlatHexPoint.GetEdges*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetEdges" data-uid="Gamelogic.Grids.FlatHexPoint.GetEdges">
+  GetEdges()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FlatRhombPoint&gt; GetEdges()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetHashCode_" data-uid="Gamelogic.Grids.FlatHexPoint.GetHashCode*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetHashCode" data-uid="Gamelogic.Grids.FlatHexPoint.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetVertexAnchor_" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertexAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetVertexAnchor" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertexAnchor">
+  GetVertexAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint GetVertexAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetVertexFaceAnchor_" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertexFaceAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetVertexFaceAnchor" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertexFaceAnchor">
+  GetVertexFaceAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint GetVertexFaceAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetVertexFaces_" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertexFaces*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetVertexFaces" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertexFaces">
+  GetVertexFaces()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the coordinates of the faces that corresponds to this point treated as a vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;PointyTriPoint&gt; GetVertexFaces()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_GetVertices_" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertices*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_GetVertices" data-uid="Gamelogic.Grids.FlatHexPoint.GetVertices">
+  GetVertices()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;PointyTriPoint&gt; GetVertices()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsEquivalentUnderTransformsAndTranslation_" data-uid="Gamelogic.Grids.FlatHexPoint.IsEquivalentUnderTransformsAndTranslation*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsEquivalentUnderTransformsAndTranslation_System_Collections_Generic_IEnumerable_Gamelogic_Grids_FlatHexPoint__System_Collections_Generic_IEnumerable_Gamelogic_Grids_FlatHexPoint__" data-uid="Gamelogic.Grids.FlatHexPoint.IsEquivalentUnderTransformsAndTranslation(System.Collections.Generic.IEnumerable{Gamelogic.Grids.FlatHexPoint},System.Collections.Generic.IEnumerable{Gamelogic.Grids.FlatHexPoint})">
+  IsEquivalentUnderTransformsAndTranslation(IEnumerable&lt;FlatHexPoint&gt;, IEnumerable&lt;FlatHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEquivalentUnderTransformsAndTranslation(IEnumerable&lt;FlatHexPoint&gt; shape1, IEnumerable&lt;FlatHexPoint&gt; shape2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>shape2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInNegativeHalfPlaneX_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneX*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInNegativeHalfPlaneX_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneX(System.Int32)">
+  IsInNegativeHalfPlaneX(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInNegativeHalfPlaneX(int x0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInNegativeHalfPlaneY_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInNegativeHalfPlaneY_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneY(System.Int32)">
+  IsInNegativeHalfPlaneY(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInNegativeHalfPlaneY(int y0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>y0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInNegativeHalfPlaneZ_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneZ*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInNegativeHalfPlaneZ_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInNegativeHalfPlaneZ(System.Int32)">
+  IsInNegativeHalfPlaneZ(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInNegativeHalfPlaneZ(int z0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>z0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInPositiveHalfPlaneX_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneX*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInPositiveHalfPlaneX_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneX(System.Int32)">
+  IsInPositiveHalfPlaneX(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this point is inside the half plane x &gt;= x0.</p>
+<p>see <a href="http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/">http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/</a></p>
+<p>Since version 1.3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInPositiveHalfPlaneX(int x0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInPositiveHalfPlaneY_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInPositiveHalfPlaneY_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneY(System.Int32)">
+  IsInPositiveHalfPlaneY(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this point is inside the half plane y &gt;= x0.</p>
+<p>see <a href="http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/">http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/</a></p>
+<p>Since version 1.3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInPositiveHalfPlaneY(int y0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>y0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInPositiveHalfPlaneZ_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneZ*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInPositiveHalfPlaneZ_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInPositiveHalfPlaneZ(System.Int32)">
+  IsInPositiveHalfPlaneZ(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this point is inside the half plane z &gt;= z0.</p>
+<p>see <a href="http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/">http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/</a></p>
+<p>Since version 1.3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInPositiveHalfPlaneZ(int z0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>z0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInsideHexagon_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsideHexagon*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInsideHexagon_Gamelogic_Grids_FlatHexPoint_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsideHexagon(Gamelogic.Grids.FlatHexPoint,System.Int32)">
+  IsInsideHexagon(FlatHexPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this point is in the hexagon with the given radius
+and given center.</p>
+<p>A single point is considered a hexagon with zero radius.</p>
+<p>see <a href="http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/">http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/</a></p>
+<p>Since version 1.3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsideHexagon(FlatHexPoint center, int radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInsideHexagon_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsideHexagon*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInsideHexagon_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsideHexagon(System.Int32)">
+  IsInsideHexagon(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this point is in the hexagon with the given radius
+and center at the origin.</p>
+<p>The origin is considered the hexagon with zero radius.</p>
+<p>see <a href="http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/">http://devmag.org.za/2013/08/31/geometry-with-hex-coordinates/</a></p>
+<p>Since version 1.3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsideHexagon(int radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInsidePolygon_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsidePolygon*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInsidePolygon_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsidePolygon(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  IsInsidePolygon(int, int, int, int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsidePolygon(int x0, int x1, int y0, int y1, int z0, int z1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>x1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>z0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>z1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_IsInsideTriangle_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsideTriangle*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_IsInsideTriangle_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.IsInsideTriangle(System.Int32,System.Int32,System.Int32)">
+  IsInsideTriangle(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsideTriangle(int x0, int y0, int z0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>z0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Magnitude_" data-uid="Gamelogic.Grids.FlatHexPoint.Magnitude*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Magnitude" data-uid="Gamelogic.Grids.FlatHexPoint.Magnitude">
+  Magnitude()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The magnitude of a hex point is the hex-distance between the point and the origin.
+This notation makes using hex points useful to use as vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Magnitude()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Mod_" data-uid="Gamelogic.Grids.FlatHexPoint.Mod*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Mod_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Mod(Gamelogic.Grids.FlatHexPoint)">
+  Mod(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a new point that represents the
+reminder when the first point is divided
+by the second point	component-wise. The
+division is integer division.</p>
+<p>Since version 1.6 (Rect)
+Since version 1.7 (other)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Mod(FlatHexPoint otherPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>otherPoint</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_MoveBackBy_" data-uid="Gamelogic.Grids.FlatHexPoint.MoveBackBy*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_MoveBackBy_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.MoveBackBy(Gamelogic.Grids.FlatHexPoint)">
+  MoveBackBy(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint MoveBackBy(FlatHexPoint translation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>translation</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_FlatHexPoint_MoveBackBy_Gamelogic_Grids_FlatHexPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><pre><code class="lang-csharp">new SplicedVector(u.B.Subtract(v.B), (SpliceCount + u.I - v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_MoveBy_" data-uid="Gamelogic.Grids.FlatHexPoint.MoveBy*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_MoveBy_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.MoveBy(Gamelogic.Grids.FlatHexPoint)">
+  MoveBy(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I,</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint MoveBy(FlatHexPoint translation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>translation</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_FlatHexPoint_MoveBy_Gamelogic_Grids_FlatHexPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This operation is the same as
+<pre><code class="lang-csharp">new SplicedVector(u.B.Translate(v.B), (u.I + v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Mul_" data-uid="Gamelogic.Grids.FlatHexPoint.Mul*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Mul_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Mul(Gamelogic.Grids.FlatHexPoint)">
+  Mul(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a new point that represents the
+first point multiplied by the second point
+component-wise.</p>
+<p>Since version 1.6 (Rect)
+Since version 1.7 (other)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Mul(FlatHexPoint otherPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>otherPoint</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Negate_" data-uid="Gamelogic.Grids.FlatHexPoint.Negate*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Negate" data-uid="Gamelogic.Grids.FlatHexPoint.Negate">
+  Negate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new point with the vector component negated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Negate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Perp_" data-uid="Gamelogic.Grids.FlatHexPoint.Perp*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Perp" data-uid="Gamelogic.Grids.FlatHexPoint.Perp">
+  Perp()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public FlatHexPoint Perp()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_PerpDot_" data-uid="Gamelogic.Grids.FlatHexPoint.PerpDot*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_PerpDot_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.PerpDot(Gamelogic.Grids.FlatHexPoint)">
+  PerpDot(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public int PerpDot(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_PointFromVertexAnchor_" data-uid="Gamelogic.Grids.FlatHexPoint.PointFromVertexAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_PointFromVertexAnchor" data-uid="Gamelogic.Grids.FlatHexPoint.PointFromVertexAnchor">
+  PointFromVertexAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint PointFromVertexAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_ReflectAboutX_" data-uid="Gamelogic.Grids.FlatHexPoint.ReflectAboutX*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_ReflectAboutX" data-uid="Gamelogic.Grids.FlatHexPoint.ReflectAboutX">
+  ReflectAboutX()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint ReflectAboutX()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_ReflectAboutY_" data-uid="Gamelogic.Grids.FlatHexPoint.ReflectAboutY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_ReflectAboutY" data-uid="Gamelogic.Grids.FlatHexPoint.ReflectAboutY">
+  ReflectAboutY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint ReflectAboutY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate120_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate120*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate120" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate120">
+  Rotate120()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate120()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate120AndReflectAboutY_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate120AndReflectAboutY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate120AndReflectAboutY" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate120AndReflectAboutY">
+  Rotate120AndReflectAboutY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate120AndReflectAboutY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate180_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate180*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate180" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate180">
+  Rotate180()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate180()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate180AndReflectAboutY_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate180AndReflectAboutY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate180AndReflectAboutY" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate180AndReflectAboutY">
+  Rotate180AndReflectAboutY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate180AndReflectAboutY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate240_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate240*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate240" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate240">
+  Rotate240()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate240()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate240AndReflectAboutY_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate240AndReflectAboutY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate240AndReflectAboutY" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate240AndReflectAboutY">
+  Rotate240AndReflectAboutY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate240AndReflectAboutY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate300_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate300*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate300" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate300">
+  Rotate300()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate300()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate300AndReflectAboutY_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate300AndReflectAboutY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate300AndReflectAboutY" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate300AndReflectAboutY">
+  Rotate300AndReflectAboutY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate300AndReflectAboutY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate60_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate60*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate60" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate60">
+  Rotate60()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate60()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Rotate60AndReflectAboutY_" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate60AndReflectAboutY*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Rotate60AndReflectAboutY" data-uid="Gamelogic.Grids.FlatHexPoint.Rotate60AndReflectAboutY">
+  Rotate60AndReflectAboutY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Rotate60AndReflectAboutY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_ScaleDown_" data-uid="Gamelogic.Grids.FlatHexPoint.ScaleDown*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_ScaleDown_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.ScaleDown(System.Int32)">
+  ScaleDown(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales this vector by the given amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint ScaleDown(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_FlatHexPoint_ScaleDown_System_Int32__examples">Examples</h4>
+  <pre><code class="lang-csharp">v.ScaleUp(1)
+v.ScaleUp(n) ==  v.ScaleUp(n - 1).Translate(v)</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_ScaleUp_" data-uid="Gamelogic.Grids.FlatHexPoint.ScaleUp*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_ScaleUp_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.ScaleUp(System.Int32)">
+  ScaleUp(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint ScaleUp(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Subtract_" data-uid="Gamelogic.Grids.FlatHexPoint.Subtract*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Subtract_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Subtract(Gamelogic.Grids.FlatHexPoint)">
+  Subtract(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts the other point from this point, and returns the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Subtract(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_ToCanonicalPosition_" data-uid="Gamelogic.Grids.FlatHexPoint.ToCanonicalPosition*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_ToCanonicalPosition_System_Collections_Generic_IEnumerable_Gamelogic_Grids_FlatHexPoint__" data-uid="Gamelogic.Grids.FlatHexPoint.ToCanonicalPosition(System.Collections.Generic.IEnumerable{Gamelogic.Grids.FlatHexPoint})">
+  ToCanonicalPosition(IEnumerable&lt;FlatHexPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;FlatHexPoint&gt; ToCanonicalPosition(IEnumerable&lt;FlatHexPoint&gt; shape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shape</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_ToString_" data-uid="Gamelogic.Grids.FlatHexPoint.ToString*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_ToString" data-uid="Gamelogic.Grids.FlatHexPoint.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_Translate_" data-uid="Gamelogic.Grids.FlatHexPoint.Translate*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_Translate_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.Translate(Gamelogic.Grids.FlatHexPoint)">
+  Translate(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is a norm defined on the point, such that <code>p1.Difference(p2).Abs()</code> is equal to
+<code>p1.DistanceFrom(p2)</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint Translate(FlatHexPoint translation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>translation</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint___GetColor__ReferenceImplementation_" data-uid="Gamelogic.Grids.FlatHexPoint.__GetColor__ReferenceImplementation*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint___GetColor__ReferenceImplementation_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.__GetColor__ReferenceImplementation(System.Int32,System.Int32,System.Int32)">
+  __GetColor__ReferenceImplementation(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a coloring of the grid such that
+if a point p has color k, then all points
+p + m[ux, 0] + n[vx, vy] have the same color
+for any integers a and b.</p>
+<p>More information anout grid colorings:
+<a href="http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/">http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/</a></p>
+<p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int __GetColor__ReferenceImplementation(int ux, int vx, int vy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ux</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>vx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>vy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Addition_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Addition*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Addition_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Addition(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator +(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator +(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Division_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Division*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Division_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Division(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator /(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator /(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Division_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Division*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Division_Gamelogic_Grids_FlatHexPoint_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Division(Gamelogic.Grids.FlatHexPoint,System.Int32)">
+  operator /(FlatHexPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator /(FlatHexPoint point, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Equality_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Equality*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Equality_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Equality(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator ==(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Inequality_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Inequality*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Inequality_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Inequality(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator !=(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Modulus_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Modulus*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Modulus_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Modulus(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator %(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator %(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Multiply_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Multiply*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Multiply_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Multiply(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator *(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator *(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Multiply_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Multiply*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Multiply_Gamelogic_Grids_FlatHexPoint_System_Int32_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Multiply(Gamelogic.Grids.FlatHexPoint,System.Int32)">
+  operator *(FlatHexPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator *(FlatHexPoint point, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_Subtraction_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Subtraction*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_Subtraction_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_Subtraction(Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator -(FlatHexPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator -(FlatHexPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_UnaryNegation_" data-uid="Gamelogic.Grids.FlatHexPoint.op_UnaryNegation*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_UnaryNegation_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_UnaryNegation(Gamelogic.Grids.FlatHexPoint)">
+  operator -(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator -(FlatHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_FlatHexPoint_op_UnaryPlus_" data-uid="Gamelogic.Grids.FlatHexPoint.op_UnaryPlus*"></a>
+
+  <h3 id="Gamelogic_Grids_FlatHexPoint_op_UnaryPlus_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.FlatHexPoint.op_UnaryPlus(Gamelogic.Grids.FlatHexPoint)">
+  operator +(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FlatHexPoint operator +(FlatHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

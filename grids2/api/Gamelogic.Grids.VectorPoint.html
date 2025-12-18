@@ -1,0 +1,1262 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct VectorPoint | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct VectorPoint | Gamelogic Grids ">
+      
+      <meta name="description" content="A VectorPoint behaves like a vector, except that it&#39;s coordinates are integers.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.VectorPoint">
+
+
+
+  <h1 id="Gamelogic_Grids_VectorPoint" data-uid="Gamelogic.Grids.VectorPoint" class="text-break">
+Struct VectorPoint  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A VectorPoint behaves like a vector, except that it's coordinates are integers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public struct VectorPoint : IVectorPoint&lt;VectorPoint&gt;, ISplicedVectorPoint&lt;VectorPoint, VectorPoint&gt;, IEquatable&lt;VectorPoint&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IVectorPoint-1.html">IVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.ISplicedVectorPoint-2.html">ISplicedVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a>, <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_VectorPoint__ctor_" data-uid="Gamelogic.Grids.VectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint__ctor_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.VectorPoint.#ctor(System.Int32,System.Int32)">
+  VectorPoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Zero" data-uid="Gamelogic.Grids.VectorPoint.Zero">
+  Zero
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly VectorPoint Zero</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_VectorPoint_X_" data-uid="Gamelogic.Grids.VectorPoint.X*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_X" data-uid="Gamelogic.Grids.VectorPoint.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int X { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Y_" data-uid="Gamelogic.Grids.VectorPoint.Y*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Y" data-uid="Gamelogic.Grids.VectorPoint.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Y { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Div_" data-uid="Gamelogic.Grids.VectorPoint.Div*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Div_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Div(Gamelogic.Grids.VectorPoint)">
+  Div(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Integer divides a point by another point component by component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Div(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_Div_Gamelogic_Grids_VectorPoint__examples">Examples</h4>
+  <p>(-5, 5) Div(2, 2) == (-3, 2)</p>
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_Div_Gamelogic_Grids_VectorPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Remainders are always positive.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Dot_" data-uid="Gamelogic.Grids.VectorPoint.Dot*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Dot_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Dot(Gamelogic.Grids.VectorPoint)">
+  Dot(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public int Dot(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Equals_" data-uid="Gamelogic.Grids.VectorPoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Equals_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Equals(Gamelogic.Grids.VectorPoint)">
+  Equals(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Equals_" data-uid="Gamelogic.Grids.VectorPoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Equals_System_Object_" data-uid="Gamelogic.Grids.VectorPoint.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_GetHashCode_" data-uid="Gamelogic.Grids.VectorPoint.GetHashCode*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_GetHashCode" data-uid="Gamelogic.Grids.VectorPoint.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Magnitude_" data-uid="Gamelogic.Grids.VectorPoint.Magnitude*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Magnitude" data-uid="Gamelogic.Grids.VectorPoint.Magnitude">
+  Magnitude()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Magnitude()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Mod_" data-uid="Gamelogic.Grids.VectorPoint.Mod*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Mod_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Mod(Gamelogic.Grids.VectorPoint)">
+  Mod(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Integer divides a point component by component and returns the remainder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Mod(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_Mod_Gamelogic_Grids_VectorPoint__examples">Examples</h4>
+  <p>(-5, 5) Mod (2, 2) == (1, 1)</p>
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_Mod_Gamelogic_Grids_VectorPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Remainders are always positive.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_MoveBackBy_" data-uid="Gamelogic.Grids.VectorPoint.MoveBackBy*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_MoveBackBy_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.MoveBackBy(Gamelogic.Grids.VectorPoint)">
+  MoveBackBy(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint MoveBackBy(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_MoveBackBy_Gamelogic_Grids_VectorPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><pre><code class="lang-csharp">new SplicedVector(u.B.Subtract(v.B), (SpliceCount + u.I - v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_MoveBy_" data-uid="Gamelogic.Grids.VectorPoint.MoveBy*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_MoveBy_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.MoveBy(Gamelogic.Grids.VectorPoint)">
+  MoveBy(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I,</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint MoveBy(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_MoveBy_Gamelogic_Grids_VectorPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This operation is the same as
+<pre><code class="lang-csharp">new SplicedVector(u.B.Translate(v.B), (u.I + v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Mul_" data-uid="Gamelogic.Grids.VectorPoint.Mul*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Mul_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Mul(Gamelogic.Grids.VectorPoint)">
+  Mul(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies two points component by component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Mul(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_Mul_Gamelogic_Grids_VectorPoint__examples">Examples</h4>
+  <p>(-5, 5) Mul (2, 2) == (-10, 10)</p>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Negate_" data-uid="Gamelogic.Grids.VectorPoint.Negate*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Negate" data-uid="Gamelogic.Grids.VectorPoint.Negate">
+  Negate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new point with the vector component negated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Negate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_PerpDot_" data-uid="Gamelogic.Grids.VectorPoint.PerpDot*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_PerpDot_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.PerpDot(Gamelogic.Grids.VectorPoint)">
+  PerpDot(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public int PerpDot(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_ScaleDown_" data-uid="Gamelogic.Grids.VectorPoint.ScaleDown*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_ScaleDown_System_Int32_" data-uid="Gamelogic.Grids.VectorPoint.ScaleDown(System.Int32)">
+  ScaleDown(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales this vector by the given amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint ScaleDown(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_VectorPoint_ScaleDown_System_Int32__examples">Examples</h4>
+  <pre><code class="lang-csharp">v.ScaleUp(1)
+v.ScaleUp(n) ==  v.ScaleUp(n - 1).Translate(v)</code></pre>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_ScaleUp_" data-uid="Gamelogic.Grids.VectorPoint.ScaleUp*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_ScaleUp_System_Int32_" data-uid="Gamelogic.Grids.VectorPoint.ScaleUp(System.Int32)">
+  ScaleUp(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint ScaleUp(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Subtract_" data-uid="Gamelogic.Grids.VectorPoint.Subtract*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Subtract_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Subtract(Gamelogic.Grids.VectorPoint)">
+  Subtract(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translates this point by the negation of the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Subtract(VectorPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_ToString_" data-uid="Gamelogic.Grids.VectorPoint.ToString*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_ToString" data-uid="Gamelogic.Grids.VectorPoint.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_Translate_" data-uid="Gamelogic.Grids.VectorPoint.Translate*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_Translate_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.Translate(Gamelogic.Grids.VectorPoint)">
+  Translate(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translate this point by the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint Translate(VectorPoint translation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>translation</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_Addition_" data-uid="Gamelogic.Grids.VectorPoint.op_Addition*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_Addition_Gamelogic_Grids_VectorPoint_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.op_Addition(Gamelogic.Grids.VectorPoint,Gamelogic.Grids.VectorPoint)">
+  operator +(VectorPoint, VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VectorPoint operator +(VectorPoint point1, VectorPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_Division_" data-uid="Gamelogic.Grids.VectorPoint.op_Division*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_Division_Gamelogic_Grids_VectorPoint_System_Int32_" data-uid="Gamelogic.Grids.VectorPoint.op_Division(Gamelogic.Grids.VectorPoint,System.Int32)">
+  operator /(VectorPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VectorPoint operator /(VectorPoint point, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_Equality_" data-uid="Gamelogic.Grids.VectorPoint.op_Equality*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_Equality_Gamelogic_Grids_VectorPoint_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.op_Equality(Gamelogic.Grids.VectorPoint,Gamelogic.Grids.VectorPoint)">
+  operator ==(VectorPoint, VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(VectorPoint point1, VectorPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_Inequality_" data-uid="Gamelogic.Grids.VectorPoint.op_Inequality*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_Inequality_Gamelogic_Grids_VectorPoint_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.op_Inequality(Gamelogic.Grids.VectorPoint,Gamelogic.Grids.VectorPoint)">
+  operator !=(VectorPoint, VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(VectorPoint point1, VectorPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_Multiply_" data-uid="Gamelogic.Grids.VectorPoint.op_Multiply*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_Multiply_Gamelogic_Grids_VectorPoint_System_Int32_" data-uid="Gamelogic.Grids.VectorPoint.op_Multiply(Gamelogic.Grids.VectorPoint,System.Int32)">
+  operator *(VectorPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VectorPoint operator *(VectorPoint point, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_Subtraction_" data-uid="Gamelogic.Grids.VectorPoint.op_Subtraction*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_Subtraction_Gamelogic_Grids_VectorPoint_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.op_Subtraction(Gamelogic.Grids.VectorPoint,Gamelogic.Grids.VectorPoint)">
+  operator -(VectorPoint, VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VectorPoint operator -(VectorPoint point1, VectorPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_UnaryNegation_" data-uid="Gamelogic.Grids.VectorPoint.op_UnaryNegation*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_UnaryNegation_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.op_UnaryNegation(Gamelogic.Grids.VectorPoint)">
+  operator -(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VectorPoint operator -(VectorPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_VectorPoint_op_UnaryPlus_" data-uid="Gamelogic.Grids.VectorPoint.op_UnaryPlus*"></a>
+
+  <h3 id="Gamelogic_Grids_VectorPoint_op_UnaryPlus_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.VectorPoint.op_UnaryPlus(Gamelogic.Grids.VectorPoint)">
+  operator +(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VectorPoint operator +(VectorPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

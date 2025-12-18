@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Range Finding | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Range Finding | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/RangeFinding.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="range-finding">Range Finding</h1>
+
+<p>This article describes how to find the points inside a grid within a range. It uses many of the same concepts as
+<a href="PathFinding.html">Path Finding</a> , so make sure to read that first first.</p>
+<p>The simplest way to find all points within a certain range is to do a LINQ query such as the following:</p>
+<pre><code class="lang-csharp">var pointsInRange = grid.Points.Where(p =&gt; RectPoint.ManhattanNorm(center - p) &lt; radius);
+</code></pre>
+<p>This finds all the points within a given radius using the ManhattanNorm. This works well provided that:</p>
+<ul>
+<li>The grid is small.</li>
+<li>You don't want to use a weighted cost.</li>
+<li>You don't care about accessibility (all points are reachable).</li>
+</ul>
+<p>If any of those conditions don't hold, you need to use one of the range finding methods:</p>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.Algorithms.GetPointsInRange.html#Gamelogic_Grids2_Algorithms_GetPointsInRange__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Single__System_Single_">GetPointsInRange&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, TPoint, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, float&gt;, float)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.Algorithms.GetPointsInRange.html#Gamelogic_Grids2_Algorithms_GetPointsInRange__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Int32__System_Int32_">GetPointsInRange&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, TPoint, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, int&gt;, int)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.Algorithms.GetPointsInRangeCost.html#Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Single__System_Single_">GetPointsInRangeCost&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, TPoint, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, float&gt;, float)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.Algorithms.GetPointsInRangeCost.html#Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Int32__System_Int32_">GetPointsInRangeCost&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, TPoint, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, int&gt;, int)</a></li>
+</ul>
+<p>Here is the function definition of the first:</p>
+<pre><code class="lang-csharp">public static IEnumerable&lt;TPoint&gt; GetPointsInRange&lt;TPoint&gt;(
+    IGrid&lt;TPoint&gt; grid,
+    TPoint start,
+    Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt; getConnectedPoints,
+    Func&lt;TPoint, bool&gt; isAccessible,
+    Func&lt;TPoint, TPoint, float&gt; getCellMoveCost,
+    float moveRange)
+</code></pre>
+<p>And a typical call:</p>
+<pre><code class="lang-csharp">public static IEnumerable&lt;TPoint&gt; GetPointsInRange&lt;TPoint&gt;(
+    grid,
+    start,
+    RectPoint.GetOrthogonalNeighbors,
+    p =&gt; true,
+    (p, q) =&gt; 1,
+    3)
+</code></pre>
+<p>The function returns a list of points, in the case above all points
+that are within 3 units of the start cell. Most arguments and steps
+are exactly the same as for path finding. Here is a summary of the
+steps:</p>
+<p>Which of the four overloads should you use? The first two return only
+a list of points. The last two returns a dictionary containing the points
+as keys and the cost of each point as that points value. Use one of these
+if you also need the costs. The difference between the overloads for
+each pair is whether the cost is measured as a float or integer. If you
+have an integer cost, using that version is slightly faster.</p>
+<h2 id="calling-getpointsinrange">Calling GetPointsInRange</h2>
+<ol>
+<li>Implement a cell that supports the necessary functionality for the type of range-finding you want to do.</li>
+<li>Work out what types all your parameters should be. These are the same as for path finding, except for the range parameter (which can either be an int or float, depending on whether your distance metric uses ints or floats).</li>
+<li>Write a method or lambda expression to decide whether a cell is accessible or not.</li>
+<li>Write a lambda expression or method for determining the true cost of reaching two points if they are neighbors.
+Since there is no heuristic cost involved with range finding, you need not worry about that. As with path finding,
+you get different results depending on the distance metric and your neighbor setup. Below is an example for some of
+the different options. (See <a href="PathFinding.html">Path Finding</a> for an explanation of the costs.)</li>
+</ol>
+<h3 id="grid-distance">Grid Distance</h3>
+<table>
+<thead>
+<tr>
+<th>Orthogonal</th>
+<th>Diagonal</th>
+<th>Orthogonal and Diagonal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/range/range_grid_orth.png" alt="The image shows a grid of squares with two obstacles in which a range of dots with an orthogonal pattern can be observed.)"></td>
+<td><img src="../images/range/range_grid_diag.png" alt="The image shows a grid of squares with two obstacles in which a range of dots with a diagonal pattern can be observed."></td>
+<td><img src="../images/range/range_grid_all.png" alt="The image shows a grid of squares with two obstacles in which a range of points with a diagonal and orthogonal pattern can be observed."></td>
+</tr>
+</tbody>
+</table>
+<h3 id="euclidean-distance">Euclidean Distance</h3>
+<table>
+<thead>
+<tr>
+<th>Orthogonal</th>
+<th>Diagonal</th>
+<th>Orthogonal and Diagonal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/range/range_euclidean_orth.png" alt="The image shows a grid of squares with two obstacles in which a range of points with an orthogonal pattern through Euclidean distance can be observed."></td>
+<td><img src="../images/range/range_euclidean_diag.png" alt="The image shows a grid of squares with two obstacles in which a range of points with a diagonal pattern through Euclidean distance can be observed."></td>
+<td><img src="../images/range/range_euclidean_all.png" alt="The image shows a grid of squares with two obstacles in which a range of points with a diagonal and orthogonal pattern through Euclidean distance can be observed."></td>
+</tr>
+</tbody>
+</table>
+<h3 id="weighted-costs">Weighted Costs</h3>
+<table>
+<thead>
+<tr>
+<th>Orthogonal</th>
+<th>Diagonal</th>
+<th>Orthogonal and Diagonal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/range/range_weighted_orth.png" alt="The image shows a grid of squares with two obstacles in which a range of points can be observed in an orthogonal pattern across a weighted distance."></td>
+<td><img src="../images/range/range_weighted_diag.png" alt="The image shows a grid of squares with two obstacles in which a range of dots can be seen in a diagonal pattern across a weighted distance."></td>
+<td><img src="../images/range/range_weighted_all.png" alt="The image shows a grid of squares with two obstacles in which a range of points can be observed in a diagonal and orthogonal pattern across a weighted distance."></td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

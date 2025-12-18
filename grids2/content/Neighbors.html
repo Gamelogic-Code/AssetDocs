@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Neighbors | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Neighbors | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/Neighbors.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="neighbors">Neighbors</h1>
+
+<p>Finding the neighbors of a point is important for many grid algorithms, including path finding, range finding, and
+connection algorithms.</p>
+<p>But what are the neighbors of a point? Two points are neighbors if they are “next” to each other in a grid. But even for
+simple grids like rect grids there is more than one way to define what “next” to means. For example, we can either mean
+two points are “next” to each other when their corresponding cells share an edge (this will give us the four orthogonal
+neighbors), or we can mean that two points are “next” to each other when their corresponding cells share a vertex
+(giving us 8 neighbors – 4 orthogonal and 4 diagonal).</p>
+<p>So the notion of “next” is not very useful as such, and we drop it altogether. In Grids 2, neighbors are defined by
+arbitrary functions that takes a point, and return its neighbors as a list. And although you can define your own
+function, we ship with a few common cases for simple grids.</p>
+<p>For rect grids, there are functions defined in RectPoint that will give the neighbors of a point.</p>
+<p>You can find the neighbors of a point with the <code>Get*Neighbors</code> static methods, for example, like this:</p>
+<pre><code class="lang-csharp">var neighbors = RectPoint.GetOrthogonalNeighbors(point);
+</code></pre>
+<p>This method will always give four neighbors of a point. Usually, you may only be interested in those neighbors of a
+point that lie inside your grid. You can achieve this as follows:</p>
+<pre><code class="lang-csharp">var neighborsInGrid = RectPoint.GetOrthogonalNeighbors(point).In(grid);
+</code></pre>
+<p>In is an extension method defined on any enumerable of grid points.</p>
+<p>You can find the neighbors of a point in a hex grid using a similar method defined in PointyHexPoint.</p>
+<p>There is also a method for finding all the neighbors by adding a list of direction vectors to the point, like this:</p>
+<pre><code class="lang-csharp">var neighbors = point.GetVectorNeighbors(directions);
+</code></pre>
+<p>For example, if you want to consider cells neighbors that are a Knight’s move apart in a rect grid, you can call the
+method above with directions defined as:</p>
+<pre><code class="lang-csharp">var directions = new List&lt;GridPoint2&gt;
+{
+     new GridPoint2(1, 2),
+     new GridPoint2(1, -2),
+     new GridPoint2(-1, 2),
+     new GridPoint2(-1, -2),
+     new GridPoint2(2, 1),
+     new GridPoint2(2, -1),
+     new GridPoint2(-2, 1),
+     new GridPoint2(-2, -1),
+};
+</code></pre>
+<p>For more exotic situations, you need to define your own method that takes a point and returns an enumerable of points.
+(Such methods can be used in the AStar and FindRange methods in algorithms);</p>
+<p>In many cases, you only want the neighbors that are inside a grid or shape. In this case, you can use the
+<a class="xref" href="../api/Gamelogic.Grids2.GridExtensions.In.html">In</a> extension method.</p>
+<pre><code class="lang-csharp">var neighborsInGrid = PointyHexPoint.GetOrthogonalNeighbors(point).In(grid);
+</code></pre>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

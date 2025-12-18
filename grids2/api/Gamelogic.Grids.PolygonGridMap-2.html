@@ -1,0 +1,729 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PolygonGridMap&lt;TPoint, TBasePoint&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PolygonGridMap&lt;TPoint, TBasePoint&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="A map that can be used for general spliced grids made from polygons. To use this map: - Find a rectangular tessellation for your grid. - This rectangle will consist out of several polygons, each which represents a (partial) cell of your grid. - One of these polygons should correspond to the splice point (0, 0, 0). - Find the center of this polygon relative to the rectangle in normalized coordinates, that is, so that the entire rectangle corresponds to (0, 0) -&amp;gt; (1, 1). - Label the polygons 0, 1, 2, ... etc. - Find the vertices of each polygon in normalized coordinates. - Now calculate the spliced vector point offsets for each polygon, relative to the (0, 0, 0) polygon, in normalized coordinates.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.PolygonGridMap`2">
+
+
+
+  <h1 id="Gamelogic_Grids_PolygonGridMap_2" data-uid="Gamelogic.Grids.PolygonGridMap`2" class="text-break">
+Class PolygonGridMap&lt;TPoint, TBasePoint&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A map that can be used for general spliced grids made from polygons.</p>
+<p>To use this map:
+- Find a rectangular tessellation for your grid.
+- This rectangle will consist out of several polygons, each which represents a (partial) cell of your grid.
+- One of these polygons should correspond to the splice point (0, 0, 0).
+- Find the center of this polygon relative to the rectangle in normalized coordinates, that is, so that the entire rectangle corresponds to (0, 0) -&gt; (1, 1).
+- Label the polygons 0, 1, 2, ... etc.
+- Find the vertices of each polygon in normalized coordinates.
+- Now calculate the spliced vector point offsets for each polygon, relative to the (0, 0, 0)
+polygon, in normalized coordinates.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 2, 0)]
+public abstract class PolygonGridMap&lt;TPoint, TBasePoint&gt; : AbstractMap&lt;TPoint&gt;, IMap&lt;TPoint&gt;, IGridToWorldMap&lt;TPoint&gt; where TPoint : ISplicedPoint&lt;TPoint, TBasePoint&gt; where TBasePoint : IGridPoint&lt;TBasePoint&gt;, IVectorPoint&lt;TBasePoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+    <dt><code>TBasePoint</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.AbstractMap-1.html">AbstractMap</a>&lt;TPoint&gt;</div>
+      <div><span class="xref">PolygonGridMap&lt;TPoint, TBasePoint&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IMap-1.html">IMap</a>&lt;TPoint&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridToWorldMap-1.html">IGridToWorldMap</a>&lt;TPoint&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.CairoMap.html">CairoMap</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_cellDimensions">AbstractMap&lt;TPoint&gt;.cellDimensions</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_anchorTranslation">AbstractMap&lt;TPoint&gt;.anchorTranslation</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_gridPointTransform">AbstractMap&lt;TPoint&gt;.gridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_inverseGridPointTransform">AbstractMap&lt;TPoint&gt;.inverseGridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GetCellDimensions">AbstractMap&lt;TPoint&gt;.GetCellDimensions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GetAnchorTranslation">AbstractMap&lt;TPoint&gt;.GetAnchorTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Item__0_">AbstractMap&lt;TPoint&gt;.this[TPoint]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Item_UnityEngine_Vector2_">AbstractMap&lt;TPoint&gt;.this[Vector2]</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_GridPointTransform">AbstractMap&lt;TPoint&gt;.GridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_InverseGridPointTransform">AbstractMap&lt;TPoint&gt;.InverseGridPointTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_CalcGridDimensions_Gamelogic_Grids_IGridSpace__0__">AbstractMap&lt;TPoint&gt;.CalcGridDimensions(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_CalcAnchorBottomLeft_Gamelogic_Grids_IGridSpace__0__">AbstractMap&lt;TPoint&gt;.CalcAnchorBottomLeft(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_CalcBottomLeft_Gamelogic_Grids_IGridSpace__0__">AbstractMap&lt;TPoint&gt;.CalcBottomLeft(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_CalcAnchorDimensions_Gamelogic_Grids_IGridSpace__0__">AbstractMap&lt;TPoint&gt;.CalcAnchorDimensions(IGridSpace&lt;TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Translate_UnityEngine_Vector2_">AbstractMap&lt;TPoint&gt;.Translate(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Translate_System_Single_System_Single_">AbstractMap&lt;TPoint&gt;.Translate(float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_TranslateX_System_Single_">AbstractMap&lt;TPoint&gt;.TranslateX(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_TranslateY_System_Single_">AbstractMap&lt;TPoint&gt;.TranslateY(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_ReflectAboutY">AbstractMap&lt;TPoint&gt;.ReflectAboutY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_ReflectAboutX">AbstractMap&lt;TPoint&gt;.ReflectAboutX()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_FlipXY">AbstractMap&lt;TPoint&gt;.FlipXY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Rotate_System_Single_">AbstractMap&lt;TPoint&gt;.Rotate(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_RotateAround_System_Single_UnityEngine_Vector2_">AbstractMap&lt;TPoint&gt;.RotateAround(float, Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Rotate90">AbstractMap&lt;TPoint&gt;.Rotate90()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Rotate180">AbstractMap&lt;TPoint&gt;.Rotate180()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Scale_System_Single_">AbstractMap&lt;TPoint&gt;.Scale(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Scale_System_Single_System_Single_">AbstractMap&lt;TPoint&gt;.Scale(float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Scale_UnityEngine_Vector2_">AbstractMap&lt;TPoint&gt;.Scale(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_SetGridPointTransforms_System_Func__0__0__System_Func__0__0__">AbstractMap&lt;TPoint&gt;.SetGridPointTransforms(Func&lt;TPoint, TPoint&gt;, Func&lt;TPoint, TPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_WithWindow_UnityEngine_Rect_">AbstractMap&lt;TPoint&gt;.WithWindow(Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellLeft">AbstractMap&lt;TPoint&gt;.AnchorCellLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellCenter">AbstractMap&lt;TPoint&gt;.AnchorCellCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellRight">AbstractMap&lt;TPoint&gt;.AnchorCellRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTop">AbstractMap&lt;TPoint&gt;.AnchorCellTop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottom">AbstractMap&lt;TPoint&gt;.AnchorCellBottom()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddle">AbstractMap&lt;TPoint&gt;.AnchorCellMiddle()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTopLeft">AbstractMap&lt;TPoint&gt;.AnchorCellTopLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTopCenter">AbstractMap&lt;TPoint&gt;.AnchorCellTopCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellTopRight">AbstractMap&lt;TPoint&gt;.AnchorCellTopRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddleLeft">AbstractMap&lt;TPoint&gt;.AnchorCellMiddleLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddleCenter">AbstractMap&lt;TPoint&gt;.AnchorCellMiddleCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellMiddleRight">AbstractMap&lt;TPoint&gt;.AnchorCellMiddleRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottomLeft">AbstractMap&lt;TPoint&gt;.AnchorCellBottomLeft()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottomCenter">AbstractMap&lt;TPoint&gt;.AnchorCellBottomCenter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_AnchorCellBottomRight">AbstractMap&lt;TPoint&gt;.AnchorCellBottomRight()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_Animate_System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">AbstractMap&lt;TPoint&gt;.Animate(Func&lt;Vector2, float, Vector2&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXY_System_Single_">AbstractMap&lt;TPoint&gt;.To3DXY(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXY">AbstractMap&lt;TPoint&gt;.To3DXY()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXZ_System_Single_">AbstractMap&lt;TPoint&gt;.To3DXZ(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractMap-1.html#Gamelogic_Grids_AbstractMap_1_To3DXZ">AbstractMap&lt;TPoint&gt;.To3DXZ()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelCenter__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelCenter&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelLeft__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelLeft&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.IMapObsoleteExtensions.html#Gamelogic_Grids_IMapObsoleteExtensions_AnchorCellMiddelRight__1_Gamelogic_Grids_IMap___0__">IMapObsoleteExtensions.AnchorCellMiddelRight&lt;TPoint&gt;(IMap&lt;TPoint&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html#Gamelogic_Grids_MapAnimationExtensions_Animate__1_Gamelogic_Grids_IMap___0__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">MapAnimationExtensions.Animate&lt;TPoint&gt;(IMap&lt;TPoint&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Grids.MapAnimationExtensions.html#Gamelogic_Grids_MapAnimationExtensions_Animate__1_Gamelogic_Grids_IMap___0__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__System_Func_UnityEngine_Vector2_System_Single_UnityEngine_Vector2__">MapAnimationExtensions.Animate&lt;TPoint&gt;(IMap&lt;TPoint&gt;, Func&lt;Vector2, float, Vector2&gt;, Func&lt;Vector2, float, Vector2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2__ctor_" data-uid="Gamelogic.Grids.PolygonGridMap`2.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2__ctor_UnityEngine_Vector2_UnityEngine_Vector2_UnityEngine_Vector2_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable_UnityEngine_Vector2___System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IEnumerable_UnityEngine_Vector2__System_Func_System_Int32_System_Int32_System_Int32__0__System_Func__1_UnityEngine_Vector2__System_Func_Gamelogic_Grids_VectorPoint__1__" data-uid="Gamelogic.Grids.PolygonGridMap`2.#ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{UnityEngine.Vector2}},System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{UnityEngine.Vector2},System.Func{System.Int32,System.Int32,System.Int32,`0},System.Func{`1,UnityEngine.Vector2},System.Func{Gamelogic.Grids.VectorPoint,`1})">
+  PolygonGridMap(Vector2, Vector2, Vector2, IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt;, IEnumerable&lt;TPoint&gt;, IEnumerable&lt;Vector2&gt;, Func&lt;int, int, int, TPoint&gt;, Func&lt;TBasePoint, Vector2&gt;, Func&lt;VectorPoint, TBasePoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor of a PolygonGridMap</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PolygonGridMap(Vector2 cellDimensions, Vector2 rectDimensions, Vector2 zeroShapeOffset, IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt; polies, IEnumerable&lt;TPoint&gt; offsets, IEnumerable&lt;Vector2&gt; rectOffsets, Func&lt;int, int, int, TPoint&gt; pointFactory, Func&lt;TBasePoint, Vector2&gt; baseMap, Func&lt;VectorPoint, TBasePoint&gt; rectPointMap)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cellDimensions</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd><p>size of the cells in world coordinates</p>
+</dd>
+    <dt><code>rectDimensions</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd><p>size of the rectangle in world coodrinates</p>
+</dd>
+    <dt><code>zeroShapeOffset</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd><p>normalized world coordinates of the shape(0, 0, 0) relative to the rectangle bottom left corner</p>
+</dd>
+    <dt><code>polies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;&gt;</dt>
+    <dd><p>each item in the list corresponds to a polygon, andd each polygon is a list of vertices in order(each vertice needs to be included only once).</p>
+</dd>
+    <dt><code>offsets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd><p>offsets in grid coordinates for each poly relative to(0, 0, 0) in the same order as the polies list</p>
+</dd>
+    <dt><code>rectOffsets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd><p>the offsets in normalised world coordinates for each splice index</p>
+</dd>
+    <dt><code>pointFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, TPoint&gt;</dt>
+    <dd><p>returns a new spliced point with the given coordinates</p>
+</dd>
+    <dt><code>baseMap</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TBasePoint, <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd><p>returns the world coordinate for the given base point</p>
+</dd>
+    <dt><code>rectPointMap</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a>, TBasePoint&gt;</dt>
+    <dd><p>maps the rectangular patches with the correct base point(that corresponds to (0, 0, 0) in that rectangle).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_GetCellDimensions_" data-uid="Gamelogic.Grids.PolygonGridMap`2.GetCellDimensions*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_GetCellDimensions__0_" data-uid="Gamelogic.Grids.PolygonGridMap`2.GetCellDimensions(`0)">
+  GetCellDimensions(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the cell dimensions for this cell.</p>
+<p>Generally, for spliced points, these are the same
+for cells(points) with the same splice index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override abstract Vector2 GetCellDimensions(TPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_GridToWorld_" data-uid="Gamelogic.Grids.PolygonGridMap`2.GridToWorld*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_GridToWorld__0_" data-uid="Gamelogic.Grids.PolygonGridMap`2.GridToWorld(`0)">
+  GridToWorld(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method maps a grid point to a world point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 GridToWorld(TPoint gridPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridPoint</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_RawWorldToGrid_" data-uid="Gamelogic.Grids.PolygonGridMap`2.RawWorldToGrid*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_RawWorldToGrid_UnityEngine_Vector2_" data-uid="Gamelogic.Grids.PolygonGridMap`2.RawWorldToGrid(UnityEngine.Vector2)">
+  RawWorldToGrid(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method maps a world point to a grid point, assuming that
+the anchor point is centered in the cell.This will allow the
+index accessors[] to give correct results for any anchoring.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TPoint RawWorldToGrid(Vector2 worldPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>worldPoint</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_Scale_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_Scale_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable_UnityEngine_Vector2___System_Single_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{UnityEngine.Vector2}},System.Single)">
+  Scale(IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt;, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales the vertices of a list of polygons (each represented as a list of vertices) with the factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt; Scale(IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt; polies, float factor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>polies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>factor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_Scale_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_Scale_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable_UnityEngine_Vector2___UnityEngine_Vector2_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{UnityEngine.Vector2}},UnityEngine.Vector2)">
+  Scale(IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt;, Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales the vertices of a list of polygons (each represented as a list of vertices) compontwise with the factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt; Scale(IEnumerable&lt;IEnumerable&lt;Vector2&gt;&gt; polies, Vector2 factor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>polies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>factor</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_Scale_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_Scale_System_Collections_Generic_IEnumerable_UnityEngine_Vector2__System_Single_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale(System.Collections.Generic.IEnumerable{UnityEngine.Vector2},System.Single)">
+  Scale(IEnumerable&lt;Vector2&gt;, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales a list of points componntwise the factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Vector2&gt; Scale(IEnumerable&lt;Vector2&gt; points, float factor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>factor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PolygonGridMap_2_Scale_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale*"></a>
+
+  <h3 id="Gamelogic_Grids_PolygonGridMap_2_Scale_System_Collections_Generic_IEnumerable_UnityEngine_Vector2__UnityEngine_Vector2_" data-uid="Gamelogic.Grids.PolygonGridMap`2.Scale(System.Collections.Generic.IEnumerable{UnityEngine.Vector2},UnityEngine.Vector2)">
+  Scale(IEnumerable&lt;Vector2&gt;, Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scales a list of points componntwise with the factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Vector2&gt; Scale(IEnumerable&lt;Vector2&gt; points, Vector2 factor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>factor</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

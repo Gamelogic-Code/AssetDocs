@@ -1,0 +1,719 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InspectableVectorPoint | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InspectableVectorPoint | Gamelogic Grids ">
+      
+      <meta name="description" content="This class provides is a mutable class that can be used to construct VectorPoints. It is provided for use in Unity&#39;s inspector.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.InspectableVectorPoint">
+
+
+
+  <h1 id="Gamelogic_Grids_InspectableVectorPoint" data-uid="Gamelogic.Grids.InspectableVectorPoint" class="text-break">
+Class InspectableVectorPoint  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This class provides is a mutable class that can be used to construct
+VectorPoints.</p>
+<p>It is provided for use in Unity's inspector.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public class InspectableVectorPoint</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InspectableVectorPoint</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_Gamelogic_Grids_InspectableVectorPoint_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(InspectableVectorPoint, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_Gamelogic_Grids_InspectableVectorPoint_">GridUtils.ToGizmoString(InspectableVectorPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+  <h2 id="Gamelogic_Grids_InspectableVectorPoint_examples">Examples</h2>
+  <pre><code class="lang-csharp">[Serializable]
+public MyClass
+{
+	public InspectableVectorPoint playerStart;
+
+	private PointyHexPoint playerPosition;
+
+	public void Start()
+	{
+		playerPosition = playerStart.GetPointyHexPoint();
+	}
+}</code></pre>
+
+  <p>Typical usage us this:</p>
+<pre><code class="lang-csharp">[Serializable]
+public MyClass
+{
+	public InspectableVectorPoint playerStart;
+
+	private PointyHexPoint playerPosition;
+
+	public void Start()
+	{
+		playerPosition = playerStart.GetPointyHexPoint();
+	}
+}</code></pre>
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint__ctor_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint__ctor" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor">
+  InspectableVectorPoint()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InspectableVectorPoint()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint__ctor_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint__ctor_Gamelogic_Grids_DiamondPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor(Gamelogic.Grids.DiamondPoint)">
+  InspectableVectorPoint(DiamondPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 11, 0)]
+public InspectableVectorPoint(DiamondPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint__ctor_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint__ctor_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor(Gamelogic.Grids.FlatHexPoint)">
+  InspectableVectorPoint(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public InspectableVectorPoint(FlatHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint__ctor_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint__ctor_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor(Gamelogic.Grids.PointyHexPoint)">
+  InspectableVectorPoint(PointyHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public InspectableVectorPoint(PointyHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint__ctor_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint__ctor_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor(Gamelogic.Grids.RectPoint)">
+  InspectableVectorPoint(RectPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public InspectableVectorPoint(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint__ctor_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint__ctor_Gamelogic_Grids_VectorPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.#ctor(Gamelogic.Grids.VectorPoint)">
+  InspectableVectorPoint(VectorPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public InspectableVectorPoint(VectorPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_x" data-uid="Gamelogic.Grids.InspectableVectorPoint.x">
+  x
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int x</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_y" data-uid="Gamelogic.Grids.InspectableVectorPoint.y">
+  y
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_Create_" data-uid="Gamelogic.Grids.InspectableVectorPoint.Create*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_Create__1_Gamelogic_Grids_IVectorPoint___0__" data-uid="Gamelogic.Grids.InspectableVectorPoint.Create``1(Gamelogic.Grids.IVectorPoint{``0})">
+  Create&lt;TPoint&gt;(IVectorPoint&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public static InspectableVectorPoint Create&lt;TPoint&gt;(IVectorPoint&lt;TPoint&gt; point) where TPoint : IGridPoint&lt;TPoint&gt;, IVectorPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.IVectorPoint-1.html">IVectorPoint</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.InspectableVectorPoint.html">InspectableVectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_GetDiamondPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetDiamondPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_GetDiamondPoint" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetDiamondPoint">
+  GetDiamondPoint()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiamondPoint GetDiamondPoint()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_GetFlatHexPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetFlatHexPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_GetFlatHexPoint" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetFlatHexPoint">
+  GetFlatHexPoint()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint GetFlatHexPoint()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_GetPointyHexPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetPointyHexPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_GetPointyHexPoint" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetPointyHexPoint">
+  GetPointyHexPoint()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexPoint GetPointyHexPoint()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_GetRectPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetRectPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_GetRectPoint" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetRectPoint">
+  GetRectPoint()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectPoint GetRectPoint()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_GetVectorPoint_" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetVectorPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_GetVectorPoint" data-uid="Gamelogic.Grids.InspectableVectorPoint.GetVectorPoint">
+  GetVectorPoint()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VectorPoint GetVectorPoint()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.VectorPoint.html">VectorPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_InspectableVectorPoint_ToString_" data-uid="Gamelogic.Grids.InspectableVectorPoint.ToString*"></a>
+
+  <h3 id="Gamelogic_Grids_InspectableVectorPoint_ToString" data-uid="Gamelogic.Grids.InspectableVectorPoint.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

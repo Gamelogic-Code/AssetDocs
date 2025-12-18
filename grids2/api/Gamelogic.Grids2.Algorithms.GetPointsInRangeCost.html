@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method GetPointsInRangeCost | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method GetPointsInRangeCost | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.Algorithms.GetPointsInRangeCost*">
+
+
+
+
+
+<h1 id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost_" data-uid="Gamelogic.Grids2.Algorithms.GetPointsInRangeCost*" class="text-break">
+Method GetPointsInRangeCost  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/Algorithms.cs#lines-554"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Grids2.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost_" data-uid="Gamelogic.Grids2.Algorithms.GetPointsInRangeCost*"></a>
+
+<h3 id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Single__System_Single_" data-uid="Gamelogic.Grids2.Algorithms.GetPointsInRangeCost``1(Gamelogic.Grids2.IGrid{``0},``0,System.Func{``0,System.Collections.Generic.IEnumerable{``0}},System.Func{``0,System.Boolean},System.Func{``0,``0,System.Single},System.Single)">
+  GetPointsInRangeCost&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, TPoint, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, float&gt;, float)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/Algorithms.cs#lines-554"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>A generic function that returns the points in range
+based on a given start point, moveRange, and a function that returns the
+cost of moving between neighboring cells.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Dictionary&lt;TPoint, float&gt; GetPointsInRangeCost&lt;TPoint&gt;(IGrid&lt;TPoint&gt; grid, TPoint start, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt; getConnectedPoints, Func&lt;TPoint, bool&gt; isAccessible, Func&lt;TPoint, TPoint, float&gt; getCellMoveCost, float moveRange)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</dt>
+  <dd><p>The grid to use for the calculations</p>
+</dd>
+  <dt><code>start</code> <span class="xref">TPoint</span></dt>
+  <dd><p>The starting point for the range calculation</p>
+</dd>
+  <dt><code>getConnectedPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+  <dd><p>This function is used to get the connected Points to a point.</p>
+</dd>
+  <dt><code>isAccessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+  <dd><p>Whether the cell at the given point can be reached.</p>
+</dd>
+  <dt><code>getCellMoveCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>A function that returns the move cost given a cell</p>
+</dd>
+  <dt><code>moveRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+  <dd><p>The range from which to return cells</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd></dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>TPoint</code></dt>
+  <dd></dd>
+</dl>
+
+
+
+
+
+<h4 class="section" id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Single__System_Single__examples">Examples</h4>
+<p>Example usage:</p>
+<pre><code class="lang-csharp">var costs = Algorithms.GetPointsInRangeCost(
+		grid,
+		start,
+		tile1, tile2 =&gt; DistanceBetween(tile1, tile2),
+		5f);</code></pre>
+
+
+<h4 class="section" id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Single__System_Single__remarks">Remarks</h4>
+<div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>Author: Justin Kivak</p></div>
+<p>See <conceptuallink target="3e22bb01-63e3-410f-8dcb-08d8454fb638"></conceptuallink> for detailed
+information on how to use this method.</p>
+</div>
+
+
+
+
+<a id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost_" data-uid="Gamelogic.Grids2.Algorithms.GetPointsInRangeCost*"></a>
+
+<h3 id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Int32__System_Int32_" data-uid="Gamelogic.Grids2.Algorithms.GetPointsInRangeCost``1(Gamelogic.Grids2.IGrid{``0},``0,System.Func{``0,System.Collections.Generic.IEnumerable{``0}},System.Func{``0,System.Boolean},System.Func{``0,``0,System.Int32},System.Int32)">
+  GetPointsInRangeCost&lt;TPoint&gt;(IGrid&lt;TPoint&gt;, TPoint, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt;, Func&lt;TPoint, bool&gt;, Func&lt;TPoint, TPoint, int&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/Algorithms.cs#lines-634"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Gets all the points (and their costs) from a given point in a given range. This result is stored and returned
+in a dictionary.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Dictionary&lt;TPoint, int&gt; GetPointsInRangeCost&lt;TPoint&gt;(IGrid&lt;TPoint&gt; grid, TPoint start, Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt; getConnectedPoints, Func&lt;TPoint, bool&gt; isAccessible, Func&lt;TPoint, TPoint, int&gt; getCellMoveCost, int moveRange)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</dt>
+  <dd><p>The grid used to make the calculations.</p>
+</dd>
+  <dt><code>start</code> <span class="xref">TPoint</span></dt>
+  <dd><p>Point where the calculations will start.</p>
+</dd>
+  <dt><code>getConnectedPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;&gt;</dt>
+  <dd><p>This function is used to get the connected points to a given point.</p>
+</dd>
+  <dt><code>isAccessible</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+  <dd><p>This function is used to know if a point is accessible within the grid.</p>
+</dd>
+  <dt><code>getCellMoveCost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;TPoint, TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>This function is used to get the movement cost from moving to a cell.</p>
+</dd>
+  <dt><code>moveRange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>Range of movement where make the calculations.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd></dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>TPoint</code></dt>
+  <dd><p>The type of the point used on the grid.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+<h4 class="section" id="Gamelogic_Grids2_Algorithms_GetPointsInRangeCost__1_Gamelogic_Grids2_IGrid___0____0_System_Func___0_System_Collections_Generic_IEnumerable___0___System_Func___0_System_Boolean__System_Func___0___0_System_Int32__System_Int32__remarks">Remarks</h4>
+<div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>Author: Justin Kivak</p></div>
+<p>See <conceptuallink target="3e22bb01-63e3-410f-8dcb-08d8454fb638"></conceptuallink> for detailed
+information on how to use this method.</p>
+</div>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

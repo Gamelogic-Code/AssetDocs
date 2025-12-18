@@ -1,0 +1,1908 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RectFEV | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RectFEV | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.Examples.RectFEV">
+
+
+
+  <h1 id="Gamelogic_Grids2_Examples_RectFEV" data-uid="Gamelogic.Grids2.Examples.RectFEV" class="text-break">
+Class RectFEV  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a>.<a class="xref" href="Gamelogic.Grids2.Examples.html">Examples</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class RectFEV</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RectFEV</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_AverageDistance_" data-uid="Gamelogic.Grids2.Examples.RectFEV.AverageDistance*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_AverageDistance_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_Examples_RectFEV_Wall_" data-uid="Gamelogic.Grids2.Examples.RectFEV.AverageDistance(System.Collections.Generic.IEnumerable{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.Examples.RectFEV.Wall)">
+  AverageDistance(IEnumerable&lt;GridPoint2&gt;, Wall)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float AverageDistance(IEnumerable&lt;GridPoint2&gt; path, RectFEV.Wall wall)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>wall</code> <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.Wall.html">Wall</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_ContainsEdge_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContainsEdge*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_ContainsEdge_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContainsEdge(Gamelogic.Grids2.IImplicitShape{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.GridPoint2)">
+  ContainsEdge(IImplicitShape&lt;GridPoint2&gt;, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsEdge(IImplicitShape&lt;GridPoint2&gt; faceShape, GridPoint2 edgeInEdgeSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceShape</code> <a class="xref" href="Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>edgeInEdgeSpace</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_ContainsFEV_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContainsFEV*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_ContainsFEV_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContainsFEV(Gamelogic.Grids2.IImplicitShape{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.GridPoint2)">
+  ContainsFEV(IImplicitShape&lt;GridPoint2&gt;, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsFEV(IImplicitShape&lt;GridPoint2&gt; faceShape, GridPoint2 fevInFEVSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceShape</code> <a class="xref" href="Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>fevInFEVSpace</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_ContainsVertex_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContainsVertex*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_ContainsVertex_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContainsVertex(Gamelogic.Grids2.IImplicitShape{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.GridPoint2)">
+  ContainsVertex(IImplicitShape&lt;GridPoint2&gt;, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsVertex(IImplicitShape&lt;GridPoint2&gt; faceShape, GridPoint2 vertexInVertexSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceShape</code> <a class="xref" href="Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>vertexInVertexSpace</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_ContinueMaze_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContinueMaze*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_ContinueMaze_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2_Gamelogic_Grids2_Examples_RectFEV_MazeType__Gamelogic_Grids2_Examples_RectFEV_Symmetry_" data-uid="Gamelogic.Grids2.Examples.RectFEV.ContinueMaze(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,Gamelogic.Grids2.Examples.RectFEV.MazeType},Gamelogic.Grids2.Examples.RectFEV.Symmetry)">
+  ContinueMaze(IGrid&lt;GridPoint2, MazeType&gt;, Symmetry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Continue Maze process a maze and and creates the paths between unconnected sets if any potential one is found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ContinueMaze(IGrid&lt;GridPoint2, RectFEV.MazeType&gt; maze, RectFEV.Symmetry symmetry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maze</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.MazeType.html">MazeType</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>symmetry</code> <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.Symmetry.html">Symmetry</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_EdgeBetween_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeBetween*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_EdgeBetween_Gamelogic_Grids2_GridPoint2_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeBetween(Gamelogic.Grids2.GridPoint2,Gamelogic.Grids2.GridPoint2)">
+  EdgeBetween(GridPoint2, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 EdgeBetween(GridPoint2 point1, GridPoint2 point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_EdgeShape_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeShape*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_EdgeShape_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeShape(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2})">
+  EdgeShape(IExplicitShape&lt;GridPoint2&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IExplicitShape&lt;GridPoint2&gt; EdgeShape(this IExplicitShape&lt;GridPoint2&gt; faceShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceShape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_EdgeToFace_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeToFace*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_EdgeToFace_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeToFace(UnityEngine.Vector2)">
+  EdgeToFace(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 EdgeToFace(Vector2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_EdgeTowards_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeTowards*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_EdgeTowards_Gamelogic_Grids2_GridPoint2_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgeTowards(Gamelogic.Grids2.GridPoint2,Gamelogic.Grids2.GridPoint2)">
+  EdgeTowards(GridPoint2, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 EdgeTowards(GridPoint2 point, GridPoint2 direction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+    <dt><code>direction</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_EdgesOfFace_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgesOfFace*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_EdgesOfFace_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.EdgesOfFace(UnityEngine.Vector2)">
+  EdgesOfFace(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] EdgesOfFace(Vector2 faceInFaceSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceInFaceSpace</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FEVShape_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FEVShape*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FEVShape_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__" data-uid="Gamelogic.Grids2.Examples.RectFEV.FEVShape(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2})">
+  FEVShape(IExplicitShape&lt;GridPoint2&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IExplicitShape&lt;GridPoint2&gt; FEVShape(this IExplicitShape&lt;GridPoint2&gt; faceShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceShape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FEVToFace_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FEVToFace*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FEVToFace_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FEVToFace(UnityEngine.Vector2)">
+  FEVToFace(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 FEVToFace(Vector2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FEVsOfFace_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FEVsOfFace*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FEVsOfFace_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FEVsOfFace(UnityEngine.Vector2)">
+  FEVsOfFace(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] FEVsOfFace(Vector2 faceInFaceSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceInFaceSpace</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FaceToEdge_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToEdge*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FaceToEdge_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToEdge(UnityEngine.Vector2)">
+  FaceToEdge(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 FaceToEdge(Vector2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FaceToEdgeMap_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToEdgeMap*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FaceToEdgeMap" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToEdgeMap">
+  FaceToEdgeMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMap&lt;Vector2, Vector2&gt; FaceToEdgeMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IMap-2.html">IMap</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FaceToFEV_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToFEV*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FaceToFEV_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToFEV(UnityEngine.Vector2)">
+  FaceToFEV(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 FaceToFEV(Vector2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FaceToFEVMap_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToFEVMap*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FaceToFEVMap" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToFEVMap">
+  FaceToFEVMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMap&lt;Vector2, Vector2&gt; FaceToFEVMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IMap-2.html">IMap</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FaceToVertex_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToVertex*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FaceToVertex_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToVertex(UnityEngine.Vector2)">
+  FaceToVertex(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 FaceToVertex(Vector2 face)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>face</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FaceToVertexMap_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToVertexMap*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FaceToVertexMap" data-uid="Gamelogic.Grids2.Examples.RectFEV.FaceToVertexMap">
+  FaceToVertexMap()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMap&lt;Vector2, Vector2&gt; FaceToVertexMap()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IMap-2.html">IMap</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FacesOfEdge_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FacesOfEdge*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FacesOfEdge_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FacesOfEdge(UnityEngine.Vector2)">
+  FacesOfEdge(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] FacesOfEdge(Vector2 edgeInFaceSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>edgeInFaceSpace</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FacesOfFEV_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FacesOfFEV*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FacesOfFEV_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FacesOfFEV(UnityEngine.Vector2)">
+  FacesOfFEV(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] FacesOfFEV(Vector2 fev)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fev</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_FacesOfVertex_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FacesOfVertex*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_FacesOfVertex_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.FacesOfVertex(UnityEngine.Vector2)">
+  FacesOfVertex(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] FacesOfVertex(Vector2 vertexInFaceSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexInFaceSpace</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_Examples_RectFEV_Symmetry_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2},Gamelogic.Grids2.Examples.RectFEV.Symmetry)">
+  GenerateMaze(IExplicitShape&lt;GridPoint2&gt;, Symmetry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate Maze generates a maze on a grid using a symmetry mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, RectFEV.MazeType&gt; GenerateMaze(IExplicitShape&lt;GridPoint2&gt; fevGrid, RectFEV.Symmetry symmetry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>symmetry</code> <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.Symmetry.html">Symmetry</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.MazeType.html">MazeType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze3_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze3*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze3__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze3``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0})">
+  GenerateMaze3&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze3&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze5_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze5*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze5__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze5``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0})">
+  GenerateMaze5&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze5&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze9_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze9*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze9__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze9``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0})">
+  GenerateMaze9&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze9&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze9b_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze9b*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze9b__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze9b``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0})">
+  GenerateMaze9b&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze9b&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze9c_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze9c*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze9c__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze9c``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0})">
+  GenerateMaze9c&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze9c&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze_Reference_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze_Reference*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze_Reference__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__Gamelogic_Grids2_Examples_RectFEV_Symmetry_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze_Reference``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0},Gamelogic.Grids2.Examples.RectFEV.Symmetry)">
+  GenerateMaze_Reference&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;, Symmetry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze_Reference&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid, RectFEV.Symmetry symmetry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+    <dt><code>symmetry</code> <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.Symmetry.html">Symmetry</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GenerateMaze__1_Gamelogic_Grids2_IGrid_Gamelogic_Grids2_GridPoint2___0__System_Func_Gamelogic_Grids2_GridPoint2_System_Int32__Gamelogic_Grids2_Examples_RectFEV_Wall___Gamelogic_Grids2_GridPoint2_____" data-uid="Gamelogic.Grids2.Examples.RectFEV.GenerateMaze``1(Gamelogic.Grids2.IGrid{Gamelogic.Grids2.GridPoint2,``0},System.Func{Gamelogic.Grids2.GridPoint2,System.Int32},Gamelogic.Grids2.Examples.RectFEV.Wall[],Gamelogic.Grids2.GridPoint2[][])">
+  GenerateMaze&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt;, Func&lt;GridPoint2, int&gt;, Wall[], GridPoint2[][])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;GridPoint2, bool&gt; GenerateMaze&lt;TCell&gt;(IGrid&lt;GridPoint2, TCell&gt; fevGrid, Func&lt;GridPoint2, int&gt; getColoring, RectFEV.Wall[] wallDirections, GridPoint2[][] faceDirections)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fevGrid</code> <a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, TCell&gt;</dt>
+    <dd></dd>
+    <dt><code>getColoring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>wallDirections</code> <a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.Wall.html">Wall</a>[]</dt>
+    <dd></dd>
+    <dt><code>faceDirections</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>[][]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_Get1234Coloring_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get1234Coloring*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_Get1234Coloring_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get1234Coloring(Gamelogic.Grids2.GridPoint2)">
+  Get1234Coloring(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Get1234Coloring(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_Get5Coloring_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get5Coloring*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_Get5Coloring_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get5Coloring(Gamelogic.Grids2.GridPoint2)">
+  Get5Coloring(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Get5Coloring(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_Get9Coloring_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get9Coloring*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_Get9Coloring_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get9Coloring(Gamelogic.Grids2.GridPoint2)">
+  Get9Coloring(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Get9Coloring(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_Get9bColoring_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get9bColoring*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_Get9bColoring_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get9bColoring(Gamelogic.Grids2.GridPoint2)">
+  Get9bColoring(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Get9bColoring(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_Get9cColoring_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get9cColoring*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_Get9cColoring_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.Get9cColoring(Gamelogic.Grids2.GridPoint2)">
+  Get9cColoring(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Get9cColoring(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GetCheckboardColoring_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GetCheckboardColoring*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GetCheckboardColoring_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GetCheckboardColoring(Gamelogic.Grids2.GridPoint2)">
+  GetCheckboardColoring(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetCheckboardColoring(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_GetType_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GetType*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_GetType_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.GetType(Gamelogic.Grids2.GridPoint2)">
+  GetType(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectFEV.FEVType GetType(GridPoint2 point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.html">RectFEV</a>.<a class="xref" href="Gamelogic.Grids2.Examples.RectFEV.FEVType.html">FEVType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_IsRoom_" data-uid="Gamelogic.Grids2.Examples.RectFEV.IsRoom*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_IsRoom_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.IsRoom(Gamelogic.Grids2.GridPoint2)">
+  IsRoom(GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRoom(GridPoint2 p)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>p</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_NthOrLast_" data-uid="Gamelogic.Grids2.Examples.RectFEV.NthOrLast*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_NthOrLast__1_System_Collections_Generic_IEnumerable___0__System_Int32_" data-uid="Gamelogic.Grids2.Examples.RectFEV.NthOrLast``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+  NthOrLast&lt;T&gt;(IEnumerable&lt;T&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T NthOrLast&lt;T&gt;(this IEnumerable&lt;T&gt; source, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_RandomItem_" data-uid="Gamelogic.Grids2.Examples.RectFEV.RandomItem*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_RandomItem__1_System_Collections_Generic_IEnumerable___0__System_Single_" data-uid="Gamelogic.Grids2.Examples.RectFEV.RandomItem``1(System.Collections.Generic.IEnumerable{``0},System.Single)">
+  RandomItem&lt;T&gt;(IEnumerable&lt;T&gt;, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a random element from a source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T RandomItem&lt;T&gt;(this IEnumerable&lt;T&gt; source, float p)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The list.</p>
+</dd>
+    <dt><code>p</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>A item randomly selected from the source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of items generated from the source.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_SampleRandom_" data-uid="Gamelogic.Grids2.Examples.RectFEV.SampleRandom*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_SampleRandom__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Grids2.Examples.RectFEV.SampleRandom``1(System.Collections.Generic.IEnumerable{``0})">
+  SampleRandom&lt;T&gt;(IEnumerable&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SampleRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_VertexBetween_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexBetween*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_VertexBetween_Gamelogic_Grids2_GridPoint2_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexBetween(Gamelogic.Grids2.GridPoint2,Gamelogic.Grids2.GridPoint2)">
+  VertexBetween(GridPoint2, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 VertexBetween(GridPoint2 point1, GridPoint2 point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_VertexShape_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexShape*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_VertexShape_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexShape(Gamelogic.Grids2.IExplicitShape{Gamelogic.Grids2.GridPoint2})">
+  VertexShape(IExplicitShape&lt;GridPoint2&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IExplicitShape&lt;GridPoint2&gt; VertexShape(this IExplicitShape&lt;GridPoint2&gt; faceShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceShape</code> <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_VertexToFace_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexToFace*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_VertexToFace_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexToFace(UnityEngine.Vector2)">
+  VertexToFace(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 VertexToFace(Vector2 edge)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>edge</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_VertexTowards_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexTowards*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_VertexTowards_Gamelogic_Grids2_GridPoint2_Gamelogic_Grids2_GridPoint2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VertexTowards(Gamelogic.Grids2.GridPoint2,Gamelogic.Grids2.GridPoint2)">
+  VertexTowards(GridPoint2, GridPoint2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 VertexTowards(GridPoint2 point1, GridPoint2 direction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+    <dt><code>direction</code> <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids2_Examples_RectFEV_VerticesOfFace_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VerticesOfFace*"></a>
+
+  <h3 id="Gamelogic_Grids2_Examples_RectFEV_VerticesOfFace_UnityEngine_Vector2_" data-uid="Gamelogic.Grids2.Examples.RectFEV.VerticesOfFace(UnityEngine.Vector2)">
+  VerticesOfFace(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] VerticesOfFace(Vector2 faceInFaceSpace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>faceInFaceSpace</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

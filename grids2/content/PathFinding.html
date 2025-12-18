@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Path Finding | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Path Finding | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/PathFinding.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="path-finding">Path Finding</h1>
+
+<p>This article describes the path finding in Grids 2.</p>
+<p>The method <a class="xref" href="../api/Gamelogic.Grids2.Algorithms.AStar.html">AStar</a> is used to find the shortest possible path in a grid. The path finding
+method takes a grid, a starting point, a goal, a few tuning parameters, and returns a list of points that represents the path.</p>
+<p>This is the method with all the arguments:</p>
+<pre><code class="lang-csharp">public static IEnumerable&lt;TPoint&gt; AStar&lt;TPoint&gt;(
+    IGrid&lt;TPoint&gt; grid,
+    TPoint start,
+    TPoint goal,
+    Func&lt;TPoint, TPoint, float&gt; heuristicCostEstimate,
+    Func&lt;TPoint, bool&gt; isAccessible,
+    Func&lt;TPoint, IEnumerable&lt;TPoint&gt;&gt; getConnectedPoints,
+    Func&lt;TPoint, TPoint, float&gt; neighborToNeighborCost)
+</code></pre>
+<p>Here is a simple call using the above method in a rect grid:</p>
+<pre><code class="lang-csharp">var path = Algorithms.AStar(
+    grid, 
+    start, 
+    goal, 
+    (p,q) =&gt; RectPoint.ManhattentNorm(p - q), 
+    c =&gt; true, 
+    RectPoint.GetOrthogonalNeighbors,
+    (p, q) =&gt; 1);
+</code></pre>
+<p>The rest of the tutorial will explain what you need to do to make this call and how the various parameters work.</p>
+<h2 id="calling-the-astar-method">Calling the AStar method</h2>
+<p>You will typically have some information about whether a cell is accessible, and how much it costs to travel through the cell. One way to do this is to define your own cell and use this cell in your grid.</p>
+<pre><code>For example, you can make a cell like this:
+</code></pre>
+<pre><code class="lang-csharp">public class PathCell : SpriteCell
+{
+    public bool IsAccessible { get; set; }
+    public float Cost { get; set; }
+}
+</code></pre>
+<p>Use it instead of the default <code>SpriteCell</code> on your cell prefab.</p>
+<p>However, this is not strictly necessary, since the path-finding algorithm takes custom functions, and you are free to give it any function that can give the required information. For the rest of the article, we will assume that the cell above is used.</p>
+<p>Work out what types all your parameters should be. (If you are fluent in generics and C# interfaces, this step is probably just making a mental note or two.)</p>
+<p>All the parameter types will depend on the grid that pass as the first parameter. To work out the other types, follow these steps:</p>
+<ol>
+<li>The point type <code>TPoint</code> is determined by the number of dimensions of your grid. For 2D it will be
+<a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, and for 3D <a class="xref" href="../api/Gamelogic.Grids2.GridPoint3.html">GridPoint3</a> . It can also be a custom type if you defined
+your own grid point
+type.</li>
+<li><code>heuristicCostEstimate</code> is a function that takes two points and returns a float value.</li>
+<li><code>isAccessible</code> is a function that takes a point and returns a bool.</li>
+<li><code>getConnectedPoints</code> is a function that takes a point and returns a list of points.</li>
+<li><code>neighborToNeighborCost</code> is a function that takes two points and returns a float.</li>
+</ol>
+<p>Write a method or lambda expression to decide whether a cell is accessible or not.</p>
+<p>If all cells are accessible, you can pass in the lambda expression <code>c =&gt; true</code> (it always returns true, regardless of the cell).</p>
+<p>Otherwise, if you implemented your own cell as above, you can access the <code>IsAccessible</code> property in the lambda expression. This will make the function skip points that cannot be reached.</p>
+<pre><code class="lang-csharp">var path = Algorithms.AStar(
+    grid, 
+    start, 
+    goal, 
+    (p,q) =&gt; RectPoint.ManhattanNorm(p - q), 
+    p =&gt; grid[p].IsAccessible, 
+    RectPoint.GetOrthogonalNeighbors,
+    (p, q) =&gt; 1);
+</code></pre>
+<p>You can also write a method instead of using the lambda expression. This is preferable if your access logic is more complex.</p>
+<pre><code class="lang-csharp">public bool IsCellAccessible(GridPoint point)
+{
+    return grid[point].IsAccessible;
+}
+</code></pre>
+<p>You can then call the AStar method like this:</p>
+<pre><code class="lang-csharp">var path = Algorithms.AStar(
+    grid, 
+    start, 
+    goal, 
+    (p,q) =&gt; RectPoint.ManhattanNorm(p - q), 
+    IsCellAccessible, 
+    RectPoint.GetOrthogonalNeighbors,
+    (p, q) =&gt; 1);
+</code></pre>
+<p>Write a lambda expression or method to get all the neighbors of a point. You can go from a point to a neighbor of
+that point without going through another cell. You can read more about neighbors in <a href="Neighbors.html">Neighbors</a>, and find in that article a list of predefined static methods defined for
+common situations. One is the method <a class="xref" href="../api/Gamelogic.Grids2.RectPoint.GetOrthogonalNeighbors.html">GetOrthogonalNeighbors</a> .</p>
+<p>Below is what the path finding algorithm returns for various neighbor setups. Note that the cell costs are not taken into account.</p>
+<table>
+<thead>
+<tr>
+<th>Orthogonal</th>
+<th>Diagonal</th>
+<th>Orthogonal and Diagonal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/path/path_orth_grid.png" alt="The image shows a grid of squares in which you can see a pattern of orthogonal dots following a path through an obstacle."></td>
+<td><img src="../images/path/path_diag_grid.png" alt="The image shows a grid of squares in which a pattern of diagonal dots can be seen following a path through an obstacle."></td>
+<td><img src="../images/path/path_all_grid.png" alt="The image shows a grid of squares in which a pattern of orthogonal and diagonal dots can be seen following a path through an obstacle."></td>
+</tr>
+</tbody>
+</table>
+<p>Write a lambda expression or method for determining the true cost of reaching two points if they are neighbors.</p>
+<ul>
+<li><p>If you want the cost between all neighbors to be the same, then you can simply use the expression <code>(p, q) =&gt; 1</code>.</p>
+</li>
+<li><p>Another common possibility is to use the Euclidean distance between points. This will tend to take parts that seem more natural.</p>
+</li>
+<li><p>The euclidean norm is defined for rect and hex grids: <a class="xref" href="../api/Gamelogic.Grids2.RectPoint.EuclideanNorm.html#Gamelogic_Grids2_RectPoint_EuclideanNorm_Gamelogic_Grids2_GridPoint2_">EuclideanNorm(GridPoint2)</a>
+and <a class="xref" href="../api/Gamelogic.Grids2.PointyHexPoint.EuclideanNorm.html#Gamelogic_Grids2_PointyHexPoint_EuclideanNorm_Gamelogic_Grids2_GridPoint2_">EuclideanNorm(GridPoint2)</a> . To get the distance between two
+points, calculate the norm on their difference:</p>
+<pre><code class="lang-csharp">var distance = Norm(p - q);
+</code></pre>
+</li>
+</ul>
+<p>Here is how using the euclidean distance affects the path when you use all 8 neighbors. (When you use only 4
+neighbors, the euclidean distance is the same between all four neighbors, so it is the same as using a constant cost between cells.)</p>
+<table>
+<thead>
+<tr>
+<th>Orthogonal and Diagonal</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/path/path_euclidean.png" alt="The image shows a grid of squares in which a pattern of orthogonal and diagonal points can be seen following a Euclidean path through an obstacle."></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>A third possibility is to use costs for cells. The algorithm requires the cost between two cells; to get this, we take the average of the costs of each cell.</p>
+<pre><code class="lang-csharp">(p, q) =&gt; (grid[p].Cost + grid[q].Cost) / 2
+</code></pre>
+<p>Here is how the paths look when weighted costs are used. Note the preferred path is now through the blue cells, the cells with lower cost.</p>
+<table>
+<thead>
+<tr>
+<th>Orthogonal</th>
+<th>Diagonal</th>
+<th>Orthogonal and Diagonal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/path/path_orth_weighted.png" alt="The image shows a grid of squares in which a pattern of orthogonal dots can be seen following a weighted path through an obstacle."></td>
+<td><img src="../images/path/path_diag_weighted.png" alt="The image shows a grid of squares in which a pattern of diagonal dots can be seen following a weighted path through an obstacle."></td>
+<td><img src="../images/path/path_all_weighted.png" alt="The image shows a grid of squares in which a pattern of diagonal and orthogonal dots can be seen following a weighted path through an obstacle."></td>
+</tr>
+</tbody>
+</table>
+<p>Write a lambda expression or method for a cost heuristic between two points. The cost heuristic should always be smaller or equal than the real distance. Here are the heuristic costs you should use in typical situations:</p>
+<table>
+<thead>
+<tr>
+<th>Grid properties</th>
+<th>Cost</th>
+<th>Heuristic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rect grid, orthogonal neighbors</td>
+<td><code>(p,q) =&gt; 1</code></td>
+<td><code>(p,q) =&gt; RectPoint.ManhattanNorm(p - q)</code></td>
+</tr>
+<tr>
+<td>Rect grid, diagonal neighbors</td>
+<td><code>(p,q) =&gt; 1</code></td>
+<td><code>(p,q) =&gt; RectPoint.ChebyshevNorm(p - q)</code></td>
+</tr>
+<tr>
+<td>Rect grid, orthogonal and diagonal neighbors</td>
+<td><code>(p,q) =&gt; 1</code></td>
+<td><code>(p,q) =&gt; RectPoint.ChebyshevNorm(p - q)</code></td>
+</tr>
+<tr>
+<td>Hex grid, orthogonal neighbors</td>
+<td><code>(p,q) =&gt; 1</code></td>
+<td><code>(p,q) =&gt; RectPoint.HexNorm(p - q)</code></td>
+</tr>
+<tr>
+<td>Any grid, irregular neighbors</td>
+<td><code>(p,q) =&gt; 1</code></td>
+<td><code>(p,q) =&gt; 1</code></td>
+</tr>
+<tr>
+<td>Rect grid, any neighbors</td>
+<td><code>(p,q) =&gt; RectPoint.EuclideanNorm(p - q)</code></td>
+<td><code>(p,q) =&gt; RectPoint.EuclideanNorm(p - q)</code></td>
+</tr>
+<tr>
+<td>Hex grid, any neighbors</td>
+<td><code>(p,q) =&gt; PointyHexPoint.EuclideanNorm(p - q)</code></td>
+<td><code>(p,q) =&gt; PointyHexPoint.EuclideanNorm(p - q)</code></td>
+</tr>
+<tr>
+<td>Any grid</td>
+<td><code>(p,q) =&gt; (grid[p].Cost + grid[q].Cost)/2</code></td>
+<td>Use the same heuristic as for <code>(p, q) =&gt; 1</code> but multiply it with the minimum cost between neighbors.</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1821 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct PointyTriPoint | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct PointyTriPoint | Gamelogic Grids ">
+      
+      <meta name="description" content="A struct that represents a point of a PointyTriGrid.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.PointyTriPoint">
+
+
+
+  <h1 id="Gamelogic_Grids_PointyTriPoint" data-uid="Gamelogic.Grids.PointyTriPoint" class="text-break">
+Struct PointyTriPoint  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A struct that represents a point of a PointyTriGrid.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+[Serializable]
+public struct PointyTriPoint : ISupportsVertices&lt;FlatHexPoint&gt;, ISupportsEdges&lt;FlatRhombPoint&gt;, IVertex&lt;FlatHexPoint&gt;, ISplicedPoint&lt;PointyTriPoint, FlatHexPoint&gt;, IGridPoint&lt;PointyTriPoint&gt;, IEquatable&lt;PointyTriPoint&gt;, IGridPoint, ISplicedVectorPoint&lt;PointyTriPoint, FlatHexPoint&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.ISupportsVertices-1.html">ISupportsVertices</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.ISupportsEdges-1.html">ISupportsEdges</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IVertex-1.html">IVertex</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.ISplicedPoint-2.html">ISplicedPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridPoint-1.html">IGridPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids.IGridPoint.html">IGridPoint</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.ISplicedVectorPoint-2.html">ISplicedVectorPoint</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_SpliceCount__1___0_">GridUtils.SpliceCount&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint__ctor_" data-uid="Gamelogic.Grids.PointyTriPoint.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint__ctor_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.#ctor(System.Int32,System.Int32,System.Int32)">
+  PointyTriPoint(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint(int x, int y, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_EdgeDirections" data-uid="Gamelogic.Grids.PointyTriPoint.EdgeDirections">
+  EdgeDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PointList&lt;FlatRhombPoint&gt;[] EdgeDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointList-1.html">PointList</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_MainDirections" data-uid="Gamelogic.Grids.PointyTriPoint.MainDirections">
+  MainDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IEnumerable&lt;PointyTriPoint&gt;[] MainDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_SpliceCount" data-uid="Gamelogic.Grids.PointyTriPoint.SpliceCount">
+  SpliceCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SpliceCount = 2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_VertexDirections" data-uid="Gamelogic.Grids.PointyTriPoint.VertexDirections">
+  VertexDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>I want it private, but the other part of the class needs it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly IEnumerable&lt;FlatHexPoint&gt;[] VertexDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_VertexFaceDirections" data-uid="Gamelogic.Grids.PointyTriPoint.VertexFaceDirections">
+  VertexFaceDirections
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PointList&lt;FlatHexPoint&gt;[] VertexFaceDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointList-1.html">PointList</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Zero" data-uid="Gamelogic.Grids.PointyTriPoint.Zero">
+  Zero
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly PointyTriPoint Zero</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_AsHexPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.AsHexPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_AsHexPoint" data-uid="Gamelogic.Grids.PointyTriPoint.AsHexPoint">
+  AsHexPoint
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyHexPoint AsHexPoint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_BasePoint_" data-uid="Gamelogic.Grids.PointyTriPoint.BasePoint*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_BasePoint" data-uid="Gamelogic.Grids.PointyTriPoint.BasePoint">
+  BasePoint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Why is this public?
+- Convenience
+- Algorithm Design
+Otherwise the user will just make a new
+basepoint in any case, and perhaps make a mistake.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint BasePoint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_I_" data-uid="Gamelogic.Grids.PointyTriPoint.I*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_I" data-uid="Gamelogic.Grids.PointyTriPoint.I">
+  I
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the splice idnex for this point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int I { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_SpliceIndex_" data-uid="Gamelogic.Grids.PointyTriPoint.SpliceIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_SpliceIndex" data-uid="Gamelogic.Grids.PointyTriPoint.SpliceIndex">
+  SpliceIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the index of the splice.</p>
+<p>For Uniform grids, this is always 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SpliceIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_X_" data-uid="Gamelogic.Grids.PointyTriPoint.X*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_X" data-uid="Gamelogic.Grids.PointyTriPoint.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the X-coordinate of this point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int X { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Y_" data-uid="Gamelogic.Grids.PointyTriPoint.Y*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Y" data-uid="Gamelogic.Grids.PointyTriPoint.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Y-coordinate of this point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Y { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Z_" data-uid="Gamelogic.Grids.PointyTriPoint.Z*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Z" data-uid="Gamelogic.Grids.PointyTriPoint.Z">
+  Z
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is a redundant coordinate that is useful for certain algorithms and calculation.
+The coordinates of a triangle satsify this identity: X + Y + Z + I = 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Z { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_DecIndex_" data-uid="Gamelogic.Grids.PointyTriPoint.DecIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_DecIndex_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.DecIndex(System.Int32)">
+  DecIndex(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint DecIndex(int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_DistanceFrom_" data-uid="Gamelogic.Grids.PointyTriPoint.DistanceFrom*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_DistanceFrom_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.DistanceFrom(Gamelogic.Grids.PointyTriPoint)">
+  DistanceFrom(PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The lattice distance between two points.</p>
+<p>Two points should have a distance of 1 if and only if they are neighbors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DistanceFrom(PointyTriPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Equals_" data-uid="Gamelogic.Grids.PointyTriPoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Equals_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.Equals(Gamelogic.Grids.PointyTriPoint)">
+  Equals(PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PointyTriPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Equals_" data-uid="Gamelogic.Grids.PointyTriPoint.Equals*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Equals_System_Object_" data-uid="Gamelogic.Grids.PointyTriPoint.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetColor_" data-uid="Gamelogic.Grids.PointyTriPoint.GetColor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetColor_System_Int32_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.GetColor(System.Int32,System.Int32,System.Int32)">
+  GetColor(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gives a coloring of the grid such that
+if a point p has color k, then all points
+p + m[ux, 0 | 0] + n[vx, vy | 0] have the same color
+for any integers a and b.</p>
+<p>Since version 1.7</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor(int ux, int vx, int vy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ux</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>vx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>vy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetColor2_" data-uid="Gamelogic.Grids.PointyTriPoint.GetColor2*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetColor2" data-uid="Gamelogic.Grids.PointyTriPoint.GetColor2">
+  GetColor2()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetColor4_" data-uid="Gamelogic.Grids.PointyTriPoint.GetColor4*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetColor4" data-uid="Gamelogic.Grids.PointyTriPoint.GetColor4">
+  GetColor4()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetColor4()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetEdgeAnchor_" data-uid="Gamelogic.Grids.PointyTriPoint.GetEdgeAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetEdgeAnchor" data-uid="Gamelogic.Grids.PointyTriPoint.GetEdgeAnchor">
+  GetEdgeAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatRhombPoint GetEdgeAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetEdges_" data-uid="Gamelogic.Grids.PointyTriPoint.GetEdges*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetEdges" data-uid="Gamelogic.Grids.PointyTriPoint.GetEdges">
+  GetEdges()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FlatRhombPoint&gt; GetEdges()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatRhombPoint.html">FlatRhombPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetHashCode_" data-uid="Gamelogic.Grids.PointyTriPoint.GetHashCode*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetHashCode" data-uid="Gamelogic.Grids.PointyTriPoint.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetVertexAnchor_" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertexAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetVertexAnchor" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertexAnchor">
+  GetVertexAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint GetVertexAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetVertexFaceAnchor_" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertexFaceAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetVertexFaceAnchor" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertexFaceAnchor">
+  GetVertexFaceAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint GetVertexFaceAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetVertexFaces_" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertexFaces*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetVertexFaces" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertexFaces">
+  GetVertexFaces()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the coordinates of the faces that corresponds to this point treated as a vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FlatHexPoint&gt; GetVertexFaces()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_GetVertices_" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertices*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_GetVertices" data-uid="Gamelogic.Grids.PointyTriPoint.GetVertices">
+  GetVertices()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the vertices of the point in the dual grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FlatHexPoint&gt; GetVertices()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_IncIndex_" data-uid="Gamelogic.Grids.PointyTriPoint.IncIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_IncIndex_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.IncIndex(System.Int32)">
+  IncIndex(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint IncIndex(int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_InvertIndex_" data-uid="Gamelogic.Grids.PointyTriPoint.InvertIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_InvertIndex" data-uid="Gamelogic.Grids.PointyTriPoint.InvertIndex">
+  InvertIndex()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint InvertIndex()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_MoveBackBy_" data-uid="Gamelogic.Grids.PointyTriPoint.MoveBackBy*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_MoveBackBy_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.MoveBackBy(Gamelogic.Grids.PointyTriPoint)">
+  MoveBackBy(PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint MoveBackBy(PointyTriPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_PointyTriPoint_MoveBackBy_Gamelogic_Grids_PointyTriPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><pre><code class="lang-csharp">new SplicedVector(u.B.Subtract(v.B), (SpliceCount + u.I - v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_MoveBy_" data-uid="Gamelogic.Grids.PointyTriPoint.MoveBy*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_MoveBy_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.MoveBy(Gamelogic.Grids.PointyTriPoint)">
+  MoveBy(PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If a spliced vectors u and v has base vector B and index I,</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint MoveBy(PointyTriPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_PointyTriPoint_MoveBy_Gamelogic_Grids_PointyTriPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This operation is the same as
+<pre><code class="lang-csharp">new SplicedVector(u.B.Translate(v.B), (u.I + v.I) % SpliceCount))</code></pre>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Negate_" data-uid="Gamelogic.Grids.PointyTriPoint.Negate*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Negate" data-uid="Gamelogic.Grids.PointyTriPoint.Negate">
+  Negate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new point with the vector component negated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint Negate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_PointFromVertexAnchor_" data-uid="Gamelogic.Grids.PointyTriPoint.PointFromVertexAnchor*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_PointFromVertexAnchor" data-uid="Gamelogic.Grids.PointyTriPoint.PointFromVertexAnchor">
+  PointFromVertexAnchor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FlatHexPoint PointFromVertexAnchor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_ScaleDown_" data-uid="Gamelogic.Grids.PointyTriPoint.ScaleDown*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_ScaleDown_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.ScaleDown(System.Int32)">
+  ScaleDown(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint ScaleDown(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_ScaleUp_" data-uid="Gamelogic.Grids.PointyTriPoint.ScaleUp*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_ScaleUp_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.ScaleUp(System.Int32)">
+  ScaleUp(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint ScaleUp(int r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Subtract_" data-uid="Gamelogic.Grids.PointyTriPoint.Subtract*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Subtract_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.Subtract(Gamelogic.Grids.FlatHexPoint)">
+  Subtract(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translates this point by the negation of the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint Subtract(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_ToString_" data-uid="Gamelogic.Grids.PointyTriPoint.ToString*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_ToString" data-uid="Gamelogic.Grids.PointyTriPoint.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_Translate_" data-uid="Gamelogic.Grids.PointyTriPoint.Translate*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_Translate_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.Translate(Gamelogic.Grids.FlatHexPoint)">
+  Translate(FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translate this point by the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointyTriPoint Translate(FlatHexPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_Addition_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Addition*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_Addition_Gamelogic_Grids_PointyTriPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Addition(Gamelogic.Grids.PointyTriPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator +(PointyTriPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyTriPoint operator +(PointyTriPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_Division_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Division*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_Division_Gamelogic_Grids_PointyTriPoint_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Division(Gamelogic.Grids.PointyTriPoint,System.Int32)">
+  operator /(PointyTriPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyTriPoint operator /(PointyTriPoint point, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_Equality_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Equality*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_Equality_Gamelogic_Grids_PointyTriPoint_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Equality(Gamelogic.Grids.PointyTriPoint,Gamelogic.Grids.PointyTriPoint)">
+  operator ==(PointyTriPoint, PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PointyTriPoint point1, PointyTriPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_Inequality_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Inequality*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_Inequality_Gamelogic_Grids_PointyTriPoint_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Inequality(Gamelogic.Grids.PointyTriPoint,Gamelogic.Grids.PointyTriPoint)">
+  operator !=(PointyTriPoint, PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PointyTriPoint point1, PointyTriPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_Multiply_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Multiply*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_Multiply_Gamelogic_Grids_PointyTriPoint_System_Int32_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Multiply(Gamelogic.Grids.PointyTriPoint,System.Int32)">
+  operator *(PointyTriPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyTriPoint operator *(PointyTriPoint point, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_Subtraction_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Subtraction*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_Subtraction_Gamelogic_Grids_PointyTriPoint_Gamelogic_Grids_FlatHexPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.op_Subtraction(Gamelogic.Grids.PointyTriPoint,Gamelogic.Grids.FlatHexPoint)">
+  operator -(PointyTriPoint, FlatHexPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyTriPoint operator -(PointyTriPoint point1, FlatHexPoint point2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point1</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+    <dt><code>point2</code> <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_UnaryNegation_" data-uid="Gamelogic.Grids.PointyTriPoint.op_UnaryNegation*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_UnaryNegation_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.op_UnaryNegation(Gamelogic.Grids.PointyTriPoint)">
+  operator -(PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyTriPoint operator -(PointyTriPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_PointyTriPoint_op_UnaryPlus_" data-uid="Gamelogic.Grids.PointyTriPoint.op_UnaryPlus*"></a>
+
+  <h3 id="Gamelogic_Grids_PointyTriPoint_op_UnaryPlus_Gamelogic_Grids_PointyTriPoint_" data-uid="Gamelogic.Grids.PointyTriPoint.op_UnaryPlus(Gamelogic.Grids.PointyTriPoint)">
+  operator +(PointyTriPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyTriPoint operator +(PointyTriPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyTriPoint.html">PointyTriPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

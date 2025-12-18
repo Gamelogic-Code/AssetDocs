@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct GridPoint3 | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct GridPoint3 | Gamelogic Grids ">
+      
+      <meta name="description" content="A discrete 3D vector, used to index into 3D grids.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.GridPoint3">
+
+
+
+  <h1 id="Gamelogic_Grids2_GridPoint3" data-uid="Gamelogic.Grids2.GridPoint3" class="text-break">
+Struct GridPoint3  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/3D/GridPoint3.cs#lines-21"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Grids2.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A discrete 3D vector, used to index into 3D grids.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct GridPoint3 : IEquatable&lt;GridPoint3&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_Grids2_GridPoint3_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Grid points work like vectors, except their components are integers. Grid points can be used
+on their own, but they are frequently used with grids and shapes.</p>
+<pre><code> &lt;xref href=&quot;Gamelogic.Grids2.GridPoint3&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt; was introduced before Unity's &lt;xref href=&quot;UnityEngine.Vector3Int&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;, and serve the same purpose. The
+ types are implicitly convertible.
+</code></pre>
+</div>
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.-ctor.html#Gamelogic_Grids2_GridPoint3__ctor_System_Int32_System_Int32_System_Int32_">GridPoint3(int, int, int)</a></dt>
+    <dd><p>Constructs a new instance of GridPoint3 with the given coordinates.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.One.html">One</a></dt>
+    <dd><p>The grid point with all coordinates equal to 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Zero.html">Zero</a></dt>
+    <dd><p>The zero grid point, also called the origin. All coordinates are 0.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.X.html#Gamelogic_Grids2_GridPoint3_X">X</a></dt>
+    <dd><p>The X coordinate of this point.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Y.html#Gamelogic_Grids2_GridPoint3_Y">Y</a></dt>
+    <dd><p>The Y coordinate of this point.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Z.html#Gamelogic_Grids2_GridPoint3_Z">Z</a></dt>
+    <dd><p>The Z coordinate of this point.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Add.html#Gamelogic_Grids2_GridPoint3_Add_Gamelogic_Grids2_GridPoint3_">Add(GridPoint3)</a></dt>
+    <dd><p>Adds an other grid point to this grid point and returns the result.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.CrossProduct.html#Gamelogic_Grids2_GridPoint3_CrossProduct_Gamelogic_Grids2_GridPoint3_">CrossProduct(GridPoint3)</a></dt>
+    <dd><p>Calculates the cross product of this vector with another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Div.html#Gamelogic_Grids2_GridPoint3_Div_Gamelogic_Grids2_GridPoint3_">Div(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+first point divided by the second point
+component-wise.The division is integer
+division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Div.html#Gamelogic_Grids2_GridPoint3_Div_System_Int32_">Div(int)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Dot.html#Gamelogic_Grids2_GridPoint3_Dot_Gamelogic_Grids2_GridPoint3_">Dot(GridPoint3)</a></dt>
+    <dd><p>Calculates the dot product between this grid point and another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Equals.html#Gamelogic_Grids2_GridPoint3_Equals_Gamelogic_Grids2_GridPoint3_">Equals(GridPoint3)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Equals.html#Gamelogic_Grids2_GridPoint3_Equals_System_Object_">Equals(object)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.FloorDiv.html#Gamelogic_Grids2_GridPoint3_FloorDiv_Gamelogic_Grids2_GridPoint3_">FloorDiv(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+first point divided by the second point
+component-wise.The division is integer
+division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.FloorDiv.html#Gamelogic_Grids2_GridPoint3_FloorDiv_System_Int32_">FloorDiv(int)</a></dt>
+    <dd><p>Divides each coordinate with r, using integer floor division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.FloorMod.html#Gamelogic_Grids2_GridPoint3_FloorMod_Gamelogic_Grids2_GridPoint3_">FloorMod(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+reminder when the first point is divided
+by the second point	component-wise. The
+division is integer floor division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetColor.html#Gamelogic_Grids2_GridPoint3_GetColor_Gamelogic_Grids2_ColorFunction_">GetColor(ColorFunction)</a></dt>
+    <dd><p>Gets the color index for this point for the given color function.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetColor.html#Gamelogic_Grids2_GridPoint3_GetColor_Gamelogic_Grids2_ColorFunction3_">GetColor(ColorFunction3)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetColor.html#Gamelogic_Grids2_GridPoint3_GetColor_System_Int32_System_Int32_System_Int32_">GetColor(int, int, int)</a></dt>
+    <dd><p>Gets the color index for this point for the given coloring parameters.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetColor.html#Gamelogic_Grids2_GridPoint3_GetColor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">GetColor(int, int, int, int, int, int)</a></dt>
+    <dd><p>Gets the color index for this point for the given color function.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetForwardVectorRays.html#Gamelogic_Grids2_GridPoint3_GetForwardVectorRays_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_GridPoint3__">GetForwardVectorRays(IEnumerable&lt;GridPoint3&gt;)</a></dt>
+    <dd><p>Gets the maps that represent the forward vector rays through this point in the given list of directions.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetHashCode.html#Gamelogic_Grids2_GridPoint3_GetHashCode">GetHashCode()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetReverseVectorRays.html#Gamelogic_Grids2_GridPoint3_GetReverseVectorRays_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_GridPoint3__">GetReverseVectorRays(IEnumerable&lt;GridPoint3&gt;)</a></dt>
+    <dd><p>Gets the maps that represent the reverse vector lines through this point in the given list of directions.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetVectorLine.html#Gamelogic_Grids2_GridPoint3_GetVectorLine_Gamelogic_Grids2_GridPoint3_">GetVectorLine(GridPoint3)</a></dt>
+    <dd><p>Gets the map that represents a line through this point in the given direction.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetVectorLines.html#Gamelogic_Grids2_GridPoint3_GetVectorLines_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_GridPoint3__">GetVectorLines(IEnumerable&lt;GridPoint3&gt;)</a></dt>
+    <dd><p>Gets the maps that represent the vector lines through this point in the given list of directions.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.GetVectorNeighbors.html#Gamelogic_Grids2_GridPoint3_GetVectorNeighbors_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_GridPoint3__">GetVectorNeighbors(IEnumerable&lt;GridPoint3&gt;)</a></dt>
+    <dd><p>Gets the vector neighbors of this point in the given direction.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.HadamardMul.html#Gamelogic_Grids2_GridPoint3_HadamardMul_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">HadamardMul(GridPoint3, GridPoint3)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Max.html#Gamelogic_Grids2_GridPoint3_Max_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">Max(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Calculates a new grid point with coordinates the maximum of the respective coordinates of
+two grid points.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Min.html#Gamelogic_Grids2_GridPoint3_Min_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">Min(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Calculates a new grid point with coordinates the minimum of the respective coordinates of
+two grid points.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Mod.html#Gamelogic_Grids2_GridPoint3_Mod_Gamelogic_Grids2_GridPoint3_">Mod(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+reminder when the first point is divided
+by the second point component-wise.The
+division is integer division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Mul.html#Gamelogic_Grids2_GridPoint3_Mul_Gamelogic_Grids2_GridPoint3_">Mul(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+first point multiplied by the second point
+component-wise.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Mul.html#Gamelogic_Grids2_GridPoint3_Mul_System_Int32_">Mul(int)</a></dt>
+    <dd><p>Multiplies each coordinate with the specified integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Negate.html#Gamelogic_Grids2_GridPoint3_Negate">Negate()</a></dt>
+    <dd><p>Returns the point with each coordinate negated.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.Subtract.html#Gamelogic_Grids2_GridPoint3_Subtract_Gamelogic_Grids2_GridPoint3_">Subtract(GridPoint3)</a></dt>
+    <dd><p>Subtracts the other point from this point, and returns the result.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.TO2DXZ.html#Gamelogic_Grids2_GridPoint3_TO2DXZ">TO2DXZ()</a></dt>
+    <dd><p>Convert this point to GridPoint2, keeping the x and z coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.To2DXY.html#Gamelogic_Grids2_GridPoint3_To2DXY">To2DXY()</a></dt>
+    <dd><p>Convert this point to GridPoint2, keeping the x and y coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.ToString.html#Gamelogic_Grids2_GridPoint3_ToString">ToString()</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.ToVector3.html#Gamelogic_Grids2_GridPoint3_ToVector3">ToVector3()</a></dt>
+    <dd><p>Converts a grid point to a Vector3 with the same
+coordinates (as floats).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.TruncDiv.html#Gamelogic_Grids2_GridPoint3_TruncDiv_Gamelogic_Grids2_GridPoint3_">TruncDiv(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+first point divided by the second point
+component-wise.The division is integer
+division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.TruncDiv.html#Gamelogic_Grids2_GridPoint3_TruncDiv_System_Int32_">TruncDiv(int)</a></dt>
+    <dd><p>Divides each coordinate with r, using integer trunc division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.TruncMod.html#Gamelogic_Grids2_GridPoint3_TruncMod_Gamelogic_Grids2_GridPoint3_">TruncMod(GridPoint3)</a></dt>
+    <dd><p>Gives a new point that represents the
+reminder when the first point is divided
+by the second point	component-wise. The
+division is integer trunc division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.__GetColor_Reference.html#Gamelogic_Grids2_GridPoint3___GetColor_Reference_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">__GetColor_Reference(int, int, int, int, int, int)</a></dt>
+    <dd><p>Gets the color index for this point for the given color function.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Addition.html#Gamelogic_Grids2_GridPoint3_op_Addition_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator +(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Adds two points by adding their corresponding coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Division.html#Gamelogic_Grids2_GridPoint3_op_Division_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator /(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Divides corresponding coordinates using integer division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Division.html#Gamelogic_Grids2_GridPoint3_op_Division_Gamelogic_Grids2_GridPoint3_System_Int32_">operator /(GridPoint3, int)</a></dt>
+    <dd><p>Divides each coordinate by the integer using integer division.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Equality.html#Gamelogic_Grids2_GridPoint3_op_Equality_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator ==(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Compares two points for equality.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Explicit.html#Gamelogic_Grids2_GridPoint3_op_Explicit_UnityEngine_Vector3__Gamelogic_Grids2_GridPoint3">explicit operator GridPoint3(Vector3)</a></dt>
+    <dd><p>Converts a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> to a <a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a> by casting components to integers.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Implicit.html#Gamelogic_Grids2_GridPoint3_op_Implicit_Gamelogic_Grids2_GridPoint3__UnityEngine_Vector3">implicit operator Vector3(GridPoint3)</a></dt>
+    <dd><p>Converts a grid point to a Vector3 with the same
+coordinates (as floats).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Implicit.html#Gamelogic_Grids2_GridPoint3_op_Implicit_Gamelogic_Grids2_GridPoint3__UnityEngine_Vector3Int">implicit operator Vector3Int(GridPoint3)</a></dt>
+    <dd><p>Converts this grid point to a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2Int.html">Vector2Int</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Implicit.html#Gamelogic_Grids2_GridPoint3_op_Implicit_UnityEngine_Vector3Int__Gamelogic_Grids2_GridPoint3">implicit operator GridPoint3(Vector3Int)</a></dt>
+    <dd><p>Converts a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3Int.html">Vector3Int</a> to a <a class="xref" href="Gamelogic.Grids2.GridPoint3.html">GridPoint3</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Inequality.html#Gamelogic_Grids2_GridPoint3_op_Inequality_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator !=(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Checks whether two points are not equal.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Modulus.html#Gamelogic_Grids2_GridPoint3_op_Modulus_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator %(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Divides corresponding coordinates using integer division and return the
+remainders as a new grid point.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Multiply.html#Gamelogic_Grids2_GridPoint3_op_Multiply_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator *(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Multiplies corresponding coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Multiply.html#Gamelogic_Grids2_GridPoint3_op_Multiply_Gamelogic_Grids2_GridPoint3_System_Int32_">operator *(GridPoint3, int)</a></dt>
+    <dd><p>Multiplies corresponding coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Multiply.html#Gamelogic_Grids2_GridPoint3_op_Multiply_System_Int32_Gamelogic_Grids2_GridPoint3_">operator *(int, GridPoint3)</a></dt>
+    <dd><p>Multiplies each coordinate with the integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_Subtraction.html#Gamelogic_Grids2_GridPoint3_op_Subtraction_Gamelogic_Grids2_GridPoint3_Gamelogic_Grids2_GridPoint3_">operator -(GridPoint3, GridPoint3)</a></dt>
+    <dd><p>Subtracts one point from another by subtracting corresponding coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_UnaryNegation.html#Gamelogic_Grids2_GridPoint3_op_UnaryNegation_Gamelogic_Grids2_GridPoint3_">operator -(GridPoint3)</a></dt>
+    <dd><p>Negates the given vector.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.GridPoint3.op_UnaryPlus.html#Gamelogic_Grids2_GridPoint3_op_UnaryPlus_Gamelogic_Grids2_GridPoint3_">operator +(GridPoint3)</a></dt>
+    <dd><p>This operations does not affect the point.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

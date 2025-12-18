@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Introduction | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Introduction | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/GridColorings.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction">Introduction</h1>
+
+<p>A grid coloring is a way to assign a “color” to each cell in a grid. Grids only provides functions for periodic
+colorings – colorings that use repeating patterns – so when we say “grid coloring” we mean “periodic grid coloring”.
+Also, we talk of color – but in practice all the functions work with integers. For example, the checkerboard pattern
+uses two “colors” 0 and 1.</p>
+<h2 id="what-are-colorings-used-for">What are colorings used for?</h2>
+<h3 id="aesthetics">Aesthetics</h3>
+<p>Colorings make grids pretty. We colored almost all the grids on our site using one of these patterns, and many games use
+patterns to make their grids more attractive.</p>
+<h3 id="visual-organization">Visual Organization</h3>
+<p>Colorings make it easier to distinguish cells. In some games, such as chess or darts, these patterns can help make the
+game state easier to take in visually. In chess, it’s much easier to work out knight moves when you know a knight on
+black must always move to white.</p>
+<p><img src="../images/colorings/coloring_hexagonal_chess.png" alt="A hexagonal chessboard with three colors so that neighboring cells have different colors."></p>
+<h2 id="algorithms">Algorithms</h2>
+<p>Grid colorings are the basis of many interesting grid algorithms. The coloring algorithm does not return actual colors,
+but indices that we can use to access an array of colors that we can assign to cells in a grid if that is the goal. But
+the index also relays some structural information about a cell that can be exploited in algorithms to compute things
+that have nothing to do with colors.</p>
+<h2 id="algorithm-examples">Algorithm Examples</h2>
+<h3 id="prims-maze-generation-algorithm">Prim's maze generation algorithm</h3>
+<p>This, and many other maze generation algorithms, work on edges. One way of implementing the algorithm is to represent
+edges and faces in the same grid, as we have done in this example with hex grids, and Game 6 for rect grids. You can use
+a coloring to decide which cells represent walls and which cells represent faces.</p>
+<table>
+<thead>
+<tr>
+<th><img src="../images/colorings/coloring_maze_4.png" alt="A hex grid with a regular pattern using four colors."></th>
+<th><img src="../images/colorings/coloring_maze.png" alt="A hexagon grid with some cells filled in to indicate they are impsasable."></th>
+</tr>
+</thead>
+</table>
+<ul>
+<li><p>Here, yellow corresponds with definite openings; the other colors correspond with walls (that may be opened by the
+maze generation algorithm). The color also shows the orientation of the “edge”, for example, all red cells denote
+vertical edges.</p>
+</li>
+<li><p>In <a href="http://www.gamasutra.com/blogs/HermanTulleken/20161005/282629/Algorithms_for_making_more_interesting_mazes.php">Algorithms for making more interesting mazes</a>, there are a lot more examples of how grid colorings can be
+used in maze algorithms.</p>
+</li>
+</ul>
+<h3 id="implementing-triangular-rhombille-and-floret-pentagon-grids">Implementing triangular, rhombille and floret pentagon grids</h3>
+<p>A single grid can be used to represent vertices and faces simultaneously. We can use this to assign coordinates to
+triangular grids that make them much easier to work with (we are investigating this as an alternative for our existing
+triangular grids, and I will write more on this topic later). In this case, the coloring tells you which cells
+correspond to faces, and which ones with vertices. It also tells you which cells have up triangles,</p>
+<table>
+<thead>
+<tr>
+<th>Tri Grid</th>
+<th>Rhomb Grid</th>
+<th>Floret Pentagon Grid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../images/colorings/coloring_triangle.png" alt="A hexagon grid superimposed on a triangular grid, with triangles colored regularly with two colors."></td>
+<td><img src="../images/colorings/coloring_rhombille.png" alt="A hexagon grid superimposed on a rhomb grid, with rhombs colored regularly with three colors."></td>
+<td><img src="../images/colorings/coloring_floret_pentagon.png" alt="A hexagon grid superimposed on a floret pentagon grid, with pentagons colored regularly with six colors."></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(You can use single grids to represent other combinations of faces, edges and vertices too; and again a coloring helps
+you decide which cells are which type).</li>
+</ul>
+<h3 id="procedural-content">Procedural content</h3>
+<p>In many games, these colors can help you generate interesting levels or puzzles. The game that inspired Grids uses
+colorings to generate many of the game’s puzzles.</p>
+<h3 id="sampling">Sampling</h3>
+<p>Colorings are useful for low-res grid traversal, or sampling a grid evenly. This is the basis of many procedural
+algorithms: for instance, you could place elements at points of a regular sample offset by a random amount, giving you a
+fairly even distribution that is still somewhat unpredictable. Because colorings exist for any number of colors, you can
+also control the fraction precisely. If you want 20% of your world to be occupied by monsters, you simply use a
+5-coloring.</p>
+<h3 id="wrapped-grids">Wrapped Grids</h3>
+<p>Grid colorings can be used for making look-up tables to wrap grids in non-standard ways. For example, a hex-grid can be
+wrapped as shown below:</p>
+<p>(The interactive example on this page makes it a bit clearer how this wrapping works.)</p>
+<ul>
+<li><p>The method is to</p>
+<ol>
+<li>create a hexagon-shaped grid with the desired size</li>
+<li>calculate the coloring index (for a suitable coloring) for each cell in this grid</li>
+<li>set the value at this index in an array to the associated point</li>
+</ol>
+</li>
+<li><p>To find out how any point is wrapped, simply look up its coloring, and then the corresponding point in the array.</p>
+</li>
+</ul>
+<p><img src="../images/colorings/coloring_wrap.png" alt="A hexagon grid with a path showing how the grid is wrapped."></p>
+<p><img src="../images/colorings/coloring_torus.png" alt="A hexagon grid on a torus, with the same wrapping."></p>
+<h3 id="specifying-colorings">Specifying Colorings</h3>
+<p>Any repeated pattern in a grid can be specified by finding a (1D, 2D or 3D) parallelogram that contains only one of each
+color, called the &quot;primitive region&quot;.</p>
+<p>The only information we need is the three 1, 2 or 3 vectors that describe the unique sides of the parallelogram, with
+some additional restrictions on the form for 2D and 3D. (These restrictions do not affect the possible colorings.)</p>
+<table>
+<thead>
+<tr>
+<th><img src="../images/colorings/coloring_parallelogram_0.png" alt="A hexagonod grid regularly colored with 6 colors, with parallelograms overlayed."></th>
+<th><img src="../images/colorings/coloring_parallelogram_1.png" alt="Shows the coordinates of one parallelogram's corners."></th>
+<th><img src="../images/colorings/coloring_parallelogram_2.png" alt="Shows the coordinates of another parallelogram's corners."></th>
+</tr>
+</thead>
+</table>
+<ul>
+<li>Even with these constraints it is still possible to specify the same colorings in different ways. This is only a problem if you want to make comparisons based on colorings.</li>
+<li>For 1D, the coloring function is equivalent of taking the modulus of a point.</li>
+<li>No distinction is made between colorings for different grids, for example the same function is used for rect and hex grids. What is different on different grids is how neighbors relate to each other so patterns look different visually, and that have different “meanings” algorithmically. For example, it is possible to apply the checkerboard coloring to a hex grid, but unlike when used on a rect grid, some adjacent cells will have the same color.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>1D</th>
+<th>2D</th>
+<th>3D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primitive region</td>
+<td>Segment</td>
+<td>Parallelogram</td>
+<td>Parallelopiped</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Segment length</td>
+<td>Two sides of the parallelogram</td>
+<td>Three sides of the parallelopiped</td>
+</tr>
+<tr>
+<td>Additional constraints</td>
+<td>-</td>
+<td>One vector parallel to x-axis</td>
+<td>One vector parallel to x-axis, and one vector in the XY-plane.</td>
+</tr>
+<tr>
+<td>Standard form</td>
+<td>x0</td>
+<td>(x0, 0), (x1, y1)</td>
+<td>(x0, 0, 0), (x1, y1, 0), (x2, y2, z2)</td>
+</tr>
+</tbody>
+</table>
+<p>Note that any integer linear combination of the coloring-vectors added to a point with a certain color, will give a point with the same color. For example, in 2D, if the two coloring vectors are C0 and C1, then for any integers m and n, the vector p + mC0 + nC1 will have the same color as p.</p>
+<h2 id="some-important-colorings">Some Important Colorings</h2>
+<h3 id="1-coloring">1-Coloring</h3>
+<p><img src="../images/colorings/coloring_2d_1.png" alt="A grid of squares coloured blue."></p>
+<ul>
+<li><strong>Description</strong>: (1, 0), (0, 1)</li>
+<li><strong>Note</strong>: This coloring is not used for anything, but it is an important degenerate case that arises occasionally.</li>
+</ul>
+<h2 id="checkerboard-coloring">Checkerboard coloring</h2>
+<p><img src="../images/colorings/coloring_2d_2.png" alt="A squares grid colored alternating blue and yellow."></p>
+<ul>
+<li><strong>Description</strong>: (2, 0), (1, 1)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring allows a rectangular grid to be colored with the smallest number of colors so that edge-to-edge neighbors don't match.</li>
+<li>It is used in many square grid games to make boards easier to analyze.</li>
+<li>It is also used in puzzles about dominoes, as a minimum requirement for a set of dominoes to cover a shape is for the shape to have the same number of each color under this coloring.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-coloring">4-coloring</h2>
+<p><img src="../images/colorings/coloring_2d_4.png" alt="A square grid regularly colored with 4 colors."></p>
+<ul>
+<li><strong>Description</strong>: (2, 0), (0, 2)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring allows a rectangular grid to be colored with the smallest number of colors so that vertex-neighbors always have different colors.</li>
+<li>It also allows a hexagonal grid to be colored so that any two cells with a hex-distance of 2 or less apart have unique colors.</li>
+<li>For rectangular grids, the coloring is recursive in that 4 cells that make a square each have a unique coloring. Therefore, this coloring plays a role in certain algorithms on quad-trees.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../images/colorings/coloring_2dh_4.png" alt="A hex grid regularly colored with 4 colors."></p>
+<ul>
+<li><strong>Usage (Hex Grid)</strong>:
+<ul>
+<li>In a hex grid, the coloring can be used to assign cells as &quot;center&quot;, or one of three wall types depending on the slant. This can be exploited in designing maze algorithms on a hex grid.</li>
+<li>The coloring is also used to represent rhombille grids using hex coordinates: one color corresponds to sharp vertices of the rhombi, and the other three to each of the three types of rhombi according to their orientation.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-coloring">3-coloring</h2>
+<p><img src="../images/colorings/coloring_2dh_3.png" alt="A hex grid regularly colored with 3 colors."></p>
+<ul>
+<li><strong>Description</strong>: (3, 0), (1, 2)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring has the smallest number of colors that allows all neighbors on a hex grid to have different colors.</li>
+<li>Diagonals (as defined in hex-chess) have the same color, and therefore this color scheme is useful for coloring boards to make it easier to make diagonal moves.</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-coloring">7-coloring</h2>
+<p><img src="../images/colorings/coloring_2dh_7.png" alt="A hex grid regularly colored with 7 colors."></p>
+<ul>
+<li><strong>Description</strong>: (7, 0), (1, 4)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring can be used to represent a floret pentagon grid with hex coordinates.</li>
+<li>One color represents the sharp vertex of pentagons; the other six correspond to the pentagons depending on which of the six orientations it has.</li>
+<li>This coloring is recursive: 7 hexagons in the shape of a hexagon each has a different coloring. Therefore, this coloring is sometimes used in hex sept-trees (similar to quad-trees for rect-grids) and generating iterations of the Gosper curve.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3d-1-coloring">3D 1-Coloring</h2>
+<p><img src="../images/colorings/coloring_3d_1.png" alt="A cube grid colored with 1 color."></p>
+<ul>
+<li><strong>Description</strong>: (1, 0, 0), (0, 1, 0), (0, 0, 1)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring is not used for anything, but it is an important degenerate case that arises occasionally.</li>
+</ul>
+</li>
+</ul>
+<h2 id="cube-checkerboard-coloring">Cube Checkerboard Coloring</h2>
+<p><img src="../images/colorings/coloring_3d_2.png" alt="A cube grid regularly colored with 2 colors."></p>
+<ul>
+<li><strong>Description</strong>: (2, 0, 0), (1, 1, 0), (0, 1, 1)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring allows a block-grid to be colored with the smallest number of colors so that edge-neighbors have different colors.</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-coloring">8-coloring</h2>
+<p><img src="../images/colorings/coloring_3d_8.png" alt="A cube grid regularly colored with 8 colors."></p>
+<ul>
+<li><strong>Description</strong>: (2, 0, 0), (0, 2, 0), (0, 0, 2)</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>This coloring allows a block-grid to be colored with the smallest number of colors so that vertex-neighbors have different colors.</li>
+<li>It enables the assignment of a cell as one of &quot;center&quot;, &quot;XY-face&quot;, &quot;XZ-face&quot;, &quot;YZ-face&quot;, &quot;X-edge&quot;, &quot;Y-edge&quot;, &quot;Z-edge&quot; or &quot;vertex&quot;, useful in some 3D maze generation algorithms and 3D tile designs.</li>
+<li>8 cells that form a cube will always have distinct colors, giving this coloring a recursive property useful in certain algorithms involving oct-trees.</li>
+</ul>
+</li>
+</ul>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridPoint1.GetColor.html">GetColor</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.GetColor.html">GetColor</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridPoint3.GetColor.html">GetColor</a></li>
+<li><a href="http://www.gamelogic.co.za/downloads/HexMath2.pdf">Hex Geometry for Game Developers</a></li>
+<li><a href="https://www.gamedeveloper.com/programming/algorithms-for-making-more-interesting-mazes">Algorithms for making more interesting mazes</a></li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

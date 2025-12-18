@@ -1,0 +1,1158 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GridExtensions | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GridExtensions | Gamelogic Grids ">
+      
+      <meta name="description" content="Defines extension methods for the IGrid interface. This is implemented as an extension so that implementers need not extend from a common base class, but provide it to their clients.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.GridExtensions">
+
+
+
+  <h1 id="Gamelogic_Grids_GridExtensions" data-uid="Gamelogic.Grids.GridExtensions" class="text-break">
+Class GridExtensions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines extension methods for the IGrid interface.
+This is implemented as an extension so that implementers need not
+extend from a common base class, but provide it to their clients.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public static class GridExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GridExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_GridExtensions_Apply_" data-uid="Gamelogic.Grids.GridExtensions.Apply*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_Apply__2_Gamelogic_Grids_IGrid___0___1__System_Action___0__" data-uid="Gamelogic.Grids.GridExtensions.Apply``2(Gamelogic.Grids.IGrid{``0,``1},System.Action{``0})">
+  Apply&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Action&lt;TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies the given action to all cells in the grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static void Apply&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, Action&lt;TCell&gt; action) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_GridExtensions_Apply__2_Gamelogic_Grids_IGrid___0___1__System_Action___0___examples">Examples</h4>
+  <p>grid.Apply(cell =&gt; cell.Color = Color.red);</p>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_CastValues_" data-uid="Gamelogic.Grids.GridExtensions.CastValues*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_CastValues__2_Gamelogic_Grids_IGrid___1__" data-uid="Gamelogic.Grids.GridExtensions.CastValues``2(Gamelogic.Grids.IGrid{``1})">
+  CastValues&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new grid in the same shape as the given grid, with the same contents casted to the new type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;TNewCell, TPoint&gt; CastValues&lt;TNewCell, TPoint&gt;(this IGrid&lt;TPoint&gt; grid) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_CloneStructure_" data-uid="Gamelogic.Grids.GridExtensions.CloneStructure*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1__System_Func___0__" data-uid="Gamelogic.Grids.GridExtensions.CloneStructure``2(Gamelogic.Grids.IGrid{``1},System.Func{``0})">
+  CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TNewCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clones the given grid, and fills all cells of the cloned grid
+with the value returned by createValue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static IGrid&lt;TNewCell, TPoint&gt; CloneStructure&lt;TNewCell, TPoint&gt;(this IGrid&lt;TPoint&gt; grid, Func&lt;TNewCell&gt; createValue) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>createValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TNewCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_CloneStructure_" data-uid="Gamelogic.Grids.GridExtensions.CloneStructure*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1__System_Func___1___0__" data-uid="Gamelogic.Grids.GridExtensions.CloneStructure``2(Gamelogic.Grids.IGrid{``1},System.Func{``1,``0})">
+  CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, Func&lt;TPoint, TNewCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clones the given grid, and fills the cell at each point of the cloned grid with the value
+returned by createValue when the point is passed as a parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static IGrid&lt;TNewCell, TPoint&gt; CloneStructure&lt;TNewCell, TPoint&gt;(this IGrid&lt;TPoint&gt; grid, Func&lt;TPoint, TNewCell&gt; createValue) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>createValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TNewCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_CloneStructure_" data-uid="Gamelogic.Grids.GridExtensions.CloneStructure*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_CloneStructure__2_Gamelogic_Grids_IGrid___1____0_" data-uid="Gamelogic.Grids.GridExtensions.CloneStructure``2(Gamelogic.Grids.IGrid{``1},``0)">
+  CloneStructure&lt;TNewCell, TPoint&gt;(IGrid&lt;TPoint&gt;, TNewCell)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clones the given grid, and fills all cells of the cloned grid with the given value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static IGrid&lt;TNewCell, TPoint&gt; CloneStructure&lt;TNewCell, TPoint&gt;(this IGrid&lt;TPoint&gt; grid, TNewCell value) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TNewCell</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TNewCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TNewCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_Clone_" data-uid="Gamelogic.Grids.GridExtensions.Clone*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_Clone__2_Gamelogic_Grids_IGrid___0___1__" data-uid="Gamelogic.Grids.GridExtensions.Clone``2(Gamelogic.Grids.IGrid{``0,``1})">
+  Clone&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a shallow copy of the given grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;TCell, TPoint&gt; Clone&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_Fill_" data-uid="Gamelogic.Grids.GridExtensions.Fill*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1__System_Func___0__" data-uid="Gamelogic.Grids.GridExtensions.Fill``2(Gamelogic.Grids.IGrid{``0,``1},System.Func{``0})">
+  Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills all cells of a grid with the value returned by createValue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static void Fill&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, Func&lt;TCell&gt; createValue) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>createValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_Fill_" data-uid="Gamelogic.Grids.GridExtensions.Fill*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1__System_Func___1___0__" data-uid="Gamelogic.Grids.GridExtensions.Fill``2(Gamelogic.Grids.IGrid{``0,``1},System.Func{``1,``0})">
+  Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TPoint, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills the cell of each point of a grid with the value returned by createValue when passed the point as a parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static void Fill&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, Func&lt;TPoint, TCell&gt; createValue) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>createValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_Fill_" data-uid="Gamelogic.Grids.GridExtensions.Fill*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_Fill__2_Gamelogic_Grids_IGrid___0___1____0_" data-uid="Gamelogic.Grids.GridExtensions.Fill``2(Gamelogic.Grids.IGrid{``0,``1},``0)">
+  Fill&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TCell)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills all cells of a grid with the given value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static void Fill&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TCell value) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TCell</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_GetAllNeighbors_" data-uid="Gamelogic.Grids.GridExtensions.GetAllNeighbors*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_GetAllNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1_System_Boolean__" data-uid="Gamelogic.Grids.GridExtensions.GetAllNeighbors``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``1,System.Boolean})">
+  GetAllNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns all neighbors of this point that satisfies the condition,
+regardless of whether they are in the grid or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; GetAllNeighbors&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point, Func&lt;TPoint, bool&gt; includePoint) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>includePoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_GetCell_" data-uid="Gamelogic.Grids.GridExtensions.GetCell*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_GetCell__2_Gamelogic_Grids_IGrid___0___1____1_" data-uid="Gamelogic.Grids.GridExtensions.GetCell``2(Gamelogic.Grids.IGrid{``0,``1},``1)">
+  GetCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The same as <code>grid[point]</code>. This method is included to make
+it easier to construct certain LINQ expressions, for example</p>
+<p>grid.Select(grid.GetCell)
+grid.Where(p =&gt; p.GetColor4_2() == 0).Select(grid.GetCell)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static TCell GetCell&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TCell</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_GetNeighborHood_" data-uid="Gamelogic.Grids.GridExtensions.GetNeighborHood*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_GetNeighborHood__1_Gamelogic_Grids_RectGrid___0__Gamelogic_Grids_RectPoint_System_Int32_" data-uid="Gamelogic.Grids.GridExtensions.GetNeighborHood``1(Gamelogic.Grids.RectGrid{``0},Gamelogic.Grids.RectPoint,System.Int32)">
+  GetNeighborHood&lt;T&gt;(RectGrid&lt;T&gt;, RectPoint, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the points in a grid neighborhood around the given center.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 8, 0)]
+public static IEnumerable&lt;RectPoint&gt; GetNeighborHood&lt;T&gt;(this RectGrid&lt;T&gt; grid, RectPoint center, int radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.RectGrid-1.html">RectGrid</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>center</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_GetNeighbors_" data-uid="Gamelogic.Grids.GridExtensions.GetNeighbors*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_" data-uid="Gamelogic.Grids.GridExtensions.GetNeighbors``2(Gamelogic.Grids.IGrid{``0,``1},``1)">
+  GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Only return neighbors of the point that are inside the grid, as defined by Contains.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TPoint&gt; GetNeighbors&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_GetNeighbors_" data-uid="Gamelogic.Grids.GridExtensions.GetNeighbors*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___0_System_Boolean__" data-uid="Gamelogic.Grids.GridExtensions.GetNeighbors``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``0,System.Boolean})">
+  GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TCell, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Only return neighbors of the point that are inside the grid, as defined by IsInside,
+whose associated cells also satisfy the predicate includeCell.</p>
+<p>It is equivalent to GetNeighbors(point).Where(p =&gt; includeCell(grid[p])</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static IEnumerable&lt;TPoint&gt; GetNeighbors&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point, Func&lt;TCell, bool&gt; includeCell) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>includeCell</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_GetNeighbors_" data-uid="Gamelogic.Grids.GridExtensions.GetNeighbors*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_GetNeighbors__2_Gamelogic_Grids_IGrid___0___1____1_System_Func___1_System_Boolean__" data-uid="Gamelogic.Grids.GridExtensions.GetNeighbors``2(Gamelogic.Grids.IGrid{``0,``1},``1,System.Func{``1,System.Boolean})">
+  GetNeighbors&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, Func&lt;TPoint, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Only return neighbors of the point that are inside the grid, as defined by IsInside,
+that also satisfies the predicate includePoint.</p>
+<p>It is equivalent to GetNeighbors(point).Where(includePoint).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static IEnumerable&lt;TPoint&gt; GetNeighbors&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point, Func&lt;TPoint, bool&gt; includePoint) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>includePoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TPoint, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_IsOutside_" data-uid="Gamelogic.Grids.GridExtensions.IsOutside*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_IsOutside__2_Gamelogic_Grids_IGrid___0___1____1_" data-uid="Gamelogic.Grids.GridExtensions.IsOutside``2(Gamelogic.Grids.IGrid{``0,``1},``1)">
+  IsOutside&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns whether the point is outside the grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsOutside&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_GridExtensions_IsOutside__2_Gamelogic_Grids_IGrid___0___1____1__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>implementers This method must be consistent with IsInside, and hence
+is not overridable.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_SelectValuesAt_" data-uid="Gamelogic.Grids.GridExtensions.SelectValuesAt*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_SelectValuesAt__2_Gamelogic_Grids_IGrid___0___1__System_Collections_Generic_IEnumerable___1__" data-uid="Gamelogic.Grids.GridExtensions.SelectValuesAt``2(Gamelogic.Grids.IGrid{``0,``1},System.Collections.Generic.IEnumerable{``1})">
+  SelectValuesAt&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, IEnumerable&lt;TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of cells that correspond to the list of points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TCell&gt; SelectValuesAt&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, IEnumerable&lt;TPoint&gt; pointList) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>pointList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_SetCell_" data-uid="Gamelogic.Grids.GridExtensions.SetCell*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_SetCell__2_Gamelogic_Grids_IGrid___0___1____1___0_" data-uid="Gamelogic.Grids.GridExtensions.SetCell``2(Gamelogic.Grids.IGrid{``0,``1},``1,``0)">
+  SetCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, TPoint, TCell)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The same as <code>grid[point] = value</code>. This method is provided
+to be consistent with GetCell.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static void SetCell&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, TPoint point, TCell value) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>point</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+    <dt><code>value</code> <span class="xref">TCell</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_Shuffle_" data-uid="Gamelogic.Grids.GridExtensions.Shuffle*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_Shuffle__2_Gamelogic_Grids_IGrid___0___1__" data-uid="Gamelogic.Grids.GridExtensions.Shuffle``2(Gamelogic.Grids.IGrid{``0,``1})">
+  Shuffle&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuffles the contents of a grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 6, 0)]
+public static void Shuffle&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_TransformValues_" data-uid="Gamelogic.Grids.GridExtensions.TransformValues*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_TransformValues__2_Gamelogic_Grids_IGrid___0___1__System_Func___0___0__" data-uid="Gamelogic.Grids.GridExtensions.TransformValues``2(Gamelogic.Grids.IGrid{``0,``1},System.Func{``0,``0})">
+  TransformValues&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell, TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transforms all values in this grid using the given transformation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 10, 0)]
+public static void TransformValues&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, Func&lt;TCell, TCell&gt; transformation) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>transformation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Grids_GridExtensions_TransformValues__2_Gamelogic_Grids_IGrid___0___1__System_Func___0___0___examples">Examples</h4>
+  <p>gridOfNumbers.TransformValues(x =&gt; x + 1);</p>
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_GridExtensions_WhereCell_" data-uid="Gamelogic.Grids.GridExtensions.WhereCell*"></a>
+
+  <h3 id="Gamelogic_Grids_GridExtensions_WhereCell__2_Gamelogic_Grids_IGrid___0___1__System_Func___0_System_Boolean__" data-uid="Gamelogic.Grids.GridExtensions.WhereCell``2(Gamelogic.Grids.IGrid{``0,``1},System.Func{``0,System.Boolean})">
+  WhereCell&lt;TCell, TPoint&gt;(IGrid&lt;TCell, TPoint&gt;, Func&lt;TCell, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of all points whose associated cells also satisfy the predicate include.</p>
+<p>It is equivalent to GetNeighbors(point).Where(p =&gt; includeCell(grid[p])</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 7, 0)]
+public static IEnumerable&lt;TPoint&gt; WhereCell&lt;TCell, TPoint&gt;(this IGrid&lt;TCell, TPoint&gt; grid, Func&lt;TCell, bool&gt; include) where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;TCell, TPoint&gt;</dt>
+    <dd></dd>
+    <dt><code>include</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TCell, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TPoint&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

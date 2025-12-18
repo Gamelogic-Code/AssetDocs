@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IGridPoint&lt;TPoint&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IGridPoint&lt;TPoint&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="Represents a &amp;quot;point&amp;quot; that is used to access a cell in a Grid. For built-in 2D grids, these points are often 2D integer vectors, or spliced vectors, and hence they implement additional interfaces such as IVectorPoint, ISplicedPoint, andISplicedVectorPoint.These points supports arithmetic, colorings, and some other geometric operations. In general, points do not &amp;quot;know&amp;quot; their neighbors.Use the grid methods IGrid&amp;lt;TCell, TPoint&amp;gt;.GetNeighbors and IGrid&amp;lt;TCell, TPoint&amp;gt;.GetAllNeighbors to make queries about a point&#39;s neighbors. GridPoint base classes must be immutable for many of the algorithms to work correctly.In particular, GridPoints are used as keys in dictionaries and sets. It is also a good idea to overload the == and != operators.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.IGridPoint`1">
+
+
+
+  <h1 id="Gamelogic_Grids_IGridPoint_1" data-uid="Gamelogic.Grids.IGridPoint`1" class="text-break">
+Interface IGridPoint&lt;TPoint&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a &quot;point&quot; that is used to access a cell in a Grid.</p>
+<p>For built-in 2D grids, these points are often 2D integer vectors, or spliced vectors, and hence they implement
+additional interfaces such as IVectorPoint, ISplicedPoint, andISplicedVectorPoint.These points supports
+arithmetic, <a href="http://gamelogic.co.za/2013/12/18/what-are-grid-colorings/">colorings</a>, and some other geometric operations.</p>
+<p>In general, points do not &quot;know&quot; their neighbors.Use the grid methods IGrid&lt;TCell, TPoint&gt;.GetNeighbors and
+IGrid&lt;TCell, TPoint&gt;.GetAllNeighbors to make queries about a point's neighbors.</p>
+<p>GridPoint base classes must be immutable for many of the algorithms to work correctly.In particular,
+GridPoints are used as keys in dictionaries and sets.</p>
+<p>It is also a good idea to overload the <code>==</code> and <code>!=</code> operators.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public interface IGridPoint&lt;TPoint&gt; : IEquatable&lt;TPoint&gt;, IGridPoint where TPoint : IGridPoint&lt;TPoint&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals">IEquatable&lt;TPoint&gt;.Equals(TPoint)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Grids_IGridPoint_1_SpliceCount_" data-uid="Gamelogic.Grids.IGridPoint`1.SpliceCount*"></a>
+
+  <h3 id="Gamelogic_Grids_IGridPoint_1_SpliceCount" data-uid="Gamelogic.Grids.IGridPoint`1.SpliceCount">
+  SpliceCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the number of slices for all points.</p>
+<p>For Uniform grids, this is always 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SpliceCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_IGridPoint_1_SpliceIndex_" data-uid="Gamelogic.Grids.IGridPoint`1.SpliceIndex*"></a>
+
+  <h3 id="Gamelogic_Grids_IGridPoint_1_SpliceIndex" data-uid="Gamelogic.Grids.IGridPoint`1.SpliceIndex">
+  SpliceIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>For spliced grids, this is the index of the splice.</p>
+<p>For Uniform grids, this is always 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int SpliceIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_IGridPoint_1_DistanceFrom_" data-uid="Gamelogic.Grids.IGridPoint`1.DistanceFrom*"></a>
+
+  <h3 id="Gamelogic_Grids_IGridPoint_1_DistanceFrom__0_" data-uid="Gamelogic.Grids.IGridPoint`1.DistanceFrom(`0)">
+  DistanceFrom(TPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The lattice distance between two points.</p>
+<p>Two points should have a distance of 1 if and only if they are neighbors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DistanceFrom(TPoint other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <span class="xref">TPoint</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

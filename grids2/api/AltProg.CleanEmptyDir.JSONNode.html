@@ -1,0 +1,1548 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JSONNode | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JSONNode | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="AltProg.CleanEmptyDir.JSONNode">
+
+
+
+  <h1 id="AltProg_CleanEmptyDir_JSONNode" data-uid="AltProg.CleanEmptyDir.JSONNode" class="text-break">
+Class JSONNode  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-64"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="AltProg.html">AltProg</a>.<a class="xref" href="AltProg.CleanEmptyDir.html">CleanEmptyDir</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp-Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class JSONNode</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JSONNode</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="AltProg.CleanEmptyDir.JSONArray.html">JSONArray</a></div>
+      <div><a class="xref" href="AltProg.CleanEmptyDir.JSONClass.html">JSONClass</a></div>
+      <div><a class="xref" href="AltProg.CleanEmptyDir.JSONData.html">JSONData</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_AsArray_" data-uid="AltProg.CleanEmptyDir.JSONNode.AsArray*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_AsArray" data-uid="AltProg.CleanEmptyDir.JSONNode.AsArray">
+  AsArray
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONArray AsArray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONArray.html">JSONArray</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_AsBool_" data-uid="AltProg.CleanEmptyDir.JSONNode.AsBool*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_AsBool" data-uid="AltProg.CleanEmptyDir.JSONNode.AsBool">
+  AsBool
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AsBool { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_AsDouble_" data-uid="AltProg.CleanEmptyDir.JSONNode.AsDouble*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_AsDouble" data-uid="AltProg.CleanEmptyDir.JSONNode.AsDouble">
+  AsDouble
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double AsDouble { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_AsFloat_" data-uid="AltProg.CleanEmptyDir.JSONNode.AsFloat*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_AsFloat" data-uid="AltProg.CleanEmptyDir.JSONNode.AsFloat">
+  AsFloat
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float AsFloat { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_AsInt_" data-uid="AltProg.CleanEmptyDir.JSONNode.AsInt*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_AsInt" data-uid="AltProg.CleanEmptyDir.JSONNode.AsInt">
+  AsInt
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int AsInt { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_AsObject_" data-uid="AltProg.CleanEmptyDir.JSONNode.AsObject*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_AsObject" data-uid="AltProg.CleanEmptyDir.JSONNode.AsObject">
+  AsObject
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONClass AsObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONClass.html">JSONClass</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Childs_" data-uid="AltProg.CleanEmptyDir.JSONNode.Childs*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Childs" data-uid="AltProg.CleanEmptyDir.JSONNode.Childs">
+  Childs
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;JSONNode&gt; Childs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Count_" data-uid="AltProg.CleanEmptyDir.JSONNode.Count*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Count" data-uid="AltProg.CleanEmptyDir.JSONNode.Count">
+  Count
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_DeepChilds_" data-uid="AltProg.CleanEmptyDir.JSONNode.DeepChilds*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_DeepChilds" data-uid="AltProg.CleanEmptyDir.JSONNode.DeepChilds">
+  DeepChilds
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;JSONNode&gt; DeepChilds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Item_" data-uid="AltProg.CleanEmptyDir.JSONNode.Item*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Item_System_Int32_" data-uid="AltProg.CleanEmptyDir.JSONNode.Item(System.Int32)">
+  this[int]
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONNode this[int aIndex] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Item_" data-uid="AltProg.CleanEmptyDir.JSONNode.Item*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Item_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.Item(System.String)">
+  this[string]
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONNode this[string aKey] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Value_" data-uid="AltProg.CleanEmptyDir.JSONNode.Value*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Value" data-uid="AltProg.CleanEmptyDir.JSONNode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Add_" data-uid="AltProg.CleanEmptyDir.JSONNode.Add*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Add_AltProg_CleanEmptyDir_JSONNode_" data-uid="AltProg.CleanEmptyDir.JSONNode.Add(AltProg.CleanEmptyDir.JSONNode)">
+  Add(JSONNode)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Add(JSONNode aItem)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aItem</code> <a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Add_" data-uid="AltProg.CleanEmptyDir.JSONNode.Add*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Add_System_String_AltProg_CleanEmptyDir_JSONNode_" data-uid="AltProg.CleanEmptyDir.JSONNode.Add(System.String,AltProg.CleanEmptyDir.JSONNode)">
+  Add(string, JSONNode)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Add(string aKey, JSONNode aItem)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aItem</code> <a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Deserialize_" data-uid="AltProg.CleanEmptyDir.JSONNode.Deserialize*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Deserialize_System_IO_BinaryReader_" data-uid="AltProg.CleanEmptyDir.JSONNode.Deserialize(System.IO.BinaryReader)">
+  Deserialize(BinaryReader)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-464"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode Deserialize(BinaryReader aReader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aReader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader">BinaryReader</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Equals_" data-uid="AltProg.CleanEmptyDir.JSONNode.Equals*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Equals_System_Object_" data-uid="AltProg.CleanEmptyDir.JSONNode.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_GetHashCode_" data-uid="AltProg.CleanEmptyDir.JSONNode.GetHashCode*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_GetHashCode" data-uid="AltProg.CleanEmptyDir.JSONNode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_LoadFromBase64_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromBase64*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_LoadFromBase64_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromBase64(System.String)">
+  LoadFromBase64(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode LoadFromBase64(string aBase64)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aBase64</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_LoadFromCompressedBase64_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromCompressedBase64*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_LoadFromCompressedBase64_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromCompressedBase64(System.String)">
+  LoadFromCompressedBase64(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-550"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode LoadFromCompressedBase64(string aBase64)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aBase64</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_LoadFromCompressedFile_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromCompressedFile*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_LoadFromCompressedFile_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromCompressedFile(System.String)">
+  LoadFromCompressedFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode LoadFromCompressedFile(string aFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_LoadFromCompressedStream_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromCompressedStream*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_LoadFromCompressedStream_System_IO_Stream_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromCompressedStream(System.IO.Stream)">
+  LoadFromCompressedStream(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-546"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode LoadFromCompressedStream(Stream aData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_LoadFromFile_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromFile*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_LoadFromFile_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromFile(System.String)">
+  LoadFromFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-563"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode LoadFromFile(string aFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_LoadFromStream_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromStream*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_LoadFromStream_System_IO_Stream_" data-uid="AltProg.CleanEmptyDir.JSONNode.LoadFromStream(System.IO.Stream)">
+  LoadFromStream(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-556"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode LoadFromStream(Stream aData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Parse_" data-uid="AltProg.CleanEmptyDir.JSONNode.Parse*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Parse_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.Parse(System.String)">
+  Parse(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JSONNode Parse(string aJSON)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Remove_" data-uid="AltProg.CleanEmptyDir.JSONNode.Remove*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Remove_AltProg_CleanEmptyDir_JSONNode_" data-uid="AltProg.CleanEmptyDir.JSONNode.Remove(AltProg.CleanEmptyDir.JSONNode)">
+  Remove(JSONNode)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONNode Remove(JSONNode aNode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aNode</code> <a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Remove_" data-uid="AltProg.CleanEmptyDir.JSONNode.Remove*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Remove_System_Int32_" data-uid="AltProg.CleanEmptyDir.JSONNode.Remove(System.Int32)">
+  Remove(int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONNode Remove(int aIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Remove_" data-uid="AltProg.CleanEmptyDir.JSONNode.Remove*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Remove_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.Remove(System.String)">
+  Remove(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual JSONNode Remove(string aKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_SaveToBase64_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToBase64*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_SaveToBase64" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToBase64">
+  SaveToBase64()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveToBase64()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_SaveToCompressedBase64_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToCompressedBase64*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_SaveToCompressedBase64" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToCompressedBase64">
+  SaveToCompressedBase64()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaveToCompressedBase64()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_SaveToCompressedFile_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToCompressedFile*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_SaveToCompressedFile_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToCompressedFile(System.String)">
+  SaveToCompressedFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveToCompressedFile(string aFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_SaveToCompressedStream_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToCompressedStream*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_SaveToCompressedStream_System_IO_Stream_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToCompressedStream(System.IO.Stream)">
+  SaveToCompressedStream(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveToCompressedStream(Stream aData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_SaveToFile_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToFile*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_SaveToFile_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToFile(System.String)">
+  SaveToFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveToFile(string aFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_SaveToStream_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToStream*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_SaveToStream_System_IO_Stream_" data-uid="AltProg.CleanEmptyDir.JSONNode.SaveToStream(System.IO.Stream)">
+  SaveToStream(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveToStream(Stream aData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_Serialize_" data-uid="AltProg.CleanEmptyDir.JSONNode.Serialize*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_Serialize_System_IO_BinaryWriter_" data-uid="AltProg.CleanEmptyDir.JSONNode.Serialize(System.IO.BinaryWriter)">
+  Serialize(BinaryWriter)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Serialize(BinaryWriter aWriter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aWriter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binarywriter">BinaryWriter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_ToString_" data-uid="AltProg.CleanEmptyDir.JSONNode.ToString*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_ToString" data-uid="AltProg.CleanEmptyDir.JSONNode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_ToString_" data-uid="AltProg.CleanEmptyDir.JSONNode.ToString*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_ToString_System_String_" data-uid="AltProg.CleanEmptyDir.JSONNode.ToString(System.String)">
+  ToString(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ToString(string aPrefix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aPrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_op_Equality_" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Equality*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_op_Equality_AltProg_CleanEmptyDir_JSONNode_System_Object_" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Equality(AltProg.CleanEmptyDir.JSONNode,System.Object)">
+  operator ==(JSONNode, object)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(JSONNode a, object b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_op_Implicit_" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Implicit*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_op_Implicit_AltProg_CleanEmptyDir_JSONNode__System_String" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Implicit(AltProg.CleanEmptyDir.JSONNode)~System.String">
+  implicit operator string(JSONNode)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator string(JSONNode d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>d</code> <a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_op_Implicit_" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Implicit*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_op_Implicit_System_String__AltProg_CleanEmptyDir_JSONNode" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Implicit(System.String)~AltProg.CleanEmptyDir.JSONNode">
+  implicit operator JSONNode(string)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator JSONNode(string s)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AltProg_CleanEmptyDir_JSONNode_op_Inequality_" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Inequality*"></a>
+
+  <h3 id="AltProg_CleanEmptyDir_JSONNode_op_Inequality_AltProg_CleanEmptyDir_JSONNode_System_Object_" data-uid="AltProg.CleanEmptyDir.JSONNode.op_Inequality(AltProg.CleanEmptyDir.JSONNode,System.Object)">
+  operator !=(JSONNode, object)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AltProg/CleanEmptyDir/Editor/SimpleJSON.cs#lines-195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(JSONNode a, object b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="AltProg.CleanEmptyDir.JSONNode.html">JSONNode</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

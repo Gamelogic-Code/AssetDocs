@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Introduction | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Introduction | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/GridsInCode.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction">Introduction</h1>
+
+<p>This topic covers creating grids in code: when to do it, and how.</p>
+<h2 id="when-should-i-create-grids-in-code">When should I create grids in code?</h2>
+<p>Creating grids in code is a big topic - not because any particular scenario is very complex, but because there are so
+many possible scenarios. So even for simple scenarios you may need to understand a variety of topics (at least
+superficially). Therefore, normally, using grid builders are the preferred way to create a grid in your Unity scene.
+Grid builders are the normal workflow of grids, but there are cases where you would create a grid in code instead.</p>
+<ul>
+<li>You do not have a visual presentation of the grid; that is, the grid is just data.</li>
+<li>You want to instantiate grids with different shapes (or sizes) each time.</li>
+<li>Your grids are dynamic - their shape or size change over time.</li>
+<li>You implement your own visualization of the grid (perhaps for performance reasons, or for more flexibility).</li>
+<li>You want Unity's UI components to handle the layout of cells and mouse-input. This is most useful for rectangular
+grids with rectangular shapes.</li>
+</ul>
+<h2 id="creating-a-grid-without-visual-presentation">Creating a grid without visual presentation</h2>
+<h3 id="from-an-existing-grid">From an existing grid</h3>
+<p>If you have a grid in the scene, and you need a copy of the grid with a new data type (as is often needed to implement
+game logic), you can use one of the various <code>CloneStructure</code> methods.</p>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.IGrid-1.CloneStructure.html">CloneStructure</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridExtensions.CloneStructure.html">CloneStructure</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridExtensions.CloneStructure.html">CloneStructure</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridExtensions.Fill.html">Fill</a></li>
+</ul>
+<h3 id="from-scratch">From scratch</h3>
+<p>When there is no grid to base your grid on, you need to create one following these steps.</p>
+<ol>
+<li><p><strong>Create a new explicit shape</strong>: See <a href="Shapes.html#how-do-i-create-shapes">Creating Shapes</a> for a full discussion. Here
+is a simple example that creates a parallelogram shape with dimensions <code>width</code> and <code>height</code>, and its lower left corner
+at <code>(0, 0)</code>:</p>
+<pre><code class="lang-csharp"> var shape = ExplicitShape.Parallelogram(new GridPoint(width, height));
+</code></pre>
+</li>
+<li><p>Call the method <a class="xref" href="../api/Gamelogic.Grids2.GridExtensions.ToGrid.html">ToGrid</a> on the shape. The result
+is a new grid 	with cells of the
+specified type. For example, the following makes a grid from the shape above of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>:</p>
+<pre><code class="lang-csharp"> var grid = shape.ToExplicit&lt;int&gt;();
+</code></pre>
+</li>
+<li><p>Initialize the cells. You can either iterate over the points in the grid like this:</p>
+<pre><code class="lang-csharp"> foreach(var point in grid.Points)
+ {
+ 	grid[point] = //some value
+ }
+</code></pre>
+<p>Or you can use one of the <code>Fill</code> methods:</p>
+<ul>
+<li><code>Fill&lt;T&gt;(IGrid&lt;T&gt;, T)</code></li>
+<li><code>Fill&lt;T&gt;(IGrid&lt;T&gt;, System.Func&lt;T&gt;)</code></li>
+<li><code>Fill&lt;T&gt;(IGrid&lt;T&gt;, System.Func&lt;GridPoint2, T&gt;)</code></li>
+</ul>
+<p>For example, the following will set all the values of the grid we created above to -1:</p>
+<pre><code class="lang-csharp"> grid.Fill(-1);
+</code></pre>
+</li>
+</ol>
+<h1 id="creating-a-tile-grid">Creating a tile grid</h1>
+<p>A tile grid is a grid with a visual presentation in the scene that uses a separate game object for each cell.</p>
+<p>To create the grid involve three steps:</p>
+<ol>
+<li><p>Create a grid data structure, as explained above. The grid must be of the type of the cells you plan to put in the
+grid. For example, SpriteCells:</p>
+<pre><code class="lang-csharp"> var grid = shape.ToGrid&lt;SpriteCell&gt;();
+ // No need to fill in this step
+</code></pre>
+</li>
+<li><p>Create a grid map. A grid map is composed of two separate maps, the <a href="SpaceMaps.html">Space Map</a> and a round map. In general,
+creating space maps in code is a bit complicated (it is usually better to use the node editor instead). Here is a simple
+example that can be used for a rectangular grid:</p>
+<pre><code class="lang-csharp"> var spaceMap = Map
+   .Identity&lt;Vector3&gt;() // This maps (x, y, z) to (x, y z); it is a starting map
+   .PreScale(cellSize);
+</code></pre>
+<p>Round maps convert a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a> to either <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> (for 1D grids), <a class="xref" href="../api/Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>
+(2D), or <a class="xref" href="../api/Gamelogic.Grids2.GridPoint3.html">GridPoint3</a> (3D).
+They are called &quot;round&quot; maps because they work like rounding floats to integers, ignoring components of the vector that
+are not used in that dimension. For example, the round map for 2D grids ignores the z-coordinate and &quot;rounds&quot; the 2D
+vector to the closest grid point.</p>
+<p>Here is a list of available round maps and when to use them:</p>
+<table>
+<thead>
+<tr>
+<th>Grid Type</th>
+<th>Round Map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1D grid</td>
+<td><code>Map.PointRound</code></td>
+</tr>
+<tr>
+<td>2D rect grid</td>
+<td><code>Map.RectRound</code></td>
+</tr>
+<tr>
+<td>2D hex grid</td>
+<td><code>Map.HexRound</code></td>
+</tr>
+<tr>
+<td>3D rect grid</td>
+<td><code>Map.BlockRound</code></td>
+</tr>
+<tr>
+<td>3D hex grid</td>
+<td><code>Map.HexBlockRound</code></td>
+</tr>
+</tbody>
+</table>
+<p>The space map and round map are combined to form the grid map like this:</p>
+<pre><code class="lang-csharp"> var gridMap = new GridMap(spaceMap, roundMap);
+</code></pre>
+</li>
+<li><p>Create cells, position them in Unity world space using the map, and assign them to the appropriate grid points in the
+grid. In the example below, the <code>cellPrefab</code> is a <code>SpriteCell</code> that matches the grid type.</p>
+<pre><code class="lang-csharp"> foreach(var point in Grid.Points)
+ {
+ 	var cell = Instantiate(cellPrefab); // Create the cell
+
+ 	cell.transform.parent = gridRoot;
+ 	cell.transform.position = gridMap.GridToWorld(point);
+ 	cell.name = point.ToString();
+ 	grid[point] = cell;
+ }
+</code></pre>
+<p>There is a shortcut for the above that can be used for most cases, the method
+<a class="xref" href="../api/Gamelogic.Grids2.GridBuilderUtils.InitTileGrid.html">InitTileGrid</a> . With this method, we can write the above snippet as</p>
+<pre><code class="lang-csharp"> GridBuilderUtils.InitTileGrid(grid, map, cellPrefab, gridRoot, 
+ 	 (p, c) =&gt; { cell.name = point.ToString(); });
+</code></pre>
+</li>
+</ol>
+<h1 id="creating-a-mesh-grid">Creating a mesh grid</h1>
+<p>A mesh grid is a grid with a visual representation in the scene, where the entire grid is a single mesh. To build one
+from code requires three steps:</p>
+<ol>
+<li>Create an explicit shape as explained in <a href="Shapes.html#how-do-i-create-shapes">Shapes</a>.</li>
+<li>Create (or obtain) a <a class="xref" href="../api/Gamelogic.Grids2.MeshData.html">MeshData</a> object.</li>
+<li>Use one of the utility methods in <a class="xref" href="../api/Gamelogic.Grids2.GridBuilderUtils.html">GridBuilderUtils</a> to construct the mesh:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridBuilderUtils.InitMesh.html#Gamelogic_Grids2_GridBuilderUtils_InitMesh_UnityEngine_Mesh_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_MeshData_System_Boolean_System_Boolean_">InitMesh(Mesh, IExplicitShape&lt;GridPoint2&gt;, GridMap&lt;GridPoint2&gt;, MeshData, bool, bool)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridBuilderUtils.InitMesh.html#Gamelogic_Grids2_GridBuilderUtils_InitMesh_UnityEngine_Mesh_Gamelogic_Grids2_IExplicitShape_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_GridMap_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_MeshData_System_Boolean_System_Boolean_">InitMesh(Mesh, IExplicitShape&lt;GridPoint3&gt;, GridMap&lt;GridPoint3&gt;, MeshData, bool, bool)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.GridBuilderUtils.InitMesh.html#Gamelogic_Grids2_GridBuilderUtils_InitMesh_UnityEngine_Mesh_Gamelogic_Grids2_IExplicitShape_System_Int32__Gamelogic_Grids2_GridMap_System_Int32__Gamelogic_Grids2_MeshData_System_Boolean_System_Boolean_">InitMesh(Mesh, IExplicitShape&lt;int&gt;, GridMap&lt;int&gt;, MeshData, bool, bool)</a></li>
+</ul>
+</li>
+</ol>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

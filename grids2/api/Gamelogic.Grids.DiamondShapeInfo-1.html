@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DiamondShapeInfo&lt;TCell&gt; | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DiamondShapeInfo&lt;TCell&gt; | Gamelogic Grids ">
+      
+      <meta name="description" content="Provides the implementation for AbstractShapeInfo to be used with DiamondGrid.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.DiamondShapeInfo`1">
+
+
+
+  <h1 id="Gamelogic_Grids_DiamondShapeInfo_1" data-uid="Gamelogic.Grids.DiamondShapeInfo`1" class="text-break">
+Class DiamondShapeInfo&lt;TCell&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides the implementation for AbstractShapeInfo to be used with DiamondGrid.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DiamondShapeInfo&lt;TCell&gt; : AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;, IShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCell</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html">AbstractShapeInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondShapeInfo-1.html">DiamondShapeInfo</a>&lt;TCell&gt;, <a class="xref" href="Gamelogic.Grids.DiamondGrid-1.html">DiamondGrid</a>&lt;TCell&gt;, <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>, <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>, <a class="xref" href="Gamelogic.Grids.DiamondOp-1.html">DiamondOp</a>&lt;TCell&gt;&gt;</div>
+      <div><span class="xref">DiamondShapeInfo&lt;TCell&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Grids.IShapeInfo-5.html">IShapeInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondShapeInfo-1.html">DiamondShapeInfo</a>&lt;TCell&gt;, <a class="xref" href="Gamelogic.Grids.DiamondGrid-1.html">DiamondGrid</a>&lt;TCell&gt;, <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>, <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>, <a class="xref" href="Gamelogic.Grids.DiamondOp-1.html">DiamondOp</a>&lt;TCell&gt;&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_shapeStorageStorageInfo">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.shapeStorageStorageInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_ShapeStorageStorageInfo">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.ShapeStorageStorageInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_If_System_Boolean_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.If(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_Intersection">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.Intersection()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_Union">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.Union()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_Difference">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.Difference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_SymmetricDifference">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.SymmetricDifference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_Translate_System_Int32_System_Int32_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.Translate(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_IfTranslate_System_Boolean_System_Int32_System_Int32_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.IfTranslate(bool, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_Translate__3_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.Translate(DiamondPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_Filter_System_Func__2_System_Boolean__">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.Filter(Func&lt;DiamondPoint, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_EndShape">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.EndShape()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_ArrayPointFromGridPoint__3_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.ArrayPointFromGridPoint(DiamondPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_GridPointFromArrayPoint_Gamelogic_Grids_ArrayPoint_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.GridPointFromArrayPoint(ArrayPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_MakePoint_System_Int32_System_Int32_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.MakePoint(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_MakeOp_Gamelogic_Grids_ShapeStorageInfo__2__System_Func_Gamelogic_Grids_ShapeStorageInfo__2__Gamelogic_Grids_ShapeStorageInfo__2__Gamelogic_Grids_ShapeStorageInfo__2___">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.MakeOp(ShapeStorageInfo&lt;DiamondPoint&gt;, Func&lt;ShapeStorageInfo&lt;DiamondPoint&gt;, ShapeStorageInfo&lt;DiamondPoint&gt;, ShapeStorageInfo&lt;DiamondPoint&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_MakeShapeInfo_Gamelogic_Grids_ShapeStorageInfo__2__">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.MakeShapeInfo(ShapeStorageInfo&lt;DiamondPoint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids.AbstractShapeInfo-5.html#Gamelogic_Grids_AbstractShapeInfo_5_MakeShape_System_Int32_System_Int32_System_Func__2_System_Boolean___3_">AbstractShapeInfo&lt;DiamondShapeInfo&lt;TCell&gt;, DiamondGrid&lt;TCell&gt;, DiamondPoint, DiamondPoint, DiamondOp&lt;TCell&gt;&gt;.MakeShape(int, int, Func&lt;DiamondPoint, bool&gt;, DiamondPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_RenderIndex__1___0_">GridUtils.RenderIndex&lt;TPoint&gt;(TPoint)</a>
+  </div>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ObjectExtensions.html#Gamelogic_Extensions_ObjectExtensions_ThrowIfNull_System_Object_System_String_">ObjectExtensions.ThrowIfNull(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_GetColor_System_Object_System_Int32_System_Int32_System_Int32_">GridUtils.GetColor(object, int, int, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="XXX.GridUtils.html#XXX_GridUtils_ToGizmoString_System_Object_">GridUtils.ToGizmoString(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1__ctor_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.#ctor*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1__ctor_Gamelogic_Grids_ShapeStorageInfo_Gamelogic_Grids_DiamondPoint__" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.#ctor(Gamelogic.Grids.ShapeStorageInfo{Gamelogic.Grids.DiamondPoint})">
+  DiamondShapeInfo(ShapeStorageInfo&lt;DiamondPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiamondShapeInfo(ShapeStorageInfo&lt;DiamondPoint&gt; info)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_ArrayPointFromGridPoint_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.ArrayPointFromGridPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_ArrayPointFromGridPoint_Gamelogic_Grids_DiamondPoint_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.ArrayPointFromGridPoint(Gamelogic.Grids.DiamondPoint)">
+  ArrayPointFromGridPoint(DiamondPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ArrayPoint ArrayPointFromGridPoint(DiamondPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_EndGroup_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.EndGroup*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_EndGroup_Gamelogic_Grids_DiamondOp__0__" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.EndGroup(Gamelogic.Grids.DiamondOp{`0})">
+  EndGroup(DiamondOp&lt;TCell&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Only call this method from within a DiamondOp method (usually, in client code,
+this will be in an extension).</p>
+<p>Since 1.1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DiamondShapeInfo&lt;TCell&gt; EndGroup(DiamondOp&lt;TCell&gt; op)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>op</code> <a class="xref" href="Gamelogic.Grids.DiamondOp-1.html">DiamondOp</a>&lt;TCell&gt;</dt>
+    <dd><p>The operator on which this shape is defined.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondShapeInfo-1.html">DiamondShapeInfo</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_GridPointFromArrayPoint_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.GridPointFromArrayPoint*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_GridPointFromArrayPoint_Gamelogic_Grids_ArrayPoint_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.GridPointFromArrayPoint(Gamelogic.Grids.ArrayPoint)">
+  GridPointFromArrayPoint(ArrayPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DiamondPoint GridPointFromArrayPoint(ArrayPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.ArrayPoint.html">ArrayPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_MakeOp_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakeOp*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_MakeOp_Gamelogic_Grids_ShapeStorageInfo_Gamelogic_Grids_DiamondPoint__System_Func_Gamelogic_Grids_ShapeStorageInfo_Gamelogic_Grids_DiamondPoint__Gamelogic_Grids_ShapeStorageInfo_Gamelogic_Grids_DiamondPoint__Gamelogic_Grids_ShapeStorageInfo_Gamelogic_Grids_DiamondPoint___" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakeOp(Gamelogic.Grids.ShapeStorageInfo{Gamelogic.Grids.DiamondPoint},System.Func{Gamelogic.Grids.ShapeStorageInfo{Gamelogic.Grids.DiamondPoint},Gamelogic.Grids.ShapeStorageInfo{Gamelogic.Grids.DiamondPoint},Gamelogic.Grids.ShapeStorageInfo{Gamelogic.Grids.DiamondPoint}})">
+  MakeOp(ShapeStorageInfo&lt;DiamondPoint&gt;, Func&lt;ShapeStorageInfo&lt;DiamondPoint&gt;, ShapeStorageInfo&lt;DiamondPoint&gt;, ShapeStorageInfo&lt;DiamondPoint&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DiamondOp&lt;TCell&gt; MakeOp(ShapeStorageInfo&lt;DiamondPoint&gt; shapeInfo, Func&lt;ShapeStorageInfo&lt;DiamondPoint&gt;, ShapeStorageInfo&lt;DiamondPoint&gt;, ShapeStorageInfo&lt;DiamondPoint&gt;&gt; combineInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shapeInfo</code> <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>combineInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>&gt;, <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>&gt;, <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondOp-1.html">DiamondOp</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_MakePoint_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakePoint*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_MakePoint_System_Int32_System_Int32_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakePoint(System.Int32,System.Int32)">
+  MakePoint(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DiamondPoint MakePoint(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_MakeShape_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakeShape*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_MakeShape_System_Int32_System_Int32_System_Func_Gamelogic_Grids_DiamondPoint_System_Boolean__Gamelogic_Grids_DiamondPoint_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakeShape(System.Int32,System.Int32,System.Func{Gamelogic.Grids.DiamondPoint,System.Boolean},Gamelogic.Grids.DiamondPoint)">
+  MakeShape(int, int, Func&lt;DiamondPoint, bool&gt;, DiamondPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DiamondGrid&lt;TCell&gt; MakeShape(int x, int y, Func&lt;DiamondPoint, bool&gt; isInside, DiamondPoint offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isInside</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>offset</code> <a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondGrid-1.html">DiamondGrid</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_DiamondShapeInfo_1_MakeShapeInfo_" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakeShapeInfo*"></a>
+
+  <h3 id="Gamelogic_Grids_DiamondShapeInfo_1_MakeShapeInfo_Gamelogic_Grids_ShapeStorageInfo_Gamelogic_Grids_DiamondPoint__" data-uid="Gamelogic.Grids.DiamondShapeInfo`1.MakeShapeInfo(Gamelogic.Grids.ShapeStorageInfo{Gamelogic.Grids.DiamondPoint})">
+  MakeShapeInfo(ShapeStorageInfo&lt;DiamondPoint&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DiamondShapeInfo&lt;TCell&gt; MakeShapeInfo(ShapeStorageInfo&lt;DiamondPoint&gt; shapeStorageInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shapeStorageInfo</code> <a class="xref" href="Gamelogic.Grids.ShapeStorageInfo-1.html">ShapeStorageInfo</a>&lt;<a class="xref" href="Gamelogic.Grids.DiamondPoint.html">DiamondPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.DiamondShapeInfo-1.html">DiamondShapeInfo</a>&lt;TCell&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

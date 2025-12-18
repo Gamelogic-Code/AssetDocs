@@ -1,0 +1,1182 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NoiseAlgorithms | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NoiseAlgorithms | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms">
+
+
+
+  <h1 id="Gamelogic_Grids_Examples_NoiseAlgorithms" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms" class="text-break">
+Class NoiseAlgorithms  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids.html">Grids</a>.<a class="xref" href="Gamelogic.Grids.Examples.html">Examples</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NoiseAlgorithms</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NoiseAlgorithms</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_PointyHexRemainders" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.PointyHexRemainders">
+  PointyHexRemainders
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly List&lt;PointyHexPoint&gt; PointyHexRemainders</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur_Gamelogic_Grids_IGrid_System_Single_Gamelogic_Grids_FlatHexPoint__System_Int32_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur(Gamelogic.Grids.IGrid{System.Single,Gamelogic.Grids.FlatHexPoint},System.Int32)">
+  Blur(IGrid&lt;float, FlatHexPoint&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, FlatHexPoint&gt; Blur(IGrid&lt;float, FlatHexPoint&gt; grid, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur_Gamelogic_Grids_IGrid_System_Single_Gamelogic_Grids_PointyHexPoint__System_Int32_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur(Gamelogic.Grids.IGrid{System.Single,Gamelogic.Grids.PointyHexPoint},System.Int32)">
+  Blur(IGrid&lt;float, PointyHexPoint&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, PointyHexPoint&gt; Blur(IGrid&lt;float, PointyHexPoint&gt; grid, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur_Gamelogic_Grids_IGrid_System_Single_Gamelogic_Grids_RectPoint__System_Int32_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur(Gamelogic.Grids.IGrid{System.Single,Gamelogic.Grids.RectPoint},System.Int32)">
+  Blur(IGrid&lt;float, RectPoint&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-404"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; Blur(IGrid&lt;float, RectPoint&gt; grid, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Blur2_Gamelogic_Grids_IGrid_System_Single_Gamelogic_Grids_RectPoint__System_Int32_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Blur2(Gamelogic.Grids.IGrid{System.Single,Gamelogic.Grids.RectPoint},System.Int32)">
+  Blur2(IGrid&lt;float, RectPoint&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; Blur2(IGrid&lt;float, RectPoint&gt; grid, int n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>grid</code> <a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>n</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div2_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div2(Gamelogic.Grids.PointyHexPoint)">
+  Div2(PointyHexPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexPoint Div2(PointyHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div2_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div2(Gamelogic.Grids.RectPoint)">
+  Div2(RectPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-383"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectPoint Div2(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div2_2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div2_2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div2_2_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div2_2(Gamelogic.Grids.RectPoint)">
+  Div2_2(RectPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectPoint Div2_2(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div4_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div4*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div4_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div4(Gamelogic.Grids.PointyHexPoint)">
+  Div4(PointyHexPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexPoint Div4(PointyHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div4_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div4*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div4_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div4(Gamelogic.Grids.RectPoint)">
+  Div4(RectPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectPoint Div4(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div4_2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div4_2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div4_2_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div4_2(Gamelogic.Grids.RectPoint)">
+  Div4_2(RectPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectPoint Div4_2(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div8_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div8*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div8_Gamelogic_Grids_PointyHexPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div8(Gamelogic.Grids.PointyHexPoint)">
+  Div8(PointyHexPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointyHexPoint Div8(PointyHexPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div8_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div8*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div8_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div8(Gamelogic.Grids.RectPoint)">
+  Div8(RectPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-399"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectPoint Div8(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div8_2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div8_2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_Div8_2_Gamelogic_Grids_RectPoint_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.Div8_2(Gamelogic.Grids.RectPoint)">
+  Div8_2(RectPoint)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectPoint Div8_2(RectPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_FlatHexPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.FlatHexPoint})">
+  MakeCloudyNoise(IGrid&lt;FlatHexPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, FlatHexPoint&gt; MakeCloudyNoise(IGrid&lt;FlatHexPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.PointyHexPoint})">
+  MakeCloudyNoise(IGrid&lt;PointyHexPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, PointyHexPoint&gt; MakeCloudyNoise(IGrid&lt;PointyHexPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint})">
+  MakeCloudyNoise(IGrid&lt;RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeCloudyNoise(IGrid&lt;RectPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeCloudyNoise2_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeCloudyNoise2(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint})">
+  MakeCloudyNoise2(IGrid&lt;RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeCloudyNoise2(IGrid&lt;RectPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSampledNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSampledNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSampledNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__System_Func_Gamelogic_Grids_RectPoint_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSampledNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint},System.Func{Gamelogic.Grids.RectPoint,Gamelogic.Grids.RectPoint})">
+  MakeSampledNoise(IGrid&lt;RectPoint&gt;, Func&lt;RectPoint, RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeSampledNoise(IGrid&lt;RectPoint&gt; gridShape, Func&lt;RectPoint, RectPoint&gt; div)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>div</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSampledNoise2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSampledNoise2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSampledNoise2_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__System_Func_Gamelogic_Grids_RectPoint_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSampledNoise2(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint},System.Func{Gamelogic.Grids.RectPoint,Gamelogic.Grids.RectPoint})">
+  MakeSampledNoise2(IGrid&lt;RectPoint&gt;, Func&lt;RectPoint, RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeSampledNoise2(IGrid&lt;RectPoint&gt; gridShape, Func&lt;RectPoint, RectPoint&gt; div)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>div</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_FlatHexPoint__System_Int32_System_Func_Gamelogic_Grids_FlatHexPoint_Gamelogic_Grids_FlatHexPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.FlatHexPoint},System.Int32,System.Func{Gamelogic.Grids.FlatHexPoint,Gamelogic.Grids.FlatHexPoint})">
+  MakeSmoothNoise(IGrid&lt;FlatHexPoint&gt;, int, Func&lt;FlatHexPoint, FlatHexPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, FlatHexPoint&gt; MakeSmoothNoise(IGrid&lt;FlatHexPoint&gt; gridShape, int k, Func&lt;FlatHexPoint, FlatHexPoint&gt; div)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>k</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>div</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_PointyHexPoint__System_Int32_System_Func_Gamelogic_Grids_PointyHexPoint_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.PointyHexPoint},System.Int32,System.Func{Gamelogic.Grids.PointyHexPoint,Gamelogic.Grids.PointyHexPoint})">
+  MakeSmoothNoise(IGrid&lt;PointyHexPoint&gt;, int, Func&lt;PointyHexPoint, PointyHexPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, PointyHexPoint&gt; MakeSmoothNoise(IGrid&lt;PointyHexPoint&gt; gridShape, int k, Func&lt;PointyHexPoint, PointyHexPoint&gt; div)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>k</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>div</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__System_Int32_System_Func_Gamelogic_Grids_RectPoint_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint},System.Int32,System.Func{Gamelogic.Grids.RectPoint,Gamelogic.Grids.RectPoint})">
+  MakeSmoothNoise(IGrid&lt;RectPoint&gt;, int, Func&lt;RectPoint, RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeSmoothNoise(IGrid&lt;RectPoint&gt; gridShape, int k, Func&lt;RectPoint, RectPoint&gt; div)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>k</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>div</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise2_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise2*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeSmoothNoise2_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__System_Int32_System_Func_Gamelogic_Grids_RectPoint_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeSmoothNoise2(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint},System.Int32,System.Func{Gamelogic.Grids.RectPoint,Gamelogic.Grids.RectPoint})">
+  MakeSmoothNoise2(IGrid&lt;RectPoint&gt;, int, Func&lt;RectPoint, RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeSmoothNoise2(IGrid&lt;RectPoint&gt; gridShape, int k, Func&lt;RectPoint, RectPoint&gt; div)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>k</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>div</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeWhiteNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeWhiteNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeWhiteNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_FlatHexPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeWhiteNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.FlatHexPoint})">
+  MakeWhiteNoise(IGrid&lt;FlatHexPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, FlatHexPoint&gt; MakeWhiteNoise(IGrid&lt;FlatHexPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.FlatHexPoint.html">FlatHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeWhiteNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeWhiteNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeWhiteNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_PointyHexPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeWhiteNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.PointyHexPoint})">
+  MakeWhiteNoise(IGrid&lt;PointyHexPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, PointyHexPoint&gt; MakeWhiteNoise(IGrid&lt;PointyHexPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.PointyHexPoint.html">PointyHexPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeWhiteNoise_" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeWhiteNoise*"></a>
+
+  <h3 id="Gamelogic_Grids_Examples_NoiseAlgorithms_MakeWhiteNoise_Gamelogic_Grids_IGrid_Gamelogic_Grids_RectPoint__" data-uid="Gamelogic.Grids.Examples.NoiseAlgorithms.MakeWhiteNoise(Gamelogic.Grids.IGrid{Gamelogic.Grids.RectPoint})">
+  MakeWhiteNoise(IGrid&lt;RectPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Assets/AdditionalExamples/CloudyNoise/NoiseAlgorithms.cs#lines-349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGrid&lt;float, RectPoint&gt; MakeWhiteNoise(IGrid&lt;RectPoint&gt; gridShape)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gridShape</code> <a class="xref" href="Gamelogic.Grids.IGrid-1.html">IGrid</a>&lt;<a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Grids.IGrid-2.html">IGrid</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="Gamelogic.Grids.RectPoint.html">RectPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

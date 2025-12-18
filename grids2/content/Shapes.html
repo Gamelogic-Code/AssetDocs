@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Shapes | Gamelogic Grids </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Shapes | Gamelogic Grids ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/gridsunity/src/master/Documentation/content/Shapes.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Grids">
+            Gamelogic Grids
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="shapes">Shapes</h1>
+
+<h2 id="what-are-shapes">What are shapes?</h2>
+<p>Shapes come in two varieties.</p>
+<h3 id="implicit-shapes">Implicit shapes</h3>
+<p>Implicit shapes are objects that can tell whether a point is inside the shape or not. Classes that represent
+implicit shapes implement the <a class="xref" href="../api/Gamelogic.Grids2.IImplicitShape-1.html">IImplicitShape&lt;TPoint&gt;</a> interface.</p>
+<h3 id="explicit-shapes">Explicit shapes</h3>
+<p>Explicit shapes are implicit shapes that also know their bounds and can produce all the points inside it. Classes that
+represent explicit shapes implement the <a class="xref" href="../api/Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape&lt;TPoint&gt;</a> interface.</p>
+<p>You can also see a shape as a set of points.</p>
+<h2 id="where-are-shapes-used-in-grids-2">Where are shapes used in Grids 2?</h2>
+<p>You can do grid geometry using grid points and matrices without reference to any grid. But usually, game grids are
+finite, and some grid points are inside the grid, and some are not. We use grid shapes to handle this concept. When you
+construct a grid in code, you have to give the constructor an explicit shape. Behind the scenes, this is used to
+allocate the memory for your cells.</p>
+<p>Grids also implement the <a class="xref" href="../api/Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape&lt;TPoint&gt;</a> interface; in this sense, grids are explicit shapes – you
+can ask whether
+a point is inside the grid or not, you can get the bounds of your grid, and you can get a list of all points inside the
+grid. This means any algorithm that takes a shape can also take a grid, which is very useful for algorithm design.</p>
+<h2 id="how-are-bounds-represented">How are bounds represented?</h2>
+<p>Bounds are represented through 3 types of objects depending on whether the shape is 1D, 2D, or 3D. For 1D, we use the
+<a class="xref" href="../api/Gamelogic.Grids2.GridInterval.html">GridInterval</a> class. <a class="xref" href="../api/Gamelogic.Grids2.GridInterval.html">GridInterval</a> represents a sequence of integers between two values.
+<a class="xref" href="../api/Gamelogic.Grids2.GridRect.html">GridRect</a> is
+just like Unity’s Rect class, but works with grid points instead of Vector2. It represents an axis-aligned rectangle in
+grid space. Similarly, <a class="xref" href="../api/Gamelogic.Grids2.GridBounds.html">GridBounds</a> is like Unity’s Bounds object, but works with grid points instead of
+Vector3.</p>
+<p>All three of these objects are explicit shapes too, and this is useful to remember when designing algorithms. In
+particular, you can iterate over the points of a bounds object, which is neater than using nested loops and creating grid points on the fly.</p>
+<h2 id="how-do-i-create-shapes">How do I create shapes?</h2>
+<p>To create shapes in code, you can use the various static methods in <a class="xref" href="../api/Gamelogic.Grids2.ImplicitShape.html">ImplicitShape</a> and
+<a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.html">ExplicitShape</a>. Several primitive shapes are provided, and you can also use shape operations
+(described below) to manipulate shapes.</p>
+<p>Explicit shapes can be created from implicit shapes if you specify the bounds using one of the following methods:</p>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.ToExplicit.html#Gamelogic_Grids2_ExplicitShape_ToExplicit_Gamelogic_Grids2_IImplicitShape_System_Int32__Gamelogic_Grids2_AbstractBounds_System_Int32__">ToExplicit(IImplicitShape&lt;int&gt;, AbstractBounds&lt;int&gt;)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.ToExplicit.html#Gamelogic_Grids2_ExplicitShape_ToExplicit_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint2__Gamelogic_Grids2_AbstractBounds_Gamelogic_Grids2_GridPoint2__">ToExplicit(IImplicitShape&lt;GridPoint2&gt;, AbstractBounds&lt;GridPoint2&gt;)</a></li>
+<li><a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.ToExplicit.html#Gamelogic_Grids2_ExplicitShape_ToExplicit_Gamelogic_Grids2_IImplicitShape_Gamelogic_Grids2_GridPoint3__Gamelogic_Grids2_AbstractBounds_Gamelogic_Grids2_GridPoint3__">ToExplicit(IImplicitShape&lt;GridPoint3&gt;, AbstractBounds&lt;GridPoint3&gt;)</a></li>
+</ul>
+<p>You can also create explicit shapes using a node editor. To do this, you need to create a 1D, 2D, or 3D shape graph. The node editor allows you to create shape primitives and manipulate them. Shape graphs can be added to mono behaviours, and this allows you to get hold of the shape. (This is how grid builders work). The node editor is described in more detail below.</p>
+<h2 id="what-operations-are-supported-on-shapes">What operations are supported on shapes?</h2>
+<p>Shapes (both implicit and explicit) support these operations:</p>
+<ul>
+<li><strong>Union</strong>: The resulting shape contains the points of all input shapes.</li>
+<li><strong>Intersect</strong>: The resulting shape contains the points that are in all input shapes.</li>
+<li><strong>Subtract</strong>: The resulting shape contains the points of one shape that are not in another.</li>
+<li><strong>Product</strong>: The product operation that takes two input shapes, A and B, and a scaling vector (a grid point). All the points of A are scaled by this vector, and added to each point of B. The resulting set of points are the ones inside this new shape.</li>
+</ul>
+<p>These operations allow you to create new shapes from existing shapes.</p>
+<h2 id="how-do-i-create-a-shape-graph">How do I create a shape graph?</h2>
+<ol>
+<li>Right click in the <strong>Project Window</strong> where you want to save the shape graph. For a 2D shape, select <strong>Create | Grids | Shape Graph 2</strong>. For 1D, select <strong>Shape Graph 1</strong> instead, or for 3D, select <strong>Shape Graph 3</strong>.</li>
+<li>Click on the shape graph, and click on the <strong>Edit</strong> button in the <strong>Inspector</strong> to edit the graph.</li>
+</ol>
+<h2 id="what-does-the-shape-node-editor-do-exactly">What does the shape node editor do exactly?</h2>
+<p>It allows you to build an explicit shape in the editor. You can do the same in code, but it is often easier to experiment to get the right shape in the editor. Grid builders use explicit shapes to construct grids, but you can also use them for other purposes.</p>
+<p>To edit a shape graph, follow these steps:</p>
+<ol>
+<li><p>Add the nodes you need to make the shape you require, and set their fields to the correct values. To remove a node, click on the <strong>Remove</strong> button on the node. To remove all nodes, click the <strong>Clear</strong> button at the top of the node editor tool bar.</p>
+</li>
+<li><p>Add one output node.</p>
+</li>
+<li><p>Link them together, with the output node at the end of the sequence. To link the output of node A to the input of node B, click on the “Add link” button on node A, and click on node B. To remove a link, click on the red dot on the link.</p>
+</li>
+<li><p>In complicated graphs, you may want to rename the nodes so it is easier to know what is going on. You can do this by clicking on the node name and typing a new name. (Since Grids 2.1)</p>
+</li>
+<li><p>While tweaking the node graph, it may be useful to skip over a node temporarily. You can do this by clicking on the “Disable” button. This will make the node simply route its input to its output without processing. (Since Grids 2.1)</p>
+</li>
+</ol>
+<h2 id="what-does-the-recompute-button-do">What does the Recompute button do?</h2>
+<p>It lets all nodes recompute and save values for internal use. This is specifically designed for nodes with a random element, to allow nodes to select new random values. (In general, you don’t want these to be recomputed every time the shape is accessed). Currently, all nodes are deterministic, so this feature is not used. We may introduce random nodes in the future, or you may want to add your own random nodes.</p>
+<h2 id="what-do-all-the-nodes-do-exactly">What do all the nodes do exactly?</h2>
+<p>Nodes come in several varieties.</p>
+<ul>
+<li><p><strong>Output Node:</strong> The output node marks the resulting shape of the graph.</p>
+</li>
+<li><p><strong>Operator Node:</strong> Operator nodes take other shapes as inputs, and perform the operations described earlier. The Union and Intersection nodes can take any number of inputs, while the subtract and product nodes take two inputs each. For 3D shapes, there are additional nodes (since Grids 2.2) that construct 3D shapes from 2D shapes. See the <a href="#">shape operations</a> article for details on shape operations.</p>
+</li>
+<li><p><strong>Primitive Node:</strong> Primitive nodes describe basic shapes such as stars or parallelograms. See the <a href="ShapeIndex.html">Shape Index</a>
+for a list of shapes supported by grids.</p>
+</li>
+</ul>
+<h2 id="can-i-make-my-own-shape-nodes">Can I make my own shape nodes?</h2>
+<p>Yes!</p>
+<p>If your shape is primitive (it does not require other shapes as input), you can extend a new class from <a class="xref" href="../api/Gamelogic.Grids2.Graph.PrimitiveShapeNode-1.html">PrimitiveShapeNode&lt;TPoint&gt;</a> (where T is int, GridPoint2 or GridPoint3), and override the Generate method.</p>
+<p>If you implement a shape operator, you can extend from <a class="xref" href="../api/Gamelogic.Grids2.Graph.AggregateShapeNode-3.html">AggregateShapeNode&lt;TPoint, TInput, TOutput&gt;</a> and override
+the Aggregate method.</p>
+<p>In either case, you need to add the <a class="xref" href="../api/Gamelogic.Grids2.Graph.ShapeNodeAttribute.html">ShapeNodeAttribute</a> to your class. It takes two
+parameters, a string and an integer. The first is a name. If you want to group the node with other nodes you can give it a name like this: “Group Name/Node Name”. The integer parameter denotes the number of dimensions of the shape, and should correspond to the type T referred to above.</p>
+<p>Here is an example:</p>
+<pre><code class="lang-csharp">#region Documentation_Trapezium
+
+using Gamelogic.Grids2;
+using Gamelogic.Grids2.Graph;
+using UnityEngine;
+
+/// &lt;summary&gt;
+/// Represents a trapezium shape.
+/// &lt;/summary&gt;
+// ReuseCandidate
+[ShapeNode(&quot;Hex/Trapezium&quot;, 2)]
+public class Trapezium : PrimitiveShapeNode&lt;GridPoint2&gt;
+{
+    /// &lt;summary&gt;
+    /// represents the width and height of the trapezium. The top side is shorter than the bottom side.
+    /// &lt;/summary&gt;
+    [SerializeField]
+    private InspectableGridPoint2 dimensions;
+
+    /// &lt;inheritdoc /&gt;
+    protected override IExplicitShape&lt;GridPoint2&gt; Generate()
+    {
+        var dimensionsPoint = dimensions.GetGridPoint();
+        
+        /* Implementation Note:	It is technically not necessary to intersect with the parallelogram, since it is
+            constrained by the bounds within this parallelogram anyways. However, including it here makes the code more 
+            robust (if the bounds where ever changed to use different shape), and easier to see how the	shape is
+            constructed.
+        */
+        var shape = ImplicitShape.Intersect(new[]
+        {
+            ImplicitShape.Parallelogram(dimensionsPoint),   
+            ImplicitShape.HalfPlane(
+                new GridPoint2(dimensionsPoint.X, 0), 
+                new GridPoint2(dimensionsPoint.X - dimensionsPoint.Y, dimensionsPoint.Y))
+        });
+        
+        return shape.ToExplicit(new GridRect(GridPoint2.Zero, dimensionsPoint));
+    }
+}
+#endregion
+</code></pre>
+<p>Both the Generate and Aggregate methods simply need to return a shape. To build a shape in code usually takes three steps:</p>
+<ol>
+<li>Make an implicit shape.</li>
+<li>Make a bounds object that will contain the shape.</li>
+<li>Call ToExplicit on the implicit shape and feed it the bounds.</li>
+<li>In some cases, you can work with explicit shapes directly. There are many functions that help with shape
+construction; explore the documentation of <a class="xref" href="../api/Gamelogic.Grids2.ExplicitShape.html">ExplicitShape</a> and <a class="xref" href="../api/Gamelogic.Grids2.ImplicitShape.html">ImplicitShape</a> .</li>
+</ol>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
