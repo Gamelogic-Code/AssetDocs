@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IGameManager&lt;TPoint, TPieceSettings&gt; | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IGameManager&lt;TPoint, TPieceSettings&gt; | Gamelogic Abstract Strategy ">
+      
+      <meta name="description" content="Base interface for gameManager management component. Most likely you will use  instead of implementing this interface.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.AbstractStrategy.IGameManager`2">
+
+
+
+  <h1 id="Gamelogic_AbstractStrategy_IGameManager_2" data-uid="Gamelogic.AbstractStrategy.IGameManager`2" class="text-break">
+Interface IGameManager&lt;TPoint, TPieceSettings&gt;  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Packages/za.co.gamelogic.abstractstrategy/Runtime/Systems/IGameManager.cs#lines-10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.AbstractStrategy.html">AbstractStrategy</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.AbstractStrategy.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base interface for gameManager management component. Most likely you will use
+<a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameManager.html">GridGameManager</a> instead of implementing this interface.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public interface IGameManager&lt;TPoint, TPieceSettings&gt; where TPieceSettings : PieceSettings&lt;TPoint, TPieceSettings&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TPoint</code></dt>
+    <dd></dd>
+    <dt><code>TPieceSettings</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.CurrentPlayer.html#Gamelogic_AbstractStrategy_IGameManager_2_CurrentPlayer">CurrentPlayer</a></dt>
+    <dd><p>Gets the player whose turn is currently running.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GameOver.html#Gamelogic_AbstractStrategy_IGameManager_2_GameOver">GameOver</a></dt>
+    <dd><p>Gets whether the gameManager is over or not.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.MoveManager.html#Gamelogic_AbstractStrategy_IGameManager_2_MoveManager">MoveManager</a></dt>
+    <dd><p>Gets the move manager for the gameManager.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.Players.html#Gamelogic_AbstractStrategy_IGameManager_2_Players">Players</a></dt>
+    <dd><p>Gets all of the players in the gameManager.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.Rules.html#Gamelogic_AbstractStrategy_IGameManager_2_Rules">Rules</a></dt>
+    <dd><p>Game rules object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.State.html#Gamelogic_AbstractStrategy_IGameManager_2_State">State</a></dt>
+    <dd><p>Gets our current gameManager state.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.TurnManager.html#Gamelogic_AbstractStrategy_IGameManager_2_TurnManager">TurnManager</a></dt>
+    <dd><p>Gets the turn manager for the gameManager.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.AdvanceTurn.html#Gamelogic_AbstractStrategy_IGameManager_2_AdvanceTurn">AdvanceTurn()</a></dt>
+    <dd><p>Advance the current turn.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.CommitMove.html#Gamelogic_AbstractStrategy_IGameManager_2_CommitMove_Gamelogic_AbstractStrategy_GameMove__0__1__">CommitMove(GameMove&lt;TPoint, TPieceSettings&gt;)</a></dt>
+    <dd><p>Commit a move.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.CommitMove.html#Gamelogic_AbstractStrategy_IGameManager_2_CommitMove_Gamelogic_AbstractStrategy_GameMove__0__1__System_Boolean_">CommitMove(GameMove&lt;TPoint, TPieceSettings&gt;, bool)</a></dt>
+    <dd><p>Commit a move.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.CreateVisualPiece.html#Gamelogic_AbstractStrategy_IGameManager_2_CreateVisualPiece_Gamelogic_AbstractStrategy_IPieceProperties_">CreateVisualPiece(IPieceProperties)</a></dt>
+    <dd><p>Create a visual piece for a given logical piece.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GetAddAnimator.html#Gamelogic_AbstractStrategy_IGameManager_2_GetAddAnimator_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_MoveMode__0_">GetAddAnimator(IPieceProperties, MoveMode, TPoint)</a></dt>
+    <dd><p>Returns a component that will handle an add animation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GetCaptureAnimator.html#Gamelogic_AbstractStrategy_IGameManager_2_GetCaptureAnimator_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_MoveMode__0__0__0_">GetCaptureAnimator(IPieceProperties, IPieceProperties, MoveMode, TPoint, TPoint, TPoint)</a></dt>
+    <dd><p>Returns a component that will handle a capture animation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GetMoveAnimator.html#Gamelogic_AbstractStrategy_IGameManager_2_GetMoveAnimator_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_MoveMode__0__0_">GetMoveAnimator(IPieceProperties, MoveMode, TPoint, TPoint)</a></dt>
+    <dd><p>Returns a component that will handle a move animation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GetPlayerByID.html#Gamelogic_AbstractStrategy_IGameManager_2_GetPlayerByID_System_String_">GetPlayerByID(string)</a></dt>
+    <dd><p>Gets a player object by their player ID.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GetRemoveAnimator.html#Gamelogic_AbstractStrategy_IGameManager_2_GetRemoveAnimator_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_MoveMode__0_">GetRemoveAnimator(IPieceProperties, MoveMode, TPoint)</a></dt>
+    <dd><p>Returns a component that will handle a remove animation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.GetReplaceAnimator.html#Gamelogic_AbstractStrategy_IGameManager_2_GetReplaceAnimator_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_IPieceProperties_Gamelogic_AbstractStrategy_MoveMode__0_">GetReplaceAnimator(IPieceProperties, IPieceProperties, MoveMode, TPoint)</a></dt>
+    <dd><p>Returns a component that will handle a replacement animation.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.RegisterPlayer.html#Gamelogic_AbstractStrategy_IGameManager_2_RegisterPlayer_Gamelogic_AbstractStrategy_Player__0__1__">RegisterPlayer(Player&lt;TPoint, TPieceSettings&gt;)</a></dt>
+    <dd><p>Register a new player with the gameManager.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.StartGame.html#Gamelogic_AbstractStrategy_IGameManager_2_StartGame">StartGame()</a></dt>
+    <dd><p>Start a gameManager.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

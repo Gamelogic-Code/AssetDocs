@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BasicDraughtsRules | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BasicDraughtsRules | Gamelogic Abstract Strategy ">
+      
+      <meta name="description" content="Extension to ordinary rules for basic draughts specific rules.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules">
+
+
+
+  <h1 id="Gamelogic_AbstractStrategy_Samples_BasicDraughtsRules" data-uid="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules" class="text-break">
+Class BasicDraughtsRules  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Assets/Samples/TutorialExamples/Intermediate/YourOwnGameRules/BasicDraughtsRules.cs#lines-17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.AbstractStrategy.html">AbstractStrategy</a>.<a class="xref" href="Gamelogic.AbstractStrategy.Samples.html">Samples</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Extension to ordinary rules for basic draughts specific rules.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BasicDraughtsRules : GridGameRules, IGameRules&lt;GridPoint2, GridGamePieceSettings&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
+      <div><a class="xref" href="Gamelogic.Extensions.GLMonoBehaviour.html">GLMonoBehaviour</a></div>
+      <div><a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.html">GameRules</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGamePieceSettings.html">GridGamePieceSettings</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.html">GridGameRules</a></div>
+      <div><span class="xref">BasicDraughtsRules</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.AbstractStrategy.IGameRules-2.html">IGameRules</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGamePieceSettings.html">GridGamePieceSettings</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.lineDirections.html">GridGameRules.lineDirections</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.Initialise.html#Gamelogic_AbstractStrategy_Grids_GridGameRules_Initialise_Gamelogic_AbstractStrategy_IGameManager_Gamelogic_Grids2_GridPoint2_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings__">GridGameRules.Initialise(IGameManager&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.HasLine.html#Gamelogic_AbstractStrategy_Grids_GridGameRules_HasLine_Gamelogic_Grids2_GridPoint2_System_Int32_System_String_Gamelogic_Grids2_GridPoint2__">GridGameRules.HasLine(GridPoint2, int, string, out GridPoint2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.CanMakeLine.html#Gamelogic_AbstractStrategy_Grids_GridGameRules_CanMakeLine_Gamelogic_Grids2_GridPoint2_System_String_System_Int32_System_String_Gamelogic_Grids2_GridPoint2__">GridGameRules.CanMakeLine(GridPoint2, string, int, string, out GridPoint2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.CanMakeLine.html#Gamelogic_AbstractStrategy_Grids_GridGameRules_CanMakeLine_Gamelogic_Grids2_GridPoint2_System_String_System_Int32_System_String_System_Boolean_Gamelogic_Grids2_GridPoint2__">GridGameRules.CanMakeLine(GridPoint2, string, int, string, bool, out GridPoint2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.CreatePieceProperties.html#Gamelogic_AbstractStrategy_Grids_GridGameRules_CreatePieceProperties_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings_Gamelogic_AbstractStrategy_Player_Gamelogic_Grids2_GridPoint2_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings__">GridGameRules.CreatePieceProperties(GridGamePieceSettings, Player&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameRules.CreatePieceProperties.html#Gamelogic_AbstractStrategy_Grids_GridGameRules_CreatePieceProperties_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings_System_String_">GridGameRules.CreatePieceProperties(GridGamePieceSettings, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.movesPerTurn.html">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.movesPerTurn</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.pieces.html">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.pieces</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.calculateMovesForAllPlayers.html">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.calculateMovesForAllPlayers</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.pieceCounter.html">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.pieceCounter</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.victoryRules.html">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.victoryRules</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.gameManager.html">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.gameManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.VictoriousPlayers.html#Gamelogic_AbstractStrategy_GameRules_2_VictoriousPlayers">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.VictoriousPlayers</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.MovesMadeThisTurn.html#Gamelogic_AbstractStrategy_GameRules_2_MovesMadeThisTurn">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.MovesMadeThisTurn</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.Initialise.html#Gamelogic_AbstractStrategy_GameRules_2_Initialise_Gamelogic_AbstractStrategy_IGameManager__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.Initialise(IGameManager&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.GetValidMovesListForPlayer.html#Gamelogic_AbstractStrategy_GameRules_2_GetValidMovesListForPlayer_Gamelogic_AbstractStrategy_Player__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.GetValidMovesListForPlayer(Player&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.GetValidMovesListForPlayer.html#Gamelogic_AbstractStrategy_GameRules_2_GetValidMovesListForPlayer_System_String_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.GetValidMovesListForPlayer(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.UpdateValidMoves.html#Gamelogic_AbstractStrategy_GameRules_2_UpdateValidMoves">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.UpdateValidMoves()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.UpdateMovesForPlayer.html#Gamelogic_AbstractStrategy_GameRules_2_UpdateMovesForPlayer_System_Collections_Generic_List_Gamelogic_AbstractStrategy_GameMove__0__1___Gamelogic_AbstractStrategy_Player__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.UpdateMovesForPlayer(List&lt;GameMove&lt;GridPoint2, GridGamePieceSettings&gt;&gt;, Player&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.IsValidMove.html#Gamelogic_AbstractStrategy_GameRules_2_IsValidMove_Gamelogic_AbstractStrategy_GameMove__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.IsValidMove(GameMove&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.CreatePieceProperties.html#Gamelogic_AbstractStrategy_GameRules_2_CreatePieceProperties__1_Gamelogic_AbstractStrategy_Player__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.CreatePieceProperties(GridGamePieceSettings, Player&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.CreatePieceProperties.html#Gamelogic_AbstractStrategy_GameRules_2_CreatePieceProperties__1_System_String_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.CreatePieceProperties(GridGamePieceSettings, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.GetPieceSettings.html#Gamelogic_AbstractStrategy_GameRules_2_GetPieceSettings_Gamelogic_AbstractStrategy_IPieceProperties_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.GetPieceSettings(IPieceProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.GetPieceSettings.html#Gamelogic_AbstractStrategy_GameRules_2_GetPieceSettings_System_String_System_String_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.GetPieceSettings(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.HasLine.html#Gamelogic_AbstractStrategy_GameRules_2_HasLine__0_System_Int32_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.HasLine(GridPoint2, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.HasLine.html#Gamelogic_AbstractStrategy_GameRules_2_HasLine__0_System_Int32_System_String__0__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.HasLine(GridPoint2, int, string, out GridPoint2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.CanMakeLine.html#Gamelogic_AbstractStrategy_GameRules_2_CanMakeLine__0_System_String_System_Int32__0__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.CanMakeLine(GridPoint2, string, int, out GridPoint2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.CanMakeLine.html#Gamelogic_AbstractStrategy_GameRules_2_CanMakeLine__0_System_String_System_Int32_System_String__0__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.CanMakeLine(GridPoint2, string, int, string, out GridPoint2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.StartGame.html#Gamelogic_AbstractStrategy_GameRules_2_StartGame">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.StartGame()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.Tick.html#Gamelogic_AbstractStrategy_GameRules_2_Tick">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.Tick()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnPlayerChange.html#Gamelogic_AbstractStrategy_GameRules_2_OnPlayerChange_Gamelogic_AbstractStrategy_Player__0__1__Gamelogic_AbstractStrategy_Player__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnPlayerChange(Player&lt;GridPoint2, GridGamePieceSettings&gt;, Player&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnTurnStateChange.html#Gamelogic_AbstractStrategy_GameRules_2_OnTurnStateChange_Gamelogic_AbstractStrategy_PlayerTurnState_Gamelogic_AbstractStrategy_PlayerTurnState_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnTurnStateChange(PlayerTurnState, PlayerTurnState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnMoveEnd.html#Gamelogic_AbstractStrategy_GameRules_2_OnMoveEnd_Gamelogic_AbstractStrategy_GameMove__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnMoveEnd(GameMove&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnMoveStart.html#Gamelogic_AbstractStrategy_GameRules_2_OnMoveStart_Gamelogic_AbstractStrategy_GameMove__0__1__">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnMoveStart(GameMove&lt;GridPoint2, GridGamePieceSettings&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnAllMovesEnded.html#Gamelogic_AbstractStrategy_GameRules_2_OnAllMovesEnded">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnAllMovesEnded()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnPlayerVictoryChange.html#Gamelogic_AbstractStrategy_GameRules_2_OnPlayerVictoryChange_Gamelogic_AbstractStrategy_Player__0__1__Gamelogic_AbstractStrategy_VictoryType_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnPlayerVictoryChange(Player&lt;GridPoint2, GridGamePieceSettings&gt;, VictoryType)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnPieceMoved.html#Gamelogic_AbstractStrategy_GameRules_2_OnPieceMoved__0__0_Gamelogic_AbstractStrategy_IPieceProperties_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnPieceMoved(GridPoint2, GridPoint2, IPieceProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnPieceRemoved.html#Gamelogic_AbstractStrategy_GameRules_2_OnPieceRemoved__0_Gamelogic_AbstractStrategy_IPieceProperties_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnPieceRemoved(GridPoint2, IPieceProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.OnPieceAdded.html#Gamelogic_AbstractStrategy_GameRules_2_OnPieceAdded__0_Gamelogic_AbstractStrategy_IPieceProperties_">GameRules&lt;GridPoint2, GridGamePieceSettings&gt;.OnPieceAdded(GridPoint2, IPieceProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.IsInvoking.html">MonoBehaviour.IsInvoking()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.CancelInvoke.html">MonoBehaviour.CancelInvoke()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.StopCoroutine.html">MonoBehaviour.StopCoroutine(Coroutine)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.StopAllCoroutines.html">MonoBehaviour.StopAllCoroutines()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour-useGUILayout.html">MonoBehaviour.useGUILayout</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.runInEditMode</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">Behaviour.enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-isActiveAndEnabled.html">Behaviour.isActiveAndEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.TryGetComponent.html">Component.TryGetComponent&lt;T&gt;(out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.GetComponentInParent.html">Component.GetComponentInParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.GetComponents.html">Component.GetComponents&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetInstanceID.html">Object.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetHashCode.html">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Object.Instantiate(Object, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">Object.DontDestroyOnLoad(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">Object.FindObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object-name.html">Object.name</a>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_AbstractStrategy_Samples_BasicDraughtsRules_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Implements British draughts rules:</p>
+<ul>
+<li>Obligation to capture</li>
+<li>Pieces can only capture forwards</li>
+</ul>
+</div>
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules.advanceTurnOnEmptyMoveList.html">advanceTurnOnEmptyMoveList</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules.multipleCaptureMoves.html">multipleCaptureMoves</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules.obligationToCapture.html">obligationToCapture</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules.OnAllMovesEnded.html#Gamelogic_AbstractStrategy_Samples_BasicDraughtsRules_OnAllMovesEnded">OnAllMovesEnded()</a></dt>
+    <dd><p>If the moves list is empty, then we can advance the gameManager
+We take this beaviour away from the base by setting movesPerTurn to 0
+so that it does not automatically advance after every move</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules.OnMoveEnd.html#Gamelogic_AbstractStrategy_Samples_BasicDraughtsRules_OnMoveEnd_Gamelogic_AbstractStrategy_GameMove_Gamelogic_Grids2_GridPoint2_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings__">OnMoveEnd(GameMove&lt;GridPoint2, GridGamePieceSettings&gt;)</a></dt>
+    <dd><p>If the piece that just did a capture has more capture options, then the turn does not end</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.AbstractStrategy.Samples.BasicDraughtsRules.UpdateMovesForPlayer.html#Gamelogic_AbstractStrategy_Samples_BasicDraughtsRules_UpdateMovesForPlayer_System_Collections_Generic_List_Gamelogic_AbstractStrategy_GameMove_Gamelogic_Grids2_GridPoint2_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings___Gamelogic_AbstractStrategy_Player_Gamelogic_Grids2_GridPoint2_Gamelogic_AbstractStrategy_Grids_GridGamePieceSettings__">UpdateMovesForPlayer(List&lt;GameMove&lt;GridPoint2, GridGamePieceSettings&gt;&gt;, Player&lt;GridPoint2, GridGamePieceSettings&gt;)</a></dt>
+    <dd><p>Implement obligation to capture</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

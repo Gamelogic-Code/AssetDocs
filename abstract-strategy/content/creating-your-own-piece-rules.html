@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Creating Your Own Piece Rules | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Creating Your Own Piece Rules | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/creating-your-own-piece-rules.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="creating-your-own-piece-rules">Creating Your Own Piece Rules</h1>
+
+<p><img src="../images/Creating-your-own-piece-rules/OwnPieceRules.jpg" alt="The table with chips of both teams in each extreme corner"></p>
+<p>In this tutorial, we will look at how to implement special rules for your pieces. We will use this setup:</p>
+<p><img src="../images/Creating-your-own-piece-rules/OwnPieceRules1.gif" alt="The chips of both teams moving across the coordinate board."></p>
+<p>This game has the following rules:</p>
+<ul>
+<li>One turn per player.</li>
+<li>Red starts.</li>
+<li>You can’t capture an enemy piece.</li>
+<li>Red pieces only move to odd x and y positions.</li>
+<li>Blue pieces only move to even x and y positions.</li>
+<li>No piece can move to its initial position.</li>
+</ul>
+<p>Since the piece rules cannot be implemented using the default piece rules, we need to implement our own piece rules.</p>
+<h2 id="1-make-a-piece-rule-script">1. Make a Piece Rule Script</h2>
+<p>Create a new script and call it <code>CustomPieceRule</code>. Add this to the logical piece prefab. The class must extend from
+the <code>PieceRule</code> abstract class, which uses a <code>RectPoint</code> and <code>GridGamePieceSettings</code> type like this:</p>
+<pre><code class="lang-csharp">public class CustomPieceRule : PieceRule&lt;RectPoint, GridGamePieceSettings&gt;
+</code></pre>
+<p>This abstract class will ask you to implement the following abstract methods:</p>
+<ul>
+<li><code>CanRemovePiece</code>: Returns whether or not a piece’s owner can remove a piece from a given point. It returns a boolean. Used when you are creating a rule about moving the pieces.</li>
+<li><code>GetCapturePosition</code>: Returns the destination position a piece must move to in order to capture the given piece. It returns a TPoint of the position. Used when you are creating a rule about capturing pieces.</li>
+<li><code>GetValidAddPositions</code>: Returns all valid positions to which a new instance of this piece can be added. Returns an IEnumerable, it can be a coroutine. Used when you are creating a rule about moving the pieces.</li>
+<li><code>GetValidCapturePieces</code>: Returns all valid pieces this piece can capture. Returns an IEnumerable, it can be a coroutine. Used when you are creating a rule about capturing pieces.</li>
+<li><code>GetValidDestinationPositions</code>: Returns all valid positions to which a given piece can be moved. Returns an IEnumerable, it can be a coroutine. Used when you are creating a rule about moving the pieces.</li>
+</ul>
+<p>Since we are only implementing a special movement rule for the pieces, we are only going to use <code>GetValidDestinationPositions</code>, and all other methods will return their default values so that the automatic calls to these methods do nothing.</p>
+<h2 id="2-define-rule-restrictions">2. Define Rule Restrictions</h2>
+<p>Define an enum to choose between odd and even numbers and two fields of this type in the <code>CustomPieceRule</code> class – one for x and one for y. Also, add a <code>useRestriction</code> boolean so that you can switch between using and not using the rule restrictions to see the difference. Implement the <code>GetValidDestinationPositions</code> method. Iterate over all points in the grid, and for each point:</p>
+<ul>
+<li>If the point equals the initial position, continue the loop.</li>
+<li>Find the pieces at that point. If there are no pieces, continue the loop.</li>
+<li>Validate the point depending on how the odd/even variables for x and y are set (use a separate method for this). If the validation fails, continue the loop.</li>
+<li>Yield the point.</li>
+</ul>
+<p>With this, the movement rules are complete and you can play and test the game.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

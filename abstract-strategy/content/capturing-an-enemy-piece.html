@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Capturing an Enemy Piece | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Capturing an Enemy Piece | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/capturing-an-enemy-piece.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="capturing-an-enemy-piece">Capturing an Enemy Piece</h1>
+
+<p><img src="../images/Capturing-an-enemy-piece/Capture680x3401.jpg" alt="A checkerboard with pieces of the respective teams at each end with a blue background."></p>
+<p>To capture pieces, you need to configure your grid and board, and also set the moves and turns for your pieces. In this tutorial, we will make a game with the following configuration:</p>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing1.png" alt="A checkerboard with pieces of the respective teams at each end"></p>
+<p>We will look at three different types of capture:</p>
+<ul>
+<li>A simple capture that involves moving onto another piece.</li>
+<li>A hop capture that involves hopping over a piece.</li>
+<li>A surround capture that involves surrounding an enemy piece on the left and right, or top and bottom, and results in the piece being replaced by a piece of the capturing player, rather than being taken.</li>
+<li>The same as above, but the piece is only transformed when it is fully surrounded by enemy pieces.</li>
+</ul>
+<p>The other rules of this game are:</p>
+<ol>
+<li>Every player has two pieces.</li>
+<li>The red player starts.</li>
+<li>Pieces can move only one cell at a time.</li>
+<li>Pieces can move in any direction.</li>
+<li>Capturing works as explained above.</li>
+</ol>
+<p>To implement the first four features, follow the <a href="setting-up-a-grid-and-board.html">Setting up a grid and board</a> and the <a href="moving-a-piece-and-changing-turns.html">Moving a piece and changing turns</a> tutorials.</p>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing2.gif" alt="Both teams move their pieces and the red team eliminates the blue team's pieces."></p>
+<p>To implement capturing, you need to do the following:</p>
+<ul>
+<li>Set the line directions on the <code>Grid Game Rules</code> script on the <strong>GameBoard</strong> game object as shown below. These directions are relative and are necessary to tell the game which directions are valid for making or moving in lines.</li>
+</ul>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing3.png" alt="Setting the line directions script"></p>
+<ul>
+<li>Your logical piece prefabs need to have a <code>Relative Move Rule</code> component with the <strong>Valid Directions</strong> configured with the same values as the line directions above, and the move type set to <strong>Empty</strong>.</li>
+</ul>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing4.png" alt="Setting the relative move rule script"></p>
+<ul>
+<li>Logical piece prefabs need to have a Hop Capture Rule script with the same valid directions and a Capture Player ID of the enemy.</li>
+</ul>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing5.png" alt="Setting the hop capture rule script"></p>
+<p>This script implements the rules to capture a piece when you hop over an enemy piece. It sets the valid directions from which you can capture, and sets the ID of the enemy piece.</p>
+<ul>
+<li>Add a Relative Capture Move Script to the logical piece prefab to allow simple captures, and configure it as follows:</li>
+</ul>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing6.png" alt="Setting the relative capture move script"></p>
+<p>The final step is to add the main game script.</p>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing7.png" alt="Setting the capture game script"></p>
+<p>The Capture Game Script does the following things:</p>
+<ul>
+<li>Starts the game by initializing the game and registering the players.</li>
+<li>Allows selecting different pieces.</li>
+<li>Allows moving a piece to a valid position.</li>
+<li>Allows capturing an enemy piece.</li>
+</ul>
+<p>The first items are explained in other tutorials. The capturing happens in the OnClick method, implemented after a move is done but when the move is not valid.</p>
+<pre><code class="lang-csharp" name="GameRules">if (manager.CommitMove(move))
+{
+    TransformEnemyPieces(point);
+    DeselectPiece();
+}
+else
+{
+    CapturePiece(selectedPos, point);
+}
+</code></pre>
+<p>The CapturePiece method uses the Manhattan distance between the point of the actual piece and the target destination to check whether a capture is possible. For the hop capture, the legal distance is 2 or 4, and for the relative capture, it is 1.</p>
+<p>The third type of capture is implemented fully in code. It checks whether the piece can be captured, and then transforms that piece into a piece of the capturing player.</p>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing8.gif" alt="Both teams move and the red team captures a chip from the blue team."></p>
+<p>Here is all the capture code:</p>
+<pre><code class="lang-csharp" name="GameRules">/// &lt;summary&gt;
+/// It tries to capture any piece that is between a movement that has a manhattan distance of 2 or 4.
+/// In other words, any piece in rect or diagonal position when you hop above a piece.
+/// &lt;/summary&gt;
+private void CapturePiece(GridPoint2 actualPiecePosition, GridPoint2 targetPosition)
+{
+    var state = manager.State;
+
+    var moveDist = RectPoint.ManhattanNorm(actualPiecePosition - targetPosition);
+
+    if (ValidateCapture(moveDist))
+        return;
+
+    var centerPos = (targetPosition + actualPiecePosition) / 2;
+    var capturePiece = state.TestPosition(centerPos);
+
+    if (capturePiece == null)
+        return;
+
+    var move = state.CreateCapturePieceMove(selectedPiece, capturePiece, actualPiecePosition, targetPosition, centerPos);
+
+    if (manager.CommitMove(move))
+    {
+        DeselectPiece();
+    }
+}
+
+private bool ValidateCapture(int moveDistance)
+{
+    switch (captureType)
+    {
+        case CaptureType.HopCapture:
+            if (moveDistance != 2 &amp;&amp; moveDistance != 4)
+                return true;
+            break;
+        case CaptureType.RelativeCapture:
+            if (moveDistance != 1)
+                return true;
+            break;
+        case CaptureType.SurroundCapture:
+            return true;
+        case CaptureType.FullSurround:
+            return true;
+    }
+
+    return false;
+}
+
+private void TransformEnemyPieces(GridPoint2 point)
+{
+    if (captureType != CaptureType.SurroundCapture &amp;&amp; captureType != CaptureType.FullSurround)
+        return;
+
+    var rules = manager.Rules;
+    var currentPlayer = manager.CurrentPlayer;
+    IEnumerable&lt;GridPoint2&gt; positionsToReplace = new List&lt;GridPoint2&gt;();
+
+    switch (captureType)
+    {
+        case CaptureType.SurroundCapture:
+            positionsToReplace = GetPositionsToReplace(manager, point);
+            break;
+        case CaptureType.FullSurround:
+            positionsToReplace = GetSurroundPositions(manager, point);
+            break;
+    }
+
+    SurroundCapture(positionsToReplace, rules, currentPlayer);
+}
+
+private void SurroundCapture(IEnumerable&lt;GridPoint2&gt; positionsToReplace, IGameRules&lt;GridPoint2, GridGamePieceSettings&gt; rules, Player&lt;GridPoint2, GridGamePieceSettings&gt; currentPlayer)
+{
+    //replace all the enemy cells between current player pieces
+    foreach (var rectPoint in positionsToReplace)
+    {
+        var newMove = manager.State.CreateReplacePieceMove(manager.GameGrid[rectPoint][0], rules.CreatePieceProperties(rules.GetPieceSettings(&quot;piece&quot;, currentPlayer.PlayerID), currentPlayer), rectPoint);
+
+        manager.CommitMove(newMove, false);
+    }
+}
+
+private IEnumerable&lt;GridPoint2&gt; GetPositionsToReplace(GridGameManager gameManager, GridPoint2 position)
+{
+    var grid = gameManager.GameGrid;
+    var currentPlayer = gameManager.CurrentPlayer;
+    var positionsToReplace = new List&lt;GridPoint2&gt;();
+
+    foreach (var direction in RectPoint.OrthogonalAndDiagonalDirections)
+    {
+        AddPositionsToReplaceInDirection(position, grid, direction, currentPlayer, positionsToReplace);
+    }
+
+    return positionsToReplace;
+}
+
+private static void AddPositionsToReplaceInDirection(GridPoint2 position, Grid2&lt;GridGameCell&gt; grid, GridPoint2 direction, Player&lt;GridPoint2, GridGamePieceSettings&gt; currentPlayer,
+    List&lt;GridPoint2&gt; positionsToReplace)
+{
+    var potentialPositionsToReplace = new List&lt;GridPoint2&gt;();
+
+    foreach (var point in grid.RayIterator(position, direction).Skip(1))
+    {
+        if (grid[point].Any())
+        {
+            if (grid[point][0].PlayerID != currentPlayer.PlayerID)
+            {
+                potentialPositionsToReplace.Add(point);
+            }
+            else
+            {
+                positionsToReplace.AddRange(potentialPositionsToReplace);
+                break;
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+}
+
+private IEnumerable&lt;GridPoint2&gt; GetSurroundPositions(GridGameManager gameManager, GridPoint2 position)
+{
+    var grid = gameManager.GameGrid;
+    var currentPlayer = gameManager.CurrentPlayer;
+    var positionsToReplace = new List&lt;GridPoint2&gt;();
+    var currentPlayerPosition = gameManager.State.FindPiece(selectedPiece);
+
+    foreach (var point in RectPoint.GetOrthogonalAndDiagonalNeighbors(position))
+    {
+        if (!grid.Contains(point))
+            continue;
+
+        if (!grid[point].Any())
+            continue;
+
+        if (grid[point][0].PlayerID == currentPlayer.PlayerID)
+            continue;
+
+        var count = CountNeighboursEnemyPieces(gameManager, currentPlayerPosition, point);
+
+        if (count == 8)
+        {
+            positionsToReplace.Add(point);
+        }
+    }
+
+    return positionsToReplace;
+}
+
+private int CountNeighboursEnemyPieces(GridGameManager gameManager, GridPoint2 previousPlayerPosition, GridPoint2 position)
+{
+    var grid = gameManager.GameGrid;
+    var currentPlayer = grid[position][0];
+    int enemyPieces = 0;
+    bool previousPlayerInRange = false;
+
+    foreach (var point in RectPoint.GetOrthogonalAndDiagonalNeighbors(position))
+    {
+        if (!grid.Contains(point))
+            continue;
+
+        if (!grid[point].Any())
+            continue;
+
+        if (grid[point][0].PlayerID == currentPlayer.PlayerID)
+            continue;
+
+        if (previousPlayerPosition == point)
+        {
+            previousPlayerInRange = true;
+        }
+
+        enemyPieces++;
+    }
+
+    if (!previousPlayerInRange)
+        enemyPieces++;
+
+    return enemyPieces;
+}
+</code></pre>
+<p><img src="../images/Capturing-an-enemy-piece/Capturing9.gif" alt="Red team tokens capture a blue chip by circling it"></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Setting up a Grid and Board | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Setting up a Grid and Board | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/setting-up-a-grid-and-board.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setting-up-a-grid-and-board">Setting up a Grid and Board</h1>
+
+<p><img src="../images/bandicam-2015-11-30-13-56-34-600.jpg" alt="A classic checkerboard with two teams arranged on the board."></p>
+<p>To learn more about Grids, see the <a href="https://gamelogic.co.za/documentation/grids2/">documentation page for Grids</a>.</p>
+<p>In this example, we will use sprites, although meshes can also be used.</p>
+<h2 id="1-configure-the-camera">1. Configure the Camera</h2>
+<p>Set the main camera to orthographic, set its size, and choose a background color.</p>
+<h2 id="2-make-cell-and-piece-prefabs">2. Make cell and piece prefabs</h2>
+<p>Make the cell prefab:</p>
+<ul>
+<li>Create a square sprite (10x10), and make a prefab from it.</li>
+<li>Call it <strong>Cell</strong>.</li>
+<li>Add a <code>Sprite Cell</code> component to it.</li>
+</ul>
+<p>Our game will feature only one type of piece, which will be differentiated by color for each player.</p>
+<p>Make the visual piece prefabs:</p>
+<ul>
+<li>Create a circle sprite (10x10), and make a prefab from it.</li>
+<li>Set the <strong>Order in layer</strong> to 1.</li>
+<li>Call it <strong>Red Visual</strong>. Make it red.</li>
+<li>Add a <code>Grid Game Piece</code> component to it.</li>
+<li>Duplicate the prefab, and call it <strong>Blue Visual</strong>. Make it blue.
+[Should we make two pieces?]</li>
+</ul>
+<p>Make the logical piece prefabs:</p>
+<ul>
+<li>Create an empty game object, and make a prefab from it.</li>
+<li>Call it <strong>Red Logical</strong>.</li>
+<li>Add a <code>Grid Game Piece Settings</code> component to it:
+<ul>
+<li>Set the <strong>Owner Player ID</strong> to <code>blue</code>.</li>
+<li>Set the <strong>Piece ID</strong> to <code>piece</code>. If this was chess, the IDs would be &quot;rook&quot;, &quot;knight&quot;, etc.</li>
+<li>Link in the <strong>Blue Visual</strong> prefab.</li>
+</ul>
+</li>
+<li>Add a <code>Any Open Space Rule</code> component to it. Verify it is the <code>OpenSpaceMoveRule.cs</code> script and not the
+<code>OpenSpaceAddRule.cs</code> script. (A different tutorial covers piece rules. This rule allows pieces to be moved to any
+open square without any additional configuration.)</li>
+<li>Duplicate the prefab, and call it <strong>Blue Logical</strong>.</li>
+<li>Change the <strong>Owner Player ID</strong> to <code>red</code>, and link in the <strong>Red Visual</strong> prefab.</li>
+</ul>
+<h2 id="3-create-the-grid">3. Create the grid</h2>
+<p>Grids is a powerful system that allows for a significant amount of customization. In this instance, we will use the
+simplest setup, which is a 10x10 grid of cells arranged in a rectangle.</p>
+<ul>
+<li>Right-click on your project and select <strong>Create | Grids | Presets | Rect Grid</strong>. This will create two objects, the
+shape graph (this determines the cells and logical layout) and the space map graph (that determines how the cells are
+positioned in space). For the purposes of this tutorial the defaults are good: the shape is a 10x10 <strong>Parallelogram</strong>
+and the space map is a simple <strong>Rect</strong> grid (which means the logical parallelogram will be positioned to form a
+rectangle).</li>
+<li>Create an empty game object and add a <code>Sprite Cell Grid Builder</code> to it.</li>
+<li>Link in the shape graph, space map graph, and the cell prefab on the <code>Sprite Cell Grid Builder</code> component.</li>
+<li>Hit the <strong>Build Grid</strong> button on the <code>Sprite Cell Grid Builder</code> component. You should see a grid of cells in the
+scene view, which will appear as a single large square due to their uniform color.</li>
+</ul>
+<h2 id="4-set-up-a-checkerboard-coloring">4. Set up a checkerboard coloring</h2>
+<ul>
+<li>To the grid, add a <code>Sprite Grid Colors</code> component.</li>
+<li>Delete all colors, except for two.</li>
+<li>Set the color function: <strong>x0</strong> to <code>2</code>, <strong>x1</strong> to <code>1</code>, and <strong>y1</strong> to <code>1</code> for a checkerboard pattern. For other
+patterns, see
+<a href="https://gamelogic.co.za/documentation/grids2/content/GridColorings.html">What are Grid Colorings</a>.</li>
+</ul>
+<h2 id="5-add-pieces-to-the-board">5. Add pieces to the board</h2>
+<ul>
+<li>Add a <code>Grid Game Manager</code> component (<code>Grid Game Rules</code> will automatically be added).</li>
+<li>Add the logical piece prefabs to the <strong>Pieces</strong> field in <code>Grid Game Rules</code>.</li>
+<li>Setup the <strong>Initial Pieces</strong> in <code>Grid Game Manager</code>, using the player IDs <code>red</code> and <code>blue</code>, and piece ID <code>piece</code>
+that you used before. Since this is a simple rect grid, you can use coordinates <code>(0, 0)</code> to <code>(9, 9)</code> to place the pieces.</li>
+<li>Click Build Grid to have the pieces added.</li>
+</ul>
+<p>Note that the pieces will disappear when you run the game, which is the intended behavior. The pieces are added at
+runtime during a step not covered in this exampl.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

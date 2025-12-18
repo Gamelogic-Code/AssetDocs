@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class HexagonShapeNode | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class HexagonShapeNode | Gamelogic Abstract Strategy ">
+      
+      <meta name="description" content="Node that generates a hexagon shape.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Grids2.Graph.HexagonShapeNode">
+
+
+
+  <h1 id="Gamelogic_Grids2_Graph_HexagonShapeNode" data-uid="Gamelogic.Grids2.Graph.HexagonShapeNode" class="text-break">
+Class HexagonShapeNode  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/package-structure/Packages/za.co.gamelogic.grids2/Runtime/Scripts/EditorSupport/Graph/ShapeGraph/Nodes/2D/HexagonShapeNode.cs#lines-9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Grids2.html">Grids2</a>.<a class="xref" href="Gamelogic.Grids2.Graph.html">Graph</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Grids2.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Node that generates a hexagon shape.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ShapeNode(&quot;Hex/Hexagon&quot;, 2)]
+public class HexagonShapeNode : PrimitiveShapeNode&lt;GridPoint2&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
+      <div><a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.html">BaseNode</a></div>
+      <div><a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-1.html">ShapeNode</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-2.html">ShapeNode</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.html">ShapeNode</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>, <a class="xref" href="Gamelogic.Grids2.Graph.None.html">None</a>, <a class="xref" href="Gamelogic.Grids2.IExplicitShape-1.html">IExplicitShape</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;&gt;</div>
+      <div><a class="xref" href="Gamelogic.Grids2.Graph.PrimitiveShapeNode-1.html">PrimitiveShapeNode</a>&lt;<a class="xref" href="Gamelogic.Grids2.GridPoint2.html">GridPoint2</a>&gt;</div>
+      <div><span class="xref">HexagonShapeNode</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.PrimitiveShapeNode-1.Execute.html#Gamelogic_Grids2_Graph_PrimitiveShapeNode_1_Execute_System_Collections_Generic_IEnumerable_Gamelogic_Grids2_Graph_None__">PrimitiveShapeNode&lt;GridPoint2&gt;.Execute(IEnumerable&lt;None&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.PrimitiveShapeNode-1.Recompute.html#Gamelogic_Grids2_Graph_PrimitiveShapeNode_1_Recompute">PrimitiveShapeNode&lt;GridPoint2&gt;.Recompute()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.inputNodes.html">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.inputNodes</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.InputItemCount.html#Gamelogic_Grids2_Graph_ShapeNode_3_InputItemCount">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.InputItemCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.Execute.html#Gamelogic_Grids2_Graph_ShapeNode_3_Execute_System_Collections_Generic_IEnumerable__1__">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.Execute(IEnumerable&lt;None&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.UpdateStatic.html#Gamelogic_Grids2_Graph_ShapeNode_3_UpdateStatic">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.UpdateStatic()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.Inputs.html#Gamelogic_Grids2_Graph_ShapeNode_3_Inputs">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.Inputs</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.AddNodeInput.html#Gamelogic_Grids2_Graph_ShapeNode_3_AddNodeInput_Gamelogic_Grids2_Graph_BaseNode_">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.AddNodeInput(BaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-3.RemoveNodeInput.html#Gamelogic_Grids2_Graph_ShapeNode_3_RemoveNodeInput_Gamelogic_Grids2_Graph_BaseNode_">ShapeNode&lt;GridPoint2, None, IExplicitShape&lt;GridPoint2&gt;&gt;.RemoveNodeInput(BaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.ShapeNode-2.Output.html#Gamelogic_Grids2_Graph_ShapeNode_2_Output">ShapeNode&lt;GridPoint2, IExplicitShape&lt;GridPoint2&gt;&gt;.Output</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.enable.html">BaseNode.enable</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.rect.html">BaseNode.rect</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.Id.html#Gamelogic_Grids2_Graph_BaseNode_Id">BaseNode.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.Inputs.html#Gamelogic_Grids2_Graph_BaseNode_Inputs">BaseNode.Inputs</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.AddNodeInput.html#Gamelogic_Grids2_Graph_BaseNode_AddNodeInput_Gamelogic_Grids2_Graph_BaseNode_">BaseNode.AddNodeInput(BaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.RemoveNodeInput.html#Gamelogic_Grids2_Graph_BaseNode_RemoveNodeInput_Gamelogic_Grids2_Graph_BaseNode_">BaseNode.RemoveNodeInput(BaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.UpdateStatic.html#Gamelogic_Grids2_Graph_BaseNode_UpdateStatic">BaseNode.UpdateStatic()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Grids2.Graph.BaseNode.OnEnable.html#Gamelogic_Grids2_Graph_BaseNode_OnEnable">BaseNode.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.SetDirty.html">ScriptableObject.SetDirty()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ScriptableObject.CreateInstance(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">ScriptableObject.CreateInstance(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.CreateInstance.html">ScriptableObject.CreateInstance&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetInstanceID.html">Object.GetInstanceID()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.GetHashCode.html">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Object.Instantiate(Object, Vector3, Quaternion)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">Object.DontDestroyOnLoad(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">Object.FindObjectOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object-name.html">Object.name</a>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Graph.HexagonShapeNode.center.html">center</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Graph.HexagonShapeNode.radius.html">radius</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Grids2.Graph.HexagonShapeNode.Generate.html#Gamelogic_Grids2_Graph_HexagonShapeNode_Generate">Generate()</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

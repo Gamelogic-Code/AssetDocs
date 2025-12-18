@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Creating Your Own Victory Rules | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Creating Your Own Victory Rules | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/creating-your-own-victory-rules.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="creating-your-own-victory-rules">Creating Your Own Victory Rules</h1>
+
+<p><img src="../images/Own-victory-rules/OwnVictoryRules.jpg" alt="The board with chips of each team on each side with blue background"></p>
+<p>In this tutorial, we will cover how to create a custom victory rule for our game. To make it clear, we will create a very simple game.</p>
+<p><img src="../images/Own-victory-rules/OwnVictoryRules1.png" alt="The board with chips of each team on each side"></p>
+<p>This game has the following rules:</p>
+<ul>
+<li><strong>Red</strong> starts.</li>
+<li>Only one turn per player.</li>
+<li>You can only move to adjacent cells.</li>
+<li>You can't capture enemy pieces.</li>
+<li>You win when one of your pieces has three or more pieces of the same color in neighboring cells.</li>
+</ul>
+<p>This last condition is not a common game rule. Therefore, we will make a script to validate this condition and end the game when it happens.</p>
+<h2 id="1-set-up-the-game-board-and-pieces">1. Set Up the Game Board and Pieces</h2>
+<p>Configure the game board as shown in the image above, and make sure your pieces have a “Relative Move Rule” script with 8 relative valid directions:</p>
+<p><img src="../images/Own-victory-rules/OwnVictoryRules2.png" alt="Setting the relative move rule script"></p>
+<p>We will also use a Canvas Text to show a message when the game ends. To know how to do this, refer to <a href="displaying-an-end-game-message.html">this</a> tutorial.</p>
+<p>Create a new script that will drive the game (YourOwnVictoryRule), and add it to the GameBoard. Also, add a <code>VictoryOtherPlayer</code> component to the game board. This is a default victory condition that can be configured to make a player lose if the other player wins, like this:</p>
+<p><img src="../images/Own-victory-rules/OwnVictoryRules3.png" alt="Setting the victory other players script"></p>
+<h2 id="2-implement-the-custom-victory-rule">2. Implement the Custom Victory Rule</h2>
+<p>Implement the custom victory rule class, and call it <code>CustomVictoryRule</code>, and add it to the game board. Make it extend from <code>VictoryRules</code> and use a <code>RectPoint</code> and <code>GridGamePieceSettings</code> class as types:</p>
+<pre><code class="lang-csharp">public class CustomVictoryRule : VictoryRules&lt;RectPoint, GridGamePieceSettings&gt;
+</code></pre>
+<p>Implement the <code>CheckVictory</code> method with the rule. To do this, iterate over every point on the board using <code>currentState.GetAllPoints()</code>. If the cell is not empty and if the piece belongs to the current player, then we count how many neighbors of the same type the piece has. If we count 4, then we set the current player as a winner with the following line.</p>
+<pre><code class="lang-csharp">currentPlayer.SetVictoryState(VictoryType.Victory);
+</code></pre>
+<p>Since we use the <code>Victory Other Player</code> script, making a player win means the other player loses, and this ends the game.</p>
+<p>Try out the game, change the number of pieces, add pieces to the board, and see how it all behaves.</p>
+<p><img src="../images/Own-victory-rules/OwnVictoryRules4.png" alt="The board with the finished game message"></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

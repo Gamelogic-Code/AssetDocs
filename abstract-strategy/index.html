@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Abstract Strategy | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Abstract Strategy | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/index.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="abstract-strategy">Abstract Strategy</h1>
+
+<hr>
+<h2 id="version-310">Version 3.1.0</h2>
+<p>Abstract Strategy is a library and set of tools for implementing abstract strategy games such as Checkers, Reversi,
+Dots and many more.</p>
+<h2 id="game-manager">Game Manager</h2>
+<p>The game manager is largely responsible for being an interface for the user to interact with the game state, by
+centralising and wrapping useful methods from the other components.  It contains all other game components. It also has
+a few responsibilities relating to the visual state of the game:</p>
+<h2 id="animation">Animation</h2>
+<p>Moves ask the game manager for an animator component that handles animating a particular move. Animators tell the
+move when they are done so that logical actions can be taken. Animators are generally responsible for making sure
+pieces are in the correct visual state for given moves. The game manager enforces positional state after moves are
+committed as well, to make sure visual piece components are in the correct place.</p>
+<h2 id="piece-creation">Piece creation</h2>
+<p>The game manager creates, contains and manages all visual pieces. Visual pieces map to their corresponding
+IPieceProperties object, and exist on a visual grid.</p>
+<h2 id="move-manager">Move Manager</h2>
+<p>The move manager is a queue that processes submitted moves in order, and also remembers all moves ever committed to the
+state. The manager contains events that are subscribed to by the game rules (and could be utilised by users too) in
+order to hook into move-ending events to advance the game state.</p>
+<p>The move manager can unwind its own state with ScheduleUndo, but this is not currently very robust.  Importantly,
+any move knows how to play forwards and backwards, but the move manager won’t correctly maintain its stack of
+historical moves unless the correct moves are undone in the order in which they were submitted. ScheduleUndo will do
+this properly, but only when called one move at a time (since moves are not removed from history until they are
+complete). To schedule the undo for multiple moves at once, a more robust solution should be developed.</p>
+<h2 id="turn-manager">Turn Manager</h2>
+<p>The turn manager is a straightforward state machine. It knows which player is currently taking their turn, knows the
+current turn state, and knows all players in the game (in turn order).</p>
+<h2 id="player">Player</h2>
+<p>Players are simple objects to represent an agent in the game. Currently the only logic inside of HumanPlayer is one
+that automatically advances them from PlayerTurnState.Starting and PlayerTurnState.Ending.</p>
+<p>The AI player object does that as well, and additionally contains its personal blackboard and delegates move selection
+to its behaviour tree.</p>
+<p>The player (and thus its behaviour tree) is ticked by the Turn Manager in the following case:</p>
+<ul>
+<li>Every frame while</li>
+<li>the move queue is empty,</li>
+<li>and the player is in its Running state</li>
+</ul>
+<p>Generally, the game rules will automatically advance the game state (therefore causing a player to move from Running to
+Ending) after a move completes, and so a behaviour tree is only ticked once per turn. However, in the case where players
+could make multiple moves per turn (such as in draughts), this can potentially happen a number of times in one turn.
+Every time it happens, the rules will have a list of all available actions that can be taken in that state.</p>
+<h2 id="game-state">Game State</h2>
+<p>The game state is a wrapper for the underlying logical grid. It is also responsible for all the types of moves that can
+operate on itself, as well as all fundamental actions that can operate on itself. Since moves only know how to operate
+on a given game state, all moves and the game state itself are strongly tied into each other.</p>
+<h2 id="moves">Moves</h2>
+<p>Moves represent a single, reversible atomic change in the game state. Moves are equatable, such that different instances
+of moves that represent the same player action are equivalent. This is important for a number of reasons, but primarily
+for move validation.</p>
+<h2 id="game-rules">Game Rules</h2>
+<p>The rules component is the most complex component in Abstract Strategy. It handles all the piece types available to all
+players, knows how those pieces can behave and move, and therefore is capable of producing an exhaustive collection of
+all possible moves that can be made from the current game state. It also maintains and checks for victory conditions,
+and advances the game state based on moves made by players, usually automatically after x-number of moves made by a
+player (counted once every time MoveManager fires OnAllMovesEnd, which happens whenever its move queue is depleted).</p>
+<p>Given that the rules know a list of all available moves for the current player, the rules also use this information to
+validate moves, by comparing a given move against its known list.</p>
+<p>The rules listen for various events from various other components in order to perform its logic.</p>
+<h2 id="rewinding-states">Rewinding states</h2>
+<p>All moves performed on the game state know how to undo what they have done. If registered and executed with the
+TurnManager, simply calling ScheduleUndo will revert the last move made in the game. You can also manually keep a stack
+of all changes made to the state and rewind them without using the turn manager (which needs to go through at least one
+update before it ticks the current move anyway).</p>
+<p>However, complications arise with regards to animations. By default, a move will attempt to get an animator component
+when starting, even when starting backwards. It queries the game manager for the correct animator components which have
+been set up by the user. In order to test and rewind states for AI purposes, you will need a way to circumvent this
+behaviour so that moves can perform all of their logic in one frame rather than waiting for animations.</p>
+<p>Cloning a state is also possible by simply copying the game state object’s contained grid, but it is likely
+prohibitively expensive and using the existing rewind behaviour will likely be simpler. However, moves ask a game
+manager for the game state object to modify, so if you’re performing operations on a clone, moves will need to know how
+to get a game state to change through some other interface instead.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

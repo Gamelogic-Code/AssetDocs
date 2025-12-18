@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Gamelogic.AbstractStrategy | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Gamelogic.AbstractStrategy | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.AbstractStrategy">
+
+  <h1 id="Gamelogic_AbstractStrategy" data-uid="Gamelogic.AbstractStrategy" class="text-break">Namespace Gamelogic.AbstractStrategy</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.GameMove-2.html">GameMove&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>A class that represents a change in state to the gameManager.
+Moves can change their state forwards and backwards, so that they
+can undo changes that they have made and restore the former state</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.GameRules-2.html">GameRules&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Class to handle general gameManager flow, moving between states, move logic and
+validation, and victory states.
+Attach victory rules to this object to have them processed when the gameManager progresses.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.HumanPlayer-2.html">HumanPlayer&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Class to represent a human player, who makes decisions on how to act. You will probably
+not use this class directly, and instead use the non-generic variant
+<a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridHumanPlayer.html">GridHumanPlayer</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.HumanPlayer-3.html">HumanPlayer&lt;TGameState, TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Class to represent a human player, who makes decisions on how to act. You will probably
+not use this class directly, and instead use the non-generic variant
+<a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridHumanPlayer.html">GridHumanPlayer</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.MoveManager-2.html">MoveManager&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Management class for move states</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.PieceRule-2.html">PieceRule&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Rule object describing how a given type of piece behaves. Implement these and attach them
+to <a class="xref" href="Gamelogic.AbstractStrategy.PieceSettings-2.html">PieceSettings&lt;TPoint, TSelf&gt;</a> objects to describe behaviours
+for specific pieces.</p>
+<p>You can disable the behaviour with <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">enabled</a> to temporarily disable a rule.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.PieceSettings-2.html">PieceSettings&lt;TPoint, TSelf&gt;</a></dt>
+      <dd><p>Class to contain settings for each piece. Attach rules for each piece as additional components
+to this script.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.Player-2.html">Player&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Player base class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.TurnManager-2.html">TurnManager&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Class that manages turn states for the gameManager.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.VictoryRules-2.html">VictoryRules&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>A component that represents a gameManager victory rule.</p>
+<p>You can disable the behaviour with <a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">enabled</a> to temporarily disable a victory rule.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.WaitForAnimationMove-2.html">WaitForAnimationMove&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Class that handles waiting for animation</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.CaptureInfo-1.html">CaptureInfo&lt;TPoint&gt;</a></dt>
+      <dd><p>Structure to hold information about a capture</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameManager-2.html">IGameManager&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Base interface for gameManager management component. Most likely you will use
+<a class="xref" href="Gamelogic.AbstractStrategy.Grids.GridGameManager.html">GridGameManager</a> instead of implementing this interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGamePiece.html">IGamePiece</a></dt>
+      <dd><p>Interface implemented by visual gameManager piece objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameRules-2.html">IGameRules&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Interface for object which provides gameManager rules.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.IGameState-2.html">IGameState&lt;TPoint, TPieceSettings&gt;</a></dt>
+      <dd><p>Base class for object that represents the gameManager state. Knows about all pieces added to itself.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.IMoveAnimator.html">IMoveAnimator</a></dt>
+      <dd><p>Interface for any class that handles animation of a piece during a move.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.IPieceProperties.html">IPieceProperties</a></dt>
+      <dd><p>Information about a piece. Each piece should have a unique combination of <a class="xref" href="Gamelogic.AbstractStrategy.IPieceProperties.PieceID.html#Gamelogic_AbstractStrategy_IPieceProperties_PieceID">PieceID</a> and <a class="xref" href="Gamelogic.AbstractStrategy.IPieceProperties.PlayerID.html#Gamelogic_AbstractStrategy_IPieceProperties_PlayerID">PlayerID</a>,
+and a universally unique <a class="xref" href="Gamelogic.AbstractStrategy.IPieceProperties.UniqueID.html#Gamelogic_AbstractStrategy_IPieceProperties_UniqueID">UniqueID</a></p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.GameState.html">GameState</a></dt>
+      <dd><p>Different states a gameManager can be in.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.MoveMode.html">MoveMode</a></dt>
+      <dd><p>Enum describing which direction a move is operating in</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.PieceMovementRules.html">PieceMovementRules</a></dt>
+      <dd><p>Rules concerning movement for a given piece.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.PiecePlacementRules.html">PiecePlacementRules</a></dt>
+      <dd><p>Rules concerning placement for a given piece.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.PlayerTurnState.html">PlayerTurnState</a></dt>
+      <dd><p>Different states a player turn can be in.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.VictoryCheckTime.html">VictoryCheckTime</a></dt>
+      <dd><p>Selects which points in the gameManager loop victory will be checked.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.AbstractStrategy.VictoryType.html">VictoryType</a></dt>
+      <dd><p>The types of victory states that can be achieved</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

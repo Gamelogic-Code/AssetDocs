@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Changes | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Changes | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/changes.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="changes">Changes</h1>
+
+<h2 id="version-310">Version 3.1.0</h2>
+<h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li>Added features for <a href="advanced-graph-debugging.html">advanced graph debugging</a>.</li>
+</ul>
+<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li>Renamed <a class="xref" href="../api/Gamelogic.AbstractStrategy.AI.EmptyCellCondition.html">EmptyCellCondition</a> to script to match the name of the class. This prevented
+this node from being serialized correctly in graphs.</li>
+</ul>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li>Fixed many inspection warnings.</li>
+<li>Deprecated misnamed events in <a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.html">MoveManager&lt;TPoint, TPieceSettings&gt;</a>:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.onMoveStart_1.html">onMoveStart</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.OnMoveStart.html">OnMoveStart</a></li>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.onMoveEnd_1.html">onMoveEnd</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.OnMoveEnd.html">OnMoveEnd</a></li>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.onAllMovesEnd_1.html">onAllMovesEnd</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.OnAllMovesEnd.html">OnAllMovesEnd</a></li>
+</ul>
+</li>
+<li>Deprecated misnamed events in <a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.html">TurnManager&lt;TPoint, TPieceSettings&gt;</a>:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.onPlayerChange_1.html">onPlayerChange</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.OnPlayerChange.html">OnPlayerChange</a></li>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.onTurnStateChange_1.html">onTurnStateChange</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.OnTurnStateChange.html">OnTurnStateChange</a></li>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.onPlayerVictoryStateChange_1.html">onPlayerVictoryStateChange</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.OnPlayerVictoryStateChange.html">OnPlayerVictoryStateChange</a></li>
+</ul>
+</li>
+<li>Deprecated misnamed events in <a class="xref" href="../api/Gamelogic.AbstractStrategy.Player-2.html">Player&lt;TPoint, TPieceSettings&gt;</a>:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.Player-2.onVictoryStateChanged_1.html">onVictoryStateChanged</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.Player-2.OnVictoryStateChanged.html">OnVictoryStateChanged</a></li>
+</ul>
+</li>
+<li>Deprecated misnamed properties in <a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.html">IPieceProperties</a>:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.pieceID_1.html#Gamelogic_AbstractStrategy_IPieceProperties_pieceID">pieceID</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.PieceID.html#Gamelogic_AbstractStrategy_IPieceProperties_PieceID">PieceID</a></li>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.uniqueID_1.html#Gamelogic_AbstractStrategy_IPieceProperties_uniqueID">uniqueID</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.UniqueID.html#Gamelogic_AbstractStrategy_IPieceProperties_UniqueID">UniqueID</a></li>
+<li><a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.playerID_1.html#Gamelogic_AbstractStrategy_IPieceProperties_playerID">playerID</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.PlayerID.html#Gamelogic_AbstractStrategy_IPieceProperties_PlayerID">PlayerID</a></li>
+</ul>
+</li>
+<li>Deprecated <a class="xref" href="../api/Gamelogic.AbstractStrategy.HumanPlayer-3.html">HumanPlayer&lt;TGameState, TPoint, TPieceSettings&gt;</a> in favor of <a class="xref" href="../api/Gamelogic.AbstractStrategy.HumanPlayer-2.html">HumanPlayer&lt;TPoint, TPieceSettings&gt;</a>.</li>
+</ul>
+<h3 id="-documentation">📄 Documentation</h3>
+<ul>
+<li>Improved the topic documentation, in particular updated the documents to reflect changes from Grids 1 to Grids 2.</li>
+<li>Fixed typos and bugs in the API documentation.</li>
+</ul>
+<h3 id="-samples">🧪 Samples</h3>
+<ul>
+<li>Added AI for Tic Tac Toe and Reversi that got lost.</li>
+</ul>
+<h3 id="-upgrade-notes">⬆️ Upgrade Notes</h3>
+<ul>
+<li>If you use events in <a class="xref" href="../api/Gamelogic.AbstractStrategy.MoveManager-2.html">MoveManager&lt;TPoint, TPieceSettings&gt;</a>, you need to rename them as described above.</li>
+<li>If you use events in <a class="xref" href="../api/Gamelogic.AbstractStrategy.TurnManager-2.html">TurnManager&lt;TPoint, TPieceSettings&gt;</a>, you need to rename them as described above.</li>
+<li>If you use properties in <a class="xref" href="../api/Gamelogic.AbstractStrategy.IPieceProperties.html">IPieceProperties</a>, you need to rename them as described above.</li>
+<li>If you used the <a class="xref" href="../api/Gamelogic.AbstractStrategy.AI.EmptyCellCondition.html">EmptyCellCondition</a> node in a graph, you need to re-add it since it
+would not have saved before.</li>
+<li>If you use <a class="xref" href="../api/Gamelogic.AbstractStrategy.HumanPlayer-3.html">HumanPlayer&lt;TGameState, TPoint, TPieceSettings&gt;</a>, you need to remove the <code>TGameState</code> type parameter.</li>
+</ul>
+<h2 id="version-300">Version 3.0.0</h2>
+<h3 id="-engineering-1">🔧 Engineering</h3>
+<ul>
+<li>Updated to work with Unity 2019.4.14 LTS</li>
+<li>Updated to work with Gamelogic Extensions 3.0.0.</li>
+<li>Restructured as a package.</li>
+<li>Removed all warnings.</li>
+<li>General small code improvements (formatting, naming, etc.).</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

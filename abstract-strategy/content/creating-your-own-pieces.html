@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Creating Your Own Pieces | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Creating Your Own Pieces | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/creating-your-own-pieces.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="creating-your-own-pieces">Creating Your Own Pieces</h1>
+
+<p><img src="../images/Creating-your-own-pieces/OwnPieces.jpg" alt="The board with a lot of customized chips"></p>
+<p>This tutorial will show you how to create your own pieces. We will use the following board,</p>
+<p><img src="../images/Creating-your-own-pieces/OwnPieces1.gif" alt="The board with a lot of customized chips moving around"></p>
+<p>with these rules:</p>
+<ul>
+<li>One turn per player.</li>
+<li>All blue ones move first, then red.</li>
+<li>You can move anywhere.</li>
+<li>You can’t capture enemy pieces.</li>
+<li>You can’t win or lose.</li>
+</ul>
+<h2 id="1-create-a-new-piece">1. Create a New Piece</h2>
+<p>Create a new empty GameObject. Add a SpriteRenderer, and set the sprite to whatever image you want. Add a GridGamePiece component. Finally, make this GameObject a prefab.</p>
+<p><img src="../images/Creating-your-own-pieces/OwnPieces2.png" alt="Setting the game-objects"></p>
+<h2 id="2-set-up-the-piece-logic">2. Set Up the Piece Logic</h2>
+<p>Create another empty GameObject, and give it the same name as the piece created in the previous step with _Logic or _Setting added so that you know they are related. Add a Grid Game Piece Setting component, and fill in the settings. For these examples, all pieces have an ID of “piece” (they will have the same rules), and there is one player for each color and shape. Set the piece prefab to the prefab you made in the previous step.</p>
+<p>Add an Open Space Move Rule component so that players can move pieces to any open position on the board.</p>
+<p><img src="../images/Creating-your-own-pieces/OwnPieces3.png" alt="Setting the game-objects 2"></p>
+<p>Make this GameObject a prefab too.</p>
+<p>You can also add more piece rules. The default ones can be found by clicking on <strong>Add Component</strong> and then <strong>Gamelogic | Strategy | Piece Rules</strong>. You can also <a href="creating-your-own-piece-rules.html">create your own piece rules</a>.</p>
+<h2 id="3-add-the-piece-to-the-gameboard-game-object">3. Add the Piece to the GameBoard Game Object</h2>
+<p>To add the piece to the <strong>GameBoard</strong> game object, you need to configure two components on the <strong>GameBoard</strong>. On the <code>Grid Game Rules</code> component, add all the logical piece prefabs to the <strong>Pieces</strong> field in any order you want.</p>
+<p><img src="../images/Creating-your-own-pieces/OwnPieces4.png" alt="Setting the grids game rules script"></p>
+<p>On the <code>GridGameManager</code>, add the pieces as you want to position them on the grid in the initial configuration.</p>
+<p><img src="../images/Creating-your-own-pieces/OwnPieces5.png" alt="Setting the grid game manager script"></p>
+<p>Remember that the Piece ID and the Player ID are set on the <em>Logical</em> prefab of the piece.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

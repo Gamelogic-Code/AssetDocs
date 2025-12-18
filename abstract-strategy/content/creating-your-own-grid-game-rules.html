@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Creating Your Own Grid Game Rules | Gamelogic Abstract Strategy </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Creating Your Own Grid Game Rules | Gamelogic Abstract Strategy ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://bitbucket.org/gamelogic/abstractstrategyunity/src/master/Documentation/content/creating-your-own-grid-game-rules.md#lines-1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Abstract Strategy">
+            Gamelogic Abstract Strategy
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="creating-your-own-grid-game-rules">Creating Your Own Grid Game Rules</h1>
+
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules.jpg" alt=""></p>
+<p>In this tutorial, we will focus on implementing Basic Draughts Rules.</p>
+<p>In the example, you can see there are three checkboxes on the <code>BasicDraughtsRules</code> component that represent the draughts-specific rules discussed here.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules1.png" alt=""></p>
+<p>We will use the following configuration to test the rules.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules2.png" alt="The board with chips in various places"></p>
+<p>If you try the game with all checkboxes checked, you will play a game with the normal draughts rules. <strong>Red</strong> starts the game, so you are obligated to capture the closest blue piece. If you move the right piece, you can capture all the pieces all the way up.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules3.gif" alt="Red chips capture blue chips"></p>
+<p>All three checkboxes are selected in this example:</p>
+<ul>
+<li><strong>Obligation To Capture:</strong> If any of your pieces can capture a piece, it must do that movement.</li>
+<li><strong>Multiple Capture Moves:</strong> If after a capture, your piece can capture another one, it must do that movement.</li>
+<li><strong>Advance Turn On Empty Move List:</strong> Your turn does not end unless you move a piece and that piece does not have any valid movement after its first move.</li>
+</ul>
+<p>If you uncheck the <strong>Obligation To Capture</strong> checkbox, you will see that now you can move to any valid position even if your actual position allows a capture.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules4.gif" alt="The red chips perform another type of movement"></p>
+<p>When this box is unchecked, the rule extension is deactivated so only the general piece rules (as configured on the piece) apply.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules5.png" alt="Setting relative move script"></p>
+<p>If you re-check the <strong>Obligation to Capture</strong> and now uncheck the <strong>Multiple Capture Moves</strong>, you will notice that you can only capture one piece and then your turn is over.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules6.gif" alt="A red chip captures a blue chip, then another blue chip captures that red chip."></p>
+<p>To switch off only the last rules, you need to set the Moves Per Turn field to 1. By unchecking this box, the custom turn advancement is deactivated, and the default is used. But the default rule requires a positive moves per turn.</p>
+<p><img src="../images/Creating-your-own-grid-game-rules/OwnGameRules7.png" alt="Setting basic draughts rules script"></p>
+<p>If you play with this configuration, you will notice it works as if you do not have the <strong>Multiple Capture Moves</strong> checkbox checked. This is because the normal Grid Game Rule for ending the turn (with a value of 1 in Moves Per Turn) happens after a valid move is done, ignoring the <strong>Multiple Capture Moves</strong> behavior.</p>
+<p>How does this work in the Script?</p>
+<p>If you open and look at the script, you will notice that it extends from the <code>GridGameRules</code>. This class has the general rules for any rectangular grid game. There are a ton of methods that you can override, but you don’t need to implement them all – only the ones that apply to your game. In this case, we will override the following methods:</p>
+<ul>
+<li><code>UpdateMovesForPlayer</code></li>
+<li><code>OnMoveEnd</code></li>
+<li><code>OnAllMovesEnded</code></li>
+</ul>
+<p>The three bool variables that control the rules are here only for the purpose of this tutorial. Usually, you just need to extend the methods without the need for a bool to control whether to apply the rule or not. (Although this idiom can be useful for prototyping different rules).</p>
+<p>We recommend calling the base method of every overridden method so you actually expand the behavior already defined.</p>
+<p>The <code>UpdateMovesForPlayer</code> uses the <code>movesList</code> parameter to check whether there is a <code>CapturePieceMove</code>, and if there is, it will remove all moves that are not capture moves from the <code>moveList</code>.</p>
+<p>In <code>OnMoveEnd</code>, if the <code>moveList</code> is clear, a check is performed on the <code>EndedMove</code> (the move that would usually end the turn). If it was a <code>CapturePieceMove</code>, then it is necessary to check for new available capture moves and add them to the <code>moveList</code>.</p>
+<p>For the <code>OnAllMovesEnded</code>, all that is needed is to check whether the <code>moveList</code> is empty or not to advance the turn if it is. (For this to work, the moves per turn must be set to 0 in the inspector).</p>
+<p>You can tweak this example and add more rules, so you can test how it all works.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
