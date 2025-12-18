@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VectorExtensions | Gamelogic Extensions </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VectorExtensions | Gamelogic Extensions ">
+      
+      <meta name="description" content="Contains useful extension methods for vectors.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/extensions-unity/new/main/apiSpec/new?filename=Gamelogic_Extensions_VectorExtensions.md&amp;value=---%0Auid%3A%20Gamelogic.Extensions.VectorExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Extensions">
+            Gamelogic Extensions
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Extensions.VectorExtensions">
+
+
+
+  <h1 id="Gamelogic_Extensions_VectorExtensions" data-uid="Gamelogic.Extensions.VectorExtensions" class="text-break">
+Class VectorExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Extensions.html">Extensions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains useful extension methods for vectors.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Version(1, 0, 0)]
+public static class VectorExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VectorExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.ClampMagnitude.html#Gamelogic_Extensions_VectorExtensions_ClampMagnitude_UnityEngine_Vector4_System_Single_">ClampMagnitude(Vector4, float)</a></dt>
+    <dd><p>Clamps the vector to the given magnitude.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Dot.html#Gamelogic_Extensions_VectorExtensions_Dot_UnityEngine_Vector2_UnityEngine_Vector2_">Dot(Vector2, Vector2)</a></dt>
+    <dd><p>Equivalent to Vector2.Dot(v1, v2).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Dot.html#Gamelogic_Extensions_VectorExtensions_Dot_UnityEngine_Vector3_UnityEngine_Vector3_">Dot(Vector3, Vector3)</a></dt>
+    <dd><p>Equivalent to Vector3.Dot(v1, v2).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Dot.html#Gamelogic_Extensions_VectorExtensions_Dot_UnityEngine_Vector4_UnityEngine_Vector4_">Dot(Vector4, Vector4)</a></dt>
+    <dd><p>Equivalent to Vector4.Dot(v1, v2).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardDiv.html#Gamelogic_Extensions_VectorExtensions_HadamardDiv_UnityEngine_Vector2_UnityEngine_Vector2_">HadamardDiv(Vector2, Vector2)</a></dt>
+    <dd><p>Divides one vector component by another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardDiv.html#Gamelogic_Extensions_VectorExtensions_HadamardDiv_UnityEngine_Vector3_UnityEngine_Vector3_">HadamardDiv(Vector3, Vector3)</a></dt>
+    <dd><p>Divides one vector component by another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardDiv.html#Gamelogic_Extensions_VectorExtensions_HadamardDiv_UnityEngine_Vector4_UnityEngine_Vector4_">HadamardDiv(Vector4, Vector4)</a></dt>
+    <dd><p>Divides one vector component by another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardMod.html#Gamelogic_Extensions_VectorExtensions_HadamardMod_UnityEngine_Vector2_UnityEngine_Vector2_">HadamardMod(Vector2, Vector2)</a></dt>
+    <dd><p>Multiplies component by component.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardMod.html#Gamelogic_Extensions_VectorExtensions_HadamardMod_UnityEngine_Vector3_UnityEngine_Vector3_">HadamardMod(Vector3, Vector3)</a></dt>
+    <dd><p>Multiplies component by component.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardMod.html#Gamelogic_Extensions_VectorExtensions_HadamardMod_UnityEngine_Vector4_UnityEngine_Vector4_">HadamardMod(Vector4, Vector4)</a></dt>
+    <dd><p>Multiplies component by component.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardMul.html#Gamelogic_Extensions_VectorExtensions_HadamardMul_UnityEngine_Vector2_UnityEngine_Vector2_">HadamardMul(Vector2, Vector2)</a></dt>
+    <dd><p>Multiplies one vector componentwise by another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardMul.html#Gamelogic_Extensions_VectorExtensions_HadamardMul_UnityEngine_Vector3_UnityEngine_Vector3_">HadamardMul(Vector3, Vector3)</a></dt>
+    <dd><p>Multiplies one vector component by another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.HadamardMul.html#Gamelogic_Extensions_VectorExtensions_HadamardMul_UnityEngine_Vector4_UnityEngine_Vector4_">HadamardMul(Vector4, Vector4)</a></dt>
+    <dd><p>Multiplies one vector component by another.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Perp.html#Gamelogic_Extensions_VectorExtensions_Perp_UnityEngine_Vector2_">Perp(Vector2)</a></dt>
+    <dd><p>Returns the vector rotated 90 degrees counter-clockwise.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.PerpDot.html#Gamelogic_Extensions_VectorExtensions_PerpDot_UnityEngine_Vector2_UnityEngine_Vector2_">PerpDot(Vector2, Vector2)</a></dt>
+    <dd><p>Equivalent to Vector2.Dot(v1.Perp(), v2).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.PerpXY.html#Gamelogic_Extensions_VectorExtensions_PerpXY_UnityEngine_Vector3_">PerpXY(Vector3)</a></dt>
+    <dd><p>Turns the vector 90 degrees anticlockwise as viewed from the front (keeping the z coordinate intact).
+Equivalent to <pre><code class="lang-csharp">v.To2DXY().Perp().To3DXY(v.z);</code></pre>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.PerpXZ.html#Gamelogic_Extensions_VectorExtensions_PerpXZ_UnityEngine_Vector3_">PerpXZ(Vector3)</a></dt>
+    <dd><p>Turns the vector 90 degrees anticlockwise as viewed from the top (keeping the y coordinate intact).
+Equivalent to <pre><code class="lang-csharp">v.To2DXZ().Perp().To3DXZ(v.y);</code></pre>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Proj.html#Gamelogic_Extensions_VectorExtensions_Proj_UnityEngine_Vector2_UnityEngine_Vector2_">Proj(Vector2, Vector2)</a></dt>
+    <dd><p>Returns the projection of this vector onto the given base.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Proj.html#Gamelogic_Extensions_VectorExtensions_Proj_UnityEngine_Vector3_UnityEngine_Vector3_">Proj(Vector3, Vector3)</a></dt>
+    <dd><p>Returns the projection of this vector onto the given base.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Proj.html#Gamelogic_Extensions_VectorExtensions_Proj_UnityEngine_Vector4_UnityEngine_Vector4_">Proj(Vector4, Vector4)</a></dt>
+    <dd><p>Returns the projection of this vector onto the given base.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.ReflectAboutX.html#Gamelogic_Extensions_VectorExtensions_ReflectAboutX_UnityEngine_Vector2_">ReflectAboutX(Vector2)</a></dt>
+    <dd><p>Reflects the vector about x-axis.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.ReflectAboutY.html#Gamelogic_Extensions_VectorExtensions_ReflectAboutY_UnityEngine_Vector2_">ReflectAboutY(Vector2)</a></dt>
+    <dd><p>Reflects the vector about y-axis.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rej.html#Gamelogic_Extensions_VectorExtensions_Rej_UnityEngine_Vector2_UnityEngine_Vector2_">Rej(Vector2, Vector2)</a></dt>
+    <dd><p>Returns the rejection of this vector onto the given base.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rej.html#Gamelogic_Extensions_VectorExtensions_Rej_UnityEngine_Vector3_UnityEngine_Vector3_">Rej(Vector3, Vector3)</a></dt>
+    <dd><p>Returns the rejection of this vector onto the given base.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rej.html#Gamelogic_Extensions_VectorExtensions_Rej_UnityEngine_Vector4_UnityEngine_Vector4_">Rej(Vector4, Vector4)</a></dt>
+    <dd><p>Returns the rejection of this vector onto the given base.
+The sum of a vector's projection and rejection on a base is
+equal to the original vector.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rotate.html#Gamelogic_Extensions_VectorExtensions_Rotate_UnityEngine_Vector2_System_Single_">Rotate(Vector2, float)</a></dt>
+    <dd><p>Rotates a vector by a given angle.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rotate180.html#Gamelogic_Extensions_VectorExtensions_Rotate180_UnityEngine_Vector2_">Rotate180(Vector2)</a></dt>
+    <dd><p>Rotates a vector by 180 degrees.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rotate270.html#Gamelogic_Extensions_VectorExtensions_Rotate270_UnityEngine_Vector2_">Rotate270(Vector2)</a></dt>
+    <dd><p>Rotates a vector by 270 degrees.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.Rotate90.html#Gamelogic_Extensions_VectorExtensions_Rotate90_UnityEngine_Vector2_">Rotate90(Vector2)</a></dt>
+    <dd><p>Rotates a vector by 90 degrees.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.RotateAround.html#Gamelogic_Extensions_VectorExtensions_RotateAround_UnityEngine_Vector2_System_Single_UnityEngine_Vector2_">RotateAround(Vector2, float, Vector2)</a></dt>
+    <dd><p>Rotates a vector by a given angle around a given point.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To2DXY.html#Gamelogic_Extensions_VectorExtensions_To2DXY_UnityEngine_Vector3_">To2DXY(Vector3)</a></dt>
+    <dd><p>Converts a 3D vector to a 2D vector taking the x and y coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To2DXZ.html#Gamelogic_Extensions_VectorExtensions_To2DXZ_UnityEngine_Vector3_">To2DXZ(Vector3)</a></dt>
+    <dd><p>Converts a 3D vector to a 2D vector taking the x and z coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To2DYZ.html#Gamelogic_Extensions_VectorExtensions_To2DYZ_UnityEngine_Vector3_">To2DYZ(Vector3)</a></dt>
+    <dd><p>Converts a 3D vector to a 2D vector taking the y and z coordinates.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To3DXY.html#Gamelogic_Extensions_VectorExtensions_To3DXY_UnityEngine_Vector2_">To3DXY(Vector2)</a></dt>
+    <dd><p>Converts a 2D vector to a 3D vector using the vector
+for the x and y coordinates, and 0 for the z coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To3DXY.html#Gamelogic_Extensions_VectorExtensions_To3DXY_UnityEngine_Vector2_System_Single_">To3DXY(Vector2, float)</a></dt>
+    <dd><p>Converts a 2D vector to a 3D vector using the vector
+for the x and y coordinates, and the given value for the z coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To3DXZ.html#Gamelogic_Extensions_VectorExtensions_To3DXZ_UnityEngine_Vector2_">To3DXZ(Vector2)</a></dt>
+    <dd><p>Converts a 2D vector to a 3D vector using the vector
+for the x and z coordinates, and 0 for the y coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To3DXZ.html#Gamelogic_Extensions_VectorExtensions_To3DXZ_UnityEngine_Vector2_System_Single_">To3DXZ(Vector2, float)</a></dt>
+    <dd><p>Converts a 2D vector to a 3D vector using the vector
+for the x and z coordinates, and the given value for the y coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To3DYZ.html#Gamelogic_Extensions_VectorExtensions_To3DYZ_UnityEngine_Vector2_">To3DYZ(Vector2)</a></dt>
+    <dd><p>Converts a 2D vector to a 3D vector using the vector
+for the y and z coordinates, and 0 for the x coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.To3DYZ.html#Gamelogic_Extensions_VectorExtensions_To3DYZ_UnityEngine_Vector2_System_Single_">To3DYZ(Vector2, float)</a></dt>
+    <dd><p>Converts a 2D vector to a 3D vector using the vector
+for the y and z coordinates, and the given value for the x coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithIncX.html#Gamelogic_Extensions_VectorExtensions_WithIncX_UnityEngine_Vector2_System_Single_">WithIncX(Vector2, float)</a></dt>
+    <dd><p>Returns a copy of the vector with the x-coordinate incremented
+with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithIncX.html#Gamelogic_Extensions_VectorExtensions_WithIncX_UnityEngine_Vector3_System_Single_">WithIncX(Vector3, float)</a></dt>
+    <dd><p>Returns a copy of the vector with the x-coordinate incremented
+with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithIncY.html#Gamelogic_Extensions_VectorExtensions_WithIncY_UnityEngine_Vector2_System_Single_">WithIncY(Vector2, float)</a></dt>
+    <dd><p>Returns a copy of the vector with the y-coordinate incremented
+with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithIncY.html#Gamelogic_Extensions_VectorExtensions_WithIncY_UnityEngine_Vector3_System_Single_">WithIncY(Vector3, float)</a></dt>
+    <dd><p>Returns a copy of the vector with the y-coordinate incremented
+with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithIncZ.html#Gamelogic_Extensions_VectorExtensions_WithIncZ_UnityEngine_Vector3_System_Single_">WithIncZ(Vector3, float)</a></dt>
+    <dd><p>Returns a copy of the vector with the z-coordinate incremented
+with the given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithX.html#Gamelogic_Extensions_VectorExtensions_WithX_UnityEngine_Vector2_System_Single_">WithX(Vector2, float)</a></dt>
+    <dd><p>Returns a copy of this vector with the given x-coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithX.html#Gamelogic_Extensions_VectorExtensions_WithX_UnityEngine_Vector3_System_Single_">WithX(Vector3, float)</a></dt>
+    <dd><p>Returns a copy of this vector with the given x-coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithY.html#Gamelogic_Extensions_VectorExtensions_WithY_UnityEngine_Vector2_System_Single_">WithY(Vector2, float)</a></dt>
+    <dd><p>Returns a copy of this vector with the given y-coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithY.html#Gamelogic_Extensions_VectorExtensions_WithY_UnityEngine_Vector3_System_Single_">WithY(Vector3, float)</a></dt>
+    <dd><p>Returns a copy of this vector with the given y-coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.WithZ.html#Gamelogic_Extensions_VectorExtensions_WithZ_UnityEngine_Vector3_System_Single_">WithZ(Vector3, float)</a></dt>
+    <dd><p>Returns a copy of this vector with the given z-coordinate.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.XZY.html#Gamelogic_Extensions_VectorExtensions_XZY_UnityEngine_Vector3_">XZY(Vector3)</a></dt>
+    <dd><p>Creates a new vector by permuting the given vector's coordinates in the order XZY.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.YX.html#Gamelogic_Extensions_VectorExtensions_YX_UnityEngine_Vector2_">YX(Vector2)</a></dt>
+    <dd><p>Swaps the x and y coordinates of the vector.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.YXZ.html#Gamelogic_Extensions_VectorExtensions_YXZ_UnityEngine_Vector3_">YXZ(Vector3)</a></dt>
+    <dd><p>Creates a new vector by permuting the given vector's coordinates in the order YXZ.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.YZX.html#Gamelogic_Extensions_VectorExtensions_YZX_UnityEngine_Vector3_">YZX(Vector3)</a></dt>
+    <dd><p>Creates a new vector by permuting the given vector's coordinates in the order YZX.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.ZXY.html#Gamelogic_Extensions_VectorExtensions_ZXY_UnityEngine_Vector3_">ZXY(Vector3)</a></dt>
+    <dd><p>Creates a new vector by permuting the given vector's coordinates in the order ZXY.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.VectorExtensions.ZYX.html#Gamelogic_Extensions_VectorExtensions_ZYX_UnityEngine_Vector3_">ZYX(Vector3)</a></dt>
+    <dd><p>Creates a new vector by permuting the given vector's coordinates in the order ZYX.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

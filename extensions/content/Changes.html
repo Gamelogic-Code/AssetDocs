@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Changes | Gamelogic Extensions </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Changes | Gamelogic Extensions ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Documentation/content/Changes.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Extensions">
+            Gamelogic Extensions
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="changes">Changes</h1>
+
+<h2 id="450-2025-11-20">[4.5.0] 2025-11-20</h2>
+<h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Apply.html">Apply</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Median.html">Median</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html">MedianPartition</a></p>
+</li>
+<li><p>Added @Gamelogic.Extensions.ObservedTransformedValue</p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.ObservedThreshold.html">ObservedThreshold</a></p>
+</li>
+<li><p>Added @Gamelogic.Extensions.KeyValue</p>
+</li>
+<li><p>Added @Gamelogic.Extensions.FixedKeyDictionary</p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.PropertyNotFoundException.html">PropertyNotFoundException</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SerializedPropertyExtensions.html">SerializedPropertyExtensions</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SceneUtilities.html">SceneUtilities</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.GLEditorGUI.Header.html">Header</a></p>
+</li>
+<li><p>Added @Gamelogic.Extensions.Editor.Texture2DTiling</p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.Texture2DTilingPropertyDrawer.html">Texture2DTilingPropertyDrawer</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.ListSelectionPopup.html">ListSelectionPopup</a></p>
+</li>
+<li><p>Added @Gamelogic.Extensions.Editor.MatrixFloat</p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.MatrixFloatPropertyDrawer.html">MatrixFloatPropertyDrawer</a></p>
+</li>
+<li><p>Added @Gamelogic.Extensions.Editor.TestPropertyDrawers</p>
+</li>
+<li><p>Added @Gamelogic.Extensions.Editor.KeyValue</p>
+</li>
+<li><p>Added @Gamelogic.Extensions.EnumDictionary</p>
+</li>
+<li><p>Added @Gamelogic.Extensions.Editor.FixedKeyDictionary</p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.InspectorTextAttribute.html">InspectorTextAttribute</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.SceneNameAttribute.html">SceneNameAttribute</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SceneNamePropertyDrawer.html">SceneNamePropertyDrawer</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.PresetsAttribute.html">PresetsAttribute</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.ReuseCandidateAttribute.html">ReuseCandidateAttribute</a> (It was internal before.)</p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.ReadMe.html">ReadMe</a></p>
+</li>
+<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Sqr.html">Sqr</a></p>
+</li>
+<li><p>Added new tool Tools/Gamelogic/Rename/Sequential From 0</p>
+</li>
+<li><p>Added new tool Tools/Gamelogic/Rename/Sequential From 1</p>
+</li>
+</ul>
+<h2 id="version-442">Version 4.4.2</h2>
+<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed a bug where there was a conflict between the <a class="xref" href="../api/Gamelogic.Extensions.Support.MustDisposeResourceAttribute.html">MustDisposeResourceAttribute</a> and the
+one in certain versions of <code>JetBrains.Annotations</code>.</li>
+</ul>
+<h2 id="version-441">Version 4.4.1</h2>
+<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed various issues related to editor code ending up in builds. The following classes where affected:
+<ul>
+<li>@Gamelogic.Extensions.Editor.Internal.Asset (Note: this class has also moved namespaces.)</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.LayerPopupAttribute.html">LayerPopupAttribute</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.TagPopupAttribute.html">TagPopupAttribute</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="-samples">🧪 Samples</h3>
+<ul>
+<li>Fixed issues related to editor code ending up in builds. The following classes where affected:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.BuildScenePopupAttribute.html">BuildScenePopupAttribute</a></li>
+</ul>
+</li>
+<li>@Gamelogic.Extensions.Samples.ValidatePowerOfTwoAttribute had a bug where the compiler directives were misplaced,
+causing build errors.</li>
+</ul>
+<h3 id="-upgrade-notes">⬆️ Upgrade notes</h3>
+<ul>
+<li>If you used @Gamelogic.Extensions.Internal.Editor.Asset you will need to use the new namespace.</li>
+</ul>
+<h2 id="version-440">Version 4.4.0</h2>
+<h3 id="-new-features-1">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.SeparatorColor.html">SeparatorColor</a> and
+<a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.SeparatorHeight.html">SeparatorHeight</a> to <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.html">PropertyDrawerData</a> to
+allow for customizing the appearance of separators.</li>
+<li>Added various grays in <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.html">Branding</a> and <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.Hex.html">Branding.Hex</a>.</li>
+</ul>
+<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed the constructors of <a class="xref" href="../api/Gamelogic.Extensions.SeparatorAttribute.html">SeparatorAttribute</a> to avoid the ambiguous call when trying to call
+the default constructor.</li>
+<li>Re-added a constructor for <a class="xref" href="../api/Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a> that takes a string message. (Note the class
+is obsolete, but kept for backwards compatibility. However, in the last update the constructor that takes a string
+message was accidentally removed.)</li>
+<li>Renamed <a class="xref" href="../api/Gamelogic.Extensions.NotNegativeAttribute.html">NotNegativeAttribute</a> to <a class="xref" href="../api/Gamelogic.Extensions.NonNegativeAttribute.html">NonNegativeAttribute</a>, since this is the
+name the class had before. (Note the class is obsolete, but kept for backwards compatibility. However, in the last
+update the class was accidentally renamed.)</li>
+</ul>
+<h2 id="version-430">Version 4.3.0</h2>
+<h3 id="-new-features-2">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.VectorExtensions.ClampMagnitude.html">ClampMagnitude</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Assets.FindByType.html">FindByType</a> .</li>
+<li>Added methods to convert between colors and hexadecimal strings: <a class="xref" href="../api/Gamelogic.Extensions.ColorExtensions.TryParseHex.html">TryParseHex</a>, <a class="xref" href="../api/Gamelogic.Extensions.ColorExtensions.ParseHex.html">ParseHex</a> ,
+<a class="xref" href="../api/Gamelogic.Extensions.ColorExtensions.ToRGBHex.html">ToRGBHex</a> ,<a class="xref" href="../api/Gamelogic.Extensions.ColorExtensions.ToRGBAHex.html">ToRGBAHex</a> .</li>
+<li>Added a common base class for properties that validate their values <a class="xref" href="../api/Gamelogic.Extensions.ValidationAttribute.html">ValidationAttribute</a> ,
+and added different ways to do the validation through flags in <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.html">PropertyDrawerData</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNullAttribute.html">ValidateNotNullAttribute</a>, <a class="xref" href="../api/Gamelogic.Extensions.ValidatePositiveAttribute.html">ValidatePositiveAttribute</a>, <a class="xref" href="../api/Gamelogic.Extensions.ValidateNonNegativeAttribute.html">ValidateNonNegativeAttribute</a>,
+<a class="xref" href="../api/Gamelogic.Extensions.ValidateMagnitudeRangeAttribute.html">ValidateMagnitudeRangeAttribute</a>, and deprecated <a class="xref" href="../api/Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a>,
+<a class="xref" href="../api/Gamelogic.Extensions.PositiveAttribute.html">PositiveAttribute</a>, <a class="xref" href="../api/Gamelogic.Extensions.NonNegativeAttribute.html">NonNegativeAttribute</a>.</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.HighlightAttribute.html">HighlightAttribute</a> now supports a color parameter, and is drawn better in the non-pro skin of Unity.</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a> now supports a color parameter.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.html">PropertyDrawerData</a> that can be used to set global properties used by property drawers, such as default colors
+and list retrievers.</li>
+<li>Added property drawer support for drawing popups of various types, including strings, integers, colors, tags, and layers.
+See subclasses of <a class="xref" href="../api/Gamelogic.Extensions.PopupListAttribute.html">PopupListAttribute</a> and <a class="xref" href="../api/Gamelogic.Extensions.Editor.PopupListPropertyDrawer-1.html">PopupListPropertyDrawer&lt;T&gt;</a> .</li>
+<li>Changed all relevant mono behaviours and scriptable objects to use the new validation attributes.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.SeparatorAttribute.html">SeparatorAttribute</a> and <a class="xref" href="../api/Gamelogic.Extensions.Editor.SeparatorDrawer.html">SeparatorDrawer</a> to draw separators in
+the inspector.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.SuppressReason.html">SuppressReason</a> that has justifications for suppressing certain warnings, and
+deprecated <a class="xref" href="../api/Gamelogic.Extensions.Support.Warning.html">Warning</a>.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.Hex.html">Branding.Hex</a> to provide string presentations of colors.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.White.html">White</a> and <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.Black.html">Black</a> for consistency.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Internal.EditorOnly.html">EditorOnly</a> to mark symbols only available in the editor.</li>
+</ul>
+<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
+<ul>
+<li>Made <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html">ThrowIfNegative</a> a extension method, like the other extension methods in this
+class.</li>
+</ul>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li>Made <a class="xref" href="../api/Gamelogic.Extensions.InspectorList.html">InspectorList</a> and all its subclasses obsolete for Unity 2020.1 and later,
+since Unity's new list provide similar (and more robust) functionality.</li>
+</ul>
+<h3 id="-samples-1">🧪 Samples</h3>
+<ul>
+<li>Fixed warnings in the <code>Generators</code> sample.</li>
+<li>Expanded the <code>Porperty Drawers Example</code> to include all the new changes.</li>
+<li>Changed all relevant samples to use the new validation attributes.</li>
+</ul>
+<h3 id="-documentation">📄 Documentation</h3>
+<ul>
+<li>Added documentation for attributes used in property drawers.</li>
+<li>Expanded the documentation for <a href="PropertyDrawers.html">Property Drawers</a>.</li>
+</ul>
+<h3 id="-upgrade-notes-1">⬆️ Upgrade notes</h3>
+<ul>
+<li>Replace
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a> with <a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNullAttribute.html">ValidateNotNullAttribute</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.NonNegativeAttribute.html">NonNegativeAttribute</a> with <a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNegativeAttribute.html">ValidateNotNegativeAttribute</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.PositiveAttribute.html">PositiveAttribute</a> with <a class="xref" href="../api/Gamelogic.Extensions.ValidatePositiveAttribute.html">ValidatePositiveAttribute</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Support.Warning.html">Warning</a> with <a class="xref" href="../api/Gamelogic.Extensions.Support.SuppressReason.html">SuppressReason</a></li>
+</ul>
+</li>
+<li>Replace any subclass of <a class="xref" href="../api/Gamelogic.Extensions.InspectorList.html">InspectorList</a> with an ordinary <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> of the
+right type.</li>
+</ul>
+<h2 id="version-421">Version 4.2.1</h2>
+<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.ObservedValue-1.html">ObservedValue&lt;T&gt;</a> was accidentally moved to the wrong name space in a previous release.
+It has been moved back to <a class="xref" href="../api/Gamelogic.Extensions.html">Gamelogic.Extensions</a>.</li>
+</ul>
+<h2 id="version-420">Version 4.2.0</h2>
+<h3 id="-new-features-3">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessQueue-1.html">RandomAccessQueue&lt;T&gt;</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessPriorityQueue-2.html">RandomAccessPriorityQueue&lt;TElement, TPriority&gt;</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IReadOnlyBuffer-1.Item.html">this</a> (indexing to <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IReadOnlyBuffer-1.html">IReadOnlyBuffer&lt;T&gt;</a> )
+(and so to the implementations of <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IBuffer-1.html">IBuffer&lt;T&gt;</a> ).</li>
+<li>Added a property drawer for <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> (<a class="xref" href="../api/Gamelogic.Extensions.Editor.MinMaxIntPropertyDrawer.html">MinMaxIntPropertyDrawer</a> ).</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.MinMaxRangeAttribute.html">MinMaxRangeAttribute</a> that can be applied tp on a field of type <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> or <a class="xref" href="../api/Gamelogic.Extensions.MinMaxFloat.html">MinMaxFloat</a> to support custom ranges in the inspector.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.html">Branding</a> to make it easier to make examples have a consistent look and feel.</li>
+</ul>
+<h3 id="-refactors">🧹 Refactors</h3>
+<ul>
+<li>Deprecated <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a> (to be replaced with  <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessQueue-1.html">RandomAccessQueue&lt;T&gt;</a> ).</li>
+</ul>
+<h3 id="-upgrade-notes-2">⬆️ Upgrade notes</h3>
+<ul>
+<li>Replace <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a> with <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessQueue-1.html">RandomAccessQueue&lt;T&gt;</a> .</li>
+</ul>
+<h3 id="-samples-2">🧪 Samples</h3>
+<ul>
+<li>Added a more complex generators example to show how they can be used for procedural generation, and restructured the
+existing two example into folder.</li>
+<li>Added a <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> to the property drawers sample.</li>
+</ul>
+<h2 id="version-410">Version 4.1.0</h2>
+<h3 id="-new-features-4">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.Remove.html">Remove</a> method to <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a>.</li>
+<li>Added a ring buffer data structure and related classes:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IBuffer-1.html">IBuffer&lt;T&gt;</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IResizeableBuffer-1.html">IResizeableBuffer&lt;T&gt;</a></li>
+<li>@Gamelogic.Extensions.Algorithms.Buffer</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Capacity2Buffer-1.html">Capacity2Buffer&lt;T&gt;</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RingBuffer-1.html">RingBuffer&lt;T&gt;</a></li>
+</ul>
+</li>
+<li>Added classes to implement PID control:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.PidController.html">PidController</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Differentiator.html">Differentiator</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Integrator.html">Integrator</a></li>
+</ul>
+</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ValueSnapshot-1.html">ValueSnapshot&lt;T&gt;</a> to represent a value and the previous value.</li>
+</ul>
+<h3 id="-engineering-1">🔧 Engineering</h3>
+<ul>
+<li>Fixed various multiple enumeration issues in <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.html">CollectionExtensions</a> .</li>
+</ul>
+<h3 id="-bug-fixes-5">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed warnings related to the pool samples.</li>
+<li>Fixed warnings caused by <a class="xref" href="../api/Gamelogic.Extensions.FpsCounter.html">FpsCounter</a>.</li>
+<li>Removed internal duplicates of the RingBuffer that was used by the FpsCounter.</li>
+</ul>
+<h3 id="-documentation-1">📄 Documentation</h3>
+<ul>
+<li>Improved pool documentation.</li>
+</ul>
+<h2 id="version-400">Version 4.0.0</h2>
+<h3 id="-new-features-5">🎉 New Features</h3>
+<ul>
+<li>Added the <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a> data structure.</li>
+<li>Added an experimental <a class="xref" href="../api/Gamelogic.Extensions.FpsCounter.html">FpsCounter</a> mostly to be used in example benchmarks.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.html">ThrowHelper</a> .</li>
+<li>To <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.html">CollectionExtensions</a>, added:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Fill.html">Fill</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.FillWithDefault.html">FillWithDefault</a></li>
+</ul>
+</li>
+<li>To <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.html">GLMathf</a> , added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Bilerp.html">Bilerp</a> and
+<a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Trilerp.html">Trilerp</a> for doing bilinear and trilinear interpolation.</li>
+</ul>
+<h3 id="-engineering-2">🔧 Engineering</h3>
+<ul>
+<li>Removed <code>Gamelogic.ObjectExtensions</code> (replaced with <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.html">ThrowHelper</a> ).</li>
+<li>Replaced @Gamelogic.Extensions.PoolObject`1 with an interface <a class="xref" href="../api/Gamelogic.Extensions.IPoolObject-1.html">IPoolObject&lt;T&gt;</a></li>
+<li>Constrained type parameter of <a class="xref" href="../api/Gamelogic.Extensions.MonoBehaviourPool-1.html">MonoBehaviourPool&lt;T&gt;</a> to <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a> instead of
+<a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> so it can also be used with Unity components.</li>
+</ul>
+<h3 id="-upgrade-notes-3">⬆️ Upgrade notes</h3>
+<ul>
+<li>If you used <code>Gamelogic.ObjectExtensions.ThrowIfNull</code> replace it with <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html">ThrowIfNull</a>.</li>
+<li>If you used <code>Gamelogic.ObjectExtensions.ThrowIfNegative</code> replace it with <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html">ThrowIfNegative</a>.</li>
+<li>If you used <code>Gamelogic.Extensions.PoolObject</code> replace it with <a class="xref" href="../api/Gamelogic.Extensions.IPoolObject-1.html">IPoolObject&lt;T&gt;</a> .</li>
+</ul>
+<h3 id="-samples-3">🧪 Samples</h3>
+<ul>
+<li>Made the minimal pool example more compelling.</li>
+<li>Added a pool benchmark example.</li>
+<li>Added scripts that show how the pool types can be used to build more sophisticated pools.</li>
+</ul>
+<h2 id="version-320">Version 3.2.0</h2>
+<h3 id="-new-features-6">🎉 New Features</h3>
+<ul>
+<li>Added a new interface for pools <a class="xref" href="../api/Gamelogic.Extensions.IPool-1.html">IPool&lt;T&gt;</a>.</li>
+<li>Added methods to <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a> and <a class="xref" href="../api/Gamelogic.Extensions.MonoBehaviourPool-1.html">MonoBehaviourPool&lt;T&gt;</a> to implement the new
+<a class="xref" href="../api/Gamelogic.Extensions.IPool-1.html">IPool&lt;T&gt;</a> interface.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.HashPool-1.html">HashPool&lt;T&gt;</a> for faster release of active objects.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.PoolExtensions.html">PoolExtensions</a>.</li>
+<li>Added an <a class="xref" href="../api/Gamelogic.Extensions.UnsafePool-1.html">UnsafePool&lt;T&gt;</a> for benchmarking</li>
+<li>Added a default message for <a class="xref" href="../api/Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a>.</li>
+<li>Added a new pattern: <a class="xref" href="../api/Gamelogic.Extensions.ImplementationFactory-1.html">ImplementationFactory&lt;TBase&gt;</a>, which creates instances of a class based on
+the type of a generic
+argument.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IResponseCurve-1.html">IResponseCurve&lt;T&gt;</a>, a new interface for response curves.</li>
+<li>New collection extension methods:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.HasSingle.html">HasSingle</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TrySingle.html">TrySingle</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxItemsBy.html">MaxItemsBy</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MinItemsBy.html">MinItemsBy</a></li>
+</ul>
+</li>
+<li>New Image extension methods:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.ImageExtensions.SetAlpha.html">SetAlpha</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.ImageExtensions.SetVisible.html">SetVisible</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="-bug-fixes-6">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed a bug where <a class="xref" href="../api/Gamelogic.Extensions.InspectorButtonAttribute.html">InspectorButtonAttribute</a> would cause public or protected methods to be added
+for each subclass.</li>
+<li>Fixed a bug where <a class="xref" href="../api/Gamelogic.Extensions.InspectorButtonAttribute.html">InspectorButtonAttribute</a> would also render a warning for fields that
+are of types that cannot be null.</li>
+<li>Fixed a bug in <a class="xref" href="../api/Gamelogic.Extensions.TransformExtensions.SelfAndAllChildren.html">SelfAndAllChildren</a> that caused an infinite loop.</li>
+<li>Now ensures the create action in the <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a> constructor is not null.</li>
+<li>Now throws exceptions when calling <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.Release.html">Release</a> on an item that is not in the pool.</li>
+<li>Capacities, increments and decrements for <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a> methods are checked for being negative.</li>
+</ul>
+<h3 id="-engineering-3">🔧 Engineering</h3>
+<ul>
+<li>@Gamelogic.Extensions.ObjectExtensions.ThrowIfNull* now throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> instead of a
+@System.NullReferenceException to reflect its intended use case.</li>
+<li>Removed a redundant overload of <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy.html">MaxBy</a> .</li>
+</ul>
+<h3 id="-performance-improvements">🚀 Performance Improvements</h3>
+<ul>
+<li>Slighly improved the performance of <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.DecCapacity.html">DecCapacity</a>.</li>
+</ul>
+<h3 id="-documentation-2">📄 Documentation</h3>
+<ul>
+<li>Improved the documentation for <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a>.</li>
+<li>Added documentation for <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryFirst.html">TryFirst</a> and
+<a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryLast.html">TryLast</a></li>
+</ul>
+<h3 id="-upgrade-notes-4">⬆️ Upgrade notes</h3>
+<ul>
+<li>If you relied on the @System.NullReferenceException thrown by @Gamelogic.Extensions.ObjectExtensions.ThrowIfNull*,
+you need to update your code reflect that now it throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> .</li>
+</ul>
+<h2 id="version-310">Version 3.1.0</h2>
+<h3 id="-new-features-7">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.LifeCycleEvent.html">LifeCycleEvent</a> and <a class="xref" href="../api/Gamelogic.Extensions.LifeCycleEventExtensions.html">LifeCycleEventExtensions</a> to make it easier to
+specify when logic should execute in the inspector.</li>
+</ul>
+<h3 id="-bug-fixes-7">🐞 Bug Fixes</h3>
+<ul>
+<li>Set the editor assembly to only build for the editor.</li>
+</ul>
+<h2 id="version-301">Version 3.0.1</h2>
+<h3 id="-bug-fixes-8">🐞 Bug Fixes</h3>
+<ul>
+<li>Restored the samples that were missing in the last update</li>
+</ul>
+<h2 id="version-300">Version 3.0.0</h2>
+<h3 id="-new-features-8">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.FindAndConnectInstance.html">FindAndConnectInstance</a> method.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.IsReady.html#Gamelogic_Extensions_Singleton_1_IsReady">IsReady</a> property.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.HasInstanceInOpenScenes.html#Gamelogic_Extensions_Singleton_1_HasInstanceInOpenScenes">HasInstanceInOpenScenes</a> property.</li>
+<li>Added the new types <a class="xref" href="../api/Gamelogic.Extensions.Singleton.html">Singleton</a> and <a class="xref" href="../api/Gamelogic.Extensions.Singleton.FindResult.html">Singleton.FindResult</a>.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Warning.html">Warning</a> class to help deal with compiler and code-inspection warnings.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.GameObjectExtensions.GetRequiredComponent.html">GetRequiredComponent</a> and <a class="xref" href="../api/Gamelogic.Extensions.GameObjectExtensions.GetRequiredComponentInChildren.html">GetRequiredComponentInChildren</a> extension methods.</li>
+<li>Added  <a class="xref" href="../api/Gamelogic.Extensions.GLMonoBehaviour.FindRequiredObjectOfType.html">FindRequiredObjectOfType</a> method.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.html">CollectionExtensions</a> methods:
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryFirst.html">TryFirst</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryLast.html">TryLast</a></li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.AsCountable.html">AsCountable</a> for cases where a count is needed
+for an enumerable.</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.AsList.html">AsList</a> for more convenient casting / enumerating
+of an enumerable</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.HasSameElementsAs.html">HasSameElementsAs</a> for comparing two collections for
+equality.</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Aggregate.html">Aggregate</a> that takes two aggregators, run them in
+parallel, and
+returns the result as a tuple.</li>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MinMax.html">MinMax</a> that return the minimum and maximum of a collection of
+numbers as a tuple.</li>
+</ul>
+</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Equal.html">Equal</a> to centralize warning suppression when comparing floats using equality.</li>
+</ul>
+<h3 id="-engineering-4">🔧 Engineering</h3>
+<ul>
+<li>Made <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.OnDestroy.html">OnDestroy</a> method public.</li>
+<li>Made <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.Instance_1.html">Instance</a> property public.</li>
+<li>Marked <a class="xref" href="../api/Gamelogic.Extensions.InspectorButtonAttribute.html">InspectorButtonAttribute</a> as <code>MeansImplicitUse</code> so such methods can be private and not
+flag warnings.</li>
+<li>Assigned defaults to serialized fields in several example mono behaviours.</li>
+<li>Renamed <code>SingletonPrefabSpawner</code> to <a class="xref" href="../api/Gamelogic.Extensions.SingletonSpawner-1.html">SingletonSpawner&lt;T&gt;</a>.</li>
+<li>Made <a class="xref" href="../api/Gamelogic.Extensions.SingletonSpawner-1.html">SingletonSpawner&lt;T&gt;</a> more robust by checking for more than one existing instance and better
+error reporting.</li>
+<li>Restructured as a package.</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

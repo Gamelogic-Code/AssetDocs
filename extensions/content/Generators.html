@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Generators | Gamelogic Extensions </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Generators | Gamelogic Extensions ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Documentation/content/Generators.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Extensions">
+            Gamelogic Extensions
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="generators">Generators</h1>
+
+<p>A generator, as we use it, is a class that has a <code>Next</code> method that always gives you an object of a certain type. They
+work a bit like random generators, except the elements may or may not be random. They support various LINQ-like methods,
+and so also resemble sequences (although generators are always infinite). Generators are designed to be used for
+procedural content generation. All non-deterministic generators have overloads that take a seed, so you can use
+deterministic versions to ensure consistent results for different players if you need it.</p>
+<p>There are a few “primitive” generators that you can construct directly with the various static methods in the Generator
+class. These include:</p>
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Constant.html">Constant</a></td>
+<td>A generator that always generates the same element.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Count.html">Count</a></td>
+<td>A generator generates the sequence 0, 1, 2, 3, ..., n, 0, 1, 2, forever.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Repeat.html">Repeat</a></td>
+<td>A generator that generates the elements of a given list repeatedly in sequence.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Iterate.html">Iterate</a></td>
+<td>A generator that applies a given function to the last k elements to generate the next one.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.OpenSawTooth.html">OpenSawTooth</a></td>
+<td>A generator that generates evenly spaced numbers in a range, excluding the upper limit.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.ClosedSawTooth.html">ClosedSawTooth</a></td>
+<td>A generator that generates evenly spaced floatsin a range, inccluding both limits.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.FromFunc.html">FromFunc</a></td>
+<td>A generator that generates elements using a given function. Useful to get a generator from something that already behaves like a generator.</td>
+</tr>
+</tbody>
+</table>
+<p>(There are Choose generators that are technically primitive but, since some of their overloads are not primitive,
+they are listed below)</p>
+<p>There are also various random number and bool generators:</p>
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.RandomBoolGenerator.html">RandomBoolGenerator</a></td>
+<td>A generator that generates random booleans, given a probability of being true.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Poisson.html">Poisson</a></td>
+<td>A generator that generates booleans so <code>true</code> occurs uniformly witin a specified range.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.UniformRandomInt.html">UniformRandomInt</a></td>
+<td>A generator that generates random integers uniformly distributed between 0 and a given number.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.UniformRandomFloat.html">UniformRandomFloat</a></td>
+<td>A generator that generates random floats uniformly distributed between 0 and 1.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.FrequencyRandomInt.html">FrequencyRandomInt</a></td>
+<td>A generator that generates random integers with a given frequency distribution.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.GaussianRandomFloat.html">GaussianRandomFloat</a></td>
+<td>A generator that generates random floats with a Gaussian distribution.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.MarkovRandomInt.html">MarkovRandomInt</a>, <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.MarkovRandomIntStartsWith.html">MarkovRandomIntStartsWith</a></td>
+<td>A generator that generates random integers with a given Markov chain.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.UniformVector2InRect.html">UniformVector2InRect</a></td>
+<td>A generator that generates random vectors uniformly distributed in a rectangle.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.UniformVector2InCircle.html">UniformVector2InCircle</a></td>
+<td>A generator that generates random vectors uniformly distributed in a circle.</td>
+</tr>
+</tbody>
+</table>
+<p>There are several methods that manipulate and combine them to make more interesting generators.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Where.html">Where</a></td>
+<td>Generates only elements from a source generator that satisfy a predicate.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.WhereWindow.html">WhereWindow</a></td>
+<td>Generates only elements from a source geerator where the last n elements of the source satisfy a predicate.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Select.html">Select</a></td>
+<td>Transforms the elements of a source generator and generates the transformed copies.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Cast.html">Cast</a></td>
+<td>Casts the elements of a source generator to a different type.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.SelectMany.html">SelectMany</a></td>
+<td>Generates ele,ents from lists generated by the sources</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Aggregate.html">Aggregate</a></td>
+<td>Uses a function to combine elements of a source generator generated so far into into a single element.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Sum.html">Sum</a></td>
+<td>Sums the elements of a source generator.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Average.html">Average</a></td>
+<td>Averages the elements of a source generator.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Choose.html">Choose</a></td>
+<td>A generator that uses an integer generator to select from a list of objects or generators.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.ChooseUniformRandom.html">ChooseUniformRandom</a></td>
+<td>A generator that selects from a list of objects or generators with equal probability.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Group.html">Group</a></td>
+<td>Groups elements of a source generator, and generates the groups.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Combine.html">Combine</a></td>
+<td>Uses several source generators to generate parameters for a function.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.RepeatEach.html">RepeatEach</a></td>
+<td>Uses a source generator, and repeats each generated element several times.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Interleave.html">Interleave</a></td>
+<td>Interleaves elements of several source generators.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Pad.html">Pad</a></td>
+<td>Pads a source generator with a given element or list of elements.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Interpolate.html">Interpolate</a></td>
+<td>Generates elements by interpolating between elements a source generators.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.InterpolateDither.html">InterpolateDither</a></td>
+<td>Generates elements by interpolating between elements a source generators, with dithering.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Iterate.html">Iterate</a></td>
+<td>Generates elements by re-applying a function to one or more initial elements.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.SwitchWhen.html">SwitchWhen</a></td>
+<td>Switches to a new generator when a condition is met.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.SwitchAfter.html">SwitchAfter</a></td>
+<td>Switches to a new generator after a certain number of elements have been generated.</td>
+</tr>
+</tbody>
+</table>
+<p>For a full list of all the generators and methods that can manipulate them, see <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.html">Generator</a>.</p>
+<p>Here are some simple examples:</p>
+<pre><code class="lang-csharp">var generator = Generator
+    .RamdomUniformInt(500)
+    .Select(x =&gt; 2*x); //Generates random even numbers between 0 and 998
+
+var generator = Generator
+    .RandomUniformInt(1000)
+    .Where(n =&gt; n % 2 == 0); //Same as above
+
+var generator = Generator
+    .Iterate(1, 1, (m, n) =&gt; m + n); //Fibonacci numbers
+
+var generator = Generator
+    .RandomUniformInt(2)
+    .Select(n =&gt; 2*n - 1)
+    .Aggregate((m, n) =&gt; m + n); //Random walk using steps of 1 or -1 one randomly
+
+var generator = Generator
+    .Iterate(0, Generator.RandomUniformInt(4), (m, n) =&gt; m + n - 1)
+    .Where(n &gt;= 0); //A random sequence that increases on average
+</code></pre>
+<p>In each case, elements are only being produced each time you call the Next method or one of its variants. Most calculations are done lazily, so the bulk of the processing is spread over getting the elements and most generators don’t required much memory.</p>
+<p>To debug Generators, you can use the <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Log.html">Log</a> method to transform a generator
+into one that will log each element it generates.</p>
+<p>There are also some other methods useful when working with generators:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Apply.html">Apply</a></td>
+<td>Applies an action to the elements of a source generator.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Next.html#Gamelogic_Extensions_Algorithms_Generator_Next__1_Gamelogic_Extensions_Algorithms_IGenerator___0__System_Int32_">Next&lt;TSource&gt;(IGenerator&lt;TSource&gt;, int)</a></td>
+<td>Gets the next n elements from a generator.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.NextWhile.html">NextWhile</a></td>
+<td>Gets the next elements from a generator while a predicate is true.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.Skip.html">Skip</a></td>
+<td>Skips the first n elements from a generator.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.SkipAndTake.html">SkipAndTake</a></td>
+<td>Skips the first n elements from a generator and then takes the next m elements.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Algorithms.Generator.TakeAndSkip.html">TakeAndSkip</a></td>
+<td>Takes the first n elements from a generator and then skips the next m elements.</td>
+</tr>
+</tbody>
+</table>
+<p>Generators are useful in creating procedural content, or alter properties of game entities (such as their strength) procedurally. A place where you want to use randomness is the ideal candidate, especially when you want to inject some order to make the playable experience more interesting or coherent.</p>
+<p>Here are some examples of what things generators can generate (taken from games we have built):</p>
+<ul>
+<li>sky colors that change over time</li>
+<li>scene decoration next to an infinite road</li>
+<li>obstacle patterns</li>
+<li>AI movement</li>
+<li>game difficulty</li>
+<li>random interesting paths</li>
+<li>letters that have a good chance to make words</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

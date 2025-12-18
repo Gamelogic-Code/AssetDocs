@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Custom Pools | Gamelogic Extensions </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Custom Pools | Gamelogic Extensions ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Documentation/content/custom_pools.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Extensions">
+            Gamelogic Extensions
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="custom-pools">Custom Pools</h1>
+
+<p>The lightweight <a class="xref" href="../api/Gamelogic.Extensions.IPool-1.html">pools</a> we provide only provides very minimal functionality.
+Pools in games are often quite specific to the objects being pooled, and the context in which this is being done, so it
+is difficult to provide a one-size-fits-all pool. However, the implementation we provide can easily be adapted to more
+specific use cases. Here are two examples to show how the Pool we provide is meant to be used to implement more
+sophisticated pools.</p>
+<p>The pool class is not meant to be extended. Instead, it should be used as a field, with methods delegated to it as
+needed.</p>
+<h2 id="lazypool">LazyPool</h2>
+<p>By default, the pool instantiates its objects when it is created. This is not always desirable, especially if the
+number of objects in the pool is not known in advance. The <code>LazyPool</code> class is pool implementation that grows only
+as objects are needed.</p>
+<pre><code class="lang-csharp">using System;
+
+namespace Gamelogic.Extensions.DocumentationCode
+{
+    /// &lt;summary&gt;
+    /// A pool that lazily creates objects when they are requested.
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name=&quot;T&quot;&gt;The type of the objects to pool.&lt;/typeparam&gt;
+    /// &lt;remarks&gt;
+    /// This pool adjust its capacity as objects are requested. If there are no available objects,
+    /// the pool will increase its capacity by one.
+    ///
+    /// This class does not implement &lt;see cref=&quot;IPool{T}&quot;/&gt; because it does not have a fixed capacity, and so
+    /// the semantics of methods like &lt;see cref=&quot;IPool{T}.HasAvailableObject&quot;/&gt; are not well-defined.
+    /// &lt;/remarks&gt;
+    public class LazyPool&lt;T&gt;
+        where T : class
+    {
+        private readonly IPool&lt;T&gt; pool;
+
+        /// &lt;summary&gt;
+        /// The total number of objects in the pool (active and inactive).
+        /// &lt;/summary&gt;
+        public int Count =&gt; pool.ActiveCount;
+        
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the &lt;see cref=&quot;LazyPool{T}&quot;/&gt; class.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;create&quot;&gt;The function to create new objects.&lt;/param&gt;
+        /// &lt;param name=&quot;kill&quot;&gt;The action to destroy objects.&lt;/param&gt;
+        /// &lt;param name=&quot;activate&quot;&gt;The action to activate objects.&lt;/param&gt;
+        /// &lt;param name=&quot;deactovate&quot;&gt;The action to deactivate objects.&lt;/param&gt;
+        public LazyPool(Func&lt;T&gt; create, Action&lt;T&gt; kill, Action&lt;T&gt; activate, Action&lt;T&gt; deactovate) 
+            =&gt; pool = new Pool&lt;T&gt;(0, create, kill, activate, deactovate);
+
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the &lt;see cref=&quot;LazyPool{T}&quot;/&gt; using the given pool as the underlying pool.
+        /// &lt;/summary&gt;
+        public LazyPool(IPool&lt;T&gt; pool) =&gt; this.pool = pool;
+
+        public T Get()
+        {
+            if (!pool.HasAvailableObject)
+            {
+                pool.IncreaseCapacity(1);
+            }
+
+            return pool.Get();
+        }
+
+        /// &lt;inheritdoc cref=&quot;IPool{T}.Release&quot;/&gt;
+        public void Release(T obj) =&gt; pool.Release(obj);
+
+        /// &lt;inheritdoc cref=&quot;IPool{T}.ReleaseAll&quot;/&gt;
+        public void ReleaseAll() =&gt; pool.ReleaseAll();
+
+        /// &lt;inheritdoc cref=&quot;PoolExtensions.Clear{T}&quot; /&gt;
+        public void Clear() =&gt; pool.Clear();
+    }
+}
+</code></pre><h2 id="robustpool">RobustPool</h2>
+<p>Pools support nulls, but this is needed only in unusual cases. A more robust implementation (that does not need to
+support null elements in the pool) should perform additional checks to prevent null elements from being added to the
+pool.</p>
+<p>This version also maintains an <code>IsActive</code> boolean that can be used internally and externally to present objects from
+being used when they should not.</p>
+<pre><code class="lang-csharp">using System;
+using UnityEngine.Assertions;
+
+namespace Gamelogic.Extensions.DocumentationCode
+{
+    /// &lt;summary&gt;
+    /// A pool that does not allow null objects, and performs additional checks on the state of objects
+    /// when performing operations on them to ensure integrity of the system.
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// To use this pool, the objects you want to pool should implement the &lt;see cref=&quot;IPoolObject&quot;/&gt; interface.
+    /// &lt;/remarks&gt;
+    public class RobustPool : IPool&lt;RobustPool.IPoolObject&gt;
+    {
+        /// &lt;summary&gt;
+        /// An object managed by a pool.
+        /// &lt;/summary&gt;
+        public interface IPoolObject
+        {
+            /// &lt;summary&gt;
+            /// Gets and sets whether the object is awake.
+            /// &lt;/summary&gt;
+            /// &lt;remarks&gt;The &lt;c&gt;set&lt;/c&gt; method should only be called by the pool.&lt;/remarks&gt;
+            bool IsActive { get; set; }
+        
+            /// &lt;summary&gt;
+            /// Activates the object.
+            /// &lt;/summary&gt;
+            /// &lt;remarks&gt;
+            /// Implementors: Any logic that you want to execute when the object is activated should be placed here.
+            /// &lt;/remarks&gt;
+            void Activate();
+        
+            /// &lt;summary&gt;
+            /// Deactivates the object.
+            /// &lt;/summary&gt;
+            /// &lt;remarks&gt;
+            /// Implementors: Any logic that you want to execute when the object is deactivated should be placed here.
+            /// &lt;/remarks&gt;
+            void Deactivate();
+        }
+        
+        private readonly IPool&lt;IPoolObject&gt; pool;
+        private readonly Func&lt;IPoolObject&gt; create;
+        private readonly Action&lt;IPoolObject&gt; destroy;
+        
+        /// &lt;inheritdoc cref=&quot;Capacity&quot;/&gt;
+        public int Capacity =&gt; pool.Capacity;
+
+        /// &lt;inheritdoc cref=&quot;ActiveCount&quot;/&gt;
+        public int ActiveCount =&gt; pool.ActiveCount;
+
+        /// &lt;inheritdoc cref=&quot;HasAvailableObject&quot;/&gt;
+        public bool HasAvailableObject =&gt; pool.HasAvailableObject;
+        
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the &lt;see cref=&quot;RobustPool&quot;/&gt; class.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;initialCount&quot;&gt;The initial number of objects in the pool.&lt;/param&gt;
+        /// &lt;param name=&quot;create&quot;&gt;The function that creates new objects.&lt;/param&gt;
+        /// &lt;param name=&quot;destroy&quot;&gt;The action that destroys objects.&lt;/param&gt;
+        public RobustPool(int initialCount, Func&lt;IPoolObject&gt; create, Action&lt;IPoolObject&gt; destroy)
+        {
+            initialCount.ThrowIfNegative(nameof(initialCount));
+            create.ThrowIfNull(nameof(create));
+            destroy.ThrowIfNull(nameof(destroy));
+            
+            this.create = create;
+            this.destroy = destroy;
+            
+            // Create calls this.create, so it needs to be assigned before the pool is created. 
+            pool = new Pool&lt;IPoolObject&gt;(initialCount, Create, Destroy, Activate, Deactivate);
+        }
+
+        /// &lt;inheritdoc cref=&quot;IPool{T}.Get&quot;/&gt;
+        public IPoolObject Get()
+        {
+            var newObject = pool.Get();
+            Assert.IsNotNull(newObject);
+            return newObject;
+        }
+        
+        /// &lt;inheritdoc cref=&quot;IPool{T}.Release&quot;/&gt;
+        public void Release(IPoolObject obj)
+        {
+            obj.ThrowIfNull(nameof(obj));
+            pool.Release(obj);
+        }
+
+        /// &lt;inheritdoc cref=&quot;IPool{T}.IncreaseCapacity&quot;/&gt;
+        public void IncreaseCapacity(int amount) =&gt; pool.IncreaseCapacity(amount);
+        
+        /// &lt;inheritdoc cref=&quot;IPool{T}.DecreaseCapacity&quot;/&gt;
+        public int DecreaseCapacity(int amount, bool deactivateFirst = false) =&gt; pool.DecreaseCapacity(amount, deactivateFirst);
+
+        /// &lt;inheritdoc cref=&quot;IPool{T}.ReleaseAll&quot;/&gt;
+        public void ReleaseAll() =&gt; pool.ReleaseAll();
+
+        private static void Activate(IPoolObject obj)
+        {
+            Assert.IsFalse(obj.IsActive);
+            obj.Activate();
+            obj.IsActive = true;
+        }
+        
+        private static void Deactivate(IPoolObject obj)
+        {
+            Assert.IsTrue(obj.IsActive);
+            obj.Deactivate();
+            obj.IsActive = false;
+        }
+        
+        private IPoolObject Create()
+        {
+            var obj = create();
+            
+            if(obj == null)
+            {
+                throw new InvalidOperationException(&quot;The create Func provided in the constructor returned null&quot;);
+            }
+            
+            obj.IsActive = false;
+            return obj;
+        }
+        
+        private void Destroy(IPoolObject obj)
+        {
+            Assert.IsNotNull(obj);
+            destroy(obj);
+        }
+    }
+}
+</code></pre><h2 id="encapsulating-pool">Encapsulating Pool</h2>
+<p>Sometimes you want the pool to completely encapsulate the creation and destruction of the objects that it manages.</p>
+<p>One way to do this is to make the class of the objects in the pool internal to the pool and private, and provide a
+public interface that exposes the necessary functionality of the object to the rest of the game. Only the pool can
+create instances of the objects or destroy them.</p>
+<p>Here is an example of how this can be done with a pool of enemies.</p>
+<pre><code class="lang-csharp">using UnityEngine.Assertions;
+
+namespace Gamelogic.Extensions.DocumentationCode
+{
+    /// &lt;summary&gt;
+    /// A pool for managing enemies.
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// This is an example of how to encapsulate the creation of objects completely within a pool.
+    /// &lt;/remarks&gt;
+    public class EnemyPool : IPool&lt;EnemyPool.IEnemy&gt;
+    {
+        /// &lt;summary&gt;
+        /// Represents an enemy in the game. 
+        /// &lt;/summary&gt;
+        public interface IEnemy { }
+        
+        // This class is hidden from users; they cannot construct instances.
+        // The only way to get instances is through the pool. 
+        private class Enemy : IEnemy
+        {
+            /// &lt;inheritdoc cref=&quot;IEnemy&quot;/&gt;
+            public bool IsActive { get; set; }
+
+            /// &lt;inheritdoc cref=&quot;IEnemy&quot;/&gt;
+            public void Activate() =&gt; IsActive = true;
+
+            /// &lt;inheritdoc cref=&quot;IEnemy&quot;/&gt;
+            public void Deactivate() =&gt; IsActive = false;
+        }
+        
+        /// &lt;inheritdoc /&gt;
+        public int Capacity =&gt; pool.Capacity;
+
+        /// &lt;inheritdoc /&gt;
+        public int ActiveCount =&gt; pool.ActiveCount;
+
+        /// &lt;inheritdoc /&gt;
+        public bool HasAvailableObject =&gt; pool.HasAvailableObject;
+
+        private IPool&lt;IEnemy&gt; pool;
+
+        /// &lt;summary&gt;
+        /// Initializes an instance of &lt;see cref=&quot;EnemyPool&quot;/&gt; with the given initial capacity. 
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;initialCapacity&quot;&gt;&lt;/param&gt;
+        public EnemyPool(int initialCapacity)
+        {
+            pool = new Pool&lt;IEnemy&gt;(
+                initialCapacity,
+                CreateEnemy,
+                DestroyEnemy,
+                Activate,
+                Deactivate);
+        }
+        
+        /// &lt;inheritdoc /&gt;
+        public IEnemy Get() =&gt; pool.Get();
+
+        /// &lt;inheritdoc /&gt;
+        public void Release(IEnemy enemy) =&gt; pool.Release(enemy);
+        
+        /// &lt;inheritdoc /&gt;
+        public void IncreaseCapacity(int increment) =&gt; pool.IncreaseCapacity(increment);
+
+        /// &lt;inheritdoc /&gt;
+        public int DecreaseCapacity(int decrement, bool deactivateFirst = false) 
+            =&gt; pool.DecreaseCapacity(decrement, deactivateFirst);
+
+        /// &lt;inheritdoc /&gt;
+        public void ReleaseAll() =&gt; pool.ReleaseAll();
+
+        private static void Activate(IEnemy enemy)
+        {
+            var enemyImplementation = (Enemy)enemy;
+
+            Assert.IsFalse(enemyImplementation.IsActive);
+            enemyImplementation.Activate();
+        }
+
+        private static void Deactivate(IEnemy enemy)
+        {
+            var enemyImplementation = (Enemy)enemy;
+
+            Assert.IsTrue(enemyImplementation.IsActive);
+            enemyImplementation.Deactivate();
+        }
+
+        private static IEnemy CreateEnemy() =&gt; new Enemy();
+
+        private void DestroyEnemy(IEnemy enemy) { /* do nothing */ }
+    }
+}
+</code></pre><h2 id="self-releasing-objects">Self Releasing Objects</h2>
+<p>It is sometimes more convenient to call a method on the object itself to release it back to the pool. This can be done
+by wrapping objects in a class that has a reference to the pool.</p>
+<p>Here is an example of this design:</p>
+<pre><code class="lang-csharp">using System;
+
+namespace Gamelogic.Extensions.DocumentationCode
+{
+    /// &lt;summary&gt;
+    /// A pool with objects that can release themselves.
+    /// &lt;/summary&gt;
+    public class PoolOfSelfReleasingObjects&lt;T&gt;
+    {
+        /// &lt;summary&gt;
+        /// Represents an object that is managed by a pool.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// Why an inner class? This prevents clashes, since this namespace defines more than one pooled object. 
+        /// &lt;/remarks&gt;
+        public interface IPoolObject
+        {
+            /// &lt;summary&gt;
+            /// The value of the object.
+            /// &lt;/summary&gt;
+            T Value { get; }
+        
+            /// &lt;summary&gt;
+            /// Releases the object back to the pool.
+            /// &lt;/summary&gt;
+            void Release();
+        }
+        
+        private class PoolObject : IPoolObject
+        {
+            private readonly IPool&lt;PoolObject&gt; owner;
+            
+            /// &lt;inheritdoc /&gt;
+            public T Value { get; }
+        
+            /// &lt;summary&gt;
+            /// Initializes a new instance of &lt;see cref=&quot;PoolObject&quot;/&gt;.
+            /// &lt;/summary&gt;
+            /// &lt;param name=&quot;value&quot;&gt;The value to wrap.&lt;/param&gt;
+            /// &lt;param name=&quot;owner&quot;&gt;The pool controlling this object.&lt;/param&gt;
+            public PoolObject(T value, IPool&lt;PoolObject&gt; owner)
+            {
+                Value = value;
+                this.owner = owner;
+            }
+
+            /// &lt;summary&gt;
+            /// Releases this object from the pool it is in. 
+            /// &lt;/summary&gt;
+            public void Release() =&gt; owner.Release(this);
+        }
+
+        private readonly IPool&lt;PoolObject&gt; pool;
+        
+        /// &lt;summary&gt;
+        /// Initializes a new instance of &lt;see cref=&quot;PoolOfSelfReleasingObjects{T}&quot;/&gt;.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;initialCapacity&quot;&gt;The initial capacity of the pool.&lt;/param&gt;
+        /// &lt;param name=&quot;create&quot;&gt;The function that creates new objects.&lt;/param&gt;
+        /// &lt;param name=&quot;destroy&quot;&gt;The action that destroys objects.&lt;/param&gt;
+        /// &lt;param name=&quot;activate&quot;&gt;The action that activates objects.&lt;/param&gt;
+        /// &lt;param name=&quot;deactivate&quot;&gt;The action that deactivates objects.&lt;/param&gt;
+        /// &lt;remarks&gt;See &lt;see cref=&quot;IPool{T}&quot;/&gt; for more detail on the parameters.&lt;/remarks&gt;
+        public PoolOfSelfReleasingObjects(
+            int initialCapacity,
+            Func&lt;T&gt; create,
+            Action&lt;T&gt; destroy,
+            Action&lt;T&gt; activate,
+            Action&lt;T&gt; deactivate)
+        {
+            pool = new Pool&lt;PoolObject&gt;(
+                initialCapacity,
+                () =&gt; new PoolObject(create(), pool),
+                po =&gt; destroy(po.Value),
+                po =&gt; activate(po.Value),
+                po =&gt; deactivate(po.Value));
+        }
+    }
+}
+</code></pre>
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

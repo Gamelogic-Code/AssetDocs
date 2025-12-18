@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Property Drawers | Gamelogic Extensions </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Property Drawers | Gamelogic Extensions ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Documentation/content/PropertyDrawers.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Extensions">
+            Gamelogic Extensions
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="property-drawers">Property Drawers</h1>
+
+<h2 id="list-of-property-drawers">List of Property Drawers</h2>
+<h3 id="display-attributes-used-for-fields">Display attributes used for fields</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Applied to</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.CommentAttribute.html">CommentAttribute</a></td>
+<td>Serialized field</td>
+<td>Adds a comment to a field in the inspector.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.DummyAttribute.html">DummyAttribute</a></td>
+<td>Serialized field</td>
+<td>Marks a field as a dummy (usually to attach a property drawer unrelated to the field)</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.HighlightAttribute.html">HighlightAttribute</a></td>
+<td>Serialized field</td>
+<td>Highlights a field in the inspector.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.InspectorButtonAttribute.html">InspectorButtonAttribute</a></td>
+<td>void method</td>
+<td>Adds a button to the inspector that calls the method.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.InspectorFlagsAttribute.html">InspectorFlagsAttribute</a></td>
+<td>Enum serialized field</td>
+<td>Draws an enum as a set of toggle buttons.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.LabelFieldAttribute.html">LabelFieldAttribute</a></td>
+<td>Serialized field</td>
+<td>Marks a field as a label to use in arrays compound types.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.MinMaxRangeAttribute.html">MinMaxRangeAttribute</a></td>
+<td>Serialized field</td>
+<td>Determines the range of <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> and <a class="xref" href="../api/Gamelogic.Extensions.MinMaxFloat.html">MinMaxFloat</a> fields.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ReadOnlyAttribute.html">ReadOnlyAttribute</a></td>
+<td>Serialized field</td>
+<td>Marks a field as read-only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validation-attributes-used-for-fields">Validation attributes used for fields</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Applied to</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidationAttribute.html">ValidationAttribute</a></td>
+<td>Serialized field</td>
+<td>Base class for validation attributes.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNullAttribute.html">ValidateNotNullAttribute</a></td>
+<td>Serialized class field</td>
+<td>Validates that a field is not null.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNegativeAttribute.html">ValidateNotNegativeAttribute</a></td>
+<td>Serialized number field</td>
+<td>Validates that a field is not negative.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidatePositiveAttribute.html">ValidatePositiveAttribute</a></td>
+<td>Serialized number field</td>
+<td>Validates that a field is positive.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidateRangeAttribute.html">ValidateRangeAttribute</a></td>
+<td>Serialized number, MinMaxInt, or MinMaxFloat field</td>
+<td>Validates that a field is within a range.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidateMatchRegularExpressionAttribute.html">ValidateMatchRegularExpressionAttribute</a></td>
+<td>Serialized string field</td>
+<td>Validates that a field matches a regular expression.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="popup-list-attributes">Popup list attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Applied to</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.PopupListAttribute.html">PopupListAttribute</a></td>
+<td>Serialized field</td>
+<td>Base class for popup list attributes.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.StringPopupAttribute.html">StringPopupAttribute</a></td>
+<td>Serialized field</td>
+<td>Draws a popup list of strings.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.IntPopupAttribute.html">IntPopupAttribute</a></td>
+<td>Serialized field</td>
+<td>Draws a popup list of ints.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ColorPopupAttribute.html">ColorPopupAttribute</a></td>
+<td>Serialized field</td>
+<td>Draws a popup list of colors.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.TagPopupAttribute.html">TagPopupAttribute</a></td>
+<td>Serialized field</td>
+<td>Draws a popup list of tags.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.LayerPopupAttribute.html">LayerPopupAttribute</a></td>
+<td>Serialized field</td>
+<td>Draws a popup list of layers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="types-with-custom-property-drawers">Types with custom property drawers</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.InspectorList-1.html">InspectorList&lt;T&gt;</a></td>
+<td>Render nicer lists in the inspector. (Not needed since Unity 2020.1.)</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.Optional-1.html">Optional&lt;T&gt;</a></td>
+<td>A struct that represents a value that may or may not be present. The value is only rendered in the inspector if the flag is true.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="obsolete-types">Obsolete Types</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A fair amount of types have been made obsolete, for the main reason to have more consistent names, especially
+since we introduced a more comprehensive system for field validation.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p><a class="xref" href="../api/Gamelogic.Extensions.MinMaxRangeAttribute.html">MinMaxRangeAttribute</a> has not been made obsolete. Since it draws a different UI component altogether, it does not
+make sense to replace it with <a class="xref" href="../api/Gamelogic.Extensions.ValidateRangeAttribute.html">ValidateRangeAttribute</a>. We may unify these in the
+future though.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Replaced with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.NonNegativeAttribute.html">NonNegativeAttribute</a></td>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNegativeAttribute.html">ValidateNotNegativeAttribute</a></td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.PositiveAttribute.html">PositiveAttribute</a></td>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidatePositiveAttribute.html">ValidatePositiveAttribute</a></td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Gamelogic.Extensions.WarningIfNullAttribute.html">WarningIfNullAttribute</a></td>
+<td><a class="xref" href="../api/Gamelogic.Extensions.ValidateNotNullAttribute.html">ValidateNotNullAttribute</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="propertydrawerdata">PropertyDrawerData</h2>
+<p><a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.html">PropertyDrawerData</a> handles settings used by property drawers.</p>
+<h3 id="default-global-colors">Default Global Colors</h3>
+<p>Some property drawers use colors to highlight the fields. You can either specify the color in the attribute,
+or change the global colors used in <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.html">PropertyDrawerData</a>, usually in a static constructor
+of a class with the <a href="xref:UnityEngine.InitializeOnLoadAttribute"><code>InitializeOnLoad</code></a> attribute.</p>
+<p>Individual validation attributes can specify their own colors, and so can users of attributes.</p>
+<h3 id="default-validation-policies">Default Validation Policies</h3>
+<p>The booleans  @Gamelogic.Extensions.PropertyDrawerData.ForceValid,
+<a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.WarnInInspector.html">WarnInInspector</a>, and  <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.WarnInConsole.html">WarnInConsole</a>
+controls how validation is executed for attributes derived from <a class="xref" href="../api/Gamelogic.Extensions.ValidationAttribute.html">ValidationAttribute</a> .</p>
+<p>The defaults can be overridden by the attribute, or by the attribute user.</p>
+<h3 id="list-retrievers">List Retrievers</h3>
+<p>Attributes derived from PopupListAttribute use a function (called a list retriever) that is called
+to get the list used for the values of the popup. This allows you to compute the list from your game content, perhaps
+set up in a scriptable object or a config file. You can register a list retriever using
+@Gamelogic.Extensions.PropertyDrawerData.RegisterListRetriever, usually called from a static constructor of a class
+with the <a href="xref:UnityEngine.InitializeOnLoadAttribute"><code>InitializeOnLoad</code></a> attribute.</p>
+<h2 id="defining-your-own-popup-list-drawers">Defining your own popup list drawers</h2>
+<ul>
+<li>Define an attribute that derives from PopupListAttribute. You only have to construct the base type with the desired
+constructors, depending on the types of retrieval you want to support.</li>
+</ul>
+<pre><code class="lang-csharp">using System.Linq;
+
+namespace Gamelogic.Extensions.Samples
+{
+    /// &lt;summary&gt;
+    /// An attribute used to mark a string field that should be drawn as a popup list of scene paths in the Unity editor.
+    /// &lt;/summary&gt;
+    public class BuildScenePopupAttribute : PopupListAttribute
+    {
+        /// &lt;summary&gt;
+        /// Marks a string field that should be drawn as a popup list containing the paths of scenes included in the build settings.
+        /// &lt;/summary&gt;
+        public BuildScenePopupAttribute()
+            : base(new PopupListData&lt;string&gt;(GetScenes))
+        {
+        }
+        
+#if UNITY_EDITOR
+        private static string[] GetScenes() =&gt; UnityEditor.EditorBuildSettings.scenes.Select(s =&gt; s.path).ToArray();
+#else
+        private static string[] GetScenes() =&gt; System.Array.Empty&lt;string&gt;();
+#endif
+    }
+}
+</code></pre>
+<ul>
+<li>Define a property drawer derived from PopupListDrawer. You only have to define the DrawField method.</li>
+</ul>
+<pre><code class="lang-csharp">using System.IO;
+using Gamelogic.Extensions.Editor;
+using UnityEditor;
+using UnityEngine;
+
+namespace Gamelogic.Extensions.Samples
+{
+    /*	This is an example of a custom property drawer that uses the PopupListDrawer to create a popup list of
+        scenes in the build settings.
+        
+        We use the BuildScenePopupAttribute to mark the field that should be drawn as a popup list of scenes.
+    */
+    public class BuildScenePropertyDrawer
+    {
+        [CustomPropertyDrawer(typeof(BuildScenePopupAttribute))]
+        public class BuildScenePopupPropertyDrawer : PopupListPropertyDrawer&lt;string&gt;
+        {
+            /// &lt;summary&gt;
+            /// Converts a string value into a &lt;see cref=&quot;GUIContent&quot;/&gt; object for display in the popup list.
+            /// &lt;/summary&gt;
+            /// &lt;param name=&quot;value&quot;&gt;The string value to convert.&lt;/param&gt;
+            /// &lt;returns&gt;A &lt;see cref=&quot;GUIContent&quot;/&gt; object representing the string value.&lt;/returns&gt;
+            protected override GUIContent GetContent(string value)
+                =&gt; new GUIContent( Path.GetFileNameWithoutExtension(value));
+
+            /// &lt;summary&gt;
+            /// Sets the string value of the serialized property based on the selected option in the popup list.
+            /// &lt;/summary&gt;
+            /// &lt;param name=&quot;property&quot;&gt;The serialized property to set the value for.&lt;/param&gt;
+            /// &lt;param name=&quot;value&quot;&gt;The string value to set.&lt;/param&gt;
+            protected override void SetPropertyValue(SerializedProperty property, string value) 
+                =&gt; property.stringValue = value;
+        
+            /// &lt;summary&gt;
+            /// Gets the current string value of the serialized property.
+            /// &lt;/summary&gt;
+            /// &lt;param name=&quot;property&quot;&gt;The serialized property to get the value from.&lt;/param&gt;
+            /// &lt;returns&gt;The current string value of the serialized property.&lt;/returns&gt;
+            protected override string GetValue(SerializedProperty property) =&gt; property.stringValue;
+        }
+    }
+}
+</code></pre><h2 id="defining-your-own-validation-attributes">Defining your own validation attributes.</h2>
+<ul>
+<li>Define an attribute that derives from ValidationAttribute, and override the
+@Gamelogic.Extensions.ValidationAttribute.IsValid, and if the value can be forced valid, also the
+@Gamelogic.Extensions.ValidationAttribute.MakeValid method.</li>
+</ul>
+<pre><code class="lang-csharp">using Gamelogic.Extensions.Internal;
+using Gamelogic.Extensions.Support;
+
+namespace Gamelogic.Extensions.Samples
+{
+    /// &lt;summary&gt;
+    /// Marks an integer field to indicate it should be a power of two.
+    /// &lt;/summary&gt;
+    public class ValidatePowerOfTwoAttribute : ValidationAttribute
+    {
+        /// &lt;summary&gt;
+        /// Initializes a new instance of the &lt;see cref=&quot;ValidatePowerOfTwoAttribute&quot;/&gt; class.
+        /// &lt;/summary&gt;
+        public ValidatePowerOfTwoAttribute()
+        {
+            Message = &quot;Value must be a power of two.&quot;;
+            Color = Branding.Aqua;
+        }
+
+#if UNITY_EDITOR
+        /*	You need to shield these methods with UNITY_EDITOR to avoid compilation errors in a build.
+            UnityEditor.SerializedProperty is not available at runtime, so these methods in the base
+            class are similarly shielded.
+        */
+        /// &lt;summary&gt;
+        /// Returns whether the value is a power of two.
+        /// &lt;/summary&gt;
+        /// &lt;inheritdoc/&gt;
+        [EditorOnly]
+        public override bool IsValid(UnityEditor.SerializedProperty property)
+        {
+            switch (property.propertyType)
+            {
+                case UnityEditor.SerializedPropertyType.Integer:
+                    return property.intValue &gt; 0 &amp;&amp; (property.intValue &amp; (property.intValue - 1)) == 0;
+                default:
+                    return true;
+            }
+        }
+        
+        /// &lt;summary&gt;
+        /// Returns the greatest power of two smaller or equal to `value`.
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;The greatest power of two smaller or equal to `value`.&lt;/returns&gt;
+        /// &lt;inheritdoc/&gt;
+        protected override void Constrain(UnityEditor.SerializedProperty property)
+        {
+            switch (property.propertyType)
+            {
+                case UnityEditor.SerializedPropertyType.Integer:
+                    property.intValue = Constrain(property.intValue);
+                    break;
+            }
+        }
+        
+        private int Constrain(int intValue)
+        {
+            if (intValue &lt;= 1)
+            {
+                return 1;
+            }
+                
+            int constrainedValue = 1;
+            while (constrainedValue &lt;= intValue / 2)
+            {
+                constrainedValue *= 2;
+            }
+                
+            return constrainedValue;
+        }
+#endif
+    }
+}
+</code></pre><h2 id="example">Example</h2>
+<p>Here is an example of a data-driven content setup using a scriptable object:</p>
+<pre><code class="lang-csharp">using System;
+using UnityEngine;
+
+namespace Gamelogic.Extensions.Samples
+{
+    [Serializable]
+    public class PowerUp
+    {
+        public string name;
+        public Color color;
+    }
+    
+    /* This is an example of data that may be used in a game.
+        We use it to provide data for the property drawers (to make certain popups) in the ContentExample.
+    */
+    [CreateAssetMenu]
+    public class ContentExample : ScriptableObject
+    {
+        /* These constants are used as keys to store the retriever functions we use to get the values
+            for the power ups and colors. The mapping is done in the PropertyDrawerDataInitializer, and 
+            we the popups that use them are declared in the ContentExample.
+        */
+        public const string PowerUpsRetrieverKey = &quot;PowerUps&quot;;
+        public const string ColorsRetrieverKey = &quot;Color&quot;;
+        
+        public PowerUp[] powerUps;
+        public Color[] colors;
+    }
+}
+</code></pre>
+<p>And here is how we can register list retrievers and set global colors:</p>
+<pre><code class="lang-csharp">using System;
+using System.Linq;
+using Gamelogic.Extensions.Editor.Internal;
+using Gamelogic.Extensions.Support;
+using UnityEditor;
+using UnityEngine;
+
+namespace Gamelogic.Extensions.Samples
+{
+    /* This class initializes colors and list retrievers for the property drawers in the project.
+        It overrides some values in the PropertyDrawerData.
+    */
+    [InitializeOnLoad]
+    public static class PropertyDrawerDataInitializer
+    {
+        static PropertyDrawerDataInitializer()
+        {
+            /* We set the default colors used by the Warning and Highlight property drawers.
+            */
+            PropertyDrawerData.HighlightColor = Branding.Apple;
+            PropertyDrawerData.WarningColor = Branding.Lemon;
+            
+            PropertyDrawerData.ForceValue = false;
+
+            /*	Then we register two functions that will be used to retrieve the values for popups.
+                The functions use our content to get the values. 
+            */
+            var content = Assets
+                .FindByType&lt;ContentExample&gt;()
+                .FirstOrDefault();
+            
+            PropertyDrawerData.RegisterValuesRetriever(ContentExample.PowerUpsRetrieverKey, 
+                () =&gt; content == null ? Array.Empty&lt;string&gt;() : content.powerUps.Select(f =&gt; f.name)
+                );
+            
+            PropertyDrawerData.RegisterValuesRetriever(ContentExample.ColorsRetrieverKey, 
+                () =&gt; content == null ? Array.Empty&lt;Color&gt;() : content.colors
+                );
+            
+            PropertyDrawerData.RegisterValuesRetriever(MatrixPresets.RetrievalKey, () =&gt; MatrixPresets.Presets);
+        }
+    }
+}
+</code></pre>
+<p>And here is a class using all the attributes and types with custom property drawers:</p>
+<pre><code class="lang-csharp">#pragma warning disable CS0169 // Field is never used. This file is to see the fields in the inspector only. 
+#pragma warning disable CS0414 // The private field is assigned but its value is never used
+// ReSharper disable UnusedMember.Local
+
+using UnityEngine;
+
+using Gamelogic.Extensions.Internal;
+using System;
+using Gamelogic.Extensions.Support;
+using JetBrains.Annotations;
+using UnityEngine.Serialization;
+
+namespace Gamelogic.Extensions.Samples
+{
+    [Flags]
+    public enum MonsterState
+    {
+        IsHungry = 1,
+        IsThirsty = 2,
+        IsAngry = 4,
+        IsTired = 8
+    }
+
+    [Serializable]
+    public class MonsterData
+    {
+        public string name;
+        public string nickName;
+        public Color color;
+    }
+    
+    public class GameData
+    {
+        public static readonly string[] PotionTypes = { &quot;Health&quot;, &quot;Mana&quot;, &quot;Stamina&quot; };
+    }
+
+    // This class would work exactly the same in the inspector
+    // if it was extended from MonoBehaviour instead, except
+    // for the InspectorButton
+    
+    // Some setup is done in the ThemeInitializer script
+    public class PropertyDrawerExample : GLMonoBehaviour
+    {
+        [InspectorText]
+        [SerializeField] private string readMe;
+        
+        [Header(&quot;Display&quot;)]
+        [ReadOnly]
+        public string readonlyString = &quot;Cannot change in inspector&quot;;
+        
+        [Comment(&quot;This is a comment.&quot;)]
+        public string fieldWithComment = &quot;This field has a comment&quot;;
+        
+        [Highlight] // Uses default color in PropertyDrawerData set in PropertyDrawerDataInitializer.cs
+        [Space]
+        [SerializeField] private int highligtedInt;
+        
+        [Highlight(Branding.Hex.Coral)]
+        [SerializeField] private int redInt;
+        
+        [Space(order = 0)]
+        [Comment(&quot;Note the nickName is used for the labels of array items in the inspector&quot;, order = 1)]
+        [LabelField(&quot;nickName&quot;)]
+        [SerializeField] private MonsterData[] moreMonsters = 
+        {
+            new MonsterData{ name = &quot;Vampire&quot;, nickName = &quot;Vamp&quot;, color = Utils.Blue },
+            new MonsterData{ name = &quot;Werewolf&quot;, nickName = &quot;Wolf&quot;, color = Utils.Red},
+        };
+        
+        [FormerlySerializedAs(&quot;monsterState&quot;)]
+        [InspectorFlags]
+        [SerializeField] private MonsterState flags = MonsterState.IsAngry | MonsterState.IsHungry;
+
+        [SceneName]
+        [SerializeField] private string scene = null;
+        
+        [Space(order = 0)]
+        [Separator(Branding.Hex.Coral, 5, order = 1)]
+        [Header(&quot;Validation&quot;, order = 2)]
+        [Comment(&quot;Can only be positive.&quot;, &quot;Must be larger than 0.&quot;, order = 3)]
+        
+        [ValidatePositive]
+        [SerializeField] private int positiveInt = 1;
+        
+        [ValidatePositive]
+        [SerializeField] private float positiveFloat = 0.1f;
+
+        [Space(order = 0)]
+        [Comment(&quot;Cannot be negative&quot;, order = 1)]
+        [ValidateNotNegative]
+        [SerializeField] private int nonNegativeInt = 0;
+
+        [ValidateNotNegative(WarnInInspector = true, HexColor = Branding.Hex.Coral)]
+        [SerializeField] private float nonNegativeFloat = 0f;
+        
+        [Space(order = 0)]
+        [Comment(&quot;Can only be between -1 and 1.&quot;, order = 1)]
+        [ValidateRange(-1, 1)]
+        [SerializeField] private float rangeFloat = 0f;
+        
+        [Space(order = 0)]
+        [Comment(&quot;Can only be between -5 and 5.&quot;, order = 1)]
+        [ValidateRange(-5, 5)]
+        [SerializeField] private int rangeInt = 0;
+        
+        [Space(order = 0)]
+        [Comment(&quot;Custom validation attribute: must be power of two.&quot;, order = 1)]
+        [ValidatePowerOfTwo]
+        [SerializeField] private int powerOfTwo = 1;
+        
+        [Space(order = 0)]
+        [ValidateNotNull]
+        [SerializeField] private GameObject notNull;
+        
+        [SerializeField, ValidateNotNull(WarnInConsole = true)] 
+        private GameObject notNullWarningInConsole;
+
+        [SerializeField, ValidateNotNull(HexColor = Branding.Hex.Coral)] 
+        private GameObject notNullCustomColor;
+
+        [ValidateNotNull] // No warning, since numbers are never null.
+        [SerializeField] private int notNullNumber = 10;
+
+        [Space(order = 0)]
+        [Comment(@&quot;Must match: ^#?(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$&quot;, order = 1)]
+        [ValidateMatchRegularExpression(@&quot;^#?(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$&quot;)] 
+        [SerializeField] private string hexColor = &quot;#fff&quot;;
+        
+        [ValidateNotEmpty]
+        [SerializeField] private string nonEmptyString = &quot;a&quot;;
+        
+        [ValidateNotWhiteSpaceOrEmpty]
+        [SerializeField] private string nonWhiteSpaceEmptyString;
+        
+        [Space(order = 0)]
+        [Separator(Branding.Hex.Coral, 5, order = 1)]
+        [Header(&quot;Special Types&quot;, order = 2)]
+        
+        [SerializeField] private OptionalInt anOptionalInt = new OptionalInt
+        {
+            UseValue = true,
+            Value = 3
+        };
+        
+        [Space(order = 0)]
+        [Comment(&quot;Value is between 0 and 1.&quot;, order = 1)]
+        [SerializeField] private MinMaxFloat minMaxFloatWithDefaultRange = new MinMaxFloat(0.25f, 0.75f);
+
+        [Space(order = 0)]
+        [Comment(&quot;Value is between 0 and 100.&quot;, order = 1)]
+        [MinMaxRange(0, 100)]
+        [SerializeField] private MinMaxInt minMaxIntPercentage = new MinMaxInt(50, 70);
+        
+        [MinMaxRange(0, 100)]
+        [SerializeField] private MinMaxFloat minMaxFloatPercentage = new MinMaxFloat(50f, 70f);
+        
+        [MinMaxRange(-100, 200)]
+        [SerializeField] private MinMaxFloat minMaxFloatPercentageWarn = new MinMaxFloat(50f, 70f);
+
+        [FormerlySerializedAs(&quot;floatMatrix&quot;)]
+        [Presets( MatrixPresets.Title, MatrixPresets.RetrievalKey)] // Registered in PropertyDataInitializer
+        [SerializeField] private MatrixFloat matrixFloat = new MatrixFloat(2, 2, new float[]{1, 2, 3, 4});
+
+        [SerializeField] private IdColorDictionary potionColors;
+        
+        [Space(order = 0)]
+        [Separator(Branding.Hex.Coral, 5, order = 1)]
+        [Header(&quot;Popups&quot;, order = 2)]
+        
+        [IntPopup(new[]{5, 10, 15})]
+        [SerializeField] private int intPopupFromList = 5;
+        
+        [StringPopup(new[] { &quot;Vampire&quot;, &quot;Werewolf&quot; })]
+        [SerializeField] private string stringPopupFromList;
+        
+        [StringPopup(ContentExample.PowerUpsRetrieverKey)] 
+        [SerializeField] private string popupFromContent;
+        
+        [ColorPopup(ContentExample.ColorsRetrieverKey)]
+        [SerializeField] private Color colorPopup;
+        
+        [TagPopup]
+        [SerializeField] private string cameraTagPopup;
+        
+        [LayerPopup]
+        [SerializeField] private string layerPopup;
+        
+        [BuildScenePopup]
+        [SerializeField] private string buildScenePopup;
+        
+        [Space(order = 0)]
+        [Separator(Branding.Hex.Coral, 5, order = 1)]
+        [Header(&quot;Inspector Buttons&quot;, order = 3)]
+        [Comment(&quot;Buttons show only if your object extends from GLMonoBehaviour or uses a custom editor that draws them&quot;,
+            order = 4)]
+        [Dummy, UsedImplicitly]
+        [SerializeField] private bool dummy; // Allows us to have decorators above the buttons.
+
+        //This will only show as a button if you extend from GLMonoBehaviour.
+        [InspectorButton]
+        public static void LogHello() =&gt; Debug.Log(&quot;Hello&quot;);
+
+        private void OnValidate()
+        {
+            if (potionColors == null)
+            {
+                potionColors = new IdColorDictionary();
+            }
+            potionColors.Validate(GameData.PotionTypes);
+        }
+    }
+}
+</code></pre>
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
