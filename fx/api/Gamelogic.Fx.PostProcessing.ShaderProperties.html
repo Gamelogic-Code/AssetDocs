@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ShaderProperties | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ShaderProperties | Gamelogic Fx ">
+      
+      <meta name="description" content="Defines a serializable set of properties used to configure a specific post-processing shader.">
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_PostProcessing_ShaderProperties.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.PostProcessing.ShaderProperties%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties">
+
+
+
+  <h1 id="Gamelogic_Fx_PostProcessing_ShaderProperties" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties" class="text-break">
+Class ShaderProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.PostProcessing.html">PostProcessing</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Fx.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines a serializable set of properties used to configure a specific post-processing shader.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public abstract class ShaderProperties</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ShaderProperties</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.ConvexHullHatchProperties.html">ConvexHullHatchProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.html">MixboxConvexHullHatchProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.SimpleHatchProperties.html">SimpleHatchProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html">DitherMatrixBiasProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties.html">DitherTextureBiasProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html">MapProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.AddTextureProperties.html">AddTextureProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.AdjustGammaProperties.html">AdjustGammaProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.AdjustSaturationProperties.html">AdjustSaturationProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.html">BlendTextureProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.ConvexHullMapProperties.html">ConvexHullMapProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.DesaturateProperties.html">DesaturateProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.InvertProperties.html">InvertProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.html">MixboxConvexHullMapProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html">PixelateProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.QuadToneMapProperties.html">QuadToneMapProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.QuantizeProperties.html">QuantizeProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.SimpleOutlineProperties.html">SimpleOutlineProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.TriToneMapProperties.html">TriToneMapProperties</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.SeparableShaderProperties.html">SeparableShaderProperties</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_Fx_PostProcessing_ShaderProperties_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html">ShaderProperties</a> instance acts as the bridge between inspector-exposed settings
+and the underlying shader uniforms.</p>
+<p></p>
+When enabled, this class attempts to load the shader specified by <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>
+and stores a reference to it so the shader is included correctly in builds.
+<p></p>
+Subclasses typically:
+<ol><li>Provide the shader name via <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>.</li><li>Expose serialized fields that represent shader parameters.</li><li>Override <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_SetMaterialProperties_UnityEngine_Material_">SetMaterialProperties(Material)</a> to apply those parameters.</li></ol>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresDepthTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresDepthTexture">
+  RequiresDepthTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this shader requires access to the camera depth texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RequiresDepthTexture { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Override and return <code>true</code> if the shader samples depth information.
+This is used by higher-level systems to enable the correct camera flags.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresNormalsTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresNormalsTexture">
+  RequiresNormalsTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this shader requires access to the camera normals texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RequiresNormalsTexture { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Override and return <code>true</code> if the shader samples scene normals.
+This is used by higher-level systems to ensure normals are generated when needed.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_Shader_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.Shader*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_Shader" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.Shader">
+  Shader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the resolved shader instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Shader Shader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Shader.html">Shader</a></dt>
+    <dd><p>The loaded <a class="xref" href="https://docs.unity3d.com/ScriptReference/Shader.html">Shader</a>, or <code>null</code> if it could not be found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.ShaderName*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.ShaderName">
+  ShaderName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the shader used by this property set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string ShaderName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This name is passed to the internal shader lookup system when the properties are enabled.
+It should match the full shader path as defined in the shader file.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnEnable_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.OnEnable*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnEnable" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the owning component or asset is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnEnable_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation resolves the shader using <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>.
+Subclasses overriding this method should normally call <code>base.OnEnable()</code>.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnValidate_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.OnValidate*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnValidate" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.OnValidate">
+  OnValidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when serialized values are changed in the inspector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnValidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnValidate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Override this method to clamp values, enforce invariants, or perform lightweight validation
+in response to inspector edits.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_SetMaterialProperties_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.SetMaterialProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.SetMaterialProperties(UnityEngine.Material)">
+  SetMaterialProperties(Material)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies all shader-related properties to the given material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetMaterialProperties(Material material)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>material</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
+    <dd><p>The material created for the post process effect, using the shader defined by <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_SetMaterialProperties_UnityEngine_Material__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
+(for example, floats, vectors, colors, textures, and keywords).</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

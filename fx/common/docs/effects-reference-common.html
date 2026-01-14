@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/common/docs/effects-reference-common.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/effects-reference-common.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -151,6 +151,28 @@ the alpha channel in tact.</p>
 </table>
 <p><img src="effects/images/adjust_gamma_low.png" alt="">
 <img src="effects/images/adjust_gamma_high.png" alt=""></p>
+<h2 id="adjust-saturation">Adjust Saturation</h2>
+<p>Adjusts the color saturation of the image by interpolating between grayscale luminance and the original color.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saturation</td>
+<td>[0, 2)</td>
+<td>Controls color intensity. <code>1</code> leaves the image unchanged, <code>0</code> fully desaturates to grayscale. Values greater than <code>1</code> increase saturation.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="effects/images/adjust-saturation-low.png" alt="">
+Saturation 0.2</p>
+<p><img src="effects/images/adjust-saturation-high.png" alt="">
+Saturation 2.0</p>
 <h2 id="bilateral-filter">Bilateral Filter</h2>
 <blockquote>
 <p><a href="separable-effects.html">Separable</a></p>
@@ -215,7 +237,7 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 </tr>
 </tbody>
 </table>
-<p><img src="effects/images/bilateral_filter.png" alt=""></p>
+<p><img src="effects/images/bilateral-filter.png" alt=""></p>
 <div class="TIP">
 <h5>Tip</h5>
 <ul>
@@ -411,6 +433,9 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 </ul>
 </div>
 <p><img src="effects/images/gaussian_blur.png" alt=""></p>
+<h2 id="invert">Invert</h2>
+<p>Inverts the colors of the image.</p>
+<p><img src="effects/images/invert.png" alt=""></p>
 <h2 id="max-filter">Max Filter</h2>
 <blockquote>
 <p><a href="separable-effects.html">Separable</a></p>
@@ -677,6 +702,145 @@ colorful result.</p>
 <p><em>This is with Smoothness = 0 (hard transitions). The level count is 2 for red, 4 for the other 2.</em></p>
 <p><img src="effects/images/quantize_smooth.png" alt=""></p>
 <p><em>This is with Smoothness = 0.1 (smooth transitions).</em></p>
+<h2 id="quad-tone-map">Quad Tone Map</h2>
+<p>A smooth 4-way threshold effect using inverse lerp (linear blend).</p>
+<p>Interpolates between Low–Mid0, Mid0–Mid1, and Mid1–High based on lightness. Values below LowValue use LowColor, above HighValue use HighColor.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low Color</td>
+<td>🎨</td>
+<td>Color used for values below LowValue.</td>
+</tr>
+<tr>
+<td>Mid0 Color</td>
+<td>🎨</td>
+<td>Color used for the first mid range (between LowValue and Mid0Value).</td>
+</tr>
+<tr>
+<td>Mid1 Color</td>
+<td>🎨</td>
+<td>Color used for the second mid range (between Mid0Value and Mid1Value).</td>
+</tr>
+<tr>
+<td>High Color</td>
+<td>🎨</td>
+<td>Color used for values above Mid1Value.</td>
+</tr>
+<tr>
+<td>Low Value</td>
+<td>[0, 1]</td>
+<td>Lower threshold for lightness.</td>
+</tr>
+<tr>
+<td>Mid0 Value</td>
+<td>[0, 1]</td>
+<td>Threshold separating low and mid0 regions.</td>
+</tr>
+<tr>
+<td>Mid1 Value</td>
+<td>[0, 1]</td>
+<td>Threshold separating mid0 and mid1 regions.</td>
+</tr>
+<tr>
+<td>High Value</td>
+<td>[0, 1]</td>
+<td>Upper threshold for lightness.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="effects/images/quad-tone-map.png" alt=""></p>
+<h2 id="simple-outline">Simple Outline</h2>
+<p>Detects edges in the image using a Sobel-style filter and draws an outline based on a configurable threshold.
+Edges can be detected from the original image, scene depth, scene normals, or an explicit source texture.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outline Source</td>
+<td>{0, 1, 2, 3}</td>
+<td>Selects the source used for edge detection. See <strong>Outline Sources</strong> below.</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>[0, ∞)</td>
+<td>Multiplies the sampling offset. Larger values produce thicker, coarser outlines.</td>
+</tr>
+<tr>
+<td>Edge Factor</td>
+<td>[0, ∞)</td>
+<td>Scales the detected edge strength before thresholding. Used to make threshold tuning easier.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>[0, ∞)</td>
+<td>Edge strength above which a pixel is considered part of an outline.</td>
+</tr>
+<tr>
+<td>Line Color</td>
+<td>🎨</td>
+<td>Color used to draw detected edges. Alpha controls how much it blends over the original image.</td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td>🎨</td>
+<td>Color used where no edge is detected. Alpha controls blending with the original image.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outline-sources">Outline Sources</h3>
+<ul>
+<li><strong>Camera Color</strong> – Uses the rendered image.</li>
+<li><strong>Alternate Texture</strong> – Uses an explicitly provided texture (<code>outlineSourceTexture</code>) as the edge source.</li>
+<li><strong>Depth Texture</strong> – Detects edges from scene depth.</li>
+<li><strong>Normals Texture</strong> – Detects edges from scene normals.</li>
+</ul>
+<hr>
+<h2 id="using-depth-and-normals-textures">Using Depth and Normals Textures</h2>
+<p>This effect can derive edges from <strong>scene depth</strong> or <strong>scene normals</strong>, but the setup differs depending on the render pipeline.</p>
+<h3 id="built-in-render-pipeline">Built-in Render Pipeline</h3>
+<p>When using <strong>Depth Texture</strong> or <strong>Normals Texture</strong> as the outline source, you must ensure the camera generates the required textures.</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li><p>Set the camera’s <code>depthTextureMode</code> manually:</p>
+<ul>
+<li><code>Depth</code> for depth-based outlines</li>
+<li><code>DepthNormals</code> for normal-based outlines</li>
+</ul>
+</li>
+<li><p>Or add the <strong><code>RequiresDepthNormals</code></strong> component to the camera, which configures this automatically.</p>
+</li>
+</ul>
+<p>If the required textures are not enabled, depth- or normal-based outline modes will not work.</p>
+<h3 id="universal-render-pipeline-urp">Universal Render Pipeline (URP)</h3>
+<p>Nothing is required to enable depth or normals textures in URP, as this is handled internally.</p>
+<p>However, sometimes the normals don't work in the editor. Playing the game usually fixes this.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>To draw outlines over the original image, set <code>Background Color</code> alpha to <code>0</code> and <code>Line Color</code> alpha to <code>1</code>.</li>
+<li>If the outline is hard to tune, start with <code>Edge Factor = 1</code>, find usable lower and upper threshold bounds, then
+adjust <code>Edge Factor</code> to bring the threshold into a convenient range.</li>
+<li>You can render out an <a href="maps/id-map.html"><code>IDMap</code></a> and use it as the <code>AlternateTexture</code> source to outline
+objects.</li>
+<li>The Jump distance is a cheap way to control outline thickness, but may produce artifacts on thin features. A
+better approach is to use a Min filter (for dark outlines) or Max filter (for light outlines) after the outline pass.</li>
+</ul>
+</div>
+<p><img src="effects/images/simple-outline.png" alt=""></p>
 <h2 id="tri-tone-map">Tri-tone Map</h2>
 <p>Maps the image’s tones to three colors (low, mid, and high) based on lightness, smoothly blending between them using inverse linear interpolation.</p>
 <table>

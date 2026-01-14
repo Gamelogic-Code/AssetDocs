@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_PostProcessRunner.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.PostProcessRunner%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_PostProcessRunner.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.PostProcessRunner%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcessRunner" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcessRunner" class="text-break">
-Class PostProcessRunner  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcessRunner.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Class PostProcessRunner  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcessRunner.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -526,8 +526,8 @@ public sealed class PostProcessRunner : GLMonoBehaviour</code></pre>
 
   <h2 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcessRunner_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Intended for the built-in render pipeline.</p>
-<p>This script should be placed on a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Camera.html">Camera</a>. It calls GenericPostProcess.OnRenderImage
-on all children with <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.GenericPostProcess.html">GenericPostProcess</a> of the <code>postProcessRoot</code> configured in this inspector.
+<p>This script should be placed on a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Camera.html">Camera</a>. It calls <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.IPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_IPostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_">OnRenderImage(RenderTexture, RenderTexture)</a>
+on all children with components that implement <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.IPostProcess.html">IPostProcess</a> of the <code>postProcessRoot</code> configured in this inspector.
 This allows you to have post-processes in separate objects and make it easier to manage if you are experimenting
 with many processes at the same time.</p>
 <p>So to add a post process to your camera:</p>
@@ -548,7 +548,7 @@ post process script to it. Any script that implements <a class="xref" href="Game
 
   <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcessRunner_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcessRunner.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)">
   OnRenderImage(RenderTexture, RenderTexture)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcessRunner.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcessRunner.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

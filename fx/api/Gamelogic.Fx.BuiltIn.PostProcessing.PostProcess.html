@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class PostProcess | Gamelogic Fx ">
       
-      <meta name="description" content="Contains basic functionality for a full screen post process effect.">
+      <meta name="description" content="The base class for all post process effects.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess" class="text-break">
-Class PostProcess  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class PostProcess  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,13 +104,12 @@ Class PostProcess  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>Gamelogic.Fx.BuiltIn.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Contains basic functionality for a full screen post process effect.</p>
+  <div class="markdown summary"><p>The base class for all post process effects.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ExecuteInEditMode]
-public abstract class PostProcess : GLMonoBehaviour, IPostProcess</code></pre>
+    <pre><code class="lang-csharp hljs">public class PostProcess : GLMonoBehaviour</code></pre>
   </div>
 
 
@@ -129,18 +128,12 @@ public abstract class PostProcess : GLMonoBehaviour, IPostProcess</code></pre>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.IPostProcess.html">IPostProcess</a></div>
-    </dd>
-  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.GenericPostProcess.html">GenericPostProcess</a></div>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess.html">NamedShaderPostProcess</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html">PostProcess</a>&lt;TShaderProperties&gt;</div>
+      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess.html">SeparablePostProcess</a></div>
     </dd>
   </dl>
 
@@ -540,173 +533,9 @@ public abstract class PostProcess : GLMonoBehaviour, IPostProcess</code></pre>
 
 
   <h2 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Intended for the built-in render pipeline.</p>
+  <div class="markdown level0 remarks"><p>See <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html">PostProcess&lt;TShaderProperties&gt;</a> or <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html">SeparablePostProcess&lt;TShaderProperties&gt;</a> for
+more complete implementations.</p>
 </div>
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_Shader_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.Shader*"></a>
-
-  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_Shader" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.Shader">
-  Shader
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L49"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The shader used for this post process effect.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract Shader Shader { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Shader.html">Shader</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnDisable_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.OnDisable*"></a>
-
-  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnDisable" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.OnDisable">
-  OnDisable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L77"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnDisable()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnRenderImage_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.OnRenderImage*"></a>
-
-  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)">
-  OnRenderImage(RenderTexture, RenderTexture)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L59"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The function that performs the post process effect.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnRenderImage(RenderTexture sourceTexture, RenderTexture destTexture)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sourceTexture</code> <span class="xref">RenderTexture</span></dt>
-    <dd><p>The full screen source texture.</p>
-</dd>
-    <dt><code>destTexture</code> <span class="xref">RenderTexture</span></dt>
-    <dd><p>The render target for the post process.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section" id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A typical implementation
-<span class="xref">UnityEngine.Graphics.Blit(UnityEngine.Texture, UnityEngine.RenderTexture, UnityEngine.Material)</span>
-to do perform the post process effect.</p>
-</div>
-
-
-
-
-  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_SetMaterialProperties_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.SetMaterialProperties*"></a>
-
-  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.SetMaterialProperties(UnityEngine.Material)">
-  SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L88"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Applies all the properties defined for this post process in the inspector to the <span class="xref">Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.EffectMaterial</span>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void SetMaterialProperties(Material effectMaterial)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>effectMaterial</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_Start_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.Start*"></a>
-
-  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_Start" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.Start">
-  Start()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/PostProcess.cs/#L51"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

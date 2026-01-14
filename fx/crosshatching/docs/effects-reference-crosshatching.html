@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/crosshatching/docs/effects-reference-crosshatching.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/crosshatching/docs/effects-reference-crosshatching.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -162,9 +162,36 @@ This produces stylized, textured palette mapping that blends palette reduction w
 <td>[0, 1]</td>
 <td>Hw much of the orginal image to show compared to the background color.</td>
 </tr>
+<tr>
+<td><strong>Use Orientation Map</strong></td>
+<td>true / false</td>
+<td>Enables sampling hatch orientation from the orientation texture instead of relying only on the orientation scheme.</td>
+</tr>
+<tr>
+<td><strong>Use UV Map</strong></td>
+<td>true / false</td>
+<td>Enables UV-map–driven sampling of hatch textures instead of screen-space UVs.</td>
+</tr>
+<tr>
+<td><strong>UV Map</strong></td>
+<td>🔳</td>
+<td>UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Use Depth Compensation</strong></td>
+<td>true / false</td>
+<td>When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
+</tr>
 </tbody>
 </table>
 <p><img src="effects/images/convex-hull-hatch.png" alt=""></p>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+&gt;   for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+</ul>
+</div>
 <h2 id="mixbox-convex-hull-hatch">Mixbox Convex Hull Hatch</h2>
 <blockquote>
 <p>Requires <a href="../../common/docs/mixbox.html">Mixbox</a>.</p>
@@ -242,9 +269,36 @@ This produces pigment-like transitions, watercolor and gouache–style layering,
 <td>[0, 1]</td>
 <td>Blends between the original pixel color and the background color.</td>
 </tr>
+<tr>
+<td><strong>Use Orientation Map</strong></td>
+<td>true / false</td>
+<td>Enables sampling hatch orientation from the orientation texture instead of relying only on the orientation scheme.</td>
+</tr>
+<tr>
+<td><strong>Use UV Map</strong></td>
+<td>true / false</td>
+<td>Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.</td>
+</tr>
+<tr>
+<td><strong>UV Map</strong></td>
+<td>🔳</td>
+<td>UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Use Depth Compensation</strong></td>
+<td>true / false</td>
+<td>When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to reduce popping and discontinuities.</td>
+</tr>
 </tbody>
 </table>
 <p><img src="effects/images/mixbox-convex-hull-hatch.png" alt=""></p>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+</ul>
+</div>
 <h2 id="simple-hatch">Simple Hatch</h2>
 <p>Applies layered cross-hatching based on image brightness.
 Darker regions receive more hatch layers; bright regions remain mostly untouched.
@@ -319,10 +373,37 @@ The hatch texture is rotated per layer according to the selected orientation sch
 <td>[0, 1]</td>
 <td>Blends transitions between hatch layers for smoother tonal changes.</td>
 </tr>
+<tr>
+<td><strong>Use Orientation Map</strong></td>
+<td>On / Off</td>
+<td>Enables sampling hatch orientation from the orientation texture instead of relying only on the orientation scheme.</td>
+</tr>
+<tr>
+<td><strong>Use UV Map</strong></td>
+<td>On / Off</td>
+<td>Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.</td>
+</tr>
+<tr>
+<td><strong>UV Map</strong></td>
+<td>🔳</td>
+<td>UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.</td>
+</tr>
+<tr>
+<td><strong>Use Depth Compensation</strong></td>
+<td>On / Off</td>
+<td>When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
+</tr>
 </tbody>
 </table>
 <p><img src="effects/images/simple-hatch.png" alt=""></p>
 <p><img src="effects/images/simple-hatch.png" alt=""></p>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+</ul>
+</div>
 
 </article>
 

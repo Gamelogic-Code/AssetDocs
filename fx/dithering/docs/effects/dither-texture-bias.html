@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/dithering/docs/effects/dither-texture-bias.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/effects/dither-texture-bias.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -139,6 +139,21 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <td>[0, 1]</td>
 <td>Controls how soft the transitions between quantization steps are.</td>
 </tr>
+<tr>
+<td>Use UV Map</td>
+<td>true / false</td>
+<td>Enables UV-map–driven sampling of the dither pattern instead of screen-space UVs.</td>
+</tr>
+<tr>
+<td>UV Map</td>
+<td>🔳</td>
+<td>UV map texture used to drive pattern sampling when <strong>Use UV Map</strong> is enabled.</td>
+</tr>
+<tr>
+<td>Use Depth Compensation</td>
+<td>true / false</td>
+<td>If enabled, compensates for depth when using a UV map so the pattern appears the same scale at different distances. Blends between adjacent depth bands to reduce popping and discontinuities.</td>
+</tr>
 </tbody>
 </table>
 <div class="TIP">
@@ -147,12 +162,32 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <li>A neutral pattern (flat gray) produces no dithering.</li>
 <li>Bayer, blue noise, and photographic film-style patterns give very different looks.</li>
 <li>When using high smoothness values, subtle dithering patterns can act as a film-grain-like texture.</li>
+<li>You can render out a UV Map with the <a href="../../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
 </ul>
 </div>
 <p><img src="images/dither_texture_bias_hard.png" alt=""></p>
 <p><em>Hard quantization with strong dithering.</em></p>
 <p><img src="images/dither_texture_bias_soft.png" alt=""></p>
 <p><em>Soft quantization with smoothness applied.</em></p>
+<p>Below are <strong>additions only</strong> to the existing documentation, following <strong>exactly</strong> the style you demonstrated (single unified table, shader features surfaced as properties, no extra sections).</p>
+<hr>
+<h3 id="added-properties">Added Properties</h3>
+<p>Append the following rows to the existing property table:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<hr>
+<hr>
+<p>No other user-facing properties are present in the shader.
+Internal parameters such as mip bias and depth-band blending are handled automatically by the renderer and are intentionally not exposed.</p>
+<p>Send the next one when ready.</p>
 
 </article>
 

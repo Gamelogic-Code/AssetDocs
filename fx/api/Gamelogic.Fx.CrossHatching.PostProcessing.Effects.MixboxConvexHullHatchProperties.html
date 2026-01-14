@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MixboxConvexHullHatchProperties | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MixboxConvexHullHatchProperties | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties">
+
+
+
+  <h1 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties" class="text-break">
+Class MixboxConvexHullHatchProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.html">CrossHatching</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.PostProcessing.html">PostProcessing</a>.<a class="xref" href="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.html">Effects</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gamelogic.Fx.CrossHatching.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public sealed class MixboxConvexHullHatchProperties : ShaderProperties</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html">ShaderProperties</a></div>
+      <div><span class="xref">MixboxConvexHullHatchProperties</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_Shader">ShaderProperties.Shader</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture">ShaderProperties.RequiresDepthTexture</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture">ShaderProperties.RequiresNormalsTexture</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_BackgroundColor_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.BackgroundColor*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_BackgroundColor" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.BackgroundColor">
+  BackgroundColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the background reference color used as the starting point
+for Mixbox convex-hull color projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BackgroundColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_BaseOrientation_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.BaseOrientation*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_BaseOrientation" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.BaseOrientation">
+  BaseOrientation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the base rotation angle, in degrees, applied before per-layer orientation is added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BaseOrientation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchStrength_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchStrength*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchStrength" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchStrength">
+  HatchStrength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how strongly the hatch pattern influences Mixbox color projection.
+Higher values increase the impact of the hatching texture on palette blending.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HatchStrength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchTexture_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchTexture" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchTexture">
+  HatchTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the hatch texture used to modulate Mixbox convex-hull projection.
+Typically, a tileable line or stipple pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture HatchTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchTextureTilingOffset_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchTextureTilingOffset*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchTextureTilingOffset" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchTextureTilingOffset">
+  HatchTextureTilingOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling offset applied to the hatch texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 HatchTextureTilingOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchTextureTilingScale_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchTextureTilingScale*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_HatchTextureTilingScale" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.HatchTextureTilingScale">
+  HatchTextureTilingScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling scale applied to the hatch texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 HatchTextureTilingScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_LayerCount_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.LayerCount*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_LayerCount" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.LayerCount">
+  LayerCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the number of hatching layers used to modulate the Mixbox convex-hull projection.
+Higher values increase texture density and layering depth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LayerCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_LayerOffset_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.LayerOffset*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_LayerOffset" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.LayerOffset">
+  LayerOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the per-layer UV offset applied to the hatch texture.
+The offset is multiplied by the current layer index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 LayerOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationFromTexture_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationFromTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationFromTexture" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationFromTexture">
+  OrientationFromTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether hatch orientation should be sampled from an orientation texture
+instead of being derived solely from the orientation scheme.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OrientationFromTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationScheme_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationScheme*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationScheme" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationScheme">
+  OrientationScheme
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the orientation scheme used to rotate hatching layers.
+This determines how hatch angles vary across successive layers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrientationScheme OrientationScheme { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.CrossHatching.OrientationScheme.html">OrientationScheme</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationTexture_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationTexture*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationTexture" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationTexture">
+  OrientationTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the texture used to sample per-region hatch orientation
+when orientation-from-texture mode is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture OrientationTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationTextureTilingOffset_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationTextureTilingOffset*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationTextureTilingOffset" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationTextureTilingOffset">
+  OrientationTextureTilingOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling offset applied to the orientation texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 OrientationTextureTilingOffset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationTextureTilingScale_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationTextureTilingScale*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OrientationTextureTilingScale" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OrientationTextureTilingScale">
+  OrientationTextureTilingScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the tiling scale applied to the orientation texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 OrientationTextureTilingScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_PrimaryColors_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.PrimaryColors*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_PrimaryColors" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.PrimaryColors">
+  PrimaryColors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the collection of primary colors that define the convex hull.
+These colors act as palette anchors toward which pixel colors are iteratively blended using Mixbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Color&gt; PrimaryColors { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_ShaderName_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.ShaderName*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_ShaderName" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.ShaderName">
+  ShaderName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the shader used by this property set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ShaderName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_ShaderName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This name is passed to the internal shader lookup system when the properties are enabled.
+It should match the full shader path as defined in the shader file.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OnEnable_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OnEnable*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OnEnable" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the owning component or asset is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OnEnable_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default implementation resolves the shader using <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>.
+Subclasses overriding this method should normally call <code>base.OnEnable()</code>.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OnValidate_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OnValidate*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OnValidate" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.OnValidate">
+  OnValidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when serialized values are changed in the inspector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnValidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_OnValidate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Override this method to clamp values, enforce invariants, or perform lightweight validation
+in response to inspector edits.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_SetMaterialProperties_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.SetMaterialProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.SetMaterialProperties(UnityEngine.Material)">
+  SetMaterialProperties(Material)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.crosshatching/Runtime/Core/Scripts/PostProcessing/Effects/MixboxConvexHullHatchProperties.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies all shader-related properties to the given material.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetMaterialProperties(Material effectMaterial)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectMaterial</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_SetMaterialProperties_UnityEngine_Material__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
+(for example, floats, vectors, colors, textures, and keywords).</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

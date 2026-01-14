@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/uvs-from-texture/apiSpec/new?filename=Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature" class="text-break">
-Class GLBilateralFilterRenderFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLBilateralFilterRenderFeature.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class GLBilateralFilterRenderFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/uvs-from-texture/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLBilateralFilterRenderFeature.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -111,7 +111,7 @@ See <a href="../common/docs/effects-reference-common.html#bilateral-filter">../c
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/common/docs/effects-reference-common.html#bilateral-filter&quot;)]
-public class GLBilateralFilterRenderFeature : SeparableRenderFeature, IDisposable</code></pre>
+public class GLBilateralFilterRenderFeature : SeparableRenderFeature&lt;BilateralProperties&gt;, IDisposable</code></pre>
   </div>
 
 
@@ -124,7 +124,7 @@ public class GLBilateralFilterRenderFeature : SeparableRenderFeature, IDisposabl
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
       <div><span class="xref">ScriptableRendererFeature</span></div>
-      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature.html">SeparableRenderFeature</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature-1.html">SeparableRenderFeature</a>&lt;<a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.BilateralProperties.html">BilateralProperties</a>&gt;</div>
       <div><span class="xref">GLBilateralFilterRenderFeature</span></div>
     </dd>
   </dl>
@@ -141,10 +141,13 @@ public class GLBilateralFilterRenderFeature : SeparableRenderFeature, IDisposabl
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_SeparableRenderFeature_Create">SeparableRenderFeature.Create()</a>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRenderFeature_1_OnValidate">SeparableRenderFeature&lt;BilateralProperties&gt;.OnValidate()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_SeparableRenderFeature_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">SeparableRenderFeature.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRenderFeature_1_Create">SeparableRenderFeature&lt;BilateralProperties&gt;.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRenderFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">SeparableRenderFeature&lt;BilateralProperties&gt;.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
     </div>
     <div>
       <span class="xref">ScriptableRendererFeature.isActive</span>
@@ -324,142 +327,6 @@ public class GLBilateralFilterRenderFeature : SeparableRenderFeature, IDisposabl
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_RangeSigma_" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.RangeSigma*"></a>
-
-  <h3 id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_RangeSigma" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.RangeSigma">
-  RangeSigma
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLBilateralFilterRenderFeature.cs/#L30"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float RangeSigma { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_ShaderName_" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.ShaderName*"></a>
-
-  <h3 id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_ShaderName" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.ShaderName">
-  ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLBilateralFilterRenderFeature.cs/#L40"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Must return the name of the shader used by both the horizontal and vertical passes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string ShaderName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_SpatialSigma_" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.SpatialSigma*"></a>
-
-  <h3 id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_SpatialSigma" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.SpatialSigma">
-  SpatialSigma
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLBilateralFilterRenderFeature.cs/#L20"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float SpatialSigma { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_SetMaterialProperties_" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.SetMaterialProperties*"></a>
-
-  <h3 id="Gamelogic_Fx_URP_PostProcessing_Effects_GLBilateralFilterRenderFeature_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLBilateralFilterRenderFeature.SetMaterialProperties(UnityEngine.Material)">
-  SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLBilateralFilterRenderFeature.cs/#L42"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Allows subclasses to set additional shader properties that vary per effect.
-Called just before each pass is executed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void SetMaterialProperties(Material material)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>material</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
-    <dd><p>The material associated with the pass.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
 
 
 

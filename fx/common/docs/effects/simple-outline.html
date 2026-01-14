@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/effects/simple-outline.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="simple-outline">Simple Outline</h2>
+<p>Detects edges in the image using a Sobel-style filter and draws an outline based on a configurable threshold.
+Edges can be detected from the original image, scene depth, scene normals, or an explicit source texture.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outline Source</td>
+<td>{0, 1, 2, 3}</td>
+<td>Selects the source used for edge detection. See <strong>Outline Sources</strong> below.</td>
+</tr>
+<tr>
+<td>Jump Size</td>
+<td>[0, ∞)</td>
+<td>Multiplies the sampling offset. Larger values produce thicker, coarser outlines.</td>
+</tr>
+<tr>
+<td>Edge Factor</td>
+<td>[0, ∞)</td>
+<td>Scales the detected edge strength before thresholding. Used to make threshold tuning easier.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>[0, ∞)</td>
+<td>Edge strength above which a pixel is considered part of an outline.</td>
+</tr>
+<tr>
+<td>Line Color</td>
+<td>🎨</td>
+<td>Color used to draw detected edges. Alpha controls how much it blends over the original image.</td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td>🎨</td>
+<td>Color used where no edge is detected. Alpha controls blending with the original image.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outline-sources">Outline Sources</h3>
+<ul>
+<li><strong>Camera Color</strong> – Uses the rendered image.</li>
+<li><strong>Alternate Texture</strong> – Uses an explicitly provided texture (<code>outlineSourceTexture</code>) as the edge source.</li>
+<li><strong>Depth Texture</strong> – Detects edges from scene depth.</li>
+<li><strong>Normals Texture</strong> – Detects edges from scene normals.</li>
+</ul>
+<hr>
+<h2 id="using-depth-and-normals-textures">Using Depth and Normals Textures</h2>
+<p>This effect can derive edges from <strong>scene depth</strong> or <strong>scene normals</strong>, but the setup differs depending on the render pipeline.</p>
+<h3 id="built-in-render-pipeline">Built-in Render Pipeline</h3>
+<p>When using <strong>Depth Texture</strong> or <strong>Normals Texture</strong> as the outline source, you must ensure the camera generates the required textures.</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li><p>Set the camera’s <code>depthTextureMode</code> manually:</p>
+<ul>
+<li><code>Depth</code> for depth-based outlines</li>
+<li><code>DepthNormals</code> for normal-based outlines</li>
+</ul>
+</li>
+<li><p>Or add the <strong><code>RequiresDepthNormals</code></strong> component to the camera, which configures this automatically.</p>
+</li>
+</ul>
+<p>If the required textures are not enabled, depth- or normal-based outline modes will not work.</p>
+<h3 id="universal-render-pipeline-urp">Universal Render Pipeline (URP)</h3>
+<p>Nothing is required to enable depth or normals textures in URP, as this is handled internally.</p>
+<p>However, sometimes the normals don't work in the editor. Playing the game usually fixes this.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>To draw outlines over the original image, set <code>Background Color</code> alpha to <code>0</code> and <code>Line Color</code> alpha to <code>1</code>.</li>
+<li>If the outline is hard to tune, start with <code>Edge Factor = 1</code>, find usable lower and upper threshold bounds, then
+adjust <code>Edge Factor</code> to bring the threshold into a convenient range.</li>
+<li>You can render out an <a href="../maps/id-map.html"><code>IDMap</code></a> and use it as the <code>AlternateTexture</code> source to outline
+objects.</li>
+<li>The Jump distance is a cheap way to control outline thickness, but may produce artifacts on thin features. A
+better approach is to use a Min filter (for dark outlines) or Max filter (for light outlines) after the outline pass.</li>
+</ul>
+</div>
+<p><img src="images/simple-outline.png" alt=""></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

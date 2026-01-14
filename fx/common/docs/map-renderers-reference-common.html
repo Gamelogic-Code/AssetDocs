@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Map renderers reference: Common | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Map renderers reference: Common | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/map-renderers-reference-common.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="map-renderers-reference-common">Map renderers reference: Common</h1>
+
+<p><img src="../images/reference.png" alt=""></p>
+<p><em>This image shows the original scene without any post processing.</em></p>
+<h2 id="depth-map">Depth Map</h2>
+<p>Renders a depth map from the camera’s perspective, encoding distance from the camera into grayscale.
+Supports both <strong>linear</strong> and <strong>logarithmic</strong> depth encodings, making it suitable for debugging depth,
+driving effects like fog or outlines, or serving as an intermediate buffer for other shaders.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encoding</td>
+<td>{0, 1}</td>
+<td>Selects the depth encoding mode. <code>0</code> = Linear depth, <code>1</code> = Logarithmic depth</td>
+</tr>
+<tr>
+<td>Near Plane</td>
+<td>(0, ∞)</td>
+<td>Camera near-plane distance used for depth normalization</td>
+</tr>
+<tr>
+<td>Far Plane</td>
+<td>(0, ∞)</td>
+<td>Camera far-plane distance used for depth normalization</td>
+</tr>
+</tbody>
+</table>
+<h3 id="encoding-modes">Encoding Modes</h3>
+<ul>
+<li><p><strong>Linear Depth</strong><br>
+Depth is mapped linearly from the near plane to the far plane.<br>
+Useful for simple visualizations and effects where uniform depth distribution is acceptable.</p>
+</li>
+<li><p><strong>Logarithmic Depth</strong><br>
+Depth is mapped using a logarithmic curve, allocating more precision close to the camera.<br>
+This is especially useful for large scenes where linear depth would compress most values near black.</p>
+</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>Logarithmic depth is often preferable when visualizing or processing large depth ranges.</li>
+<li>Linear depth is easier to reason about numerically and may be better for simple threshold-based effects.</li>
+<li>The near and far plane values must match the camera settings used to render the scene.</li>
+</ul>
+</div>
+<p><img src="maps/images/depth_map_linear.png" alt="">
+<img src="maps/images/depth_map_logarithmic.png" alt=""></p>
+<h2 id="id-map">ID Map</h2>
+<p>Renders a <strong>per-object ID map</strong> by assigning each renderer a unique, deterministic color.
+Each object is filled with a solid color derived from its instance ID, making this map
+useful for object selection, masking, outlining, and other object-aware effects.</p>
+<p>The color is computed on the CPU and passed to the shader via a material property block,
+ensuring consistency across frames without requiring per-pixel computation.</p>
+<p>(This effect has no adjustable shader properties.)</p>
+<h3 id="how-it-works">How It Works</h3>
+<ul>
+<li>Each renderer’s <code>InstanceID</code> is hashed into a pseudo-random RGB color.</li>
+<li>The hashing is deterministic: the same object will always receive the same color
+within a session.</li>
+<li>The entire object is rendered with a constant color, producing flat, clearly
+segmented regions.</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>This map is ideal as an intermediate buffer for effects such as outlines,
+object highlighting, selection masks, or editor visualization tools.</li>
+<li>Colors are not guaranteed to be perceptually distinct for very large numbers
+of objects, but collisions are rare for typical scene sizes.</li>
+</ul>
+</div>
+<p><img src="maps/images/id_map.png" alt=""></p>
+<h2 id="normal-map">Normal Map</h2>
+<p>Renders a normal map based on the <strong>world-space surface normals</strong> of the geometry.
+Normals are encoded into RGB colors, making this shader useful for debugging geometry,
+driving stylized effects, or supplying auxiliary normal data to other rendering passes.</p>
+<p>Two encoding modes are supported: a direct RGB mapping and a hemispherical variant that
+folds normals toward a reference direction.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encoding</td>
+<td>{0, 1}</td>
+<td>Selects the normal encoding mode. <code>0</code> = Raw normals, <code>1</code> = Hemispherical flip</td>
+</tr>
+</tbody>
+</table>
+<h3 id="encoding-modes">Encoding Modes</h3>
+<ul>
+<li><p><strong>Raw Normals</strong><br>
+World-space normals are mapped directly to color using the transform<br>
+<code>(normal * 0.5) + 0.5</code>.<br>
+This produces the familiar RGB normal-map visualization.</p>
+</li>
+<li><p><strong>Hemispherical Normals</strong><br>
+Normals are first folded toward a fixed reference vector before encoding.<br>
+If a normal points away from the reference direction, it is flipped, causing
+both directions to map to the same hemisphere.</p>
+<p>This is useful when directionality matters only up to sign, such as when
+collapsing opposing normals into a single lobe.</p>
+</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>This shader encodes <strong>world-space</strong> normals. Rotating or scaling objects will affect the output.</li>
+<li>The hemispherical encoding folds normals relative to a fixed reference direction, not the camera.</li>
+<li>Raw normal encoding is ideal for debugging geometry and validating normal transforms.</li>
+</ul>
+</div>
+<p><img src="maps/images/normal_map_raw.png" alt="">
+<img src="maps/images/normal_map_hemispherical.png" alt=""></p>
+<h2 id="uv-map">UV Map</h2>
+<p>Renders the mesh’s UV coordinates directly to color, making UV layout and distortion
+easy to inspect. The <strong>U</strong> coordinate is written to the red channel and <strong>V</strong> to the green channel,
+with values wrapped into the <code>[0,1)</code> range.</p>
+<p>Several optional adjustments allow the UVs to be modified based on material tiling,
+object distance to the camera, or object scale.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main Texture</td>
+<td>🔳</td>
+<td>Reference texture used only for material tiling and offset.</td>
+</tr>
+<tr>
+<td>UV Scale Offset</td>
+<td>—</td>
+<td>Scale and offset applied to UVs when material tiling adjustment is enabled.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background">Background</h3>
+<p>Pixels not covered by geometry are rendered using a <strong>dedicated UV background shader</strong>.
+The background renders a procedural UV pattern using its own independent scale and offset,
+allowing you to control how empty areas of the map appear.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background UV Scale</td>
+<td>—</td>
+<td>Scales the UV coordinates used for the background pattern.</td>
+</tr>
+<tr>
+<td>Background UV Offset</td>
+<td>—</td>
+<td>Offsets the UV coordinates used for the background pattern.</td>
+</tr>
+</tbody>
+</table>
+<p>The background UVs are generated independently of scene geometry and are useful for:</p>
+<ul>
+<li>Visual reference in empty regions</li>
+<li>Diagnosing UV continuity at geometry boundaries</li>
+<li>Maintaining consistent UV context across the entire render target</li>
+</ul>
+<h3 id="uv-adjustments">UV Adjustments</h3>
+<p>The following adjustments are controlled via shader variants and may be enabled
+from either the map renderer (BI) or map renderer feature (URP):</p>
+<ul>
+<li><p><strong>Adjust by Material Tiling</strong><br>
+Applies the material’s texture scale and offset (<code>_MainTex_ST</code>) to the UVs.
+This matches how the texture would normally be sampled in a standard shader.</p>
+</li>
+<li><p><strong>Adjust by Object Distance</strong><br>
+Scales UVs inversely with the object’s distance from the camera.
+Objects farther away produce denser UV patterns, which can be useful for
+debugging scale-dependent effects.</p>
+</li>
+<li><p><strong>Adjust by Object Scale</strong><br>
+Scales UVs based on the average world-space scale of the object.
+This helps visualize how non-uniform object scaling affects UV-driven effects.</p>
+</li>
+</ul>
+<p>After all adjustments, the UVs are wrapped using <code>frac</code>, producing a repeating pattern.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>This shader is ideal for effects that supports UV mapping. This allows an
+effect that would normally stick to the camera to stick to objects instead.</li>
+<li>Although this shader can be used to drive other properties, the seems caused
+by wrapping may make it unsuitable.</li>
+</ul>
+</div>
+<p><img src="maps/images/uv_map_basic.png" alt="">
+<img src="maps/images/uv_map_adjusted.png" alt=""></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

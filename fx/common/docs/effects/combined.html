@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Gamelogic Fx </title>
+      <title>Separable Effects | Gamelogic Fx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Gamelogic Fx ">
+      <meta name="title" content="Separable Effects | Gamelogic Fx ">
       
       
       <link rel="icon" href="../../../images/gamelogic_favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/common/docs/effects/combined.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/effects/combined.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -127,8 +127,8 @@
 For example, <code>Min = (-.1, -.1, -.1, 0)</code> and <code>Max = (.1, .1, .1, 0)</code> will leave
 the alpha channel in tact.</p>
 </div>
-<p><img src="images/add_texture.png" alt="">
-﻿## Adjust Gamma</p>
+<p><img src="images/add_texture.png" alt=""></p>
+<h2 id="adjust-gamma">Adjust Gamma</h2>
 <p>Adjust the gamma of the image.</p>
 <table>
 <thead>
@@ -147,9 +147,9 @@ the alpha channel in tact.</p>
 </tbody>
 </table>
 <p><img src="images/adjust_gamma_low.png" alt="">
-<img src="images/adjust_gamma_high.png" alt="">
-﻿## Blend Texture
-Blends an overlay texture with the image based on its alpha and the specified opacity.</p>
+<img src="images/adjust_gamma_high.png" alt=""></p>
+<h2 id="blend-texture">Blend Texture</h2>
+<p>Blends an overlay texture with the image based on its alpha and the specified opacity.</p>
 <table>
 <thead>
 <tr>
@@ -179,8 +179,8 @@ Blends an overlay texture with the image based on its alpha and the specified op
 <li>This is also useful to add noise, an important ingredient in many effects.</li>
 </ul>
 </div>
-<p><img src="images/blend_texture.png" alt="">
-﻿## Box Blur</p>
+<p><img src="images/blend_texture.png" alt=""></p>
+<h2 id="box-blur">Box Blur</h2>
 <blockquote>
 <p><a href="separable.md">Separable</a></p>
 </blockquote>
@@ -222,8 +222,8 @@ Blends an overlay texture with the image based on its alpha and the specified op
 <p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
 </div>
 
-<p><img src="images/box_blur.png" alt="">
-﻿## Convex Hull Map</p>
+<p><img src="images/box_blur.png" alt=""></p>
+<h2 id="convex-hull-map">Convex Hull Map</h2>
 <p>Maps each pixel’s color toward a set of primary colors using iterative convex‐hull projection.
 This effect gradually shifts colors toward the provided primaries, producing posterized, clustered, or palette–constrained looks.</p>
 <table>
@@ -265,12 +265,12 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 <li>Works well for stylized looks: painterly clusters, reduced palettes, or “vectorized” color fields.</li>
 </ul>
 </div>
-<p><img src="images/convex_hull_map.png" alt="">
-﻿## Desaturate
-Removes color saturation from the image, producing a grayscale result based on luminance.</p>
+<p><img src="images/convex_hull_map.png" alt=""></p>
+<h2 id="desaturate">Desaturate</h2>
+<p>Removes color saturation from the image, producing a grayscale result based on luminance.</p>
 <p>(This effect has no adjustable properties. It fully desaturates the image according to its luminance.)</p>
-<p><img src="images/desaturate.png" alt="">
-﻿## Gaussian Blur</p>
+<p><img src="images/desaturate.png" alt=""></p>
+<h2 id="gaussian-blur">Gaussian Blur</h2>
 <blockquote>
 <p><a href="separable.md">Separable</a></p>
 </blockquote>
@@ -334,8 +334,8 @@ Removes color saturation from the image, producing a grayscale result based on l
 <li>Typically, you can use <code>Sigma = Kernel Size  / 6</code>.</li>
 </ul>
 </div>
-<p><img src="images/gaussian_blur.png" alt="">
-﻿## Max Filter</p>
+<p><img src="images/gaussian_blur.png" alt=""></p>
+<h2 id="max-filter">Max Filter</h2>
 <blockquote>
 <p><a href="separable.md">Separable</a></p>
 </blockquote>
@@ -378,8 +378,8 @@ Removes color saturation from the image, producing a grayscale result based on l
 <p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
 </div>
 
-<p><img src="images/max_filter.png" alt="">
-﻿## Min Filter</p>
+<p><img src="images/max_filter.png" alt=""></p>
+<h2 id="min-filter">Min Filter</h2>
 <blockquote>
 <p><a href="separable.md">Separable</a></p>
 </blockquote>
@@ -422,8 +422,8 @@ Removes color saturation from the image, producing a grayscale result based on l
 <p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
 </div>
 
-<p><img src="images/min_filter.png" alt="">
-﻿## Mixbox Convex Hull Map</p>
+<p><img src="images/min_filter.png" alt=""></p>
+<h2 id="mixbox-convex-hull-map">Mixbox Convex Hull Map</h2>
 <blockquote>
 <p>Requires <a href="../mixbox.html">Mixbox</a>.</p>
 </blockquote>
@@ -476,9 +476,9 @@ This produces smoother, more natural transitions than standard linear interpolat
 <li>Try limiting the primary set (e.g., only 3–5 colors) for highly stylized palettes.</li>
 </ul>
 </div>
-<p><img src="images/mixbox_convex_hull_map.png" alt="">
-﻿## Pixelate
-Applies a pixelation effect to the image by sampling blocks of pixels instead of individual texels.</p>
+<p><img src="images/mixbox_convex_hull_map.png" alt=""></p>
+<h2 id="pixelate">Pixelate</h2>
+<p>Applies a pixelation effect to the image by sampling blocks of pixels instead of individual texels.</p>
 <table>
 <thead>
 <tr>
@@ -495,8 +495,8 @@ Applies a pixelation effect to the image by sampling blocks of pixels instead of
 </tr>
 </tbody>
 </table>
-<p><img src="images/pixelate.png" alt="">
-﻿## Power Mean</p>
+<p><img src="images/pixelate.png" alt=""></p>
+<h2 id="power-mean">Power Mean</h2>
 <blockquote>
 <p><a href="separable.md">Separable</a></p>
 </blockquote>
@@ -567,8 +567,7 @@ Applies a pixelation effect to the image by sampling blocks of pixels instead of
 <li>Can be used for &quot;soft&quot; min or max filters.</li>
 </ul>
 </div>
-<p><img src="images/power_mean.png" alt="">
-﻿</p>
+<p><img src="images/power_mean.png" alt=""></p>
 <h2 id="quantize">Quantize</h2>
 <p>Reduces the number of distinct color values in the image, creating a posterized or stylized effect.</p>
 <table>
@@ -601,8 +600,8 @@ colorful result.</p>
 <p><img src="images/quantize_hard.png" alt=""></p>
 <p><em>This is with Smoothness = 0 (hard transitions). The level count is 2 for red, 4 for the other 2.</em></p>
 <p><img src="images/quantize_smooth.png" alt=""></p>
-<p><em>This is with Smoothness = 0.1 (smooth transitions).</em>
-﻿### Separable Properties</p>
+<p><em>This is with Smoothness = 0.1 (smooth transitions).</em></p>
+<h3 id="separable-properties">Separable Properties</h3>
 <table>
 <thead>
 <tr>
@@ -636,9 +635,9 @@ colorful result.</p>
 </table>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.<br>
-﻿# Separable Effects</p>
+<p>Increasing the Jump Size can be a cheap way to fake a bigger kernel, but it does not always work.</p>
 </div>
+<h1 id="separable-effects">Separable Effects</h1>
 <div class="NOTE">
 <h5>Note</h5>
 <p>This is an implementation detail relevant when using separable shaders directly,
@@ -653,9 +652,9 @@ The idea is simple:</p>
 <p>This approach reduces the cost from <strong>quadratic</strong> (sampling a 2D kernel) to <strong>linear</strong> in the kernel size, which is a major performance win.</p>
 <p>Some effects are implemented with this two-pass scheme even when they are not strictly separable; in many cases the visual results are still more than good enough.</p>
 <hr>
-<p>If you want, I can also rewrite it in a more formal, more casual, or more mathematical tone.
-﻿## Tri-tone Map
-Maps the image’s tones to three colors (low, mid, and high) based on lightness, smoothly blending between them using inverse linear interpolation.</p>
+<p>If you want, I can also rewrite it in a more formal, more casual, or more mathematical tone.</p>
+<h2 id="tri-tone-map">Tri-tone Map</h2>
+<p>Maps the image’s tones to three colors (low, mid, and high) based on lightness, smoothly blending between them using inverse linear interpolation.</p>
 <table>
 <thead>
 <tr>

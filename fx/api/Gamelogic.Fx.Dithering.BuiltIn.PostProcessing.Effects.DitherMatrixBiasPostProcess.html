@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess" class="text-break">
-Class DitherMatrixBiasPostProcess  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class DitherMatrixBiasPostProcess  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -111,7 +111,7 @@ See <a href="../dithering/docs/effects-reference-dithering.html#dither-matrix-bi
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/dithering/docs/effects-reference-dithering.html#dither-matrix-bias&quot;)]
-public sealed class DitherMatrixBiasPostProcess : NamedShaderPostProcess, IPostProcess</code></pre>
+public sealed class DitherMatrixBiasPostProcess : PostProcess&lt;DitherMatrixBiasProperties&gt;, IPostProcess</code></pre>
   </div>
 
 
@@ -127,7 +127,7 @@ public sealed class DitherMatrixBiasPostProcess : NamedShaderPostProcess, IPostP
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
       <div><span class="xref">GLMonoBehaviour</span></div>
       <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html">PostProcess</a></div>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess.html">NamedShaderPostProcess</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html">PostProcess</a>&lt;<a class="xref" href="Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html">DitherMatrixBiasProperties</a>&gt;</div>
       <div><span class="xref">DitherMatrixBiasPostProcess</span></div>
     </dd>
   </dl>
@@ -144,19 +144,13 @@ public sealed class DitherMatrixBiasPostProcess : NamedShaderPostProcess, IPostP
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_NamedShaderPostProcess_OnEnable">NamedShaderPostProcess.OnEnable()</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_1_Properties">PostProcess&lt;DitherMatrixBiasProperties&gt;.Properties</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_NamedShaderPostProcess_ReloadShader">NamedShaderPostProcess.ReloadShader()</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_1_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_">PostProcess&lt;DitherMatrixBiasProperties&gt;.OnRenderImage(RenderTexture, RenderTexture)</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_Start">PostProcess.Start()</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_">PostProcess.OnRenderImage(RenderTexture, RenderTexture)</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_OnDisable">PostProcess.OnDisable()</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_1_ReloadShader">PostProcess&lt;DitherMatrixBiasProperties&gt;.ReloadShader()</a>
     </div>
     <div>
       <a class="xref" href="https://www.gamelogic.co.za/documentation/extensions/api/Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</a>
@@ -543,334 +537,6 @@ public sealed class DitherMatrixBiasPostProcess : NamedShaderPostProcess, IPostP
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_DitherAmountMax_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.DitherAmountMax*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_DitherAmountMax" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.DitherAmountMax">
-  DitherAmountMax
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L100"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float DitherAmountMax { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_DitherAmountMin_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.DitherAmountMin*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_DitherAmountMin" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.DitherAmountMin">
-  DitherAmountMin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L90"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float DitherAmountMin { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_LevelCount_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.LevelCount*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_LevelCount" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.LevelCount">
-  LevelCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L60"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int3 LevelCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">int3</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_MatrixB_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.MatrixB*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_MatrixB" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.MatrixB">
-  MatrixB
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L78"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatMatrix MatrixB { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_MatrixG_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.MatrixG*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_MatrixG" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.MatrixG">
-  MatrixG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L72"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatMatrix MatrixG { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_MatrixR_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.MatrixR*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_MatrixR" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.MatrixR">
-  MatrixR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L66"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatMatrix MatrixR { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_PixelSize_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.PixelSize*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_PixelSize" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.PixelSize">
-  PixelSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L84"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 PixelSize { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_ShaderName_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.ShaderName*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_ShaderName" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.ShaderName">
-  ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L120"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The name of the shader to use for this post process.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string ShaderName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_ShaderName_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Implementors: The shader name should be the same as used in the shader's &quot;Shader&quot; declaration, for example, to use the shader
-below, the shader name would be &quot;Gamelogic/Fx/YourShaderName&quot;.</p>
-<p>Shader &quot;Gamelogic/Fx/YourShaderName&quot;
-{
-...
-}</p>
-</div>
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_Smoothness_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.Smoothness*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_Smoothness" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.Smoothness">
-  Smoothness
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L110"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Smoothness { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_SetMaterialProperties_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.SetMaterialProperties*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_BuiltIn_PostProcessing_Effects_DitherMatrixBiasPostProcess_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.SetMaterialProperties(UnityEngine.Material)">
-  SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/BuiltIn/Scripts/PostProcessing/Effects/DitherMatrixBiasPostProcess.cs/#L122"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Applies all the properties defined for this post process in the inspector to the <span class="xref">Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.EffectMaterial</span>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void SetMaterialProperties(Material effectMaterial)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>effectMaterial</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Material.html">Material</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
 

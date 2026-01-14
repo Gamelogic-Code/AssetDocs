@@ -102,19 +102,14 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.GenericPostProcess.html">GenericPostProcess</a></dt>
-      <dd><p>Allows you to use an arbitrary shader as a full screen post process effect and configure its properties in the
-inspector.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess.html">NamedShaderPostProcess</a></dt>
-      <dd><p>A post process shader that gets the shader to use from the name.</p>
+      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html">MaskedPostProcessRunner</a></dt>
+      <dd><p>Runs all post-processes found in children of a given root on the <a class="xref" href="https://docs.unity3d.com/ScriptReference/Camera.html">Camera</a> this script is
+attached to, but applies a mask and effect strength.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html">PostProcess</a></dt>
-      <dd><p>Contains basic functionality for a full screen post process effect.</p>
+      <dd><p>The base class for all post process effects.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -124,7 +119,23 @@ attached to.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html">SeparableNamedShaderPostProcess</a></dt>
+      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html">PostProcess&lt;TShaderProperties&gt;</a></dt>
+      <dd><p>⭐ Contains basic functionality for a full screen post process effect.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.RequireDepthNormals.html">RequireDepthNormals</a></dt>
+      <dd><p>Add this script to a camera to ensure that it generates a depth normals texture.
+Only relevant when using the Built-in Render Pipeline.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess.html">SeparablePostProcess</a></dt>
+      <dd><p>The base class for all separable post process effects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html">SeparablePostProcess&lt;TShaderProperties&gt;</a></dt>
       <dd><p>Encapsulates a post process based on a separable filter, such as a box blur.</p>
 </dd>
     </dl>

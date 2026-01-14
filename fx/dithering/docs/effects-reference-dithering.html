@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/dithering/docs/effects-reference-dithering.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/effects-reference-dithering.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -140,6 +140,21 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <td>[0, 1]</td>
 <td>Controls how soft the transitions between quantization steps are.</td>
 </tr>
+<tr>
+<td>Use UV Map</td>
+<td>true / false</td>
+<td>Enables UV-map–driven sampling of the dither pattern instead of screen-space UVs.</td>
+</tr>
+<tr>
+<td>UV Map</td>
+<td>🔳</td>
+<td>UV map texture used to drive pattern sampling when <strong>Use UV Map</strong> is enabled.</td>
+</tr>
+<tr>
+<td>Use Depth Compensation</td>
+<td>true / false</td>
+<td>If enabled, compensates for depth when using a UV map so the pattern appears the same scale at different distances. Blends between adjacent depth bands to reduce popping and discontinuities.</td>
+</tr>
 </tbody>
 </table>
 <div class="TIP">
@@ -148,12 +163,32 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <li>A neutral pattern (flat gray) produces no dithering.</li>
 <li>Bayer, blue noise, and photographic film-style patterns give very different looks.</li>
 <li>When using high smoothness values, subtle dithering patterns can act as a film-grain-like texture.</li>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
 </ul>
 </div>
 <p><img src="effects/images/dither_texture_bias_hard.png" alt=""></p>
 <p><em>Hard quantization with strong dithering.</em></p>
 <p><img src="effects/images/dither_texture_bias_soft.png" alt=""></p>
 <p><em>Soft quantization with smoothness applied.</em></p>
+<p>Below are <strong>additions only</strong> to the existing documentation, following <strong>exactly</strong> the style you demonstrated (single unified table, shader features surfaced as properties, no extra sections).</p>
+<hr>
+<h3 id="added-properties">Added Properties</h3>
+<p>Append the following rows to the existing property table:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<hr>
+<hr>
+<p>No other user-facing properties are present in the shader.
+Internal parameters such as mip bias and depth-band blending are handled automatically by the renderer and are intentionally not exposed.</p>
+<p>Send the next one when ready.</p>
 <h2 id="dither-matrix-bias">Dither Matrix Bias</h2>
 <blockquote>
 <p>Built-in Only</p>
@@ -204,6 +239,26 @@ This effect is ideal for designing and testing custom dithering patterns using s
 <td>[0, 1]</td>
 <td>Controls the softness of the quantization steps.</td>
 </tr>
+<tr>
+<td>Pixel Offset</td>
+<td>ℤ³</td>
+<td>Integer offset applied to the pixel grid before sampling the matrices. Useful for shifting or animating patterns.</td>
+</tr>
+<tr>
+<td>Use UV Map</td>
+<td>true / false</td>
+<td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
+</tr>
+<tr>
+<td>UV Map</td>
+<td>🔳</td>
+<td>UV map texture used to drive matrix sampling instead of screen-space UVs if enabled.</td>
+</tr>
+<tr>
+<td>Use Depth Compensation</td>
+<td>true / false</td>
+<td>If on, scales the pattern to compensate for depth, so texture look the same size at any distace when using UV map. It blends between adjacent depth bands when using a UV map to smooth transitions.</td>
+</tr>
 </tbody>
 </table>
 <div class="NOTE">
@@ -211,6 +266,13 @@ This effect is ideal for designing and testing custom dithering patterns using s
 <p>This shader is mainly intended for <strong>designing your own dithering patterns</strong>.
 Once you’re satisfied with a matrix pattern, use the <strong>Dither Pattern Generator</strong> to convert it into a texture,
 then switch to <strong>Dither Texture Bias</strong> for better performance.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+</ul>
 </div>
 <p><img src="effects/images/dither_matrix_bias_hard.png" alt="">
 <img src="effects/images/dither_matrix_bias_soft.png" alt=""></p>

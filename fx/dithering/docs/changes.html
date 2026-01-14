@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/updated-documentation/DocSrc/dithering/docs/changes.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/changes.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,13 +94,33 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="110---2025-12-11">[1.1.0] - 2025-12-11</h2>
+<h2 id="200---2026">[2.0.0] - 2026</h2>
 <h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li>Added a <a href="../../common/docs/effects-reference-common.html#simple-outline">simple Outline</a> effect that often makes scenes easier to read.</li>
+<li>Added <a href="../../common/docs/map-renderers-reference-common.html">map renderers</a> (UV, normal, depth and instance ID).</li>
+<li>Added support for using UV map instead of screen UVs to sample the dithering texture or matrix. See
+<a href="effects/dither-matrix-bias.html">Dither Matrix Bias</a>, for example.</li>
+</ul>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li>Updated to the Gamelogic.Fx version 2.0.0.</li>
+</ul>
+<h3 id="-samples">🧪 Samples</h3>
+<ul>
+<li>Expanded the sample to show new features, including new effects.</li>
+</ul>
+<h3 id="upgrade-notes">Upgrade notes</h3>
+<ul>
+<li>It is best to uninstall and reinstall the package when upgrading.</li>
+</ul>
+<h2 id="110---2025-12-11">[1.1.0] - 2025-12-11</h2>
+<h3 id="-new-features-1">🎉 New Features</h3>
 <ul>
 <li>Added public properties to all post process effects (both Built-In and URP).</li>
 <li>Fixed shader serialization so shaders are now automatically included in builds.</li>
 </ul>
-<h3 id="-engineering">🔧 Engineering</h3>
+<h3 id="-engineering-1">🔧 Engineering</h3>
 <ul>
 <li>Updated to use Gamelogic Fx 1.1.0. This includes
 <ul>

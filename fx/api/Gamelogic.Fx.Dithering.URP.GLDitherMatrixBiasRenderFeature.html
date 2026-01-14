@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/uvs-from-texture/apiSpec/new?filename=Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature" class="text-break">
-Class GLDitherMatrixBiasRenderFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Class GLDitherMatrixBiasRenderFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/uvs-from-texture/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -111,7 +111,7 @@ See <a href="../dithering/docs/effects-reference-dithering.html#dither-matrix-bi
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/dithering/docs/effects-reference-dithering.html#dither-matrix-bias&quot;)]
-public sealed class GLDitherMatrixBiasRenderFeature : PostProcessRenderFeature, IDisposable</code></pre>
+public sealed class GLDitherMatrixBiasRenderFeature : PostProcessRenderFeature&lt;DitherMatrixBiasProperties&gt;, IDisposable</code></pre>
   </div>
 
 
@@ -125,6 +125,7 @@ public sealed class GLDitherMatrixBiasRenderFeature : PostProcessRenderFeature, 
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
       <div><span class="xref">ScriptableRendererFeature</span></div>
       <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html">PostProcessRenderFeature</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature-1.html">PostProcessRenderFeature</a>&lt;<a class="xref" href="Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html">DitherMatrixBiasProperties</a>&gt;</div>
       <div><span class="xref">GLDitherMatrixBiasRenderFeature</span></div>
     </dd>
   </dl>
@@ -141,13 +142,13 @@ public sealed class GLDitherMatrixBiasRenderFeature : PostProcessRenderFeature, 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_OnEnable">PostProcessRenderFeature.OnEnable()</a>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_1_OnValidate">PostProcessRenderFeature&lt;DitherMatrixBiasProperties&gt;.OnValidate()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_Create">PostProcessRenderFeature.Create()</a>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_1_Create">PostProcessRenderFeature&lt;DitherMatrixBiasProperties&gt;.Create()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">PostProcessRenderFeature.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
+      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">PostProcessRenderFeature&lt;DitherMatrixBiasProperties&gt;.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
     </div>
     <div>
       <span class="xref">ScriptableRendererFeature.isActive</span>
@@ -323,335 +324,6 @@ public sealed class GLDitherMatrixBiasRenderFeature : PostProcessRenderFeature, 
   </dd></dl>
 
 
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_DitherAmountMax_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.DitherAmountMax*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_DitherAmountMax" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.DitherAmountMax">
-  DitherAmountMax
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L111"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float DitherAmountMax { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_DitherAmountMin_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.DitherAmountMin*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_DitherAmountMin" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.DitherAmountMin">
-  DitherAmountMin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L101"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float DitherAmountMin { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_LevelCount_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.LevelCount*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_LevelCount" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.LevelCount">
-  LevelCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L71"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3Int LevelCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3Int.html">Vector3Int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_MatrixB_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.MatrixB*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_MatrixB" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.MatrixB">
-  MatrixB
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L89"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatMatrix MatrixB { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_MatrixG_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.MatrixG*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_MatrixG" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.MatrixG">
-  MatrixG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L83"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatMatrix MatrixG { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_MatrixR_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.MatrixR*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_MatrixR" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.MatrixR">
-  MatrixR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L77"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatMatrix MatrixR { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_PixelSize_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.PixelSize*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_PixelSize" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.PixelSize">
-  PixelSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L95"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 PixelSize { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_ShaderName_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.ShaderName*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_ShaderName" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.ShaderName">
-  ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L131"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the name of the shader that implements this feature.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string ShaderName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_ShaderName_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Implementers: override this to specify the shader to use for the implementation of the effect.</p>
-</div>
-
-
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_Smoothness_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.Smoothness*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_Smoothness" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.Smoothness">
-  Smoothness
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L121"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Smoothness { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_GetPass_" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.GetPass*"></a>
-
-  <h3 id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_GetPass" data-uid="Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.GetPass">
-  GetPass()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx.dithering/Runtime/URP/Scripts/PostProcessing/Effects/GLDitherMatrixBiasRenderFeature.cs/#L134"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the pass used to implement this effect.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override PostEffectPass GetPass()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.html">PostEffectPass</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="Gamelogic_Fx_Dithering_URP_GLDitherMatrixBiasRenderFeature_GetPass_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This assumes effects are single pass.</p>
-<p>Implementors: return the pass that implements the effect you are creating.
-For simple passes (that only need to set material properties), you can use <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_CreateSimplePass_System_String_System_Action_UnityEngine_Material__">CreateSimplePass(string, Action&lt;Material&gt;)</a> to
-create the pass.</p>
-</div>
 
 
 

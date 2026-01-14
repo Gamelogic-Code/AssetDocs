@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_URP_PostProcessing_PostEffectPass.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.PostProcessing.PostEffectPass%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_URP_PostProcessing_PostEffectPass.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.PostProcessing.PostEffectPass%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass" class="text-break">
-Class PostEffectPass  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class PostEffectPass  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,7 @@ Class PostEffectPass  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Gamelogic.Fx.URP.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Implements a basic pass that for <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html">PostProcessRenderFeature</a>.</p>
+  <div class="markdown summary"><p>Implements a basic pass that for <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.html">PostProcessRendererFeature</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -190,9 +190,6 @@ Class PostEffectPass  <a class="header-action link-secondary" title="View source
       <span class="xref">ScriptableRenderPass.ConfigureClear(ClearFlag, Color)</span>
     </div>
     <div>
-      <span class="xref">ScriptableRenderPass.OnCameraSetup(CommandBuffer, ref RenderingData)</span>
-    </div>
-    <div>
       <span class="xref">ScriptableRenderPass.Configure(CommandBuffer, RenderTextureDescriptor)</span>
     </div>
     <div>
@@ -240,8 +237,8 @@ Class PostEffectPass  <a class="header-action link-secondary" title="View source
 
 
   <h2 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Although this class is easy to extend, in many cases <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRenderFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRenderFeature_CreateSimplePass_System_String_System_Action_UnityEngine_Material__">CreateSimplePass(string, Action&lt;Material&gt;)</a>
-will be sufficient.</p>
+  <div class="markdown level0 remarks"><p>Although this class is easy to extend, in many cases
+<a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CreateSimplePass_System_String_System_Action_UnityEngine_Material__System_Boolean_System_Boolean_">CreateSimplePass(string, Action&lt;Material&gt;, bool, bool)</a> will be sufficient.</p>
 </div>
 
 
@@ -251,9 +248,9 @@ will be sufficient.</p>
 
   <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass__ctor_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.#ctor*"></a>
 
-  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass__ctor_UnityEngine_Material_UnityEngine_Rendering_Universal_RenderPassEvent_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.#ctor(UnityEngine.Material,UnityEngine.Rendering.Universal.RenderPassEvent)">
-  PostEffectPass(Material, RenderPassEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass__ctor_UnityEngine_Material_UnityEngine_Rendering_Universal_RenderPassEvent_System_Boolean_System_Boolean_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.#ctor(UnityEngine.Material,UnityEngine.Rendering.Universal.RenderPassEvent,System.Boolean,System.Boolean)">
+  PostEffectPass(Material, RenderPassEvent, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.html">PostEffectPass</a> class.</p>
@@ -261,7 +258,7 @@ will be sufficient.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected PostEffectPass(Material material, RenderPassEvent injectionPoint)</code></pre>
+    <pre><code class="lang-csharp hljs">protected PostEffectPass(Material material, RenderPassEvent injectionPoint, bool requiresNormals = false, bool requiresDepth = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -271,6 +268,12 @@ will be sufficient.</p>
 </dd>
     <dt><code>injectionPoint</code> <span class="xref">RenderPassEvent</span></dt>
     <dd><p>The render pass event to inject the effect at.</p>
+</dd>
+    <dt><code>requiresNormals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this effect requires normals texture.</p>
+</dd>
+    <dt><code>requiresDepth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this effect requires depth texture.</p>
 </dd>
   </dl>
 
@@ -293,7 +296,7 @@ will be sufficient.</p>
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_CommandName" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.CommandName">
   CommandName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The name of the command buffer used for this pass.</p>
@@ -329,7 +332,7 @@ will be sufficient.</p>
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_Execute_UnityEngine_Rendering_ScriptableRenderContext_UnityEngine_Rendering_Universal_RenderingData__" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.Execute(UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData@)">
   Execute(ScriptableRenderContext, ref RenderingData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Execute the pass. This is where custom rendering occurs. Specific details are left to the implementation</p>
@@ -361,11 +364,57 @@ will be sufficient.</p>
 
 
 
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_OnCameraSetup_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.OnCameraSetup*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_OnCameraSetup_UnityEngine_Rendering_CommandBuffer_UnityEngine_Rendering_Universal_RenderingData__" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.OnCameraSetup(UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.Universal.RenderingData@)">
+  OnCameraSetup(CommandBuffer, ref RenderingData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the renderer before rendering a camera
+Override this method if you need to to configure render targets and their clear state, and to create temporary render target textures.
+If a render pass doesn't override this method, this render pass renders to the active Camera's render target.
+You should never call CommandBuffer.SetRenderTarget. Instead call <code>ConfigureTarget</code> and <code>ConfigureClear</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cmd</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.html">CommandBuffer</a></dt>
+    <dd><p>CommandBuffer to enqueue rendering commands. This will be executed by the pipeline.</p>
+</dd>
+    <dt><code>renderingData</code> <span class="xref">RenderingData</span></dt>
+    <dd><p>Current rendering state information</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">ConfigureTarget</span>(<span class="xref">RenderTargetIdentifier</span>, <span class="xref">RenderTargetIdentifier</span>)</div>
+    <div><span class="xref">ConfigureClear</span>(<span class="xref">ClearFlag</span>, <a class="xref" href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>)</div>
+    </dd>
+  </dl>
+
+
   <a id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_SetMaterialProperties_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.SetMaterialProperties*"></a>
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostEffectPass_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostEffectPass.SetMaterialProperties(UnityEngine.Material)">
   SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostEffectPass.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This sets properties on the given material.</p>

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/updated-documentation/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_Effects_BoxBlurPostProcess.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlurPostProcess%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_Effects_BoxBlurPostProcess.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlurPostProcess%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_BuiltIn_PostProcessing_Effects_BoxBlurPostProcess" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlurPostProcess" class="text-break">
-Class BoxBlurPostProcess  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/Effects/BoxBlurPostProcess.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class BoxBlurPostProcess  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/Effects/BoxBlurPostProcess.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -112,7 +112,7 @@ See <a href="../common/docs/effects-reference-common.html#box-blur">../common/do
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/common/docs/effects-reference-common.html#box-blur&quot;)]
 [Version(1, 1, 0)]
-public class BoxBlurPostProcess : SeparableNamedShaderPostProcess, IPostProcess</code></pre>
+public sealed class BoxBlurPostProcess : SeparablePostProcess&lt;BoxBlurProperties&gt;, IPostProcess</code></pre>
   </div>
 
 
@@ -127,7 +127,9 @@ public class BoxBlurPostProcess : SeparableNamedShaderPostProcess, IPostProcess<
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
       <div><span class="xref">GLMonoBehaviour</span></div>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html">SeparableNamedShaderPostProcess</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html">PostProcess</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess.html">SeparablePostProcess</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html">SeparablePostProcess</a>&lt;<a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.BoxBlurProperties.html">BoxBlurProperties</a>&gt;</div>
       <div><span class="xref">BoxBlurPostProcess</span></div>
     </dd>
   </dl>
@@ -144,19 +146,19 @@ public class BoxBlurPostProcess : SeparableNamedShaderPostProcess, IPostProcess<
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparableNamedShaderPostProcess_Start">SeparableNamedShaderPostProcess.Start()</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_Start">SeparablePostProcess&lt;BoxBlurProperties&gt;.Start()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparableNamedShaderPostProcess_OnEnable">SeparableNamedShaderPostProcess.OnEnable()</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_OnEnable">SeparablePostProcess&lt;BoxBlurProperties&gt;.OnEnable()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparableNamedShaderPostProcess_OnDisable">SeparableNamedShaderPostProcess.OnDisable()</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_OnValidate">SeparablePostProcess&lt;BoxBlurProperties&gt;.OnValidate()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparableNamedShaderPostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_">SeparableNamedShaderPostProcess.OnRenderImage(RenderTexture, RenderTexture)</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_OnDisable">SeparablePostProcess&lt;BoxBlurProperties&gt;.OnDisable()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparableNamedShaderPostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparableNamedShaderPostProcess_SetMaterialProperties_Gamelogic_Fx_BuiltIn_PostProcessing_Direction_UnityEngine_Material_">SeparableNamedShaderPostProcess.SetMaterialProperties(Direction, Material)</a>
+      <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_">SeparablePostProcess&lt;BoxBlurProperties&gt;.OnRenderImage(RenderTexture, RenderTexture)</a>
     </div>
     <div>
       <a class="xref" href="https://www.gamelogic.co.za/documentation/extensions/api/Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</a>
@@ -540,47 +542,9 @@ public class BoxBlurPostProcess : SeparableNamedShaderPostProcess, IPostProcess<
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_Effects_BoxBlurPostProcess_ShaderName_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlurPostProcess.ShaderName*"></a>
-
-  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_Effects_BoxBlurPostProcess_ShaderName" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlurPostProcess.ShaderName">
-  ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/updated-documentation/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/Effects/BoxBlurPostProcess.cs/#L15"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string ShaderName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
 
 
 
