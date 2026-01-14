@@ -95,17 +95,14 @@
 <h1 id="effects-reference-dithering">Effects reference: Dithering</h1>
 
 <h2 id="dither-texture-bias">Dither Texture Bias</h2>
-<blockquote>
-<p>Built-in Only</p>
-</blockquote>
 <p>Turns the image into a dithered version using a <strong>user-provided texture pattern</strong>.
 The texture’s values act as a bias added to the image before quantization, producing a stylized dither effect.
 Use this effect when you want full artistic control over the pattern (Bayer, blue noise, etc.).</p>
 <p>The alpha channel is not changed by this effect.</p>
-<blockquote>
-<p>[!SEEALSO]
-<a href="dithering-tips.html">Dithering Tips</a></p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>See also <a href="dithering-tips.html">Dithering Tips</a></p>
+</div>
 <table>
 <thead>
 <tr>
@@ -117,7 +114,7 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <tbody>
 <tr>
 <td>Dither Pattern</td>
-<td>🔳</td>
+<td>🖼️</td>
 <td>The texture used as the dither pattern. Its RGB channels act as a per-pixel bias.</td>
 </tr>
 <tr>
@@ -147,7 +144,7 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 </tr>
 <tr>
 <td>UV Map</td>
-<td>🔳</td>
+<td>🖼️</td>
 <td>UV map texture used to drive pattern sampling when <strong>Use UV Map</strong> is enabled.</td>
 </tr>
 <tr>
@@ -190,16 +187,13 @@ for the built-in pipeline, or the corresponding renderer feature for URP. There 
 Internal parameters such as mip bias and depth-band blending are handled automatically by the renderer and are intentionally not exposed.</p>
 <p>Send the next one when ready.</p>
 <h2 id="dither-matrix-bias">Dither Matrix Bias</h2>
-<blockquote>
-<p>Built-in Only</p>
-</blockquote>
 <p>Turns the image into a dithered version using <strong>three independent user-supplied matrices</strong> (one for each color channel).
 This effect is ideal for designing and testing custom dithering patterns using small numerical matrices.</p>
 <p>The alpha channel is not changed by this effect.</p>
-<blockquote>
-<p>[!SEEALSO]
-<a href="dithering-tips.html">Dithering Tips</a></p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>See also <a href="dithering-tips.html">Dithering Tips</a></p>
+</div>
 <table>
 <thead>
 <tr>
@@ -251,7 +245,7 @@ This effect is ideal for designing and testing custom dithering patterns using s
 </tr>
 <tr>
 <td>UV Map</td>
-<td>🔳</td>
+<td>🖼️</td>
 <td>UV map texture used to drive matrix sampling instead of screen-space UVs if enabled.</td>
 </tr>
 <tr>
