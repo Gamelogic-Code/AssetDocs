@@ -94,10 +94,57 @@
         <article data-uid="">
 <h1 id="dithering-tips">Dithering Tips</h1>
 
-<p>The dithering shaders in this package do not pixelate the image. They add a pixelated pattern,
-but if the pixels are big you can see that pixels are not just one color. This can be useful since you retain high
-resolution and make the image easier to read.</p>
-<hr>
+<p>Tweaking the dithering post-effect is tricky. Many things must come together for it to look right.
+This guide is divided into three parts: <a href="#principles">Principles</a>, <a href="#decision-order">Decision order</a>, and
+<a href="#order-in-the-stack">Order in the stack</a>.</p>
+<p><em>Index terms:</em> dithering guidelines, resolution, color depth, max filter uses</p>
+<h2 id="principles">Principles</h2>
+<ul>
+<li>Dithering (and pixelation) destroy detail, so in general the scene should not rely on too high detail. The bigger the pixel size, the more detail gets destroyed.</li>
+<li>The pattern and the quantization levels together determine the apparent color depth.</li>
+<li>In a difficult-to-understand way, the dithering pattern used affects the emotional impact of the scene, and it is worth spending time to explore it. Presumably different patterns have different connotations.</li>
+<li>Dithering by itself does not pixelate the image. For matrix-bias dithering, you should usually also apply pixelation with the same pixel size (this makes the image look neater).</li>
+</ul>
+<p><img src="../images/dither_without_pixelate.png" alt=""></p>
+<p><em>Dithering without pixelation. Note the diagonal and round edges.</em></p>
+<p><img src="../images/dither_with_pixelate.png" alt=""></p>
+<p><em>Dithering with pixelation. The edges are now pixelated too.</em></p>
+<ul>
+<li><p>When applying matrix-bias dithering, fine lines cause a lot of visual artifacts, especially with moving cameras or objects. In this case, it may be visually better to <em>not</em> pixelate the scene.</p>
+</li>
+<li><p>A min or max filter can sometimes be useful to make lines thicker and render with fewer artifacts.</p>
+</li>
+<li><p>High detail can be better preserved when you do not pixelate.</p>
+</li>
+<li><p>Adding smooth noise changes the quantization patterns. This can make very geometric scenes more organic.</p>
+</li>
+<li><p>Emphasizing edges can make a scene easier to read. You can do this by:</p>
+<ul>
+<li>Adding an outline.</li>
+<li>Applying a min, max, or power-mean filter. This will add <em>some</em> edges to the scene. Min will add some dark edges, max will add some light edges, and power-mean could do either based on settings. Which works best depends a lot on where lowlights and highlights fall, so lighting is a critical factor.</li>
+</ul>
+</li>
+<li><p>Using different quantization levels for each channel, and different dithering patterns, affects the color balance. It does so in ways that can be hard to understand, but it is worth using this lever.</p>
+<ul>
+<li>Common choices are <code>2, 3, 4</code> or <code>2, 4, 4</code> for quantization levels.</li>
+</ul>
+</li>
+<li><p>Lowering the dither min darkens the scene, and increasing the max lightens it. Having them close together gives a cleaner look; having them far apart gives more dithering and therefore looks messier. Usually you want the min and max to balance each other out, equally far away from the center.</p>
+</li>
+<li><p>Increasing smoothness increases color depth and can make scenes easier to read. When used with texture-bias it often makes the overall look more organic (for example with hatching patterns) or more clean (for example with dots or line patterns).
+<img src="../images/dither_matrix_bias_hard.png" alt="">
+<img src="../images/dither_matrix_bias_soft.png" alt=""></p>
+</li>
+<li><p>To get monochromatic dithering, use the <strong>Desaturate</strong> effect before dithering.</p>
+</li>
+</ul>
+<p><img src="../images/dithering_monochrome.png" alt=""></p>
+<p><em>Monochromatic dithering achieved by desaturating before dithering.</em></p>
+<ul>
+<li>Tweaking the min and max dithering amounts is easier when you use a color ramp to visualize how many colors are
+in use and how they are distributed. (See below.)</li>
+</ul>
+<h3 id="using-ramps">Using ramps</h3>
 <p>Use a color ramp when you tweak the dithering min and max amounts to help you see how it affects your
 distribution of grays and how many colors appear in the mix.</p>
 <p><img src="../images/thin_transition_regions.png" alt="">
@@ -108,21 +155,51 @@ distribution of grays and how many colors appear in the mix.</p>
 <em>The min and max dither amounts are even further apart, giving dithering with overlapping transition regions.</em></p>
 <p>If the min and max are close to each other, the transition regions are thin. If they are far apart, the transition
 regions are thick, and may overlap.</p>
-<hr>
+<h2 id="decision-order">Decision Order</h2>
+<p>Tweaking is an organic, iterative process, but the overall order can make things easier or harder. The order below
+prioritizes bigger, more impactful decisions first. It is normal to go through the sequence two or three times, making
+smaller tweaks each pass.</p>
+<ol>
+<li>For static screenshots: the camera position. For video: the camera path.</li>
+<li>If you want one-channel color, apply a desaturation filter.</li>
+<li>The overall, crude lighting.</li>
+<li>Features that affect the apparent resolution and color depth:
+<ul>
+<li>For matrix-bias dithering: the pixel size, whether to pixelate, the matrix patterns, and the quantization levels.</li>
+<li>For texture-bias dithering: the texture pattern, texture scale, and quantization levels.</li>
+</ul>
+</li>
+<li>Dither cleanliness using dither min and dither max.</li>
+<li>Features that affect the value distribution, tuned for readability and atmosphere:
+<ul>
+<li>Lighting tweaks.</li>
+<li>The sky color and other important patches of color.</li>
+<li>Gamma.</li>
+<li>Color mapping.</li>
+</ul>
+</li>
+<li>Noise, usually smooth noise.</li>
+<li>Features that affect edges: outlines, blur, min, max, or power-mean.</li>
+<li>Dither smoothness.</li>
+</ol>
+<h2 id="order-in-the-stack">Order in the Stack</h2>
+<p>The effects affect each other, so the order matters. This is a typical order that works well and simplifies tweaking:</p>
+<ul>
+<li>Desaturation (if present).</li>
+<li>Gamma.</li>
+<li>Noise.</li>
+<li>Min, max, power-mean, blur.</li>
+<li>Pixelation.</li>
+<li>Dithering.</li>
+<li>Color mapping.</li>
+</ul>
+<p>Interesting effects can sometimes be obtained with a different order. For example, applying a min or max filter after dithering will lead to differently sized pixels.</p>
+<h2 id="the-dithering-shaders-in-this-package-do-not-pixelate-the-image-they-add-a-pixelated-pattern">The dithering shaders in this package do not pixelate the image. They add a pixelated pattern,</h2>
 <p>You can add some smoothing to the dithering effect by increasing the Smoothness property. This will make the transitions
 between colors softer, making the image easier to read (and in cases more attractive).</p>
-<p><img src="../images/dither_matrix_bias_hard.png" alt="">
-<img src="../images/dither_matrix_bias_soft.png" alt=""></p>
 <hr>
 <p>If you <em>do</em> want pixelated effect, run the pixelate effect before dithering with the same pixel size.</p>
-<p><img src="../images/dither_without_pixelate.png" alt=""></p>
-<p><em>Dithering without pixelation. Note the diagonal and round edges.</em></p>
-<p><img src="../images/dither_with_pixelate.png" alt=""></p>
-<p><em>Dithering with pixelation. The edges are now pixelated too.</em></p>
 <hr>
-<p>To get monochromatic dithering, use the <strong>Desaturate</strong> effect before dithering.</p>
-<p><img src="../images/dithering_monochrome.png" alt=""></p>
-<p><em>Monochromatic dithering achieved by desaturating before dithering.</em></p>
 <p>You can use the Tritone Map effect after dithering to color the image back again.
 <img src="../images/dithering_monochrome_mapped.png" alt=""></p>
 <p>Set the smoothing in the dithering to non-zero to get the midtone too:
