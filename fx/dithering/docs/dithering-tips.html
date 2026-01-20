@@ -140,6 +140,10 @@ This guide is divided into three parts: <a href="#principles">Principles</a>, <a
 </ul>
 <p><img src="../images/dithering_monochrome.png" alt=""></p>
 <p><em>Monochromatic dithering achieved by desaturating before dithering.</em></p>
+<p>You can use the Tritone Map effect after dithering to color the image back again.
+<img src="../images/dithering_monochrome_mapped.png" alt=""></p>
+<p>Set the smoothing in the dithering to non-zero to get the midtone too:
+<img src="../images/dithering_monochrome_mapped_smooth.png" alt=""></p>
 <ul>
 <li>Tweaking the min and max dithering amounts is easier when you use a color ramp to visualize how many colors are
 in use and how they are distributed. (See below.)</li>
@@ -194,16 +198,6 @@ smaller tweaks each pass.</p>
 <li>Color mapping.</li>
 </ul>
 <p>Interesting effects can sometimes be obtained with a different order. For example, applying a min or max filter after dithering will lead to differently sized pixels.</p>
-<h2 id="the-dithering-shaders-in-this-package-do-not-pixelate-the-image-they-add-a-pixelated-pattern">The dithering shaders in this package do not pixelate the image. They add a pixelated pattern,</h2>
-<p>You can add some smoothing to the dithering effect by increasing the Smoothness property. This will make the transitions
-between colors softer, making the image easier to read (and in cases more attractive).</p>
-<hr>
-<p>If you <em>do</em> want pixelated effect, run the pixelate effect before dithering with the same pixel size.</p>
-<hr>
-<p>You can use the Tritone Map effect after dithering to color the image back again.
-<img src="../images/dithering_monochrome_mapped.png" alt=""></p>
-<p>Set the smoothing in the dithering to non-zero to get the midtone too:
-<img src="../images/dithering_monochrome_mapped_smooth.png" alt=""></p>
 
 </article>
 
