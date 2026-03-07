@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class GLTriToneMapRendererFeature | Gamelogic Fx </title>
+      <title>Class GLNormalMapRendererFeature | Gamelogic Fx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GLTriToneMapRendererFeature | Gamelogic Fx ">
+      <meta name="title" content="Class GLNormalMapRendererFeature | Gamelogic Fx ">
       
-      <meta name="description" content="Maps the image’s tones to three colors (low, mid, and high) based on lightness, smoothly blending between them using inverse linear interpolation. See ../common/docs/effects-reference-common.html#tri-tone-map.">
+      <meta name="description" content="Feature for rendering a normal map of the scene. See ../common/docs/map-renderers-reference-common.html#normal-map.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/video-brush-strokes/apiSpec/new?filename=Gamelogic_Fx_URP_PostProcessing_Effects_GLTriToneMapRendererFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.PostProcessing.Effects.GLTriToneMapRendererFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/video-brush-strokes/apiSpec/new?filename=Gamelogic_Fx_URP_Mapping_Maps_GLNormalMapRendererFeature.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -91,28 +91,27 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLTriToneMapRendererFeature">
+        <article data-uid="Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature">
 
 
 
-  <h1 id="Gamelogic_Fx_URP_PostProcessing_Effects_GLTriToneMapRendererFeature" data-uid="Gamelogic.Fx.URP.PostProcessing.Effects.GLTriToneMapRendererFeature" class="text-break">
-Class GLTriToneMapRendererFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/video-brush-strokes/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/Effects/GLTriToneMapRendererFeature.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Gamelogic_Fx_URP_Mapping_Maps_GLNormalMapRendererFeature" data-uid="Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature" class="text-break">
+Class GLNormalMapRendererFeature  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/video-brush-strokes/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/Maps/GLNormalMapRendererFeature.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.URP.html">URP</a>.<a class="xref" href="Gamelogic.Fx.URP.PostProcessing.html">PostProcessing</a>.<a class="xref" href="Gamelogic.Fx.URP.PostProcessing.Effects.html">Effects</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.URP.html">URP</a>.<a class="xref" href="Gamelogic.Fx.URP.Mapping.html">Mapping</a>.<a class="xref" href="Gamelogic.Fx.URP.Mapping.Maps.html">Maps</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Gamelogic.Fx.URP.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Maps the image’s tones to three colors (low, mid, and high) based on lightness,
-smoothly blending between them using inverse linear interpolation.
-See <a href="../common/docs/effects-reference-common.html#tri-tone-map">../common/docs/effects-reference-common.html#tri-tone-map</a>.</p>
+  <div class="markdown summary"><p>Feature for rendering a normal map of the scene.
+See <a href="../common/docs/map-renderers-reference-common.html#normal-map">../common/docs/map-renderers-reference-common.html#normal-map</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/common/docs/effects-reference-common.html#tri-tone-map&quot;)]
-public sealed class GLTriToneMapRendererFeature : PostProcessRendererFeature&lt;TriToneMapProperties&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/common/docs/map-renderers-reference-common.html#normal-map&quot;)]
+public sealed class GLNormalMapRendererFeature : GLMapRendererFeature&lt;NormalMapProperties&gt;, IDisposable</code></pre>
   </div>
 
 
@@ -125,9 +124,9 @@ public sealed class GLTriToneMapRendererFeature : PostProcessRendererFeature&lt;
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
       <div><span class="xref">ScriptableRendererFeature</span></div>
-      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.html">PostProcessRendererFeature</a></div>
-      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html">PostProcessRendererFeature</a>&lt;<a class="xref" href="Gamelogic.Fx.PostProcessing.Effects.TriToneMapProperties.html">TriToneMapProperties</a>&gt;</div>
-      <div><span class="xref">GLTriToneMapRendererFeature</span></div>
+      <div><a class="xref" href="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.html">GLMapRendererFeature</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html">GLMapRendererFeature</a>&lt;<a class="xref" href="Gamelogic.Fx.Mapping.Maps.NormalMapProperties.html">NormalMapProperties</a>&gt;</div>
+      <div><span class="xref">GLNormalMapRendererFeature</span></div>
     </dd>
   </dl>
 
@@ -143,10 +142,10 @@ public sealed class GLTriToneMapRendererFeature : PostProcessRendererFeature&lt;
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Create">PostProcessRendererFeature&lt;TriToneMapProperties&gt;.Create()</a>
+      <a class="xref" href="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Create">GLMapRendererFeature&lt;NormalMapProperties&gt;.Create()</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">PostProcessRendererFeature&lt;TriToneMapProperties&gt;.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
+      <a class="xref" href="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__">GLMapRendererFeature&lt;NormalMapProperties&gt;.AddRenderPasses(ScriptableRenderer, ref RenderingData)</a>
     </div>
     <div>
       <span class="xref">ScriptableRendererFeature.isActive</span>

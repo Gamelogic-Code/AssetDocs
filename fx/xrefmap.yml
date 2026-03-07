@@ -2407,31 +2407,31 @@ references:
   commentId: N:Gamelogic.Fx.EditorTextureGenerator
   fullName: Gamelogic.Fx.EditorTextureGenerator
   nameWithType: Gamelogic.Fx.EditorTextureGenerator
-- uid: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException
-  name: PropertyNotfoundException
+- uid: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException
+  name: PropertyNotFoundException
   href: api/Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.html
-  commentId: T:Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException
-  fullName: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException
-  nameWithType: PropertyNotfoundException
-- uid: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.#ctor(System.String,UnityEditor.SerializedObject)
-  name: PropertyNotfoundException(string, SerializedObject)
-  href: api/Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.html#Gamelogic_Fx_EditorTextureGenerator_PropertyNotfoundException__ctor_System_String_UnityEditor_SerializedObject_
-  commentId: M:Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.#ctor(System.String,UnityEditor.SerializedObject)
+  commentId: T:Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException
+  fullName: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException
+  nameWithType: PropertyNotFoundException
+- uid: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.#ctor(System.String,UnityEditor.SerializedObject)
+  name: PropertyNotFoundException(string, SerializedObject)
+  href: api/Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.html#Gamelogic_Fx_EditorTextureGenerator_PropertyNotFoundException__ctor_System_String_UnityEditor_SerializedObject_
+  commentId: M:Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.#ctor(System.String,UnityEditor.SerializedObject)
   name.vb: New(String, SerializedObject)
-  fullName: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.PropertyNotfoundException(string, UnityEditor.SerializedObject)
-  fullName.vb: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.New(String, UnityEditor.SerializedObject)
-  nameWithType: PropertyNotfoundException.PropertyNotfoundException(string, SerializedObject)
-  nameWithType.vb: PropertyNotfoundException.New(String, SerializedObject)
-- uid: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.#ctor*
-  name: PropertyNotfoundException
-  href: api/Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.html#Gamelogic_Fx_EditorTextureGenerator_PropertyNotfoundException__ctor_
-  commentId: Overload:Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.#ctor
+  fullName: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.PropertyNotFoundException(string, UnityEditor.SerializedObject)
+  fullName.vb: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.New(String, UnityEditor.SerializedObject)
+  nameWithType: PropertyNotFoundException.PropertyNotFoundException(string, SerializedObject)
+  nameWithType.vb: PropertyNotFoundException.New(String, SerializedObject)
+- uid: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.#ctor*
+  name: PropertyNotFoundException
+  href: api/Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.html#Gamelogic_Fx_EditorTextureGenerator_PropertyNotFoundException__ctor_
+  commentId: Overload:Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.PropertyNotfoundException
-  fullName.vb: Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.New
-  nameWithType: PropertyNotfoundException.PropertyNotfoundException
-  nameWithType.vb: PropertyNotfoundException.New
+  fullName: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.PropertyNotFoundException
+  fullName.vb: Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException.New
+  nameWithType: PropertyNotFoundException.PropertyNotFoundException
+  nameWithType.vb: PropertyNotFoundException.New
 - uid: Gamelogic.Fx.EditorTextureGenerator.SerializedPropertyExtensions
   name: SerializedPropertyExtensions
   href: api/Gamelogic.Fx.EditorTextureGenerator.SerializedPropertyExtensions.html
@@ -3274,15 +3274,31 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.MaterialExtensions.SetIntegerUniversal
   nameWithType: MaterialExtensions.SetIntegerUniversal
-- uid: Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material,System.String,Gamelogic.Extensions.Texture2DTiling)
-  name: SetTextureTiling(Material, string, Texture2DTiling)
-  href: api/Gamelogic.Fx.MaterialExtensions.html#Gamelogic_Fx_MaterialExtensions_SetTextureTiling_UnityEngine_Material_System_String_Gamelogic_Extensions_Texture2DTiling_
-  commentId: M:Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material,System.String,Gamelogic.Extensions.Texture2DTiling)
-  name.vb: SetTextureTiling(Material, String, Texture2DTiling)
-  fullName: Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material, string, Gamelogic.Extensions.Texture2DTiling)
-  fullName.vb: Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material, String, Gamelogic.Extensions.Texture2DTiling)
-  nameWithType: MaterialExtensions.SetTextureTiling(Material, string, Texture2DTiling)
-  nameWithType.vb: MaterialExtensions.SetTextureTiling(Material, String, Texture2DTiling)
+- uid: Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup(UnityEngine.Material,System.String,System.String[])
+  name: SetKeywordOfGroup(Material, string, string[])
+  href: api/Gamelogic.Fx.MaterialExtensions.html#Gamelogic_Fx_MaterialExtensions_SetKeywordOfGroup_UnityEngine_Material_System_String_System_String___
+  commentId: M:Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup(UnityEngine.Material,System.String,System.String[])
+  name.vb: SetKeywordOfGroup(Material, String, String())
+  fullName: Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup(UnityEngine.Material, string, string[])
+  fullName.vb: Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup(UnityEngine.Material, String, String())
+  nameWithType: MaterialExtensions.SetKeywordOfGroup(Material, string, string[])
+  nameWithType.vb: MaterialExtensions.SetKeywordOfGroup(Material, String, String())
+- uid: Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup*
+  name: SetKeywordOfGroup
+  href: api/Gamelogic.Fx.MaterialExtensions.html#Gamelogic_Fx_MaterialExtensions_SetKeywordOfGroup_
+  commentId: Overload:Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup
+  isSpec: "True"
+  fullName: Gamelogic.Fx.MaterialExtensions.SetKeywordOfGroup
+  nameWithType: MaterialExtensions.SetKeywordOfGroup
+- uid: Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material,System.String,Gamelogic.Extensions.TextureTiling)
+  name: SetTextureTiling(Material, string, TextureTiling)
+  href: api/Gamelogic.Fx.MaterialExtensions.html#Gamelogic_Fx_MaterialExtensions_SetTextureTiling_UnityEngine_Material_System_String_Gamelogic_Extensions_TextureTiling_
+  commentId: M:Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material,System.String,Gamelogic.Extensions.TextureTiling)
+  name.vb: SetTextureTiling(Material, String, TextureTiling)
+  fullName: Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material, string, Gamelogic.Extensions.TextureTiling)
+  fullName.vb: Gamelogic.Fx.MaterialExtensions.SetTextureTiling(UnityEngine.Material, String, Gamelogic.Extensions.TextureTiling)
+  nameWithType: MaterialExtensions.SetTextureTiling(Material, string, TextureTiling)
+  nameWithType.vb: MaterialExtensions.SetTextureTiling(Material, String, TextureTiling)
 - uid: Gamelogic.Fx.MaterialExtensions.SetTextureTiling*
   name: SetTextureTiling
   href: api/Gamelogic.Fx.MaterialExtensions.html#Gamelogic_Fx_MaterialExtensions_SetTextureTiling_
@@ -4942,6 +4958,12 @@ references:
   commentId: T:Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRenderer
   fullName: Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRenderer
   nameWithType: GLNormalMapRenderer
+- uid: Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature
+  name: GLNormalMapRendererFeature
+  href: api/Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature.html
+  commentId: T:Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature
+  fullName: Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature
+  nameWithType: GLNormalMapRendererFeature
 - uid: Gamelogic.Fx.URP.Mapping.Maps.GLUVMapRenderFeature
   name: GLUVMapRenderFeature
   href: api/Gamelogic.Fx.URP.Mapping.Maps.GLUVMapRenderFeature.html

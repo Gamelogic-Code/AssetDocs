@@ -134,7 +134,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.Direction",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Direction.yml\" sourcestartlinenumber=\"1\">Specifies the axis direction for a single pass of a separable post-process effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -162,7 +162,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.Effects.AdjustGammaPostProcess",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.AdjustGammaPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that adjust the gamma of the image.\nSee <a href=\"../common/docs/effects-reference-common.html#adjust-gamma\">../common/docs/effects-reference-common.html#adjust-gamma</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.AdjustGammaPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that adjusts the gamma of the image.\nSee <a href=\"../common/docs/effects-reference-common.html#adjust-gamma\">../common/docs/effects-reference-common.html#adjust-gamma</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -204,7 +204,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BlendTexturePostProcess",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BlendTexturePostProcess.yml\" sourcestartlinenumber=\"1\">A post process that outputs a fullscreen constant textureTiling.\nSee <a href=\"../common/docs/effects-reference-common.html#blend-texture\">../common/docs/effects-reference-common.html#blend-texture</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BlendTexturePostProcess.yml\" sourcestartlinenumber=\"1\">A post process that blends a texture over the scene at a configurable opacity.\nSee <a href=\"../common/docs/effects-reference-common.html#blend-texture\">../common/docs/effects-reference-common.html#blend-texture</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -246,7 +246,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.Effects.DesaturatePostProcess",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.DesaturatePostProcess.yml\" sourcestartlinenumber=\"1\">A post process to see the image's luminosity.\nSee <a href=\"../common/docs/effects-reference-common.html#desaturate\">../common/docs/effects-reference-common.html#desaturate</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.DesaturatePostProcess.yml\" sourcestartlinenumber=\"1\">A post process that converts the image to grayscale using luminosity.\nSee <a href=\"../common/docs/effects-reference-common.html#desaturate\">../common/docs/effects-reference-common.html#desaturate</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -610,7 +610,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.CrossHatching.BuiltIn.PostProcessing.Effects.MixboxConvexHullHatchPostProcess",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.CrossHatching.BuiltIn.PostProcessing.Effects.MixboxConvexHullHatchPostProcess.yml\" sourcestartlinenumber=\"1\">A post-process that uses a hatching texture to project colors through a convex-hull palette,\nthen blends them with Mixbox for more natural, ink-like color mixing.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -666,7 +666,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.CrossHatching.PostProcessing.Effects.ConvexHullHatchProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.CrossHatching.PostProcessing.Effects.ConvexHullHatchProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the convex-hull cross-hatching post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -680,7 +680,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the Mixbox convex-hull cross-hatching post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -694,7 +694,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.CrossHatching.PostProcessing.Effects.SimpleHatchProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.CrossHatching.PostProcessing.Effects.SimpleHatchProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the simple cross-hatching post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -946,7 +946,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the dither matrix bias post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -960,7 +960,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the dither texture bias post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1072,7 +1072,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Editor.Internal.ColorShaderPropertyListDrawer",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.Internal.ColorShaderPropertyListDrawer.yml\" sourcestartlinenumber=\"1\">Property drawer for <xref href=\"Gamelogic.Fx.Internal.ColorShaderPropertyList\" data-throw-if-not-resolved=\"false\"></xref> fields.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1086,7 +1086,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Editor.Internal.SerializedPropertyExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.Internal.SerializedPropertyExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for <xref href=\"UnityEditor.SerializedProperty\" data-throw-if-not-resolved=\"false\"></xref> to retrieve the underlying managed object.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1183,7 +1183,7 @@
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException",
+      "Title": "Gamelogic.Fx.EditorTextureGenerator.PropertyNotFoundException",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.EditorTextureGenerator.PropertyNotfoundException.yml\" sourcestartlinenumber=\"1\">Thrown when looking for a property (for example, in a serialized object) and the property is not found.</p>\n"
     },
     {
@@ -1240,7 +1240,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.IFloatMatrix",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.IFloatMatrix.yml\" sourcestartlinenumber=\"1\">Represents a read-only view of a two-dimensional matrix of float values.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1254,7 +1254,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Keyword",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Keyword.yml\" sourcestartlinenumber=\"1\">Represents a shader keyword, and whether it is present ot not.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Keyword.yml\" sourcestartlinenumber=\"1\">Represents a shader keyword, and whether it is present or not.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1338,7 +1338,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Mapping.Maps.NormalMapProperties.NormalEncoding",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Mapping.Maps.NormalMapProperties.NormalEncoding.yml\" sourcestartlinenumber=\"1\">Specifies how normals are encoded into the map texture's color channels.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1352,7 +1352,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Mapping.Maps.NormalMapProperties",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Mapping.Maps.NormalMapProperties.yml\" sourcestartlinenumber=\"1\">Properties for rendering out a normal mapProperties.\nSee <a href=\"../common/docs/map-renderers-reference-common.html#normal-map\">../common/docs/map-renderers-reference-common.html#normal-map</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Mapping.Maps.NormalMapProperties.yml\" sourcestartlinenumber=\"1\">Properties for rendering a normal map.\nSee <a href=\"../common/docs/map-renderers-reference-common.html#normal-map\">../common/docs/map-renderers-reference-common.html#normal-map</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1450,7 +1450,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.AddTextureProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.AddTextureProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the add-texture post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1464,7 +1464,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.AdjustGammaProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.AdjustGammaProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the adjust-gamma post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1478,7 +1478,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.AdjustSaturationProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.AdjustSaturationProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the adjust-saturation post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1492,7 +1492,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.BilateralFilterProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.BilateralFilterProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the bilateral filter post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1520,7 +1520,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the blend-texture post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1534,7 +1534,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.BoxBlurProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.BoxBlurProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the box blur post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1548,7 +1548,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.ConvexHullMapProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.ConvexHullMapProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the convex-hull map post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1562,7 +1562,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.DesaturateProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.DesaturateProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the desaturate post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1576,7 +1576,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.GaussianBlurProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.GaussianBlurProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the Gaussian blur post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1590,7 +1590,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.InvertProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.InvertProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the invert post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1604,7 +1604,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.MaxProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.MaxProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the max-filter post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1618,7 +1618,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.MinProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.MinProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the min-filter post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1632,7 +1632,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the Mixbox convex-hull map post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1646,7 +1646,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.PixelateProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the pixelate post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1660,7 +1660,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.PowerMeanProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.PowerMeanProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the power-mean (generalized mean) post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1674,7 +1674,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.QuadToneMapProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.QuadToneMapProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the quad-tone map post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1688,7 +1688,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.QuantizeProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.QuantizeProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the quantize post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1716,7 +1716,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.TriToneMapProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.TriToneMapProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the tri-tone map post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1786,7 +1786,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.RequiresMixboxAttribute",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.RequiresMixboxAttribute.yml\" sourcestartlinenumber=\"1\">Used to flag components that needs Mixbox to work.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.RequiresMixboxAttribute.yml\" sourcestartlinenumber=\"1\">Used to flag components that need Mixbox to work.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1930,6 +1930,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.Mapping.Maps.GLNormalMapRendererFeature.yml\" sourcestartlinenumber=\"1\">Feature for rendering a normal map of the scene.\nSee <a href=\"../common/docs/map-renderers-reference-common.html#normal-map\">../common/docs/map-renderers-reference-common.html#normal-map</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.URP.Mapping.Maps.GLUVMapRenderFeature.yml",
       "output": {
         ".html": {
@@ -2038,7 +2052,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing.Effects.GLAdjustGammaRendererFeature",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.Effects.GLAdjustGammaRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that adjust the gamma of the image.\nSee <a href=\"../common/docs/effects-reference-common.html#adjust-gamma\">../common/docs/effects-reference-common.html#adjust-gamma</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.Effects.GLAdjustGammaRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that adjusts the gamma of the image.\nSee <a href=\"../common/docs/effects-reference-common.html#adjust-gamma\">../common/docs/effects-reference-common.html#adjust-gamma</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2122,7 +2136,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing.Effects.GLBlendTextureRendererFeature",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.Effects.GLBlendTextureRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that outputs a fullscreen constant textureTiling.\nSee <a href=\"../common/docs/effects-reference-common.html#blend-texture\">../common/docs/effects-reference-common.html#blend-texture</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.Effects.GLBlendTextureRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that blends a texture over the scene at a configurable opacity.\nSee <a href=\"../common/docs/effects-reference-common.html#blend-texture\">../common/docs/effects-reference-common.html#blend-texture</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2220,7 +2234,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing.Effects.GLDesaturateRendererFeature",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.Effects.GLDesaturateRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process to see the image's luminosity.\nSee <a href=\"../common/docs/effects-reference-common.html#desaturate\">../common/docs/effects-reference-common.html#desaturate</a>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.Effects.GLDesaturateRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that converts the image to grayscale using luminosity.\nSee <a href=\"../common/docs/effects-reference-common.html#desaturate\">../common/docs/effects-reference-common.html#desaturate</a>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2556,7 +2570,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing.PostEffectPass",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.PostEffectPass.yml\" sourcestartlinenumber=\"1\">Implements a basic pass that for <xref href=\"Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.PostEffectPass.yml\" sourcestartlinenumber=\"1\">Implements a basic render pass for <xref href=\"Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2612,7 +2626,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.yml\" sourcestartlinenumber=\"1\">Non-generic base class for all Gamelogic Fx post-process renderer features.</p>\n"
     },
     {
       "type": "ManagedReference",
