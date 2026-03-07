@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Texture2DTiling | Gamelogic Extensions ">
       
-      <meta name="description" content="Represents a texture along with configurable tiling parameters.">
+      <meta name="description" content="Represents a  along with configurable tiling parameters.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Extensions_Texture2DTiling" data-uid="Gamelogic.Extensions.Texture2DTiling" class="text-break">
-Class Texture2DTiling  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/DataTypes/Texture2DTiling.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class Texture2DTiling  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/DataTypes/Texture2DTiling.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,13 +104,13 @@ Class Texture2DTiling  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a texture along with configurable tiling parameters.</p>
+  <div class="markdown summary"><p>Represents a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture2D.html">Texture2D</a> along with configurable tiling parameters.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public sealed class Texture2DTiling</code></pre>
+public sealed class Texture2DTiling : TextureTilingBase</code></pre>
   </div>
 
 
@@ -120,6 +120,7 @@ public sealed class Texture2DTiling</code></pre>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gamelogic.Extensions.TextureTilingBase.html">TextureTilingBase</a></div>
       <div><span class="xref">Texture2DTiling</span></div>
     </dd>
   </dl>
@@ -129,6 +130,18 @@ public sealed class Texture2DTiling</code></pre>
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.TextureTilingBase.Tiling.html#Gamelogic_Extensions_TextureTilingBase_Tiling">TextureTilingBase.Tiling</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.TextureTilingBase.TilingScale.html#Gamelogic_Extensions_TextureTilingBase_TilingScale">TextureTilingBase.TilingScale</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.TextureTilingBase.TilingOffset.html#Gamelogic_Extensions_TextureTilingBase_TilingOffset">TextureTilingBase.TilingOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Extensions.TextureTilingBase.CalculatedTiling.html#Gamelogic_Extensions_TextureTilingBase_CalculatedTiling">TextureTilingBase.CalculatedTiling</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -153,6 +166,9 @@ public sealed class Texture2DTiling</code></pre>
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -162,38 +178,14 @@ public sealed class Texture2DTiling</code></pre>
   <h2 id="Gamelogic_Extensions_Texture2DTiling_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>This class is meant for inspector values, especially ones that help configure shaders, such as in
 post-processing code.</p>
-<p>This class stores a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture2D.html">Texture2D</a> and provides scale and offset
-values for UV tiling. It can optionally adjust the horizontal scale to
-match the current screen aspect ratio.</p>
 </div>
 
   <h2 class="section" id="properties">Properties
 </h2>
 
   <dl class="jumplist">
-    <dt><a class="xref" href="Gamelogic.Extensions.Texture2DTiling.CalculatedTiling.html#Gamelogic_Extensions_Texture2DTiling_CalculatedTiling">CalculatedTiling</a></dt>
-    <dd><p>Gets the effective tiling values, optionally adjusting the horizontal scale based on screen aspect ratio.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Texture2DTiling.Texture.html#Gamelogic_Extensions_Texture2DTiling_Texture">Texture</a></dt>
     <dd><p>Gets the texture.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Gamelogic.Extensions.Texture2DTiling.Tiling.html#Gamelogic_Extensions_Texture2DTiling_Tiling">Tiling</a></dt>
-    <dd><p>Gets the tiling scale and offset combined into a single vector in the format:
-(scale.x, scale.y, offset.x, offset.y).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Gamelogic.Extensions.Texture2DTiling.TilingOffset.html#Gamelogic_Extensions_Texture2DTiling_TilingOffset">TilingOffset</a></dt>
-    <dd><p>Gets the tiling offset.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Gamelogic.Extensions.Texture2DTiling.TilingScale.html#Gamelogic_Extensions_Texture2DTiling_TilingScale">TilingScale</a></dt>
-    <dd><p>Gets the tiling scale.</p>
 </dd>
   </dl>
 

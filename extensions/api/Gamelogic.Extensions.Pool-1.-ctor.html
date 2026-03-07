@@ -164,10 +164,10 @@ by <code class="paramref">deactivate</code> action.</p>
   <dd><p>A function called when an object is activated, when it is acquired.</p>
 </dd>
   <dt><code>deactivate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-  <dd><p>A function called when an object is activated, either when releasing it, or
-when it is created for the first time. If your object accumulate references to other objects while
-it is active, and they cannot be re-used, you should remove them in this action, so that these objects do not
-hog memory while they are inactive.</p>
+  <dd><p>A function called when an object is deactivated, either when releasing it, or
+when it is created for the first time. If your objects accumulate references to other objects while
+active, and those references cannot be re-used, remove them in this action so that those objects do not
+hog memory while inactive.</p>
 </dd>
 </dl>
 
@@ -179,6 +179,15 @@ hog memory while they are inactive.</p>
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+  <dd><p><code class="paramref">initialCapacity</code> is negative.</p>
+</dd>
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code class="paramref">create</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+</dl>
 
 
 

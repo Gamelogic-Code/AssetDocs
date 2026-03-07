@@ -100,7 +100,7 @@ Programming Wisdom</em> in the article <em>The Beauty of Response Curves</em>. B
 <p>The curve above can be defined as follows:</p>
 <pre><code class="lang-csharp">var inputs = new List&lt;float&gt; {0, 20, 40, 60, 100};
 var outputs = new List&lt;float&gt; {10, 30, 110, 140, 100};
-var curve = new ResponseCurveFloat(inputs, output);    
+var curve = new ResponseCurveFloat(inputs, outputs);    
 </code></pre>
 <p>You can then sample this curve at any point:</p>
 <pre><code class="lang-csharp">float value = curve[30f]; //value is 70  
@@ -133,7 +133,7 @@ library provides response curves for several types. These are some examples:</p>
 <li>Implement the abstract method <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.ResponseCurveBase-1.Lerp.html#Gamelogic_Extensions_Algorithms_ResponseCurveBase_1_Lerp__0__0_System_Single_">Lerp(T, T, float)</a> to
 provide a linear interpolation of the relevant type.</li>
 </ol>
-<p>The library also provides a class for doing dithering for discreet valued curves. See <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.html">Gamelogic.Extensions.Algorithms</a>.
+<p>The library also provides a class for doing dithering for discrete valued curves. See <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.html">Gamelogic.Extensions.Algorithms</a>.
 DitherResponse.</p>
 <p><img src="../images/response_curve_dither.png" alt="response_curve_dither"></p>
 

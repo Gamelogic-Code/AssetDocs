@@ -131,7 +131,7 @@ Method ThrowIfNull  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Exceptions/ThrowHelper.cs/#L31"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Throws a NullReferenceException if the given argument is null.</p>
+<div class="markdown level1 summary"><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> if the given argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -160,7 +160,62 @@ Method ThrowIfNull  <a class="header-action link-secondary" title="View source" 
 <h4 class="section">Exceptions</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-  <dd></dd>
+  <dd><p><code class="paramref">argument</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+</dl>
+
+
+
+<a id="Gamelogic_Extensions_ThrowHelper_ThrowIfNull_" data-uid="Gamelogic.Extensions.ThrowHelper.ThrowIfNull*"></a>
+
+<h3 id="Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_" data-uid="Gamelogic.Extensions.ThrowHelper.ThrowIfNull``1(``0,System.String)">
+  ThrowIfNull&lt;T&gt;(T, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Exceptions/ThrowHelper.cs/#L162"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> if the object is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static T ThrowIfNull&lt;T&gt;(this T obj, string objArgName = null)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>obj</code> <span class="xref">T</span></dt>
+  <dd><p>The object to check.</p>
+</dd>
+  <dt><code>objArgName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+  <dd><p>The name of the argument.</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><span class="xref">T</span></dt>
+  <dd><p>The original object if it is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The type of the object.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code class="paramref">obj</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
 </dl>
 
 

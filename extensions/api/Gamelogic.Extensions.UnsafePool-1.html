@@ -117,7 +117,8 @@ Class UnsafePool&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the objects to pool.</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -178,6 +179,9 @@ Class UnsafePool&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="Gamelogic.Extensions.PoolExtensions.TryGet.html#Gamelogic_Extensions_PoolExtensions_TryGet__1_Gamelogic_Extensions_IPool___0____0__">PoolExtensions.TryGet&lt;T&gt;(IPool&lt;T&gt;, out T)</a>
   </div>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -187,9 +191,9 @@ Class UnsafePool&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <h2 id="Gamelogic_Extensions_UnsafePool_1_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>For the most part, this class works similar to <a class="xref" href="Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a>, except that it does not keep references to
 active objects, so when they are released no checks as to their validity is performed. Also,
-<a class="xref" href="Gamelogic.Extensions.UnsafePool-1.ReleaseAll.html#Gamelogic_Extensions_UnsafePool_1_ReleaseAll">ReleaseAll()</a> is not supported, and <a class="xref" href="Gamelogic.Extensions.UnsafePool-1.DecreaseCapacity.html#Gamelogic_Extensions_UnsafePool_1_DecreaseCapacity_System_Int32_System_Boolean_">DecreaseCapacity(int, bool)</a> cannot drecrease the capacity below
+<a class="xref" href="Gamelogic.Extensions.UnsafePool-1.ReleaseAll.html#Gamelogic_Extensions_UnsafePool_1_ReleaseAll">ReleaseAll()</a> is not supported, and <a class="xref" href="Gamelogic.Extensions.UnsafePool-1.DecreaseCapacity.html#Gamelogic_Extensions_UnsafePool_1_DecreaseCapacity_System_Int32_System_Boolean_">DecreaseCapacity(int, bool)</a> cannot decrease the capacity below
 the number of currently inactive objects.</p>
-<p>In general, you should use a <a class="xref" href="Gamelogic.Extensions.HashPool-1.html">HashPool&lt;T&gt;</a>; this unsafe pool os only very marginally faster.</p>
+<p>In general, you should use a <a class="xref" href="Gamelogic.Extensions.HashPool-1.html">HashPool&lt;T&gt;</a>; this unsafe pool is only very marginally faster.</p>
 </div>
 
   <h2 class="section" id="constructors">Constructors
@@ -197,7 +201,8 @@ the number of currently inactive objects.</p>
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.UnsafePool-1.-ctor.html#Gamelogic_Extensions_UnsafePool_1__ctor_System_Int32_System_Func__0__System_Action__0__System_Action__0__System_Action__0__">UnsafePool(int, Func&lt;T&gt;, Action&lt;T&gt;, Action&lt;T&gt;, Action&lt;T&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Initializes a new instance of <a class="xref" href="Gamelogic.Extensions.UnsafePool-1.html">UnsafePool&lt;T&gt;</a> with the given capacity and callbacks.</p>
+</dd>
   </dl>
 
   <h2 class="section" id="properties">Properties

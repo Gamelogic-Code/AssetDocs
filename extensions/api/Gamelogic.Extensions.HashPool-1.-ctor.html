@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_HashPool_1__ctor_" data-uid="Gamelogic.Extensions.HashPool`1.#ctor*" class="text-break">
-Constructor HashPool  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/HashPool.cs/#L34"><i class="bi bi-code-slash"></i></a>
+Constructor HashPool  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/HashPool.cs/#L41"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,11 @@ Constructor HashPool  <a class="header-action link-secondary" title="View source
 
 <h3 id="Gamelogic_Extensions_HashPool_1__ctor_System_Int32_System_Func__0__System_Action__0__System_Action__0__System_Action__0__System_Collections_Generic_IEqualityComparer__0__" data-uid="Gamelogic.Extensions.HashPool`1.#ctor(System.Int32,System.Func{`0},System.Action{`0},System.Action{`0},System.Action{`0},System.Collections.Generic.IEqualityComparer{`0})">
   HashPool(int, Func&lt;T&gt;, Action&lt;T&gt;, Action&lt;T&gt;, Action&lt;T&gt;, IEqualityComparer&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/HashPool.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/HashPool.cs/#L41"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Gamelogic.Extensions.HashPool-1.html">HashPool&lt;T&gt;</a> with the given capacity and callbacks.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -141,17 +142,23 @@ Constructor HashPool  <a class="header-action link-secondary" title="View source
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>initialCapacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-  <dd></dd>
+  <dd><p>The number of objects to pre-create.</p>
+</dd>
   <dt><code>create</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>A factory function to create new pool objects.</p>
+</dd>
   <dt><code>destroy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>An optional callback invoked when an object is permanently removed from the pool.</p>
+</dd>
   <dt><code>activate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>An optional callback invoked when an object is retrieved from the pool.</p>
+</dd>
   <dt><code>deactivate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>An optional callback invoked when an object is returned to the pool.</p>
+</dd>
   <dt><code>comparer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>An optional equality comparer for the pooled objects.</p>
+</dd>
 </dl>
 
 

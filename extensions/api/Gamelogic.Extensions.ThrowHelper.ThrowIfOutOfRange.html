@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_ThrowHelper_ThrowIfOutOfRange_" data-uid="Gamelogic.Extensions.ThrowHelper.ThrowIfOutOfRange*" class="text-break">
-Method ThrowIfOutOfRange  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Exceptions/ThrowHelper.cs/#L85"><i class="bi bi-code-slash"></i></a>
+Method ThrowIfOutOfRange  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Exceptions/ThrowHelper.cs/#L90"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method ThrowIfOutOfRange  <a class="header-action link-secondary" title="View so
 
 <h3 id="Gamelogic_Extensions_ThrowHelper_ThrowIfOutOfRange_System_Int32_System_Int32_System_Int32_System_String_" data-uid="Gamelogic.Extensions.ThrowHelper.ThrowIfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)">
   ThrowIfOutOfRange(int, int, int, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Exceptions/ThrowHelper.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Exceptions/ThrowHelper.cs/#L90"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Throws a ArgumentOutOfRange exception if the integer is out of range.</p>
+<div class="markdown level1 summary"><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> if the integer is out of range.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -163,6 +163,12 @@ Method ThrowIfOutOfRange  <a class="header-action link-secondary" title="View so
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+  <dd><p><code class="paramref">argument</code> is less than <code class="paramref">minInclusive</code> or greater than or equal to <code class="paramref">maxExclusive</code>.</p>
+</dd>
+</dl>
 
 
 

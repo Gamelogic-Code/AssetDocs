@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_MonoBehaviourExtensions_Clone_" data-uid="Gamelogic.Extensions.MonoBehaviourExtensions.Clone*" class="text-break">
-Method Clone  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L286"><i class="bi bi-code-slash"></i></a>
+Method Clone  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L322"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method Clone  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_" data-uid="Gamelogic.Extensions.MonoBehaviourExtensions.Clone``1(``0)">
   Clone&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L322"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Clones an object.</p>
+<div class="markdown level1 summary"><p>Clones a MonoBehaviour using <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T)</span>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -142,19 +142,22 @@ Method Clone  <a class="header-action link-secondary" title="View source" href="
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>obj</code> <span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>The object to clone.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>A new instance of the object.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The MonoBehaviour type to clone.</p>
+</dd>
 </dl>
 
 
@@ -170,10 +173,10 @@ Method Clone  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_System_Int32_" data-uid="Gamelogic.Extensions.MonoBehaviourExtensions.Clone``1(``0,System.Int32)">
   Clone&lt;T&gt;(T, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L334"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Clones an object.</p>
+<div class="markdown level1 summary"><p>Clones a MonoBehaviour a given number of times.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -184,21 +187,25 @@ Method Clone  <a class="header-action link-secondary" title="View source" href="
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>obj</code> <span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>The object to clone.</p>
+</dd>
   <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-  <dd></dd>
+  <dd><p>The number of clones to create.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>A list of cloned instances.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The MonoBehaviour type to clone.</p>
+</dd>
 </dl>
 
 

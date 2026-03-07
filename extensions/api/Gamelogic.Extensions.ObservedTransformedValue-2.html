@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Extensions_ObservedTransformedValue_2" data-uid="Gamelogic.Extensions.ObservedTransformedValue`2" class="text-break">
-Class ObservedTransformedValue&lt;TValue, TTransformedValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/ObservedTransformedValue.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class ObservedTransformedValue&lt;TValue, TTransformedValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/ObservedTransformedValue.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -118,9 +118,11 @@ public class ObservedTransformedValue&lt;TValue, TTransformedValue&gt;</code></p
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TValue</code></dt>
-    <dd></dd>
+    <dd><p>The type of the input value to observe.</p>
+</dd>
     <dt><code>TTransformedValue</code></dt>
-    <dd></dd>
+    <dd><p>The type of the transformed output value.</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -163,6 +165,9 @@ public class ObservedTransformedValue&lt;TValue, TTransformedValue&gt;</code></p
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -183,6 +188,11 @@ the transformed value is recalculated and the change event is triggered.</p>
   <h2 class="section" id="properties">Properties
 </h2>
 
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ObservedTransformedValue-2.TransformedValue.html#Gamelogic_Extensions_ObservedTransformedValue_2_TransformedValue">TransformedValue</a></dt>
+    <dd><p>The current transformed value. This is automatically updated whenever <a class="xref" href="Gamelogic.Extensions.ObservedTransformedValue-2.Value.html#Gamelogic_Extensions_ObservedTransformedValue_2_Value">Value</a> changes.</p>
+</dd>
+  </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ObservedTransformedValue-2.Value.html#Gamelogic_Extensions_ObservedTransformedValue_2_Value">Value</a></dt>
     <dd><p>The current input value. Setting it automatically updates the transformed value.</p>

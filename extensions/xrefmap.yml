@@ -566,6 +566,15 @@ references:
   fullName.vb: Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition(System.Collections.Generic.IList(Of Single))
   nameWithType: CollectionExtensions.MedianPartition(IList<float>)
   nameWithType.vb: CollectionExtensions.MedianPartition(IList(Of Single))
+- uid: Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition(System.Collections.Generic.IList{System.Single},System.Int32,System.Int32)
+  name: MedianPartition(IList<float>, int, int)
+  href: api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MedianPartition_System_Collections_Generic_IList_System_Single__System_Int32_System_Int32_
+  commentId: M:Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition(System.Collections.Generic.IList{System.Single},System.Int32,System.Int32)
+  name.vb: MedianPartition(IList(Of Single), Integer, Integer)
+  fullName: Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition(System.Collections.Generic.IList<float>, int, int)
+  fullName.vb: Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition(System.Collections.Generic.IList(Of Single), Integer, Integer)
+  nameWithType: CollectionExtensions.MedianPartition(IList<float>, int, int)
+  nameWithType.vb: CollectionExtensions.MedianPartition(IList(Of Single), Integer, Integer)
 - uid: Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition*
   name: MedianPartition
   href: api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html
@@ -644,6 +653,21 @@ references:
   commentId: Overload:Gamelogic.Extensions.Algorithms.CollectionExtensions.MinMax
   fullName: Gamelogic.Extensions.Algorithms.CollectionExtensions.MinMax
   nameWithType: CollectionExtensions.MinMax
+- uid: Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex(System.Collections.Generic.IList{System.Single},System.Int32,System.Int32)
+  name: PivotIndex(IList<float>, int, int)
+  href: api/Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_PivotIndex_System_Collections_Generic_IList_System_Single__System_Int32_System_Int32_
+  commentId: M:Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex(System.Collections.Generic.IList{System.Single},System.Int32,System.Int32)
+  name.vb: PivotIndex(IList(Of Single), Integer, Integer)
+  fullName: Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex(System.Collections.Generic.IList<float>, int, int)
+  fullName.vb: Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex(System.Collections.Generic.IList(Of Single), Integer, Integer)
+  nameWithType: CollectionExtensions.PivotIndex(IList<float>, int, int)
+  nameWithType.vb: CollectionExtensions.PivotIndex(IList(Of Single), Integer, Integer)
+- uid: Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex*
+  name: PivotIndex
+  href: api/Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex.html
+  commentId: Overload:Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex
+  fullName: Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex
+  nameWithType: CollectionExtensions.PivotIndex
 - uid: Gamelogic.Extensions.Algorithms.CollectionExtensions.RandomItem*
   name: RandomItem
   href: api/Gamelogic.Extensions.Algorithms.CollectionExtensions.RandomItem.html
@@ -5063,6 +5087,36 @@ references:
   commentId: Overload:Gamelogic.Extensions.Editor.DummyPorpertyDrawer.OnGUI
   fullName: Gamelogic.Extensions.Editor.DummyPorpertyDrawer.OnGUI
   nameWithType: DummyPorpertyDrawer.OnGUI
+- uid: Gamelogic.Extensions.Editor.DummyPropertyDrawer
+  name: DummyPropertyDrawer
+  href: api/Gamelogic.Extensions.Editor.DummyPropertyDrawer.html
+  commentId: T:Gamelogic.Extensions.Editor.DummyPropertyDrawer
+  fullName: Gamelogic.Extensions.Editor.DummyPropertyDrawer
+  nameWithType: DummyPropertyDrawer
+- uid: Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  name: GetPropertyHeight(SerializedProperty, GUIContent)
+  href: api/Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight.html#Gamelogic_Extensions_Editor_DummyPropertyDrawer_GetPropertyHeight_UnityEditor_SerializedProperty_UnityEngine_GUIContent_
+  commentId: M:Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  fullName: Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty, UnityEngine.GUIContent)
+  nameWithType: DummyPropertyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+- uid: Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight*
+  name: GetPropertyHeight
+  href: api/Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight.html
+  commentId: Overload:Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight
+  fullName: Gamelogic.Extensions.Editor.DummyPropertyDrawer.GetPropertyHeight
+  nameWithType: DummyPropertyDrawer.GetPropertyHeight
+- uid: Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI.html#Gamelogic_Extensions_Editor_DummyPropertyDrawer_OnGUI_UnityEngine_Rect_UnityEditor_SerializedProperty_UnityEngine_GUIContent_
+  commentId: M:Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  fullName: Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI(UnityEngine.Rect, UnityEditor.SerializedProperty, UnityEngine.GUIContent)
+  nameWithType: DummyPropertyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI*
+  name: OnGUI
+  href: api/Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI.html
+  commentId: Overload:Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI
+  fullName: Gamelogic.Extensions.Editor.DummyPropertyDrawer.OnGUI
+  nameWithType: DummyPropertyDrawer.OnGUI
 - uid: Gamelogic.Extensions.Editor.FixedDictionaryPropertyDrawer
   name: FixedDictionaryPropertyDrawer
   href: api/Gamelogic.Extensions.Editor.FixedDictionaryPropertyDrawer.html
@@ -5594,6 +5648,222 @@ references:
   commentId: N:Gamelogic.Extensions.Editor.Internal
   fullName: Gamelogic.Extensions.Editor.Internal
   nameWithType: Gamelogic.Extensions.Editor.Internal
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig
+  name: AssetConfig
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.html
+  commentId: T:Gamelogic.Extensions.Editor.Internal.AssetConfig
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig
+  nameWithType: AssetConfig
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.assetDisplayName
+  name: assetDisplayName
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.assetDisplayName.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.assetDisplayName
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.assetDisplayName
+  nameWithType: AssetConfig.assetDisplayName
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.documentationUrl
+  name: documentationUrl
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.documentationUrl.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.documentationUrl
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.documentationUrl
+  nameWithType: AssetConfig.documentationUrl
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.packageId
+  name: packageId
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.packageId.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.packageId
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.packageId
+  nameWithType: AssetConfig.packageId
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.packageVersion
+  name: packageVersion
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.packageVersion.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.packageVersion
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.packageVersion
+  nameWithType: AssetConfig.packageVersion
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.shownKey
+  name: shownKey
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.shownKey.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.shownKey
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.shownKey
+  nameWithType: AssetConfig.shownKey
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.uninstallList
+  name: uninstallList
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.uninstallList.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.uninstallList
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.uninstallList
+  nameWithType: AssetConfig.uninstallList
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.youTubeChannelUrl
+  name: youTubeChannelUrl
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.youTubeChannelUrl.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.youTubeChannelUrl
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.youTubeChannelUrl
+  nameWithType: AssetConfig.youTubeChannelUrl
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools
+  name: AssetTools
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.html
+  commentId: T:Gamelogic.Extensions.Editor.Internal.AssetTools
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools
+  nameWithType: AssetTools
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples(System.String,System.String)
+  name: ImportSamples(string, string)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples.html#Gamelogic_Extensions_Editor_Internal_AssetTools_ImportSamples_System_String_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples(System.String,System.String)
+  name.vb: ImportSamples(String, String)
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples(string, string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples(String, String)
+  nameWithType: AssetTools.ImportSamples(string, string)
+  nameWithType.vb: AssetTools.ImportSamples(String, String)
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples*
+  name: ImportSamples
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamples
+  nameWithType: AssetTools.ImportSamples
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamplesMenuItem
+  name: ImportSamplesMenuItem
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamplesMenuItem.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamplesMenuItem
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ImportSamplesMenuItem
+  nameWithType: AssetTools.ImportSamplesMenuItem
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon(System.String)
+  name: LoadIcon(string)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon.html#Gamelogic_Extensions_Editor_Internal_AssetTools_LoadIcon_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon(System.String)
+  name.vb: LoadIcon(String)
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon(string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon(String)
+  nameWithType: AssetTools.LoadIcon(string)
+  nameWithType.vb: AssetTools.LoadIcon(String)
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon*
+  name: LoadIcon
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadIcon
+  nameWithType: AssetTools.LoadIcon
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo
+  name: LoadLogo()
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo.html#Gamelogic_Extensions_Editor_Internal_AssetTools_LoadLogo
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo()
+  nameWithType: AssetTools.LoadLogo()
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo*
+  name: LoadLogo
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.LoadLogo
+  nameWithType: AssetTools.LoadLogo
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation(System.String)
+  name: OpenDocumentation(string)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation.html#Gamelogic_Extensions_Editor_Internal_AssetTools_OpenDocumentation_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation(System.String)
+  name.vb: OpenDocumentation(String)
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation(string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation(String)
+  nameWithType: AssetTools.OpenDocumentation(string)
+  nameWithType.vb: AssetTools.OpenDocumentation(String)
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation*
+  name: OpenDocumentation
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenDocumentation
+  nameWithType: AssetTools.OpenDocumentation
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow
+  name: OpenEmailSupportWindow()
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow.html#Gamelogic_Extensions_Editor_Internal_AssetTools_OpenEmailSupportWindow
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow()
+  nameWithType: AssetTools.OpenEmailSupportWindow()
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow*
+  name: OpenEmailSupportWindow
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenEmailSupportWindow
+  nameWithType: AssetTools.OpenEmailSupportWindow
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions(System.Collections.Generic.IReadOnlyList{Gamelogic.Extensions.Editor.Internal.Package})
+  name: OpenUninstallInstructions(IReadOnlyList<Package>)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions.html#Gamelogic_Extensions_Editor_Internal_AssetTools_OpenUninstallInstructions_System_Collections_Generic_IReadOnlyList_Gamelogic_Extensions_Editor_Internal_Package__
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions(System.Collections.Generic.IReadOnlyList{Gamelogic.Extensions.Editor.Internal.Package})
+  name.vb: OpenUninstallInstructions(IReadOnlyList(Of Package))
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions(System.Collections.Generic.IReadOnlyList<Gamelogic.Extensions.Editor.Internal.Package>)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions(System.Collections.Generic.IReadOnlyList(Of Gamelogic.Extensions.Editor.Internal.Package))
+  nameWithType: AssetTools.OpenUninstallInstructions(IReadOnlyList<Package>)
+  nameWithType.vb: AssetTools.OpenUninstallInstructions(IReadOnlyList(Of Package))
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions*
+  name: OpenUninstallInstructions
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenUninstallInstructions
+  nameWithType: AssetTools.OpenUninstallInstructions
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow(Gamelogic.Extensions.Editor.Internal.AssetConfig)
+  name: OpenWelcomeWindow(AssetConfig)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow.html#Gamelogic_Extensions_Editor_Internal_AssetTools_OpenWelcomeWindow_Gamelogic_Extensions_Editor_Internal_AssetConfig_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow(Gamelogic.Extensions.Editor.Internal.AssetConfig)
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow(Gamelogic.Extensions.Editor.Internal.AssetConfig)
+  nameWithType: AssetTools.OpenWelcomeWindow(AssetConfig)
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow*
+  name: OpenWelcomeWindow
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindow
+  nameWithType: AssetTools.OpenWelcomeWindow
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindowMenuItem
+  name: OpenWelcomeWindowMenuItem
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindowMenuItem.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindowMenuItem
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenWelcomeWindowMenuItem
+  nameWithType: AssetTools.OpenWelcomeWindowMenuItem
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel(System.String)
+  name: OpenYouTubeChannel(string)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel.html#Gamelogic_Extensions_Editor_Internal_AssetTools_OpenYouTubeChannel_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel(System.String)
+  name.vb: OpenYouTubeChannel(String)
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel(string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel(String)
+  nameWithType: AssetTools.OpenYouTubeChannel(string)
+  nameWithType.vb: AssetTools.OpenYouTubeChannel(String)
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel*
+  name: OpenYouTubeChannel
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.OpenYouTubeChannel
+  nameWithType: AssetTools.OpenYouTubeChannel
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow(System.String)
+  name: ResetWelcomeWindow(string)
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow.html#Gamelogic_Extensions_Editor_Internal_AssetTools_ResetWelcomeWindow_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow(System.String)
+  name.vb: ResetWelcomeWindow(String)
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow(string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow(String)
+  nameWithType: AssetTools.ResetWelcomeWindow(string)
+  nameWithType.vb: AssetTools.ResetWelcomeWindow(String)
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow*
+  name: ResetWelcomeWindow
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindow
+  nameWithType: AssetTools.ResetWelcomeWindow
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindowMenuItem
+  name: ResetWelcomeWindowMenuItem
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindowMenuItem.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindowMenuItem
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ResetWelcomeWindowMenuItem
+  nameWithType: AssetTools.ResetWelcomeWindowMenuItem
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.UninstallInstructionsMenuItem
+  name: UninstallInstructionsMenuItem
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.UninstallInstructionsMenuItem.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetTools.UninstallInstructionsMenuItem
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.UninstallInstructionsMenuItem
+  nameWithType: AssetTools.UninstallInstructionsMenuItem
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ViewDocumentationMenuItem
+  name: ViewDocumentationMenuItem
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ViewDocumentationMenuItem.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetTools.ViewDocumentationMenuItem
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ViewDocumentationMenuItem
+  nameWithType: AssetTools.ViewDocumentationMenuItem
+- uid: Gamelogic.Extensions.Editor.Internal.AssetTools.ViewYouTubeChannelMenuItem
+  name: ViewYouTubeChannelMenuItem
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetTools.ViewYouTubeChannelMenuItem.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetTools.ViewYouTubeChannelMenuItem
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetTools.ViewYouTubeChannelMenuItem
+  nameWithType: AssetTools.ViewYouTubeChannelMenuItem
 - uid: Gamelogic.Extensions.Editor.Internal.Assets
   name: Assets
   href: api/Gamelogic.Extensions.Editor.Internal.Assets.html
@@ -5904,6 +6174,24 @@ references:
   commentId: Overload:Gamelogic.Extensions.Editor.Internal.GLMenu.OpenUrl
   fullName: Gamelogic.Extensions.Editor.Internal.GLMenu.OpenUrl
   nameWithType: GLMenu.OpenUrl
+- uid: Gamelogic.Extensions.Editor.Internal.Package
+  name: Package
+  href: api/Gamelogic.Extensions.Editor.Internal.Package.html
+  commentId: T:Gamelogic.Extensions.Editor.Internal.Package
+  fullName: Gamelogic.Extensions.Editor.Internal.Package
+  nameWithType: Package
+- uid: Gamelogic.Extensions.Editor.Internal.Package.displayName
+  name: displayName
+  href: api/Gamelogic.Extensions.Editor.Internal.Package.displayName.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Package.displayName
+  fullName: Gamelogic.Extensions.Editor.Internal.Package.displayName
+  nameWithType: Package.displayName
+- uid: Gamelogic.Extensions.Editor.Internal.Package.id
+  name: id
+  href: api/Gamelogic.Extensions.Editor.Internal.Package.id.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Package.id
+  fullName: Gamelogic.Extensions.Editor.Internal.Package.id
+  nameWithType: Package.id
 - uid: Gamelogic.Extensions.Editor.Internal.StringExtensions
   name: StringExtensions
   href: api/Gamelogic.Extensions.Editor.Internal.StringExtensions.html
@@ -12753,6 +13041,22 @@ references:
   fullName.vb: Gamelogic.Extensions.ObservedTransformedValue(Of TValue, TTransformedValue).New
   nameWithType: ObservedTransformedValue<TValue, TTransformedValue>.ObservedTransformedValue
   nameWithType.vb: ObservedTransformedValue(Of TValue, TTransformedValue).New
+- uid: Gamelogic.Extensions.ObservedTransformedValue`2.TransformedValue
+  name: TransformedValue
+  href: api/Gamelogic.Extensions.ObservedTransformedValue-2.TransformedValue.html#Gamelogic_Extensions_ObservedTransformedValue_2_TransformedValue
+  commentId: P:Gamelogic.Extensions.ObservedTransformedValue`2.TransformedValue
+  fullName: Gamelogic.Extensions.ObservedTransformedValue<TValue, TTransformedValue>.TransformedValue
+  fullName.vb: Gamelogic.Extensions.ObservedTransformedValue(Of TValue, TTransformedValue).TransformedValue
+  nameWithType: ObservedTransformedValue<TValue, TTransformedValue>.TransformedValue
+  nameWithType.vb: ObservedTransformedValue(Of TValue, TTransformedValue).TransformedValue
+- uid: Gamelogic.Extensions.ObservedTransformedValue`2.TransformedValue*
+  name: TransformedValue
+  href: api/Gamelogic.Extensions.ObservedTransformedValue-2.TransformedValue.html
+  commentId: Overload:Gamelogic.Extensions.ObservedTransformedValue`2.TransformedValue
+  fullName: Gamelogic.Extensions.ObservedTransformedValue<TValue, TTransformedValue>.TransformedValue
+  fullName.vb: Gamelogic.Extensions.ObservedTransformedValue(Of TValue, TTransformedValue).TransformedValue
+  nameWithType: ObservedTransformedValue<TValue, TTransformedValue>.TransformedValue
+  nameWithType.vb: ObservedTransformedValue(Of TValue, TTransformedValue).TransformedValue
 - uid: Gamelogic.Extensions.ObservedTransformedValue`2.TransformedValueChanged
   name: TransformedValueChanged
   href: api/Gamelogic.Extensions.ObservedTransformedValue-2.TransformedValueChanged.html
@@ -15010,18 +15314,6 @@ references:
   commentId: T:Gamelogic.Extensions.Texture2DTiling
   fullName: Gamelogic.Extensions.Texture2DTiling
   nameWithType: Texture2DTiling
-- uid: Gamelogic.Extensions.Texture2DTiling.CalculatedTiling
-  name: CalculatedTiling
-  href: api/Gamelogic.Extensions.Texture2DTiling.CalculatedTiling.html#Gamelogic_Extensions_Texture2DTiling_CalculatedTiling
-  commentId: P:Gamelogic.Extensions.Texture2DTiling.CalculatedTiling
-  fullName: Gamelogic.Extensions.Texture2DTiling.CalculatedTiling
-  nameWithType: Texture2DTiling.CalculatedTiling
-- uid: Gamelogic.Extensions.Texture2DTiling.CalculatedTiling*
-  name: CalculatedTiling
-  href: api/Gamelogic.Extensions.Texture2DTiling.CalculatedTiling.html
-  commentId: Overload:Gamelogic.Extensions.Texture2DTiling.CalculatedTiling
-  fullName: Gamelogic.Extensions.Texture2DTiling.CalculatedTiling
-  nameWithType: Texture2DTiling.CalculatedTiling
 - uid: Gamelogic.Extensions.Texture2DTiling.Texture
   name: Texture
   href: api/Gamelogic.Extensions.Texture2DTiling.Texture.html#Gamelogic_Extensions_Texture2DTiling_Texture
@@ -15034,48 +15326,132 @@ references:
   commentId: Overload:Gamelogic.Extensions.Texture2DTiling.Texture
   fullName: Gamelogic.Extensions.Texture2DTiling.Texture
   nameWithType: Texture2DTiling.Texture
-- uid: Gamelogic.Extensions.Texture2DTiling.Tiling
+- uid: Gamelogic.Extensions.TextureTiling
+  name: TextureTiling
+  href: api/Gamelogic.Extensions.TextureTiling.html
+  commentId: T:Gamelogic.Extensions.TextureTiling
+  fullName: Gamelogic.Extensions.TextureTiling
+  nameWithType: TextureTiling
+- uid: Gamelogic.Extensions.TextureTiling.Texture
+  name: Texture
+  href: api/Gamelogic.Extensions.TextureTiling.Texture.html#Gamelogic_Extensions_TextureTiling_Texture
+  commentId: P:Gamelogic.Extensions.TextureTiling.Texture
+  fullName: Gamelogic.Extensions.TextureTiling.Texture
+  nameWithType: TextureTiling.Texture
+- uid: Gamelogic.Extensions.TextureTiling.Texture*
+  name: Texture
+  href: api/Gamelogic.Extensions.TextureTiling.Texture.html
+  commentId: Overload:Gamelogic.Extensions.TextureTiling.Texture
+  fullName: Gamelogic.Extensions.TextureTiling.Texture
+  nameWithType: TextureTiling.Texture
+- uid: Gamelogic.Extensions.TextureTilingBase
+  name: TextureTilingBase
+  href: api/Gamelogic.Extensions.TextureTilingBase.html
+  commentId: T:Gamelogic.Extensions.TextureTilingBase
+  fullName: Gamelogic.Extensions.TextureTilingBase
+  nameWithType: TextureTilingBase
+- uid: Gamelogic.Extensions.TextureTilingBase.CalculatedTiling
+  name: CalculatedTiling
+  href: api/Gamelogic.Extensions.TextureTilingBase.CalculatedTiling.html#Gamelogic_Extensions_TextureTilingBase_CalculatedTiling
+  commentId: P:Gamelogic.Extensions.TextureTilingBase.CalculatedTiling
+  fullName: Gamelogic.Extensions.TextureTilingBase.CalculatedTiling
+  nameWithType: TextureTilingBase.CalculatedTiling
+- uid: Gamelogic.Extensions.TextureTilingBase.CalculatedTiling*
+  name: CalculatedTiling
+  href: api/Gamelogic.Extensions.TextureTilingBase.CalculatedTiling.html
+  commentId: Overload:Gamelogic.Extensions.TextureTilingBase.CalculatedTiling
+  fullName: Gamelogic.Extensions.TextureTilingBase.CalculatedTiling
+  nameWithType: TextureTilingBase.CalculatedTiling
+- uid: Gamelogic.Extensions.TextureTilingBase.Tiling
   name: Tiling
-  href: api/Gamelogic.Extensions.Texture2DTiling.Tiling.html#Gamelogic_Extensions_Texture2DTiling_Tiling
-  commentId: P:Gamelogic.Extensions.Texture2DTiling.Tiling
-  fullName: Gamelogic.Extensions.Texture2DTiling.Tiling
-  nameWithType: Texture2DTiling.Tiling
-- uid: Gamelogic.Extensions.Texture2DTiling.Tiling*
+  href: api/Gamelogic.Extensions.TextureTilingBase.Tiling.html#Gamelogic_Extensions_TextureTilingBase_Tiling
+  commentId: P:Gamelogic.Extensions.TextureTilingBase.Tiling
+  fullName: Gamelogic.Extensions.TextureTilingBase.Tiling
+  nameWithType: TextureTilingBase.Tiling
+- uid: Gamelogic.Extensions.TextureTilingBase.Tiling*
   name: Tiling
-  href: api/Gamelogic.Extensions.Texture2DTiling.Tiling.html
-  commentId: Overload:Gamelogic.Extensions.Texture2DTiling.Tiling
-  fullName: Gamelogic.Extensions.Texture2DTiling.Tiling
-  nameWithType: Texture2DTiling.Tiling
-- uid: Gamelogic.Extensions.Texture2DTiling.TilingOffset
+  href: api/Gamelogic.Extensions.TextureTilingBase.Tiling.html
+  commentId: Overload:Gamelogic.Extensions.TextureTilingBase.Tiling
+  fullName: Gamelogic.Extensions.TextureTilingBase.Tiling
+  nameWithType: TextureTilingBase.Tiling
+- uid: Gamelogic.Extensions.TextureTilingBase.TilingOffset
   name: TilingOffset
-  href: api/Gamelogic.Extensions.Texture2DTiling.TilingOffset.html#Gamelogic_Extensions_Texture2DTiling_TilingOffset
-  commentId: P:Gamelogic.Extensions.Texture2DTiling.TilingOffset
-  fullName: Gamelogic.Extensions.Texture2DTiling.TilingOffset
-  nameWithType: Texture2DTiling.TilingOffset
-- uid: Gamelogic.Extensions.Texture2DTiling.TilingOffset*
+  href: api/Gamelogic.Extensions.TextureTilingBase.TilingOffset.html#Gamelogic_Extensions_TextureTilingBase_TilingOffset
+  commentId: P:Gamelogic.Extensions.TextureTilingBase.TilingOffset
+  fullName: Gamelogic.Extensions.TextureTilingBase.TilingOffset
+  nameWithType: TextureTilingBase.TilingOffset
+- uid: Gamelogic.Extensions.TextureTilingBase.TilingOffset*
   name: TilingOffset
-  href: api/Gamelogic.Extensions.Texture2DTiling.TilingOffset.html
-  commentId: Overload:Gamelogic.Extensions.Texture2DTiling.TilingOffset
-  fullName: Gamelogic.Extensions.Texture2DTiling.TilingOffset
-  nameWithType: Texture2DTiling.TilingOffset
-- uid: Gamelogic.Extensions.Texture2DTiling.TilingScale
+  href: api/Gamelogic.Extensions.TextureTilingBase.TilingOffset.html
+  commentId: Overload:Gamelogic.Extensions.TextureTilingBase.TilingOffset
+  fullName: Gamelogic.Extensions.TextureTilingBase.TilingOffset
+  nameWithType: TextureTilingBase.TilingOffset
+- uid: Gamelogic.Extensions.TextureTilingBase.TilingScale
   name: TilingScale
-  href: api/Gamelogic.Extensions.Texture2DTiling.TilingScale.html#Gamelogic_Extensions_Texture2DTiling_TilingScale
-  commentId: P:Gamelogic.Extensions.Texture2DTiling.TilingScale
-  fullName: Gamelogic.Extensions.Texture2DTiling.TilingScale
-  nameWithType: Texture2DTiling.TilingScale
-- uid: Gamelogic.Extensions.Texture2DTiling.TilingScale*
+  href: api/Gamelogic.Extensions.TextureTilingBase.TilingScale.html#Gamelogic_Extensions_TextureTilingBase_TilingScale
+  commentId: P:Gamelogic.Extensions.TextureTilingBase.TilingScale
+  fullName: Gamelogic.Extensions.TextureTilingBase.TilingScale
+  nameWithType: TextureTilingBase.TilingScale
+- uid: Gamelogic.Extensions.TextureTilingBase.TilingScale*
   name: TilingScale
-  href: api/Gamelogic.Extensions.Texture2DTiling.TilingScale.html
-  commentId: Overload:Gamelogic.Extensions.Texture2DTiling.TilingScale
-  fullName: Gamelogic.Extensions.Texture2DTiling.TilingScale
-  nameWithType: Texture2DTiling.TilingScale
+  href: api/Gamelogic.Extensions.TextureTilingBase.TilingScale.html
+  commentId: Overload:Gamelogic.Extensions.TextureTilingBase.TilingScale
+  fullName: Gamelogic.Extensions.TextureTilingBase.TilingScale
+  nameWithType: TextureTilingBase.TilingScale
 - uid: Gamelogic.Extensions.ThrowHelper
   name: ThrowHelper
   href: api/Gamelogic.Extensions.ThrowHelper.html
   commentId: T:Gamelogic.Extensions.ThrowHelper
   fullName: Gamelogic.Extensions.ThrowHelper
   nameWithType: ThrowHelper
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty
+  name: ThrowContainerEmpty()
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowContainerEmpty
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty()
+  nameWithType: ThrowHelper.ThrowContainerEmpty()
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty*
+  name: ThrowContainerEmpty
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty
+  nameWithType: ThrowHelper.ThrowContainerEmpty
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowContainerFull
+  name: ThrowContainerFull()
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowContainerFull.html#Gamelogic_Extensions_ThrowHelper_ThrowContainerFull
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowContainerFull
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowContainerFull()
+  nameWithType: ThrowHelper.ThrowContainerFull()
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowContainerFull*
+  name: ThrowContainerFull
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowContainerFull.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowContainerFull
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowContainerFull
+  nameWithType: ThrowHelper.ThrowContainerFull
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty*
+  name: ThrowIfEmpty
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty
+  nameWithType: ThrowHelper.ThrowIfEmpty
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty``1(System.Collections.Generic.IList{``0},System.String)
+  name: ThrowIfEmpty<T>(IList<T>, string)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfEmpty__1_System_Collections_Generic_IList___0__System_String_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty``1(System.Collections.Generic.IList{``0},System.String)
+  name.vb: ThrowIfEmpty(Of T)(IList(Of T), String)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty<T>(System.Collections.Generic.IList<T>, string)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty(Of T)(System.Collections.Generic.IList(Of T), String)
+  nameWithType: ThrowHelper.ThrowIfEmpty<T>(IList<T>, string)
+  nameWithType.vb: ThrowHelper.ThrowIfEmpty(Of T)(IList(Of T), String)
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty``1(``0[],System.String)
+  name: ThrowIfEmpty<T>(T[], string)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfEmpty__1___0___System_String_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty``1(``0[],System.String)
+  name.vb: ThrowIfEmpty(Of T)(T(), String)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty<T>(T[], string)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty(Of T)(T(), String)
+  nameWithType: ThrowHelper.ThrowIfEmpty<T>(T[], string)
+  nameWithType.vb: ThrowHelper.ThrowIfEmpty(Of T)(T(), String)
 - uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNegative(System.Int32,System.String)
   name: ThrowIfNegative(int, string)
   href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNegative_System_Int32_System_String_
@@ -15100,6 +15476,42 @@ references:
   commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfNegative
   fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNegative
   nameWithType: ThrowHelper.ThrowIfNegative
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom(System.Type,System.Type)
+  name: ThrowIfNotAssignableFrom(Type, Type)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotAssignableFrom_System_Type_System_Type_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom(System.Type,System.Type)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom(System.Type, System.Type)
+  nameWithType: ThrowHelper.ThrowIfNotAssignableFrom(Type, Type)
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom*
+  name: ThrowIfNotAssignableFrom
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom
+  nameWithType: ThrowHelper.ThrowIfNotAssignableFrom
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom``1(System.Type)
+  name: ThrowIfNotAssignableFrom<T>(Type)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotAssignableFrom__1_System_Type_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom``1(System.Type)
+  name.vb: ThrowIfNotAssignableFrom(Of T)(Type)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom<T>(System.Type)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom(Of T)(System.Type)
+  nameWithType: ThrowHelper.ThrowIfNotAssignableFrom<T>(Type)
+  nameWithType.vb: ThrowHelper.ThrowIfNotAssignableFrom(Of T)(Type)
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive(System.Int32,System.String)
+  name: ThrowIfNotPositive(int, string)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotPositive_System_Int32_System_String_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive(System.Int32,System.String)
+  name.vb: ThrowIfNotPositive(Integer, String)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive(int, string)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive(Integer, String)
+  nameWithType: ThrowHelper.ThrowIfNotPositive(int, string)
+  nameWithType.vb: ThrowHelper.ThrowIfNotPositive(Integer, String)
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive*
+  name: ThrowIfNotPositive
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive
+  nameWithType: ThrowHelper.ThrowIfNotPositive
 - uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNull(System.Object,System.String)
   name: ThrowIfNull(object, string)
   href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_
@@ -15115,6 +15527,45 @@ references:
   commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfNull
   fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNull
   nameWithType: ThrowHelper.ThrowIfNull
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)
+  name: ThrowIfNullOrEmpty(string, string)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNullOrEmpty_System_String_System_String_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty(System.String,System.String)
+  name.vb: ThrowIfNullOrEmpty(String, String)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty(string, string)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty(String, String)
+  nameWithType: ThrowHelper.ThrowIfNullOrEmpty(string, string)
+  nameWithType.vb: ThrowHelper.ThrowIfNullOrEmpty(String, String)
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty*
+  name: ThrowIfNullOrEmpty
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty
+  nameWithType: ThrowHelper.ThrowIfNullOrEmpty
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace(System.String,System.String)
+  name: ThrowIfNullOrWhiteSpace(string, string)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNullOrWhiteSpace_System_String_System_String_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace(System.String,System.String)
+  name.vb: ThrowIfNullOrWhiteSpace(String, String)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace(string, string)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace(String, String)
+  nameWithType: ThrowHelper.ThrowIfNullOrWhiteSpace(string, string)
+  nameWithType.vb: ThrowHelper.ThrowIfNullOrWhiteSpace(String, String)
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace*
+  name: ThrowIfNullOrWhiteSpace
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace.html
+  commentId: Overload:Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace
+  nameWithType: ThrowHelper.ThrowIfNullOrWhiteSpace
+- uid: Gamelogic.Extensions.ThrowHelper.ThrowIfNull``1(``0,System.String)
+  name: ThrowIfNull<T>(T, string)
+  href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_
+  commentId: M:Gamelogic.Extensions.ThrowHelper.ThrowIfNull``1(``0,System.String)
+  name.vb: ThrowIfNull(Of T)(T, String)
+  fullName: Gamelogic.Extensions.ThrowHelper.ThrowIfNull<T>(T, string)
+  fullName.vb: Gamelogic.Extensions.ThrowHelper.ThrowIfNull(Of T)(T, String)
+  nameWithType: ThrowHelper.ThrowIfNull<T>(T, string)
+  nameWithType.vb: ThrowHelper.ThrowIfNull(Of T)(T, String)
 - uid: Gamelogic.Extensions.ThrowHelper.ThrowIfOutOfRange(System.Int32,System.Int32,System.Int32,System.String)
   name: ThrowIfOutOfRange(int, int, int, string)
   href: api/Gamelogic.Extensions.ThrowHelper.ThrowIfOutOfRange.html#Gamelogic_Extensions_ThrowHelper_ThrowIfOutOfRange_System_Int32_System_Int32_System_Int32_System_String_

@@ -118,8 +118,8 @@ public class LSystem&lt;TSymbol&gt;</code></pre>
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TSymbol</code></dt>
-    <dd><p>This type must be
-comparable using ==, or you should feed an IEqualityComparer.</p>
+    <dd><p>The type used as the alphabet symbols. Must support equality comparison;
+if the default equality is not suitable, provide an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a> via the constructor.</p>
 </dd>
   </dl>
 
@@ -162,6 +162,9 @@ comparable using ==, or you should feed an IEqualityComparer.</p>
   <dl class="typelist extensionMethods">
     <dt>Extension Methods</dt>
     <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
   <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>

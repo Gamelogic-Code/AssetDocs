@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_Editor_PopupListPropertyDrawer_1_GetValuesByOtherMethod_" data-uid="Gamelogic.Extensions.Editor.PopupListPropertyDrawer`1.GetValuesByOtherMethod*" class="text-break">
-Method GetValuesByOtherMethod  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Editor/PropertyDrawers/PopupList/PopupListPropertyDrawer.cs/#L122"><i class="bi bi-code-slash"></i></a>
+Method GetValuesByOtherMethod  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Editor/PropertyDrawers/PopupList/PopupListPropertyDrawer.cs/#L123"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method GetValuesByOtherMethod  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Gamelogic_Extensions_Editor_PopupListPropertyDrawer_1_GetValuesByOtherMethod" data-uid="Gamelogic.Extensions.Editor.PopupListPropertyDrawer`1.GetValuesByOtherMethod">
   GetValuesByOtherMethod()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Editor/PropertyDrawers/PopupList/PopupListPropertyDrawer.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Editor/PropertyDrawers/PopupList/PopupListPropertyDrawer.cs/#L123"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Gets the values to be displayed in the popup list by a method other one of the system-provided ones.</p>
+<div class="markdown level1 summary"><p>Returns the values to display in the popup list using a custom retrieval method.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -143,7 +143,8 @@ Method GetValuesByOtherMethod  <a class="header-action link-secondary" title="Vi
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt>T[]</dt>
-  <dd></dd>
+  <dd><p>An array of values to display.</p>
+</dd>
 </dl>
 
 
@@ -160,7 +161,8 @@ is set to <a class="xref" href="Gamelogic.Extensions.ValuesRetrievalMethod.html#
 <h4 class="section">Exceptions</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
-  <dd></dd>
+  <dd><p>Always thrown by the base implementation; override in a derived class.</p>
+</dd>
 </dl>
 
 

@@ -161,11 +161,6 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Gamelogic.Extensions.DiskCache-2.html">DiskCache&lt;TKey, TValue&gt;</a></dt>
-      <dd><p>A cache maintained on disk.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.DummyAttribute.html">DummyAttribute</a></dt>
       <dd><p>Used to mark the last field in a MonoBehaviour
 as a dummy so that it is not drawn. This is
@@ -242,7 +237,7 @@ for setting bool and array preferences.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.HighlightAttribute.html">HighlightAttribute</a></dt>
-      <dd><p>Mark simple types to be highligted in the inspector.</p>
+      <dd><p>Marks a field to be highlighted with a background color in the inspector.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -316,7 +311,7 @@ that draws a re-orderable list in the inspector.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.KeyValue-2.html">KeyValue&lt;TKey, TValue&gt;</a></dt>
-      <dd><p>Represent a key-value pair used for the implementation of <a class="xref" href="Gamelogic.Extensions.FixedKeyDictionary-2.html">FixedKeyDictionary&lt;TKey, TValue&gt;</a>.</p>
+      <dd><p>Represents a key-value pair used for the implementation of <a class="xref" href="Gamelogic.Extensions.FixedKeyDictionary-2.html">FixedKeyDictionary&lt;TKey, TValue&gt;</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -457,7 +452,8 @@ Unity limitations). The exception, when thrown, indicates which class should hav
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.PoolExtensions.html">PoolExtensions</a></dt>
-      <dd></dd>
+      <dd><p>Provides extension methods for <a class="xref" href="Gamelogic.Extensions.IPool-1.html">IPool&lt;T&gt;</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a></dt>
@@ -523,7 +519,7 @@ and transition back to them (FIFO).</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.SceneNameAttribute.html">SceneNameAttribute</a></dt>
-      <dd><p>Attribute to mark a fieeld as a scene name in the inspector.</p>
+      <dd><p>Marks a string field as a scene name in the inspector, rendering it as a popup of scenes in the build settings.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -535,7 +531,8 @@ are found.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.SeparatorAttribute.html">SeparatorAttribute</a></dt>
-      <dd></dd>
+      <dd><p>Draws a horizontal separator line above the field in the inspector.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.Singleton.html">Singleton</a></dt>
@@ -544,7 +541,8 @@ are found.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.SingletonSpawner-1.html">SingletonSpawner&lt;T&gt;</a></dt>
-      <dd></dd>
+      <dd><p>Ensures that exactly one instance of <code class="typeparamref">T</code> exists in the scene, spawning from a prefab if none is found.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.Singleton-1.html">Singleton&lt;T&gt;</a></dt>
@@ -580,7 +578,17 @@ are found.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.Texture2DTiling.html">Texture2DTiling</a></dt>
-      <dd><p>Represents a texture along with configurable tiling parameters.</p>
+      <dd><p>Represents a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture2D.html">Texture2D</a> along with configurable tiling parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.TextureTiling.html">TextureTiling</a></dt>
+      <dd><p>Represents a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture.html">Texture</a> along with configurable tiling parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Extensions.TextureTilingBase.html">TextureTilingBase</a></dt>
+      <dd><p>Base class for a texture along with configurable tiling parameters.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -595,7 +603,7 @@ are found.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.html">TransformExtensions</a></dt>
-      <dd><p>Contains useful extensions for Select.</p>
+      <dd><p>Contains useful extension methods for <a class="xref" href="https://docs.unity3d.com/ScriptReference/Transform.html">Transform</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -690,7 +698,8 @@ Interfaces
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.IPoolObject-1.html">IPoolObject&lt;T&gt;</a></dt>
-      <dd></dd>
+      <dd><p>Represents a pooled object wrapper that exposes the underlying value and its active state.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Extensions.IPool-1.html">IPool&lt;T&gt;</a></dt>

@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_Algorithms_LSystem_1_AddRewriteRule_" data-uid="Gamelogic.Extensions.Algorithms.LSystem`1.AddRewriteRule*" class="text-break">
-Method AddRewriteRule  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/LSystem.cs/#L51"><i class="bi bi-code-slash"></i></a>
+Method AddRewriteRule  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/LSystem.cs/#L52"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,7 +128,7 @@ Method AddRewriteRule  <a class="header-action link-secondary" title="View sourc
 
 <h3 id="Gamelogic_Extensions_Algorithms_LSystem_1_AddRewriteRule__0_System_Collections_Generic_IEnumerable__0__" data-uid="Gamelogic.Extensions.Algorithms.LSystem`1.AddRewriteRule(`0,System.Collections.Generic.IEnumerable{`0})">
   AddRewriteRule(TSymbol, IEnumerable&lt;TSymbol&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/LSystem.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/LSystem.cs/#L52"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds a new rewrite rule to the system.</p>
@@ -142,9 +142,11 @@ Method AddRewriteRule  <a class="header-action link-secondary" title="View sourc
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>symbol</code> <span class="xref">TSymbol</span></dt>
-  <dd></dd>
+  <dd><p>The symbol to match. If a rule for this symbol already exists, it is replaced.</p>
+</dd>
   <dt><code>replacement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSymbol&gt;</dt>
-  <dd></dd>
+  <dd><p>The sequence of symbols that replaces <code class="paramref">symbol</code> during rewriting.</p>
+</dd>
 </dl>
 
 

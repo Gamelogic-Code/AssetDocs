@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_GLDebug_Assert_" data-uid="Gamelogic.Extensions.GLDebug.Assert*" class="text-break">
-Method Assert  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L21"><i class="bi bi-code-slash"></i></a>
+Method Assert  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L22"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method Assert  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Gamelogic_Extensions_GLDebug_Assert_System_Boolean_System_String_UnityEngine_Object_" data-uid="Gamelogic.Extensions.GLDebug.Assert(System.Boolean,System.String,UnityEngine.Object)">
   Assert(bool, string, Object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L22"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Check whether the condition is true, and print an error message if it is not.</p>
+<div class="markdown level1 summary"><p>Checks whether the condition is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, and logs an error message if it is not (only in DEBUG builds).</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -144,11 +144,14 @@ public static void Assert(bool condition, string message, Object context = null)
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-  <dd></dd>
+  <dd><p>The condition to check.</p>
+</dd>
   <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-  <dd></dd>
+  <dd><p>The error message to log if the condition is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
   <dt><code>context</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></dt>
-  <dd></dd>
+  <dd><p>Optional Unity Object context for the log message.</p>
+</dd>
 </dl>
 
 

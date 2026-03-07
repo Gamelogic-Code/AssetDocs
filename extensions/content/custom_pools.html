@@ -169,7 +169,7 @@ namespace Gamelogic.Extensions.DocumentationCode
 <p>Pools support nulls, but this is needed only in unusual cases. A more robust implementation (that does not need to
 support null elements in the pool) should perform additional checks to prevent null elements from being added to the
 pool.</p>
-<p>This version also maintains an <code>IsActive</code> boolean that can be used internally and externally to present objects from
+<p>This version also maintains an <code>IsActive</code> boolean that can be used internally and externally to prevent objects from
 being used when they should not.</p>
 <pre><code class="lang-csharp">using System;
 using UnityEngine.Assertions;

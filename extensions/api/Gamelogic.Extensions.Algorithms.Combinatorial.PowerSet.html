@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_Algorithms_Combinatorial_PowerSet_" data-uid="Gamelogic.Extensions.Algorithms.Combinatorial.PowerSet*" class="text-break">
-Method PowerSet  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L48"><i class="bi bi-code-slash"></i></a>
+Method PowerSet  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L49"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method PowerSet  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Gamelogic_Extensions_Algorithms_Combinatorial_PowerSet__1_System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.Combinatorial.PowerSet``1(System.Collections.Generic.IEnumerable{``0})">
   PowerSet&lt;T&gt;(IEnumerable&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L49"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Returns the power set of the input, that is, the set of all subsets of the input.</p>
+<div class="markdown level1 summary"><p>Returns the power set of the input, that is, all possible subsets of the input.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -142,21 +142,22 @@ Method PowerSet  <a class="header-action link-secondary" title="View source" hre
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
-  <dd><p>The input.</p>
+  <dd><p>The input sequence.</p>
 </dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
-  <dd><p>IEnumerable&lt;IEnumerable&lt;T&gt;&gt;.</p>
+  <dd><p>An enumerable of all 2^n subsets of the input.</p>
 </dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The type of elements in the input.</p>
+</dd>
 </dl>
 
 
@@ -165,6 +166,12 @@ Method PowerSet  <a class="header-action link-secondary" title="View source" hre
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code class="paramref">input</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+</dl>
 
 
 

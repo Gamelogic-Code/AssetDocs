@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_LifeCycleEventExtensions_Matches_" data-uid="Gamelogic.Extensions.LifeCycleEventExtensions.Matches*" class="text-break">
-Method Matches  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/LifeCycleEvent.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Method Matches  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/LifeCycleEvent.cs/#L78"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,11 @@ Method Matches  <a class="header-action link-secondary" title="View source" href
 
 <h3 id="Gamelogic_Extensions_LifeCycleEventExtensions_Matches_Gamelogic_Extensions_LifeCycleEvent_Gamelogic_Extensions_LifeCycleEvent_" data-uid="Gamelogic.Extensions.LifeCycleEventExtensions.Matches(Gamelogic.Extensions.LifeCycleEvent,Gamelogic.Extensions.LifeCycleEvent)">
   Matches(LifeCycleEvent, LifeCycleEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/LifeCycleEvent.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/LifeCycleEvent.cs/#L78"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Returns whether <code class="paramref">eventToMatch</code> includes any flags from <code class="paramref">currentEvent</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -141,15 +142,18 @@ Method Matches  <a class="header-action link-secondary" title="View source" href
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>eventToMatch</code> <a class="xref" href="Gamelogic.Extensions.LifeCycleEvent.html">LifeCycleEvent</a></dt>
-  <dd></dd>
+  <dd><p>The event or combination of events to test against.</p>
+</dd>
   <dt><code>currentEvent</code> <a class="xref" href="Gamelogic.Extensions.LifeCycleEvent.html">LifeCycleEvent</a></dt>
-  <dd></dd>
+  <dd><p>The event that is currently occurring.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-  <dd></dd>
+  <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if any flag in <code class="paramref">currentEvent</code> is set in <code class="paramref">eventToMatch</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
 </dl>
 
 

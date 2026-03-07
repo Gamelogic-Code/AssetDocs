@@ -160,23 +160,73 @@ public static class ThrowHelper</code></pre>
 </h2>
 
   <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowContainerEmpty">ThrowContainerEmpty()</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> indicating the container is empty.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowContainerFull.html#Gamelogic_Extensions_ThrowHelper_ThrowContainerFull">ThrowContainerFull()</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> indicating the container is full.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfEmpty__1_System_Collections_Generic_IList___0__System_String_">ThrowIfEmpty&lt;T&gt;(IList&lt;T&gt;, string)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> if the list is empty.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfEmpty__1___0___System_String_">ThrowIfEmpty&lt;T&gt;(T[], string)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> if the array is empty.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNegative_System_Int32_System_String_">ThrowIfNegative(int, string)</a></dt>
-    <dd><p>Throws a ArgumentOutOfRange exception if the integer is negative.</p>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> if the integer is negative.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNegative_System_Single_System_String_">ThrowIfNegative(float, string)</a></dt>
-    <dd><p>Throws a ArgumentOutOfRange exception if the float is negative.</p>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> if the float is negative.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotAssignableFrom_System_Type_System_Type_">ThrowIfNotAssignableFrom(Type, Type)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> if <code class="paramref">targetType</code> is not assignable from <code class="paramref">sourceType</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotAssignableFrom__1_System_Type_">ThrowIfNotAssignableFrom&lt;T&gt;(Type)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> if <code class="paramref">targetType</code> is not assignable from <code class="typeparamref">T</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotPositive_System_Int32_System_String_">ThrowIfNotPositive(int, string)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> if the integer is not positive (i.e. zero or negative).</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowIfNull(object, string)</a></dt>
-    <dd><p>Throws a NullReferenceException if the given argument is null.</p>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> if the given argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNullOrEmpty_System_String_System_String_">ThrowIfNullOrEmpty(string, string)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> if the string is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNullOrWhiteSpace_System_String_System_String_">ThrowIfNullOrWhiteSpace(string, string)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> if the string is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, empty, or whitespace.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowIfNull&lt;T&gt;(T, string)</a></dt>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> if the object is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfOutOfRange.html#Gamelogic_Extensions_ThrowHelper_ThrowIfOutOfRange_System_Int32_System_Int32_System_Int32_System_String_">ThrowIfOutOfRange(int, int, int, string)</a></dt>
-    <dd><p>Throws a ArgumentOutOfRange exception if the integer is out of range.</p>
+    <dd><p>Throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> if the integer is out of range.</p>
 </dd>
   </dl>
 

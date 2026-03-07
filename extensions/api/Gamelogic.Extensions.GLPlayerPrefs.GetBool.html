@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_GLPlayerPrefs_GetBool_" data-uid="Gamelogic.Extensions.GLPlayerPrefs.GetBool*" class="text-break">
-Method GetBool  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLPlayerPrefs.cs/#L41"><i class="bi bi-code-slash"></i></a>
+Method GetBool  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLPlayerPrefs.cs/#L59"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,11 @@ Method GetBool  <a class="header-action link-secondary" title="View source" href
 
 <h3 id="Gamelogic_Extensions_GLPlayerPrefs_GetBool_System_String_System_String_System_Boolean_" data-uid="Gamelogic.Extensions.GLPlayerPrefs.GetBool(System.String,System.String,System.Boolean)">
   GetBool(string, string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLPlayerPrefs.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLPlayerPrefs.cs/#L59"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Gets a boolean preference.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -141,17 +142,21 @@ Method GetBool  <a class="header-action link-secondary" title="View source" href
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>scope</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-  <dd></dd>
+  <dd><p>The scope namespace.</p>
+</dd>
   <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-  <dd></dd>
+  <dd><p>The key within the scope.</p>
+</dd>
   <dt><code>defaultValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-  <dd></dd>
+  <dd><p>The value to return if the key does not exist.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-  <dd></dd>
+  <dd><p>The stored value, or <code class="paramref">defaultValue</code> if not found.</p>
+</dd>
 </dl>
 
 

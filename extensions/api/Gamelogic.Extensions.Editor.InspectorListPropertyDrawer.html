@@ -111,7 +111,7 @@ Class InspectorListPropertyDrawer  <a class="header-action link-secondary" title
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Version(2, 5, 0)]
 [CustomPropertyDrawer(typeof(InspectorList), true)]
-[Obsolete]
+[Obsolete(&quot;Unity&#39;s default list functionality in inspectors is now superior.&quot;)]
 public class InspectorListPropertyDrawer : PropertyDrawer</code></pre>
   </div>
 
@@ -172,6 +172,9 @@ public class InspectorListPropertyDrawer : PropertyDrawer</code></pre>
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -189,7 +192,8 @@ public class InspectorListPropertyDrawer : PropertyDrawer</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.InspectorListPropertyDrawer.InitList.html#Gamelogic_Extensions_Editor_InspectorListPropertyDrawer_InitList_UnityEditor_SerializedProperty_UnityEditor_SerializedProperty_">InitList(SerializedProperty, SerializedProperty)</a></dt>
-    <dd></dd>
+    <dd><p>Initializes the reorderable list if it has not been initialized yet.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.InspectorListPropertyDrawer.OnGUI.html#Gamelogic_Extensions_Editor_InspectorListPropertyDrawer_OnGUI_UnityEngine_Rect_UnityEditor_SerializedProperty_UnityEngine_GUIContent_">OnGUI(Rect, SerializedProperty, GUIContent)</a></dt>

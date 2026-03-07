@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_GLMonoBehaviour_Tween_" data-uid="Gamelogic.Extensions.GLMonoBehaviour.Tween*" class="text-break">
-Method Tween  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L197"><i class="bi bi-code-slash"></i></a>
+Method Tween  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L232"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,11 @@ Method Tween  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Gamelogic_Extensions_GLMonoBehaviour_Tween__1___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__System_Func_System_Single__" data-uid="Gamelogic.Extensions.GLMonoBehaviour.Tween``1(``0,``0,System.Single,System.Func{``0,``0,System.Single,``0},System.Action{``0},System.Func{System.Single})">
   Tween&lt;T&gt;(T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;, Func&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L232"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Tweens a value from <code class="paramref">start</code> to <code class="paramref">finish</code> over <code class="paramref">totalTime</code> seconds.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -142,29 +143,37 @@ public Coroutine Tween&lt;T&gt;(T start, T finish, float totalTime, Func&lt;T, T
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>start</code> <span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>The starting value.</p>
+</dd>
   <dt><code>finish</code> <span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>The ending value.</p>
+</dd>
   <dt><code>totalTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-  <dd></dd>
+  <dd><p>The total duration of the tween in seconds.</p>
+</dd>
   <dt><code>lerp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;T, T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, T&gt;</dt>
-  <dd></dd>
+  <dd><p>A function to interpolate between two values.</p>
+</dd>
   <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>A callback invoked each frame with the current interpolated value.</p>
+</dd>
   <dt><code>deltaTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>A function that returns the delta time for each frame.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Coroutine.html">Coroutine</a></dt>
-  <dd></dd>
+  <dd><p>The started coroutine.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The type of the value to tween.</p>
+</dd>
 </dl>
 
 
@@ -180,10 +189,11 @@ public Coroutine Tween&lt;T&gt;(T start, T finish, float totalTime, Func&lt;T, T
 
 <h3 id="Gamelogic_Extensions_GLMonoBehaviour_Tween__1___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__" data-uid="Gamelogic.Extensions.GLMonoBehaviour.Tween``1(``0,``0,System.Single,System.Func{``0,``0,System.Single,``0},System.Action{``0})">
   Tween&lt;T&gt;(T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L245"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Tweens a value from <code class="paramref">start</code> to <code class="paramref">finish</code> over <code class="paramref">totalTime</code> seconds.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -194,27 +204,34 @@ public Coroutine Tween&lt;T&gt;(T start, T finish, float totalTime, Func&lt;T, T
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>start</code> <span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>The starting value.</p>
+</dd>
   <dt><code>finish</code> <span class="xref">T</span></dt>
-  <dd></dd>
+  <dd><p>The ending value.</p>
+</dd>
   <dt><code>totalTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-  <dd></dd>
+  <dd><p>The total duration of the tween in seconds.</p>
+</dd>
   <dt><code>lerp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;T, T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, T&gt;</dt>
-  <dd></dd>
+  <dd><p>A function to interpolate between two values.</p>
+</dd>
   <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>A callback invoked each frame with the current interpolated value.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Coroutine.html">Coroutine</a></dt>
-  <dd></dd>
+  <dd><p>The started coroutine.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The type of the value to tween.</p>
+</dd>
 </dl>
 
 

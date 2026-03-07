@@ -376,6 +376,9 @@ public class GLEditor&lt;T&gt; : Editor where T : MonoBehaviour</code></pre>
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -388,11 +391,13 @@ public class GLEditor&lt;T&gt; : Editor where T : MonoBehaviour</code></pre>
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.Target.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_Target">Target</a></dt>
-    <dd></dd>
+    <dd><p>Gets the inspected target cast to type <code class="typeparamref">T</code>.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.Targets.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_Targets">Targets</a></dt>
-    <dd></dd>
+    <dd><p>Gets all inspected targets cast to type <code class="typeparamref">T</code>.</p>
+</dd>
   </dl>
 
   <h2 class="section" id="methods">Methods
@@ -400,27 +405,33 @@ public class GLEditor&lt;T&gt; : Editor where T : MonoBehaviour</code></pre>
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.AddCombo.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_AddCombo_System_String___System_Int32_">AddCombo(string[], int)</a></dt>
-    <dd></dd>
+    <dd><p>Draws a popup dropdown and returns the selected index.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.AddField.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_AddField_Gamelogic_Extensions_Editor_GLSerializedProperty_">AddField(GLSerializedProperty)</a></dt>
-    <dd></dd>
+    <dd><p>Draws a property field for the given <a class="xref" href="Gamelogic.Extensions.Editor.GLSerializedProperty.html">GLSerializedProperty</a>, using its custom tooltip.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.AddField.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_AddField_UnityEditor_SerializedProperty_">AddField(SerializedProperty)</a></dt>
-    <dd></dd>
+    <dd><p>Draws a property field for the given serialized property.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.AddLabel.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_AddLabel_System_String_System_String_">AddLabel(string, string)</a></dt>
-    <dd></dd>
+    <dd><p>Draws a label field with a title and a text value.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.AddTextAndButton.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_AddTextAndButton_System_String_System_String_System_Action_">AddTextAndButton(string, string, Action)</a></dt>
-    <dd></dd>
+    <dd><p>Draws a bold label next to a button; invokes <code class="paramref">buttonAction</code> when the button is clicked.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.ArrayGUI.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_ArrayGUI_UnityEditor_SerializedObject_UnityEditor_SerializedProperty_">ArrayGUI(SerializedObject, SerializedProperty)</a></dt>
-    <dd></dd>
+    <dd><p>Draws an inspector GUI for an array serialized property, allowing resizing and element editing.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.DrawInspectorButtons.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_DrawInspectorButtons_System_Int32_">DrawInspectorButtons(int)</a></dt>
@@ -430,11 +441,13 @@ that are marked with the InspectorButtonAttribute.</p>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.FindProperty.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_FindProperty_System_String_">FindProperty(string)</a></dt>
-    <dd></dd>
+    <dd><p>Finds a serialized property by name and wraps it in a <a class="xref" href="Gamelogic.Extensions.Editor.GLSerializedProperty.html">GLSerializedProperty</a>.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.HasProperty.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_HasProperty_System_String_">HasProperty(string)</a></dt>
-    <dd></dd>
+    <dd><p>Returns whether the target object has a serialized property with the given name.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Editor.Internal.GLEditor-1.Splitter.html#Gamelogic_Extensions_Editor_Internal_GLEditor_1_Splitter">Splitter()</a></dt>

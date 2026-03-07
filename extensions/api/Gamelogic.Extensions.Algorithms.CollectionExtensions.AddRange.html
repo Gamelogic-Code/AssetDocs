@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_AddRange_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.AddRange*" class="text-break">
-Method AddRange  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L73"><i class="bi bi-code-slash"></i></a>
+Method AddRange  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method AddRange  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_AddRange__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
   AddRange&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Add all elements of other to the given source.</p>
+<div class="markdown level1 summary"><p>Adds all elements of <code class="paramref">other</code> to the given collection.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -142,16 +142,19 @@ Method AddRange  <a class="header-action link-secondary" title="View source" hre
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>collection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>The collection to add elements to.</p>
+</dd>
   <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
-  <dd></dd>
+  <dd><p>The elements to add. If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, nothing is added.</p>
+</dd>
 </dl>
 
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The type of elements in the collection.</p>
+</dd>
 </dl>
 
 

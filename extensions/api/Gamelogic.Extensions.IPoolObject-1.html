@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IPoolObject&lt;T&gt; | Gamelogic Extensions ">
       
-      
+      <meta name="description" content="Represents a pooled object wrapper that exposes the underlying value and its active state.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Extensions_IPoolObject_1" data-uid="Gamelogic.Extensions.IPoolObject`1" class="text-break">
-Interface IPoolObject&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/PoolExtensions.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Interface IPoolObject&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/PoolExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,8 @@ Interface IPoolObject&lt;T&gt;  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a pooled object wrapper that exposes the underlying value and its active state.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -116,7 +117,8 @@ Interface IPoolObject&lt;T&gt;  <a class="header-action link-secondary" title="V
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the pooled object.</p>
+</dd>
   </dl>
 
 
@@ -126,6 +128,9 @@ Interface IPoolObject&lt;T&gt;  <a class="header-action link-secondary" title="V
   <dl class="typelist extensionMethods">
     <dt>Extension Methods</dt>
     <dd>
+  <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
   <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
@@ -139,11 +144,13 @@ Interface IPoolObject&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.IPoolObject-1.IsActive.html#Gamelogic_Extensions_IPoolObject_1_IsActive">IsActive</a></dt>
-    <dd></dd>
+    <dd><p>Gets a value indicating whether this pool object is currently active.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.IPoolObject-1.Value.html#Gamelogic_Extensions_IPoolObject_1_Value">Value</a></dt>
-    <dd></dd>
+    <dd><p>Gets the underlying pooled value.</p>
+</dd>
   </dl>
 
 

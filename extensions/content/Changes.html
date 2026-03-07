@@ -94,78 +94,105 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="450-2025-11-20">[4.5.0] 2025-11-20</h2>
+<h2 id="460-2026-03-07">[4.6.0] 2026-03-07</h2>
+<h3 id="-editor-improvements">⚙️ Editor Improvements</h3>
+<ul>
+<li>A startup wizard makes it easier to import samples, find documentation, support email, and uninstall instructions.</li>
+<li>The same features are also added to menus <em>Tools/Gamelogic/Extensions/</em>.</li>
+</ul>
 <h3 id="-new-features">🎉 New Features</h3>
 <ul>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Apply.html">Apply</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Median.html">Median</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html">MedianPartition</a></p>
-</li>
-<li><p>Added @Gamelogic.Extensions.ObservedTransformedValue</p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.ObservedThreshold.html">ObservedThreshold</a></p>
-</li>
-<li><p>Added @Gamelogic.Extensions.KeyValue</p>
-</li>
-<li><p>Added @Gamelogic.Extensions.FixedKeyDictionary</p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.PropertyNotFoundException.html">PropertyNotFoundException</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SerializedPropertyExtensions.html">SerializedPropertyExtensions</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SceneUtilities.html">SceneUtilities</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.GLEditorGUI.Header.html">Header</a></p>
-</li>
-<li><p>Added @Gamelogic.Extensions.Editor.Texture2DTiling</p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.Texture2DTilingPropertyDrawer.html">Texture2DTilingPropertyDrawer</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.ListSelectionPopup.html">ListSelectionPopup</a></p>
-</li>
-<li><p>Added @Gamelogic.Extensions.Editor.MatrixFloat</p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.MatrixFloatPropertyDrawer.html">MatrixFloatPropertyDrawer</a></p>
-</li>
-<li><p>Added @Gamelogic.Extensions.Editor.TestPropertyDrawers</p>
-</li>
-<li><p>Added @Gamelogic.Extensions.Editor.KeyValue</p>
-</li>
-<li><p>Added @Gamelogic.Extensions.EnumDictionary</p>
-</li>
-<li><p>Added @Gamelogic.Extensions.Editor.FixedKeyDictionary</p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.InspectorTextAttribute.html">InspectorTextAttribute</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.SceneNameAttribute.html">SceneNameAttribute</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SceneNamePropertyDrawer.html">SceneNamePropertyDrawer</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.PresetsAttribute.html">PresetsAttribute</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.ReuseCandidateAttribute.html">ReuseCandidateAttribute</a> (It was internal before.)</p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.ReadMe.html">ReadMe</a></p>
-</li>
-<li><p>Added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Sqr.html">Sqr</a></p>
-</li>
-<li><p>Added new tool Tools/Gamelogic/Rename/Sequential From 0</p>
-</li>
-<li><p>Added new tool Tools/Gamelogic/Rename/Sequential From 1</p>
-</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ObservedTransformedValue-2.TransformedValue.html#Gamelogic_Extensions_ObservedTransformedValue_2_TransformedValue">TransformedValue</a> property.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotPositive.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotPositive_System_Int32_System_String_">ThrowIfNotPositive(int, string)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowContainerEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowContainerEmpty">ThrowContainerEmpty()</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowContainerFull.html#Gamelogic_Extensions_ThrowHelper_ThrowContainerFull">ThrowContainerFull()</a></li>
+<li>Added @Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty``1(``0[],System.String)</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfEmpty__1_System_Collections_Generic_IList___0__System_String_">ThrowIfEmpty&lt;T&gt;(IList&lt;T&gt;, string)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowIfNull&lt;T&gt;(T, string)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrEmpty.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNullOrEmpty_System_String_System_String_">ThrowIfNullOrEmpty(string, string)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNullOrWhiteSpace.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNullOrWhiteSpace_System_String_System_String_">ThrowIfNullOrWhiteSpace(string, string)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotAssignableFrom__1_System_Type_">ThrowIfNotAssignableFrom&lt;T&gt;(Type)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNotAssignableFrom.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNotAssignableFrom_System_Type_System_Type_">ThrowIfNotAssignableFrom(Type, Type)</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.TextureTilingBase.html">TextureTilingBase</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.TextureTiling.html">TextureTiling</a></li>
+</ul>
+<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed a bug with @Gamelogic.Extensions.Algorithms.Generators.Iterate* with 4 initial elements where the initializer array was missing the last two
+elements, which would cause an <code>IndexOutOfRangeException</code> when the iterator tried to access those elements.</li>
+<li>Fixed a <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryLast.html">TryLast</a> method that returns true if any element was found instead
+of one that satisfies the predicate.</li>
+<li>Fixed a bug where @Gamelogic.Extensions.Algorithms.Capacity2Buffer.this[int] would return the wrong element when <code>Count == 1</code>.</li>
+<li>Fixed a bug in <a class="xref" href="../api/Gamelogic.Extensions.TransformExtensions.FlipXYZ.html">FlipXYZ</a> where the X component used <code>-transform.localScale.z</code> instead of <code>-transform.localScale.x</code>, producing an incorrect result.</li>
+<li>Fixed a bug in <a class="xref" href="../api/Gamelogic.Extensions.TransformExtensions.ScaleByXYZ.html">ScaleByXYZ</a> where the local scale was set to <code>(x, y, z)</code> instead of being multiplied by <code>(x, y, z)</code>.</li>
+<li>Fixed a bug in <a class="xref" href="../api/Gamelogic.Extensions.TransformExtensions.SetLocalXZ.html">SetLocalXZ</a> where the Y component of the new position was set to <code>transform.localPosition.z</code> instead of <code>transform.localPosition.y</code>, overwriting the Y position with the old Z value.</li>
+<li>Fixed a bug in the <code>Vector3</code> overload of <a class="xref" href="../api/Gamelogic.Extensions.VectorExtensions.Proj.html">Proj</a> where <code>Vector2.Dot</code> was used instead of <code>Vector3.Dot</code>, silently dropping the z-component from the projection.</li>
+<li>Fixed a bug in the <code>Vector4</code> overload of <a class="xref" href="../api/Gamelogic.Extensions.VectorExtensions.Proj.html">Proj</a> where <code>Vector2.Dot</code> was used instead of <code>Vector4.Dot</code>, silently dropping the z and w components from the projection.</li>
+<li>Fixed a bug in @Gamelogic.Extensions.MatrixFloat.IsValid* where <code>values.Length</code> was checked before <code>values == null</code>, which would throw a <code>NullReferenceException</code> when <code>values</code> is <code>null</code>.</li>
+<li>Fixed some typos in error messages.</li>
+<li>Renamed <code>DummyPorpertyDrawer</code> to <a class="xref" href="../api/Gamelogic.Extensions.Editor.DummyPropertyDrawer.html">DummyPropertyDrawer</a>.</li>
+<li>Removed <code>DiskCache</code> which had no implementation.</li>
+</ul>
+<h3 id="-documentation">📄 Documentation</h3>
+<ul>
+<li>Updated documentation fixing typos and other errors, and adding missing documentation.</li>
+</ul>
+<h3 id="-upgrade-notes">⬆️ Upgrade notes</h3>
+<ul>
+<li>One file name has changed, so it is better to uninstall and reinstall the package to avoid duplicate classes
+showing up.</li>
+<li>If you used <code>DummyPorpertyDrawer</code>, rename it to <code>DummyPropertyDrawer</code>.</li>
+</ul>
+<h2 id="450-2025-11-20">[4.5.0] 2025-11-20</h2>
+<h3 id="-new-features-1">🎉 New Features</h3>
+<ul>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ObservedTransformedValue-2.html">ObservedTransformedValue&lt;TValue, TTransformedValue&gt;</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ObservedThreshold.html">ObservedThreshold</a></li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.KeyValue-2.html">KeyValue&lt;TKey, TValue&gt;</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Texture2DTiling.html">Texture2DTiling</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.FixedKeyDictionary-2.html">FixedKeyDictionary&lt;TKey, TValue&gt;</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.EnumDictionary-2.html">EnumDictionary&lt;TEnum, TValue&gt;</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.InspectorTextAttribute.html">InspectorTextAttribute</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.SceneNameAttribute.html">SceneNameAttribute</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.PresetsAttribute.html">PresetsAttribute</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.MatrixFloat.html">MatrixFloat</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ReuseCandidateAttribute.html">ReuseCandidateAttribute</a> . (It was internal before.)</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.ReadMe.html">ReadMe</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Apply.html">Apply</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.Median.html">Median</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html">MedianPartition</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.PropertyNotFoundException.html">PropertyNotFoundException</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SerializedPropertyExtensions.html">SerializedPropertyExtensions</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SceneUtilities.html">SceneUtilities</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.GLEditorGUI.Header.html">Header</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.Texture2DTilingPropertyDrawer.html">Texture2DTilingPropertyDrawer</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.ListSelectionPopup.html">ListSelectionPopup</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.MatrixFloatPropertyDrawer.html">MatrixFloatPropertyDrawer</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.KeyValuePropertyDrawer.html">KeyValuePropertyDrawer</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.FixedKeyDictionaryPropertyDrawer.html">FixedKeyDictionaryPropertyDrawer</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.Editor.SceneNamePropertyDrawer.html">SceneNamePropertyDrawer</a> .</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Sqr.html">Sqr</a> .</li>
+<li>Added new tool <code>Tools/Gamelogic/Rename/Sequential From 0</code></li>
+<li>Added new tool <code>Tools/Gamelogic/Rename/Sequential From 1</code></li>
+</ul>
+<h2 id="443-2025-11-20">[4.4.3] 2025-11-20</h2>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li><a class="xref" href="../api/Gamelogic.Extensions.Singleton.html">Singleton</a> and <a class="xref" href="../api/Gamelogic.Extensions.GLMonoBehaviour.html">GLMonoBehaviour</a> no longer use deprecated APIs in newer
+versions of Unity that
+gave compiler warnings.</li>
+<li>Removed <code>ObjectExtensions.cs</code> empty file.</li>
 </ul>
 <h2 id="version-442">Version 4.4.2</h2>
-<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed a bug where there was a conflict between the <a class="xref" href="../api/Gamelogic.Extensions.Support.MustDisposeResourceAttribute.html">MustDisposeResourceAttribute</a> and the
 one in certain versions of <code>JetBrains.Annotations</code>.</li>
 </ul>
 <h2 id="version-441">Version 4.4.1</h2>
-<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
 <ul>
-<li>Fixed various issues related to editor code ending up in builds. The following classes where affected:
+<li>Fixed various issues related to editor code ending up in builds. The following classes were affected:
 <ul>
 <li>@Gamelogic.Extensions.Editor.Internal.Asset (Note: this class has also moved namespaces.)</li>
 <li><a class="xref" href="../api/Gamelogic.Extensions.LayerPopupAttribute.html">LayerPopupAttribute</a></li>
@@ -175,7 +202,7 @@ one in certain versions of <code>JetBrains.Annotations</code>.</li>
 </ul>
 <h3 id="-samples">🧪 Samples</h3>
 <ul>
-<li>Fixed issues related to editor code ending up in builds. The following classes where affected:
+<li>Fixed issues related to editor code ending up in builds. The following classes were affected:
 <ul>
 <li><a class="xref" href="../api/Gamelogic.Extensions.BuildScenePopupAttribute.html">BuildScenePopupAttribute</a></li>
 </ul>
@@ -183,19 +210,19 @@ one in certain versions of <code>JetBrains.Annotations</code>.</li>
 <li>@Gamelogic.Extensions.Samples.ValidatePowerOfTwoAttribute had a bug where the compiler directives were misplaced,
 causing build errors.</li>
 </ul>
-<h3 id="-upgrade-notes">⬆️ Upgrade notes</h3>
+<h3 id="-upgrade-notes-1">⬆️ Upgrade notes</h3>
 <ul>
 <li>If you used @Gamelogic.Extensions.Internal.Editor.Asset you will need to use the new namespace.</li>
 </ul>
 <h2 id="version-440">Version 4.4.0</h2>
-<h3 id="-new-features-1">🎉 New Features</h3>
+<h3 id="-new-features-2">🎉 New Features</h3>
 <ul>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.SeparatorColor.html">SeparatorColor</a> and
 <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.SeparatorHeight.html">SeparatorHeight</a> to <a class="xref" href="../api/Gamelogic.Extensions.PropertyDrawerData.html">PropertyDrawerData</a> to
 allow for customizing the appearance of separators.</li>
 <li>Added various grays in <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.html">Branding</a> and <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.Hex.html">Branding.Hex</a>.</li>
 </ul>
-<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed the constructors of <a class="xref" href="../api/Gamelogic.Extensions.SeparatorAttribute.html">SeparatorAttribute</a> to avoid the ambiguous call when trying to call
 the default constructor.</li>
@@ -207,7 +234,7 @@ name the class had before. (Note the class is obsolete, but kept for backwards c
 update the class was accidentally renamed.)</li>
 </ul>
 <h2 id="version-430">Version 4.3.0</h2>
-<h3 id="-new-features-2">🎉 New Features</h3>
+<h3 id="-new-features-3">🎉 New Features</h3>
 <ul>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.VectorExtensions.ClampMagnitude.html">ClampMagnitude</a> .</li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Assets.FindByType.html">FindByType</a> .</li>
@@ -233,12 +260,12 @@ deprecated <a class="xref" href="../api/Gamelogic.Extensions.Support.Warning.htm
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.White.html">White</a> and <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.Black.html">Black</a> for consistency.</li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Internal.EditorOnly.html">EditorOnly</a> to mark symbols only available in the editor.</li>
 </ul>
-<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
 <ul>
-<li>Made <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html">ThrowIfNegative</a> a extension method, like the other extension methods in this
+<li>Made <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html">ThrowIfNegative</a> an extension method, like the other extension methods in this
 class.</li>
 </ul>
-<h3 id="-engineering">🔧 Engineering</h3>
+<h3 id="-engineering-1">🔧 Engineering</h3>
 <ul>
 <li>Made <a class="xref" href="../api/Gamelogic.Extensions.InspectorList.html">InspectorList</a> and all its subclasses obsolete for Unity 2020.1 and later,
 since Unity's new list provide similar (and more robust) functionality.</li>
@@ -246,15 +273,15 @@ since Unity's new list provide similar (and more robust) functionality.</li>
 <h3 id="-samples-1">🧪 Samples</h3>
 <ul>
 <li>Fixed warnings in the <code>Generators</code> sample.</li>
-<li>Expanded the <code>Porperty Drawers Example</code> to include all the new changes.</li>
+<li>Expanded the <code>Property Drawers Example</code> to include all the new changes.</li>
 <li>Changed all relevant samples to use the new validation attributes.</li>
 </ul>
-<h3 id="-documentation">📄 Documentation</h3>
+<h3 id="-documentation-1">📄 Documentation</h3>
 <ul>
 <li>Added documentation for attributes used in property drawers.</li>
 <li>Expanded the documentation for <a href="PropertyDrawers.html">Property Drawers</a>.</li>
 </ul>
-<h3 id="-upgrade-notes-1">⬆️ Upgrade notes</h3>
+<h3 id="-upgrade-notes-2">⬆️ Upgrade notes</h3>
 <ul>
 <li>Replace
 <ul>
@@ -268,27 +295,27 @@ since Unity's new list provide similar (and more robust) functionality.</li>
 right type.</li>
 </ul>
 <h2 id="version-421">Version 4.2.1</h2>
-<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-5">🐞 Bug Fixes</h3>
 <ul>
 <li><a class="xref" href="../api/Gamelogic.Extensions.ObservedValue-1.html">ObservedValue&lt;T&gt;</a> was accidentally moved to the wrong name space in a previous release.
 It has been moved back to <a class="xref" href="../api/Gamelogic.Extensions.html">Gamelogic.Extensions</a>.</li>
 </ul>
 <h2 id="version-420">Version 4.2.0</h2>
-<h3 id="-new-features-3">🎉 New Features</h3>
+<h3 id="-new-features-4">🎉 New Features</h3>
 <ul>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessQueue-1.html">RandomAccessQueue&lt;T&gt;</a> .</li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessPriorityQueue-2.html">RandomAccessPriorityQueue&lt;TElement, TPriority&gt;</a> .</li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IReadOnlyBuffer-1.Item.html">this</a> (indexing to <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IReadOnlyBuffer-1.html">IReadOnlyBuffer&lt;T&gt;</a> )
 (and so to the implementations of <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IBuffer-1.html">IBuffer&lt;T&gt;</a> ).</li>
 <li>Added a property drawer for <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> (<a class="xref" href="../api/Gamelogic.Extensions.Editor.MinMaxIntPropertyDrawer.html">MinMaxIntPropertyDrawer</a> ).</li>
-<li>Added <a class="xref" href="../api/Gamelogic.Extensions.MinMaxRangeAttribute.html">MinMaxRangeAttribute</a> that can be applied tp on a field of type <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> or <a class="xref" href="../api/Gamelogic.Extensions.MinMaxFloat.html">MinMaxFloat</a> to support custom ranges in the inspector.</li>
+<li>Added <a class="xref" href="../api/Gamelogic.Extensions.MinMaxRangeAttribute.html">MinMaxRangeAttribute</a> that can be applied to a field of type <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> or <a class="xref" href="../api/Gamelogic.Extensions.MinMaxFloat.html">MinMaxFloat</a> to support custom ranges in the inspector.</li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Support.Branding.html">Branding</a> to make it easier to make examples have a consistent look and feel.</li>
 </ul>
 <h3 id="-refactors">🧹 Refactors</h3>
 <ul>
 <li>Deprecated <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a> (to be replaced with  <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessQueue-1.html">RandomAccessQueue&lt;T&gt;</a> ).</li>
 </ul>
-<h3 id="-upgrade-notes-2">⬆️ Upgrade notes</h3>
+<h3 id="-upgrade-notes-3">⬆️ Upgrade notes</h3>
 <ul>
 <li>Replace <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a> with <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.RandomAccessQueue-1.html">RandomAccessQueue&lt;T&gt;</a> .</li>
 </ul>
@@ -299,7 +326,7 @@ existing two example into folder.</li>
 <li>Added a <a class="xref" href="../api/Gamelogic.Extensions.MinMaxInt.html">MinMaxInt</a> to the property drawers sample.</li>
 </ul>
 <h2 id="version-410">Version 4.1.0</h2>
-<h3 id="-new-features-4">🎉 New Features</h3>
+<h3 id="-new-features-5">🎉 New Features</h3>
 <ul>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.Remove.html">Remove</a> method to <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a>.</li>
 <li>Added a ring buffer data structure and related classes:
@@ -320,22 +347,22 @@ existing two example into folder.</li>
 </li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.ValueSnapshot-1.html">ValueSnapshot&lt;T&gt;</a> to represent a value and the previous value.</li>
 </ul>
-<h3 id="-engineering-1">🔧 Engineering</h3>
+<h3 id="-engineering-2">🔧 Engineering</h3>
 <ul>
 <li>Fixed various multiple enumeration issues in <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.html">CollectionExtensions</a> .</li>
 </ul>
-<h3 id="-bug-fixes-5">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-6">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed warnings related to the pool samples.</li>
 <li>Fixed warnings caused by <a class="xref" href="../api/Gamelogic.Extensions.FpsCounter.html">FpsCounter</a>.</li>
 <li>Removed internal duplicates of the RingBuffer that was used by the FpsCounter.</li>
 </ul>
-<h3 id="-documentation-1">📄 Documentation</h3>
+<h3 id="-documentation-2">📄 Documentation</h3>
 <ul>
 <li>Improved pool documentation.</li>
 </ul>
 <h2 id="version-400">Version 4.0.0</h2>
-<h3 id="-new-features-5">🎉 New Features</h3>
+<h3 id="-new-features-6">🎉 New Features</h3>
 <ul>
 <li>Added the <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.IndexPriorityQueue-2.html">IndexPriorityQueue&lt;TElement, TPriority&gt;</a> data structure.</li>
 <li>Added an experimental <a class="xref" href="../api/Gamelogic.Extensions.FpsCounter.html">FpsCounter</a> mostly to be used in example benchmarks.</li>
@@ -349,14 +376,14 @@ existing two example into folder.</li>
 <li>To <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.html">GLMathf</a> , added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Bilerp.html">Bilerp</a> and
 <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Trilerp.html">Trilerp</a> for doing bilinear and trilinear interpolation.</li>
 </ul>
-<h3 id="-engineering-2">🔧 Engineering</h3>
+<h3 id="-engineering-3">🔧 Engineering</h3>
 <ul>
 <li>Removed <code>Gamelogic.ObjectExtensions</code> (replaced with <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.html">ThrowHelper</a> ).</li>
 <li>Replaced @Gamelogic.Extensions.PoolObject`1 with an interface <a class="xref" href="../api/Gamelogic.Extensions.IPoolObject-1.html">IPoolObject&lt;T&gt;</a></li>
 <li>Constrained type parameter of <a class="xref" href="../api/Gamelogic.Extensions.MonoBehaviourPool-1.html">MonoBehaviourPool&lt;T&gt;</a> to <a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a> instead of
 <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> so it can also be used with Unity components.</li>
 </ul>
-<h3 id="-upgrade-notes-3">⬆️ Upgrade notes</h3>
+<h3 id="-upgrade-notes-4">⬆️ Upgrade notes</h3>
 <ul>
 <li>If you used <code>Gamelogic.ObjectExtensions.ThrowIfNull</code> replace it with <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html">ThrowIfNull</a>.</li>
 <li>If you used <code>Gamelogic.ObjectExtensions.ThrowIfNegative</code> replace it with <a class="xref" href="../api/Gamelogic.Extensions.ThrowHelper.ThrowIfNegative.html">ThrowIfNegative</a>.</li>
@@ -369,7 +396,7 @@ existing two example into folder.</li>
 <li>Added scripts that show how the pool types can be used to build more sophisticated pools.</li>
 </ul>
 <h2 id="version-320">Version 3.2.0</h2>
-<h3 id="-new-features-6">🎉 New Features</h3>
+<h3 id="-new-features-7">🎉 New Features</h3>
 <ul>
 <li>Added a new interface for pools <a class="xref" href="../api/Gamelogic.Extensions.IPool-1.html">IPool&lt;T&gt;</a>.</li>
 <li>Added methods to <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a> and <a class="xref" href="../api/Gamelogic.Extensions.MonoBehaviourPool-1.html">MonoBehaviourPool&lt;T&gt;</a> to implement the new
@@ -397,7 +424,7 @@ argument.</li>
 </ul>
 </li>
 </ul>
-<h3 id="-bug-fixes-6">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-7">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed a bug where <a class="xref" href="../api/Gamelogic.Extensions.InspectorButtonAttribute.html">InspectorButtonAttribute</a> would cause public or protected methods to be added
 for each subclass.</li>
@@ -408,7 +435,7 @@ are of types that cannot be null.</li>
 <li>Now throws exceptions when calling <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.Release.html">Release</a> on an item that is not in the pool.</li>
 <li>Capacities, increments and decrements for <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a> methods are checked for being negative.</li>
 </ul>
-<h3 id="-engineering-3">🔧 Engineering</h3>
+<h3 id="-engineering-4">🔧 Engineering</h3>
 <ul>
 <li>@Gamelogic.Extensions.ObjectExtensions.ThrowIfNull* now throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> instead of a
 @System.NullReferenceException to reflect its intended use case.</li>
@@ -416,36 +443,36 @@ are of types that cannot be null.</li>
 </ul>
 <h3 id="-performance-improvements">🚀 Performance Improvements</h3>
 <ul>
-<li>Slighly improved the performance of <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.DecCapacity.html">DecCapacity</a>.</li>
+<li>Slightly improved the performance of <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.DecCapacity.html">DecCapacity</a>.</li>
 </ul>
-<h3 id="-documentation-2">📄 Documentation</h3>
+<h3 id="-documentation-3">📄 Documentation</h3>
 <ul>
 <li>Improved the documentation for <a class="xref" href="../api/Gamelogic.Extensions.Pool-1.html">Pool&lt;T&gt;</a>.</li>
 <li>Added documentation for <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryFirst.html">TryFirst</a> and
 <a class="xref" href="../api/Gamelogic.Extensions.Algorithms.CollectionExtensions.TryLast.html">TryLast</a></li>
 </ul>
-<h3 id="-upgrade-notes-4">⬆️ Upgrade notes</h3>
+<h3 id="-upgrade-notes-5">⬆️ Upgrade notes</h3>
 <ul>
 <li>If you relied on the @System.NullReferenceException thrown by @Gamelogic.Extensions.ObjectExtensions.ThrowIfNull*,
-you need to update your code reflect that now it throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> .</li>
+you need to update your code to reflect that now it throws an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a> .</li>
 </ul>
 <h2 id="version-310">Version 3.1.0</h2>
-<h3 id="-new-features-7">🎉 New Features</h3>
+<h3 id="-new-features-8">🎉 New Features</h3>
 <ul>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.LifeCycleEvent.html">LifeCycleEvent</a> and <a class="xref" href="../api/Gamelogic.Extensions.LifeCycleEventExtensions.html">LifeCycleEventExtensions</a> to make it easier to
 specify when logic should execute in the inspector.</li>
 </ul>
-<h3 id="-bug-fixes-7">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-8">🐞 Bug Fixes</h3>
 <ul>
 <li>Set the editor assembly to only build for the editor.</li>
 </ul>
 <h2 id="version-301">Version 3.0.1</h2>
-<h3 id="-bug-fixes-8">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-9">🐞 Bug Fixes</h3>
 <ul>
 <li>Restored the samples that were missing in the last update</li>
 </ul>
 <h2 id="version-300">Version 3.0.0</h2>
-<h3 id="-new-features-8">🎉 New Features</h3>
+<h3 id="-new-features-9">🎉 New Features</h3>
 <ul>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.FindAndConnectInstance.html">FindAndConnectInstance</a> method.</li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.IsReady.html#Gamelogic_Extensions_Singleton_1_IsReady">IsReady</a> property.</li>
@@ -473,7 +500,7 @@ numbers as a tuple.</li>
 </li>
 <li>Added <a class="xref" href="../api/Gamelogic.Extensions.GLMathf.Equal.html">Equal</a> to centralize warning suppression when comparing floats using equality.</li>
 </ul>
-<h3 id="-engineering-4">🔧 Engineering</h3>
+<h3 id="-engineering-5">🔧 Engineering</h3>
 <ul>
 <li>Made <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.OnDestroy.html">OnDestroy</a> method public.</li>
 <li>Made <a class="xref" href="../api/Gamelogic.Extensions.Singleton-1.Instance_1.html">Instance</a> property public.</li>

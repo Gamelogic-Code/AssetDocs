@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ResponseCurveInt | Gamelogic Extensions ">
       
-      <meta name="description" content="A response curve with outputs of float.">
+      <meta name="description" content="A response curve with outputs of int.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Extensions_Algorithms_ResponseCurveInt" data-uid="Gamelogic.Extensions.Algorithms.ResponseCurveInt" class="text-break">
-Class ResponseCurveInt  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/ResponseCurve/ResponseCurveFloat.cs/#L50"><i class="bi bi-code-slash"></i></a>
+Class ResponseCurveInt  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/ResponseCurve/ResponseCurveFloat.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,7 @@ Class ResponseCurveInt  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A response curve with outputs of float.</p>
+  <div class="markdown summary"><p>A response curve with outputs of <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">int</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -172,6 +172,9 @@ public class ResponseCurveInt : ResponseCurveBase&lt;int&gt;, IResponseCurve&lt;
       <a class="xref" href="Gamelogic.Extensions.Algorithms.ResponseCurve.Select.html#Gamelogic_Extensions_Algorithms_ResponseCurve_Select__2_Gamelogic_Extensions_Algorithms_IResponseCurve___0__System_Func___0___1__">ResponseCurve.Select&lt;TSource, TResult&gt;(IResponseCurve&lt;TSource&gt;, Func&lt;TSource, TResult&gt;)</a>
   </div>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -184,7 +187,8 @@ public class ResponseCurveInt : ResponseCurveBase&lt;int&gt;, IResponseCurve&lt;
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.ResponseCurveInt.-ctor.html#Gamelogic_Extensions_Algorithms_ResponseCurveInt__ctor_System_Collections_Generic_IEnumerable_System_Single__System_Collections_Generic_IEnumerable_System_Int32__">ResponseCurveInt(IEnumerable&lt;float&gt;, IEnumerable&lt;int&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Initializes a new instance of the <a class="xref" href="Gamelogic.Extensions.Algorithms.ResponseCurveInt.html">ResponseCurveInt</a> class.</p>
+</dd>
   </dl>
 
   <h2 class="section" id="methods">Methods
@@ -192,7 +196,8 @@ public class ResponseCurveInt : ResponseCurveBase&lt;int&gt;, IResponseCurve&lt;
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.ResponseCurveInt.GetLerp.html#Gamelogic_Extensions_Algorithms_ResponseCurveInt_GetLerp_System_Single_System_Single_System_Int32_System_Int32_">GetLerp(float, float, int, int)</a></dt>
-    <dd></dd>
+    <dd><p>Creates a <a class="xref" href="Gamelogic.Extensions.Algorithms.ResponseCurveInt.html">ResponseCurveInt</a> that linearly interpolates (and rounds) between two output values over a given input range.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.ResponseCurveInt.Lerp.html#Gamelogic_Extensions_Algorithms_ResponseCurveInt_Lerp_System_Int32_System_Int32_System_Single_">Lerp(int, int, float)</a></dt>

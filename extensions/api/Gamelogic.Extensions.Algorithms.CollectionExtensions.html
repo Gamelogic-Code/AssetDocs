@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CollectionExtensions | Gamelogic Extensions ">
       
-      <meta name="description" content="This class provides useful extension methods for collections, mostly IEnumerable.">
+      <meta name="description" content="Provides useful extension methods for collections, mostly .">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -104,7 +104,7 @@ Class CollectionExtensions  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>This class provides useful extension methods for collections, mostly IEnumerable.</p>
+  <div class="markdown summary"><p>Provides useful extension methods for collections, mostly <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -161,7 +161,7 @@ public static class CollectionExtensions</code></pre>
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.AddRange.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_AddRange__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__">AddRange&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Add all elements of other to the given source.</p>
+    <dd><p>Adds all elements of <code class="paramref">other</code> to the given collection.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -224,14 +224,12 @@ themselves.</p>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.ButFirst.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ButFirst__1_System_Collections_Generic_IEnumerable___0__">ButFirst&lt;T&gt;(IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Returns an enumerable of all elements of the given list	but the first,
-keeping them in order.</p>
+    <dd><p>Returns an enumerable of all elements of the source but the first, keeping them in order.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.ButLast.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ButLast__1_System_Collections_Generic_IEnumerable___0__">ButLast&lt;T&gt;(IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Returns an enumerable of all elements in the given
-list but the last, keeping them in order.</p>
+    <dd><p>Returns an enumerable of all elements in the source but the last, keeping them in order.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -246,7 +244,7 @@ list but the last, keeping them in order.</p>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.FilterByType.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_FilterByType__2_System_Collections_Generic_IEnumerable___0__">FilterByType&lt;T, TFilter&gt;(IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Returns all elements of the source which are of FilterType.</p>
+    <dd><p>Returns all elements of the source which are of type <code class="typeparamref">TFilter</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -261,23 +259,22 @@ list but the last, keeping them in order.</p>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.IsEmpty.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_IsEmpty__1_System_Collections_Generic_ICollection___0__">IsEmpty&lt;T&gt;(ICollection&lt;T&gt;)</a></dt>
-    <dd><p>Returns whether this source is empty.</p>
+    <dd><p>Returns whether the collection is empty.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.ListToString.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_ListToString__1_System_Collections_Generic_IEnumerable___0__">ListToString&lt;T&gt;(IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Returns a pretty string representation of the given list. The resulting string looks something like
-<code>[a, b, c]</code>.</p>
+    <dd><p>Returns a pretty string representation of the given list. The resulting string looks something like <code>[a, b, c]</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)</a></dt>
-    <dd><p>Finds the minimum element in the source as scored by its projection.</p>
+    <dd><p>Finds the maximum element in the source as scored by its projection.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)</a></dt>
-    <dd><p>Finds the minimum element in the source as scored by the given function applied to a projection on the elements.</p>
+    <dd><p>Finds the maximum element in the source as scored by the given function applied to a projection on the elements.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -299,6 +296,11 @@ This overload uses the default comparer for the type TComparable.</p>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MedianPartition_System_Collections_Generic_IList_System_Single__">MedianPartition(IList&lt;float&gt;)</a></dt>
     <dd><p>Computes the median value of the given list and partitions the list around the median.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.MedianPartition.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MedianPartition_System_Collections_Generic_IList_System_Single__System_Int32_System_Int32_">MedianPartition(IList&lt;float&gt;, int, int)</a></dt>
+    <dd><p>Computes the median value of the given list within the specified range, and partitions the section around it.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -330,6 +332,11 @@ This overload uses the default comparer for the type TComparable.</p>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.MinMax.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_MinMax_System_Collections_Generic_IEnumerable_System_Single__">MinMax(IEnumerable&lt;float&gt;)</a></dt>
     <dd><p>Finds the minimum and maximum values in a collection of floats.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.CollectionExtensions.PivotIndex.html#Gamelogic_Extensions_Algorithms_CollectionExtensions_PivotIndex_System_Collections_Generic_IList_System_Single__System_Int32_System_Int32_">PivotIndex(IList&lt;float&gt;, int, int)</a></dt>
+    <dd><p>Partitions the array around the pivot and returns its final index.</p>
 </dd>
   </dl>
   <dl class="jumplist">

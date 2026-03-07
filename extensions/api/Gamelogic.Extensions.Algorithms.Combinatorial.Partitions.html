@@ -131,7 +131,7 @@ Method Partitions  <a class="header-action link-secondary" title="View source" h
   <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L31"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Returns a list of all the partitions of a list.</p>
+<div class="markdown level1 summary"><p>Returns all the set partitions of the given list.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -142,21 +142,22 @@ Method Partitions  <a class="header-action link-secondary" title="View source" h
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
-  <dd><p>The list.</p>
+  <dd><p>The list to partition.</p>
 </dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</dt>
-  <dd><p>IEnumerable&lt;IEnumerable&lt;IEnumerable&lt;T&gt;&gt;&gt;.</p>
+  <dd><p>An enumerable of partitions, where each partition is a collection of non-empty, non-overlapping subsets that together contain all elements.</p>
 </dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The type of elements in the list.</p>
+</dd>
 </dl>
 
 
@@ -165,7 +166,7 @@ Method Partitions  <a class="header-action link-secondary" title="View source" h
 
 
 <h4 class="section" id="Gamelogic_Extensions_Algorithms_Combinatorial_Partitions__1_System_Collections_Generic_IEnumerable___0___remarks">Remarks</h4>
-<div class="markdown level1 remarks"><p>If the list is (a b c), then ((a) (b c)) and ((a) (b) (c)) would be examples of partitions.</p>
+<div class="markdown level1 remarks"><p>If the list is (a b c), then ((a) (b c)) and ((a) (b) (c)) are examples of partitions.</p>
 </div>
 
 

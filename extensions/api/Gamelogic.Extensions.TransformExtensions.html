@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class TransformExtensions | Gamelogic Extensions ">
       
-      <meta name="description" content="Contains useful extensions for Select.">
+      <meta name="description" content="Contains useful extension methods for .">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -104,7 +104,7 @@ Class TransformExtensions  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Contains useful extensions for Select.</p>
+  <div class="markdown summary"><p>Contains useful extension methods for <a class="xref" href="https://docs.unity3d.com/ScriptReference/Transform.html">Transform</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -161,15 +161,18 @@ public static class TransformExtensions</code></pre>
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.DestroyChildren.html#Gamelogic_Extensions_TransformExtensions_DestroyChildren_UnityEngine_Transform_">DestroyChildren(Transform)</a></dt>
-    <dd></dd>
+    <dd><p>Destroys all child GameObjects of this transform using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Destroy(Object, float)</a>.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.DestroyChildrenImmediate.html#Gamelogic_Extensions_TransformExtensions_DestroyChildrenImmediate_UnityEngine_Transform_">DestroyChildrenImmediate(Transform)</a></dt>
-    <dd></dd>
+    <dd><p>Destroys all child GameObjects of this transform immediately using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">DestroyImmediate(Object, bool)</a>.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.DestroyChildrenUniversal.html#Gamelogic_Extensions_TransformExtensions_DestroyChildrenUniversal_UnityEngine_Transform_">DestroyChildrenUniversal(Transform)</a></dt>
-    <dd></dd>
+    <dd><p>Destroys all child GameObjects using <a class="xref" href="Gamelogic.Extensions.TransformExtensions.DestroyChildren.html#Gamelogic_Extensions_TransformExtensions_DestroyChildren_UnityEngine_Transform_">DestroyChildren(Transform)</a> in play mode or <a class="xref" href="Gamelogic.Extensions.TransformExtensions.DestroyChildrenImmediate.html#Gamelogic_Extensions_TransformExtensions_DestroyChildrenImmediate_UnityEngine_Transform_">DestroyChildrenImmediate(Transform)</a> in edit mode.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.FlipPositive.html#Gamelogic_Extensions_TransformExtensions_FlipPositive_UnityEngine_Transform_">FlipPositive(Transform)</a></dt>
@@ -213,7 +216,8 @@ public static class TransformExtensions</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.GetChildren.html#Gamelogic_Extensions_TransformExtensions_GetChildren_UnityEngine_Transform_">GetChildren(Transform)</a></dt>
-    <dd></dd>
+    <dd><p>Returns a list of all direct children of this transform.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.Reset.html#Gamelogic_Extensions_TransformExtensions_Reset_UnityEngine_Transform_">Reset(Transform)</a></dt>
@@ -222,7 +226,7 @@ public static class TransformExtensions</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.ResetLocal.html#Gamelogic_Extensions_TransformExtensions_ResetLocal_UnityEngine_Transform_">ResetLocal(Transform)</a></dt>
-    <dd><p>Resets the ;local position, local rotation, and local scale.</p>
+    <dd><p>Resets the local position, local rotation, and local scale.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -462,11 +466,13 @@ public static class TransformExtensions</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.Sort.html#Gamelogic_Extensions_TransformExtensions_Sort_UnityEngine_Transform_System_Func_UnityEngine_Transform_System_IComparable__">Sort(Transform, Func&lt;Transform, IComparable&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Sorts the direct children of this transform by the value returned by <code class="paramref">sortFunction</code>.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.SortAlphabetically.html#Gamelogic_Extensions_TransformExtensions_SortAlphabetically_UnityEngine_Transform_">SortAlphabetically(Transform)</a></dt>
-    <dd></dd>
+    <dd><p>Sorts the direct children of this transform alphabetically by name.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.TranslateX.html#Gamelogic_Extensions_TransformExtensions_TranslateX_UnityEngine_Transform_System_Single_">TranslateX(Transform, float)</a></dt>
@@ -505,7 +511,8 @@ public static class TransformExtensions</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.TransformExtensions.WithIndices.html#Gamelogic_Extensions_TransformExtensions_WithIndices_UnityEngine_Transform_">WithIndices(Transform)</a></dt>
-    <dd></dd>
+    <dd><p>Returns each direct child transform paired with its sibling index.</p>
+</dd>
   </dl>
 
 

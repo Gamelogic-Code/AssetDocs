@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SingletonSpawner&lt;T&gt; | Gamelogic Extensions ">
       
-      
+      <meta name="description" content="Ensures that exactly one instance of T exists in the scene, spawning from a prefab if none is found.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Extensions_SingletonSpawner_1" data-uid="Gamelogic.Extensions.SingletonSpawner`1" class="text-break">
-Class SingletonSpawner&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/SingletonSpawner.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class SingletonSpawner&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/SingletonSpawner.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,8 @@ Class SingletonSpawner&lt;T&gt;  <a class="header-action link-secondary" title="
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Ensures that exactly one instance of <code class="typeparamref">T</code> exists in the scene, spawning from a prefab if none is found.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -117,7 +118,8 @@ public class SingletonSpawner&lt;T&gt; : GLMonoBehaviour where T : MonoBehaviour
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The MonoBehaviour type to spawn.</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -483,6 +485,9 @@ public class SingletonSpawner&lt;T&gt; : GLMonoBehaviour where T : MonoBehaviour
       <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Clone.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_System_Int32_">MonoBehaviourExtensions.Clone&lt;T&gt;(T, int)</a>
   </div>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   <div>
@@ -537,7 +542,8 @@ public class SingletonSpawner&lt;T&gt; : GLMonoBehaviour where T : MonoBehaviour
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.SingletonSpawner-1.Awake.html#Gamelogic_Extensions_SingletonSpawner_1_Awake">Awake()</a></dt>
-    <dd></dd>
+    <dd><p>Ensures a single instance of <code class="typeparamref">T</code> exists, spawning from the prefab if necessary.</p>
+</dd>
   </dl>
 
 

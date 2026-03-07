@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_TransformExtensions_Sort_" data-uid="Gamelogic.Extensions.TransformExtensions.Sort*" class="text-break">
-Method Sort  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/TransformExtensions.cs/#L694"><i class="bi bi-code-slash"></i></a>
+Method Sort  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/TransformExtensions.cs/#L704"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,11 @@ Method Sort  <a class="header-action link-secondary" title="View source" href="h
 
 <h3 id="Gamelogic_Extensions_TransformExtensions_Sort_UnityEngine_Transform_System_Func_UnityEngine_Transform_System_IComparable__" data-uid="Gamelogic.Extensions.TransformExtensions.Sort(UnityEngine.Transform,System.Func{UnityEngine.Transform,System.IComparable})">
   Sort(Transform, Func&lt;Transform, IComparable&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/TransformExtensions.cs/#L694"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/TransformExtensions.cs/#L704"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Sorts the direct children of this transform by the value returned by <code class="paramref">sortFunction</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -141,9 +142,11 @@ Method Sort  <a class="header-action link-secondary" title="View source" href="h
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>transform</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Transform.html">Transform</a></dt>
-  <dd></dd>
+  <dd><p>The transform whose children to sort.</p>
+</dd>
   <dt><code>sortFunction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Transform.html">Transform</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>A function that maps each child transform to a comparable sort key.</p>
+</dd>
 </dl>
 
 

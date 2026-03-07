@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy_" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy*" class="text-break">
-Method MaxBy  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L203"><i class="bi bi-code-slash"></i></a>
+Method MaxBy  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L238"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method MaxBy  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
   MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L238"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Finds the minimum element in the source as scored by its projection.</p>
+<div class="markdown level1 summary"><p>Finds the maximum element in the source as scored by its projection.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -142,23 +142,28 @@ Method MaxBy  <a class="header-action link-secondary" title="View source" href="
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</dt>
-  <dd></dd>
+  <dd><p>The source to find the maximum in.</p>
+</dd>
   <dt><code>selector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TKey&gt;</dt>
-  <dd></dd>
+  <dd><p>A function to extract a comparable key from each element.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><span class="xref">TSource</span></dt>
-  <dd></dd>
+  <dd><p>The element with the largest key.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>TSource</code></dt>
-  <dd></dd>
+  <dd><p>The type of elements in the source.</p>
+</dd>
   <dt><code>TKey</code></dt>
-  <dd></dd>
+  <dd><p>The type of the key used to compare elements.</p>
+</dd>
 </dl>
 
 
@@ -167,6 +172,12 @@ Method MaxBy  <a class="header-action link-secondary" title="View source" href="
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+  <dd><p>The sequence is empty.</p>
+</dd>
+</dl>
 
 
 
@@ -174,10 +185,10 @@ Method MaxBy  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Gamelogic_Extensions_Algorithms_CollectionExtensions_MaxBy__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__" data-uid="Gamelogic.Extensions.Algorithms.CollectionExtensions.MaxBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
   MaxBy&lt;TSource, TKey&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, IComparer&lt;TKey&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/CollectionExtensions.cs/#L253"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Finds the minimum element in the source as scored by the given function applied to a projection on the elements.</p>
+<div class="markdown level1 summary"><p>Finds the maximum element in the source as scored by the given function applied to a projection on the elements.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -188,25 +199,31 @@ Method MaxBy  <a class="header-action link-secondary" title="View source" href="
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</dt>
-  <dd></dd>
+  <dd><p>The source to find the maximum in.</p>
+</dd>
   <dt><code>selector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSource, TKey&gt;</dt>
-  <dd></dd>
+  <dd><p>A function to extract a comparable key from each element.</p>
+</dd>
   <dt><code>comparer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;TKey&gt;</dt>
-  <dd></dd>
+  <dd><p>The comparer to use when comparing keys.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><span class="xref">TSource</span></dt>
-  <dd></dd>
+  <dd><p>The element with the largest key.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>TSource</code></dt>
-  <dd></dd>
+  <dd><p>The type of elements in the source.</p>
+</dd>
   <dt><code>TKey</code></dt>
-  <dd></dd>
+  <dd><p>The type of the key used to compare elements.</p>
+</dd>
 </dl>
 
 
@@ -215,6 +232,12 @@ Method MaxBy  <a class="header-action link-secondary" title="View source" href="
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+  <dd><p>The sequence is empty.</p>
+</dd>
+</dl>
 
 
 

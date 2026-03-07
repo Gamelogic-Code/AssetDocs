@@ -495,6 +495,9 @@ public sealed class ScreenshotTaker : Singleton&lt;ScreenshotTaker&gt;</code></p
       <a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Clone.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_System_Int32_">MonoBehaviourExtensions.Clone&lt;T&gt;(T, int)</a>
   </div>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   <div>
@@ -557,23 +560,28 @@ singleton, and then provides access to the instance.</p>
 
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.Start.html#Gamelogic_Extensions_ScreenshotTaker_Start">Start()</a></dt>
-    <dd></dd>
+    <dd><p>Sets up periodic screenshot capture if configured.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.Take.html#Gamelogic_Extensions_ScreenshotTaker_Take">Take()</a></dt>
-    <dd></dd>
+    <dd><p>Captures a screenshot and saves it to a file.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.TakeClean.html#Gamelogic_Extensions_ScreenshotTaker_TakeClean">TakeClean()</a></dt>
-    <dd></dd>
+    <dd><p>Captures a screenshot with dirty objects hidden and screenshot-only objects shown.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.TakeTexture.html#Gamelogic_Extensions_ScreenshotTaker_TakeTexture">TakeTexture()</a></dt>
-    <dd></dd>
+    <dd><p>Captures the current frame as a <a class="xref" href="https://docs.unity3d.com/ScriptReference/Texture2D.html">Texture2D</a> and saves it to a file.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.ScreenshotTaker.Update.html#Gamelogic_Extensions_ScreenshotTaker_Update">Update()</a></dt>
-    <dd></dd>
+    <dd><p>Checks for the screenshot key press each frame and triggers capture if pressed.</p>
+</dd>
   </dl>
 
 

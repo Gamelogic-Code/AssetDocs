@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Combinatorial | Gamelogic Extensions ">
       
-      <meta name="description" content="Combinatorial algorithms, including generating tuples, combinations, permutations and partitions. Except for PowerSet, all methods are implemented after Knuth, described in The Art of Computer Programming Volume 4.">
+      <meta name="description" content="Provides combinatorial algorithms for generating tuples, combinations, permutations, and partitions.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -104,10 +104,7 @@ Class Combinatorial  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Combinatorial algorithms, including generating tuples, combinations, permutations and
-partitions.</p>
-<p>Except for PowerSet, all methods are implemented after Knuth, described in The Art of
-Computer Programming Volume 4.</p>
+  <div class="markdown summary"><p>Provides combinatorial algorithms for generating tuples, combinations, permutations, and partitions.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -158,6 +155,10 @@ public static class Combinatorial</code></pre>
 
 
 
+  <h2 id="Gamelogic_Extensions_Algorithms_Combinatorial_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Except for <a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.PowerSet.html#Gamelogic_Extensions_Algorithms_Combinatorial_PowerSet__1_System_Collections_Generic_IEnumerable___0__">PowerSet&lt;T&gt;(IEnumerable&lt;T&gt;)</a>, all methods are implemented after Knuth, described in
+The Art of Computer Programming, Volume 4.</p>
+</div>
 
   <h2 class="section" id="methods">Methods
 </h2>
@@ -169,7 +170,8 @@ public static class Combinatorial</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.Combinations.html#Gamelogic_Extensions_Algorithms_Combinatorial_Combinations__1_System_Int32_System_Int32_System_Func_System_Int32_____0__">Combinations&lt;T&gt;(int, int, Func&lt;int[], T&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Generates all combinations of m elements from n and applies a selector to each.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.MultiRadixTuples.html#Gamelogic_Extensions_Algorithms_Combinatorial_MultiRadixTuples_System_Int32___">MultiRadixTuples(int[])</a></dt>
@@ -178,11 +180,12 @@ public static class Combinatorial</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.MultiRadixTuples.html#Gamelogic_Extensions_Algorithms_Combinatorial_MultiRadixTuples__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___">MultiRadixTuples&lt;T&gt;(IEnumerable&lt;IEnumerable&lt;T&gt;&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Generates all combinations by selecting one element from each inner enumerable in every possible way.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.Partitions.html#Gamelogic_Extensions_Algorithms_Combinatorial_Partitions__1_System_Collections_Generic_IEnumerable___0__">Partitions&lt;T&gt;(IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Returns a list of all the partitions of a list.</p>
+    <dd><p>Returns all the set partitions of the given list.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -197,12 +200,12 @@ public static class Combinatorial</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.PowerSet.html#Gamelogic_Extensions_Algorithms_Combinatorial_PowerSet__1_System_Collections_Generic_IEnumerable___0__">PowerSet&lt;T&gt;(IEnumerable&lt;T&gt;)</a></dt>
-    <dd><p>Returns the power set of the input, that is, the set of all subsets of the input.</p>
+    <dd><p>Returns the power set of the input, that is, all possible subsets of the input.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.Algorithms.Combinatorial.Tuples.html#Gamelogic_Extensions_Algorithms_Combinatorial_Tuples_System_Int32_">Tuples(int)</a></dt>
-    <dd><p>Generate all possible tuples of length n with digits 0 to n-1.</p>
+    <dd><p>Generates all possible tuples of length n with digits 0 to n-1.</p>
 </dd>
   </dl>
   <dl class="jumplist">

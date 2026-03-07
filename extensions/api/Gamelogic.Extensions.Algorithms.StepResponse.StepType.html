@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum StepResponse.StepType | Gamelogic Extensions ">
       
-      <meta name="description" content="Used to indicate whether steps are to the left, middle or right of samples.">
+      <meta name="description" content="Indicates on which side of the sample boundary the step value is taken.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@
 
 
   <h1 id="Gamelogic_Extensions_Algorithms_StepResponse_StepType" data-uid="Gamelogic.Extensions.Algorithms.StepResponse.StepType" class="text-break">
-Enum StepResponse.StepType  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/ResponseCurve/StepResponse.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Enum StepResponse.StepType  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/ResponseCurve/StepResponse.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -105,7 +105,7 @@ Enum StepResponse.StepType  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Gamelogic.Extensions.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Used to indicate whether steps are to the left, middle or right of samples.</p>
+  <div class="markdown summary"><p>Indicates on which side of the sample boundary the step value is taken.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -124,6 +124,9 @@ Enum StepResponse.StepType  <a class="header-action link-secondary" title="View 
     <dt>Extension Methods</dt>
     <dd>
   <div>
+      <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull__1___0_System_String_">ThrowHelper.ThrowIfNull&lt;T&gt;(T, string)</a>
+  </div>
+  <div>
       <a class="xref" href="Gamelogic.Extensions.ThrowHelper.ThrowIfNull.html#Gamelogic_Extensions_ThrowHelper_ThrowIfNull_System_Object_System_String_">ThrowHelper.ThrowIfNull(object, string)</a>
   </div>
   </dd></dl>
@@ -133,13 +136,16 @@ Enum StepResponse.StepType  <a class="header-action link-secondary" title="View 
   <dl class="parameters">
     <dt id="Gamelogic_Extensions_Algorithms_StepResponse_StepType_Left"><code>Left = 0</code></dt>
   
-  <dd></dd>
+  <dd><p>The value from the left (lower) sample is used in the transition region.</p>
+</dd>
     <dt id="Gamelogic_Extensions_Algorithms_StepResponse_StepType_Mid"><code>Mid = 1</code></dt>
   
-  <dd></dd>
+  <dd><p>The value from the left sample is used when t &lt; 0.5, otherwise the right sample is used.</p>
+</dd>
     <dt id="Gamelogic_Extensions_Algorithms_StepResponse_StepType_Right"><code>Right = 2</code></dt>
   
-  <dd></dd>
+  <dd><p>The value from the right (upper) sample is used in the transition region.</p>
+</dd>
   </dl>
 
 

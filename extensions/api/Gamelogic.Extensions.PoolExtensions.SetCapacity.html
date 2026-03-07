@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_PoolExtensions_SetCapacity_" data-uid="Gamelogic.Extensions.PoolExtensions.SetCapacity*" class="text-break">
-Method SetCapacity  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/PoolExtensions.cs/#L76"><i class="bi bi-code-slash"></i></a>
+Method SetCapacity  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/PoolExtensions.cs/#L81"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,7 +128,7 @@ Method SetCapacity  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Gamelogic_Extensions_PoolExtensions_SetCapacity__1_Gamelogic_Extensions_IPool___0__System_Int32_System_Boolean_" data-uid="Gamelogic.Extensions.PoolExtensions.SetCapacity``1(Gamelogic.Extensions.IPool{``0},System.Int32,System.Boolean)">
   SetCapacity&lt;T&gt;(IPool&lt;T&gt;, int, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/PoolExtensions.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Patterns/PoolExtensions.cs/#L81"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Sets the capacity of the pool. If the new capacity is less than the current capacity, the pool will be
@@ -168,6 +168,12 @@ new objects will be created to fill the pool.</p>
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+  <dd><p><code class="paramref">newCapacity</code> is negative.</p>
+</dd>
+</dl>
 
 
 

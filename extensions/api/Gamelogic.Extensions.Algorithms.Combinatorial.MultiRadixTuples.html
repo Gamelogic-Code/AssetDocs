@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_Algorithms_Combinatorial_MultiRadixTuples_" data-uid="Gamelogic.Extensions.Algorithms.Combinatorial.MultiRadixTuples*" class="text-break">
-Method MultiRadixTuples  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L80"><i class="bi bi-code-slash"></i></a>
+Method MultiRadixTuples  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L83"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,7 +128,7 @@ Method MultiRadixTuples  <a class="header-action link-secondary" title="View sou
 
 <h3 id="Gamelogic_Extensions_Algorithms_Combinatorial_MultiRadixTuples_System_Int32___" data-uid="Gamelogic.Extensions.Algorithms.Combinatorial.MultiRadixTuples(System.Int32[])">
   MultiRadixTuples(int[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L83"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Generates all tuples with mixed radixes.</p>
@@ -142,14 +142,15 @@ Method MultiRadixTuples  <a class="header-action link-secondary" title="View sou
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>radixes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
-  <dd><p>The array of radixes for each position in the tuple.</p>
+  <dd><p>The array of radixes (maximum value + 1) for each position in the tuple.</p>
 </dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]&gt;</dt>
-  <dd></dd>
+  <dd><p>An enumerable of all tuples where each position i ranges from 0 to radixes[i]-1.</p>
+</dd>
 </dl>
 
 
@@ -159,6 +160,12 @@ Method MultiRadixTuples  <a class="header-action link-secondary" title="View sou
 
 
 
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+  <dd><p><code class="paramref">radixes</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+</dl>
 
 
 
@@ -166,10 +173,11 @@ Method MultiRadixTuples  <a class="header-action link-secondary" title="View sou
 
 <h3 id="Gamelogic_Extensions_Algorithms_Combinatorial_MultiRadixTuples__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___" data-uid="Gamelogic.Extensions.Algorithms.Combinatorial.MultiRadixTuples``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})">
   MultiRadixTuples&lt;T&gt;(IEnumerable&lt;IEnumerable&lt;T&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Algorithms/Combinatorial.cs/#L96"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Generates all combinations by selecting one element from each inner enumerable in every possible way.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -179,19 +187,22 @@ Method MultiRadixTuples  <a class="header-action link-secondary" title="View sou
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>elements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</dt>
-  <dd></dd>
+  <dd><p>A collection of sequences; one element is chosen from each sequence per tuple.</p>
+</dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T[]&gt;</dt>
-  <dd></dd>
+  <dd><p>An enumerable of all possible selections.</p>
+</dd>
 </dl>
 
 <h4 class="section">Type Parameters</h4>
 <dl class="parameters">
   <dt><code>T</code></dt>
-  <dd></dd>
+  <dd><p>The type of elements.</p>
+</dd>
 </dl>
 
 

@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_GLDebug_LogError_" data-uid="Gamelogic.Extensions.GLDebug.LogError*" class="text-break">
-Method LogError  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L43"><i class="bi bi-code-slash"></i></a>
+Method LogError  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L53"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,11 @@ Method LogError  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Gamelogic_Extensions_GLDebug_LogError_System_Object_UnityEngine_Object_" data-uid="Gamelogic.Extensions.GLDebug.LogError(System.Object,UnityEngine.Object)">
   LogError(object, Object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L53"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Logs an error message to the Unity console (only in DEBUG builds).</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -142,9 +143,11 @@ public static void LogError(object message, Object context = null)</code></pre>
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-  <dd></dd>
+  <dd><p>The message to log.</p>
+</dd>
   <dt><code>context</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></dt>
-  <dd></dd>
+  <dd><p>Optional Unity Object context for the log message.</p>
+</dd>
 </dl>
 
 
@@ -162,10 +165,11 @@ public static void LogError(object message, Object context = null)</code></pre>
 
 <h3 id="Gamelogic_Extensions_GLDebug_LogError_System_String_System_Object_UnityEngine_Object_" data-uid="Gamelogic.Extensions.GLDebug.LogError(System.String,System.Object,UnityEngine.Object)">
   LogError(string, object, Object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/Diagnostics/GLDebug.cs/#L83"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Logs a prefixed error message to the Unity console (only in DEBUG builds).</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -176,11 +180,14 @@ public static void LogError(string type, object message, Object context = null)<
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-  <dd></dd>
+  <dd><p>A prefix string, typically a category or system name.</p>
+</dd>
   <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-  <dd></dd>
+  <dd><p>The message to log.</p>
+</dd>
   <dt><code>context</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></dt>
-  <dd></dd>
+  <dd><p>Optional Unity Object context for the log message.</p>
+</dd>
 </dl>
 
 

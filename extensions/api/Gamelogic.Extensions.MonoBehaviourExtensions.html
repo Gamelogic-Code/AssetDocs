@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Extensions_MonoBehaviourExtensions" data-uid="Gamelogic.Extensions.MonoBehaviourExtensions" class="text-break">
-Class MonoBehaviourExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L275"><i class="bi bi-code-slash"></i></a>
+Class MonoBehaviourExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/GLMonoBehaviour.cs/#L311"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -166,21 +166,23 @@ public static class MonoBehaviourExtensions</code></pre>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Clone.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_">Clone&lt;T&gt;(T)</a></dt>
-    <dd><p>Clones an object.</p>
+    <dd><p>Clones a MonoBehaviour using <span class="xref">UnityEngine.Object.Instantiate&lt;T&gt;(T)</span>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Clone.html#Gamelogic_Extensions_MonoBehaviourExtensions_Clone__1___0_System_Int32_">Clone&lt;T&gt;(T, int)</a></dt>
-    <dd><p>Clones an object.</p>
+    <dd><p>Clones a MonoBehaviour a given number of times.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.FindChild.html#Gamelogic_Extensions_MonoBehaviourExtensions_FindChild_UnityEngine_Component_System_String_">FindChild(Component, string)</a></dt>
-    <dd></dd>
+    <dd><p>Finds a direct child of the component's transform with the given name.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.FindChild.html#Gamelogic_Extensions_MonoBehaviourExtensions_FindChild_UnityEngine_Component_System_String_System_Boolean_">FindChild(Component, string, bool)</a></dt>
-    <dd></dd>
+    <dd><p>Finds a child of the component's transform with the given name, optionally searching recursively.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.GetComponentInChildrenAlways.html#Gamelogic_Extensions_MonoBehaviourExtensions_GetComponentInChildrenAlways__1_UnityEngine_Component_">GetComponentInChildrenAlways&lt;T&gt;(Component)</a></dt>
@@ -235,11 +237,13 @@ action after every repeatTime seconds.</p>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Tween.html#Gamelogic_Extensions_MonoBehaviourExtensions_Tween__1_UnityEngine_MonoBehaviour___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__">Tween&lt;T&gt;(MonoBehaviour, T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Tweens a value from <code class="paramref">start</code> to <code class="paramref">finish</code> over <code class="paramref">totalTime</code> seconds.</p>
+</dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Gamelogic.Extensions.MonoBehaviourExtensions.Tween.html#Gamelogic_Extensions_MonoBehaviourExtensions_Tween__1_UnityEngine_MonoBehaviour___0___0_System_Single_System_Func___0___0_System_Single___0__System_Action___0__System_Func_System_Single__">Tween&lt;T&gt;(MonoBehaviour, T, T, float, Func&lt;T, T, float, T&gt;, Action&lt;T&gt;, Func&lt;float&gt;)</a></dt>
-    <dd></dd>
+    <dd><p>Tweens a value from <code class="paramref">start</code> to <code class="paramref">finish</code> over <code class="paramref">totalTime</code> seconds.</p>
+</dd>
   </dl>
 
 

@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Extensions_VectorExtensions_HadamardMod_" data-uid="Gamelogic.Extensions.VectorExtensions.HadamardMod*" class="text-break">
-Method HadamardMod  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L467"><i class="bi bi-code-slash"></i></a>
+Method HadamardMod  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L477"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,10 +128,10 @@ Method HadamardMod  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Gamelogic_Extensions_VectorExtensions_HadamardMod_UnityEngine_Vector2_UnityEngine_Vector2_" data-uid="Gamelogic.Extensions.VectorExtensions.HadamardMod(UnityEngine.Vector2,UnityEngine.Vector2)">
   HadamardMod(Vector2, Vector2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L477"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Multiplies component by component.</p>
+<div class="markdown level1 summary"><p>Returns the floor modulus of each component of this vector by the corresponding component of <code class="paramref">otherVector</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -143,17 +143,18 @@ public static Vector2 HadamardMod(this Vector2 thisVector, Vector2 otherVector)<
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>thisVector</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
-  <dd><p>The this vector.</p>
+  <dd><p>The dividend vector.</p>
 </dd>
   <dt><code>otherVector</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
-  <dd><p>The other vector.</p>
+  <dd><p>The divisor vector.</p>
 </dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></dt>
-  <dd></dd>
+  <dd><p>A new vector where each component is the floor modulus of the corresponding input components.</p>
+</dd>
 </dl>
 
 
@@ -170,10 +171,10 @@ public static Vector2 HadamardMod(this Vector2 thisVector, Vector2 otherVector)<
 
 <h3 id="Gamelogic_Extensions_VectorExtensions_HadamardMod_UnityEngine_Vector3_UnityEngine_Vector3_" data-uid="Gamelogic.Extensions.VectorExtensions.HadamardMod(UnityEngine.Vector3,UnityEngine.Vector3)">
   HadamardMod(Vector3, Vector3)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L491"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Multiplies component by component.</p>
+<div class="markdown level1 summary"><p>Returns the floor modulus of each component of this vector by the corresponding component of <code class="paramref">otherVector</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -185,17 +186,18 @@ public static Vector3 HadamardMod(this Vector3 thisVector, Vector3 otherVector)<
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>thisVector</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a></dt>
-  <dd><p>The this vector.</p>
+  <dd><p>The dividend vector.</p>
 </dd>
   <dt><code>otherVector</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a></dt>
-  <dd><p>The other vector.</p>
+  <dd><p>The divisor vector.</p>
 </dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a></dt>
-  <dd></dd>
+  <dd><p>A new vector where each component is the floor modulus of the corresponding input components.</p>
+</dd>
 </dl>
 
 
@@ -212,10 +214,10 @@ public static Vector3 HadamardMod(this Vector3 thisVector, Vector3 otherVector)<
 
 <h3 id="Gamelogic_Extensions_VectorExtensions_HadamardMod_UnityEngine_Vector4_UnityEngine_Vector4_" data-uid="Gamelogic.Extensions.VectorExtensions.HadamardMod(UnityEngine.Vector4,UnityEngine.Vector4)">
   HadamardMod(Vector4, Vector4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L494"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/extensions-unity/blob/main/Packages/za.co.gamelogic.extensions/Runtime/UnityExtensions/VectorExtensions.cs/#L506"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Multiplies component by component.</p>
+<div class="markdown level1 summary"><p>Returns the floor modulus of each component of this vector by the corresponding component of <code class="paramref">otherVector</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -227,17 +229,18 @@ public static Vector4 HadamardMod(this Vector4 thisVector, Vector4 otherVector)<
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>thisVector</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector4.html">Vector4</a></dt>
-  <dd><p>The this vector.</p>
+  <dd><p>The dividend vector.</p>
 </dd>
   <dt><code>otherVector</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector4.html">Vector4</a></dt>
-  <dd><p>The other vector.</p>
+  <dd><p>The divisor vector.</p>
 </dd>
 </dl>
 
 <h4 class="section">Returns</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector4.html">Vector4</a></dt>
-  <dd></dd>
+  <dd><p>A new vector where each component is the floor modulus of the corresponding input components.</p>
+</dd>
 </dl>
 
 
