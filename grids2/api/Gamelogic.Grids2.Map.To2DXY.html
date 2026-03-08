@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/grids-unity/new/main/apiSpec/new?filename=Gamelogic_Grids2_Map_To2DXY_.md&amp;value=---%0Auid%3A%20Gamelogic.Grids2.Map.To2DXY*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -37,7 +37,7 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
-      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -61,7 +61,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -98,7 +98,7 @@
 
 
 <h1 id="Gamelogic_Grids2_Map_To2DXY_" data-uid="Gamelogic.Grids2.Map.To2DXY*" class="text-break">
-Method To2DXY  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/IMap.cs#lines-1214"><i class="bi bi-code-slash"></i></a>
+Method To2DXY  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/grids-unity/blob/main/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/IMap.cs/#L1214"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -128,7 +128,7 @@ Method To2DXY  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Gamelogic_Grids2_Map_To2DXY__1_Gamelogic_Grids2_IMap___0_UnityEngine_Vector3__" data-uid="Gamelogic.Grids2.Map.To2DXY``1(Gamelogic.Grids2.IMap{``0,UnityEngine.Vector3})">
   To2DXY&lt;TInput&gt;(IMap&lt;TInput, Vector3&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/IMap.cs#lines-1214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/grids-unity/blob/main/Packages/za.co.gamelogic.grids2/Runtime/Scripts/Core/IMap.cs/#L1214"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a Composed map with a 2D XYMap.</p>
@@ -136,7 +136,9 @@ Method To2DXY  <a class="header-action link-secondary" title="View source" href=
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static IMap&lt;TInput, Vector2&gt; To2DXY&lt;TInput&gt;(this IMap&lt;TInput, Vector3&gt; map)</code></pre>
+  <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;ReSharper&quot;, &quot;InconsistentNaming&quot;, Justification = &quot;Name has math parts.&quot;)]
+[SuppressMessage(&quot;ReSharper&quot;, &quot;IdentifierTypo&quot;, Justification = &quot;Name has math parts.&quot;)]
+public static IMap&lt;TInput, Vector2&gt; To2DXY&lt;TInput&gt;(this IMap&lt;TInput, Vector3&gt; map)</code></pre>
 </div>
 
 <h4 class="section">Parameters</h4>

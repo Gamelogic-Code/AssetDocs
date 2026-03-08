@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -37,7 +37,7 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
-      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -61,7 +61,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -126,13 +126,19 @@ public enum FilterMode</code></pre>
 </h2>
   <dl class="parameters">
     <dt id="Gamelogic_Words_FilterMode_Custom"><code>Custom = 4</code></dt>
-    <dd><p>Apply custom filters.</p>
+  <dd><p>Apply custom filters.</p>
+<p>Custom filters are applied after word length and pattern
+filters if they are also enabled. Extend <a class="xref" href="Gamelogic.Words.DictionaryTransformation.html">DictionaryTransformation</a>
+to implement a custom filter.</p>
 </dd>
+  
     <dt id="Gamelogic_Words_FilterMode_Pattern"><code>Pattern = 2</code></dt>
-    <dd><p>Apply regex pattern filters.</p>
+  
+  <dd><p>Apply regex pattern filters.</p>
 </dd>
     <dt id="Gamelogic_Words_FilterMode_WordLength"><code>WordLength = 1</code></dt>
-    <dd><p>Apply word length filters.</p>
+  
+  <dd><p>Apply word length filters.</p>
 </dd>
   </dl>
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Gamelogic-Code/grids-unity/new/main/apiSpec/new?filename=Gamelogic_Grids2_MeshData.md&amp;value=---%0Auid%3A%20Gamelogic.Grids2.MeshData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -37,7 +37,7 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
-      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -61,7 +61,7 @@
             <div id="navbar">
               <form class="search" role="search" id="search">
                 <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Grids2_MeshData" data-uid="Gamelogic.Grids2.MeshData" class="text-break">
-Class MeshData  <a class="header-action link-secondary" title="View source" href="https://bitbucket.org/gamelogic/gridsunity/src/master/Packages/za.co.gamelogic.grids2/Runtime/Scripts/EditorSupport/MeshData.cs#lines-50"><i class="bi bi-code-slash"></i></a>
+Class MeshData  <a class="header-action link-secondary" title="View source" href="https://github.com/Gamelogic-Code/grids-unity/blob/main/Packages/za.co.gamelogic.grids2/Runtime/Scripts/EditorSupport/MeshData.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -264,20 +264,18 @@ public class MeshData : ScriptableObject</code></pre>
   <h2 id="Gamelogic_Grids2_MeshData_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p> Some common cases are provided:</p>
 <ul><li>
-    <a class="xref" href="Gamelogic.Grids2.UniformGridMeshData.html">UniformGridMeshData</a> for grids where all cells are identical
-such as rect and hex grids.</li><li>
-    <a class="xref" href="Gamelogic.Grids2.PeriodicGridMeshData.html">PeriodicGridMeshData</a> for grids where patches of the 
+<a class="xref" href="Gamelogic.Grids2.UniformGridMeshData.html">UniformGridMeshData</a> for grids where all cells are identical
+such as rect and hex grids.</li><li> <a class="xref" href="Gamelogic.Grids2.PeriodicGridMeshData.html">PeriodicGridMeshData</a> for grids where patches of the 
 grid repeat periodically, such as triangular grids.
-</li><li>
-    <a class="xref" href="Gamelogic.Grids2.MeshStripMeshData.html">MeshStripMeshData</a> for grids that require automatic 
+</li><li> <a class="xref" href="Gamelogic.Grids2.MeshStripMeshData.html">MeshStripMeshData</a> for grids that require automatic 
 division of cells along one dimension to look good, such as polar grids.
 </li></ul>
 <div class="NOTE"><h5>implement</h5><p>
 Not all methods need to be implemented for the data to be useful. 
 </p></div>
 <div class="NOTE"><h5>implement</h5><p>
-  <p>The returned lists must be consistent.</p>
-  <ul><li>
+<p>The returned lists must be consistent.</p>
+<ul><li>
 The number of vertices must match the number of UVs and normals.
 </li><li>
 The order of the UVs, normals and vertex colors must match the order of the 
