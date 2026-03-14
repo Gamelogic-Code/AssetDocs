@@ -2682,7 +2682,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature.yml\" sourcestartlinenumber=\"1\">Base class for all separable renderer features.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature.yml\" sourcestartlinenumber=\"1\">Non-generic base class for all separable renderer features.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -5549,6 +5549,24 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).CreateSimplePass
   nameWithType: PostProcessRendererFeature<TShaderProperties>.CreateSimplePass
   nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).CreateSimplePass
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Dispose_System_Boolean_
+  commentId: M:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.Dispose(bool)
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).Dispose(Boolean)
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.Dispose(bool)
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).Dispose(Boolean)
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Dispose*
+  name: Dispose
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Dispose_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Dispose
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.Dispose
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).Dispose
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.Dispose
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).Dispose
 - uid: Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature
   name: SeparableRenderFeature
   href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature.html
@@ -5666,6 +5684,24 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).Create
   nameWithType: SeparableRendererFeature<TShaderProperties>.Create
   nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).Create
+- uid: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRendererFeature_1_Dispose_System_Boolean_
+  commentId: M:Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature<TShaderProperties>.Dispose(bool)
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).Dispose(Boolean)
+  nameWithType: SeparableRendererFeature<TShaderProperties>.Dispose(bool)
+  nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).Dispose(Boolean)
+- uid: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.Dispose*
+  name: Dispose
+  href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRendererFeature_1_Dispose_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.Dispose
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature<TShaderProperties>.Dispose
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).Dispose
+  nameWithType: SeparableRendererFeature<TShaderProperties>.Dispose
+  nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).Dispose
 - uid: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.OnValidate
   name: OnValidate()
   href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRendererFeature_1_OnValidate
