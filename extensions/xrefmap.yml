@@ -5654,6 +5654,12 @@ references:
   commentId: T:Gamelogic.Extensions.Editor.Internal.AssetConfig
   fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig
   nameWithType: AssetConfig
+- uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.ContextFeatures
+  name: ContextFeatures
+  href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.ContextFeatures.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.AssetConfig.ContextFeatures
+  fullName: Gamelogic.Extensions.Editor.Internal.AssetConfig.ContextFeatures
+  nameWithType: AssetConfig.ContextFeatures
 - uid: Gamelogic.Extensions.Editor.Internal.AssetConfig.assetDisplayName
   name: assetDisplayName
   href: api/Gamelogic.Extensions.Editor.Internal.AssetConfig.assetDisplayName.html
@@ -5885,6 +5891,54 @@ references:
   fullName.vb: Gamelogic.Extensions.Editor.Internal.Assets.FindByType(Of T)()
   nameWithType: Assets.FindByType<T>()
   nameWithType.vb: Assets.FindByType(Of T)()
+- uid: Gamelogic.Extensions.Editor.Internal.Constants
+  name: Constants
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.html
+  commentId: T:Gamelogic.Extensions.Editor.Internal.Constants
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants
+  nameWithType: Constants
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.ComponentsRoot
+  name: ComponentsRoot
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.ComponentsRoot.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.ComponentsRoot
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.ComponentsRoot
+  nameWithType: Constants.ComponentsRoot
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.Extensions
+  name: Extensions
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.Extensions.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.Extensions
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.Extensions
+  nameWithType: Constants.Extensions
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.ExtensionsComponentsRoot
+  name: ExtensionsComponentsRoot
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.ExtensionsComponentsRoot.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.ExtensionsComponentsRoot
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.ExtensionsComponentsRoot
+  nameWithType: Constants.ExtensionsComponentsRoot
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.Gamelogic
+  name: Gamelogic
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.Gamelogic.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.Gamelogic
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.Gamelogic
+  nameWithType: Constants.Gamelogic
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.GamelogicFolder
+  name: GamelogicFolder
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.GamelogicFolder.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.GamelogicFolder
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.GamelogicFolder
+  nameWithType: Constants.GamelogicFolder
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.SupportEmail
+  name: SupportEmail
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.SupportEmail.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.SupportEmail
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.SupportEmail
+  nameWithType: Constants.SupportEmail
+- uid: Gamelogic.Extensions.Editor.Internal.Constants.ToolsMenuRoot
+  name: ToolsMenuRoot
+  href: api/Gamelogic.Extensions.Editor.Internal.Constants.ToolsMenuRoot.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.Constants.ToolsMenuRoot
+  fullName: Gamelogic.Extensions.Editor.Internal.Constants.ToolsMenuRoot
+  nameWithType: Constants.ToolsMenuRoot
 - uid: Gamelogic.Extensions.Editor.Internal.EditorUtils
   name: EditorUtils
   href: api/Gamelogic.Extensions.Editor.Internal.EditorUtils.html
@@ -5930,6 +5984,18 @@ references:
   commentId: Overload:Gamelogic.Extensions.Editor.Internal.EditorUtils.DrawNodeCurve
   fullName: Gamelogic.Extensions.Editor.Internal.EditorUtils.DrawNodeCurve
   nameWithType: EditorUtils.DrawNodeCurve
+- uid: Gamelogic.Extensions.Editor.Internal.ExtensionsTools
+  name: ExtensionsTools
+  href: api/Gamelogic.Extensions.Editor.Internal.ExtensionsTools.html
+  commentId: T:Gamelogic.Extensions.Editor.Internal.ExtensionsTools
+  fullName: Gamelogic.Extensions.Editor.Internal.ExtensionsTools
+  nameWithType: ExtensionsTools
+- uid: Gamelogic.Extensions.Editor.Internal.ExtensionsTools.IsMainAsset
+  name: IsMainAsset
+  href: api/Gamelogic.Extensions.Editor.Internal.ExtensionsTools.IsMainAsset.html
+  commentId: F:Gamelogic.Extensions.Editor.Internal.ExtensionsTools.IsMainAsset
+  fullName: Gamelogic.Extensions.Editor.Internal.ExtensionsTools.IsMainAsset
+  nameWithType: ExtensionsTools.IsMainAsset
 - uid: Gamelogic.Extensions.Editor.Internal.GLEditor`1
   name: GLEditor<T>
   href: api/Gamelogic.Extensions.Editor.Internal.GLEditor-1.html
@@ -6213,6 +6279,54 @@ references:
   commentId: Overload:Gamelogic.Extensions.Editor.Internal.StringExtensions.SplitCamelCase
   fullName: Gamelogic.Extensions.Editor.Internal.StringExtensions.SplitCamelCase
   nameWithType: StringExtensions.SplitCamelCase
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow
+  name: WelcomeWindow
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.html
+  commentId: T:Gamelogic.Extensions.Editor.Internal.WelcomeWindow
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow
+  nameWithType: WelcomeWindow
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown(System.String)
+  name: HasBeenShown(string)
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown.html#Gamelogic_Extensions_Editor_Internal_WelcomeWindow_HasBeenShown_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown(System.String)
+  name.vb: HasBeenShown(String)
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown(string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown(String)
+  nameWithType: WelcomeWindow.HasBeenShown(string)
+  nameWithType.vb: WelcomeWindow.HasBeenShown(String)
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown*
+  name: HasBeenShown
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.HasBeenShown
+  nameWithType: WelcomeWindow.HasBeenShown
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open(Gamelogic.Extensions.Editor.Internal.AssetConfig)
+  name: Open(AssetConfig)
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open.html#Gamelogic_Extensions_Editor_Internal_WelcomeWindow_Open_Gamelogic_Extensions_Editor_Internal_AssetConfig_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open(Gamelogic.Extensions.Editor.Internal.AssetConfig)
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open(Gamelogic.Extensions.Editor.Internal.AssetConfig)
+  nameWithType: WelcomeWindow.Open(AssetConfig)
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open*
+  name: Open
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.Open
+  nameWithType: WelcomeWindow.Open
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState(System.String)
+  name: ResetShownState(string)
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState.html#Gamelogic_Extensions_Editor_Internal_WelcomeWindow_ResetShownState_System_String_
+  commentId: M:Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState(System.String)
+  name.vb: ResetShownState(String)
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState(string)
+  fullName.vb: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState(String)
+  nameWithType: WelcomeWindow.ResetShownState(string)
+  nameWithType.vb: WelcomeWindow.ResetShownState(String)
+- uid: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState*
+  name: ResetShownState
+  href: api/Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState.html
+  commentId: Overload:Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState
+  fullName: Gamelogic.Extensions.Editor.Internal.WelcomeWindow.ResetShownState
+  nameWithType: WelcomeWindow.ResetShownState
 - uid: Gamelogic.Extensions.Editor.KeyValuePropertyDrawer
   name: KeyValuePropertyDrawer
   href: api/Gamelogic.Extensions.Editor.KeyValuePropertyDrawer.html
