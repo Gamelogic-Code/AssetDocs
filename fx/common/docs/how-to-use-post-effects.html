@@ -177,6 +177,8 @@ namespace Gamelogic.Fx.Samples.BuiltIn
 </code></pre><h2 id="universal-render-pipeline-urp">Universal Render Pipeline (URP)</h2>
 <p>Post effects are implemented as <code>ScriptableRendererFeature</code> components in URP, and you can add them directly to your
 URP renderer asset.</p>
+<p>By default, post effects do not apply to overlay cameras. (If you need this, you can set
+<a class="xref" href="../../api/Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.html#Gamelogic_Fx_URP_ExperimentalSettings_PostProcessing_SkipInOverlayCameras">SkipInOverlayCameras</a> to <code>false</code>.)</p>
 
 </article>
 
