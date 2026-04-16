@@ -264,6 +264,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate.yml\" sourcestartlinenumber=\"1\">A post process that applies a hex-pixelation effect to the image\nby sampling hexagons of pixels instead of individual texels.\nSee <a href=\"../common/docs/effects-reference-common.html#pixelate\">../common/docs/effects-reference-common.html#pixelate</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.InvertPostProcess.yml",
       "output": {
         ".html": {
@@ -866,6 +880,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.yml",
       "output": {
         ".html": {
@@ -961,6 +989,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the dither texture bias post-processing effect.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the hex dither matrix bias post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1580,6 +1622,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the hex pixelate post-processing effect.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.PostProcessing.Effects.InvertProperties.yml",
       "output": {
         ".html": {
@@ -1787,6 +1843,48 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.RequiresMixboxAttribute",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.RequiresMixboxAttribute.yml\" sourcestartlinenumber=\"1\">Used to flag components that need Mixbox to work.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.ExperimentalSettings.Mapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.ExperimentalSettings.Mapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP.ExperimentalSettings.Mapping",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.ExperimentalSettings.Mapping.yml\" sourcestartlinenumber=\"1\">Whether Gamelogic mapping renderer features should skip overlay cameras (URP).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.yml\" sourcestartlinenumber=\"1\">Experimental settings relating to post-processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.ExperimentalSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.ExperimentalSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP.ExperimentalSettings",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.ExperimentalSettings.yml\" sourcestartlinenumber=\"1\">Settings for features that may change.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2696,6 +2794,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.PostProcessing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP",
       "Summary": null
     },
     {

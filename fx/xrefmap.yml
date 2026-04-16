@@ -159,6 +159,12 @@ references:
   commentId: T:Gamelogic.Fx.BuiltIn.PostProcessing.Effects.GaussianBlurPostProcess
   fullName: Gamelogic.Fx.BuiltIn.PostProcessing.Effects.GaussianBlurPostProcess
   nameWithType: GaussianBlurPostProcess
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate
+  name: HexPixelate
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate.html
+  commentId: T:Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.Effects.HexPixelate
+  nameWithType: HexPixelate
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.Effects.InvertPostProcess
   name: InvertPostProcess
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.Effects.InvertPostProcess.html
@@ -1619,6 +1625,12 @@ references:
   commentId: T:Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherTextureBiasPostProcess
   fullName: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherTextureBiasPostProcess
   nameWithType: DitherTextureBiasPostProcess
+- uid: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess
+  name: HexDitherMatrixBiasPostProcess
+  href: api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess.html
+  commentId: T:Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess
+  fullName: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess
+  nameWithType: HexDitherMatrixBiasPostProcess
 - uid: Gamelogic.Fx.Dithering.DitherMatrixPresets
   name: DitherMatrixPresets
   href: api/Gamelogic.Fx.Dithering.DitherMatrixPresets.html
@@ -2097,6 +2109,181 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties.Smoothness
   nameWithType: DitherTextureBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties
+  name: HexDitherMatrixBiasProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html
+  commentId: T:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties
+  nameWithType: HexDitherMatrixBiasProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMax
+  name: DitherAmountMax
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_DitherAmountMax
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMax
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMax
+  nameWithType: HexDitherMatrixBiasProperties.DitherAmountMax
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMax*
+  name: DitherAmountMax
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_DitherAmountMax_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMax
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMax
+  nameWithType: HexDitherMatrixBiasProperties.DitherAmountMax
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMin
+  name: DitherAmountMin
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_DitherAmountMin
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMin
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMin
+  nameWithType: HexDitherMatrixBiasProperties.DitherAmountMin
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMin*
+  name: DitherAmountMin
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_DitherAmountMin_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMin
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.DitherAmountMin
+  nameWithType: HexDitherMatrixBiasProperties.DitherAmountMin
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.LevelCount
+  name: LevelCount
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_LevelCount
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.LevelCount
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.LevelCount
+  nameWithType: HexDitherMatrixBiasProperties.LevelCount
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.LevelCount*
+  name: LevelCount
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_LevelCount_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.LevelCount
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.LevelCount
+  nameWithType: HexDitherMatrixBiasProperties.LevelCount
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixB
+  name: MatrixB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_MatrixB
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixB
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixB
+  nameWithType: HexDitherMatrixBiasProperties.MatrixB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixB*
+  name: MatrixB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_MatrixB_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixB
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixB
+  nameWithType: HexDitherMatrixBiasProperties.MatrixB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixG
+  name: MatrixG
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_MatrixG
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixG
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixG
+  nameWithType: HexDitherMatrixBiasProperties.MatrixG
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixG*
+  name: MatrixG
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_MatrixG_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixG
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixG
+  nameWithType: HexDitherMatrixBiasProperties.MatrixG
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixR
+  name: MatrixR
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_MatrixR
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixR
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixR
+  nameWithType: HexDitherMatrixBiasProperties.MatrixR
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixR*
+  name: MatrixR
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_MatrixR_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixR
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.MatrixR
+  nameWithType: HexDitherMatrixBiasProperties.MatrixR
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetB
+  name: PixelOffsetB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelOffsetB
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetB
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetB
+  nameWithType: HexDitherMatrixBiasProperties.PixelOffsetB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetB*
+  name: PixelOffsetB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelOffsetB_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetB
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetB
+  nameWithType: HexDitherMatrixBiasProperties.PixelOffsetB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetG
+  name: PixelOffsetG
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelOffsetG
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetG
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetG
+  nameWithType: HexDitherMatrixBiasProperties.PixelOffsetG
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetG*
+  name: PixelOffsetG
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelOffsetG_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetG
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetG
+  nameWithType: HexDitherMatrixBiasProperties.PixelOffsetG
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetR
+  name: PixelOffsetR
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelOffsetR
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetR
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetR
+  nameWithType: HexDitherMatrixBiasProperties.PixelOffsetR
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetR*
+  name: PixelOffsetR
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelOffsetR_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetR
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelOffsetR
+  nameWithType: HexDitherMatrixBiasProperties.PixelOffsetR
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelSize
+  name: PixelSize
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelSize
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelSize
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelSize
+  nameWithType: HexDitherMatrixBiasProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelSize*
+  name: PixelSize
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_PixelSize_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelSize
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.PixelSize
+  nameWithType: HexDitherMatrixBiasProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: HexDitherMatrixBiasProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.SetMaterialProperties
+  nameWithType: HexDitherMatrixBiasProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_ShaderName
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.ShaderName
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.ShaderName
+  nameWithType: HexDitherMatrixBiasProperties.ShaderName
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.ShaderName
+  nameWithType: HexDitherMatrixBiasProperties.ShaderName
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness
+  name: Smoothness
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_Smoothness
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness
+  nameWithType: HexDitherMatrixBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness*
+  name: Smoothness
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_HexDitherMatrixBiasProperties_Smoothness_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness
+  nameWithType: HexDitherMatrixBiasProperties.Smoothness
 - uid: Gamelogic.Fx.Dithering.URP
   name: Gamelogic.Fx.Dithering.URP
   href: api/Gamelogic.Fx.Dithering.URP.html
@@ -3933,6 +4120,51 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.PostProcessing.Effects.GaussianBlurProperties.Sigma
   nameWithType: GaussianBlurProperties.Sigma
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties
+  name: HexPixelateProperties
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html
+  commentId: T:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties
+  nameWithType: HexPixelateProperties
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.PixelSize
+  name: PixelSize
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_HexPixelateProperties_PixelSize
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.PixelSize
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.PixelSize
+  nameWithType: HexPixelateProperties.PixelSize
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.PixelSize*
+  name: PixelSize
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_HexPixelateProperties_PixelSize_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.PixelSize
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.PixelSize
+  nameWithType: HexPixelateProperties.PixelSize
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_HexPixelateProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: HexPixelateProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_HexPixelateProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.SetMaterialProperties
+  nameWithType: HexPixelateProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_HexPixelateProperties_ShaderName
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.ShaderName
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.ShaderName
+  nameWithType: HexPixelateProperties.ShaderName
+- uid: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_HexPixelateProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.HexPixelateProperties.ShaderName
+  nameWithType: HexPixelateProperties.ShaderName
 - uid: Gamelogic.Fx.PostProcessing.Effects.InvertProperties
   name: InvertProperties
   href: api/Gamelogic.Fx.PostProcessing.Effects.InvertProperties.html
@@ -4739,6 +4971,42 @@ references:
   commentId: T:Gamelogic.Fx.RequiresMixboxAttribute
   fullName: Gamelogic.Fx.RequiresMixboxAttribute
   nameWithType: RequiresMixboxAttribute
+- uid: Gamelogic.Fx.URP
+  name: Gamelogic.Fx.URP
+  href: api/Gamelogic.Fx.URP.html
+  commentId: N:Gamelogic.Fx.URP
+  fullName: Gamelogic.Fx.URP
+  nameWithType: Gamelogic.Fx.URP
+- uid: Gamelogic.Fx.URP.ExperimentalSettings
+  name: ExperimentalSettings
+  href: api/Gamelogic.Fx.URP.ExperimentalSettings.html
+  commentId: T:Gamelogic.Fx.URP.ExperimentalSettings
+  fullName: Gamelogic.Fx.URP.ExperimentalSettings
+  nameWithType: ExperimentalSettings
+- uid: Gamelogic.Fx.URP.ExperimentalSettings.Mapping
+  name: ExperimentalSettings.Mapping
+  href: api/Gamelogic.Fx.URP.ExperimentalSettings.Mapping.html
+  commentId: T:Gamelogic.Fx.URP.ExperimentalSettings.Mapping
+  fullName: Gamelogic.Fx.URP.ExperimentalSettings.Mapping
+  nameWithType: ExperimentalSettings.Mapping
+- uid: Gamelogic.Fx.URP.ExperimentalSettings.Mapping.SkipInOverlayCameras
+  name: SkipInOverlayCameras
+  href: api/Gamelogic.Fx.URP.ExperimentalSettings.Mapping.html#Gamelogic_Fx_URP_ExperimentalSettings_Mapping_SkipInOverlayCameras
+  commentId: F:Gamelogic.Fx.URP.ExperimentalSettings.Mapping.SkipInOverlayCameras
+  fullName: Gamelogic.Fx.URP.ExperimentalSettings.Mapping.SkipInOverlayCameras
+  nameWithType: ExperimentalSettings.Mapping.SkipInOverlayCameras
+- uid: Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing
+  name: ExperimentalSettings.PostProcessing
+  href: api/Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.html
+  commentId: T:Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing
+  fullName: Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing
+  nameWithType: ExperimentalSettings.PostProcessing
+- uid: Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.SkipInOverlayCameras
+  name: SkipInOverlayCameras
+  href: api/Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.html#Gamelogic_Fx_URP_ExperimentalSettings_PostProcessing_SkipInOverlayCameras
+  commentId: F:Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.SkipInOverlayCameras
+  fullName: Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.SkipInOverlayCameras
+  nameWithType: ExperimentalSettings.PostProcessing.SkipInOverlayCameras
 - uid: Gamelogic.Fx.URP.Mapping
   name: Gamelogic.Fx.URP.Mapping
   href: api/Gamelogic.Fx.URP.Mapping.html

@@ -94,30 +94,45 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="300-2026-03-15">[3.0.0] 2026-03-15</h2>
+<h2 id="301-2026-04-15">[3.0.1] 2026-04-15</h2>
 <h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li>Startup wizard now displays context features.</li>
+<li>Added <a class="xref" href="../../api/Gamelogic.Fx.URP.ExperimentalSettings.html">ExperimentalSettings</a>.</li>
+</ul>
+<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li>Post-processing and mapping renderer features now skip overlay cameras.</li>
+</ul>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li>Updated to Extensions 4.6.1.</li>
+<li>Made compatible with Unity 6.4.</li>
+</ul>
+<h2 id="300-2026-03-15">[3.0.0] 2026-03-15</h2>
+<h3 id="-new-features-1">🎉 New Features</h3>
 <ul>
 <li>Now URP works fully with RenderGraph!</li>
 <li>Added layer masking for map renderers.</li>
 </ul>
-<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
 <ul>
 <li>Effects stay active when changing scenes in the editor.</li>
 </ul>
 <h2 id="210-2026-03-08">[2.1.0] 2026-03-08</h2>
-<h3 id="-new-features-1">🎉 New Features</h3>
+<h3 id="-new-features-2">🎉 New Features</h3>
 <ul>
 <li>Made it possible to differentiate between play and edit mode when setting map renderers to refresh their render lists each
 frame or once only.</li>
 <li>URP map renderers now refresh their render lists when a new scene is loaded.</li>
 </ul>
-<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed bugs where map renderers would throw errors when changing scenes.</li>
 <li>Fixed map renderers sometimes trying to get meshes from renderers that have been destroyed.</li>
 </ul>
 <h2 id="201-2026-03-07">[2.0.1] 2026-03-07</h2>
-<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed a bug in <code>ShaderProperty.SetOn</code> where the <code>IntegerArray</code> case wrote into <code>floatArrayValue</code> assuming it was non-null and the correct size, which could cause a <code>NullReferenceException</code> or <code>IndexOutOfRangeException</code> at runtime.</li>
 <li>Fixed a bug in <code>ShaderPropertyThrowHelper.WarnIfExceeds</code> where the <code>argName</code> parameter was declared as <code>int</code> instead of <code>string</code>, causing incorrect formatting in warning messages.</li>
@@ -125,7 +140,7 @@ frame or once only.</li>
 <li>Fixed a typo in <code>PropertyNotfoundException</code> — renamed to <code>PropertyNotFoundException</code> to match .NET conventions. The old name is kept as an obsolete alias.</li>
 <li>Fixed an inconsistent class name: <code>GLNormalMapRenderer</code> has been renamed to <code>GLNormalMapRendererFeature</code> to match sibling classes. The old name is kept as obsolete.</li>
 </ul>
-<h3 id="-engineering">🔧 Engineering</h3>
+<h3 id="-engineering-1">🔧 Engineering</h3>
 <ul>
 <li>Updated to Extensions 4.6.0.</li>
 </ul>
@@ -139,7 +154,7 @@ frame or once only.</li>
 <li><code>GLNormalMapRenderer</code> is now <code>GLNormalMapRendererFeature</code>. The old name is obsolete and will be removed in a future version.</li>
 </ul>
 <h2 id="110---2025-12-10">[1.1.0] - 2025-12-10</h2>
-<h3 id="-new-features-2">🎉 New Features</h3>
+<h3 id="-new-features-3">🎉 New Features</h3>
 <ul>
 <li>Added @Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlur post-process .</li>
 <li>Added @Gamelogic.Fx.BuiltIn.PostProcessing.Effects.GaussianBlur post-process .</li>
