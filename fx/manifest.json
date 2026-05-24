@@ -530,6 +530,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.yml\" sourcestartlinenumber=\"1\">Determines which procedural shape is used to compute the mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.yml\" sourcestartlinenumber=\"1\">Runs all post-processes found in children of a given root on the <xref href=\"UnityEngine.Camera\" data-throw-if-not-resolved=\"false\"></xref> this script is\nattached to, applying a procedurally computed mask (<xref href=\"Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.HalfPlane\" data-throw-if-not-resolved=\"false\"></xref> or\n<xref href=\"Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.Ellipse\" data-throw-if-not-resolved=\"false\"></xref>) instead of a texture mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.BuiltIn.PostProcessing.RequireDepthNormals.yml",
       "output": {
         ".html": {
@@ -596,6 +624,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.BuiltIn.PostProcessing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for <xref href=\"UnityEngine.Rendering.Universal.ScriptableRendererData\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.BuiltIn.Scripts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.BuiltIn.Scripts.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.BuiltIn.Scripts",
       "Summary": null
     },
     {
@@ -1843,6 +1899,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.RequiresMixboxAttribute",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.RequiresMixboxAttribute.yml\" sourcestartlinenumber=\"1\">Used to flag components that need Mixbox to work.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.CameraScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.CameraScope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP.CameraScope",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.CameraScope.yml\" sourcestartlinenumber=\"1\">Specifies which cameras in a stack a render pass should execute on in a stack.</p>\n"
     },
     {
       "type": "ManagedReference",

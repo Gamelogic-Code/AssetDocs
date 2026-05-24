@@ -104,6 +104,7 @@ ID map in the outlines shader to create outlines around objects.</p>
 <ul>
 <li>the camera that renders the scene (it will be cloned to render the map)</li>
 <li>the render texture (this texture can used to drive effect properties)</li>
+<li>the layer mask, to restrict which objects are rendered into the map (defaults to Everything)</li>
 <li>whether to update the render list each frame. This can be expensive, so you may opt to call
 <code>RefreshRenderList</code> manually from your own script when needed.</li>
 </ul>
@@ -118,6 +119,7 @@ ID map in the outlines shader to create outlines around objects.</p>
 <li>Configure the properties, most importantly
 <ul>
 <li>the render texture (this texture can used to drive effect properties)</li>
+<li>the layer mask, to restrict which objects are rendered into the map (defaults to Everything)</li>
 <li>whether to update the render list each frame. This can be expensive, so you may
 opt to call <code>RefreshRenderList</code> manually from your own script when needed.</li>
 </ul>

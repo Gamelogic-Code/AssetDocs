@@ -139,9 +139,6 @@ public sealed class UVMapProperties : MapProperties</code></pre>
       <a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html#Gamelogic_Fx_Mapping_MapProperties_BackgroundColor">MapProperties.BackgroundColor</a>
     </div>
     <div>
-      <a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html#Gamelogic_Fx_Mapping_MapProperties_SetRendererProperties_UnityEngine_MaterialPropertyBlock_UnityEngine_Renderer_">MapProperties.SetRendererProperties(MaterialPropertyBlock, Renderer)</a>
-    </div>
-    <div>
       <a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html#Gamelogic_Fx_Mapping_MapProperties_OnEnable">MapProperties.OnEnable()</a>
     </div>
     <div>
@@ -189,15 +186,15 @@ public sealed class UVMapProperties : MapProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_AdjustByDistance" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.AdjustByDistance">
   AdjustByDistance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether to adjust the UV coordinates based on the renderer's distance from the camera.</p>
+  <div class="markdown level1 summary"><p>Gets and sets whether to adjust the UV coordinates based on the renderer's distance from the camera.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AdjustByDistance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AdjustByDistance { get; set; }</code></pre>
   </div>
 
 
@@ -221,15 +218,15 @@ public sealed class UVMapProperties : MapProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_AdjustByMaterialTiling" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.AdjustByMaterialTiling">
   AdjustByMaterialTiling
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether to adjust the UV coordinates based on the renderer material's tiling.</p>
+  <div class="markdown level1 summary"><p>Gets and sets whether to adjust the UV coordinates based on the renderer material's tiling.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AdjustByMaterialTiling { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AdjustByMaterialTiling { get; set; }</code></pre>
   </div>
 
 
@@ -253,15 +250,15 @@ public sealed class UVMapProperties : MapProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_AdjustByScale" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.AdjustByScale">
   AdjustByScale
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether to adjust the UV coordinates based on scale of the game object the renderer is attached to.</p>
+  <div class="markdown level1 summary"><p>Gets and sets whether to adjust the UV coordinates based on scale of the game object the renderer is attached to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AdjustByScale { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AdjustByScale { get; set; }</code></pre>
   </div>
 
 
@@ -285,7 +282,7 @@ public sealed class UVMapProperties : MapProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_BackgroundShaderName" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.BackgroundShaderName">
   BackgroundShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The name of the shader used to render the background when rendering this object info.</p>
@@ -321,7 +318,7 @@ public sealed class UVMapProperties : MapProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_ShaderName" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.ShaderName">
   ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the shader used by this property set.</p>
@@ -357,15 +354,15 @@ It should match the full shader path as defined in the shader file.</p>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_UVBackgroundOffset" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.UVBackgroundOffset">
   UVBackgroundOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Offset of the UV coordinates for the background.</p>
+  <div class="markdown level1 summary"><p>Gets and sets the offset of the UV coordinates for the background.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 UVBackgroundOffset { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 UVBackgroundOffset { get; set; }</code></pre>
   </div>
 
 
@@ -389,15 +386,15 @@ It should match the full shader path as defined in the shader file.</p>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_UVBackgroundScale" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.UVBackgroundScale">
   UVBackgroundScale
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Scale of the UV coordinates for the background.</p>
+  <div class="markdown level1 summary"><p>Get and sets the scale of the UV coordinates for the background.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 UVBackgroundScale { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 UVBackgroundScale { get; set; }</code></pre>
   </div>
 
 
@@ -425,7 +422,7 @@ It should match the full shader path as defined in the shader file.</p>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetBackgroundMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetBackgroundMaterialProperties(UnityEngine.Material)">
   SetBackgroundMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Applies background-specific properties to the background material.</p>
@@ -462,7 +459,7 @@ gradients, or other map-wide background parameters.</p>
 
   <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetMaterialProperties(UnityEngine.Material)">
   SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Applies all shader-related properties to the given material.</p>
@@ -490,6 +487,46 @@ gradients, or other map-wide background parameters.</p>
   <h4 class="section" id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetMaterialProperties_UnityEngine_Material__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
 (for example, floats, vectors, colors, textures, and keywords).</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetRendererProperties_" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetRendererProperties_UnityEngine_MaterialPropertyBlock_UnityEngine_Renderer_" data-uid="Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties(UnityEngine.MaterialPropertyBlock,UnityEngine.Renderer)">
+  SetRendererProperties(MaterialPropertyBlock, Renderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/Mapping/Maps/UVMapProperties.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies per-renderer properties before drawing a renderer into the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetRendererProperties(MaterialPropertyBlock block, Renderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>block</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a></dt>
+    <dd><p>The <a class="xref" href="https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a> used for this draw call.</p>
+</dd>
+    <dt><code>renderer</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Renderer.html">Renderer</a></dt>
+    <dd><p>The renderer currently being drawn into the map.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetRendererProperties_UnityEngine_MaterialPropertyBlock_UnityEngine_Renderer__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Override this method to set renderer-specific data such as object IDs,
+per-object colors, UV transforms, or custom attributes.</p>
 </div>
 
 

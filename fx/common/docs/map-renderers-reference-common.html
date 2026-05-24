@@ -96,6 +96,42 @@
 
 <p><img src="../images/reference.png" alt=""></p>
 <p><em>This image shows the original scene without any post processing.</em></p>
+<h2 id="common-properties">Common Properties</h2>
+<p>The following properties are shared by all map renderers, regardless of map type or render pipeline.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Render Target</td>
+<td>The render texture the map is written into.</td>
+</tr>
+<tr>
+<td>Layer Mask</td>
+<td>Which object layers are included in the map. Defaults to Everything.</td>
+</tr>
+<tr>
+<td>Update Render List Each Frame</td>
+<td>Refreshes the renderer list every frame in play mode. Disable for better performance and call <code>RefreshRendererList</code> manually when the scene changes.</td>
+</tr>
+<tr>
+<td>Update Render List Each Frame (Editor)</td>
+<td>Same as above, for edit mode.</td>
+</tr>
+<tr>
+<td>Source Camera <em>(Built-in only)</em></td>
+<td>The scene camera whose settings are copied for map rendering.</td>
+</tr>
+<tr>
+<td>Update Camera Each Frame <em>(Built-in only)</em></td>
+<td>Re-syncs the internal render camera to the source camera every frame. Enable if the source camera is animated or moved by script.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="depth-map">Depth Map</h2>
 <p>Renders a depth map from the camera’s perspective, encoding distance from the camera into grayscale.
 Supports both <strong>linear</strong> and <strong>logarithmic</strong> depth encodings, making it suitable for debugging depth,

@@ -352,6 +352,50 @@ type as the generic parameter. Generally the class can be empty (a concrete type
 </div>
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate_" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate">
+  CustomCameraScopePredicate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A predicate that determines whether this feature should execute for a given camera.
+Only used when <a class="xref" href="Gamelogic.Fx.URP.CameraScope.html">CameraScope</a> is set to <a class="xref" href="Gamelogic.Fx.URP.CameraScope.html#Gamelogic_Fx_URP_CameraScope_Custom">Custom</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;CameraData, bool&gt; CustomCameraScopePredicate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<span class="xref">CameraData</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Assign this from a <a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a>, for example in <code>Awake</code>:</p>
+<pre><code class="lang-csharp">var data = GetComponent&lt;UniversalAdditionalCameraData&gt;();
+var feature = data.scriptableRenderer.GetRendererFeature&lt;MyFeature&gt;();
+feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareTag("MyTag");</code></pre>
+<p>If the predicate is not assigned, the feature will not execute on any camera.</p>
+</div>
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -360,7 +404,7 @@ type as the generic parameter. Generally the class can be empty (a concrete type
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)">
   AddRenderPasses(ScriptableRenderer, ref RenderingData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Injects one or multiple <code>ScriptableRenderPass</code> in the renderer.</p>
@@ -396,7 +440,7 @@ type as the generic parameter. Generally the class can be empty (a concrete type
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Create" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.Create">
   Create()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes this feature's resources. This is called every time serialization happens.</p>
@@ -423,7 +467,7 @@ type as the generic parameter. Generally the class can be empty (a concrete type
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Dispose_System_Boolean_" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -438,6 +482,32 @@ type as the generic parameter. Generally the class can be empty (a concrete type
     <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_RefreshRendererList_" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_RefreshRendererList" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList">
+  RefreshRendererList()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshRendererList()</code></pre>
+  </div>
+
 
 
 

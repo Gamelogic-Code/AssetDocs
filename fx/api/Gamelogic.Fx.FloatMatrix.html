@@ -169,7 +169,7 @@ public sealed class FloatMatrix : IFloatMatrix</code></pre>
 
   <h3 id="Gamelogic_Fx_FloatMatrix__ctor_System_Int32_System_Int32_System_Single___" data-uid="Gamelogic.Fx.FloatMatrix.#ctor(System.Int32,System.Int32,System.Single[])">
   FloatMatrix(int, int, float[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a> class.</p>
@@ -288,12 +288,12 @@ with zeros.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the value at the specified coordinates.</p>
+  <div class="markdown level1 summary"><p>Gets nd sets the value at the specified coordinates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float this[int x, int y] { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float this[int x, int y] { get; set; }</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -326,7 +326,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_Item_Unity_Mathematics_int2_" data-uid="Gamelogic.Fx.FloatMatrix.Item(Unity.Mathematics.int2)">
   this[int2]
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the value at the specified coordinates.</p>
@@ -464,7 +464,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_AddColumn" data-uid="Gamelogic.Fx.FloatMatrix.AddColumn">
   AddColumn()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a column to the matrix at the end.</p>
@@ -491,7 +491,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_AddRow" data-uid="Gamelogic.Fx.FloatMatrix.AddRow">
   AddRow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a row to the matrix at the end.</p>
@@ -518,7 +518,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_Clone" data-uid="Gamelogic.Fx.FloatMatrix.Clone">
   Clone()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a deep copy of this matrix.</p>
@@ -550,7 +550,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_IsConstant" data-uid="Gamelogic.Fx.FloatMatrix.IsConstant">
   IsConstant()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether all values in this matrix are effectively the same.</p>
@@ -585,7 +585,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_IsValid" data-uid="Gamelogic.Fx.FloatMatrix.IsValid">
   IsValid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns whether this matrix is in a valid state (dimensions and value array are consistent).</p>
@@ -617,7 +617,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_Normalize" data-uid="Gamelogic.Fx.FloatMatrix.Normalize">
   Normalize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Normalizes the values in this matrix to be between 0 and 1.</p>
@@ -654,7 +654,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_RemoveColumn" data-uid="Gamelogic.Fx.FloatMatrix.RemoveColumn">
   RemoveColumn()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the last column from the matrix if there is one.</p>
@@ -681,7 +681,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_RemoveRow" data-uid="Gamelogic.Fx.FloatMatrix.RemoveRow">
   RemoveRow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the last row from the matrix if there is one.</p>
@@ -708,7 +708,7 @@ with zeros.</p>
 
   <h3 id="Gamelogic_Fx_FloatMatrix_SetFrom_Gamelogic_Fx_IFloatMatrix_" data-uid="Gamelogic.Fx.FloatMatrix.SetFrom(Gamelogic.Fx.IFloatMatrix)">
   SetFrom(IFloatMatrix)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/FloatMatrix.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the values and dimensions of this matrix from another matrix.</p>

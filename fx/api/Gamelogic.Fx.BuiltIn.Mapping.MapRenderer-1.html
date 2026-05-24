@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1" class="text-break">
-Class MapRenderer&lt;TMapProperties&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L40"><i class="bi bi-code-slash"></i></a>
+Class MapRenderer&lt;TMapProperties&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -553,12 +553,213 @@ public class MapRenderer&lt;TMapProperties&gt; : MapRenderer where TMapPropertie
 <ol>
 <li>Create a shader that can render the information you need.</li>
 <li>(Optional) Create a background shader to render the background of the map.</li>
-<li>Create a new class inheriting from <a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html">MapProperties</a>, that sets up the material properties for your shader
+<li>Create a new class inheriting from <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties">MapProperties</a>, that sets up the material properties for your shader
 (and background shader if needed).</li>
-<li>Create extend from <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html">MapRenderer&lt;TMapProperties&gt;</a> class using your new <a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html">MapProperties</a>
+<li>Create extend from <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html">MapRenderer&lt;TMapProperties&gt;</a> class using your new <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties">MapProperties</a>
 type as the generic parameter. Generally the class can be empty (a concrete type is needed to show up in the inspector).</li>
 </ol>
+<p>If your camera properties change (through animation or scripting) you need to set <span class="xref">Gamelogic.Fx.BuiltIn.Mapping.MapRenderer&lt;TMapProperties&gt;.updateCameraEachFrame</span>
+to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. You may need to set the execution order to make sure this script executes after the
+code that updates the camera.</p>
+<p>If your source camera itself changes, you set <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_SourceCamera">SourceCamera</a>.</p>
 </div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_LayerMask_" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.LayerMask*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_LayerMask" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.LayerMask">
+  LayerMask
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the layer mask used to select which objects are rendered into the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayerMask LayerMask { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/LayerMask.html">LayerMask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties_" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.MapProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.MapProperties">
+  MapProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the map properties for this map renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TMapProperties MapProperties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TMapProperties</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_SourceCamera_" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.SourceCamera*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_SourceCamera" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.SourceCamera">
+  SourceCamera
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets the source camera used to render the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera SourceCamera { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Camera.html">Camera</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateCameraEachFrame_" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateCameraEachFrame*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateCameraEachFrame" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateCameraEachFrame">
+  UpdateCameraEachFrame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets whether to update the camera properties each frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UpdateCameraEachFrame { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrame_" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrame*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrame" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrame">
+  UpdateRenderListEachFrame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets whether to update the list of renderers each frame in playmode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UpdateRenderListEachFrame { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrameInEditor_" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrameInEditor*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrameInEditor" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrameInEditor">
+  UpdateRenderListEachFrameInEditor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets and sets whether to update the list of renderers each frame in edit mode. This only has an effect when
+not playing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UpdateRenderListEachFrameInEditor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <h2 class="section" id="methods">Methods
@@ -569,7 +770,7 @@ type as the generic parameter. Generally the class can be empty (a concrete type
 
   <h3 id="Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_RefreshRendererList" data-uid="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.RefreshRendererList">
   RefreshRendererList()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/MapRenderer.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates the list of renderers to be drawn.</p>

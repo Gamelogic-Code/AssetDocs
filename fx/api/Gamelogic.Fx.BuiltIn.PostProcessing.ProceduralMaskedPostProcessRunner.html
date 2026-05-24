@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class IDMapRenderer | Gamelogic Fx </title>
+      <title>Class ProceduralMaskedPostProcessRunner | Gamelogic Fx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class IDMapRenderer | Gamelogic Fx ">
+      <meta name="title" content="Class ProceduralMaskedPostProcessRunner | Gamelogic Fx ">
       
-      <meta name="description" content="Renders an ID map of the scene. See ../common/docs/map-renderers-reference-common.html#id-map.">
+      <meta name="description" content="Runs all post-processes found in children of a given root on the  this script is attached to, applying a procedurally computed mask ( or ) instead of a texture mask.">
       <link rel="icon" href="../images/gamelogic_favicon.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_Mapping_Maps_IDMapRenderer.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.Mapping.Maps.IDMapRenderer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -91,27 +91,28 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Gamelogic.Fx.BuiltIn.Mapping.Maps.IDMapRenderer">
+        <article data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner">
 
 
 
-  <h1 id="Gamelogic_Fx_BuiltIn_Mapping_Maps_IDMapRenderer" data-uid="Gamelogic.Fx.BuiltIn.Mapping.Maps.IDMapRenderer" class="text-break">
-Class IDMapRenderer  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/Mapping/Maps/IDMapRenderer.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner" class="text-break">
+Class ProceduralMaskedPostProcessRunner  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/ProceduralMaskedPostProcessRunner.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.BuiltIn.html">BuiltIn</a>.<a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.html">Mapping</a>.<a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.Maps.html">Maps</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gamelogic.html">Gamelogic</a>.<a class="xref" href="Gamelogic.Fx.html">Fx</a>.<a class="xref" href="Gamelogic.Fx.BuiltIn.html">BuiltIn</a>.<a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.html">PostProcessing</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Gamelogic.Fx.BuiltIn.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Renders an ID map of the scene.
-See <a href="../common/docs/map-renderers-reference-common.html#id-map">../common/docs/map-renderers-reference-common.html#id-map</a>.</p>
+  <div class="markdown summary"><p>Runs all post-processes found in children of a given root on the <a class="xref" href="https://docs.unity3d.com/ScriptReference/Camera.html">Camera</a> this script is
+attached to, applying a procedurally computed mask (<a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_MaskShape_HalfPlane">HalfPlane</a> or
+<a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_MaskShape_Ellipse">Ellipse</a>) instead of a texture mask.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HelpURL(&quot;https://www.gamelogic.co.za/documentation/fx/common/docs/map-renderers-reference-common.html#id-map&quot;)]
-public sealed class IDMapRenderer : MapRenderer&lt;IDMapProperties&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[ExecuteInEditMode]
+public sealed class ProceduralMaskedPostProcessRunner : GLMonoBehaviour</code></pre>
   </div>
 
 
@@ -126,9 +127,7 @@ public sealed class IDMapRenderer : MapRenderer&lt;IDMapProperties&gt;</code></p
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
       <div><span class="xref">GLMonoBehaviour</span></div>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer.html">MapRenderer</a></div>
-      <div><a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html">MapRenderer</a>&lt;<a class="xref" href="Gamelogic.Fx.Mapping.Maps.IDMapProperties.html">IDMapProperties</a>&gt;</div>
-      <div><span class="xref">IDMapRenderer</span></div>
+      <div><span class="xref">ProceduralMaskedPostProcessRunner</span></div>
     </dd>
   </dl>
 
@@ -137,27 +136,6 @@ public sealed class IDMapRenderer : MapRenderer&lt;IDMapProperties&gt;</code></p
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_SourceCamera">MapRenderer&lt;IDMapProperties&gt;.SourceCamera</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_LayerMask">MapRenderer&lt;IDMapProperties&gt;.LayerMask</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateCameraEachFrame">MapRenderer&lt;IDMapProperties&gt;.UpdateCameraEachFrame</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrame">MapRenderer&lt;IDMapProperties&gt;.UpdateRenderListEachFrame</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrameInEditor">MapRenderer&lt;IDMapProperties&gt;.UpdateRenderListEachFrameInEditor</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties">MapRenderer&lt;IDMapProperties&gt;.MapProperties</a>
-    </div>
-    <div>
-      <a class="xref" href="Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_RefreshRendererList">MapRenderer&lt;IDMapProperties&gt;.RefreshRendererList()</a>
-    </div>
     <div>
       <a class="xref" href="https://www.gamelogic.co.za/documentation/extensions/api/Gamelogic.Extensions.GLMonoBehaviour.Instantiate.html#Gamelogic_Extensions_GLMonoBehaviour_Instantiate__1___0_UnityEngine_Vector3_UnityEngine_Quaternion_">GLMonoBehaviour.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</a>
     </div>
@@ -543,6 +521,102 @@ public sealed class IDMapRenderer : MapRenderer&lt;IDMapProperties&gt;</code></p
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
+
+
+
+
+  <h2 id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>All spatial parameters (<code>center</code>, <code>radii</code>, <code>softness</code>) are expressed
+in aspect-corrected normalised screen-height units, so a radius of 0.5 always reaches half the screen height
+regardless of the display's aspect ratio.</p>
+<p></p>
+For the texture-masked equivalent, see <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html">MaskedPostProcessRunner</a>.
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnDisable_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnDisable" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/ProceduralMaskedPostProcessRunner.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnEnable_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnEnable" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/ProceduralMaskedPostProcessRunner.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnRenderImage_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)">
+  OnRenderImage(RenderTexture, RenderTexture)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/ProceduralMaskedPostProcessRunner.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnRenderImage(RenderTexture sourceTexture, RenderTexture destinationTexture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceTexture</code> <span class="xref">RenderTexture</span></dt>
+    <dd></dd>
+    <dt><code>destinationTexture</code> <span class="xref">RenderTexture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
 

@@ -28,6 +28,40 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties)
   nameWithType: MapRenderer<TMapProperties>
   nameWithType.vb: MapRenderer(Of TMapProperties)
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.LayerMask
+  name: LayerMask
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_LayerMask
+  commentId: P:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.LayerMask
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.LayerMask
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).LayerMask
+  nameWithType: MapRenderer<TMapProperties>.LayerMask
+  nameWithType.vb: MapRenderer(Of TMapProperties).LayerMask
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.LayerMask*
+  name: LayerMask
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_LayerMask_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.LayerMask
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.LayerMask
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).LayerMask
+  nameWithType: MapRenderer<TMapProperties>.LayerMask
+  nameWithType.vb: MapRenderer(Of TMapProperties).LayerMask
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.MapProperties
+  name: MapProperties
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties
+  commentId: P:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.MapProperties
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.MapProperties
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).MapProperties
+  nameWithType: MapRenderer<TMapProperties>.MapProperties
+  nameWithType.vb: MapRenderer(Of TMapProperties).MapProperties
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.MapProperties*
+  name: MapProperties
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_MapProperties_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.MapProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.MapProperties
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).MapProperties
+  nameWithType: MapRenderer<TMapProperties>.MapProperties
+  nameWithType.vb: MapRenderer(Of TMapProperties).MapProperties
 - uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.RefreshRendererList
   name: RefreshRendererList()
   href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_RefreshRendererList
@@ -45,6 +79,74 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).RefreshRendererList
   nameWithType: MapRenderer<TMapProperties>.RefreshRendererList
   nameWithType.vb: MapRenderer(Of TMapProperties).RefreshRendererList
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.SourceCamera
+  name: SourceCamera
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_SourceCamera
+  commentId: P:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.SourceCamera
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.SourceCamera
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).SourceCamera
+  nameWithType: MapRenderer<TMapProperties>.SourceCamera
+  nameWithType.vb: MapRenderer(Of TMapProperties).SourceCamera
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.SourceCamera*
+  name: SourceCamera
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_SourceCamera_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.SourceCamera
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.SourceCamera
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).SourceCamera
+  nameWithType: MapRenderer<TMapProperties>.SourceCamera
+  nameWithType.vb: MapRenderer(Of TMapProperties).SourceCamera
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateCameraEachFrame
+  name: UpdateCameraEachFrame
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateCameraEachFrame
+  commentId: P:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateCameraEachFrame
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.UpdateCameraEachFrame
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).UpdateCameraEachFrame
+  nameWithType: MapRenderer<TMapProperties>.UpdateCameraEachFrame
+  nameWithType.vb: MapRenderer(Of TMapProperties).UpdateCameraEachFrame
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateCameraEachFrame*
+  name: UpdateCameraEachFrame
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateCameraEachFrame_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateCameraEachFrame
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.UpdateCameraEachFrame
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).UpdateCameraEachFrame
+  nameWithType: MapRenderer<TMapProperties>.UpdateCameraEachFrame
+  nameWithType.vb: MapRenderer(Of TMapProperties).UpdateCameraEachFrame
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrame
+  name: UpdateRenderListEachFrame
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrame
+  commentId: P:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrame
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.UpdateRenderListEachFrame
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).UpdateRenderListEachFrame
+  nameWithType: MapRenderer<TMapProperties>.UpdateRenderListEachFrame
+  nameWithType.vb: MapRenderer(Of TMapProperties).UpdateRenderListEachFrame
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrame*
+  name: UpdateRenderListEachFrame
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrame_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrame
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.UpdateRenderListEachFrame
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).UpdateRenderListEachFrame
+  nameWithType: MapRenderer<TMapProperties>.UpdateRenderListEachFrame
+  nameWithType.vb: MapRenderer(Of TMapProperties).UpdateRenderListEachFrame
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrameInEditor
+  name: UpdateRenderListEachFrameInEditor
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrameInEditor
+  commentId: P:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrameInEditor
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.UpdateRenderListEachFrameInEditor
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).UpdateRenderListEachFrameInEditor
+  nameWithType: MapRenderer<TMapProperties>.UpdateRenderListEachFrameInEditor
+  nameWithType.vb: MapRenderer(Of TMapProperties).UpdateRenderListEachFrameInEditor
+- uid: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrameInEditor*
+  name: UpdateRenderListEachFrameInEditor
+  href: api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.html#Gamelogic_Fx_BuiltIn_Mapping_MapRenderer_1_UpdateRenderListEachFrameInEditor_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Mapping.MapRenderer`1.UpdateRenderListEachFrameInEditor
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer<TMapProperties>.UpdateRenderListEachFrameInEditor
+  fullName.vb: Gamelogic.Fx.BuiltIn.Mapping.MapRenderer(Of TMapProperties).UpdateRenderListEachFrameInEditor
+  nameWithType: MapRenderer<TMapProperties>.UpdateRenderListEachFrameInEditor
+  nameWithType.vb: MapRenderer(Of TMapProperties).UpdateRenderListEachFrameInEditor
 - uid: Gamelogic.Fx.BuiltIn.Mapping.Maps
   name: Gamelogic.Fx.BuiltIn.Mapping.Maps
   href: api/Gamelogic.Fx.BuiltIn.Mapping.Maps.html
@@ -477,6 +579,69 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess(Of TShaderProperties).ReloadShader
   nameWithType: PostProcess<TShaderProperties>.ReloadShader
   nameWithType.vb: PostProcess(Of TShaderProperties).ReloadShader
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner
+  name: ProceduralMaskedPostProcessRunner
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html
+  commentId: T:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner
+  nameWithType: ProceduralMaskedPostProcessRunner
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape
+  name: ProceduralMaskedPostProcessRunner.MaskShape
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.html
+  commentId: T:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape
+  nameWithType: ProceduralMaskedPostProcessRunner.MaskShape
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.Ellipse
+  name: Ellipse
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_MaskShape_Ellipse
+  commentId: F:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.Ellipse
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.Ellipse
+  nameWithType: ProceduralMaskedPostProcessRunner.MaskShape.Ellipse
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.HalfPlane
+  name: HalfPlane
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_MaskShape_HalfPlane
+  commentId: F:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.HalfPlane
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.MaskShape.HalfPlane
+  nameWithType: ProceduralMaskedPostProcessRunner.MaskShape.HalfPlane
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable
+  name: OnDisable()
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnDisable
+  commentId: M:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable()
+  nameWithType: ProceduralMaskedPostProcessRunner.OnDisable()
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable*
+  name: OnDisable
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnDisable_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnDisable
+  nameWithType: ProceduralMaskedPostProcessRunner.OnDisable
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable
+  name: OnEnable()
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnEnable
+  commentId: M:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable()
+  nameWithType: ProceduralMaskedPostProcessRunner.OnEnable()
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable*
+  name: OnEnable
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnEnable_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnEnable
+  nameWithType: ProceduralMaskedPostProcessRunner.OnEnable
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  name: OnRenderImage(RenderTexture, RenderTexture)
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_
+  commentId: M:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage(UnityEngine.RenderTexture, UnityEngine.RenderTexture)
+  nameWithType: ProceduralMaskedPostProcessRunner.OnRenderImage(RenderTexture, RenderTexture)
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage*
+  name: OnRenderImage
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_ProceduralMaskedPostProcessRunner_OnRenderImage_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.OnRenderImage
+  nameWithType: ProceduralMaskedPostProcessRunner.OnRenderImage
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.RequireDepthNormals
   name: RequireDepthNormals
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.RequireDepthNormals.html
@@ -715,6 +880,66 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties).Start
   nameWithType: SeparablePostProcess<TShaderProperties>.Start
   nameWithType.vb: SeparablePostProcess(Of TShaderProperties).Start
+- uid: Gamelogic.Fx.BuiltIn.Scripts
+  name: Gamelogic.Fx.BuiltIn.Scripts
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.html
+  commentId: N:Gamelogic.Fx.BuiltIn.Scripts
+  fullName: Gamelogic.Fx.BuiltIn.Scripts
+  nameWithType: Gamelogic.Fx.BuiltIn.Scripts
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions
+  name: RenderDataExtensions
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html
+  commentId: T:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions
+  nameWithType: RenderDataExtensions
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature*
+  name: FindFeature
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html#Gamelogic_Fx_BuiltIn_Scripts_RenderDataExtensions_FindFeature_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature
+  nameWithType: RenderDataExtensions.FindFeature
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature``1(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  name: FindFeature<TRendererFeature>(ScriptableRendererData)
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html#Gamelogic_Fx_BuiltIn_Scripts_RenderDataExtensions_FindFeature__1_UnityEngine_Rendering_Universal_ScriptableRendererData_
+  commentId: M:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature``1(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  name.vb: FindFeature(Of TRendererFeature)(ScriptableRendererData)
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature<TRendererFeature>(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  fullName.vb: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeature(Of TRendererFeature)(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  nameWithType: RenderDataExtensions.FindFeature<TRendererFeature>(ScriptableRendererData)
+  nameWithType.vb: RenderDataExtensions.FindFeature(Of TRendererFeature)(ScriptableRendererData)
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures*
+  name: FindFeatures
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html#Gamelogic_Fx_BuiltIn_Scripts_RenderDataExtensions_FindFeatures_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures
+  nameWithType: RenderDataExtensions.FindFeatures
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures``1(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  name: FindFeatures<TRendererFeature>(ScriptableRendererData)
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html#Gamelogic_Fx_BuiltIn_Scripts_RenderDataExtensions_FindFeatures__1_UnityEngine_Rendering_Universal_ScriptableRendererData_
+  commentId: M:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures``1(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  name.vb: FindFeatures(Of TRendererFeature)(ScriptableRendererData)
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures<TRendererFeature>(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  fullName.vb: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindFeatures(Of TRendererFeature)(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  nameWithType: RenderDataExtensions.FindFeatures<TRendererFeature>(ScriptableRendererData)
+  nameWithType.vb: RenderDataExtensions.FindFeatures(Of TRendererFeature)(ScriptableRendererData)
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature*
+  name: FindRequiredFeature
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html#Gamelogic_Fx_BuiltIn_Scripts_RenderDataExtensions_FindRequiredFeature_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature
+  nameWithType: RenderDataExtensions.FindRequiredFeature
+- uid: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature``1(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  name: FindRequiredFeature<TRendererFeature>(ScriptableRendererData)
+  href: api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html#Gamelogic_Fx_BuiltIn_Scripts_RenderDataExtensions_FindRequiredFeature__1_UnityEngine_Rendering_Universal_ScriptableRendererData_
+  commentId: M:Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature``1(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  name.vb: FindRequiredFeature(Of TRendererFeature)(ScriptableRendererData)
+  fullName: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature<TRendererFeature>(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  fullName.vb: Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.FindRequiredFeature(Of TRendererFeature)(UnityEngine.Rendering.Universal.ScriptableRendererData)
+  nameWithType: RenderDataExtensions.FindRequiredFeature<TRendererFeature>(ScriptableRendererData)
+  nameWithType.vb: RenderDataExtensions.FindRequiredFeature(Of TRendererFeature)(ScriptableRendererData)
 - uid: Gamelogic.Fx.CrossHatching
   name: Gamelogic.Fx.CrossHatching
   href: api/Gamelogic.Fx.CrossHatching.html
@@ -1934,6 +2159,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.MatrixR
   nameWithType: DitherMatrixBiasProperties.MatrixR
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelOffset
+  name: PixelOffset
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_PixelOffset
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelOffset
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelOffset
+  nameWithType: DitherMatrixBiasProperties.PixelOffset
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelOffset*
+  name: PixelOffset
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_PixelOffset_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelOffset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelOffset
+  nameWithType: DitherMatrixBiasProperties.PixelOffset
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelSize
   name: PixelSize
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_PixelSize
@@ -3375,6 +3613,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetMaterialProperties
   nameWithType: UVMapProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties(UnityEngine.MaterialPropertyBlock,UnityEngine.Renderer)
+  name: SetRendererProperties(MaterialPropertyBlock, Renderer)
+  href: api/Gamelogic.Fx.Mapping.Maps.UVMapProperties.html#Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetRendererProperties_UnityEngine_MaterialPropertyBlock_UnityEngine_Renderer_
+  commentId: M:Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties(UnityEngine.MaterialPropertyBlock,UnityEngine.Renderer)
+  fullName: Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties(UnityEngine.MaterialPropertyBlock, UnityEngine.Renderer)
+  nameWithType: UVMapProperties.SetRendererProperties(MaterialPropertyBlock, Renderer)
+- uid: Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties*
+  name: SetRendererProperties
+  href: api/Gamelogic.Fx.Mapping.Maps.UVMapProperties.html#Gamelogic_Fx_Mapping_Maps_UVMapProperties_SetRendererProperties_
+  commentId: Overload:Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Mapping.Maps.UVMapProperties.SetRendererProperties
+  nameWithType: UVMapProperties.SetRendererProperties
 - uid: Gamelogic.Fx.Mapping.Maps.UVMapProperties.ShaderName
   name: ShaderName
   href: api/Gamelogic.Fx.Mapping.Maps.UVMapProperties.html#Gamelogic_Fx_Mapping_Maps_UVMapProperties_ShaderName
@@ -4325,6 +4576,19 @@ references:
   commentId: T:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties
   fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties
   nameWithType: PixelateProperties
+- uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset
+  name: PixelOffset
+  href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelOffset
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset
+  fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset
+  nameWithType: PixelateProperties.PixelOffset
+- uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset*
+  name: PixelOffset
+  href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelOffset_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset
+  nameWithType: PixelateProperties.PixelOffset
 - uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelSize
   name: PixelSize
   href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelSize
@@ -4977,6 +5241,36 @@ references:
   commentId: N:Gamelogic.Fx.URP
   fullName: Gamelogic.Fx.URP
   nameWithType: Gamelogic.Fx.URP
+- uid: Gamelogic.Fx.URP.CameraScope
+  name: CameraScope
+  href: api/Gamelogic.Fx.URP.CameraScope.html
+  commentId: T:Gamelogic.Fx.URP.CameraScope
+  fullName: Gamelogic.Fx.URP.CameraScope
+  nameWithType: CameraScope
+- uid: Gamelogic.Fx.URP.CameraScope.All
+  name: All
+  href: api/Gamelogic.Fx.URP.CameraScope.html#Gamelogic_Fx_URP_CameraScope_All
+  commentId: F:Gamelogic.Fx.URP.CameraScope.All
+  fullName: Gamelogic.Fx.URP.CameraScope.All
+  nameWithType: CameraScope.All
+- uid: Gamelogic.Fx.URP.CameraScope.Base
+  name: Base
+  href: api/Gamelogic.Fx.URP.CameraScope.html#Gamelogic_Fx_URP_CameraScope_Base
+  commentId: F:Gamelogic.Fx.URP.CameraScope.Base
+  fullName: Gamelogic.Fx.URP.CameraScope.Base
+  nameWithType: CameraScope.Base
+- uid: Gamelogic.Fx.URP.CameraScope.Custom
+  name: Custom
+  href: api/Gamelogic.Fx.URP.CameraScope.html#Gamelogic_Fx_URP_CameraScope_Custom
+  commentId: F:Gamelogic.Fx.URP.CameraScope.Custom
+  fullName: Gamelogic.Fx.URP.CameraScope.Custom
+  nameWithType: CameraScope.Custom
+- uid: Gamelogic.Fx.URP.CameraScope.Final
+  name: Final
+  href: api/Gamelogic.Fx.URP.CameraScope.html#Gamelogic_Fx_URP_CameraScope_Final
+  commentId: F:Gamelogic.Fx.URP.CameraScope.Final
+  fullName: Gamelogic.Fx.URP.CameraScope.Final
+  nameWithType: CameraScope.Final
 - uid: Gamelogic.Fx.URP.ExperimentalSettings
   name: ExperimentalSettings
   href: api/Gamelogic.Fx.URP.ExperimentalSettings.html
@@ -5131,6 +5425,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).Create
   nameWithType: GLMapRendererFeature<TMapProperties>.Create
   nameWithType.vb: GLMapRendererFeature(Of TMapProperties).Create
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate
+  commentId: P:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature<TMapProperties>.CustomCameraScopePredicate
+  fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).CustomCameraScopePredicate
+  nameWithType: GLMapRendererFeature<TMapProperties>.CustomCameraScopePredicate
+  nameWithType.vb: GLMapRendererFeature(Of TMapProperties).CustomCameraScopePredicate
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate*
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate_
+  commentId: Overload:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature<TMapProperties>.CustomCameraScopePredicate
+  fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).CustomCameraScopePredicate
+  nameWithType: GLMapRendererFeature<TMapProperties>.CustomCameraScopePredicate
+  nameWithType.vb: GLMapRendererFeature(Of TMapProperties).CustomCameraScopePredicate
 - uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.Dispose(System.Boolean)
   name: Dispose(bool)
   href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Dispose_System_Boolean_
@@ -5149,6 +5460,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).Dispose
   nameWithType: GLMapRendererFeature<TMapProperties>.Dispose
   nameWithType.vb: GLMapRendererFeature(Of TMapProperties).Dispose
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList
+  name: RefreshRendererList()
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_RefreshRendererList
+  commentId: M:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature<TMapProperties>.RefreshRendererList()
+  fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).RefreshRendererList()
+  nameWithType: GLMapRendererFeature<TMapProperties>.RefreshRendererList()
+  nameWithType.vb: GLMapRendererFeature(Of TMapProperties).RefreshRendererList()
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList*
+  name: RefreshRendererList
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_RefreshRendererList_
+  commentId: Overload:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature<TMapProperties>.RefreshRendererList
+  fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).RefreshRendererList
+  nameWithType: GLMapRendererFeature<TMapProperties>.RefreshRendererList
+  nameWithType.vb: GLMapRendererFeature(Of TMapProperties).RefreshRendererList
 - uid: Gamelogic.Fx.URP.Mapping.MapPass
   name: MapPass
   href: api/Gamelogic.Fx.URP.Mapping.MapPass.html
@@ -5799,24 +6127,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).Create
   nameWithType: PostProcessRendererFeature<TShaderProperties>.Create
   nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).Create
-- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CreateSimplePass(System.String,System.Action{UnityEngine.Material},System.Boolean,System.Boolean)
-  name: CreateSimplePass(string, Action<Material>, bool, bool)
-  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CreateSimplePass_System_String_System_Action_UnityEngine_Material__System_Boolean_System_Boolean_
-  commentId: M:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CreateSimplePass(System.String,System.Action{UnityEngine.Material},System.Boolean,System.Boolean)
-  name.vb: CreateSimplePass(String, Action(Of Material), Boolean, Boolean)
-  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.CreateSimplePass(string, System.Action<UnityEngine.Material>, bool, bool)
-  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).CreateSimplePass(String, System.Action(Of UnityEngine.Material), Boolean, Boolean)
-  nameWithType: PostProcessRendererFeature<TShaderProperties>.CreateSimplePass(string, Action<Material>, bool, bool)
-  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).CreateSimplePass(String, Action(Of Material), Boolean, Boolean)
-- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CreateSimplePass*
-  name: CreateSimplePass
-  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CreateSimplePass_
-  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CreateSimplePass
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CustomCameraScopePredicate
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CustomCameraScopePredicate
+  commentId: P:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CustomCameraScopePredicate
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CustomCameraScopePredicate*
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CustomCameraScopePredicate_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CustomCameraScopePredicate
   isSpec: "True"
-  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.CreateSimplePass
-  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).CreateSimplePass
-  nameWithType: PostProcessRendererFeature<TShaderProperties>.CreateSimplePass
-  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).CreateSimplePass
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
 - uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Dispose(System.Boolean)
   name: Dispose(bool)
   href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Dispose_System_Boolean_
@@ -5835,6 +6162,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).Dispose
   nameWithType: PostProcessRendererFeature<TShaderProperties>.Dispose
   nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).Dispose
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Properties
+  name: Properties
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Properties
+  commentId: P:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Properties
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.Properties
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).Properties
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.Properties
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).Properties
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Properties*
+  name: Properties
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Properties_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Properties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.Properties
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).Properties
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.Properties
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).Properties
 - uid: Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature
   name: SeparableRenderFeature
   href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRenderFeature.html
@@ -5952,6 +6296,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).Create
   nameWithType: SeparableRendererFeature<TShaderProperties>.Create
   nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).Create
+- uid: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.CustomCameraScopePredicate
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRendererFeature_1_CustomCameraScopePredicate
+  commentId: P:Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.CustomCameraScopePredicate
+  fullName: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
+  nameWithType: SeparableRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
+- uid: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.CustomCameraScopePredicate*
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRendererFeature_1_CustomCameraScopePredicate_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.CustomCameraScopePredicate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
+  nameWithType: SeparableRendererFeature<TShaderProperties>.CustomCameraScopePredicate
+  nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).CustomCameraScopePredicate
 - uid: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature`1.Dispose(System.Boolean)
   name: Dispose(bool)
   href: api/Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_SeparableRendererFeature_1_Dispose_System_Boolean_
