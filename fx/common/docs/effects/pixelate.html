@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/effects/pixelate.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/common/docs/effects/pixelate.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -105,9 +105,19 @@
 </thead>
 <tbody>
 <tr>
+<td>Grid Type</td>
+<td>Hex/Rect</td>
+<td>Cell geometry used for the pixel grid. <strong>Hex</strong> snaps to pointy-top hexagonal cells; <strong>Rect</strong> snaps to square cells.</td>
+</tr>
+<tr>
 <td>Pixel Size</td>
-<td>(1, ∞)</td>
-<td>Controls the pixelation density along the X and Y axes. Higher values produce larger blocks and a more pixelated look.</td>
+<td>(1, ∞)²</td>
+<td>Width and height of each pixel block in screen pixels. Higher values produce larger blocks.</td>
+</tr>
+<tr>
+<td>Pixel Offset</td>
+<td>ℝ²</td>
+<td>Shifts the pixel grid by this many screen pixels. Only used in <strong>Rect</strong> mode.</td>
 </tr>
 </tbody>
 </table>

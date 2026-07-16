@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/crosshatching/docs/effects/convex-hull-hatch.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/crosshatching/docs/effects/convex-hull-hatch.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -132,19 +132,24 @@ This produces stylized, textured palette mapping that blends palette reduction w
 <td>Base rotation offset in degrees applied before layer-based orientation.</td>
 </tr>
 <tr>
-<td><strong>Orientation From Texture</strong></td>
+<td><strong>Use Orientation Map</strong></td>
 <td>true / false</td>
 <td>When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.</td>
 </tr>
 <tr>
 <td><strong>Orientation Texture</strong></td>
 <td>🖼️</td>
-<td>Texture used to control per-region hatch orientation when <em>Orientation From Texture</em> is enabled.</td>
+<td>Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.</td>
 </tr>
 <tr>
 <td><strong>Hatch Texture</strong></td>
 <td>🖼️</td>
 <td>Tileable line or stipple texture used to modulate convex-hull projection.</td>
+</tr>
+<tr>
+<td><strong>Mip Map Bias</strong></td>
+<td>[0, 2]</td>
+<td>Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.</td>
 </tr>
 <tr>
 <td><strong>Layer Offset</strong></td>
@@ -154,17 +159,12 @@ This produces stylized, textured palette mapping that blends palette reduction w
 <tr>
 <td><strong>Hatch Strength</strong></td>
 <td>[0, 5]</td>
-<td>Controls how how dark the hatch layers are.</td>
+<td>Controls how dark the hatch layers are.</td>
 </tr>
 <tr>
 <td><strong>Background Strength</strong></td>
 <td>[0, 1]</td>
-<td>Hw much of the orginal image to show compared to the background color.</td>
-</tr>
-<tr>
-<td><strong>Use Orientation Map</strong></td>
-<td>true / false</td>
-<td>Enables sampling hatch orientation from the orientation texture instead of relying only on the orientation scheme.</td>
+<td>How much of the original image to show compared to the background color.</td>
 </tr>
 <tr>
 <td><strong>Use UV Map</strong></td>
@@ -188,7 +188,7 @@ This produces stylized, textured palette mapping that blends palette reduction w
 <h5>Tip</h5>
 <ul>
 <li>You can render out a UV Map with the <a href="../../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
-&gt;   for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
 </ul>
 </div>
 

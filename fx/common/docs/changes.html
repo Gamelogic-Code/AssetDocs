@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/changes.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/common/docs/changes.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,8 +94,28 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="400-2026-05-16">[4.0.0] 2026-05-16</h2>
+<h2 id="500-2026-06-29">[5.0.0] 2026-06-29</h2>
 <h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li>Added <code>GridType</code> enum (<code>Hex</code> / <code>Rect</code>) for use with grid-based effects such as Pixelate and Dither Grid Bias.</li>
+<li>Added <code>Interval</code> — a serializable float range with <code>Min</code>, <code>Max</code>, <code>Center</code>, and <code>HalfSize</code> properties, and an editor drawer that supports both min/max and center/half-size display modes.</li>
+<li>Added <code>RGBMatrix</code> — three <code>FloatMatrix</code> instances (one per channel) plus a shared <strong>All</strong> matrix, controlled by a <code>Locked</code> flag. Used by the Dither Grid Bias effect.</li>
+<li>Added <code>GamelogicFxSettings</code> (URP, experimental) — a static settings class for pipeline-level configuration such as <code>AllowedPostProcessCamera</code>.</li>
+<li><code>Pixelate</code> effect and <code>PixelateProperties</code> now support a <strong>Hex</strong> grid type (pointy-top hexagonal cells) via the new <code>GridType</code> property.</li>
+<li><code>Pixelate</code> now supports a <strong>Grid Angle</strong> property (±90°, inspector slider) to rotate the pixel grid, for both rect and hex modes. Rect mode now uses the same 9×9 jitter antialiasing as hex mode, with the rotation correctly applied in screen-pixel space.</li>
+<li><code>Pixelate</code> pixel grid is now anchored to the screen centre rather than the corner, so the grid is symmetric around the render target regardless of pixel size or rotation angle.</li>
+<li>Added hex and rect grid conversion functions to <code>Gamelogic.hlsl</code>: <code>pointy_hex_world_to_grid</code>, <code>pointy_hex_grid_to_world</code>, and <code>rect_world_to_grid</code>.</li>
+</ul>
+<h3 id="-editor-improvements">⚙️ Editor Improvements</h3>
+<ul>
+<li>Added <code>FloatMatrixGUI</code> — a reusable editor GUI helper for drawing <code>FloatMatrix</code> fields with resize controls.</li>
+<li>Added <code>RGBMatrixPropertyDrawer</code> — property drawer for <code>RGBMatrix</code> with per-channel tabs (All / R / G / B).</li>
+<li>Added <code>IntervalPropertyDrawer</code> — property drawer for <code>Interval</code> supporting both min/max and center/half-size display modes.</li>
+<li>Added <code>GridTypeDrawer</code> — property drawer for <code>GridType</code> that renders as inline toolbar buttons (Rect / Hex) instead of a dropdown.</li>
+<li>Added <code>StringDropdownPopup</code> — a reusable editor utility for string selection dropdowns.</li>
+</ul>
+<h2 id="400-2026-05-16">[4.0.0] 2026-05-16</h2>
+<h3 id="-new-features-1">🎉 New Features</h3>
 <ul>
 <li>Added <code>updateCameraEachFrame</code> to <a class="xref" href="../../api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer.html">MapRenderer</a> so maps can render correctly when source camera properties change.</li>
 <li>Added <code>SourceCamera</code> to <a class="xref" href="../../api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer.html">MapRenderer</a> so maps can render correctly when the source camera changes to a different one.</li>
@@ -121,7 +141,7 @@ one color and UV maps to ignore tiling.</li>
 <li>Removed <a class="xref" href="../../api/Gamelogic.Fx.URP.ExperimentalSettings.html">ExperimentalSettings</a>.</li>
 </ul>
 <h2 id="301-2026-04-15">[3.0.1] 2026-04-15</h2>
-<h3 id="-new-features-1">🎉 New Features</h3>
+<h3 id="-new-features-2">🎉 New Features</h3>
 <ul>
 <li>Startup wizard now displays context features.</li>
 <li>Added <a class="xref" href="../../api/Gamelogic.Fx.URP.ExperimentalSettings.html">ExperimentalSettings</a>.</li>
@@ -136,7 +156,7 @@ one color and UV maps to ignore tiling.</li>
 <li>Made compatible with Unity 6.4.</li>
 </ul>
 <h2 id="300-2026-03-15">[3.0.0] 2026-03-15</h2>
-<h3 id="-new-features-2">🎉 New Features</h3>
+<h3 id="-new-features-3">🎉 New Features</h3>
 <ul>
 <li>Now URP works fully with RenderGraph!</li>
 <li>Added layer masking for map renderers.</li>
@@ -146,7 +166,7 @@ one color and UV maps to ignore tiling.</li>
 <li>Effects stay active when changing scenes in the editor.</li>
 </ul>
 <h2 id="210-2026-03-08">[2.1.0] 2026-03-08</h2>
-<h3 id="-new-features-3">🎉 New Features</h3>
+<h3 id="-new-features-4">🎉 New Features</h3>
 <ul>
 <li>Made it possible to differentiate between play and edit mode when setting map renderers to refresh their render lists each
 frame or once only.</li>
@@ -180,7 +200,7 @@ frame or once only.</li>
 <li><code>GLNormalMapRenderer</code> is now <code>GLNormalMapRendererFeature</code>. The old name is obsolete and will be removed in a future version.</li>
 </ul>
 <h2 id="110---2025-12-10">[1.1.0] - 2025-12-10</h2>
-<h3 id="-new-features-4">🎉 New Features</h3>
+<h3 id="-new-features-5">🎉 New Features</h3>
 <ul>
 <li>Added @Gamelogic.Fx.BuiltIn.PostProcessing.Effects.BoxBlur post-process .</li>
 <li>Added @Gamelogic.Fx.BuiltIn.PostProcessing.Effects.GaussianBlur post-process .</li>
@@ -191,8 +211,8 @@ frame or once only.</li>
 <li>Added @Gamelogic.Fx.BuiltIn.PostProcessing.Effects.PowerMeanFilter post-process .</li>
 <li>Added @Gamelogic.Fx.BuiltIn.PostProcessing.Effects.SeparableNamedShaderPostProcess component .</li>
 <li>Added Smooth Noise and MultiChannel Smooth Noise generation options to the Pattern Texture Generator tool .</li>
-<li>Moved @Gamelogic.Fx.ShaderProperty and @Gamelogic.Fx.ShaderPropertyType to the @Gamelogic.Fx.Internal namespace .</li>
-<li>Moved @Gamelogic.Fx.ShaderPropertyDrawer to the @Gamelogic.Fx.Editor namespace .</li>
+<li>Moved @Gamelogic.Fx.ShaderProperty and @Gamelogic.Fx.ShaderPropertyType to the <a class="xref" href="../../api/Gamelogic.Fx.Internal.html">Gamelogic.Fx.Internal</a> namespace .</li>
+<li>Moved @Gamelogic.Fx.ShaderPropertyDrawer to the <a class="xref" href="../../api/Gamelogic.Fx.Editor.html">Gamelogic.Fx.Editor</a> namespace .</li>
 <li>Added <code>MixboxFunctions.hlsl</code>.</li>
 </ul>
 <h2 id="100---2025-11-18">[1.0.0] - 2025-11-18</h2>

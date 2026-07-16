@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/effects/dither-texture-bias.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/effects/dither-texture-bias.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -117,6 +117,11 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <td>The texture used as the dither pattern. Its RGB channels act as a per-pixel bias.</td>
 </tr>
 <tr>
+<td>Mip Map Bias</td>
+<td>[0, 2]</td>
+<td>Bias applied to the mip level when sampling the dither pattern texture. Higher values select coarser mips, softening the pattern at a distance.</td>
+</tr>
+<tr>
 <td>Dither Amount Min</td>
 <td>[-1, 1]</td>
 <td>The minimum value added to each channel based on the pattern.</td>
@@ -167,24 +172,6 @@ for the built-in pipeline, or the corresponding renderer feature for URP. There 
 <p><em>Hard quantization with strong dithering.</em></p>
 <p><img src="images/dither_texture_bias_soft.png" alt=""></p>
 <p><em>Soft quantization with smoothness applied.</em></p>
-<p>Below are <strong>additions only</strong> to the existing documentation, following <strong>exactly</strong> the style you demonstrated (single unified table, shader features surfaced as properties, no extra sections).</p>
-<hr>
-<h3 id="added-properties">Added Properties</h3>
-<p>Append the following rows to the existing property table:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Range</th>
-<th>Description</th>
-</tr>
-</thead>
-</table>
-<hr>
-<hr>
-<p>No other user-facing properties are present in the shader.
-Internal parameters such as mip bias and depth-band blending are handled automatically by the renderer and are intentionally not exposed.</p>
-<p>Send the next one when ready.</p>
 
 </article>
 

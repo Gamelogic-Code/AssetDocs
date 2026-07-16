@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/effects/dither-matrix-bias.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/effects/dither-matrix-bias.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -121,6 +121,16 @@ This effect is ideal for designing and testing custom dithering patterns using s
 <td>Controls how large each matrix cell appears on the screen. Higher values make the pattern blockier.</td>
 </tr>
 <tr>
+<td>Pixelate</td>
+<td>true / false</td>
+<td>When enabled, snaps the output image to the dither grid so each pixel samples the color from its cell center. Use this with a matching Pixel Size for a fully pixelated look.</td>
+</tr>
+<tr>
+<td>Pixel Offset</td>
+<td>ℝ²</td>
+<td>Sub-pixel offset applied when <strong>Pixelate</strong> is enabled. Shifts the snapping grid to align cell centers precisely.</td>
+</tr>
+<tr>
 <td>Dither Amount Min</td>
 <td>[-1, 1]</td>
 <td>Minimum bias applied per channel based on the matrices.</td>
@@ -141,9 +151,9 @@ This effect is ideal for designing and testing custom dithering patterns using s
 <td>Controls the softness of the quantization steps.</td>
 </tr>
 <tr>
-<td>Pixel Offset</td>
+<td>Matrix Offset</td>
 <td>ℤ³</td>
-<td>Integer offset applied to the pixel grid before sampling the matrices. Useful for shifting or animating patterns.</td>
+<td>Integer offset applied when tiling the dither matrices. Useful for shifting or animating patterns.</td>
 </tr>
 <tr>
 <td>Use UV Map</td>
@@ -158,15 +168,30 @@ This effect is ideal for designing and testing custom dithering patterns using s
 <tr>
 <td>Use Depth Compensation</td>
 <td>true / false</td>
-<td>If on, scales the pattern to compensate for depth, so texture look the same size at any distace when using UV map. It blends between adjacent depth bands when using a UV map to smooth transitions.</td>
+<td>If on, scales the pattern to compensate for depth, so textures look the same size at any distance when using a UV map. Blends between adjacent depth bands to smooth transitions.</td>
+</tr>
+<tr>
+<td>UV Adaptive Background Blend</td>
+<td>true / false</td>
+<td>When enabled, blends the dithered output back toward the original color in regions where the UV map is denser than one dither cell per screen pixel, reducing Moiré patterns. Only used when <strong>Use UV Map</strong> is enabled.</td>
+</tr>
+<tr>
+<td>UV Blend Start</td>
+<td>[0, 4]</td>
+<td>UV gradient magnitude at which blending toward the background starts. Below this value the full dither is shown.</td>
+</tr>
+<tr>
+<td>UV Blend End</td>
+<td>[0, 8]</td>
+<td>UV gradient magnitude at which the original color shows through completely. Above this value dithering is fully suppressed.</td>
 </tr>
 </tbody>
 </table>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You <em>could</em> make a texture from the matices and use the <strong>Dither Texture Bias</strong> shader for slightly better performance.
-This shader can still be used for prototyping. To make the dither texture, see
-<a href="../dither-pattern-generator">Dither pattern generator</a>.</p>
+<p>You <em>could</em> make a texture from the matrices and use the <strong>Dither Texture Bias</strong> effect for slightly better performance.
+This effect can still be used for prototyping. To design and export the dither texture, use the
+<a href="../dither-pattern-designer.html">Dither Pattern Designer</a>.</p>
 </div>
 <div class="TIP">
 <h5>Tip</h5>
@@ -175,8 +200,10 @@ This shader can still be used for prototyping. To make the dither texture, see
 for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
 </ul>
 </div>
-<p><img src="images/dither_matrix_bias_hard.png" alt="">
-<img src="images/dither_matrix_bias_soft.png" alt=""></p>
+<p><img src="images/dither_matrix_bias_hard.png" alt=""></p>
+<p><em>Hard quantization.</em></p>
+<p><img src="images/dither_matrix_bias_soft.png" alt=""></p>
+<p><em>Soft quantization.</em></p>
 
 </article>
 

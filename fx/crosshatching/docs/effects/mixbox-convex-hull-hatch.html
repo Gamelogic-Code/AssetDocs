@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/crosshatching/docs/effects/mixbox-convex-hull-hatch.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/crosshatching/docs/effects/mixbox-convex-hull-hatch.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -141,19 +141,24 @@ This produces pigment-like transitions, watercolor and gouache–style layering,
 <td>Base rotation offset in degrees applied before per-layer orientation is added.</td>
 </tr>
 <tr>
-<td><strong>Orientation From Texture</strong></td>
+<td><strong>Use Orientation Map</strong></td>
 <td>true / false</td>
 <td>When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.</td>
 </tr>
 <tr>
 <td><strong>Orientation Texture</strong></td>
 <td>🖼️</td>
-<td>Texture used to control per-region hatch orientation when <em>Orientation From Texture</em> is enabled.</td>
+<td>Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.</td>
 </tr>
 <tr>
 <td><strong>Hatch Texture</strong></td>
 <td>🖼️</td>
 <td>Tileable line or stipple texture used to modulate Mixbox convex-hull projection.</td>
+</tr>
+<tr>
+<td><strong>Mip Map Bias</strong></td>
+<td>[0, 2]</td>
+<td>Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.</td>
 </tr>
 <tr>
 <td><strong>Layer Offset</strong></td>
@@ -169,11 +174,6 @@ This produces pigment-like transitions, watercolor and gouache–style layering,
 <td><strong>Background Strength</strong></td>
 <td>[0, 1]</td>
 <td>Blends between the original pixel color and the background color.</td>
-</tr>
-<tr>
-<td><strong>Use Orientation Map</strong></td>
-<td>true / false</td>
-<td>Enables sampling hatch orientation from the orientation texture instead of relying only on the orientation scheme.</td>
 </tr>
 <tr>
 <td><strong>Use UV Map</strong></td>

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/main/apiSpec/new?filename=Gamelogic_Fx_PostProcessing_Effects_PixelateProperties.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.PostProcessing.Effects.PixelateProperties%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/new/dither-designer/apiSpec/new?filename=Gamelogic_Fx_PostProcessing_Effects_PixelateProperties.md&amp;value=---%0Auid%3A%20Gamelogic.Fx.PostProcessing.Effects.PixelateProperties%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties" class="text-break">
-Class PixelateProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class PixelateProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -131,6 +131,12 @@ public sealed class PixelateProperties : ShaderProperties</code></pre>
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_MaterialVersion">ShaderProperties.MaterialVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">ShaderProperties.IncMaterialVersion()</a>
+    </div>
+    <div>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_Shader">ShaderProperties.Shader</a>
     </div>
     <div>
@@ -138,6 +144,9 @@ public sealed class PixelateProperties : ShaderProperties</code></pre>
     </div>
     <div>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture">ShaderProperties.RequiresNormalsTexture</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">ShaderProperties.CheckMaterialVersion()</a>
     </div>
     <div>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_OnValidate">ShaderProperties.OnValidate()</a>
@@ -174,14 +183,78 @@ public sealed class PixelateProperties : ShaderProperties</code></pre>
 </h2>
 
 
+  <a id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridAngle_" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridAngle" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle">
+  GridAngle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the rotation of the pixel grid in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GridAngle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridType_" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridType" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType">
+  GridType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the cell geometry used for the pixel grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridType GridType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.GridType.html">GridType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelOffset_" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset*"></a>
 
   <h3 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelOffset" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset">
   PixelOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Offset of the pixel grid in screen pixels.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the offset of the pixel grid in screen pixels. Only used in rect mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -210,10 +283,10 @@ public sealed class PixelateProperties : ShaderProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelSize" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelSize">
   PixelSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Width and height of each rendered pixel block in screen pixels.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the width and height of each rendered pixel block in screen pixels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -242,7 +315,7 @@ public sealed class PixelateProperties : ShaderProperties</code></pre>
 
   <h3 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_ShaderName" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.ShaderName">
   ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the shader used by this property set.</p>
@@ -282,7 +355,7 @@ It should match the full shader path as defined in the shader file.</p>
 
   <h3 id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.SetMaterialProperties(UnityEngine.Material)">
   SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/dither-designer/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/Effects/PixelateProperties.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Applies all shader-related properties to the given material.</p>
@@ -309,6 +382,10 @@ It should match the full shader path as defined in the shader file.</p>
   <h4 class="section" id="Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_SetMaterialProperties_UnityEngine_Material__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
 (for example, floats, vectors, colors, textures, and keywords).</p>
+<p></p>
+Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
+material has already been fetched, so any increment would take effect one frame late.
+Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.
 </div>
 
 

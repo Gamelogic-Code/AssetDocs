@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/crosshatching/docs/effects/simple-hatch.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/crosshatching/docs/effects/simple-hatch.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -133,19 +133,24 @@ The hatch texture is rotated per layer according to the selected orientation sch
 <td>Base rotation in degrees applied before layer-based rotation.</td>
 </tr>
 <tr>
-<td><strong>Orientation From Texture</strong></td>
+<td><strong>Use Orientation Map</strong></td>
 <td>true / false</td>
 <td>When enabled, hatch orientation is sampled from the orientation texture instead of using the base angle.</td>
 </tr>
 <tr>
 <td><strong>Orientation Texture</strong></td>
 <td>🖼️</td>
-<td>Texture used to control per-region hatch orientation when <em>Orientation From Texture</em> is enabled.</td>
+<td>Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.</td>
 </tr>
 <tr>
 <td><strong>Hatch Texture</strong></td>
 <td>🖼️</td>
 <td>The texture used for hatching. Typically a tileable line or stipple pattern.</td>
+</tr>
+<tr>
+<td><strong>Mip Map Bias</strong></td>
+<td>[0, 2]</td>
+<td>Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.</td>
 </tr>
 <tr>
 <td><strong>Layer Offset</strong></td>
@@ -168,11 +173,6 @@ The hatch texture is rotated per layer according to the selected orientation sch
 <td>Blends transitions between hatch layers for smoother tonal changes.</td>
 </tr>
 <tr>
-<td><strong>Use Orientation Map</strong></td>
-<td>On / Off</td>
-<td>Enables sampling hatch orientation from the orientation texture instead of relying only on the orientation scheme.</td>
-</tr>
-<tr>
 <td><strong>Use UV Map</strong></td>
 <td>On / Off</td>
 <td>Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.</td>
@@ -189,7 +189,6 @@ The hatch texture is rotated per layer according to the selected orientation sch
 </tr>
 </tbody>
 </table>
-<p><img src="images/simple-hatch.png" alt=""></p>
 <p><img src="images/simple-hatch.png" alt=""></p>
 <div class="TIP">
 <h5>Tip</h5>

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/dithering-tips.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/dithering-tips.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -103,7 +103,7 @@ This guide is divided into three parts: <a href="#principles">Principles</a>, <a
 <li>Dithering (and pixelation) destroy detail, so in general the scene should not rely on too high detail. The bigger the pixel size, the more detail gets destroyed.</li>
 <li>The pattern and the quantization levels together determine the apparent color depth.</li>
 <li>In a difficult-to-understand way, the dithering pattern used affects the emotional impact of the scene, and it is worth spending time to explore it. Presumably different patterns have different connotations.</li>
-<li>Dithering by itself does not pixelate the image. For matrix-bias dithering, you should usually also apply pixelation with the same pixel size (this makes the image look neater).</li>
+<li>Dithering by itself does not pixelate the image. For matrix-bias and grid-bias dithering, enable the <strong>Pixelate</strong> property on the effect and set it to the same pixel size as the dither. This snaps color sampling to cell centers and makes edges look neat.</li>
 </ul>
 <p><img src="../images/dither_without_pixelate.png" alt=""></p>
 <p><em>Dithering without pixelation. Note the diagonal and round edges.</em></p>
@@ -169,7 +169,7 @@ smaller tweaks each pass.</p>
 <li>The overall, crude lighting.</li>
 <li>Features that affect the apparent resolution and color depth:
 <ul>
-<li>For matrix-bias dithering: the pixel size, whether to pixelate, the matrix patterns, and the quantization levels.</li>
+<li>For matrix-bias and grid-bias dithering: the pixel size, whether to enable <strong>Pixelate</strong>, the matrix patterns, and the quantization levels.</li>
 <li>For texture-bias dithering: the texture pattern, texture scale, and quantization levels.</li>
 </ul>
 </li>
@@ -193,8 +193,7 @@ smaller tweaks each pass.</p>
 <li>Gamma.</li>
 <li>Noise.</li>
 <li>Min, max, power-mean, blur.</li>
-<li>Pixelation.</li>
-<li>Dithering.</li>
+<li>Dithering (with the <strong>Pixelate</strong> property enabled on the effect if desired).</li>
 <li>Color mapping.</li>
 </ul>
 <p>Interesting effects can sometimes be obtained with a different order. For example, applying a min or max filter after dithering will lead to differently sized pixels.</p>

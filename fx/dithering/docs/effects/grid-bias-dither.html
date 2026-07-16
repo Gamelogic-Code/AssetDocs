@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/effects/grid-bias-dither.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="grid-bias-dither">Grid Bias Dither</h2>
+<p>Applies a data-driven dither bias using <strong>three independent user-defined matrices</strong> (one per color channel), snapped to either a <strong>hexagonal</strong> or <strong>rectangular</strong> pixel grid.
+The matrices are designed interactively in the <a href="../grid-bias-dither-designer.html">Grid Bias Dither Designer</a> and can produce a wide range of ordered dithering styles — Bayer-like, blue-noise-like, or fully custom.</p>
+<p>The alpha channel is not changed by this effect.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>See also <a href="../dithering-tips.html">Dithering Tips</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid Type</td>
+<td>Hex / Rect</td>
+<td>Cell geometry used for the dither grid. <strong>Hex</strong> snaps to pointy-top hexagonal cells; <strong>Rect</strong> snaps to square cells.</td>
+</tr>
+<tr>
+<td>Matrix R / G / B</td>
+<td>🔢</td>
+<td>A floating-point matrix for each color channel. Values are normalized automatically. Designed using the <a href="../grid-bias-dither-designer.html">Grid Bias Dither Designer</a>.</td>
+</tr>
+<tr>
+<td>Pixel Size</td>
+<td>(0, ∞)²</td>
+<td>Controls how large each matrix cell appears on screen. Higher values make the pattern blockier.</td>
+</tr>
+<tr>
+<td>Dither Amount Min</td>
+<td>[-1, 1]</td>
+<td>Minimum bias added to each channel before quantization.</td>
+</tr>
+<tr>
+<td>Dither Amount Max</td>
+<td>[-1, 1]</td>
+<td>Maximum bias added to each channel before quantization.</td>
+</tr>
+<tr>
+<td>Level Count</td>
+<td>[1, ∞)³</td>
+<td>Per-channel quantization level count (R, G, B). Lower values produce more posterized output.</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>[0, 1]</td>
+<td>Controls the softness of the quantization steps.</td>
+</tr>
+<tr>
+<td>Pixel Offset</td>
+<td>ℤ³</td>
+<td>Integer offset applied to the pixel grid before sampling the matrices. Useful for shifting or animating patterns.</td>
+</tr>
+<tr>
+<td>Use UV Map</td>
+<td>true / false</td>
+<td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
+</tr>
+<tr>
+<td>UV Map</td>
+<td>🖼️</td>
+<td>UV map texture used to drive matrix sampling when <strong>Use UV Map</strong> is enabled.</td>
+</tr>
+<tr>
+<td>Use Depth Compensation</td>
+<td>true / false</td>
+<td>When using a UV map, compensates for depth so the pattern appears the same scale at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
+</tr>
+<tr>
+<td>UV Adaptive Background Blend</td>
+<td>true / false</td>
+<td>When enabled, blends the dithered output back toward the original color in regions where the UV map is denser than one dither cell per screen pixel, reducing Moiré patterns.</td>
+</tr>
+<tr>
+<td>UV Blend Start</td>
+<td>[0, 4]</td>
+<td>UV gradient magnitude at which blending toward the background starts. Below this value the full dither is shown.</td>
+</tr>
+<tr>
+<td>UV Blend End</td>
+<td>[0, 8]</td>
+<td>UV gradient magnitude at which the original color shows through completely. Above this value dithering is fully suppressed.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You <em>could</em> bake the matrices into a texture and use the <strong>Dither Texture Bias</strong> effect for slightly better performance.
+This effect is designed for interactive authoring. To export the dither texture, use the <a href="../grid-bias-dither-designer.html">Grid Bias Dither Designer</a>.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+<li>Use <strong>UV Adaptive Background Blend</strong> together with <strong>Use Depth Compensation</strong> to avoid Moiré artifacts on surfaces that recede sharply in depth.</li>
+</ul>
+</div>
+<p><img src="images/grid_bias_dither_hard.png" alt=""></p>
+<p><em>Hex grid, hard quantization.</em></p>
+<p><img src="images/grid_bias_dither_soft.png" alt=""></p>
+<p><em>Hex grid, soft quantization.</em></p>
+<p><img src="images/grid_bias_dither_rect.png" alt=""></p>
+<p><em>Rect grid.</em></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

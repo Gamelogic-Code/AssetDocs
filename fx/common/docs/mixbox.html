@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/mixbox.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/common/docs/mixbox.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -97,17 +97,21 @@
 <p>Some effects require the <a href="https://github.com/scrtwpns/mixbox/tree/master/unity">Mixbox plugin</a>. Mixbox provides a
 color-mixing model that more closely mimics the way pigments mix, and is therefore useful for implementing effects
 meant to look like drawing or painting.</p>
-<ul>
-<li>The effects that require the plugin will only be available if the plugin is installed.</li>
-<li>To install the plugin:</li>
-</ul>
+<p>The effects that require the plugin will only be available if the plugin is installed.</p>
+<p>To install the plugin:</p>
 <blockquote>
 <p>Open <em>Window | Package Manager</em> and choose <em>+ | Add package from git URL...</em>:
 <a href="https://github.com/scrtwpns/mixbox.git#upm">https://github.com/scrtwpns/mixbox.git#upm</a></p>
 </blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
 <p>Effects that use Mixbox require that the <code>MixboxLUT</code> texture is set on the effect properties. (This encodes the
 nonlinear information used to mix colors.)</p>
-<p>Note that Mixbox has its own <a href="https://github.com/scrtwpns/mixbox">licensing terms</a>, so check that out before you use it.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Mixbox has its own <a href="https://github.com/scrtwpns/mixbox">licensing terms</a>, so check that out before you use it.</p>
+</div>
 
 </article>
 

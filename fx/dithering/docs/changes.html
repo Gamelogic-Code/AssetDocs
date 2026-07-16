@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/changes.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/changes.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,59 +94,96 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="400-2026-05-23">[4.0.0] 2026-05-23</h2>
+<h2 id="500-2026-06-29">[5.0.0] 2026-06-29</h2>
 <h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li>Added <strong>Dither Grid Bias</strong> effect — applies a data-driven dither bias using three independent per-channel floating-point matrices, snapped to either a hexagonal or rectangular pixel grid. See <a class="xref" href="../../api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html">DitherGridBiasProperties</a>.</li>
+<li>Added <strong>Dither Grid Bias Designer</strong> — an interactive editor window for designing and previewing the dither matrices used by the Dither Grid Bias effect. Open it from the component Inspector or via <strong>Window &gt; Gamelogic &gt; Fx &gt; Dither Grid Bias Designer</strong>.</li>
+<li>Added <strong>Dither Grid Bias Texture Generator</strong> — an editor tool for baking the dither grid bias pattern to a texture. Open via <strong>Tools &gt; Gamelogic &gt; Texture Generation &gt; Dither Grid Bias Texture Generator</strong>.</li>
+<li>Both <strong>Dither Matrix Bias</strong> and <strong>Dither Grid Bias</strong> now include a built-in <strong>Pixelate</strong> property (<code>bool</code>, default <code>true</code>). When enabled, input UVs are snapped to the pixel grid before sampling, replacing the need for a separate Pixelate effect earlier in the stack.</li>
+<li><strong>Dither Grid Bias</strong> built-in pixelation now supports a <strong>Grid Angle</strong> property (±90°, inspector slider) to rotate the pixel and dither grid for both rect and hex modes. The 9×9 jitter antialiasing correctly preserves cell shape at all angles by operating in screen-pixel space.</li>
+<li>Pixelation in all three effects (<strong>Pixelate</strong>, <strong>Dither Matrix Bias</strong>, <strong>Dither Grid Bias</strong>) is now anchored to the screen center rather than the corner. The grid is symmetric around the centre of the render target regardless of pixel size or rotation angle.</li>
+<li><strong>Pixelate</strong> now supports a <strong>Hex</strong> grid type (pointy-top hexagonal cells) in addition to the existing <strong>Rect</strong> mode, and exposes a <strong>Pixel Offset</strong> to shift the pixel grid.</li>
+<li><strong>Blend Texture</strong> now supports an optional mask: new <strong>Use Mask</strong> and <strong>Mask Texture</strong> properties let a greyscale texture control per-pixel blend strength.</li>
+<li>Added <strong>Procedural Masked Post-Process Runner</strong> — composites a child effect stack through a procedurally computed mask (half-plane or ellipse), without requiring an authored mask texture.</li>
+</ul>
+<h3 id="-editor-improvements">⚙️ Editor Improvements</h3>
+<ul>
+<li>The Dither Pattern Designer and Dither Grid Bias Designer share a unified preview infrastructure, with a toolbar toggle between <strong>Test Image</strong> and <strong>Matrix</strong> views and a <strong>Zoom</strong> slider that scales the preview without modifying the bound properties.</li>
+</ul>
+<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li><code>FundamentalRegion</code> now implements <code>ISerializationCallbackReceiver</code>; <code>OnAfterDeserialize</code> nulls the lookup dictionary so it always rebuilds from the correct deserialized state. Fixes stale-dictionary issues after domain reloads and Undo.</li>
+<li><code>GridTypeFieldAttribute</code> default <code>hexEnumValue</code> corrected from <code>0</code> (Rect) to <code>1</code> (Hex), fixing inverted Rect/Hex rendering in the inspector.</li>
+<li><code>ResolveIsHex</code> in <code>FundamentalRegionDrawer</code> and <code>FundamentalRegionRGBDrawer</code> now defaults to rect (<code>false</code>) when the conditional property is not found, instead of hex.</li>
+</ul>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li>Updated to Gamelogic.Fx version 5.0.0.</li>
+</ul>
+<h3 id="-breaking-changes">💀 Breaking Changes</h3>
+<ul>
+<li><strong>Dither Pattern Generator</strong> texture tool has been renamed to <strong>Dither Matrix Bias Texture Generator</strong>. Find it under <strong>Tools &gt; Gamelogic &gt; Texture Generation &gt; Dither Matrix Bias Texture Generator</strong>.</li>
+</ul>
+<h3 id="-documentation">📄 Documentation</h3>
+<ul>
+<li>Updated dithering tips to reflect the new built-in pixelation workflow.</li>
+<li>Fixed malformed DocFX alert boxes.</li>
+<li>Corrected various spelling errors across effect and how-to documentation.</li>
+</ul>
+<h2 id="400-2026-05-23">[4.0.0] 2026-05-23</h2>
+<h3 id="-new-features-1">🎉 New Features</h3>
 <ul>
 <li>Added <code>PixelOffset</code> to <a class="xref" href="../../api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html">DitherMatrixBiasProperties</a>, allowing the pixel grid to be shifted in screen pixels.</li>
 </ul>
-<h3 id="-engineering">🔧 Engineering</h3>
+<h3 id="-engineering-1">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 4.0.0.</li>
 </ul>
 <h2 id="301-2026-04-15">[3.0.1] 2026-04-15</h2>
-<h3 id="-engineering-1">🔧 Engineering</h3>
+<h3 id="-engineering-2">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 3.0.1.</li>
 <li>Updated to Extensions 4.6.1.</li>
 </ul>
 <h2 id="300-2026-03-15">[3.0.0] 2026-03-15</h2>
-<h3 id="-new-features-1">🎉 New Features</h3>
+<h3 id="-new-features-2">🎉 New Features</h3>
 <ul>
 <li>Now URP works fully with RenderGraph!</li>
 <li>Added layer masking for map renderers.</li>
 </ul>
-<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
 <ul>
 <li>Effects stay active when changing scenes in the editor.</li>
 </ul>
 <h2 id="201-2026-03-07">[2.0.1] 2026-03-07</h2>
-<h3 id="-editor-improvements">⚙️ Editor Improvements</h3>
+<h3 id="-editor-improvements-1">⚙️ Editor Improvements</h3>
 <ul>
 <li>A startup wizard makes it easier to import samples, find documentation, support email, and uninstall instructions.</li>
 <li>The same features are also added to menus <em>Tools/Gamelogic/Fx Dithering/</em>.</li>
 </ul>
-<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
 <ul>
-<li>Fixed a wrong <code>HelpURL</code> on <code>GLDitherTextureBiasRendererFeature</code> which pointed to <code>DitherMatrixBias</code> instead of <code>DitherTextureBias</code>.</li>
+<li>Fixed a wrong <code>HelpURL</code> on <a class="xref" href="../../api/Gamelogic.Fx.Dithering.URP.GLDitherTextureBiasRendererFeature.html">GLDitherTextureBiasRendererFeature</a> which pointed to <code>DitherMatrixBias</code> instead of <code>DitherTextureBias</code>.</li>
 </ul>
-<h3 id="-engineering-2">🔧 Engineering</h3>
+<h3 id="-engineering-3">🔧 Engineering</h3>
 <ul>
 <li>Updated to the Gamelogic.Fx version 2.0.1.</li>
 <li>Updated to Extensions 4.6.0.</li>
 </ul>
-<h3 id="-documentation">📄 Documentation</h3>
+<h3 id="-documentation-1">📄 Documentation</h3>
 <ul>
 <li>Updated documentation fixing typos and other errors, and adding missing documentation.</li>
 </ul>
 <h2 id="200---2026">[2.0.0] - 2026</h2>
-<h3 id="-new-features-2">🎉 New Features</h3>
+<h3 id="-new-features-3">🎉 New Features</h3>
 <ul>
 <li>Added a <a href="../../common/docs/effects-reference-common.html#simple-outline">simple Outline</a> effect that often makes scenes easier to read.</li>
 <li>Added <a href="../../common/docs/map-renderers-reference-common.html">map renderers</a> (UV, normal, depth and instance ID).</li>
 <li>Added support for using UV map instead of screen UVs to sample the dithering texture or matrix. See
 <a href="effects-reference-dithering.html#dither-matrix-bias">Dither Matrix Bias</a>, for example.</li>
 </ul>
-<h3 id="-engineering-3">🔧 Engineering</h3>
+<h3 id="-engineering-4">🔧 Engineering</h3>
 <ul>
 <li>Updated to the Gamelogic.Fx version 2.0.0.</li>
 </ul>
@@ -154,7 +191,7 @@
 <ul>
 <li>Expanded the sample to show new features, including new effects.</li>
 </ul>
-<h3 id="-documentation-1">📄 Documentation</h3>
+<h3 id="-documentation-2">📄 Documentation</h3>
 <ul>
 <li>Expanded <a href="dithering-tips.html">Dithering Tips</a> with more best practices and recommendations.</li>
 </ul>
@@ -163,12 +200,12 @@
 <li>It is best to uninstall and reinstall the package when upgrading.</li>
 </ul>
 <h2 id="110---2025-12-11">[1.1.0] - 2025-12-11</h2>
-<h3 id="-new-features-3">🎉 New Features</h3>
+<h3 id="-new-features-4">🎉 New Features</h3>
 <ul>
 <li>Added public properties to all post process effects (both Built-In and URP).</li>
 <li>Fixed shader serialization so shaders are now automatically included in builds.</li>
 </ul>
-<h3 id="-engineering-4">🔧 Engineering</h3>
+<h3 id="-engineering-5">🔧 Engineering</h3>
 <ul>
 <li>Updated to use Gamelogic Fx 1.1.0. This includes
 <ul>

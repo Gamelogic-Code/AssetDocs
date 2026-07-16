@@ -846,6 +846,23 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties).OnValidate
   nameWithType: SeparablePostProcess<TShaderProperties>.OnValidate
   nameWithType.vb: SeparablePostProcess(Of TShaderProperties).OnValidate
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.Properties
+  name: Properties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_Properties
+  commentId: P:Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.Properties
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess<TShaderProperties>.Properties
+  fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties).Properties
+  nameWithType: SeparablePostProcess<TShaderProperties>.Properties
+  nameWithType.vb: SeparablePostProcess(Of TShaderProperties).Properties
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.Properties*
+  name: Properties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_Properties_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.Properties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess<TShaderProperties>.Properties
+  fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties).Properties
+  nameWithType: SeparablePostProcess<TShaderProperties>.Properties
+  nameWithType.vb: SeparablePostProcess(Of TShaderProperties).Properties
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.SetMaterialProperties(UnityEngine.Material)
   name: SetMaterialProperties(Material)
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_SetMaterialProperties_UnityEngine_Material_
@@ -1838,6 +1855,12 @@ references:
   commentId: N:Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects
   fullName: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects
   nameWithType: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects
+- uid: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess
+  name: DitherGridBiasPostProcess
+  href: api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess.html
+  commentId: T:Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess
+  fullName: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess
+  nameWithType: DitherGridBiasPostProcess
 - uid: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess
   name: DitherMatrixBiasPostProcess
   href: api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.html
@@ -1850,6 +1873,12 @@ references:
   commentId: T:Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherTextureBiasPostProcess
   fullName: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherTextureBiasPostProcess
   nameWithType: DitherTextureBiasPostProcess
+- uid: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess
+  name: GridBiasDitherPostProcess
+  href: api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess.html
+  commentId: T:Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess
+  fullName: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess
+  nameWithType: GridBiasDitherPostProcess
 - uid: Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess
   name: HexDitherMatrixBiasPostProcess
   href: api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.HexDitherMatrixBiasPostProcess.html
@@ -2018,6 +2047,96 @@ references:
   commentId: N:Gamelogic.Fx.Dithering.Editor
   fullName: Gamelogic.Fx.Dithering.Editor
   nameWithType: Gamelogic.Fx.Dithering.Editor
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator
+  name: DitherGridBiasTextureGenerator
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html
+  commentId: T:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator
+  nameWithType: DitherGridBiasTextureGenerator
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.DrawPropertiesGui
+  name: DrawPropertiesGui()
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherGridBiasTextureGenerator_DrawPropertiesGui
+  commentId: M:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.DrawPropertiesGui
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.DrawPropertiesGui()
+  nameWithType: DitherGridBiasTextureGenerator.DrawPropertiesGui()
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.DrawPropertiesGui*
+  name: DrawPropertiesGui
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherGridBiasTextureGenerator_DrawPropertiesGui_
+  commentId: Overload:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.DrawPropertiesGui
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.DrawPropertiesGui
+  nameWithType: DitherGridBiasTextureGenerator.DrawPropertiesGui
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.GenerateTexture(UnityEngine.Vector2Int)
+  name: GenerateTexture(Vector2Int)
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherGridBiasTextureGenerator_GenerateTexture_UnityEngine_Vector2Int_
+  commentId: M:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.GenerateTexture(UnityEngine.Vector2Int)
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.GenerateTexture(UnityEngine.Vector2Int)
+  nameWithType: DitherGridBiasTextureGenerator.GenerateTexture(Vector2Int)
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.GenerateTexture*
+  name: GenerateTexture
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherGridBiasTextureGenerator_GenerateTexture_
+  commentId: Overload:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.GenerateTexture
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.GenerateTexture
+  nameWithType: DitherGridBiasTextureGenerator.GenerateTexture
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.ShowWindow
+  name: ShowWindow()
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherGridBiasTextureGenerator_ShowWindow
+  commentId: M:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.ShowWindow
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.ShowWindow()
+  nameWithType: DitherGridBiasTextureGenerator.ShowWindow()
+- uid: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.ShowWindow*
+  name: ShowWindow
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherGridBiasTextureGenerator_ShowWindow_
+  commentId: Overload:Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.ShowWindow
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.ShowWindow
+  nameWithType: DitherGridBiasTextureGenerator.ShowWindow
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator
+  name: DitherMatrixBiasTextureGenerator
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html
+  commentId: T:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator
+  nameWithType: DitherMatrixBiasTextureGenerator
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.DrawPropertiesGui
+  name: DrawPropertiesGui()
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherMatrixBiasTextureGenerator_DrawPropertiesGui
+  commentId: M:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.DrawPropertiesGui
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.DrawPropertiesGui()
+  nameWithType: DitherMatrixBiasTextureGenerator.DrawPropertiesGui()
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.DrawPropertiesGui*
+  name: DrawPropertiesGui
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherMatrixBiasTextureGenerator_DrawPropertiesGui_
+  commentId: Overload:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.DrawPropertiesGui
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.DrawPropertiesGui
+  nameWithType: DitherMatrixBiasTextureGenerator.DrawPropertiesGui
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.GenerateTexture(UnityEngine.Vector2Int)
+  name: GenerateTexture(Vector2Int)
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherMatrixBiasTextureGenerator_GenerateTexture_UnityEngine_Vector2Int_
+  commentId: M:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.GenerateTexture(UnityEngine.Vector2Int)
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.GenerateTexture(UnityEngine.Vector2Int)
+  nameWithType: DitherMatrixBiasTextureGenerator.GenerateTexture(Vector2Int)
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.GenerateTexture*
+  name: GenerateTexture
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherMatrixBiasTextureGenerator_GenerateTexture_
+  commentId: Overload:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.GenerateTexture
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.GenerateTexture
+  nameWithType: DitherMatrixBiasTextureGenerator.GenerateTexture
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.ShowWindow
+  name: ShowWindow()
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherMatrixBiasTextureGenerator_ShowWindow
+  commentId: M:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.ShowWindow
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.ShowWindow()
+  nameWithType: DitherMatrixBiasTextureGenerator.ShowWindow()
+- uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.ShowWindow*
+  name: ShowWindow
+  href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html#Gamelogic_Fx_Dithering_Editor_DitherMatrixBiasTextureGenerator_ShowWindow_
+  commentId: Overload:Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.ShowWindow
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.ShowWindow
+  nameWithType: DitherMatrixBiasTextureGenerator.ShowWindow
 - uid: Gamelogic.Fx.Dithering.Editor.DitherMatrixPresetsLoader
   name: DitherMatrixPresetsLoader
   href: api/Gamelogic.Fx.Dithering.Editor.DitherMatrixPresetsLoader.html
@@ -2069,18 +2188,708 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.Editor.DitherPatternGenerator.ShowWindow
   nameWithType: DitherPatternGenerator.ShowWindow
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion
+  name: FundamentalRegion
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html
+  commentId: T:Gamelogic.Fx.Dithering.FundamentalRegion
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion
+  nameWithType: FundamentalRegion
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Count
+  name: Count
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Count
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.Count
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Count
+  nameWithType: FundamentalRegion.Count
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Count*
+  name: Count
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Count_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.Count
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Count
+  nameWithType: FundamentalRegion.Count
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.GetIndex(UnityEngine.Vector2Int)
+  name: GetIndex(Vector2Int)
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_GetIndex_UnityEngine_Vector2Int_
+  commentId: M:Gamelogic.Fx.Dithering.FundamentalRegion.GetIndex(UnityEngine.Vector2Int)
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.GetIndex(UnityEngine.Vector2Int)
+  nameWithType: FundamentalRegion.GetIndex(Vector2Int)
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.GetIndex*
+  name: GetIndex
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_GetIndex_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.GetIndex
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.GetIndex
+  nameWithType: FundamentalRegion.GetIndex
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.IsInFundamentalRegion(UnityEngine.Vector2Int)
+  name: IsInFundamentalRegion(Vector2Int)
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_IsInFundamentalRegion_UnityEngine_Vector2Int_
+  commentId: M:Gamelogic.Fx.Dithering.FundamentalRegion.IsInFundamentalRegion(UnityEngine.Vector2Int)
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.IsInFundamentalRegion(UnityEngine.Vector2Int)
+  nameWithType: FundamentalRegion.IsInFundamentalRegion(Vector2Int)
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.IsInFundamentalRegion*
+  name: IsInFundamentalRegion
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_IsInFundamentalRegion_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.IsInFundamentalRegion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.IsInFundamentalRegion
+  nameWithType: FundamentalRegion.IsInFundamentalRegion
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Matrix
+  name: Matrix
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Matrix
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.Matrix
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Matrix
+  nameWithType: FundamentalRegion.Matrix
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Matrix*
+  name: Matrix
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Matrix_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.Matrix
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Matrix
+  nameWithType: FundamentalRegion.Matrix
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.NormalizedValues
+  name: NormalizedValues
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_NormalizedValues
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.NormalizedValues
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.NormalizedValues
+  nameWithType: FundamentalRegion.NormalizedValues
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.NormalizedValues*
+  name: NormalizedValues
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_NormalizedValues_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.NormalizedValues
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.NormalizedValues
+  nameWithType: FundamentalRegion.NormalizedValues
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Offset
+  name: Offset
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Offset
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.Offset
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Offset
+  nameWithType: FundamentalRegion.Offset
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Offset*
+  name: Offset
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Offset_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.Offset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Offset
+  nameWithType: FundamentalRegion.Offset
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Point1
+  name: Point1
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Point1
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.Point1
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Point1
+  nameWithType: FundamentalRegion.Point1
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Point1*
+  name: Point1
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Point1_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.Point1
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Point1
+  nameWithType: FundamentalRegion.Point1
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.RebuildDictionaryIfNeeded
+  name: RebuildDictionaryIfNeeded()
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_RebuildDictionaryIfNeeded
+  commentId: M:Gamelogic.Fx.Dithering.FundamentalRegion.RebuildDictionaryIfNeeded
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.RebuildDictionaryIfNeeded()
+  nameWithType: FundamentalRegion.RebuildDictionaryIfNeeded()
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.RebuildDictionaryIfNeeded*
+  name: RebuildDictionaryIfNeeded
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_RebuildDictionaryIfNeeded_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.RebuildDictionaryIfNeeded
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.RebuildDictionaryIfNeeded
+  nameWithType: FundamentalRegion.RebuildDictionaryIfNeeded
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.RecomputeBoundsAndReshape
+  name: RecomputeBoundsAndReshape()
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_RecomputeBoundsAndReshape
+  commentId: M:Gamelogic.Fx.Dithering.FundamentalRegion.RecomputeBoundsAndReshape
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.RecomputeBoundsAndReshape()
+  nameWithType: FundamentalRegion.RecomputeBoundsAndReshape()
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.RecomputeBoundsAndReshape*
+  name: RecomputeBoundsAndReshape
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_RecomputeBoundsAndReshape_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.RecomputeBoundsAndReshape
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.RecomputeBoundsAndReshape
+  nameWithType: FundamentalRegion.RecomputeBoundsAndReshape
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Reset
+  name: Reset()
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Reset
+  commentId: M:Gamelogic.Fx.Dithering.FundamentalRegion.Reset
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Reset()
+  nameWithType: FundamentalRegion.Reset()
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Reset*
+  name: Reset
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Reset_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.Reset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Reset
+  nameWithType: FundamentalRegion.Reset
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.SetFrom(Gamelogic.Fx.Dithering.FundamentalRegion)
+  name: SetFrom(FundamentalRegion)
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_SetFrom_Gamelogic_Fx_Dithering_FundamentalRegion_
+  commentId: M:Gamelogic.Fx.Dithering.FundamentalRegion.SetFrom(Gamelogic.Fx.Dithering.FundamentalRegion)
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.SetFrom(Gamelogic.Fx.Dithering.FundamentalRegion)
+  nameWithType: FundamentalRegion.SetFrom(FundamentalRegion)
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.SetFrom*
+  name: SetFrom
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_SetFrom_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.SetFrom
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.SetFrom
+  nameWithType: FundamentalRegion.SetFrom
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Values
+  name: Values
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Values
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.Values
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Values
+  nameWithType: FundamentalRegion.Values
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.Values*
+  name: Values
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_Values_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.Values
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.Values
+  nameWithType: FundamentalRegion.Values
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.X0
+  name: X0
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_X0
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegion.X0
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.X0
+  nameWithType: FundamentalRegion.X0
+- uid: Gamelogic.Fx.Dithering.FundamentalRegion.X0*
+  name: X0
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegion.html#Gamelogic_Fx_Dithering_FundamentalRegion_X0_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegion.X0
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegion.X0
+  nameWithType: FundamentalRegion.X0
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB
+  name: FundamentalRegionRGB
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html
+  commentId: T:Gamelogic.Fx.Dithering.FundamentalRegionRGB
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB
+  nameWithType: FundamentalRegionRGB
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.All
+  name: All
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_All
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegionRGB.All
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.All
+  nameWithType: FundamentalRegionRGB.All
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.All*
+  name: All
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_All_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegionRGB.All
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.All
+  nameWithType: FundamentalRegionRGB.All
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.B
+  name: B
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_B
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegionRGB.B
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.B
+  nameWithType: FundamentalRegionRGB.B
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.B*
+  name: B
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_B_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegionRGB.B
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.B
+  nameWithType: FundamentalRegionRGB.B
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.G
+  name: G
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_G
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegionRGB.G
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.G
+  nameWithType: FundamentalRegionRGB.G
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.G*
+  name: G
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_G_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegionRGB.G
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.G
+  nameWithType: FundamentalRegionRGB.G
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked
+  name: Locked
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_Locked
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked
+  nameWithType: FundamentalRegionRGB.Locked
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked*
+  name: Locked
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_Locked_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked
+  nameWithType: FundamentalRegionRGB.Locked
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.R
+  name: R
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_R
+  commentId: P:Gamelogic.Fx.Dithering.FundamentalRegionRGB.R
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.R
+  nameWithType: FundamentalRegionRGB.R
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.R*
+  name: R
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_R_
+  commentId: Overload:Gamelogic.Fx.Dithering.FundamentalRegionRGB.R
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.R
+  nameWithType: FundamentalRegionRGB.R
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionAllFieldName
+  name: RegionAllFieldName
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_RegionAllFieldName
+  commentId: F:Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionAllFieldName
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionAllFieldName
+  nameWithType: FundamentalRegionRGB.RegionAllFieldName
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionBFieldName
+  name: RegionBFieldName
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_RegionBFieldName
+  commentId: F:Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionBFieldName
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionBFieldName
+  nameWithType: FundamentalRegionRGB.RegionBFieldName
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionGFieldName
+  name: RegionGFieldName
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_RegionGFieldName
+  commentId: F:Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionGFieldName
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionGFieldName
+  nameWithType: FundamentalRegionRGB.RegionGFieldName
+- uid: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionRFieldName
+  name: RegionRFieldName
+  href: api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html#Gamelogic_Fx_Dithering_FundamentalRegionRGB_RegionRFieldName
+  commentId: F:Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionRFieldName
+  fullName: Gamelogic.Fx.Dithering.FundamentalRegionRGB.RegionRFieldName
+  nameWithType: FundamentalRegionRGB.RegionRFieldName
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute
+  name: GridTypeFieldAttribute
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html
+  commentId: T:Gamelogic.Fx.Dithering.GridTypeFieldAttribute
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute
+  nameWithType: GridTypeFieldAttribute
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.#ctor
+  name: GridTypeFieldAttribute()
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute__ctor
+  commentId: M:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.#ctor
+  name.vb: New()
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.GridTypeFieldAttribute()
+  fullName.vb: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.New()
+  nameWithType: GridTypeFieldAttribute.GridTypeFieldAttribute()
+  nameWithType.vb: GridTypeFieldAttribute.New()
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.#ctor(System.String,System.Int32)
+  name: GridTypeFieldAttribute(string, int)
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute__ctor_System_String_System_Int32_
+  commentId: M:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.#ctor(System.String,System.Int32)
+  name.vb: New(String, Integer)
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.GridTypeFieldAttribute(string, int)
+  fullName.vb: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.New(String, Integer)
+  nameWithType: GridTypeFieldAttribute.GridTypeFieldAttribute(string, int)
+  nameWithType.vb: GridTypeFieldAttribute.New(String, Integer)
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.#ctor*
+  name: GridTypeFieldAttribute
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute__ctor_
+  commentId: Overload:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.GridTypeFieldAttribute
+  fullName.vb: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.New
+  nameWithType: GridTypeFieldAttribute.GridTypeFieldAttribute
+  nameWithType.vb: GridTypeFieldAttribute.New
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.ConditionalFieldName
+  name: ConditionalFieldName
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute_ConditionalFieldName
+  commentId: P:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.ConditionalFieldName
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.ConditionalFieldName
+  nameWithType: GridTypeFieldAttribute.ConditionalFieldName
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.ConditionalFieldName*
+  name: ConditionalFieldName
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute_ConditionalFieldName_
+  commentId: Overload:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.ConditionalFieldName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.ConditionalFieldName
+  nameWithType: GridTypeFieldAttribute.ConditionalFieldName
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.HexEnumValue
+  name: HexEnumValue
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute_HexEnumValue
+  commentId: P:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.HexEnumValue
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.HexEnumValue
+  nameWithType: GridTypeFieldAttribute.HexEnumValue
+- uid: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.HexEnumValue*
+  name: HexEnumValue
+  href: api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html#Gamelogic_Fx_Dithering_GridTypeFieldAttribute_HexEnumValue_
+  commentId: Overload:Gamelogic.Fx.Dithering.GridTypeFieldAttribute.HexEnumValue
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.GridTypeFieldAttribute.HexEnumValue
+  nameWithType: GridTypeFieldAttribute.HexEnumValue
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets
+  name: HexFundamentalRegionPresets
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html
+  commentId: T:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets
+  nameWithType: HexFundamentalRegionPresets
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.All
+  name: All
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_All
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.All
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.All
+  nameWithType: HexFundamentalRegionPresets.All
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisX
+  name: AxisX
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_AxisX
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisX
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisX
+  nameWithType: HexFundamentalRegionPresets.AxisX
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisY
+  name: AxisY
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_AxisY
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisY
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisY
+  nameWithType: HexFundamentalRegionPresets.AxisY
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisZ
+  name: AxisZ
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_AxisZ
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisZ
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.AxisZ
+  nameWithType: HexFundamentalRegionPresets.AxisZ
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex3x3
+  name: Hex3x3
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Hex3x3
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex3x3
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex3x3
+  nameWithType: HexFundamentalRegionPresets.Hex3x3
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform3
+  name: Uniform3
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Uniform3
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform3
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform3
+  nameWithType: HexFundamentalRegionPresets.Uniform3
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4X
+  name: Uniform4X
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Uniform4X
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4X
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4X
+  nameWithType: HexFundamentalRegionPresets.Uniform4X
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4Y
+  name: Uniform4Y
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Uniform4Y
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4Y
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4Y
+  nameWithType: HexFundamentalRegionPresets.Uniform4Y
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4Z
+  name: Uniform4Z
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Uniform4Z
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4Z
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform4Z
+  nameWithType: HexFundamentalRegionPresets.Uniform4Z
+- uid: Gamelogic.Fx.Dithering.HexUtils
+  name: HexUtils
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html
+  commentId: T:Gamelogic.Fx.Dithering.HexUtils
+  fullName: Gamelogic.Fx.Dithering.HexUtils
+  nameWithType: HexUtils
+- uid: Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex(UnityEngine.Vector2Int,System.Int32,System.Int32,System.Int32)
+  name: GridPointToIndex(Vector2Int, int, int, int)
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_GridPointToIndex_UnityEngine_Vector2Int_System_Int32_System_Int32_System_Int32_
+  commentId: M:Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex(UnityEngine.Vector2Int,System.Int32,System.Int32,System.Int32)
+  name.vb: GridPointToIndex(Vector2Int, Integer, Integer, Integer)
+  fullName: Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex(UnityEngine.Vector2Int, int, int, int)
+  fullName.vb: Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex(UnityEngine.Vector2Int, Integer, Integer, Integer)
+  nameWithType: HexUtils.GridPointToIndex(Vector2Int, int, int, int)
+  nameWithType.vb: HexUtils.GridPointToIndex(Vector2Int, Integer, Integer, Integer)
+- uid: Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex*
+  name: GridPointToIndex
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_GridPointToIndex_
+  commentId: Overload:Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.HexUtils.GridPointToIndex
+  nameWithType: HexUtils.GridPointToIndex
+- uid: Gamelogic.Fx.Dithering.HexUtils.GridToWorld(UnityEngine.Vector2Int,UnityEngine.Vector2)
+  name: GridToWorld(Vector2Int, Vector2)
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_GridToWorld_UnityEngine_Vector2Int_UnityEngine_Vector2_
+  commentId: M:Gamelogic.Fx.Dithering.HexUtils.GridToWorld(UnityEngine.Vector2Int,UnityEngine.Vector2)
+  fullName: Gamelogic.Fx.Dithering.HexUtils.GridToWorld(UnityEngine.Vector2Int, UnityEngine.Vector2)
+  nameWithType: HexUtils.GridToWorld(Vector2Int, Vector2)
+- uid: Gamelogic.Fx.Dithering.HexUtils.GridToWorld*
+  name: GridToWorld
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_GridToWorld_
+  commentId: Overload:Gamelogic.Fx.Dithering.HexUtils.GridToWorld
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.HexUtils.GridToWorld
+  nameWithType: HexUtils.GridToWorld
+- uid: Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: IndexToGridPoint(int, int, int, int)
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_IndexToGridPoint_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint(System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: IndexToGridPoint(Integer, Integer, Integer, Integer)
+  fullName: Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint(int, int, int, int)
+  fullName.vb: Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint(Integer, Integer, Integer, Integer)
+  nameWithType: HexUtils.IndexToGridPoint(int, int, int, int)
+  nameWithType.vb: HexUtils.IndexToGridPoint(Integer, Integer, Integer, Integer)
+- uid: Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint*
+  name: IndexToGridPoint
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_IndexToGridPoint_
+  commentId: Overload:Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.HexUtils.IndexToGridPoint
+  nameWithType: HexUtils.IndexToGridPoint
+- uid: Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion(UnityEngine.Vector2Int,System.Int32,System.Int32,System.Int32)
+  name: ReduceToFundamentalRegion(Vector2Int, int, int, int)
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_ReduceToFundamentalRegion_UnityEngine_Vector2Int_System_Int32_System_Int32_System_Int32_
+  commentId: M:Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion(UnityEngine.Vector2Int,System.Int32,System.Int32,System.Int32)
+  name.vb: ReduceToFundamentalRegion(Vector2Int, Integer, Integer, Integer)
+  fullName: Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion(UnityEngine.Vector2Int, int, int, int)
+  fullName.vb: Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion(UnityEngine.Vector2Int, Integer, Integer, Integer)
+  nameWithType: HexUtils.ReduceToFundamentalRegion(Vector2Int, int, int, int)
+  nameWithType.vb: HexUtils.ReduceToFundamentalRegion(Vector2Int, Integer, Integer, Integer)
+- uid: Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion*
+  name: ReduceToFundamentalRegion
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_ReduceToFundamentalRegion_
+  commentId: Overload:Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.HexUtils.ReduceToFundamentalRegion
+  nameWithType: HexUtils.ReduceToFundamentalRegion
+- uid: Gamelogic.Fx.Dithering.HexUtils.WorldToGrid(UnityEngine.Vector2,UnityEngine.Vector2)
+  name: WorldToGrid(Vector2, Vector2)
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_WorldToGrid_UnityEngine_Vector2_UnityEngine_Vector2_
+  commentId: M:Gamelogic.Fx.Dithering.HexUtils.WorldToGrid(UnityEngine.Vector2,UnityEngine.Vector2)
+  fullName: Gamelogic.Fx.Dithering.HexUtils.WorldToGrid(UnityEngine.Vector2, UnityEngine.Vector2)
+  nameWithType: HexUtils.WorldToGrid(Vector2, Vector2)
+- uid: Gamelogic.Fx.Dithering.HexUtils.WorldToGrid*
+  name: WorldToGrid
+  href: api/Gamelogic.Fx.Dithering.HexUtils.html#Gamelogic_Fx_Dithering_HexUtils_WorldToGrid_
+  commentId: Overload:Gamelogic.Fx.Dithering.HexUtils.WorldToGrid
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.HexUtils.WorldToGrid
+  nameWithType: HexUtils.WorldToGrid
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects
   name: Gamelogic.Fx.Dithering.PostProcessing.Effects
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.html
   commentId: N:Gamelogic.Fx.Dithering.PostProcessing.Effects
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects
   nameWithType: Gamelogic.Fx.Dithering.PostProcessing.Effects
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties
+  name: DitherGridBiasProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html
+  commentId: T:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties
+  nameWithType: DitherGridBiasProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.#ctor
+  name: DitherGridBiasProperties()
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties__ctor
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.#ctor
+  name.vb: New()
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherGridBiasProperties()
+  fullName.vb: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.New()
+  nameWithType: DitherGridBiasProperties.DitherGridBiasProperties()
+  nameWithType.vb: DitherGridBiasProperties.New()
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.#ctor*
+  name: DitherGridBiasProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties__ctor_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherGridBiasProperties
+  fullName.vb: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.New
+  nameWithType: DitherGridBiasProperties.DitherGridBiasProperties
+  nameWithType.vb: DitherGridBiasProperties.New
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.CheckMaterialVersion
+  name: CheckMaterialVersion()
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_CheckMaterialVersion
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.CheckMaterialVersion
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.CheckMaterialVersion()
+  nameWithType: DitherGridBiasProperties.CheckMaterialVersion()
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.CheckMaterialVersion*
+  name: CheckMaterialVersion
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_CheckMaterialVersion_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.CheckMaterialVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.CheckMaterialVersion
+  nameWithType: DitherGridBiasProperties.CheckMaterialVersion
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMax
+  name: DitherAmountMax
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_DitherAmountMax
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMax
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMax
+  nameWithType: DitherGridBiasProperties.DitherAmountMax
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMax*
+  name: DitherAmountMax
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_DitherAmountMax_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMax
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMax
+  nameWithType: DitherGridBiasProperties.DitherAmountMax
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMin
+  name: DitherAmountMin
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_DitherAmountMin
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMin
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMin
+  nameWithType: DitherGridBiasProperties.DitherAmountMin
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMin*
+  name: DitherAmountMin
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_DitherAmountMin_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMin
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.DitherAmountMin
+  nameWithType: DitherGridBiasProperties.DitherAmountMin
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.FundamentalRegionRGB
+  name: FundamentalRegionRGB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_FundamentalRegionRGB
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.FundamentalRegionRGB
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.FundamentalRegionRGB
+  nameWithType: DitherGridBiasProperties.FundamentalRegionRGB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.FundamentalRegionRGB*
+  name: FundamentalRegionRGB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_FundamentalRegionRGB_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.FundamentalRegionRGB
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.FundamentalRegionRGB
+  nameWithType: DitherGridBiasProperties.FundamentalRegionRGB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridAngle
+  name: GridAngle
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_GridAngle
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridAngle
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridAngle
+  nameWithType: DitherGridBiasProperties.GridAngle
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridAngle*
+  name: GridAngle
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_GridAngle_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridAngle
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridAngle
+  nameWithType: DitherGridBiasProperties.GridAngle
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridType
+  name: GridType
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_GridType
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridType
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridType
+  nameWithType: DitherGridBiasProperties.GridType
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridType*
+  name: GridType
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_GridType_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridType
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.GridType
+  nameWithType: DitherGridBiasProperties.GridType
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.LevelCount
+  name: LevelCount
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_LevelCount
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.LevelCount
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.LevelCount
+  nameWithType: DitherGridBiasProperties.LevelCount
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.LevelCount*
+  name: LevelCount
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_LevelCount_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.LevelCount
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.LevelCount
+  nameWithType: DitherGridBiasProperties.LevelCount
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelOffset
+  name: PixelOffset
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_PixelOffset
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelOffset
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelOffset
+  nameWithType: DitherGridBiasProperties.PixelOffset
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelOffset*
+  name: PixelOffset
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_PixelOffset_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelOffset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelOffset
+  nameWithType: DitherGridBiasProperties.PixelOffset
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelSize
+  name: PixelSize
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_PixelSize
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelSize
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelSize
+  nameWithType: DitherGridBiasProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelSize*
+  name: PixelSize
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_PixelSize_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelSize
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.PixelSize
+  nameWithType: DitherGridBiasProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Pixelate
+  name: Pixelate
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_Pixelate
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Pixelate
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Pixelate
+  nameWithType: DitherGridBiasProperties.Pixelate
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Pixelate*
+  name: Pixelate
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_Pixelate_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Pixelate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Pixelate
+  nameWithType: DitherGridBiasProperties.Pixelate
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: DitherGridBiasProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.SetMaterialProperties
+  nameWithType: DitherGridBiasProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_ShaderName
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ShaderName
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ShaderName
+  nameWithType: DitherGridBiasProperties.ShaderName
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ShaderName
+  nameWithType: DitherGridBiasProperties.ShaderName
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Smoothness
+  name: Smoothness
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_Smoothness
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Smoothness
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Smoothness
+  nameWithType: DitherGridBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Smoothness*
+  name: Smoothness
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_Smoothness_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Smoothness
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.Smoothness
+  nameWithType: DitherGridBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ToolMode
+  name: ToolMode
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_ToolMode
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ToolMode
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ToolMode
+  nameWithType: DitherGridBiasProperties.ToolMode
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ToolMode*
+  name: ToolMode
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_ToolMode_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ToolMode
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.ToolMode
+  nameWithType: DitherGridBiasProperties.ToolMode
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
   name: DitherMatrixBiasProperties
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html
   commentId: T:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
   nameWithType: DitherMatrixBiasProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.CheckMaterialVersion
+  name: CheckMaterialVersion()
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_CheckMaterialVersion
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.CheckMaterialVersion
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.CheckMaterialVersion()
+  nameWithType: DitherMatrixBiasProperties.CheckMaterialVersion()
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.CheckMaterialVersion*
+  name: CheckMaterialVersion
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_CheckMaterialVersion_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.CheckMaterialVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.CheckMaterialVersion
+  nameWithType: DitherMatrixBiasProperties.CheckMaterialVersion
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.DitherAmountMax
   name: DitherAmountMax
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_DitherAmountMax
@@ -2185,6 +2994,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.PixelSize
   nameWithType: DitherMatrixBiasProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Pixelate
+  name: Pixelate
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_Pixelate
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Pixelate
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Pixelate
+  nameWithType: DitherMatrixBiasProperties.Pixelate
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Pixelate*
+  name: Pixelate
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_Pixelate_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Pixelate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Pixelate
+  nameWithType: DitherMatrixBiasProperties.Pixelate
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.SetMaterialProperties(UnityEngine.Material)
   name: SetMaterialProperties(Material)
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_SetMaterialProperties_UnityEngine_Material_
@@ -2347,6 +3169,142 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties.Smoothness
   nameWithType: DitherTextureBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties
+  name: GridBiasDitherProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html
+  commentId: T:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties
+  nameWithType: GridBiasDitherProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.CheckMaterialVersion
+  name: CheckMaterialVersion()
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_CheckMaterialVersion
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.CheckMaterialVersion
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.CheckMaterialVersion()
+  nameWithType: GridBiasDitherProperties.CheckMaterialVersion()
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.CheckMaterialVersion*
+  name: CheckMaterialVersion
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_CheckMaterialVersion_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.CheckMaterialVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.CheckMaterialVersion
+  nameWithType: GridBiasDitherProperties.CheckMaterialVersion
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMax
+  name: DitherAmountMax
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_DitherAmountMax
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMax
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMax
+  nameWithType: GridBiasDitherProperties.DitherAmountMax
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMax*
+  name: DitherAmountMax
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_DitherAmountMax_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMax
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMax
+  nameWithType: GridBiasDitherProperties.DitherAmountMax
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMin
+  name: DitherAmountMin
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_DitherAmountMin
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMin
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMin
+  nameWithType: GridBiasDitherProperties.DitherAmountMin
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMin*
+  name: DitherAmountMin
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_DitherAmountMin_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMin
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.DitherAmountMin
+  nameWithType: GridBiasDitherProperties.DitherAmountMin
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.FundamentalRegionRGB
+  name: FundamentalRegionRGB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_FundamentalRegionRGB
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.FundamentalRegionRGB
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.FundamentalRegionRGB
+  nameWithType: GridBiasDitherProperties.FundamentalRegionRGB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.FundamentalRegionRGB*
+  name: FundamentalRegionRGB
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_FundamentalRegionRGB_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.FundamentalRegionRGB
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.FundamentalRegionRGB
+  nameWithType: GridBiasDitherProperties.FundamentalRegionRGB
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.GridType
+  name: GridType
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_GridType
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.GridType
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.GridType
+  nameWithType: GridBiasDitherProperties.GridType
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.GridType*
+  name: GridType
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_GridType_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.GridType
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.GridType
+  nameWithType: GridBiasDitherProperties.GridType
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.LevelCount
+  name: LevelCount
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_LevelCount
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.LevelCount
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.LevelCount
+  nameWithType: GridBiasDitherProperties.LevelCount
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.LevelCount*
+  name: LevelCount
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_LevelCount_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.LevelCount
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.LevelCount
+  nameWithType: GridBiasDitherProperties.LevelCount
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.PixelSize
+  name: PixelSize
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_PixelSize
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.PixelSize
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.PixelSize
+  nameWithType: GridBiasDitherProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.PixelSize*
+  name: PixelSize
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_PixelSize_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.PixelSize
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.PixelSize
+  nameWithType: GridBiasDitherProperties.PixelSize
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: GridBiasDitherProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.SetMaterialProperties
+  nameWithType: GridBiasDitherProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_ShaderName
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.ShaderName
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.ShaderName
+  nameWithType: GridBiasDitherProperties.ShaderName
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.ShaderName
+  nameWithType: GridBiasDitherProperties.ShaderName
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.Smoothness
+  name: Smoothness
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_Smoothness
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.Smoothness
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.Smoothness
+  nameWithType: GridBiasDitherProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.Smoothness*
+  name: Smoothness
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_Smoothness_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.Smoothness
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.Smoothness
+  nameWithType: GridBiasDitherProperties.Smoothness
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties
   name: HexDitherMatrixBiasProperties
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.html
@@ -2522,12 +3480,108 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.Smoothness
   nameWithType: HexDitherMatrixBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode
+  name: ToolMode
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.html
+  commentId: T:Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode
+  nameWithType: ToolMode
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Bias
+  name: Bias
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_ToolMode_Bias
+  commentId: F:Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Bias
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Bias
+  nameWithType: ToolMode.Bias
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Index
+  name: Index
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_ToolMode_Index
+  commentId: F:Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Index
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Index
+  nameWithType: ToolMode.Index
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Normal
+  name: Normal
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_ToolMode_Normal
+  commentId: F:Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Normal
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.Normal
+  nameWithType: ToolMode.Normal
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets
+  name: RectFundamentalRegionPresets
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html
+  commentId: T:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets
+  nameWithType: RectFundamentalRegionPresets
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.All
+  name: All
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_All
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.All
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.All
+  nameWithType: RectFundamentalRegionPresets.All
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Bayer2x2
+  name: Bayer2x2
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Bayer2x2
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Bayer2x2
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Bayer2x2
+  nameWithType: RectFundamentalRegionPresets.Bayer2x2
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Bayer4x4
+  name: Bayer4x4
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Bayer4x4
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Bayer4x4
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Bayer4x4
+  nameWithType: RectFundamentalRegionPresets.Bayer4x4
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Checker2x2
+  name: Checker2x2
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Checker2x2
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Checker2x2
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Checker2x2
+  nameWithType: RectFundamentalRegionPresets.Checker2x2
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Horizontal2
+  name: Horizontal2
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Horizontal2
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Horizontal2
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Horizontal2
+  nameWithType: RectFundamentalRegionPresets.Horizontal2
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.HorizontalScanlines6
+  name: HorizontalScanlines6
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_HorizontalScanlines6
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.HorizontalScanlines6
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.HorizontalScanlines6
+  nameWithType: RectFundamentalRegionPresets.HorizontalScanlines6
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Oblique5A
+  name: Oblique5A
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Oblique5A
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Oblique5A
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Oblique5A
+  nameWithType: RectFundamentalRegionPresets.Oblique5A
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Oblique5B
+  name: Oblique5B
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Oblique5B
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Oblique5B
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Oblique5B
+  nameWithType: RectFundamentalRegionPresets.Oblique5B
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Vertical2
+  name: Vertical2
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_Vertical2
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Vertical2
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.Vertical2
+  nameWithType: RectFundamentalRegionPresets.Vertical2
+- uid: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.VerticalScanlines6
+  name: VerticalScanlines6
+  href: api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_RectFundamentalRegionPresets_VerticalScanlines6
+  commentId: F:Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.VerticalScanlines6
+  fullName: Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.VerticalScanlines6
+  nameWithType: RectFundamentalRegionPresets.VerticalScanlines6
 - uid: Gamelogic.Fx.Dithering.URP
   name: Gamelogic.Fx.Dithering.URP
   href: api/Gamelogic.Fx.Dithering.URP.html
   commentId: N:Gamelogic.Fx.Dithering.URP
   fullName: Gamelogic.Fx.Dithering.URP
   nameWithType: Gamelogic.Fx.Dithering.URP
+- uid: Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature
+  name: GLDitherGridBiasRendererFeature
+  href: api/Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature.html
+  commentId: T:Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature
+  fullName: Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature
+  nameWithType: GLDitherGridBiasRendererFeature
 - uid: Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature
   name: GLDitherMatrixBiasRenderFeature
   href: api/Gamelogic.Fx.Dithering.URP.GLDitherMatrixBiasRenderFeature.html
@@ -2552,6 +3606,69 @@ references:
   commentId: T:Gamelogic.Fx.Dithering.URP.GLDitherTextureBiasRendererFeature
   fullName: Gamelogic.Fx.Dithering.URP.GLDitherTextureBiasRendererFeature
   nameWithType: GLDitherTextureBiasRendererFeature
+- uid: Gamelogic.Fx.Editor
+  name: Gamelogic.Fx.Editor
+  href: api/Gamelogic.Fx.Editor.html
+  commentId: N:Gamelogic.Fx.Editor
+  fullName: Gamelogic.Fx.Editor
+  nameWithType: Gamelogic.Fx.Editor
+- uid: Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow
+  name: DitherGridBiasDesignerWindow
+  href: api/Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.html
+  commentId: T:Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow
+  fullName: Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow
+  nameWithType: DitherGridBiasDesignerWindow
+- uid: Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties)
+  name: Open(DitherGridBiasProperties)
+  href: api/Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.html#Gamelogic_Fx_Editor_DitherGridBiasDesignerWindow_Open_Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherGridBiasProperties_
+  commentId: M:Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties)
+  fullName: Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties)
+  nameWithType: DitherGridBiasDesignerWindow.Open(DitherGridBiasProperties)
+- uid: Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.Open*
+  name: Open
+  href: api/Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.html#Gamelogic_Fx_Editor_DitherGridBiasDesignerWindow_Open_
+  commentId: Overload:Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.Open
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.Open
+  nameWithType: DitherGridBiasDesignerWindow.Open
+- uid: Gamelogic.Fx.Editor.DitherPatternDesignerWindow
+  name: DitherPatternDesignerWindow
+  href: api/Gamelogic.Fx.Editor.DitherPatternDesignerWindow.html
+  commentId: T:Gamelogic.Fx.Editor.DitherPatternDesignerWindow
+  fullName: Gamelogic.Fx.Editor.DitherPatternDesignerWindow
+  nameWithType: DitherPatternDesignerWindow
+- uid: Gamelogic.Fx.Editor.DitherPatternDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties)
+  name: Open(DitherMatrixBiasProperties)
+  href: api/Gamelogic.Fx.Editor.DitherPatternDesignerWindow.html#Gamelogic_Fx_Editor_DitherPatternDesignerWindow_Open_Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_
+  commentId: M:Gamelogic.Fx.Editor.DitherPatternDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties)
+  fullName: Gamelogic.Fx.Editor.DitherPatternDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties)
+  nameWithType: DitherPatternDesignerWindow.Open(DitherMatrixBiasProperties)
+- uid: Gamelogic.Fx.Editor.DitherPatternDesignerWindow.Open*
+  name: Open
+  href: api/Gamelogic.Fx.Editor.DitherPatternDesignerWindow.html#Gamelogic_Fx_Editor_DitherPatternDesignerWindow_Open_
+  commentId: Overload:Gamelogic.Fx.Editor.DitherPatternDesignerWindow.Open
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Editor.DitherPatternDesignerWindow.Open
+  nameWithType: DitherPatternDesignerWindow.Open
+- uid: Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow
+  name: GridBiasDitherDesignerWindow
+  href: api/Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.html
+  commentId: T:Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow
+  fullName: Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow
+  nameWithType: GridBiasDitherDesignerWindow
+- uid: Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties)
+  name: Open(GridBiasDitherProperties)
+  href: api/Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.html#Gamelogic_Fx_Editor_GridBiasDitherDesignerWindow_Open_Gamelogic_Fx_Dithering_PostProcessing_Effects_GridBiasDitherProperties_
+  commentId: M:Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties)
+  fullName: Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.Open(Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties)
+  nameWithType: GridBiasDitherDesignerWindow.Open(GridBiasDitherProperties)
+- uid: Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.Open*
+  name: Open
+  href: api/Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.html#Gamelogic_Fx_Editor_GridBiasDitherDesignerWindow_Open_
+  commentId: Overload:Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.Open
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.Open
+  nameWithType: GridBiasDitherDesignerWindow.Open
 - uid: Gamelogic.Fx.Editor.Internal
   name: Gamelogic.Fx.Editor.Internal
   href: api/Gamelogic.Fx.Editor.Internal.html
@@ -2609,6 +3726,38 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Editor.Internal.SerializedPropertyExtensions.GetTargetObjectOfProperty
   nameWithType: SerializedPropertyExtensions.GetTargetObjectOfProperty
+- uid: Gamelogic.Fx.Editor.IntervalDrawer
+  name: IntervalDrawer
+  href: api/Gamelogic.Fx.Editor.IntervalDrawer.html
+  commentId: T:Gamelogic.Fx.Editor.IntervalDrawer
+  fullName: Gamelogic.Fx.Editor.IntervalDrawer
+  nameWithType: IntervalDrawer
+- uid: Gamelogic.Fx.Editor.IntervalDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  name: GetPropertyHeight(SerializedProperty, GUIContent)
+  href: api/Gamelogic.Fx.Editor.IntervalDrawer.html#Gamelogic_Fx_Editor_IntervalDrawer_GetPropertyHeight_UnityEditor_SerializedProperty_UnityEngine_GUIContent_
+  commentId: M:Gamelogic.Fx.Editor.IntervalDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  fullName: Gamelogic.Fx.Editor.IntervalDrawer.GetPropertyHeight(UnityEditor.SerializedProperty, UnityEngine.GUIContent)
+  nameWithType: IntervalDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+- uid: Gamelogic.Fx.Editor.IntervalDrawer.GetPropertyHeight*
+  name: GetPropertyHeight
+  href: api/Gamelogic.Fx.Editor.IntervalDrawer.html#Gamelogic_Fx_Editor_IntervalDrawer_GetPropertyHeight_
+  commentId: Overload:Gamelogic.Fx.Editor.IntervalDrawer.GetPropertyHeight
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Editor.IntervalDrawer.GetPropertyHeight
+  nameWithType: IntervalDrawer.GetPropertyHeight
+- uid: Gamelogic.Fx.Editor.IntervalDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/Gamelogic.Fx.Editor.IntervalDrawer.html#Gamelogic_Fx_Editor_IntervalDrawer_OnGUI_UnityEngine_Rect_UnityEditor_SerializedProperty_UnityEngine_GUIContent_
+  commentId: M:Gamelogic.Fx.Editor.IntervalDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
+  fullName: Gamelogic.Fx.Editor.IntervalDrawer.OnGUI(UnityEngine.Rect, UnityEditor.SerializedProperty, UnityEngine.GUIContent)
+  nameWithType: IntervalDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: Gamelogic.Fx.Editor.IntervalDrawer.OnGUI*
+  name: OnGUI
+  href: api/Gamelogic.Fx.Editor.IntervalDrawer.html#Gamelogic_Fx_Editor_IntervalDrawer_OnGUI_
+  commentId: Overload:Gamelogic.Fx.Editor.IntervalDrawer.OnGUI
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Editor.IntervalDrawer.OnGUI
+  nameWithType: IntervalDrawer.OnGUI
 - uid: Gamelogic.Fx.Editor.TextureGenerator
   name: Gamelogic.Fx.Editor.TextureGenerator
   href: api/Gamelogic.Fx.Editor.TextureGenerator.html
@@ -2746,6 +3895,28 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Editor.TextureGenerator.PatternTextureGenerator.ShowWindow
   nameWithType: PatternTextureGenerator.ShowWindow
+- uid: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions
+  name: SerializedPropertyExtensions
+  href: api/Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.html
+  commentId: T:Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions
+  fullName: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions
+  nameWithType: SerializedPropertyExtensions
+- uid: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty(UnityEditor.SerializedObject,System.String)
+  name: FindRequiredProperty(SerializedObject, string)
+  href: api/Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.html#Gamelogic_Fx_Editor_TextureGenerator_SerializedPropertyExtensions_FindRequiredProperty_UnityEditor_SerializedObject_System_String_
+  commentId: M:Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty(UnityEditor.SerializedObject,System.String)
+  name.vb: FindRequiredProperty(SerializedObject, String)
+  fullName: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty(UnityEditor.SerializedObject, string)
+  fullName.vb: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty(UnityEditor.SerializedObject, String)
+  nameWithType: SerializedPropertyExtensions.FindRequiredProperty(SerializedObject, string)
+  nameWithType.vb: SerializedPropertyExtensions.FindRequiredProperty(SerializedObject, String)
+- uid: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty*
+  name: FindRequiredProperty
+  href: api/Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.html#Gamelogic_Fx_Editor_TextureGenerator_SerializedPropertyExtensions_FindRequiredProperty_
+  commentId: Overload:Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.FindRequiredProperty
+  nameWithType: SerializedPropertyExtensions.FindRequiredProperty
 - uid: Gamelogic.Fx.Editor.TextureGenerator.TextureGeneratorWindow
   name: TextureGeneratorWindow
   href: api/Gamelogic.Fx.Editor.TextureGenerator.TextureGeneratorWindow.html
@@ -2930,6 +4101,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.FloatMatrix.AddRow
   nameWithType: FloatMatrix.AddRow
+- uid: Gamelogic.Fx.FloatMatrix.Clear
+  name: Clear()
+  href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_Clear
+  commentId: M:Gamelogic.Fx.FloatMatrix.Clear
+  fullName: Gamelogic.Fx.FloatMatrix.Clear()
+  nameWithType: FloatMatrix.Clear()
+- uid: Gamelogic.Fx.FloatMatrix.Clear*
+  name: Clear
+  href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_Clear_
+  commentId: Overload:Gamelogic.Fx.FloatMatrix.Clear
+  isSpec: "True"
+  fullName: Gamelogic.Fx.FloatMatrix.Clear
+  nameWithType: FloatMatrix.Clear
 - uid: Gamelogic.Fx.FloatMatrix.Clone
   name: Clone()
   href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_Clone
@@ -3029,6 +4213,22 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.FloatMatrix.Length
   nameWithType: FloatMatrix.Length
+- uid: Gamelogic.Fx.FloatMatrix.MoveWrapped(System.Int32,System.Int32)
+  name: MoveWrapped(int, int)
+  href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_MoveWrapped_System_Int32_System_Int32_
+  commentId: M:Gamelogic.Fx.FloatMatrix.MoveWrapped(System.Int32,System.Int32)
+  name.vb: MoveWrapped(Integer, Integer)
+  fullName: Gamelogic.Fx.FloatMatrix.MoveWrapped(int, int)
+  fullName.vb: Gamelogic.Fx.FloatMatrix.MoveWrapped(Integer, Integer)
+  nameWithType: FloatMatrix.MoveWrapped(int, int)
+  nameWithType.vb: FloatMatrix.MoveWrapped(Integer, Integer)
+- uid: Gamelogic.Fx.FloatMatrix.MoveWrapped*
+  name: MoveWrapped
+  href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_MoveWrapped_
+  commentId: Overload:Gamelogic.Fx.FloatMatrix.MoveWrapped
+  isSpec: "True"
+  fullName: Gamelogic.Fx.FloatMatrix.MoveWrapped
+  nameWithType: FloatMatrix.MoveWrapped
 - uid: Gamelogic.Fx.FloatMatrix.Normalize
   name: Normalize()
   href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_Normalize
@@ -3081,6 +4281,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.FloatMatrix.SetFrom
   nameWithType: FloatMatrix.SetFrom
+- uid: Gamelogic.Fx.FloatMatrix.SizeVersion
+  name: SizeVersion
+  href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_SizeVersion
+  commentId: P:Gamelogic.Fx.FloatMatrix.SizeVersion
+  fullName: Gamelogic.Fx.FloatMatrix.SizeVersion
+  nameWithType: FloatMatrix.SizeVersion
+- uid: Gamelogic.Fx.FloatMatrix.SizeVersion*
+  name: SizeVersion
+  href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_SizeVersion_
+  commentId: Overload:Gamelogic.Fx.FloatMatrix.SizeVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.FloatMatrix.SizeVersion
+  nameWithType: FloatMatrix.SizeVersion
 - uid: Gamelogic.Fx.FloatMatrix.Values
   name: Values
   href: api/Gamelogic.Fx.FloatMatrix.html#Gamelogic_Fx_FloatMatrix_Values
@@ -3107,6 +4320,24 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.FloatMatrix.Width
   nameWithType: FloatMatrix.Width
+- uid: Gamelogic.Fx.GridType
+  name: GridType
+  href: api/Gamelogic.Fx.GridType.html
+  commentId: T:Gamelogic.Fx.GridType
+  fullName: Gamelogic.Fx.GridType
+  nameWithType: GridType
+- uid: Gamelogic.Fx.GridType.Hex
+  name: Hex
+  href: api/Gamelogic.Fx.GridType.html#Gamelogic_Fx_GridType_Hex
+  commentId: F:Gamelogic.Fx.GridType.Hex
+  fullName: Gamelogic.Fx.GridType.Hex
+  nameWithType: GridType.Hex
+- uid: Gamelogic.Fx.GridType.Rect
+  name: Rect
+  href: api/Gamelogic.Fx.GridType.html#Gamelogic_Fx_GridType_Rect
+  commentId: F:Gamelogic.Fx.GridType.Rect
+  fullName: Gamelogic.Fx.GridType.Rect
+  nameWithType: GridType.Rect
 - uid: Gamelogic.Fx.IFloatMatrix
   name: IFloatMatrix
   href: api/Gamelogic.Fx.IFloatMatrix.html
@@ -3180,6 +4411,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.IFloatMatrix.Length
   nameWithType: IFloatMatrix.Length
+- uid: Gamelogic.Fx.IFloatMatrix.Normalize
+  name: Normalize()
+  href: api/Gamelogic.Fx.IFloatMatrix.html#Gamelogic_Fx_IFloatMatrix_Normalize
+  commentId: M:Gamelogic.Fx.IFloatMatrix.Normalize
+  fullName: Gamelogic.Fx.IFloatMatrix.Normalize()
+  nameWithType: IFloatMatrix.Normalize()
+- uid: Gamelogic.Fx.IFloatMatrix.Normalize*
+  name: Normalize
+  href: api/Gamelogic.Fx.IFloatMatrix.html#Gamelogic_Fx_IFloatMatrix_Normalize_
+  commentId: Overload:Gamelogic.Fx.IFloatMatrix.Normalize
+  isSpec: "True"
+  fullName: Gamelogic.Fx.IFloatMatrix.Normalize
+  nameWithType: IFloatMatrix.Normalize
 - uid: Gamelogic.Fx.IFloatMatrix.SetFrom(Gamelogic.Fx.IFloatMatrix)
   name: SetFrom(IFloatMatrix)
   href: api/Gamelogic.Fx.IFloatMatrix.html#Gamelogic_Fx_IFloatMatrix_SetFrom_Gamelogic_Fx_IFloatMatrix_
@@ -3219,6 +4463,164 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.IFloatMatrix.Width
   nameWithType: IFloatMatrix.Width
+- uid: Gamelogic.Fx.Internal
+  name: Gamelogic.Fx.Internal
+  href: api/Gamelogic.Fx.Internal.html
+  commentId: N:Gamelogic.Fx.Internal
+  fullName: Gamelogic.Fx.Internal
+  nameWithType: Gamelogic.Fx.Internal
+- uid: Gamelogic.Fx.Internal.SupportsUIAttribute
+  name: SupportsUIAttribute
+  href: api/Gamelogic.Fx.Internal.SupportsUIAttribute.html
+  commentId: T:Gamelogic.Fx.Internal.SupportsUIAttribute
+  fullName: Gamelogic.Fx.Internal.SupportsUIAttribute
+  nameWithType: SupportsUIAttribute
+- uid: Gamelogic.Fx.Interval
+  name: Interval
+  href: api/Gamelogic.Fx.Interval.html
+  commentId: T:Gamelogic.Fx.Interval
+  fullName: Gamelogic.Fx.Interval
+  nameWithType: Interval
+- uid: Gamelogic.Fx.Interval.#ctor(System.Single,System.Single)
+  name: Interval(float, float)
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval__ctor_System_Single_System_Single_
+  commentId: M:Gamelogic.Fx.Interval.#ctor(System.Single,System.Single)
+  name.vb: New(Single, Single)
+  fullName: Gamelogic.Fx.Interval.Interval(float, float)
+  fullName.vb: Gamelogic.Fx.Interval.New(Single, Single)
+  nameWithType: Interval.Interval(float, float)
+  nameWithType.vb: Interval.New(Single, Single)
+- uid: Gamelogic.Fx.Interval.#ctor*
+  name: Interval
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval__ctor_
+  commentId: Overload:Gamelogic.Fx.Interval.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gamelogic.Fx.Interval.Interval
+  fullName.vb: Gamelogic.Fx.Interval.New
+  nameWithType: Interval.Interval
+  nameWithType.vb: Interval.New
+- uid: Gamelogic.Fx.Interval.Center
+  name: Center
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Center
+  commentId: P:Gamelogic.Fx.Interval.Center
+  fullName: Gamelogic.Fx.Interval.Center
+  nameWithType: Interval.Center
+- uid: Gamelogic.Fx.Interval.Center*
+  name: Center
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Center_
+  commentId: Overload:Gamelogic.Fx.Interval.Center
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Interval.Center
+  nameWithType: Interval.Center
+- uid: Gamelogic.Fx.Interval.Max
+  name: Max
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Max
+  commentId: P:Gamelogic.Fx.Interval.Max
+  fullName: Gamelogic.Fx.Interval.Max
+  nameWithType: Interval.Max
+- uid: Gamelogic.Fx.Interval.Max*
+  name: Max
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Max_
+  commentId: Overload:Gamelogic.Fx.Interval.Max
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Interval.Max
+  nameWithType: Interval.Max
+- uid: Gamelogic.Fx.Interval.Min
+  name: Min
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Min
+  commentId: P:Gamelogic.Fx.Interval.Min
+  fullName: Gamelogic.Fx.Interval.Min
+  nameWithType: Interval.Min
+- uid: Gamelogic.Fx.Interval.Min*
+  name: Min
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Min_
+  commentId: Overload:Gamelogic.Fx.Interval.Min
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Interval.Min
+  nameWithType: Interval.Min
+- uid: Gamelogic.Fx.Interval.Radius
+  name: Radius
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Radius
+  commentId: P:Gamelogic.Fx.Interval.Radius
+  fullName: Gamelogic.Fx.Interval.Radius
+  nameWithType: Interval.Radius
+- uid: Gamelogic.Fx.Interval.Radius*
+  name: Radius
+  href: api/Gamelogic.Fx.Interval.html#Gamelogic_Fx_Interval_Radius_
+  commentId: Overload:Gamelogic.Fx.Interval.Radius
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Interval.Radius
+  nameWithType: Interval.Radius
+- uid: Gamelogic.Fx.Interval.ViewType
+  name: Interval.ViewType
+  href: api/Gamelogic.Fx.Interval.ViewType.html
+  commentId: T:Gamelogic.Fx.Interval.ViewType
+  fullName: Gamelogic.Fx.Interval.ViewType
+  nameWithType: Interval.ViewType
+- uid: Gamelogic.Fx.Interval.ViewType.CenterRadius
+  name: CenterRadius
+  href: api/Gamelogic.Fx.Interval.ViewType.html#Gamelogic_Fx_Interval_ViewType_CenterRadius
+  commentId: F:Gamelogic.Fx.Interval.ViewType.CenterRadius
+  fullName: Gamelogic.Fx.Interval.ViewType.CenterRadius
+  nameWithType: Interval.ViewType.CenterRadius
+- uid: Gamelogic.Fx.Interval.ViewType.MinMax
+  name: MinMax
+  href: api/Gamelogic.Fx.Interval.ViewType.html#Gamelogic_Fx_Interval_ViewType_MinMax
+  commentId: F:Gamelogic.Fx.Interval.ViewType.MinMax
+  fullName: Gamelogic.Fx.Interval.ViewType.MinMax
+  nameWithType: Interval.ViewType.MinMax
+- uid: Gamelogic.Fx.IntervalRangeAttribute
+  name: IntervalRangeAttribute
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html
+  commentId: T:Gamelogic.Fx.IntervalRangeAttribute
+  fullName: Gamelogic.Fx.IntervalRangeAttribute
+  nameWithType: IntervalRangeAttribute
+- uid: Gamelogic.Fx.IntervalRangeAttribute.#ctor(System.Single,System.Single)
+  name: IntervalRangeAttribute(float, float)
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html#Gamelogic_Fx_IntervalRangeAttribute__ctor_System_Single_System_Single_
+  commentId: M:Gamelogic.Fx.IntervalRangeAttribute.#ctor(System.Single,System.Single)
+  name.vb: New(Single, Single)
+  fullName: Gamelogic.Fx.IntervalRangeAttribute.IntervalRangeAttribute(float, float)
+  fullName.vb: Gamelogic.Fx.IntervalRangeAttribute.New(Single, Single)
+  nameWithType: IntervalRangeAttribute.IntervalRangeAttribute(float, float)
+  nameWithType.vb: IntervalRangeAttribute.New(Single, Single)
+- uid: Gamelogic.Fx.IntervalRangeAttribute.#ctor*
+  name: IntervalRangeAttribute
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html#Gamelogic_Fx_IntervalRangeAttribute__ctor_
+  commentId: Overload:Gamelogic.Fx.IntervalRangeAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gamelogic.Fx.IntervalRangeAttribute.IntervalRangeAttribute
+  fullName.vb: Gamelogic.Fx.IntervalRangeAttribute.New
+  nameWithType: IntervalRangeAttribute.IntervalRangeAttribute
+  nameWithType.vb: IntervalRangeAttribute.New
+- uid: Gamelogic.Fx.IntervalRangeAttribute.Max
+  name: Max
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html#Gamelogic_Fx_IntervalRangeAttribute_Max
+  commentId: P:Gamelogic.Fx.IntervalRangeAttribute.Max
+  fullName: Gamelogic.Fx.IntervalRangeAttribute.Max
+  nameWithType: IntervalRangeAttribute.Max
+- uid: Gamelogic.Fx.IntervalRangeAttribute.Max*
+  name: Max
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html#Gamelogic_Fx_IntervalRangeAttribute_Max_
+  commentId: Overload:Gamelogic.Fx.IntervalRangeAttribute.Max
+  isSpec: "True"
+  fullName: Gamelogic.Fx.IntervalRangeAttribute.Max
+  nameWithType: IntervalRangeAttribute.Max
+- uid: Gamelogic.Fx.IntervalRangeAttribute.Min
+  name: Min
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html#Gamelogic_Fx_IntervalRangeAttribute_Min
+  commentId: P:Gamelogic.Fx.IntervalRangeAttribute.Min
+  fullName: Gamelogic.Fx.IntervalRangeAttribute.Min
+  nameWithType: IntervalRangeAttribute.Min
+- uid: Gamelogic.Fx.IntervalRangeAttribute.Min*
+  name: Min
+  href: api/Gamelogic.Fx.IntervalRangeAttribute.html#Gamelogic_Fx_IntervalRangeAttribute_Min_
+  commentId: Overload:Gamelogic.Fx.IntervalRangeAttribute.Min
+  isSpec: "True"
+  fullName: Gamelogic.Fx.IntervalRangeAttribute.Min
+  nameWithType: IntervalRangeAttribute.Min
 - uid: Gamelogic.Fx.Keyword
   name: Keyword
   href: api/Gamelogic.Fx.Keyword.html
@@ -4576,6 +5978,32 @@ references:
   commentId: T:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties
   fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties
   nameWithType: PixelateProperties
+- uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle
+  name: GridAngle
+  href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridAngle
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle
+  fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle
+  nameWithType: PixelateProperties.GridAngle
+- uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle*
+  name: GridAngle
+  href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridAngle_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridAngle
+  nameWithType: PixelateProperties.GridAngle
+- uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType
+  name: GridType
+  href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridType
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType
+  fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType
+  nameWithType: PixelateProperties.GridType
+- uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType*
+  name: GridType
+  href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_GridType_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.GridType
+  nameWithType: PixelateProperties.GridType
 - uid: Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.PixelOffset
   name: PixelOffset
   href: api/Gamelogic.Fx.PostProcessing.Effects.PixelateProperties.html#Gamelogic_Fx_PostProcessing_Effects_PixelateProperties_PixelOffset
@@ -5138,6 +6566,45 @@ references:
   commentId: T:Gamelogic.Fx.PostProcessing.ShaderProperties
   fullName: Gamelogic.Fx.PostProcessing.ShaderProperties
   nameWithType: ShaderProperties
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion
+  name: CheckMaterialVersion()
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion
+  commentId: M:Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion()
+  nameWithType: ShaderProperties.CheckMaterialVersion()
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion*
+  name: CheckMaterialVersion
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion
+  nameWithType: ShaderProperties.CheckMaterialVersion
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion
+  name: IncMaterialVersion()
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion
+  commentId: M:Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion()
+  nameWithType: ShaderProperties.IncMaterialVersion()
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion*
+  name: IncMaterialVersion
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion
+  nameWithType: ShaderProperties.IncMaterialVersion
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion
+  name: MaterialVersion
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_MaterialVersion
+  commentId: P:Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion
+  nameWithType: ShaderProperties.MaterialVersion
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion*
+  name: MaterialVersion
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_MaterialVersion_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion
+  nameWithType: ShaderProperties.MaterialVersion
 - uid: Gamelogic.Fx.PostProcessing.ShaderProperties.OnEnable
   name: OnEnable()
   href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_OnEnable
@@ -5229,6 +6696,101 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.ShaderName
   nameWithType: ShaderProperties.ShaderName
+- uid: Gamelogic.Fx.RGBMatrix
+  name: RGBMatrix
+  href: api/Gamelogic.Fx.RGBMatrix.html
+  commentId: T:Gamelogic.Fx.RGBMatrix
+  fullName: Gamelogic.Fx.RGBMatrix
+  nameWithType: RGBMatrix
+- uid: Gamelogic.Fx.RGBMatrix.All
+  name: All
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_All
+  commentId: P:Gamelogic.Fx.RGBMatrix.All
+  fullName: Gamelogic.Fx.RGBMatrix.All
+  nameWithType: RGBMatrix.All
+- uid: Gamelogic.Fx.RGBMatrix.All*
+  name: All
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_All_
+  commentId: Overload:Gamelogic.Fx.RGBMatrix.All
+  isSpec: "True"
+  fullName: Gamelogic.Fx.RGBMatrix.All
+  nameWithType: RGBMatrix.All
+- uid: Gamelogic.Fx.RGBMatrix.B
+  name: B
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_B
+  commentId: P:Gamelogic.Fx.RGBMatrix.B
+  fullName: Gamelogic.Fx.RGBMatrix.B
+  nameWithType: RGBMatrix.B
+- uid: Gamelogic.Fx.RGBMatrix.B*
+  name: B
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_B_
+  commentId: Overload:Gamelogic.Fx.RGBMatrix.B
+  isSpec: "True"
+  fullName: Gamelogic.Fx.RGBMatrix.B
+  nameWithType: RGBMatrix.B
+- uid: Gamelogic.Fx.RGBMatrix.G
+  name: G
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_G
+  commentId: P:Gamelogic.Fx.RGBMatrix.G
+  fullName: Gamelogic.Fx.RGBMatrix.G
+  nameWithType: RGBMatrix.G
+- uid: Gamelogic.Fx.RGBMatrix.G*
+  name: G
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_G_
+  commentId: Overload:Gamelogic.Fx.RGBMatrix.G
+  isSpec: "True"
+  fullName: Gamelogic.Fx.RGBMatrix.G
+  nameWithType: RGBMatrix.G
+- uid: Gamelogic.Fx.RGBMatrix.Locked
+  name: Locked
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_Locked
+  commentId: P:Gamelogic.Fx.RGBMatrix.Locked
+  fullName: Gamelogic.Fx.RGBMatrix.Locked
+  nameWithType: RGBMatrix.Locked
+- uid: Gamelogic.Fx.RGBMatrix.Locked*
+  name: Locked
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_Locked_
+  commentId: Overload:Gamelogic.Fx.RGBMatrix.Locked
+  isSpec: "True"
+  fullName: Gamelogic.Fx.RGBMatrix.Locked
+  nameWithType: RGBMatrix.Locked
+- uid: Gamelogic.Fx.RGBMatrix.MatrixAllFieldName
+  name: MatrixAllFieldName
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_MatrixAllFieldName
+  commentId: F:Gamelogic.Fx.RGBMatrix.MatrixAllFieldName
+  fullName: Gamelogic.Fx.RGBMatrix.MatrixAllFieldName
+  nameWithType: RGBMatrix.MatrixAllFieldName
+- uid: Gamelogic.Fx.RGBMatrix.MatrixBFieldName
+  name: MatrixBFieldName
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_MatrixBFieldName
+  commentId: F:Gamelogic.Fx.RGBMatrix.MatrixBFieldName
+  fullName: Gamelogic.Fx.RGBMatrix.MatrixBFieldName
+  nameWithType: RGBMatrix.MatrixBFieldName
+- uid: Gamelogic.Fx.RGBMatrix.MatrixGFieldName
+  name: MatrixGFieldName
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_MatrixGFieldName
+  commentId: F:Gamelogic.Fx.RGBMatrix.MatrixGFieldName
+  fullName: Gamelogic.Fx.RGBMatrix.MatrixGFieldName
+  nameWithType: RGBMatrix.MatrixGFieldName
+- uid: Gamelogic.Fx.RGBMatrix.MatrixRFieldName
+  name: MatrixRFieldName
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_MatrixRFieldName
+  commentId: F:Gamelogic.Fx.RGBMatrix.MatrixRFieldName
+  fullName: Gamelogic.Fx.RGBMatrix.MatrixRFieldName
+  nameWithType: RGBMatrix.MatrixRFieldName
+- uid: Gamelogic.Fx.RGBMatrix.R
+  name: R
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_R
+  commentId: P:Gamelogic.Fx.RGBMatrix.R
+  fullName: Gamelogic.Fx.RGBMatrix.R
+  nameWithType: RGBMatrix.R
+- uid: Gamelogic.Fx.RGBMatrix.R*
+  name: R
+  href: api/Gamelogic.Fx.RGBMatrix.html#Gamelogic_Fx_RGBMatrix_R_
+  commentId: Overload:Gamelogic.Fx.RGBMatrix.R
+  isSpec: "True"
+  fullName: Gamelogic.Fx.RGBMatrix.R
+  nameWithType: RGBMatrix.R
 - uid: Gamelogic.Fx.RequiresMixboxAttribute
   name: RequiresMixboxAttribute
   href: api/Gamelogic.Fx.RequiresMixboxAttribute.html
@@ -5301,6 +6863,25 @@ references:
   commentId: F:Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.SkipInOverlayCameras
   fullName: Gamelogic.Fx.URP.ExperimentalSettings.PostProcessing.SkipInOverlayCameras
   nameWithType: ExperimentalSettings.PostProcessing.SkipInOverlayCameras
+- uid: Gamelogic.Fx.URP.GamelogicFxSettings
+  name: GamelogicFxSettings
+  href: api/Gamelogic.Fx.URP.GamelogicFxSettings.html
+  commentId: T:Gamelogic.Fx.URP.GamelogicFxSettings
+  fullName: Gamelogic.Fx.URP.GamelogicFxSettings
+  nameWithType: GamelogicFxSettings
+- uid: Gamelogic.Fx.URP.GamelogicFxSettings.AllowedPostProcessCamera
+  name: AllowedPostProcessCamera
+  href: api/Gamelogic.Fx.URP.GamelogicFxSettings.html#Gamelogic_Fx_URP_GamelogicFxSettings_AllowedPostProcessCamera
+  commentId: P:Gamelogic.Fx.URP.GamelogicFxSettings.AllowedPostProcessCamera
+  fullName: Gamelogic.Fx.URP.GamelogicFxSettings.AllowedPostProcessCamera
+  nameWithType: GamelogicFxSettings.AllowedPostProcessCamera
+- uid: Gamelogic.Fx.URP.GamelogicFxSettings.AllowedPostProcessCamera*
+  name: AllowedPostProcessCamera
+  href: api/Gamelogic.Fx.URP.GamelogicFxSettings.html#Gamelogic_Fx_URP_GamelogicFxSettings_AllowedPostProcessCamera_
+  commentId: Overload:Gamelogic.Fx.URP.GamelogicFxSettings.AllowedPostProcessCamera
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.GamelogicFxSettings.AllowedPostProcessCamera
+  nameWithType: GamelogicFxSettings.AllowedPostProcessCamera
 - uid: Gamelogic.Fx.URP.Mapping
   name: Gamelogic.Fx.URP.Mapping
   href: api/Gamelogic.Fx.URP.Mapping.html

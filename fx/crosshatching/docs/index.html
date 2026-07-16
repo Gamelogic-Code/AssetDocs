@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/crosshatching/docs/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/crosshatching/docs/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,14 +94,52 @@
         <article data-uid="">
 <h1 id="gamelogic-fx-cross-hatching">Gamelogic Fx Cross-hatching</h1>
 
-<p><em>Version 4.0.0</em></p>
+<p><em>Version 5.0.0</em></p>
 <p><img src="images/banner.png" alt=""></p>
 <p><strong>Gamelogic Fx Cross-hatching</strong> provides a collection of shaders for producing cross-hatching effects in Unity.
 This can be used to create stylized rendering resembling drawings with pencils, crayons, pastels, markers, or pen.</p>
+<p>The basic technique is to apply layers of hatching textures in a way to resemble the original shading. They differ in
+how colors are mixed when these layers overlay, creating different styles.</p>
+<ul>
+<li><p><strong><a href="effects-reference-crosshatching.html#simple-hatch">Simple-hatch</a>:</strong> uses additive blending (<code>A + B - 1</code>), which closely approximates CMY (multiplicative) blending for values in [0, 1]. This is a good choice for wet mediums such as ink, watercolor, or markers. It is the most efficient to render, and can be combined with color mapping to resemble more complex shaders.</p>
+</li>
+<li><p><strong><a href="effects-reference-crosshatching.html#convex-hull-hatch">Convex hull hatching</a>:</strong> Uses lerp to mix colors, which means all resulting colors fall inside the convex hull of the
+primary colors used. This is a good choice for dry mediums such as pencil, charcoal, or pastels. (Generally blue and
+yellow don't make green, so adding a green in the primaries is often required to make the technique work well.)</p>
+</li>
+<li><p><strong><a href="effects-reference-crosshatching.html#mixbox-convex-hull-hatch">Mixbox convex hull hatching</a>:</strong> Uses Mixbox lerping to mix colors, a mixing model that resemble physical media better.
+Blue and green can make green, and overall colors are more vibrant. This is the most expensive to render, but is the
+best choice for most media. It requires the (free) Mixbox plugin to work. See <a href="../../common/docs/mixbox.html">Mixbox</a> for
+installation instructions.</p>
+</li>
+</ul>
 <h2 id="samples">Samples</h2>
-<p>The package includes a sample scene demonstrating the various cross-hatching effects and their settings.
-You can import samples via the <em>Package Manager</em> window in Unity. Make sure you open the scene in the
-folder that corresponds to the rendering pipeline you are using.</p>
+<p>The package includes a sample scene demonstrating the various dithering effects and their settings.
+See <a href="../../common/docs/how-to-import-samples.html">How to import samples</a> for instructions on how to import the sample
+scene into your project.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Make sure you open the scene in the folder that corresponds to the rendering pipeline you are using.</p>
+</div>
+<p>For Built-in:
+<code>Assets/Samples/[Package]/[Version]/[Package Samples Root]/[Sample]/BuiltIn/</code></p>
+<p>For URP:
+<code>Assets/Samples/[Package]/[Version]/[Package Samples Root]/[Sample]/URP/</code></p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="built-in-render-pipeline">Built-in Render Pipeline</h3>
+<ol>
+<li>Select your camera in the Hierarchy.</li>
+<li>Click <strong>Add Component</strong> and search for the effect (e.g. <em>Simple Hatch</em>).</li>
+<li>The effect is active immediately — adjust properties in the Inspector.</li>
+</ol>
+<p>See <a href="../../common/docs/how-to-use-post-effects.html">How to use post effects</a> for a full walkthrough.</p>
+<h3 id="universal-render-pipeline-urp">Universal Render Pipeline (URP)</h3>
+<ol>
+<li>Open your <strong>URP Renderer asset</strong>.</li>
+<li>In the <strong>Renderer Features</strong> list, click <strong>Add Renderer Feature</strong> and search for the effect.</li>
+<li>Expand the feature to adjust its properties.</li>
+</ol>
+<p>See <a href="../../common/docs/how-to-use-post-effects.html">How to use post effects</a> for a full walkthrough.</p>
 <h2 id="included-shaders">Included Shaders</h2>
 <h3 id="post-effect-shaders"><strong>Post-effect shaders</strong></h3>
 <p>Create full-screen cross-hatching using the Built-in Render Pipeline or URP.</p>

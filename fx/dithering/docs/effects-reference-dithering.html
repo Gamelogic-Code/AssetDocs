@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/effects-reference-dithering.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/effects-reference-dithering.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,6 +94,235 @@
         <article data-uid="">
 <h1 id="effects-reference-dithering">Effects reference: Dithering</h1>
 
+<h2 id="dither-grid-bias">Dither Grid Bias</h2>
+<p>Applies a data-driven dither bias using <strong>three independent user-defined matrices</strong> (one per color channel), snapped to either a <strong>hexagonal</strong> or <strong>rectangular</strong> pixel grid.
+The matrices are designed interactively in the <a href="dither-grid-bias-designer.html">Dither Grid Bias Designer</a> and can produce a wide range of ordered dithering styles — Bayer-like, blue-noise-like, or fully custom.</p>
+<p>The alpha channel is not changed by this effect.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>See also <a href="dithering-tips.html">Dithering Tips</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid Type</td>
+<td>Hex / Rect</td>
+<td>Cell geometry used for the dither grid. <strong>Hex</strong> snaps to pointy-top hexagonal cells; <strong>Rect</strong> snaps to square cells.</td>
+</tr>
+<tr>
+<td>Matrix R / G / B</td>
+<td>🔢</td>
+<td>A floating-point matrix for each color channel. Values are normalized automatically. Designed using the <a href="dither-grid-bias-designer.html">Dither Grid Bias Designer</a>.</td>
+</tr>
+<tr>
+<td>Pixel Size</td>
+<td>(0, ∞)²</td>
+<td>Controls how large each matrix cell appears on screen. Higher values make the pattern blockier.</td>
+</tr>
+<tr>
+<td>Pixelate</td>
+<td>true / false</td>
+<td>When enabled, snaps the output image to the dither grid so each pixel samples the color from its cell center. Use this with a matching Pixel Size for a fully pixelated look.</td>
+</tr>
+<tr>
+<td>Pixel Offset</td>
+<td>ℝ²</td>
+<td>Sub-pixel offset applied when <strong>Pixelate</strong> is enabled. Shifts the snapping grid to align cell centers precisely.</td>
+</tr>
+<tr>
+<td>Grid Angle</td>
+<td>[-90°, 90°]</td>
+<td>Rotates the dither grid in degrees. Applied in screen-pixel space so the rotation is physically isotropic regardless of render target aspect ratio.</td>
+</tr>
+<tr>
+<td>Dither Amount Min</td>
+<td>[-1, 1]</td>
+<td>Minimum bias added to each channel before quantization.</td>
+</tr>
+<tr>
+<td>Dither Amount Max</td>
+<td>[-1, 1]</td>
+<td>Maximum bias added to each channel before quantization.</td>
+</tr>
+<tr>
+<td>Level Count</td>
+<td>[1, ∞)³</td>
+<td>Per-channel quantization level count (R, G, B). Lower values produce more posterized output.</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>[0, 1]</td>
+<td>Controls the softness of the quantization steps.</td>
+</tr>
+<tr>
+<td>Use UV Map</td>
+<td>true / false</td>
+<td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
+</tr>
+<tr>
+<td>UV Map</td>
+<td>🖼️</td>
+<td>UV map texture used to drive matrix sampling when <strong>Use UV Map</strong> is enabled.</td>
+</tr>
+<tr>
+<td>Use Depth Compensation</td>
+<td>true / false</td>
+<td>When using a UV map, compensates for depth so the pattern appears the same scale at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
+</tr>
+<tr>
+<td>UV Adaptive Background Blend</td>
+<td>true / false</td>
+<td>When enabled, blends the dithered output back toward the original color in regions where the UV map is denser than one dither cell per screen pixel, reducing Moiré patterns.</td>
+</tr>
+<tr>
+<td>UV Blend Start</td>
+<td>[0, 4]</td>
+<td>UV gradient magnitude at which blending toward the background starts. Below this value the full dither is shown.</td>
+</tr>
+<tr>
+<td>UV Blend End</td>
+<td>[0, 8]</td>
+<td>UV gradient magnitude at which the original color shows through completely. Above this value dithering is fully suppressed.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You <em>could</em> bake the matrices into a texture and use the <strong>Dither Texture Bias</strong> effect for slightly better performance.
+This effect is designed for interactive authoring. To export the dither texture, use the <a href="dither-grid-bias-designer.html">Dither Grid Bias Designer</a>.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+<li>Use <strong>UV Adaptive Background Blend</strong> together with <strong>Use Depth Compensation</strong> to avoid Moiré artifacts on surfaces that recede sharply in depth.</li>
+</ul>
+</div>
+<p><img src="effects/images/dither_grid_bias_hard.png" alt=""></p>
+<p><em>Hex grid, hard quantization.</em></p>
+<p><img src="effects/images/dither_grid_bias_soft.png" alt=""></p>
+<p><em>Hex grid, soft quantization.</em></p>
+<p><img src="effects/images/dither_grid_bias_rect.png" alt=""></p>
+<p><em>Rect grid.</em></p>
+<h2 id="dither-matrix-bias">Dither Matrix Bias</h2>
+<p>Turns the image into a dithered version using <strong>three independent user-supplied matrices</strong> (one for each color channel).
+This effect is ideal for designing and testing custom dithering patterns using small numerical matrices.</p>
+<p>The alpha channel is not changed by this effect.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>See also <a href="dithering-tips.html">Dithering Tips</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matrix R / G / B</td>
+<td>🔢</td>
+<td>A floating-point matrix for each color channel. Values are normalized automatically.</td>
+</tr>
+<tr>
+<td>Pixel Size</td>
+<td>(0, ∞)²</td>
+<td>Controls how large each matrix cell appears on the screen. Higher values make the pattern blockier.</td>
+</tr>
+<tr>
+<td>Pixelate</td>
+<td>true / false</td>
+<td>When enabled, snaps the output image to the dither grid so each pixel samples the color from its cell center. Use this with a matching Pixel Size for a fully pixelated look.</td>
+</tr>
+<tr>
+<td>Pixel Offset</td>
+<td>ℝ²</td>
+<td>Sub-pixel offset applied when <strong>Pixelate</strong> is enabled. Shifts the snapping grid to align cell centers precisely.</td>
+</tr>
+<tr>
+<td>Dither Amount Min</td>
+<td>[-1, 1]</td>
+<td>Minimum bias applied per channel based on the matrices.</td>
+</tr>
+<tr>
+<td>Dither Amount Max</td>
+<td>[-1, 1]</td>
+<td>Maximum bias applied per channel.</td>
+</tr>
+<tr>
+<td>Level Count</td>
+<td>[1, ∞)³</td>
+<td>Per-channel quantization level count (R, G, B).</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>[0, 1]</td>
+<td>Controls the softness of the quantization steps.</td>
+</tr>
+<tr>
+<td>Matrix Offset</td>
+<td>ℤ³</td>
+<td>Integer offset applied when tiling the dither matrices. Useful for shifting or animating patterns.</td>
+</tr>
+<tr>
+<td>Use UV Map</td>
+<td>true / false</td>
+<td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
+</tr>
+<tr>
+<td>UV Map</td>
+<td>🖼️</td>
+<td>UV map texture used to drive matrix sampling instead of screen-space UVs if enabled.</td>
+</tr>
+<tr>
+<td>Use Depth Compensation</td>
+<td>true / false</td>
+<td>If on, scales the pattern to compensate for depth, so textures look the same size at any distance when using a UV map. Blends between adjacent depth bands to smooth transitions.</td>
+</tr>
+<tr>
+<td>UV Adaptive Background Blend</td>
+<td>true / false</td>
+<td>When enabled, blends the dithered output back toward the original color in regions where the UV map is denser than one dither cell per screen pixel, reducing Moiré patterns. Only used when <strong>Use UV Map</strong> is enabled.</td>
+</tr>
+<tr>
+<td>UV Blend Start</td>
+<td>[0, 4]</td>
+<td>UV gradient magnitude at which blending toward the background starts. Below this value the full dither is shown.</td>
+</tr>
+<tr>
+<td>UV Blend End</td>
+<td>[0, 8]</td>
+<td>UV gradient magnitude at which the original color shows through completely. Above this value dithering is fully suppressed.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You <em>could</em> make a texture from the matrices and use the <strong>Dither Texture Bias</strong> effect for slightly better performance.
+This effect can still be used for prototyping. To design and export the dither texture, use the
+<a href="dither-pattern-designer.html">Dither Pattern Designer</a>.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<ul>
+<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
+for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
+</ul>
+</div>
+<p><img src="effects/images/dither_matrix_bias_hard.png" alt=""></p>
+<p><em>Hard quantization.</em></p>
+<p><img src="effects/images/dither_matrix_bias_soft.png" alt=""></p>
+<p><em>Soft quantization.</em></p>
 <h2 id="dither-texture-bias">Dither Texture Bias</h2>
 <p>Turns the image into a dithered version using a <strong>user-provided texture pattern</strong>.
 The texture’s values act as a bias added to the image before quantization, producing a stylized dither effect.
@@ -116,6 +345,11 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <td>Dither Pattern</td>
 <td>🖼️</td>
 <td>The texture used as the dither pattern. Its RGB channels act as a per-pixel bias.</td>
+</tr>
+<tr>
+<td>Mip Map Bias</td>
+<td>[0, 2]</td>
+<td>Bias applied to the mip level when sampling the dither pattern texture. Higher values select coarser mips, softening the pattern at a distance.</td>
 </tr>
 <tr>
 <td>Dither Amount Min</td>
@@ -168,108 +402,6 @@ for the built-in pipeline, or the corresponding renderer feature for URP. There 
 <p><em>Hard quantization with strong dithering.</em></p>
 <p><img src="effects/images/dither_texture_bias_soft.png" alt=""></p>
 <p><em>Soft quantization with smoothness applied.</em></p>
-<p>Below are <strong>additions only</strong> to the existing documentation, following <strong>exactly</strong> the style you demonstrated (single unified table, shader features surfaced as properties, no extra sections).</p>
-<hr>
-<h3 id="added-properties">Added Properties</h3>
-<p>Append the following rows to the existing property table:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Range</th>
-<th>Description</th>
-</tr>
-</thead>
-</table>
-<hr>
-<hr>
-<p>No other user-facing properties are present in the shader.
-Internal parameters such as mip bias and depth-band blending are handled automatically by the renderer and are intentionally not exposed.</p>
-<p>Send the next one when ready.</p>
-<h2 id="dither-matrix-bias">Dither Matrix Bias</h2>
-<p>Turns the image into a dithered version using <strong>three independent user-supplied matrices</strong> (one for each color channel).
-This effect is ideal for designing and testing custom dithering patterns using small numerical matrices.</p>
-<p>The alpha channel is not changed by this effect.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>See also <a href="dithering-tips.html">Dithering Tips</a></p>
-</div>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Range</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Matrix R / G / B</td>
-<td>🔢</td>
-<td>A floating-point matrix for each color channel. Values are normalized automatically.</td>
-</tr>
-<tr>
-<td>Pixel Size</td>
-<td>(0, ∞)²</td>
-<td>Controls how large each matrix cell appears on the screen. Higher values make the pattern blockier.</td>
-</tr>
-<tr>
-<td>Dither Amount Min</td>
-<td>[-1, 1]</td>
-<td>Minimum bias applied per channel based on the matrices.</td>
-</tr>
-<tr>
-<td>Dither Amount Max</td>
-<td>[-1, 1]</td>
-<td>Maximum bias applied per channel.</td>
-</tr>
-<tr>
-<td>Level Count</td>
-<td>[1, ∞)³</td>
-<td>Per-channel quantization level count (R, G, B).</td>
-</tr>
-<tr>
-<td>Smoothness</td>
-<td>[0, 1]</td>
-<td>Controls the softness of the quantization steps.</td>
-</tr>
-<tr>
-<td>Pixel Offset</td>
-<td>ℤ³</td>
-<td>Integer offset applied to the pixel grid before sampling the matrices. Useful for shifting or animating patterns.</td>
-</tr>
-<tr>
-<td>Use UV Map</td>
-<td>true / false</td>
-<td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
-</tr>
-<tr>
-<td>UV Map</td>
-<td>🖼️</td>
-<td>UV map texture used to drive matrix sampling instead of screen-space UVs if enabled.</td>
-</tr>
-<tr>
-<td>Use Depth Compensation</td>
-<td>true / false</td>
-<td>If on, scales the pattern to compensate for depth, so texture look the same size at any distace when using UV map. It blends between adjacent depth bands when using a UV map to smooth transitions.</td>
-</tr>
-</tbody>
-</table>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You <em>could</em> make a texture from the matices and use the <strong>Dither Texture Bias</strong> shader for slightly better performance.
-This shader can still be used for prototyping. To make the dither texture, see
-<a href="dither-pattern-generator">Dither pattern generator</a>.</p>
-</div>
-<div class="TIP">
-<h5>Tip</h5>
-<ul>
-<li>You can render out a UV Map with the <a href="../../common/docs/map-renderers-reference-common.html#uv-map"><code>UV Map Renderer</code></a>
-for the built-in pipeline, or the corresponding renderer feature for URP. There are more options for managing the scale.</li>
-</ul>
-</div>
-<p><img src="effects/images/dither_matrix_bias_hard.png" alt="">
-<img src="effects/images/dither_matrix_bias_soft.png" alt=""></p>
 
 </article>
 

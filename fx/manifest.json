@@ -908,6 +908,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherGridBiasPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that applies a data-driven grid bias dither.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherMatrixBiasPostProcess.yml",
       "output": {
         ".html": {
@@ -933,6 +947,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherTextureBiasPostProcess",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.DitherTextureBiasPostProcess.yml\" sourcestartlinenumber=\"1\">Post process effect that applies quantization with a dither texture bias pattern.\nSee <a href=\"../dithering/docs/effects-reference-dithering.html#dither-texture-bias\">../dithering/docs/effects-reference-dithering.html#dither-texture-bias</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.BuiltIn.PostProcessing.Effects.GridBiasDitherPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that applies a data-driven grid bias dither.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -978,6 +1006,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.Editor.DitherGridBiasTextureGenerator.yml\" sourcestartlinenumber=\"1\">Editor window that generates a dither bias texture from a <xref href=\"Gamelogic.Fx.Dithering.Editor.Internal.DitherGridBiasGeneratorHost\" data-throw-if-not-resolved=\"false\"></xref>,\nsupporting both hex and rectangular grid types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.yml\" sourcestartlinenumber=\"1\">Editor window that generates textures based on a FloatMatrix pattern.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Dithering.Editor.DitherMatrixPresetsLoader.yml",
       "output": {
         ".html": {
@@ -1020,6 +1076,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.FundamentalRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.FundamentalRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.FundamentalRegion",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.FundamentalRegion.yml\" sourcestartlinenumber=\"1\">A dither bias matrix whose valid entries are shaped by a parallelogram in a lattice.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.FundamentalRegionRGB",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.FundamentalRegionRGB.yml\" sourcestartlinenumber=\"1\">Three <xref href=\"Gamelogic.Fx.Dithering.FundamentalRegion\" data-throw-if-not-resolved=\"false\"></xref> instances — one per color channel — plus a\nshared &quot;all-channels&quot; region, with a <xref href=\"Gamelogic.Fx.Dithering.FundamentalRegionRGB.Locked\" data-throw-if-not-resolved=\"false\"></xref> flag that determines which\nregions are active.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.GridTypeFieldAttribute",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.GridTypeFieldAttribute.yml\" sourcestartlinenumber=\"1\">Applied to a <xref href=\"Gamelogic.Fx.Dithering.FundamentalRegion\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Gamelogic.Fx.Dithering.FundamentalRegionRGB\" data-throw-if-not-resolved=\"false\"></xref> field\nto enable grid-type-aware editor UI: row indentation (half-cell stagger per row) and\nZ± shift buttons when the active grid type is <xref href=\"Gamelogic.Fx.GridType.Hex\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.HexFundamentalRegionPresets",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.yml\" sourcestartlinenumber=\"1\">Contains preset fundamental regions for the hex dither bias system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.HexUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.HexUtils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.HexUtils",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.HexUtils.yml\" sourcestartlinenumber=\"1\">Utility functions for hex grid coordinate conversions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the grid bias dither post-processing effect.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.yml",
       "output": {
         ".html": {
@@ -1048,6 +1188,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.GridBiasDitherProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the grid bias dither post-processing effect.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.HexDitherMatrixBiasProperties.yml",
       "output": {
         ".html": {
@@ -1062,6 +1216,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.PostProcessing.Effects.ToolMode.yml\" sourcestartlinenumber=\"1\">Controls which visualization the grid bias dither effect renders.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Dithering.PostProcessing.Effects.yml",
       "output": {
         ".html": {
@@ -1073,6 +1241,34 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Dithering.PostProcessing.Effects",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.RectFundamentalRegionPresets",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.RectFundamentalRegionPresets.yml\" sourcestartlinenumber=\"1\">Contains preset fundamental regions for the rect dither bias system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.URP.GLDitherGridBiasRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that applies a data-driven grid bias dither effect.\nSee <a href=\"../dithering/docs/effects-reference-dithering.html#dither-grid-bias\">../dithering/docs/effects-reference-dithering.html#dither-grid-bias</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1160,6 +1356,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.DitherGridBiasDesignerWindow.yml\" sourcestartlinenumber=\"1\">An editor window for designing grid bias dither patterns. Shows the grid bias dither properties on the\nleft and a live preview on the right.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Editor.DitherPatternDesignerWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Editor.DitherPatternDesignerWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Editor.DitherPatternDesignerWindow",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.DitherPatternDesignerWindow.yml\" sourcestartlinenumber=\"1\">An editor window for designing dither patterns. Shows the dither properties on the left and a live preview\non the right.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.GridBiasDitherDesignerWindow.yml\" sourcestartlinenumber=\"1\">An editor window for designing grid bias dither patterns. Shows the grid bias dither properties on the\nleft and a live preview on the right.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Editor.Internal.ColorShaderPropertyListDrawer.yml",
       "output": {
         ".html": {
@@ -1199,6 +1437,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Editor.Internal",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Editor.IntervalDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Editor.IntervalDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Editor.IntervalDrawer",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.IntervalDrawer.yml\" sourcestartlinenumber=\"1\">Property drawer for <xref href=\"Gamelogic.Fx.Interval\" data-throw-if-not-resolved=\"false\"></xref> fields.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1244,6 +1496,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Editor.TextureGenerator.SerializedPropertyExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for <xref href=\"UnityEditor.SerializedProperty\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.Editor.TextureGenerator.TextureGeneratorWindow.yml",
       "output": {
         ".html": {
@@ -1268,6 +1534,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Editor.TextureGenerator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Editor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Editor",
       "Summary": null
     },
     {
@@ -1328,6 +1608,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.GridType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.GridType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.GridType",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.GridType.yml\" sourcestartlinenumber=\"1\">The cell geometry used by grid-based effects such as pixelation and dither bias.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.IFloatMatrix.yml",
       "output": {
         ".html": {
@@ -1339,6 +1633,76 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.IFloatMatrix",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.IFloatMatrix.yml\" sourcestartlinenumber=\"1\">Represents a read-only view of a two-dimensional matrix of float values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Internal.SupportsUIAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Internal.SupportsUIAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Internal.SupportsUIAttribute",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Internal.SupportsUIAttribute.yml\" sourcestartlinenumber=\"1\">Used to flag data that is not part of the object proper, but used to support the UI in some way.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Internal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Internal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Interval.ViewType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Interval.ViewType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Interval.ViewType",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Interval.ViewType.yml\" sourcestartlinenumber=\"1\">Determines how the interval is displayed in the inspector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.Interval.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.Interval.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.Interval",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Interval.yml\" sourcestartlinenumber=\"1\">Represents an interval of floats.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.IntervalRangeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.IntervalRangeAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.IntervalRangeAttribute",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.IntervalRangeAttribute.yml\" sourcestartlinenumber=\"1\">Use this on inspector fields of type <xref href=\"Gamelogic.Fx.Interval\" data-throw-if-not-resolved=\"false\"></xref> to limit tha range.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1814,7 +2178,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.PostProcessing.Effects.SimpleOutlineProperties",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.PostProcessing.Effects.SimpleOutlineProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the simple outline post-processing effect.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1888,6 +2252,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.RGBMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.RGBMatrix.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.RGBMatrix",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.RGBMatrix.yml\" sourcestartlinenumber=\"1\">Three <xref href=\"Gamelogic.Fx.FloatMatrix\" data-throw-if-not-resolved=\"false\"></xref> instances — one per color channel — plus a shared\n&quot;all-channels&quot; matrix, with a <xref href=\"Gamelogic.Fx.RGBMatrix.Locked\" data-throw-if-not-resolved=\"false\"></xref> flag that determines which matrices\nare active.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.RequiresMixboxAttribute.yml",
       "output": {
         ".html": {
@@ -1955,6 +2333,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.URP.ExperimentalSettings",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.ExperimentalSettings.yml\" sourcestartlinenumber=\"1\">Settings for features that may change.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.URP.GamelogicFxSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.URP.GamelogicFxSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.URP.GamelogicFxSettings",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.URP.GamelogicFxSettings.yml\" sourcestartlinenumber=\"1\">This class allows you to get and set some settings that control the package.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3379,6 +3771,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "common/docs/how-to-import-samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "common/docs/how-to-import-samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "common/docs/how-to-use-map-renderers.md",
       "output": {
         ".html": {
@@ -3403,6 +3805,16 @@
       "output": {
         ".html": {
           "relative_path": "common/docs/how-to-use-post-effects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "common/docs/index-samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "common/docs/index-samples.html"
         }
       },
       "version": ""
@@ -3499,10 +3911,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "common/docs/scale-of-screen-space-extures.md",
+      "source_relative_path": "common/docs/procedural-mask.md",
       "output": {
         ".html": {
-          "relative_path": "common/docs/scale-of-screen-space-extures.html"
+          "relative_path": "common/docs/procedural-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "common/docs/scale-of-screen-space-textures.md",
+      "output": {
+        ".html": {
+          "relative_path": "common/docs/scale-of-screen-space-textures.html"
         }
       },
       "version": ""
@@ -4055,10 +4477,40 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "dithering/docs/dither-pattern-generator.md",
+      "source_relative_path": "dithering/docs/dither-grid-bias-designer.md",
       "output": {
         ".html": {
-          "relative_path": "dithering/docs/dither-pattern-generator.html"
+          "relative_path": "dithering/docs/dither-grid-bias-designer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dithering/docs/dither-grid-bias-texture-generator.md",
+      "output": {
+        ".html": {
+          "relative_path": "dithering/docs/dither-grid-bias-texture-generator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dithering/docs/dither-matrix-bias-texture-generator.md",
+      "output": {
+        ".html": {
+          "relative_path": "dithering/docs/dither-matrix-bias-texture-generator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dithering/docs/dither-pattern-designer.md",
+      "output": {
+        ".html": {
+          "relative_path": "dithering/docs/dither-pattern-designer.html"
         }
       },
       "version": ""
@@ -4085,6 +4537,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "dithering/docs/effects/dither-grid-bias.md",
+      "output": {
+        ".html": {
+          "relative_path": "dithering/docs/effects/dither-grid-bias.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "dithering/docs/effects/dither-matrix-bias.md",
       "output": {
         ".html": {
@@ -4099,6 +4561,76 @@
       "output": {
         ".html": {
           "relative_path": "dithering/docs/effects/dither-texture-bias.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_grid_bias_designer_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_grid_bias_designer_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_grid_bias_designer_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_grid_bias_designer_2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_grid_bias_hard.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_grid_bias_hard.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_grid_bias_rect.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_grid_bias_rect.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_grid_bias_soft.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_grid_bias_soft.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_matrix_bias_designer_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_matrix_bias_designer_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "dithering/docs/effects/images/dither_matrix_bias_designer_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "dithering/docs/effects/images/dither_matrix_bias_designer_2.png"
         }
       },
       "version": ""

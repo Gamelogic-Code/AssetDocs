@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/dithering/docs/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,16 +94,58 @@
         <article data-uid="">
 <h1 id="gamelogic-fx-dithering">Gamelogic Fx Dithering</h1>
 
-<p><em>Version 4.0.0</em></p>
+<p><em>Version 5.0.0</em></p>
 <p><img src="../images/banner.png" alt=""></p>
-<p><strong>Gamelogic Fx Dithering</strong> provides a collection of shaders for producing  dithering effects in Unity.<br>
-Dithering is useful for simulating smooth gradients, transparent transitions, or stylized rendering.</p>
+<p><strong>Gamelogic Fx Dithering</strong> provides a collection of shaders for producing dithering effects in Unity.
+Dithering is useful for simulating smooth gradients, transparent transitions, or stylized rendering with a limited
+number of colors.</p>
 <p>In the past dithering was a way to get more color depth out of limited displays, but in
 modern games it is often used as a stylistic choice.</p>
+<p>Dithering works by applying a bias to the image before quantizing it. The way the bias is supplied differentiates the
+three techniques shipping with this package:</p>
+<ul>
+<li><p><strong><a href="effects-reference-dithering.html#dither-matrix-bias">Matrix bias</a>:</strong> A fixed pattern given as a matrix is applied to the image. The matrix is normalized, and repeated as
+necessary to cover the entire image. This is the most common form of dithering, and is used in many classic games. It
+includes Bayer dithering.</p>
+</li>
+<li><p><strong><a href="effects-reference-dithering.html#dither-texture-bias">Texture bias</a>:</strong> A texture is used to supply the bias. This allows for more complex patterns, and can be used to create
+effects such as noise dithering and halftone dithering. Any dithering scheme can be encoded in a texture; however,
+sampling and anti-aliasing, can make differences in how the technique looks.</p>
+</li>
+<li><p><strong><a href="effects-reference-dithering.html#dither-grid-bias">Grid bias</a>:</strong> This advanced dithering technique extends matrix bias. It too uses a matrix, but the tiling can be more
+complex. It also supports hex grid patterns, which are unusual but very pleasant.  For square pixels the technique
+allows more efficient representation of some patterns.</p>
+</li>
+</ul>
 <h2 id="samples">Samples</h2>
 <p>The package includes a sample scene demonstrating the various dithering effects and their settings.
-You can import samples via the <em>Package Manager</em> window in Unity. Make sure you open the scene in the
-folder that corresponds to the rendering pipeline you are using.</p>
+See <a href="../../common/docs/how-to-import-samples.html">How to import samples</a> for instructions on how to import the sample
+scene into your project.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Make sure you open the scene in the folder that corresponds to the rendering pipeline you are using.</p>
+</div>
+<p>For Built-in:
+<code>Assets/Samples/[Package]/[Version]/[Package Samples Root]/[Sample]/BuiltIn/</code></p>
+<p>For URP:
+<code>Assets/Samples/[Package]/[Version]/[Package Samples Root]/[Sample]/URP/</code></p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="built-in-render-pipeline">Built-in Render Pipeline</h3>
+<ol>
+<li>Select your camera in the Hierarchy.</li>
+<li>Click <strong>Add Component</strong> and search for the effect (e.g. <em>Dither Matrix Bias</em>).</li>
+<li>The effect is active immediately — adjust properties in the Inspector.</li>
+<li>For <strong>Dither Matrix Bias</strong> and <strong>Dither Grid Bias</strong>, click <strong>Open Designer</strong> in the Inspector to design the pattern interactively with a live preview.</li>
+</ol>
+<p>See <a href="../../common/docs/how-to-use-post-effects.html">How to use post effects</a> for a full walkthrough.</p>
+<h3 id="universal-render-pipeline-urp">Universal Render Pipeline (URP)</h3>
+<ol>
+<li>Open your <strong>URP Renderer asset</strong>.</li>
+<li>In the <strong>Renderer Features</strong> list, click <strong>Add Renderer Feature</strong> and search for the effect.</li>
+<li>Expand the feature to adjust its properties.</li>
+<li>For <strong>Dither Matrix Bias</strong> and <strong>Dither Grid Bias</strong>, click <strong>Open Designer</strong> to design the pattern interactively with a live preview.</li>
+</ol>
+<p>See <a href="../../common/docs/how-to-use-post-effects.html">How to use post effects</a> for a full walkthrough.</p>
 <h2 id="included-shaders">Included Shaders</h2>
 <h3 id="post-effect-shaders"><strong>Post-effect shaders</strong></h3>
 <p>Create full-screen dithering using the Built-in Render Pipeline or URP.</p>
@@ -118,6 +160,14 @@ folder that corresponds to the rendering pipeline you are using.</p>
 <ul>
 <li><a href="../../common/docs/how-to-use-object-shaders.html">📘 How to use object shaders</a>.</li>
 <li><a href="object-shaders-reference-dithering.html">Dithering Object Shaders Reference</a> for details on each shader.</li>
+</ul>
+<h2 id="editor-tools">Editor Tools</h2>
+<p>Interactive tools for designing dithering patterns and generating textures.</p>
+<ul>
+<li><a href="dither-pattern-designer.html">Dither Pattern Designer</a> — interactively design the matrices used by the <strong>Dither Matrix Bias</strong> effect, with a live preview.</li>
+<li><a href="dither-grid-bias-designer.html">Dither Grid Bias Designer</a> — interactively design the hex or rectangular grid bias matrices used by the <strong>Dither Grid Bias</strong> effect, with a live preview.</li>
+<li><a href="dither-matrix-bias-texture-generator.html">Dither Matrix Bias Texture Generator</a> — bake dither matrices (greyscale or RGB) to a texture suitable for the <strong>Dither Texture Bias</strong> effect.</li>
+<li><a href="dither-grid-bias-texture-generator.html">Dither Grid Bias Texture Generator</a> — bake a grid bias pattern (hex or rectangular) to a texture suitable for the <strong>Dither Texture Bias</strong> effect.</li>
 </ul>
 <h2 id="pipeline-support">Pipeline Support</h2>
 <p>This package supports both:</p>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/common/docs/procedural-mask.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="procedural-masked-post-process-runner">Procedural Masked Post-Process Runner</h2>
+<p>Runs all post-process components found as children of a specified root transform, then composites the result onto the original image through a <strong>procedurally computed mask</strong> — either a half-plane or an ellipse.
+This lets you restrict an effect to one side of a line, or to an elliptical region, without authoring a mask texture.</p>
+<p>For the texture-masked equivalent, see <code>MaskedPostProcessRunner</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All spatial parameters (<strong>Center</strong>, <strong>Softness</strong>, <strong>Radii</strong>) are expressed in <strong>aspect-corrected normalised screen-height units</strong>.
+A value of <code>0.5</code> always reaches half the screen height regardless of the display's aspect ratio.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Post Process Root</td>
+<td>Transform</td>
+<td>The transform whose children are scanned for enabled post-process components. Components are run in child order.</td>
+</tr>
+<tr>
+<td>Effect Strength</td>
+<td>[0, 1]</td>
+<td>Overall opacity of the composited effect. <code>0</code> shows only the original image; <code>1</code> applies the effect at full strength.</td>
+</tr>
+<tr>
+<td>Mask Shape</td>
+<td>HalfPlane / Ellipse</td>
+<td>The procedural shape used to compute the mask.</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>ℝ²</td>
+<td>Centre of the mask shape in normalised screen coordinates (<code>0,0</code> = bottom-left, <code>1,1</code> = top-right).</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>ℝ (degrees)</td>
+<td>Rotation of the mask shape. For a half-plane, this rotates the dividing line; for an ellipse, it rotates the major axis.</td>
+</tr>
+<tr>
+<td>Softness</td>
+<td>ℝ≥0</td>
+<td>Width of the soft-edge transition in aspect-corrected normalised screen-height units. Larger values produce a wider, more gradual blend.</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>true / false</td>
+<td>When enabled, the masked and unmasked regions are swapped.</td>
+</tr>
+<tr>
+<td>Radii</td>
+<td>ℝ²≥0</td>
+<td>Semi-axes of the ellipse in aspect-corrected normalised screen-height units. Only used when <strong>Mask Shape</strong> is <strong>Ellipse</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-shapes">Mask shapes</h3>
+<p><strong>HalfPlane</strong> — draws a line through <strong>Center</strong> at <strong>Angle</strong> degrees, masking everything on one side. Rotate the angle to reposition the dividing edge; use <strong>Softness</strong> to feather it.</p>
+<p><strong>Ellipse</strong> — draws an ellipse centred at <strong>Center</strong> with semi-axes given by <strong>Radii</strong>. <strong>Angle</strong> rotates the ellipse around its centre.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
