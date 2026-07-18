@@ -1030,7 +1030,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator",
-      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.yml\" sourcestartlinenumber=\"1\">Editor window that generates textures based on a FloatMatrix pattern.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.Dithering.Editor.DitherMatrixBiasTextureGenerator.yml\" sourcestartlinenumber=\"1\">Editor window that generates a dither bias texture from a <xref href=\"Gamelogic.Fx.Dithering.Editor.Internal.DitherMatrixBiasGeneratorHost\" data-throw-if-not-resolved=\"false\"></xref>,\nsupporting both a shared &quot;All&quot; matrix (grayscale) and independent R/G/B matrices.</p>\n"
     },
     {
       "type": "ManagedReference",

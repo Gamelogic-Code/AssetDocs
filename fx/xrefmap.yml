@@ -2554,6 +2554,12 @@ references:
   commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex3x3
   fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex3x3
   nameWithType: HexFundamentalRegionPresets.Hex3x3
+- uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex9x9
+  name: Hex9x9
+  href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Hex9x9
+  commentId: F:Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex9x9
+  fullName: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Hex9x9
+  nameWithType: HexFundamentalRegionPresets.Hex9x9
 - uid: Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.Uniform3
   name: Uniform3
   href: api/Gamelogic.Fx.Dithering.HexFundamentalRegionPresets.html#Gamelogic_Fx_Dithering_HexFundamentalRegionPresets_Uniform3

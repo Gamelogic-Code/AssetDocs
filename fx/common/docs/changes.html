@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/dither-designer/DocSrc/common/docs/changes.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/changes.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -94,7 +94,19 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="500-2026-06-29">[5.0.0] 2026-06-29</h2>
+<h2 id="510-2026-07-18">[5.1.0] 2026-07-18</h2>
+<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li><code>PostProcessRendererFeature&lt;T&gt;</code> and <code>GLMapRendererFeature&lt;T&gt;</code> (URP) now poll <code>CheckMaterialVersion()</code> every frame and recreate their material(s) when the version changes, matching the Built-In <code>PostProcess&lt;T&gt;</code> host. Previously, resizing a variable-size array property (for example a dither matrix) while using the URP renderer feature left the material with the old array size. No current map effect uses this yet, but <code>GLMapRendererFeature&lt;T&gt;</code> is now wired up the same way.</li>
+<li><code>PostProcessRendererFeature&lt;T&gt;.Create()</code>, <code>SeparableRendererFeature&lt;T&gt;.Create()</code>, and <code>GLMapRendererFeature&lt;T&gt;.Create()</code> no longer leak resources when Unity calls <code>Create()</code> again (which happens on every enable/disable, every Inspector edit anywhere in the feature, and after script reload — not just once). The render pass(es) are still rebuilt every time (needed since <code>injectionPoint</code> is baked into the pass constructor with no way to update it later), but now properly release their native resources first via the new <code>PostEffectPass.ReleaseResources()</code>. The material(s) are only (re)created when actually missing, instead of being unconditionally destroyed and reallocated on every unrelated property edit.</li>
+<li><code>MapPass</code>/<code>RenderGraph_MapPass</code> no longer create or own their <code>material</code>/<code>backgroundMaterial</code> — ownership moved to <code>GLMapRendererFeature&lt;T&gt;</code>, which now applies the same &quot;recreate only when missing&quot; rule described above. Also fixes a latent <code>NullReferenceException</code> risk in <code>GLMapRendererFeature&lt;T&gt;.AddRenderPasses</code> when the pass was null (for example, if <code>Create()</code> had bailed out due to a missing shader) — it now falls back to <code>Create()</code> the same way <code>PostProcessRendererFeature&lt;T&gt;</code> does.</li>
+<li>Added <code>PostEffectPass.ReleaseResources()</code> to release the pass's <code>CommandBuffer</code> and <code>RTHandle</code> — neither was ever released when a pass was discarded, which happened on every <code>Create()</code> call regardless of the fix above.</li>
+<li>Fixed <code>FxUtils.UpdateMaterial</code>: when <code>shader</code> is null, it now destroys the existing material before dropping the reference. Previously it just set the reference to <code>null</code>, leaking the material if a map's shader ever went from valid to null at runtime.</li>
+<li><code>FxUtils.CreateMaterial</code>'s non-URP branch now sets <code>hideFlags = HideFlags.DontSave</code> on the material it creates, matching every other material-creation site (the URP branch already got this for free from <code>CoreUtils.CreateEngineMaterial</code>).</li>
+<li>Added <code>MapRenderer&lt;T&gt;</code> (Built-In) <code>OnValidate</code>, so map property edits refresh the material reactively instead of only on <code>OnEnable</code>/the manual <code>Rebind</code> button. Also wired <code>CheckMaterialVersion</code> polling into <code>CreateOrUpdateMaterials</code> (called every frame from <code>BuildCommandBuffer</code>, matching <code>PostProcess&lt;T&gt;</code>/<code>GLMapRendererFeature&lt;T&gt;</code>) — no current map effect needs it yet, but the hookup is now consistent across all four hosts.</li>
+<li>Fixed <code>FloatMatrixGUI.DrawSizeControls</code>: the +/− row/column buttons mutated the live <code>FloatMatrix</code> directly (correctly bumping <code>SizeVersion</code>), then called <code>ApplyModifiedPropertiesWithoutUndo()</code> against a <code>SerializedObject</code> buffer that predated the mutation — silently reverting <code>SizeVersion</code> back to its stale value and leaving <code>MaterialVersion</code> unable to detect the resize. Now calls <code>serializedObject.Update()</code> instead, which re-pulls the entire current object state (including <code>SizeVersion</code>) into the buffer. Also hardened <code>FloatMatrixGUI.DrawChannelContents</code>'s preset-apply callback, which had no sync step at all, with the same <code>Update()</code> call.</li>
+</ul>
+<h2 id="500-2026-07-15">[5.0.0] 2026-07-15</h2>
 <h3 id="-new-features">🎉 New Features</h3>
 <ul>
 <li>Added <code>GridType</code> enum (<code>Hex</code> / <code>Rect</code>) for use with grid-based effects such as Pixelate and Dither Grid Bias.</li>
@@ -126,7 +138,7 @@
 <li>Added <a class="xref" href="../../api/Gamelogic.Fx.BuiltIn.Scripts.RenderDataExtensions.html">RenderDataExtensions</a> with <code>FindFeature&lt;T&gt;</code>, <code>FindRequiredFeature&lt;T&gt;</code>, and <code>FindFeatures&lt;T&gt;</code> extension methods on <code>ScriptableRendererData</code> for convenient renderer feature lookup by type.</li>
 <li>Added <a class="xref" href="../../api/Gamelogic.Fx.BuiltIn.PostProcessing.ProceduralMaskedPostProcessRunner.html">ProceduralMaskedPostProcessRunner</a>, a Built-In pipeline post-process runner that blends a stack of child effects using a procedurally computed mask — either a half-plane (line) or an ellipse — with configurable centre, angle, softness, invert, and radii parameters.</li>
 </ul>
-<h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed issues where maps where not handling renderer-specific issues correctly. This caused ID maps to render in only
 one color and UV maps to ignore tiling.</li>
@@ -146,7 +158,7 @@ one color and UV maps to ignore tiling.</li>
 <li>Startup wizard now displays context features.</li>
 <li>Added <a class="xref" href="../../api/Gamelogic.Fx.URP.ExperimentalSettings.html">ExperimentalSettings</a>.</li>
 </ul>
-<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
 <ul>
 <li>Post-processing and mapping renderer features now skip overlay cameras.</li>
 </ul>
@@ -161,7 +173,7 @@ one color and UV maps to ignore tiling.</li>
 <li>Now URP works fully with RenderGraph!</li>
 <li>Added layer masking for map renderers.</li>
 </ul>
-<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
 <ul>
 <li>Effects stay active when changing scenes in the editor.</li>
 </ul>
@@ -172,13 +184,13 @@ one color and UV maps to ignore tiling.</li>
 frame or once only.</li>
 <li>URP map renderers now refresh their render lists when a new scene is loaded.</li>
 </ul>
-<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed bugs where map renderers would throw errors when changing scenes.</li>
 <li>Fixed map renderers sometimes trying to get meshes from renderers that have been destroyed.</li>
 </ul>
 <h2 id="201-2026-03-07">[2.0.1] 2026-03-07</h2>
-<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-5">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed a bug in <code>ShaderProperty.SetOn</code> where the <code>IntegerArray</code> case wrote into <code>floatArrayValue</code> assuming it was non-null and the correct size, which could cause a <code>NullReferenceException</code> or <code>IndexOutOfRangeException</code> at runtime.</li>
 <li>Fixed a bug in <code>ShaderPropertyThrowHelper.WarnIfExceeds</code> where the <code>argName</code> parameter was declared as <code>int</code> instead of <code>string</code>, causing incorrect formatting in warning messages.</li>
