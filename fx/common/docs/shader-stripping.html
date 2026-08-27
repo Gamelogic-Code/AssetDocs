@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Shader Stripping | Gamelogic Fx </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Shader Stripping | Gamelogic Fx ">
+      
+      
+      <link rel="icon" href="../../images/gamelogic_favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/shader-stripping.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-68729P67EH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-68729P67EH');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/gamelogic_icon.png" alt="Gamelogic Fx">
+            Gamelogic Fx
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="shader-stripping">Shader Stripping</h1>
+
+<p>Gamelogic Fx effect materials are created at runtime rather than saved as <code>.mat</code> assets, so Unity's
+normal shader stripping — which only keeps <code>shader_feature</code> variants it can prove are referenced by a
+material in the build — can't see which keyword combinations your effects actually use, and may strip
+the ones you need. This would show up as an effect rendering with the wrong look (falling back to the
+shader's default variant) or, in some cases, not rendering at all.</p>
+<h2 id="how-the-package-prevents-this">How the package prevents this</h2>
+<p>Gamelogic Fx automatically generates a <code>ShaderVariantCollection</code> that records every keyword combination
+actually configured on your project's post-process effects, renderer features, and map renderers, and
+registers it in <strong>Project Settings &gt; Graphics &gt; Preloaded Shaders</strong>. This tells Unity's stripper to keep
+those variants no matter what.</p>
+<p>This collection is rebuilt automatically before every build. You can also rebuild it manually at any
+time via <strong>Tools &gt; Gamelogic &gt; Fx &gt; Rebuild Shader Variant Collection</strong>.</p>
+<h2 id="which-properties-can-trigger-this">Which properties can trigger this</h2>
+<p>A property marked with 🔑 in the effect reference tables (see the <a href="icon-key.html">Icon Key</a>) selects a
+shader keyword. Only these properties affect stripping — everything else is a plain shader uniform and
+is never at risk.</p>
+<h2 id="if-you-change-a--property-dynamically-at-runtime">If you change a 🔑 property dynamically at runtime</h2>
+<p>The collector works by finding the serialized data on your scenes (the ones in Build Settings) and
+prefabs. A combination your code only ever sets at runtime, with no scene or prefab in that state,
+is never found this way.</p>
+<p>Cover it with your own <a href="https://docs.unity3d.com/ScriptReference/ShaderVariantCollection.html">ShaderVariantCollection</a>
+asset, containing the effect's shader and the keyword combination in question — it can live anywhere in
+the project and doesn't need to be merged with the auto-generated one. Add it to <strong>Project Settings &gt;
+Graphics &gt; Preloaded Shaders</strong> alongside <code>GamelogicFxShaderVariants</code> so the stripper keeps it too.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -96,11 +96,40 @@
 
 <p><img src="../images/reference.png" alt=""></p>
 <p><em>This image shows the original scene without any post processing.</em></p>
+<h2 id="icon-key">Icon Key</h2>
+<p>Symbols used in the property reference tables throughout these docs.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🖼️</td>
+<td>Texture field.</td>
+</tr>
+<tr>
+<td>🎨</td>
+<td>Color field.</td>
+</tr>
+<tr>
+<td>🔢</td>
+<td>Matrix field.</td>
+</tr>
+<tr>
+<td>🔑</td>
+<td>Shader keyword. Selecting this property switches the effect's shader between <code>shader_feature</code> variants. See <a href="shader-stripping.html">Shader Stripping</a> if you plan to change one of these dynamically at runtime rather than through the Inspector.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="add-texture">Add Texture</h2>
 <p>Adds a texture (remapped to specified min amd max) to the image.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -108,16 +137,19 @@
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Overlay Texture</td>
 <td>🖼️</td>
 <td>The texture image to add.</td>
 </tr>
 <tr>
+<td></td>
 <td>Min</td>
 <td>[-1, 1]</td>
 <td>The minimum value to remap the texture to.</td>
 </tr>
 <tr>
+<td></td>
 <td>Max</td>
 <td>[-1, 1]</td>
 <td>The maximum value to remap the texture to.</td>
@@ -136,6 +168,7 @@ the alpha channel in tact.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description                                                                                            <br></th>
@@ -143,6 +176,7 @@ the alpha channel in tact.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Gamma</td>
 <td>(0, ∞)</td>
 <td>When 1.0, no change is made. Values less than 1.0 darken the image, while values greater than 1.0 lighten it.</td>
@@ -156,6 +190,7 @@ the alpha channel in tact.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -163,6 +198,7 @@ the alpha channel in tact.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Saturation</td>
 <td>[0, 2)</td>
 <td>Controls color intensity. <code>1</code> leaves the image unchanged, <code>0</code> fully desaturates to grayscale. Values greater than <code>1</code> increase saturation.</td>
@@ -183,31 +219,46 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Properties</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Kernel Size</td>
 <td>[0, ∞)</td>
 <td>The number of pixels sampled.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>KernelOffset</td>
 <td>(-∞, ∞)</td>
 <td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Jump Size</td>
 <td>(0, ∞)</td>
 <td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Direction</td>
 <td>—</td>
 <td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -219,6 +270,7 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -226,11 +278,13 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Spatial Sigma</td>
 <td>(0, ∞)</td>
 <td>Controls how strongly the filter considers <strong>spatial</strong> distance. Larger values spread influence farther.</td>
 </tr>
 <tr>
+<td></td>
 <td>Range Sigma</td>
 <td>(0, 1)</td>
 <td>Controls sensitivity to <strong>color differences</strong>. Lower values preserve edges more strongly.</td>
@@ -251,6 +305,7 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -258,21 +313,25 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Overlay Texture</td>
 <td>🖼️</td>
 <td>The texture to blend with the image. The original alpha is respected.</td>
 </tr>
 <tr>
+<td></td>
 <td>Opacity</td>
 <td>[0, 1]</td>
 <td>Controls the strength of the blend. A value of 0 shows only the original image, while 1 applies the overlay fully (modulated by the overlay’s alpha).</td>
 </tr>
 <tr>
+<td>🔑</td>
 <td>Use Mask</td>
 <td>true / false</td>
 <td>When enabled, a mask texture controls per-pixel blend strength.</td>
 </tr>
 <tr>
+<td></td>
 <td>Mask Texture</td>
 <td>🖼️</td>
 <td>Greyscale mask used to restrict where the overlay is applied. White = full blend, black = no blend. Only used when <strong>Use Mask</strong> is enabled.</td>
@@ -297,31 +356,46 @@ Non-edge regions become soft and clean, while sharp features remain intact.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Properties</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Kernel Size</td>
 <td>[0, ∞)</td>
 <td>The number of pixels sampled.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>KernelOffset</td>
 <td>(-∞, ∞)</td>
 <td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Jump Size</td>
 <td>(0, ∞)</td>
 <td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Direction</td>
 <td>—</td>
 <td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -337,31 +411,46 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td><strong>Level Count</strong></td>
 <td>[1, ∞)</td>
 <td>Number of refinement iterations. Higher values move colors closer to the convex hull defined by the primary colors.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>Background Color</strong></td>
 <td>🎨</td>
 <td>Starting reference color used in the convex-hull projection process.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>Primary Colors (0–9)</strong></td>
 <td>🎨</td>
 <td>Palette colors that define the convex hull. Pixel colors are iteratively pulled toward these anchors.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>Primary Color Count</strong></td>
 <td>[1, 10]</td>
 <td>Number of primary colors currently active in the convex hull.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -387,31 +476,46 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Properties</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Kernel Size</td>
 <td>[0, ∞)</td>
 <td>The number of pixels sampled.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>KernelOffset</td>
 <td>(-∞, ∞)</td>
 <td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Jump Size</td>
 <td>(0, ∞)</td>
 <td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Direction</td>
 <td>—</td>
 <td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -423,6 +527,7 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -430,6 +535,7 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Sigma</td>
 <td>(0, ∞)</td>
 <td>Controls how quickly the Gaussian curve falls off. Higher values produce a softer, more spread-out blur.</td>
@@ -456,31 +562,46 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Properties</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Kernel Size</td>
 <td>[0, ∞)</td>
 <td>The number of pixels sampled.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>KernelOffset</td>
 <td>(-∞, ∞)</td>
 <td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Jump Size</td>
 <td>(0, ∞)</td>
 <td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Direction</td>
 <td>—</td>
 <td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -500,31 +621,46 @@ This effect gradually shifts colors toward the provided primaries, producing pos
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Properties</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Kernel Size</td>
 <td>[0, ∞)</td>
 <td>The number of pixels sampled.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>KernelOffset</td>
 <td>(-∞, ∞)</td>
 <td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Jump Size</td>
 <td>(0, ∞)</td>
 <td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Direction</td>
 <td>—</td>
 <td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -545,36 +681,54 @@ This produces smoother, more natural transitions than standard linear interpolat
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td><strong>Mixbox LUT</strong></td>
 <td>🖼️</td>
 <td>Lookup texture required for Mixbox’s perceptually accurate subtractive color blending.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Level Count</strong></td>
 <td>[1, ∞)</td>
 <td>Number of refinement iterations. Higher values move colors closer to the convex hull defined by the primary colors.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>Background Color</strong></td>
 <td>🎨</td>
 <td>Starting reference color used for Mixbox convex-hull projection.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>Primary Colors (0–9)</strong></td>
 <td>🎨</td>
 <td>Palette colors that define the convex hull. Pixel colors are iteratively blended toward these anchors using Mixbox.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>Primary Color Count</strong></td>
 <td>[1, 10]</td>
 <td>Number of primary colors currently active in the convex hull.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -593,6 +747,7 @@ This produces smoother, more natural transitions than standard linear interpolat
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -600,16 +755,19 @@ This produces smoother, more natural transitions than standard linear interpolat
 </thead>
 <tbody>
 <tr>
+<td>🔑</td>
 <td>Grid Type</td>
 <td>Hex/Rect</td>
 <td>Cell geometry used for the pixel grid. <strong>Hex</strong> snaps to pointy-top hexagonal cells; <strong>Rect</strong> snaps to square cells.</td>
 </tr>
 <tr>
+<td></td>
 <td>Pixel Size</td>
 <td>(1, ∞)²</td>
 <td>Width and height of each pixel block in screen pixels. Higher values produce larger blocks.</td>
 </tr>
 <tr>
+<td></td>
 <td>Pixel Offset</td>
 <td>ℝ²</td>
 <td>Shifts the pixel grid by this many screen pixels. Only used in <strong>Rect</strong> mode.</td>
@@ -633,31 +791,46 @@ This produces smoother, more natural transitions than standard linear interpolat
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Properties</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Kernel Size</td>
 <td>[0, ∞)</td>
 <td>The number of pixels sampled.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>KernelOffset</td>
 <td>(-∞, ∞)</td>
 <td>Where the kernel should start relative to the pixel. This is set by the shader internally to center kernels (even-sized kernels are 0.5 to the right of the center).</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Jump Size</td>
 <td>(0, ∞)</td>
 <td>Multiplies the sampling step size. Use values greater than 1 for faster, softer blurs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Direction</td>
 <td>—</td>
 <td>The blur direction (1,0) for horizontal, (0,1) for vertical. Internally set by the renderer.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -669,6 +842,7 @@ This produces smoother, more natural transitions than standard linear interpolat
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -676,6 +850,7 @@ This produces smoother, more natural transitions than standard linear interpolat
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Power</td>
 <td>(-∞, ∞)</td>
 <td>Controls the type of mean. Lower values emphasize dark tones, higher values emphasize bright tones.</td>
@@ -694,18 +869,24 @@ This produces smoother, more natural transitions than standard linear interpolat
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Level Count</td>
 <td>[2, ∞)</td>
 <td>Specifies the number of quantization levels for each color channel (R, G, B). Higher values preserve more detail.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Smoothness</td>
 <td>[0, 1]</td>
 <td>Controls the softness of transitions between quantized levels. A value of 0 produces hard edges, while higher values blend the steps smoothly.</td>
@@ -728,6 +909,7 @@ colorful result.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -735,41 +917,49 @@ colorful result.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Low Color</td>
 <td>🎨</td>
 <td>Color used for values below LowValue.</td>
 </tr>
 <tr>
+<td></td>
 <td>Mid0 Color</td>
 <td>🎨</td>
 <td>Color used for the first mid range (between LowValue and Mid0Value).</td>
 </tr>
 <tr>
+<td></td>
 <td>Mid1 Color</td>
 <td>🎨</td>
 <td>Color used for the second mid range (between Mid0Value and Mid1Value).</td>
 </tr>
 <tr>
+<td></td>
 <td>High Color</td>
 <td>🎨</td>
 <td>Color used for values above Mid1Value.</td>
 </tr>
 <tr>
+<td></td>
 <td>Low Value</td>
 <td>[0, 1]</td>
 <td>Lower threshold for lightness.</td>
 </tr>
 <tr>
+<td></td>
 <td>Mid0 Value</td>
 <td>[0, 1]</td>
 <td>Threshold separating low and mid0 regions.</td>
 </tr>
 <tr>
+<td></td>
 <td>Mid1 Value</td>
 <td>[0, 1]</td>
 <td>Threshold separating mid0 and mid1 regions.</td>
 </tr>
 <tr>
+<td></td>
 <td>High Value</td>
 <td>[0, 1]</td>
 <td>Upper threshold for lightness.</td>
@@ -783,41 +973,62 @@ Edges can be detected from the original image, scene depth, scene normals, or an
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>🔑</td>
 <td>Outline Source</td>
 <td>{0, 1, 2, 3}</td>
 <td>Selects the source used for edge detection. See <strong>Outline Sources</strong> below.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Jump Size</td>
 <td>[0, ∞)</td>
 <td>Multiplies the sampling offset. Larger values produce thicker, coarser outlines.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Edge Factor</td>
 <td>[0, ∞)</td>
 <td>Scales the detected edge strength before thresholding. Used to make threshold tuning easier.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Threshold</td>
 <td>[0, ∞)</td>
 <td>Edge strength above which a pixel is considered part of an outline.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Line Color</td>
 <td>🎨</td>
 <td>Color used to draw detected edges. Alpha controls how much it blends over the original image.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Background Color</td>
 <td>🎨</td>
 <td>Color used where no edge is detected. Alpha controls blending with the original image.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -866,6 +1077,7 @@ better approach is to use a Min filter (for dark outlines) or Max filter (for li
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -873,31 +1085,37 @@ better approach is to use a Min filter (for dark outlines) or Max filter (for li
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Low Color</td>
 <td>🎨</td>
 <td>The color applied to the darkest areas of the image.</td>
 </tr>
 <tr>
+<td></td>
 <td>Mid Color</td>
 <td>🎨</td>
 <td>The color applied to mid-range tones.</td>
 </tr>
 <tr>
+<td></td>
 <td>High Color</td>
 <td>🎨</td>
 <td>The color applied to the brightest areas of the image.</td>
 </tr>
 <tr>
+<td></td>
 <td>Low Value</td>
 <td>[0, 1]</td>
 <td>The threshold below which pixels are tinted entirely with the Low Color.</td>
 </tr>
 <tr>
+<td></td>
 <td>Mid Value</td>
 <td>[0, 1]</td>
 <td>The midpoint that controls the blend between low and high regions.</td>
 </tr>
 <tr>
+<td></td>
 <td>High Value</td>
 <td>[0, 1]</td>
 <td>The threshold above which pixels are tinted entirely with the High Color.</td>

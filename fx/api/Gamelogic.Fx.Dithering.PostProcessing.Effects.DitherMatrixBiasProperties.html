@@ -146,6 +146,12 @@ public class DitherMatrixBiasProperties : ShaderProperties</code></pre>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture">ShaderProperties.RequiresNormalsTexture</a>
     </div>
     <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements">ShaderProperties.Requirements</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords">ShaderProperties.GetActiveShaderFeatureKeywords()</a>
+    </div>
+    <div>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_OnValidate">ShaderProperties.OnValidate()</a>
     </div>
     <div>
@@ -572,14 +578,14 @@ It should match the full shader path as defined in the shader file.</p>
 effect material. This guarantees that staleness detection and material recreation happen in
 the same frame, with no visible lag.</p>
 <p></p>
-Override this in subclasses whose properties can change size independently of normal
+<p>Override this in subclasses whose properties can change size independently of normal
 inspector validation — for example, float arrays, texture arrays, or compute buffers whose
 element count is driven by user-editable data. Compare the current state against a stored
-"last seen" snapshot and call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> on a mismatch.
+&quot;last seen&quot; snapshot and call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> on a mismatch.</p>
 <p></p>
-See Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
+<p>See Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
 for a worked example: it tracks each channel matrix's <code>FloatMatrix.SizeVersion</code> and
-increments the material version whenever any matrix is resized.
+increments the material version whenever any matrix is resized.</p>
 </div>
 
 
@@ -617,9 +623,9 @@ increments the material version whenever any matrix is resized.
   <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
 (for example, floats, vectors, colors, textures, and keywords).</p>
 <p></p>
-Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
+<p>Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
 material has already been fetched, so any increment would take effect one frame late.
-Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.
+Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.</p>
 </div>
 
 

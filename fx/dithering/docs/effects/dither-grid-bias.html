@@ -104,91 +104,142 @@ The matrices are designed interactively in the <a href="../dither-grid-bias-desi
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>🔑</td>
 <td>Grid Type</td>
 <td>Hex / Rect</td>
 <td>Cell geometry used for the dither grid. <strong>Hex</strong> snaps to pointy-top hexagonal cells; <strong>Rect</strong> snaps to square cells.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Matrix R / G / B</td>
 <td>🔢</td>
 <td>A floating-point matrix for each color channel. Values are normalized automatically. Designed using the <a href="../dither-grid-bias-designer.html">Dither Grid Bias Designer</a>.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Pixel Size</td>
 <td>(0, ∞)²</td>
 <td>Controls how large each matrix cell appears on screen. Higher values make the pattern blockier.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Pixelate</td>
 <td>true / false</td>
 <td>When enabled, snaps the output image to the dither grid so each pixel samples the color from its cell center. Use this with a matching Pixel Size for a fully pixelated look.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Pixel Offset</td>
 <td>ℝ²</td>
 <td>Sub-pixel offset applied when <strong>Pixelate</strong> is enabled. Shifts the snapping grid to align cell centers precisely.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Grid Angle</td>
 <td>[-90°, 90°]</td>
 <td>Rotates the dither grid in degrees. Applied in screen-pixel space so the rotation is physically isotropic regardless of render target aspect ratio.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Dither Amount Min</td>
 <td>[-1, 1]</td>
 <td>Minimum bias added to each channel before quantization.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Dither Amount Max</td>
 <td>[-1, 1]</td>
 <td>Maximum bias added to each channel before quantization.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Level Count</td>
 <td>[1, ∞)³</td>
 <td>Per-channel quantization level count (R, G, B). Lower values produce more posterized output.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Smoothness</td>
 <td>[0, 1]</td>
 <td>Controls the softness of the quantization steps.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>Use UV Map</td>
 <td>true / false</td>
 <td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Map</td>
 <td>🖼️</td>
 <td>UV map texture used to drive matrix sampling when <strong>Use UV Map</strong> is enabled.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>Use Depth Compensation</td>
 <td>true / false</td>
 <td>When using a UV map, compensates for depth so the pattern appears the same scale at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>UV Adaptive Background Blend</td>
 <td>true / false</td>
 <td>When enabled, blends the dithered output back toward the original color in regions where the UV map is denser than one dither cell per screen pixel, reducing Moiré patterns.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Blend Start</td>
 <td>[0, 4]</td>
 <td>UV gradient magnitude at which blending toward the background starts. Below this value the full dither is shown.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Blend End</td>
 <td>[0, 8]</td>
 <td>UV gradient magnitude at which the original color shows through completely. Above this value dithering is fully suppressed.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

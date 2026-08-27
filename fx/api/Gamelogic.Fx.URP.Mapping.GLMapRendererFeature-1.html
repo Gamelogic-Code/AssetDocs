@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1" class="text-break">
-Class GLMapRendererFeature&lt;TMapProperties&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L51"><i class="bi bi-code-slash"></i></a>
+Class GLMapRendererFeature&lt;TMapProperties&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -416,11 +416,48 @@ type as the generic parameter. Generally the class can be empty (a concrete type
 </h2>
 
 
+  <a id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_BaseProperties_" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.BaseProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_BaseProperties" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.BaseProperties">
+  BaseProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The map properties for this feature, as the non-generic base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MapProperties BaseProperties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.Mapping.MapProperties.html">MapProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_BaseProperties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Lets editor tooling (for example the shader variant collector) work with any
+<a class="xref" href="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html">GLMapRendererFeature&lt;TMapProperties&gt;</a> without needing a case per concrete
+map type.</p>
+</div>
+
+
+
+
   <a id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate_" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate*"></a>
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_CustomCameraScopePredicate" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.CustomCameraScopePredicate">
   CustomCameraScopePredicate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A predicate that determines whether this feature should execute for a given camera.
@@ -464,7 +501,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)">
   AddRenderPasses(ScriptableRenderer, ref RenderingData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Injects one or multiple <code>ScriptableRenderPass</code> in the renderer.</p>
@@ -500,7 +537,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Create" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.Create">
   Create()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes this feature's resources. This is called every time serialization happens.</p>
@@ -527,7 +564,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Dispose_System_Boolean_" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called by Dispose().
@@ -560,7 +597,7 @@ Override this function to clean up resources in your renderer.</p>
 
   <h3 id="Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_RefreshRendererList" data-uid="Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.RefreshRendererList">
   RefreshRendererList()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/Mapping/GLMapRendererFeature.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

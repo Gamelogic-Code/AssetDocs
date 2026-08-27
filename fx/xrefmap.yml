@@ -7,6 +7,89 @@ references:
   commentId: N:Gamelogic.Fx
   fullName: Gamelogic.Fx
   nameWithType: Gamelogic.Fx
+- uid: Gamelogic.Fx.ApplyDepthCompensationKeyword
+  name: ApplyDepthCompensationKeyword
+  href: api/Gamelogic.Fx.ApplyDepthCompensationKeyword.html
+  commentId: T:Gamelogic.Fx.ApplyDepthCompensationKeyword
+  fullName: Gamelogic.Fx.ApplyDepthCompensationKeyword
+  nameWithType: ApplyDepthCompensationKeyword
+- uid: Gamelogic.Fx.ApplyDepthCompensationKeyword.Keyword
+  name: Keyword
+  href: api/Gamelogic.Fx.ApplyDepthCompensationKeyword.html#Gamelogic_Fx_ApplyDepthCompensationKeyword_Keyword
+  commentId: P:Gamelogic.Fx.ApplyDepthCompensationKeyword.Keyword
+  fullName: Gamelogic.Fx.ApplyDepthCompensationKeyword.Keyword
+  nameWithType: ApplyDepthCompensationKeyword.Keyword
+- uid: Gamelogic.Fx.ApplyDepthCompensationKeyword.Keyword*
+  name: Keyword
+  href: api/Gamelogic.Fx.ApplyDepthCompensationKeyword.html#Gamelogic_Fx_ApplyDepthCompensationKeyword_Keyword_
+  commentId: Overload:Gamelogic.Fx.ApplyDepthCompensationKeyword.Keyword
+  isSpec: "True"
+  fullName: Gamelogic.Fx.ApplyDepthCompensationKeyword.Keyword
+  nameWithType: ApplyDepthCompensationKeyword.Keyword
+- uid: Gamelogic.Fx.BoolKeyword
+  name: BoolKeyword
+  href: api/Gamelogic.Fx.BoolKeyword.html
+  commentId: T:Gamelogic.Fx.BoolKeyword
+  fullName: Gamelogic.Fx.BoolKeyword
+  nameWithType: BoolKeyword
+- uid: Gamelogic.Fx.BoolKeyword.ActiveKeywords
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_ActiveKeywords
+  commentId: P:Gamelogic.Fx.BoolKeyword.ActiveKeywords
+  fullName: Gamelogic.Fx.BoolKeyword.ActiveKeywords
+  nameWithType: BoolKeyword.ActiveKeywords
+- uid: Gamelogic.Fx.BoolKeyword.ActiveKeywords*
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_ActiveKeywords_
+  commentId: Overload:Gamelogic.Fx.BoolKeyword.ActiveKeywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BoolKeyword.ActiveKeywords
+  nameWithType: BoolKeyword.ActiveKeywords
+- uid: Gamelogic.Fx.BoolKeyword.Keyword
+  name: Keyword
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_Keyword
+  commentId: P:Gamelogic.Fx.BoolKeyword.Keyword
+  fullName: Gamelogic.Fx.BoolKeyword.Keyword
+  nameWithType: BoolKeyword.Keyword
+- uid: Gamelogic.Fx.BoolKeyword.Keyword*
+  name: Keyword
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_Keyword_
+  commentId: Overload:Gamelogic.Fx.BoolKeyword.Keyword
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BoolKeyword.Keyword
+  nameWithType: BoolKeyword.Keyword
+- uid: Gamelogic.Fx.BoolKeyword.Value
+  name: Value
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_Value
+  commentId: P:Gamelogic.Fx.BoolKeyword.Value
+  fullName: Gamelogic.Fx.BoolKeyword.Value
+  nameWithType: BoolKeyword.Value
+- uid: Gamelogic.Fx.BoolKeyword.Value*
+  name: Value
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_Value_
+  commentId: Overload:Gamelogic.Fx.BoolKeyword.Value
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BoolKeyword.Value
+  nameWithType: BoolKeyword.Value
+- uid: Gamelogic.Fx.BoolKeyword.op_Implicit(Gamelogic.Fx.BoolKeyword)~System.Boolean
+  name: implicit operator bool(BoolKeyword)
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_op_Implicit_Gamelogic_Fx_BoolKeyword__System_Boolean
+  commentId: M:Gamelogic.Fx.BoolKeyword.op_Implicit(Gamelogic.Fx.BoolKeyword)~System.Boolean
+  name.vb: CType(BoolKeyword)
+  fullName: Gamelogic.Fx.BoolKeyword.implicit operator bool(Gamelogic.Fx.BoolKeyword)
+  fullName.vb: Gamelogic.Fx.BoolKeyword.CType(Gamelogic.Fx.BoolKeyword)
+  nameWithType: BoolKeyword.implicit operator bool(BoolKeyword)
+  nameWithType.vb: BoolKeyword.CType(BoolKeyword)
+- uid: Gamelogic.Fx.BoolKeyword.op_Implicit*
+  name: implicit operator
+  href: api/Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_op_Implicit_
+  commentId: Overload:Gamelogic.Fx.BoolKeyword.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Gamelogic.Fx.BoolKeyword.implicit operator
+  fullName.vb: Gamelogic.Fx.BoolKeyword.CType
+  nameWithType: BoolKeyword.implicit operator
+  nameWithType.vb: BoolKeyword.CType
 - uid: Gamelogic.Fx.BuiltIn.Mapping
   name: Gamelogic.Fx.BuiltIn.Mapping
   href: api/Gamelogic.Fx.BuiltIn.Mapping.html
@@ -397,6 +480,19 @@ references:
   commentId: T:Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner
   fullName: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner
   nameWithType: MaskedPostProcessRunner
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords
+  name: GetActiveShaderFeatureKeywords()
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_GetActiveShaderFeatureKeywords
+  commentId: M:Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords()
+  nameWithType: MaskedPostProcessRunner.GetActiveShaderFeatureKeywords()
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords*
+  name: GetActiveShaderFeatureKeywords
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_GetActiveShaderFeatureKeywords_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords
+  nameWithType: MaskedPostProcessRunner.GetActiveShaderFeatureKeywords
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.OnDisable
   name: OnDisable()
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_OnDisable
@@ -436,6 +532,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.OnRenderImage
   nameWithType: MaskedPostProcessRunner.OnRenderImage
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader
+  name: Shader
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_Shader
+  commentId: P:Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader
+  nameWithType: MaskedPostProcessRunner.Shader
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader*
+  name: Shader
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_Shader_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader
+  nameWithType: MaskedPostProcessRunner.Shader
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess
   name: NamedShaderPostProcess
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.NamedShaderPostProcess.html
@@ -500,6 +609,19 @@ references:
   commentId: T:Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess
   fullName: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess
   nameWithType: PostProcess
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_BaseProperties
+  commentId: P:Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.BaseProperties
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.BaseProperties
+  nameWithType: PostProcess.BaseProperties
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess.BaseProperties
+  nameWithType: PostProcess.BaseProperties
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcessRunner
   name: PostProcessRunner
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.PostProcessRunner.html
@@ -528,6 +650,23 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess(Of TShaderProperties)
   nameWithType: PostProcess<TShaderProperties>
   nameWithType.vb: PostProcess(Of TShaderProperties)
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess`1.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_1_BaseProperties
+  commentId: P:Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess`1.BaseProperties
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess<TShaderProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess(Of TShaderProperties).BaseProperties
+  nameWithType: PostProcess<TShaderProperties>.BaseProperties
+  nameWithType.vb: PostProcess(Of TShaderProperties).BaseProperties
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess`1.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_1_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess`1.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess<TShaderProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess(Of TShaderProperties).BaseProperties
+  nameWithType: PostProcess<TShaderProperties>.BaseProperties
+  nameWithType.vb: PostProcess(Of TShaderProperties).BaseProperties
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess`1.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
   name: OnRenderImage(RenderTexture, RenderTexture)
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.PostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_PostProcess_1_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_
@@ -778,6 +917,23 @@ references:
   fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties)
   nameWithType: SeparablePostProcess<TShaderProperties>
   nameWithType.vb: SeparablePostProcess(Of TShaderProperties)
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_BaseProperties
+  commentId: P:Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.BaseProperties
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess<TShaderProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties).BaseProperties
+  nameWithType: SeparablePostProcess<TShaderProperties>.BaseProperties
+  nameWithType.vb: SeparablePostProcess(Of TShaderProperties).BaseProperties
+- uid: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess<TShaderProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess(Of TShaderProperties).BaseProperties
+  nameWithType: SeparablePostProcess<TShaderProperties>.BaseProperties
+  nameWithType.vb: SeparablePostProcess(Of TShaderProperties).BaseProperties
 - uid: Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess`1.OnDisable
   name: OnDisable()
   href: api/Gamelogic.Fx.BuiltIn.PostProcessing.SeparablePostProcess-1.html#Gamelogic_Fx_BuiltIn_PostProcessing_SeparablePostProcess_1_OnDisable
@@ -1477,6 +1633,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.PrimaryColors
   nameWithType: MixboxConvexHullHatchProperties.PrimaryColors
+- uid: Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.Requirements
+  name: Requirements
+  href: api/Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.html#Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_Requirements
+  commentId: P:Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.Requirements
+  fullName: Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.Requirements
+  nameWithType: MixboxConvexHullHatchProperties.Requirements
+- uid: Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.Requirements*
+  name: Requirements
+  href: api/Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.html#Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_Requirements_
+  commentId: Overload:Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.Requirements
+  isSpec: "True"
+  fullName: Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.Requirements
+  nameWithType: MixboxConvexHullHatchProperties.Requirements
 - uid: Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.SetMaterialProperties(UnityEngine.Material)
   name: SetMaterialProperties(Material)
   href: api/Gamelogic.Fx.CrossHatching.PostProcessing.Effects.MixboxConvexHullHatchProperties.html#Gamelogic_Fx_CrossHatching_PostProcessing_Effects_MixboxConvexHullHatchProperties_SetMaterialProperties_UnityEngine_Material_
@@ -4056,6 +4225,85 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.EditorTextureGenerator.SerializedPropertyExtensions.FindRequiredProperty
   nameWithType: SerializedPropertyExtensions.FindRequiredProperty
+- uid: Gamelogic.Fx.EnumKeyword`1
+  name: EnumKeyword<TEnum>
+  href: api/Gamelogic.Fx.EnumKeyword-1.html
+  commentId: T:Gamelogic.Fx.EnumKeyword`1
+  name.vb: EnumKeyword(Of TEnum)
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum)
+  nameWithType: EnumKeyword<TEnum>
+  nameWithType.vb: EnumKeyword(Of TEnum)
+- uid: Gamelogic.Fx.EnumKeyword`1.ActiveKeywords
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_ActiveKeywords
+  commentId: P:Gamelogic.Fx.EnumKeyword`1.ActiveKeywords
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.ActiveKeywords
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).ActiveKeywords
+  nameWithType: EnumKeyword<TEnum>.ActiveKeywords
+  nameWithType.vb: EnumKeyword(Of TEnum).ActiveKeywords
+- uid: Gamelogic.Fx.EnumKeyword`1.ActiveKeywords*
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_ActiveKeywords_
+  commentId: Overload:Gamelogic.Fx.EnumKeyword`1.ActiveKeywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.ActiveKeywords
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).ActiveKeywords
+  nameWithType: EnumKeyword<TEnum>.ActiveKeywords
+  nameWithType.vb: EnumKeyword(Of TEnum).ActiveKeywords
+- uid: Gamelogic.Fx.EnumKeyword`1.Keywords
+  name: Keywords
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_Keywords
+  commentId: P:Gamelogic.Fx.EnumKeyword`1.Keywords
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.Keywords
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).Keywords
+  nameWithType: EnumKeyword<TEnum>.Keywords
+  nameWithType.vb: EnumKeyword(Of TEnum).Keywords
+- uid: Gamelogic.Fx.EnumKeyword`1.Keywords*
+  name: Keywords
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_Keywords_
+  commentId: Overload:Gamelogic.Fx.EnumKeyword`1.Keywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.Keywords
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).Keywords
+  nameWithType: EnumKeyword<TEnum>.Keywords
+  nameWithType.vb: EnumKeyword(Of TEnum).Keywords
+- uid: Gamelogic.Fx.EnumKeyword`1.Value
+  name: Value
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_Value
+  commentId: P:Gamelogic.Fx.EnumKeyword`1.Value
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.Value
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).Value
+  nameWithType: EnumKeyword<TEnum>.Value
+  nameWithType.vb: EnumKeyword(Of TEnum).Value
+- uid: Gamelogic.Fx.EnumKeyword`1.Value*
+  name: Value
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_Value_
+  commentId: Overload:Gamelogic.Fx.EnumKeyword`1.Value
+  isSpec: "True"
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.Value
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).Value
+  nameWithType: EnumKeyword<TEnum>.Value
+  nameWithType.vb: EnumKeyword(Of TEnum).Value
+- uid: Gamelogic.Fx.EnumKeyword`1.op_Implicit(Gamelogic.Fx.EnumKeyword{`0})~`0
+  name: implicit operator TEnum(EnumKeyword<TEnum>)
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_op_Implicit_Gamelogic_Fx_EnumKeyword__0____0
+  commentId: M:Gamelogic.Fx.EnumKeyword`1.op_Implicit(Gamelogic.Fx.EnumKeyword{`0})~`0
+  name.vb: CType(EnumKeyword(Of TEnum))
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.implicit operator TEnum(Gamelogic.Fx.EnumKeyword<TEnum>)
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).CType(Gamelogic.Fx.EnumKeyword(Of TEnum))
+  nameWithType: EnumKeyword<TEnum>.implicit operator TEnum(EnumKeyword<TEnum>)
+  nameWithType.vb: EnumKeyword(Of TEnum).CType(EnumKeyword(Of TEnum))
+- uid: Gamelogic.Fx.EnumKeyword`1.op_Implicit*
+  name: implicit operator
+  href: api/Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_op_Implicit_
+  commentId: Overload:Gamelogic.Fx.EnumKeyword`1.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Gamelogic.Fx.EnumKeyword<TEnum>.implicit operator
+  fullName.vb: Gamelogic.Fx.EnumKeyword(Of TEnum).CType
+  nameWithType: EnumKeyword<TEnum>.implicit operator
+  nameWithType.vb: EnumKeyword(Of TEnum).CType
 - uid: Gamelogic.Fx.FloatMatrix
   name: FloatMatrix
   href: api/Gamelogic.Fx.FloatMatrix.html
@@ -4344,6 +4592,31 @@ references:
   commentId: F:Gamelogic.Fx.GridType.Rect
   fullName: Gamelogic.Fx.GridType.Rect
   nameWithType: GridType.Rect
+- uid: Gamelogic.Fx.HexGridKeyword
+  name: HexGridKeyword
+  href: api/Gamelogic.Fx.HexGridKeyword.html
+  commentId: T:Gamelogic.Fx.HexGridKeyword
+  fullName: Gamelogic.Fx.HexGridKeyword
+  nameWithType: HexGridKeyword
+- uid: Gamelogic.Fx.HexGridKeyword.HexKeyword
+  name: HexKeyword
+  href: api/Gamelogic.Fx.HexGridKeyword.html#Gamelogic_Fx_HexGridKeyword_HexKeyword
+  commentId: F:Gamelogic.Fx.HexGridKeyword.HexKeyword
+  fullName: Gamelogic.Fx.HexGridKeyword.HexKeyword
+  nameWithType: HexGridKeyword.HexKeyword
+- uid: Gamelogic.Fx.HexGridKeyword.Keywords
+  name: Keywords
+  href: api/Gamelogic.Fx.HexGridKeyword.html#Gamelogic_Fx_HexGridKeyword_Keywords
+  commentId: P:Gamelogic.Fx.HexGridKeyword.Keywords
+  fullName: Gamelogic.Fx.HexGridKeyword.Keywords
+  nameWithType: HexGridKeyword.Keywords
+- uid: Gamelogic.Fx.HexGridKeyword.Keywords*
+  name: Keywords
+  href: api/Gamelogic.Fx.HexGridKeyword.html#Gamelogic_Fx_HexGridKeyword_Keywords_
+  commentId: Overload:Gamelogic.Fx.HexGridKeyword.Keywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.HexGridKeyword.Keywords
+  nameWithType: HexGridKeyword.Keywords
 - uid: Gamelogic.Fx.IFloatMatrix
   name: IFloatMatrix
   href: api/Gamelogic.Fx.IFloatMatrix.html
@@ -4469,6 +4742,25 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.IFloatMatrix.Width
   nameWithType: IFloatMatrix.Width
+- uid: Gamelogic.Fx.IShaderFeatureKeyword
+  name: IShaderFeatureKeyword
+  href: api/Gamelogic.Fx.IShaderFeatureKeyword.html
+  commentId: T:Gamelogic.Fx.IShaderFeatureKeyword
+  fullName: Gamelogic.Fx.IShaderFeatureKeyword
+  nameWithType: IShaderFeatureKeyword
+- uid: Gamelogic.Fx.IShaderFeatureKeyword.ActiveKeywords
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.IShaderFeatureKeyword.html#Gamelogic_Fx_IShaderFeatureKeyword_ActiveKeywords
+  commentId: P:Gamelogic.Fx.IShaderFeatureKeyword.ActiveKeywords
+  fullName: Gamelogic.Fx.IShaderFeatureKeyword.ActiveKeywords
+  nameWithType: IShaderFeatureKeyword.ActiveKeywords
+- uid: Gamelogic.Fx.IShaderFeatureKeyword.ActiveKeywords*
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.IShaderFeatureKeyword.html#Gamelogic_Fx_IShaderFeatureKeyword_ActiveKeywords_
+  commentId: Overload:Gamelogic.Fx.IShaderFeatureKeyword.ActiveKeywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.IShaderFeatureKeyword.ActiveKeywords
+  nameWithType: IShaderFeatureKeyword.ActiveKeywords
 - uid: Gamelogic.Fx.Internal
   name: Gamelogic.Fx.Internal
   href: api/Gamelogic.Fx.Internal.html
@@ -5599,6 +5891,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.ShaderName
   nameWithType: BlendTextureProperties.ShaderName
+- uid: Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.UseMask
+  name: UseMask
+  href: api/Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.html#Gamelogic_Fx_PostProcessing_Effects_BlendTextureProperties_UseMask
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.UseMask
+  fullName: Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.UseMask
+  nameWithType: BlendTextureProperties.UseMask
+- uid: Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.UseMask*
+  name: UseMask
+  href: api/Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.html#Gamelogic_Fx_PostProcessing_Effects_BlendTextureProperties_UseMask_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.UseMask
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.BlendTextureProperties.UseMask
+  nameWithType: BlendTextureProperties.UseMask
 - uid: Gamelogic.Fx.PostProcessing.Effects.BoxBlurProperties
   name: BoxBlurProperties
   href: api/Gamelogic.Fx.PostProcessing.Effects.BoxBlurProperties.html
@@ -5952,6 +6257,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.PrimaryColors
   nameWithType: MixboxConvexHullMapProperties.PrimaryColors
+- uid: Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.Requirements
+  name: Requirements
+  href: api/Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.html#Gamelogic_Fx_PostProcessing_Effects_MixboxConvexHullMapProperties_Requirements
+  commentId: P:Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.Requirements
+  fullName: Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.Requirements
+  nameWithType: MixboxConvexHullMapProperties.Requirements
+- uid: Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.Requirements*
+  name: Requirements
+  href: api/Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.html#Gamelogic_Fx_PostProcessing_Effects_MixboxConvexHullMapProperties_Requirements_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.Requirements
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.Requirements
+  nameWithType: MixboxConvexHullMapProperties.Requirements
 - uid: Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.SetMaterialProperties(UnityEngine.Material)
   name: SetMaterialProperties(Material)
   href: api/Gamelogic.Fx.PostProcessing.Effects.MixboxConvexHullMapProperties.html#Gamelogic_Fx_PostProcessing_Effects_MixboxConvexHullMapProperties_SetMaterialProperties_UnityEngine_Material_
@@ -6585,6 +6903,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion
   nameWithType: ShaderProperties.CheckMaterialVersion
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords
+  name: GetActiveShaderFeatureKeywords()
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords
+  commentId: M:Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords()
+  nameWithType: ShaderProperties.GetActiveShaderFeatureKeywords()
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords*
+  name: GetActiveShaderFeatureKeywords
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords
+  nameWithType: ShaderProperties.GetActiveShaderFeatureKeywords
 - uid: Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion
   name: IncMaterialVersion()
   href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion
@@ -6637,6 +6968,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.OnValidate
   nameWithType: ShaderProperties.OnValidate
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements
+  name: Requirements
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements
+  commentId: P:Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements
+  nameWithType: ShaderProperties.Requirements
+- uid: Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements*
+  name: Requirements
+  href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements_
+  commentId: Overload:Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements
+  isSpec: "True"
+  fullName: Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements
+  nameWithType: ShaderProperties.Requirements
 - uid: Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresDepthTexture
   name: RequiresDepthTexture
   href: api/Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture
@@ -6803,6 +7147,70 @@ references:
   commentId: T:Gamelogic.Fx.RequiresMixboxAttribute
   fullName: Gamelogic.Fx.RequiresMixboxAttribute
   nameWithType: RequiresMixboxAttribute
+- uid: Gamelogic.Fx.StringKeyword
+  name: StringKeyword
+  href: api/Gamelogic.Fx.StringKeyword.html
+  commentId: T:Gamelogic.Fx.StringKeyword
+  fullName: Gamelogic.Fx.StringKeyword
+  nameWithType: StringKeyword
+- uid: Gamelogic.Fx.StringKeyword.ActiveKeywords
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_ActiveKeywords
+  commentId: P:Gamelogic.Fx.StringKeyword.ActiveKeywords
+  fullName: Gamelogic.Fx.StringKeyword.ActiveKeywords
+  nameWithType: StringKeyword.ActiveKeywords
+- uid: Gamelogic.Fx.StringKeyword.ActiveKeywords*
+  name: ActiveKeywords
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_ActiveKeywords_
+  commentId: Overload:Gamelogic.Fx.StringKeyword.ActiveKeywords
+  isSpec: "True"
+  fullName: Gamelogic.Fx.StringKeyword.ActiveKeywords
+  nameWithType: StringKeyword.ActiveKeywords
+- uid: Gamelogic.Fx.StringKeyword.RetrieverKey
+  name: RetrieverKey
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_RetrieverKey
+  commentId: P:Gamelogic.Fx.StringKeyword.RetrieverKey
+  fullName: Gamelogic.Fx.StringKeyword.RetrieverKey
+  nameWithType: StringKeyword.RetrieverKey
+- uid: Gamelogic.Fx.StringKeyword.RetrieverKey*
+  name: RetrieverKey
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_RetrieverKey_
+  commentId: Overload:Gamelogic.Fx.StringKeyword.RetrieverKey
+  isSpec: "True"
+  fullName: Gamelogic.Fx.StringKeyword.RetrieverKey
+  nameWithType: StringKeyword.RetrieverKey
+- uid: Gamelogic.Fx.StringKeyword.Value
+  name: Value
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_Value
+  commentId: P:Gamelogic.Fx.StringKeyword.Value
+  fullName: Gamelogic.Fx.StringKeyword.Value
+  nameWithType: StringKeyword.Value
+- uid: Gamelogic.Fx.StringKeyword.Value*
+  name: Value
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_Value_
+  commentId: Overload:Gamelogic.Fx.StringKeyword.Value
+  isSpec: "True"
+  fullName: Gamelogic.Fx.StringKeyword.Value
+  nameWithType: StringKeyword.Value
+- uid: Gamelogic.Fx.StringKeyword.op_Implicit(Gamelogic.Fx.StringKeyword)~System.String
+  name: implicit operator string(StringKeyword)
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_op_Implicit_Gamelogic_Fx_StringKeyword__System_String
+  commentId: M:Gamelogic.Fx.StringKeyword.op_Implicit(Gamelogic.Fx.StringKeyword)~System.String
+  name.vb: CType(StringKeyword)
+  fullName: Gamelogic.Fx.StringKeyword.implicit operator string(Gamelogic.Fx.StringKeyword)
+  fullName.vb: Gamelogic.Fx.StringKeyword.CType(Gamelogic.Fx.StringKeyword)
+  nameWithType: StringKeyword.implicit operator string(StringKeyword)
+  nameWithType.vb: StringKeyword.CType(StringKeyword)
+- uid: Gamelogic.Fx.StringKeyword.op_Implicit*
+  name: implicit operator
+  href: api/Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_op_Implicit_
+  commentId: Overload:Gamelogic.Fx.StringKeyword.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Gamelogic.Fx.StringKeyword.implicit operator
+  fullName.vb: Gamelogic.Fx.StringKeyword.CType
+  nameWithType: StringKeyword.implicit operator
+  nameWithType.vb: StringKeyword.CType
 - uid: Gamelogic.Fx.URP
   name: Gamelogic.Fx.URP
   href: api/Gamelogic.Fx.URP.html
@@ -6968,6 +7376,19 @@ references:
   commentId: T:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature
   fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature
   nameWithType: GLMapRendererFeature
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_BaseProperties
+  commentId: P:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.BaseProperties
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.BaseProperties
+  nameWithType: GLMapRendererFeature.BaseProperties
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature.BaseProperties
+  nameWithType: GLMapRendererFeature.BaseProperties
 - uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1
   name: GLMapRendererFeature<TMapProperties>
   href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html
@@ -6995,6 +7416,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).AddRenderPasses
   nameWithType: GLMapRendererFeature<TMapProperties>.AddRenderPasses
   nameWithType.vb: GLMapRendererFeature(Of TMapProperties).AddRenderPasses
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_BaseProperties
+  commentId: P:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.BaseProperties
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature<TMapProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).BaseProperties
+  nameWithType: GLMapRendererFeature<TMapProperties>.BaseProperties
+  nameWithType.vb: GLMapRendererFeature(Of TMapProperties).BaseProperties
+- uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature<TMapProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature(Of TMapProperties).BaseProperties
+  nameWithType: GLMapRendererFeature<TMapProperties>.BaseProperties
+  nameWithType.vb: GLMapRendererFeature(Of TMapProperties).BaseProperties
 - uid: Gamelogic.Fx.URP.Mapping.GLMapRendererFeature`1.Create
   name: Create()
   href: api/Gamelogic.Fx.URP.Mapping.GLMapRendererFeature-1.html#Gamelogic_Fx_URP_Mapping_GLMapRendererFeature_1_Create
@@ -7670,6 +8108,19 @@ references:
   commentId: T:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature
   fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature
   nameWithType: PostProcessRendererFeature
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_BaseProperties
+  commentId: P:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties
+  nameWithType: PostProcessRendererFeature.BaseProperties
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties
+  nameWithType: PostProcessRendererFeature.BaseProperties
 - uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1
   name: PostProcessRendererFeature<TShaderProperties>
   href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html
@@ -7697,6 +8148,23 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).AddRenderPasses
   nameWithType: PostProcessRendererFeature<TShaderProperties>.AddRenderPasses
   nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).AddRenderPasses
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.BaseProperties
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_BaseProperties
+  commentId: P:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.BaseProperties
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).BaseProperties
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.BaseProperties
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).BaseProperties
+- uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.BaseProperties*
+  name: BaseProperties
+  href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_BaseProperties_
+  commentId: Overload:Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.BaseProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature<TShaderProperties>.BaseProperties
+  fullName.vb: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature(Of TShaderProperties).BaseProperties
+  nameWithType: PostProcessRendererFeature<TShaderProperties>.BaseProperties
+  nameWithType.vb: PostProcessRendererFeature(Of TShaderProperties).BaseProperties
 - uid: Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Create
   name: Create()
   href: api/Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html#Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Create
@@ -7935,3 +8403,731 @@ references:
   fullName.vb: Gamelogic.Fx.URP.PostProcessing.SeparableRendererFeature(Of TShaderProperties).OnValidate
   nameWithType: SeparableRendererFeature<TShaderProperties>.OnValidate
   nameWithType.vb: SeparableRendererFeature(Of TShaderProperties).OnValidate
+- uid: Gamelogic.Fx.UseUvMapKeyword
+  name: UseUvMapKeyword
+  href: api/Gamelogic.Fx.UseUvMapKeyword.html
+  commentId: T:Gamelogic.Fx.UseUvMapKeyword
+  fullName: Gamelogic.Fx.UseUvMapKeyword
+  nameWithType: UseUvMapKeyword
+- uid: Gamelogic.Fx.UseUvMapKeyword.Keyword
+  name: Keyword
+  href: api/Gamelogic.Fx.UseUvMapKeyword.html#Gamelogic_Fx_UseUvMapKeyword_Keyword
+  commentId: P:Gamelogic.Fx.UseUvMapKeyword.Keyword
+  fullName: Gamelogic.Fx.UseUvMapKeyword.Keyword
+  nameWithType: UseUvMapKeyword.Keyword
+- uid: Gamelogic.Fx.UseUvMapKeyword.Keyword*
+  name: Keyword
+  href: api/Gamelogic.Fx.UseUvMapKeyword.html#Gamelogic_Fx_UseUvMapKeyword_Keyword_
+  commentId: Overload:Gamelogic.Fx.UseUvMapKeyword.Keyword
+  isSpec: "True"
+  fullName: Gamelogic.Fx.UseUvMapKeyword.Keyword
+  nameWithType: UseUvMapKeyword.Keyword
+- uid: Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword
+  name: UvAdaptiveBackgroundBlendKeyword
+  href: api/Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.html
+  commentId: T:Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword
+  fullName: Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword
+  nameWithType: UvAdaptiveBackgroundBlendKeyword
+- uid: Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.Keyword
+  name: Keyword
+  href: api/Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.html#Gamelogic_Fx_UvAdaptiveBackgroundBlendKeyword_Keyword
+  commentId: P:Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.Keyword
+  fullName: Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.Keyword
+  nameWithType: UvAdaptiveBackgroundBlendKeyword.Keyword
+- uid: Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.Keyword*
+  name: Keyword
+  href: api/Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.html#Gamelogic_Fx_UvAdaptiveBackgroundBlendKeyword_Keyword_
+  commentId: Overload:Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.Keyword
+  isSpec: "True"
+  fullName: Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.Keyword
+  nameWithType: UvAdaptiveBackgroundBlendKeyword.Keyword
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects
+  name: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.html
+  commentId: N:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects
+  nameWithType: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess
+  name: LayerPostProcess
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess.html
+  commentId: T:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess
+  nameWithType: LayerPostProcess
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess
+  name: MultiWashPostProcess
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html
+  commentId: T:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess
+  nameWithType: MultiWashPostProcess
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  name: OnRenderImage(RenderTexture, RenderTexture)
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_MultiWashPostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_
+  commentId: M:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.OnRenderImage(UnityEngine.RenderTexture, UnityEngine.RenderTexture)
+  nameWithType: MultiWashPostProcess.OnRenderImage(RenderTexture, RenderTexture)
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.OnRenderImage*
+  name: OnRenderImage
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_MultiWashPostProcess_OnRenderImage_
+  commentId: Overload:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.OnRenderImage
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.OnRenderImage
+  nameWithType: MultiWashPostProcess.OnRenderImage
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.Properties
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_MultiWashPostProcess_Properties
+  commentId: P:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.Properties
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.Properties
+  nameWithType: MultiWashPostProcess.Properties
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.Properties*
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_MultiWashPostProcess_Properties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.Properties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.Properties
+  nameWithType: MultiWashPostProcess.Properties
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.ReloadShaders
+  name: ReloadShaders()
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_MultiWashPostProcess_ReloadShaders
+  commentId: M:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.ReloadShaders
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.ReloadShaders()
+  nameWithType: MultiWashPostProcess.ReloadShaders()
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.ReloadShaders*
+  name: ReloadShaders
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_MultiWashPostProcess_ReloadShaders_
+  commentId: Overload:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.ReloadShaders
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.ReloadShaders
+  nameWithType: MultiWashPostProcess.ReloadShaders
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess
+  name: WashPostProcess
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html
+  commentId: T:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess
+  nameWithType: WashPostProcess
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  name: OnRenderImage(RenderTexture, RenderTexture)
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_WashPostProcess_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_
+  commentId: M:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.OnRenderImage(UnityEngine.RenderTexture, UnityEngine.RenderTexture)
+  nameWithType: WashPostProcess.OnRenderImage(RenderTexture, RenderTexture)
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.OnRenderImage*
+  name: OnRenderImage
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_WashPostProcess_OnRenderImage_
+  commentId: Overload:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.OnRenderImage
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.OnRenderImage
+  nameWithType: WashPostProcess.OnRenderImage
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.Properties
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_WashPostProcess_Properties
+  commentId: P:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.Properties
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.Properties
+  nameWithType: WashPostProcess.Properties
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.Properties*
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_WashPostProcess_Properties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.Properties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.Properties
+  nameWithType: WashPostProcess.Properties
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.ReloadShaders
+  name: ReloadShaders()
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_WashPostProcess_ReloadShaders
+  commentId: M:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.ReloadShaders
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.ReloadShaders()
+  nameWithType: WashPostProcess.ReloadShaders()
+- uid: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.ReloadShaders*
+  name: ReloadShaders
+  href: api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html#Gamelogic_Fx_WaterColor_BuiltIn_PostProcessing_Effects_WashPostProcess_ReloadShaders_
+  commentId: Overload:Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.ReloadShaders
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.ReloadShaders
+  nameWithType: WashPostProcess.ReloadShaders
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects
+  name: Gamelogic.Fx.WaterColor.PostProcessing.Effects
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.html
+  commentId: N:Gamelogic.Fx.WaterColor.PostProcessing.Effects
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects
+  nameWithType: Gamelogic.Fx.WaterColor.PostProcessing.Effects
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties
+  name: LayerProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html
+  commentId: T:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties
+  nameWithType: LayerProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.BlackLevel
+  name: BlackLevel
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_BlackLevel
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.BlackLevel
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.BlackLevel
+  nameWithType: LayerProperties.BlackLevel
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.BlackLevel*
+  name: BlackLevel
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_BlackLevel_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.BlackLevel
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.BlackLevel
+  nameWithType: LayerProperties.BlackLevel
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: LayerProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.SetMaterialProperties
+  nameWithType: LayerProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_ShaderName
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.ShaderName
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.ShaderName
+  nameWithType: LayerProperties.ShaderName
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.ShaderName
+  nameWithType: LayerProperties.ShaderName
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.Threshold
+  name: Threshold
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_Threshold
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.Threshold
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.Threshold
+  nameWithType: LayerProperties.Threshold
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.Threshold*
+  name: Threshold
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_LayerProperties_Threshold_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.Threshold
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.Threshold
+  nameWithType: LayerProperties.Threshold
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties
+  name: MultiWashProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html
+  commentId: T:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties
+  nameWithType: MultiWashProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset(System.Int32)
+  name: GetLayerNoiseOffset(int)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_GetLayerNoiseOffset_System_Int32_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset(System.Int32)
+  name.vb: GetLayerNoiseOffset(Integer)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset(int)
+  fullName.vb: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset(Integer)
+  nameWithType: MultiWashProperties.GetLayerNoiseOffset(int)
+  nameWithType.vb: MultiWashProperties.GetLayerNoiseOffset(Integer)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset*
+  name: GetLayerNoiseOffset
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_GetLayerNoiseOffset_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerNoiseOffset
+  nameWithType: MultiWashProperties.GetLayerNoiseOffset
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold(System.Int32)
+  name: GetLayerThreshold(int)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_GetLayerThreshold_System_Int32_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold(System.Int32)
+  name.vb: GetLayerThreshold(Integer)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold(int)
+  fullName.vb: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold(Integer)
+  nameWithType: MultiWashProperties.GetLayerThreshold(int)
+  nameWithType.vb: MultiWashProperties.GetLayerThreshold(Integer)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold*
+  name: GetLayerThreshold
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_GetLayerThreshold_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.GetLayerThreshold
+  nameWithType: MultiWashProperties.GetLayerThreshold
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.LayerCount
+  name: LayerCount
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_LayerCount
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.LayerCount
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.LayerCount
+  nameWithType: MultiWashProperties.LayerCount
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.LayerCount*
+  name: LayerCount
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_LayerCount_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.LayerCount
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.LayerCount
+  nameWithType: MultiWashProperties.LayerCount
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.MaxLayerCount
+  name: MaxLayerCount
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_MaxLayerCount
+  commentId: F:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.MaxLayerCount
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.MaxLayerCount
+  nameWithType: MultiWashProperties.MaxLayerCount
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnEnable
+  name: OnEnable()
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_OnEnable
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnEnable
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnEnable()
+  nameWithType: MultiWashProperties.OnEnable()
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnEnable*
+  name: OnEnable
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_OnEnable_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnEnable
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnEnable
+  nameWithType: MultiWashProperties.OnEnable
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnValidate
+  name: OnValidate()
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_OnValidate
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnValidate
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnValidate()
+  nameWithType: MultiWashProperties.OnValidate()
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnValidate*
+  name: OnValidate
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_OnValidate_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnValidate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.OnValidate
+  nameWithType: MultiWashProperties.OnValidate
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties(UnityEngine.Material,System.Int32)
+  name: SetLayerMaterialProperties(Material, int)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetLayerMaterialProperties_UnityEngine_Material_System_Int32_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties(UnityEngine.Material,System.Int32)
+  name.vb: SetLayerMaterialProperties(Material, Integer)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties(UnityEngine.Material, int)
+  fullName.vb: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties(UnityEngine.Material, Integer)
+  nameWithType: MultiWashProperties.SetLayerMaterialProperties(Material, int)
+  nameWithType.vb: MultiWashProperties.SetLayerMaterialProperties(Material, Integer)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties*
+  name: SetLayerMaterialProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetLayerMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerMaterialProperties
+  nameWithType: MultiWashProperties.SetLayerMaterialProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture(UnityEngine.Material,System.Int32,UnityEngine.Texture)
+  name: SetLayerTexture(Material, int, Texture)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetLayerTexture_UnityEngine_Material_System_Int32_UnityEngine_Texture_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture(UnityEngine.Material,System.Int32,UnityEngine.Texture)
+  name.vb: SetLayerTexture(Material, Integer, Texture)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture(UnityEngine.Material, int, UnityEngine.Texture)
+  fullName.vb: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture(UnityEngine.Material, Integer, UnityEngine.Texture)
+  nameWithType: MultiWashProperties.SetLayerTexture(Material, int, Texture)
+  nameWithType.vb: MultiWashProperties.SetLayerTexture(Material, Integer, Texture)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture*
+  name: SetLayerTexture
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetLayerTexture_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetLayerTexture
+  nameWithType: MultiWashProperties.SetLayerTexture
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: MultiWashProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetMaterialProperties
+  nameWithType: MultiWashProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties(UnityEngine.Material,System.Int32)
+  name: SetWashMaterialProperties(Material, int)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetWashMaterialProperties_UnityEngine_Material_System_Int32_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties(UnityEngine.Material,System.Int32)
+  name.vb: SetWashMaterialProperties(Material, Integer)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties(UnityEngine.Material, int)
+  fullName.vb: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties(UnityEngine.Material, Integer)
+  nameWithType: MultiWashProperties.SetWashMaterialProperties(Material, int)
+  nameWithType.vb: MultiWashProperties.SetWashMaterialProperties(Material, Integer)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties*
+  name: SetWashMaterialProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_SetWashMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.SetWashMaterialProperties
+  nameWithType: MultiWashProperties.SetWashMaterialProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_ShaderName
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.ShaderName
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.ShaderName
+  nameWithType: MultiWashProperties.ShaderName
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.ShaderName
+  nameWithType: MultiWashProperties.ShaderName
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.Wash
+  name: Wash
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_Wash
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.Wash
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.Wash
+  nameWithType: MultiWashProperties.Wash
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.Wash*
+  name: Wash
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_MultiWashProperties_Wash_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.Wash
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.Wash
+  nameWithType: MultiWashProperties.Wash
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties
+  name: WashProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html
+  commentId: T:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties
+  nameWithType: WashProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Blur
+  name: Blur
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_Blur
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Blur
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Blur
+  nameWithType: WashProperties.Blur
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Blur*
+  name: Blur
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_Blur_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Blur
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Blur
+  nameWithType: WashProperties.Blur
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ColorNoiseScale
+  name: ColorNoiseScale
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_ColorNoiseScale
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ColorNoiseScale
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ColorNoiseScale
+  nameWithType: WashProperties.ColorNoiseScale
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ColorNoiseScale*
+  name: ColorNoiseScale
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_ColorNoiseScale_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ColorNoiseScale
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ColorNoiseScale
+  nameWithType: WashProperties.ColorNoiseScale
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MaxIntensity
+  name: MaxIntensity
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_MaxIntensity
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MaxIntensity
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MaxIntensity
+  nameWithType: WashProperties.MaxIntensity
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MaxIntensity*
+  name: MaxIntensity
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_MaxIntensity_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MaxIntensity
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MaxIntensity
+  nameWithType: WashProperties.MaxIntensity
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MinIntensity
+  name: MinIntensity
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_MinIntensity
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MinIntensity
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MinIntensity
+  nameWithType: WashProperties.MinIntensity
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MinIntensity*
+  name: MinIntensity
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_MinIntensity_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MinIntensity
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.MinIntensity
+  nameWithType: WashProperties.MinIntensity
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTexture
+  name: NoiseTexture
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_NoiseTexture
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTexture
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTexture
+  nameWithType: WashProperties.NoiseTexture
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTexture*
+  name: NoiseTexture
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_NoiseTexture_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTexture
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTexture
+  nameWithType: WashProperties.NoiseTexture
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingOffset
+  name: NoiseTextureTilingOffset
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_NoiseTextureTilingOffset
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingOffset
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingOffset
+  nameWithType: WashProperties.NoiseTextureTilingOffset
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingOffset*
+  name: NoiseTextureTilingOffset
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_NoiseTextureTilingOffset_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingOffset
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingOffset
+  nameWithType: WashProperties.NoiseTextureTilingOffset
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingScale
+  name: NoiseTextureTilingScale
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_NoiseTextureTilingScale
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingScale
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingScale
+  nameWithType: WashProperties.NoiseTextureTilingScale
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingScale*
+  name: NoiseTextureTilingScale
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_NoiseTextureTilingScale_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingScale
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.NoiseTextureTilingScale
+  nameWithType: WashProperties.NoiseTextureTilingScale
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnEnable
+  name: OnEnable()
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_OnEnable
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnEnable
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnEnable()
+  nameWithType: WashProperties.OnEnable()
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnEnable*
+  name: OnEnable
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_OnEnable_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnEnable
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnEnable
+  nameWithType: WashProperties.OnEnable
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnValidate
+  name: OnValidate()
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_OnValidate
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnValidate
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnValidate()
+  nameWithType: WashProperties.OnValidate()
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnValidate*
+  name: OnValidate
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_OnValidate_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnValidate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.OnValidate
+  nameWithType: WashProperties.OnValidate
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Power
+  name: Power
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_Power
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Power
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Power
+  nameWithType: WashProperties.Power
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Power*
+  name: Power
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_Power_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Power
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.Power
+  nameWithType: WashProperties.Power
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetBlurredTexture(UnityEngine.Material,UnityEngine.Texture)
+  name: SetBlurredTexture(Material, Texture)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_SetBlurredTexture_UnityEngine_Material_UnityEngine_Texture_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetBlurredTexture(UnityEngine.Material,UnityEngine.Texture)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetBlurredTexture(UnityEngine.Material, UnityEngine.Texture)
+  nameWithType: WashProperties.SetBlurredTexture(Material, Texture)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetBlurredTexture*
+  name: SetBlurredTexture
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_SetBlurredTexture_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetBlurredTexture
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetBlurredTexture
+  nameWithType: WashProperties.SetBlurredTexture
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetMaterialProperties(UnityEngine.Material)
+  name: SetMaterialProperties(Material)
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_SetMaterialProperties_UnityEngine_Material_
+  commentId: M:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetMaterialProperties(UnityEngine.Material)
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetMaterialProperties(UnityEngine.Material)
+  nameWithType: WashProperties.SetMaterialProperties(Material)
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetMaterialProperties*
+  name: SetMaterialProperties
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_SetMaterialProperties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetMaterialProperties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.SetMaterialProperties
+  nameWithType: WashProperties.SetMaterialProperties
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShaderName
+  name: ShaderName
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_ShaderName
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShaderName
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShaderName
+  nameWithType: WashProperties.ShaderName
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShaderName*
+  name: ShaderName
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_ShaderName_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShaderName
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShaderName
+  nameWithType: WashProperties.ShaderName
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShapeNoiseScale
+  name: ShapeNoiseScale
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_ShapeNoiseScale
+  commentId: P:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShapeNoiseScale
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShapeNoiseScale
+  nameWithType: WashProperties.ShapeNoiseScale
+- uid: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShapeNoiseScale*
+  name: ShapeNoiseScale
+  href: api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html#Gamelogic_Fx_WaterColor_PostProcessing_Effects_WashProperties_ShapeNoiseScale_
+  commentId: Overload:Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShapeNoiseScale
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.ShapeNoiseScale
+  nameWithType: WashProperties.ShapeNoiseScale
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects
+  name: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.html
+  commentId: N:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects
+  nameWithType: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature
+  name: GLLayerRendererFeature
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature.html
+  commentId: T:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature
+  nameWithType: GLLayerRendererFeature
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature
+  name: GLMultiWashRendererFeature
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html
+  commentId: T:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature
+  nameWithType: GLMultiWashRendererFeature
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)
+  name: AddRenderPasses(ScriptableRenderer, ref RenderingData)
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__
+  commentId: M:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)
+  name.vb: AddRenderPasses(ScriptableRenderer, RenderingData)
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer, ref UnityEngine.Rendering.Universal.RenderingData)
+  fullName.vb: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer, UnityEngine.Rendering.Universal.RenderingData)
+  nameWithType: GLMultiWashRendererFeature.AddRenderPasses(ScriptableRenderer, ref RenderingData)
+  nameWithType.vb: GLMultiWashRendererFeature.AddRenderPasses(ScriptableRenderer, RenderingData)
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses*
+  name: AddRenderPasses
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_AddRenderPasses_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.AddRenderPasses
+  nameWithType: GLMultiWashRendererFeature.AddRenderPasses
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Create
+  name: Create()
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_Create
+  commentId: M:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Create
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Create()
+  nameWithType: GLMultiWashRendererFeature.Create()
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Create*
+  name: Create
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_Create_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Create
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Create
+  nameWithType: GLMultiWashRendererFeature.Create
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.CustomCameraScopePredicate
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_CustomCameraScopePredicate
+  commentId: P:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.CustomCameraScopePredicate
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.CustomCameraScopePredicate
+  nameWithType: GLMultiWashRendererFeature.CustomCameraScopePredicate
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.CustomCameraScopePredicate*
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_CustomCameraScopePredicate_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.CustomCameraScopePredicate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.CustomCameraScopePredicate
+  nameWithType: GLMultiWashRendererFeature.CustomCameraScopePredicate
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_Dispose_System_Boolean_
+  commentId: M:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose(bool)
+  fullName.vb: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose(Boolean)
+  nameWithType: GLMultiWashRendererFeature.Dispose(bool)
+  nameWithType.vb: GLMultiWashRendererFeature.Dispose(Boolean)
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose*
+  name: Dispose
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_Dispose_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Dispose
+  nameWithType: GLMultiWashRendererFeature.Dispose
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Properties
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_Properties
+  commentId: P:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Properties
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Properties
+  nameWithType: GLMultiWashRendererFeature.Properties
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Properties*
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLMultiWashRendererFeature_Properties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Properties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.Properties
+  nameWithType: GLMultiWashRendererFeature.Properties
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature
+  name: GLWashRendererFeature
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html
+  commentId: T:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature
+  nameWithType: GLWashRendererFeature
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)
+  name: AddRenderPasses(ScriptableRenderer, ref RenderingData)
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__
+  commentId: M:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)
+  name.vb: AddRenderPasses(ScriptableRenderer, RenderingData)
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer, ref UnityEngine.Rendering.Universal.RenderingData)
+  fullName.vb: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer, UnityEngine.Rendering.Universal.RenderingData)
+  nameWithType: GLWashRendererFeature.AddRenderPasses(ScriptableRenderer, ref RenderingData)
+  nameWithType.vb: GLWashRendererFeature.AddRenderPasses(ScriptableRenderer, RenderingData)
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses*
+  name: AddRenderPasses
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_AddRenderPasses_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.AddRenderPasses
+  nameWithType: GLWashRendererFeature.AddRenderPasses
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Create
+  name: Create()
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_Create
+  commentId: M:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Create
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Create()
+  nameWithType: GLWashRendererFeature.Create()
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Create*
+  name: Create
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_Create_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Create
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Create
+  nameWithType: GLWashRendererFeature.Create
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.CustomCameraScopePredicate
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_CustomCameraScopePredicate
+  commentId: P:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.CustomCameraScopePredicate
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.CustomCameraScopePredicate
+  nameWithType: GLWashRendererFeature.CustomCameraScopePredicate
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.CustomCameraScopePredicate*
+  name: CustomCameraScopePredicate
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_CustomCameraScopePredicate_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.CustomCameraScopePredicate
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.CustomCameraScopePredicate
+  nameWithType: GLWashRendererFeature.CustomCameraScopePredicate
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_Dispose_System_Boolean_
+  commentId: M:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose(bool)
+  fullName.vb: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose(Boolean)
+  nameWithType: GLWashRendererFeature.Dispose(bool)
+  nameWithType.vb: GLWashRendererFeature.Dispose(Boolean)
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose*
+  name: Dispose
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_Dispose_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Dispose
+  nameWithType: GLWashRendererFeature.Dispose
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Properties
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_Properties
+  commentId: P:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Properties
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Properties
+  nameWithType: GLWashRendererFeature.Properties
+- uid: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Properties*
+  name: Properties
+  href: api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html#Gamelogic_Fx_WaterColor_URP_PostProcessing_Effects_GLWashRendererFeature_Properties_
+  commentId: Overload:Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Properties
+  isSpec: "True"
+  fullName: Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.Properties
+  nameWithType: GLWashRendererFeature.Properties

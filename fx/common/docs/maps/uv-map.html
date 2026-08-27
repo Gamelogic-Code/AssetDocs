@@ -102,6 +102,7 @@ object distance to the camera, or object scale.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -109,11 +110,13 @@ object distance to the camera, or object scale.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Main Texture</td>
 <td>🖼️</td>
 <td>Reference texture used only for material tiling and offset.</td>
 </tr>
 <tr>
+<td></td>
 <td>UV Scale Offset</td>
 <td>—</td>
 <td>Scale and offset applied to UVs when material tiling adjustment is enabled.</td>
@@ -127,6 +130,7 @@ allowing you to control how empty areas of the map appear.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -134,11 +138,13 @@ allowing you to control how empty areas of the map appear.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Background UV Scale</td>
 <td>—</td>
 <td>Scales the UV coordinates used for the background pattern.</td>
 </tr>
 <tr>
+<td></td>
 <td>Background UV Offset</td>
 <td>—</td>
 <td>Offsets the UV coordinates used for the background pattern.</td>
@@ -152,19 +158,20 @@ allowing you to control how empty areas of the map appear.</p>
 <li>Maintaining consistent UV context across the entire render target</li>
 </ul>
 <h3 id="uv-adjustments">UV Adjustments</h3>
-<p>The following adjustments are controlled via shader variants and may be enabled
-from either the map renderer (BI) or map renderer feature (URP):</p>
+<p>The following adjustments are controlled via shader variants (🔑, see the
+<a href="../icon-key.html">Icon Key</a>) and may be enabled from either the map renderer (BI) or map renderer
+feature (URP):</p>
 <ul>
-<li><p><strong>Adjust by Material Tiling</strong><br>
+<li><p>🔑 <strong>Adjust by Material Tiling</strong><br>
 Applies the material’s texture scale and offset (<code>_MainTex_ST</code>) to the UVs.
 This matches how the texture would normally be sampled in a standard shader.</p>
 </li>
-<li><p><strong>Adjust by Object Distance</strong><br>
+<li><p>🔑 <strong>Adjust by Object Distance</strong><br>
 Scales UVs inversely with the object’s distance from the camera.
 Objects farther away produce denser UV patterns, which can be useful for
 debugging scale-dependent effects.</p>
 </li>
-<li><p><strong>Adjust by Object Scale</strong><br>
+<li><p>🔑 <strong>Adjust by Object Scale</strong><br>
 Scales UVs based on the average world-space scale of the object.
 This helps visualize how non-uniform object scaling affects UV-driven effects.</p>
 </li>

@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1" class="text-break">
-Class PostProcessRendererFeature&lt;TShaderProperties&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L61"><i class="bi bi-code-slash"></i></a>
+Class PostProcessRendererFeature&lt;TShaderProperties&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -424,11 +424,48 @@ the legacy <code>Execute</code> path with <code>CommandBuffer.Blit</code>.</p>
 </h2>
 
 
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_BaseProperties_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.BaseProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_BaseProperties" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.BaseProperties">
+  BaseProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The shader properties for this feature, as the non-generic base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ShaderProperties BaseProperties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html">ShaderProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_BaseProperties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Lets editor tooling (for example the shader variant collector) work with any
+<a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html">PostProcessRendererFeature&lt;TShaderProperties&gt;</a> without needing a case per
+concrete effect type.</p>
+</div>
+
+
+
+
   <a id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CustomCameraScopePredicate_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CustomCameraScopePredicate*"></a>
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_CustomCameraScopePredicate" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.CustomCameraScopePredicate">
   CustomCameraScopePredicate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A predicate that determines whether this feature should execute for a given camera.
@@ -468,7 +505,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Properties" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Properties">
   Properties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -503,7 +540,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_AddRenderPasses_UnityEngine_Rendering_Universal_ScriptableRenderer_UnityEngine_Rendering_Universal_RenderingData__" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.AddRenderPasses(UnityEngine.Rendering.Universal.ScriptableRenderer,UnityEngine.Rendering.Universal.RenderingData@)">
   AddRenderPasses(ScriptableRenderer, ref RenderingData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Injects one or multiple <code>ScriptableRenderPass</code> in the renderer.</p>
@@ -539,7 +576,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Create" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Create">
   Create()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes this feature's resources. This is called every time serialization happens.</p>
@@ -566,7 +603,7 @@ feature.CustomCameraScopePredicate = cameraData =&gt; cameraData.camera.CompareT
 
   <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_1_Dispose_System_Boolean_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature`1.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called by Dispose().

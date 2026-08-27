@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner" class="text-break">
-Class MaskedPostProcessRunner  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class MaskedPostProcessRunner  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -604,15 +604,92 @@ IPostProcess.</p>
 </div>
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_Shader_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_Shader" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.Shader">
+  Shader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The resolved shader used by this runner's blend pass, for the shader variant collector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Shader Shader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.unity3d.com/ScriptReference/Shader.html">Shader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_GetActiveShaderFeatureKeywords_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords*"></a>
+
+  <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_GetActiveShaderFeatureKeywords" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.GetActiveShaderFeatureKeywords">
+  GetActiveShaderFeatureKeywords()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <code>shader_feature</code> keywords currently active on this runner, for the shader
+variant collector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetActiveShaderFeatureKeywords()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_GetActiveShaderFeatureKeywords_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>TODO: this component doesn't fit the ShaderProperties/BaseProperties pattern used by
+PostProcess and the URP renderer features (IGNORE_OVERLAY_ALPHA is unconditional and
+USE_MASK is inferred from a texture reference rather than an explicit keyword field), so
+the shader variant collector special-cases it directly via <a class="xref" href="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.html#Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_Shader">Shader</a> and this
+method instead of going through that mechanism. Worth pulling into a shared interface if
+another odd-one-out like this shows up.</p>
+</div>
+
+
 
 
   <a id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_OnDisable_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.OnDisable*"></a>
 
   <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_OnDisable" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.OnDisable">
   OnDisable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -638,7 +715,7 @@ IPostProcess.</p>
 
   <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_OnEnable" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.OnEnable">
   OnEnable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -664,7 +741,7 @@ IPostProcess.</p>
 
   <h3 id="Gamelogic_Fx_BuiltIn_PostProcessing_MaskedPostProcessRunner_OnRenderImage_UnityEngine_RenderTexture_UnityEngine_RenderTexture_" data-uid="Gamelogic.Fx.BuiltIn.PostProcessing.MaskedPostProcessRunner.OnRenderImage(UnityEngine.RenderTexture,UnityEngine.RenderTexture)">
   OnRenderImage(RenderTexture, RenderTexture)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/BuiltIn/Scripts/PostProcessing/MaskedPostProcessRunner.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

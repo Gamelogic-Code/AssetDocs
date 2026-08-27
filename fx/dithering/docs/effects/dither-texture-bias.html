@@ -105,56 +105,86 @@ Use this effect when you want full artistic control over the pattern (Bayer, blu
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Dither Pattern</td>
 <td>🖼️</td>
 <td>The texture used as the dither pattern. Its RGB channels act as a per-pixel bias.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Mip Map Bias</td>
 <td>[0, 2]</td>
 <td>Bias applied to the mip level when sampling the dither pattern texture. Higher values select coarser mips, softening the pattern at a distance.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Dither Amount Min</td>
 <td>[-1, 1]</td>
 <td>The minimum value added to each channel based on the pattern.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Dither Amount Max</td>
 <td>[-1, 1]</td>
 <td>The maximum value added to each channel based on the pattern.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Level Count</td>
 <td>[1, ∞)³</td>
 <td>The number of quantization levels for R, G, and B. Higher values retain more color detail.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Smoothness</td>
 <td>[0, 1]</td>
 <td>Controls how soft the transitions between quantization steps are.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>Use UV Map</td>
 <td>true / false</td>
 <td>Enables UV-map–driven sampling of the dither pattern instead of screen-space UVs.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Map</td>
 <td>🖼️</td>
 <td>UV map texture used to drive pattern sampling when <strong>Use UV Map</strong> is enabled.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>Use Depth Compensation</td>
 <td>true / false</td>
 <td>If enabled, compensates for depth when using a UV map so the pattern appears the same scale at different distances. Blends between adjacent depth bands to reduce popping and discontinuities.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

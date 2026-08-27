@@ -136,7 +136,7 @@ Class PostProcessRendererFeature  <a class="header-action link-secondary" title=
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html">PostProcessRendererFeature&lt;TShaderProperties&gt;</a></div>
+      <div><a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html">PostProcessRendererFeature</a>&lt;TShaderProperties&gt;</div>
     </dd>
   </dl>
 
@@ -391,6 +391,47 @@ Class PostProcessRendererFeature  <a class="header-action link-secondary" title=
   <h2 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Needed for tools to work.</p>
 </div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_BaseProperties_" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties*"></a>
+
+  <h3 id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_BaseProperties" data-uid="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature.BaseProperties">
+  BaseProperties
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/URP/Scripts/PostEffects/PostProcessRendererFeature.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The shader properties for this feature, as the non-generic base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ShaderProperties BaseProperties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html">ShaderProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_URP_PostProcessing_PostProcessRendererFeature_BaseProperties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Lets editor tooling (for example the shader variant collector) work with any
+<a class="xref" href="Gamelogic.Fx.URP.PostProcessing.PostProcessRendererFeature-1.html">PostProcessRendererFeature&lt;TShaderProperties&gt;</a> without needing a case per
+concrete effect type.</p>
+</div>
+
+
 
 
 

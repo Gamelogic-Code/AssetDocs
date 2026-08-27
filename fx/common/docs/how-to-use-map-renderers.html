@@ -114,8 +114,9 @@ ID map in the outlines shader to create outlines around objects.</p>
 </ol>
 <h2 id="using-maps-in-the-universal-render-pipeline-urp">Using maps in the Universal Render Pipeline (URP).</h2>
 <p>Map renderers are implemented as Renderer Features in URP.</p>
-<p>By default, map renderers do not apply to overlay cameras. (If you need this, you can set
-<a class="xref" href="../../api/Gamelogic.Fx.URP.ExperimentalSettings.Mapping.html#Gamelogic_Fx_URP_ExperimentalSettings_Mapping_SkipInOverlayCameras">SkipInOverlayCameras</a> to <code>false</code>.)</p>
+<p>By default, map renderers only apply to the base camera. If you need them to also run on overlay
+cameras, set the renderer feature's <strong>Camera Scope</strong> to <code>All</code> (or <code>Custom</code>, with your own predicate
+via <code>CustomCameraScopePredicate</code>). See <a class="xref" href="../../api/Gamelogic.Fx.URP.CameraScope.html">CameraScope</a>.</p>
 <ol>
 <li>Add the maps you want to use to a Renderer by clicking the &quot;Add Renderer Feature&quot; button in the Renderer asset.</li>
 <li>Configure the properties, most importantly

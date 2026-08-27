@@ -104,86 +104,134 @@ This effect is ideal for designing and testing custom dithering patterns using s
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Matrix R / G / B</td>
 <td>🔢</td>
 <td>A floating-point matrix for each color channel. Values are normalized automatically.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Pixel Size</td>
 <td>(0, ∞)²</td>
 <td>Controls how large each matrix cell appears on the screen. Higher values make the pattern blockier.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Pixelate</td>
 <td>true / false</td>
 <td>When enabled, snaps the output image to the dither grid so each pixel samples the color from its cell center. Use this with a matching Pixel Size for a fully pixelated look.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Pixel Offset</td>
 <td>ℝ²</td>
 <td>Sub-pixel offset applied when <strong>Pixelate</strong> is enabled. Shifts the snapping grid to align cell centers precisely.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Dither Amount Min</td>
 <td>[-1, 1]</td>
 <td>Minimum bias applied per channel based on the matrices.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Dither Amount Max</td>
 <td>[-1, 1]</td>
 <td>Maximum bias applied per channel.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Level Count</td>
 <td>[1, ∞)³</td>
 <td>Per-channel quantization level count (R, G, B).</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Smoothness</td>
 <td>[0, 1]</td>
 <td>Controls the softness of the quantization steps.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Matrix Offset</td>
 <td>ℤ³</td>
 <td>Integer offset applied when tiling the dither matrices. Useful for shifting or animating patterns.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>Use UV Map</td>
 <td>true / false</td>
 <td>Enables UV-map–driven dithering instead of screen-space coordinates.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Map</td>
 <td>🖼️</td>
 <td>UV map texture used to drive matrix sampling instead of screen-space UVs if enabled.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>Use Depth Compensation</td>
 <td>true / false</td>
 <td>If on, scales the pattern to compensate for depth, so textures look the same size at any distance when using a UV map. Blends between adjacent depth bands to smooth transitions.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td>🔑</td>
 <td>UV Adaptive Background Blend</td>
 <td>true / false</td>
 <td>When enabled, blends the dithered output back toward the original color in regions where the UV map is denser than one dither cell per screen pixel, reducing Moiré patterns. Only used when <strong>Use UV Map</strong> is enabled.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Blend Start</td>
 <td>[0, 4]</td>
 <td>UV gradient magnitude at which blending toward the background starts. Below this value the full dither is shown.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>UV Blend End</td>
 <td>[0, 8]</td>
 <td>UV gradient magnitude at which the original color shows through completely. Above this value dithering is fully suppressed.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

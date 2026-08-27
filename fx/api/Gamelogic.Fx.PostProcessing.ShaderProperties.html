@@ -96,7 +96,7 @@
 
 
   <h1 id="Gamelogic_Fx_PostProcessing_ShaderProperties" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties" class="text-break">
-Class ShaderProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L59"><i class="bi bi-code-slash"></i></a>
+Class ShaderProperties  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -185,10 +185,10 @@ public abstract class ShaderProperties</code></pre>
   <div class="markdown level0 remarks"><p>A <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html">ShaderProperties</a> instance acts as the bridge between inspector-exposed settings
 and the underlying shader uniforms.</p>
 <p></p>
-When enabled, this class attempts to load the shader specified by <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>
-and stores a reference to it so the shader is included correctly in builds.
+<p>When enabled, this class attempts to load the shader specified by <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>
+and stores a reference to it so the shader is included correctly in builds.</p>
 <p></p>
-Subclasses typically:
+<p>Subclasses typically:</p>
 <ol><li>Provide the shader name via <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName">ShaderName</a>.</li><li>Expose serialized fields that represent shader parameters.</li><li>Override <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_SetMaterialProperties_UnityEngine_Material_">SetMaterialProperties(Material)</a> to apply those parameters.</li><li>Override <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a> if any property change requires material recreation.</li></ol>
 </div>
 
@@ -201,7 +201,7 @@ Subclasses typically:
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_MaterialVersion" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.MaterialVersion">
   MaterialVersion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A generation counter that increments whenever the owning material must be destroyed and
@@ -232,9 +232,55 @@ and the Dither Designer preview renderer) each maintain their own &quot;last see
 value. When their copy differs from <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_MaterialVersion">MaterialVersion</a>, they destroy their cached
 material and create a new one before the next render.</p>
 <p></p>
-Do not increment this directly; call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> instead.
+<p>Do not increment this directly; call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> instead.
 See the block comment on the <code>ShaderProperties</code> source file for a full description of
-the material version system.
+the material version system.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.Requirements">
+  Requirements
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Names of optional external packages this property set's shader depends on for one of its
+<code>shader_feature</code> keywords (for example <code>&quot;Mixbox&quot;</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;string&gt; Requirements { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Used by the editor-time shader variant collector (see
+<code>EffectShaderVariantCollectionUtils</code>) to know which package-presence keywords
+(such as <code>GAMELOGIC_HAS_MIXBOX</code>) to record for this shader, alongside the keywords
+from <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords">GetActiveShaderFeatureKeywords()</a>. Unlike <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture">RequiresDepthTexture</a>
+and <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture">RequiresNormalsTexture</a> - a small, fixed set read by one runtime
+consumer - this covers an open-ended, growing set of optional third-party dependencies,
+so new ones are added by overriding this in the relevant subclass rather than by widening
+this base class further.</p>
+<p></p>
+<p>Empty by default. Override to return the relevant requirement name(s) if this shader
+declares a <code>shader_feature</code> keyword gated on a package that might not be installed.</p>
 </div>
 
 
@@ -244,7 +290,7 @@ the material version system.
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresDepthTexture" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresDepthTexture">
   RequiresDepthTexture
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this shader requires access to the camera depth texture.</p>
@@ -280,7 +326,7 @@ This is used by higher-level systems to enable the correct camera flags.</p>
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.RequiresNormalsTexture">
   RequiresNormalsTexture
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this shader requires access to the camera normals texture.</p>
@@ -316,7 +362,7 @@ This is used by higher-level systems to ensure normals are generated when needed
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_Shader" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.Shader">
   Shader
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the resolved shader instance.</p>
@@ -349,7 +395,7 @@ This is used by higher-level systems to ensure normals are generated when needed
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_ShaderName" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.ShaderName">
   ShaderName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the shader used by this property set.</p>
@@ -389,7 +435,7 @@ It should match the full shader path as defined in the shader file.</p>
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.CheckMaterialVersion">
   CheckMaterialVersion()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks whether any condition requires the owning material to be recreated, and calls
@@ -414,14 +460,62 @@ It should match the full shader path as defined in the shader file.</p>
 effect material. This guarantees that staleness detection and material recreation happen in
 the same frame, with no visible lag.</p>
 <p></p>
-Override this in subclasses whose properties can change size independently of normal
+<p>Override this in subclasses whose properties can change size independently of normal
 inspector validation — for example, float arrays, texture arrays, or compute buffers whose
 element count is driven by user-editable data. Compare the current state against a stored
-"last seen" snapshot and call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> on a mismatch.
+&quot;last seen&quot; snapshot and call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> on a mismatch.</p>
 <p></p>
-See Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
+<p>See Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties
 for a worked example: it tracks each channel matrix's <code>FloatMatrix.SizeVersion</code> and
-increments the material version whenever any matrix is resized.
+increments the material version whenever any matrix is resized.</p>
+</div>
+
+
+
+
+  <a id="Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords*"></a>
+
+  <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords">
+  GetActiveShaderFeatureKeywords()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <code>shader_feature</code> keywords that are currently active (enabled) on this
+property set, given its current serialized values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetActiveShaderFeatureKeywords()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Used by the editor-time shader variant collector (see
+<code>EffectShaderVariantCollectionUtils</code>) to work out which keyword combinations
+are actually configured across the project, since materials for these effects are
+created at runtime and never exist as serialized assets that Unity's normal
+shader-feature usage stripping can see.</p>
+<p></p>
+<p>Discovered by reflection over fields whose type implements <a class="xref" href="Gamelogic.Fx.IShaderFeatureKeyword.html">IShaderFeatureKeyword</a>
+(such as <a class="xref" href="Gamelogic.Fx.BoolKeyword.html">BoolKeyword</a> and <a class="xref" href="Gamelogic.Fx.EnumKeyword-1.html">EnumKeyword&lt;TEnum&gt;</a>) - subclasses don't
+need to override this. Compiled out of Player builds; always empty outside the editor.</p>
+<p></p>
+<p>Pipeline keywords (<code>GAMELOGIC_HAS_URP</code>, <code>GAMELOGIC_HAS_URP_RENDER_GRAPH</code>) are not
+listed here - they apply to every shader unconditionally and are supplied separately by
+<code>PipelineDefiner.GetActivePipelineKeywords</code>.</p>
 </div>
 
 
@@ -431,7 +525,7 @@ increments the material version whenever any matrix is resized.
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.IncMaterialVersion">
   IncMaterialVersion()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Increments <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_MaterialVersion">MaterialVersion</a>, signalling all consumers that their cached
@@ -465,7 +559,7 @@ next frame.</p>
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnEnable" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.OnEnable">
   OnEnable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the owning component or asset is enabled.</p>
@@ -496,7 +590,7 @@ Subclasses overriding this method should normally call <code>base.OnEnable()</co
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_OnValidate" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.OnValidate">
   OnValidate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L262"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when serialized values are changed in the inspector.</p>
@@ -527,7 +621,7 @@ in response to inspector edits.</p>
 
   <h3 id="Gamelogic_Fx_PostProcessing_ShaderProperties_SetMaterialProperties_UnityEngine_Material_" data-uid="Gamelogic.Fx.PostProcessing.ShaderProperties.SetMaterialProperties(UnityEngine.Material)">
   SetMaterialProperties(Material)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/hermantulleken/fx_package/blob/main/FxUnity/Packages/za.co.gamelogic.fx/Runtime/Core/Scripts/PostProcessing/ShaderProperties.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Applies all shader-related properties to the given material.</p>
@@ -556,9 +650,9 @@ in response to inspector edits.</p>
   <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
 (for example, floats, vectors, colors, textures, and keywords).</p>
 <p></p>
-Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
+<p>Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
 material has already been fetched, so any increment would take effect one frame late.
-Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.
+Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.</p>
 </div>
 
 

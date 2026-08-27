@@ -102,9 +102,34 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.ApplyDepthCompensationKeyword.html">ApplyDepthCompensationKeyword</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.BoolKeyword.html">BoolKeyword</a></dt>
+      <dd><p>A serialized bool that drives a single shader_feature keyword when true. Subclass and
+override <a class="xref" href="Gamelogic.Fx.BoolKeyword.html#Gamelogic_Fx_BoolKeyword_Keyword">Keyword</a> to name the keyword - the identity is code, not serialized
+data, so it can never drift from a renamed shader keyword.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.EnumKeyword-1.html">EnumKeyword&lt;TEnum&gt;</a></dt>
+      <dd><p>A serialized enum that drives one shader_feature keyword from a fixed set, based on its
+current value. Subclass and override <a class="xref" href="Gamelogic.Fx.EnumKeyword-1.html#Gamelogic_Fx_EnumKeyword_1_Keywords">Keywords</a> to name them (positional,
+matching the enum's underlying int values; use <code>&quot;_&quot;</code> for a value that maps to no
+keyword) - identity is code, not serialized data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Fx.FloatMatrix.html">FloatMatrix</a></dt>
       <dd><p>A serializable data-driven dither matrix.
 Stores an array of normalized float values along with matrix dimensions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.HexGridKeyword.html">HexGridKeyword</a></dt>
+      <dd><p>Drives the <code>HEX_GRID</code> keyword when <a class="xref" href="Gamelogic.Fx.GridType.html">GridType</a> is <a class="xref" href="Gamelogic.Fx.GridType.html#Gamelogic_Fx_GridType_Hex">Hex</a>.
+Shared across every effect that offers a hex/rect grid choice (Pixelate, dither bias, ...).</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -152,12 +177,35 @@ are active.</p>
       <dd><p>Used to flag components that need Mixbox to work.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.StringKeyword.html">StringKeyword</a></dt>
+      <dd><p>A serialized string that drives one shader_feature keyword picked from a popup, backed by
+the same <code>PropertyDrawerData</code> value-registry used by <code>[StringPopup]</code> fields.
+Subclass and override <a class="xref" href="Gamelogic.Fx.StringKeyword.html#Gamelogic_Fx_StringKeyword_RetrieverKey">RetrieverKey</a> to name the value-list registry key -
+identity is code, not serialized data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.UseUvMapKeyword.html">UseUvMapKeyword</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.html">UvAdaptiveBackgroundBlendKeyword</a></dt>
+      <dd></dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Gamelogic.Fx.IFloatMatrix.html">IFloatMatrix</a></dt>
       <dd><p>Represents a read-only view of a two-dimensional matrix of float values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gamelogic.Fx.IShaderFeatureKeyword.html">IShaderFeatureKeyword</a></dt>
+      <dd><p>A serialized field type that drives one or more shader_feature keywords. Implementing this
+lets <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords">GetActiveShaderFeatureKeywords()</a>
+discover the field via reflection instead of each Properties class listing it by hand.</p>
 </dd>
     </dl>
     <h3 id="enums">

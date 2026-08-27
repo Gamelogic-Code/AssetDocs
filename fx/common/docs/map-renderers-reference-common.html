@@ -96,37 +96,72 @@
 
 <p><img src="../images/reference.png" alt=""></p>
 <p><em>This image shows the original scene without any post processing.</em></p>
+<h2 id="icon-key">Icon Key</h2>
+<p>Symbols used in the property reference tables throughout these docs.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🖼️</td>
+<td>Texture field.</td>
+</tr>
+<tr>
+<td>🎨</td>
+<td>Color field.</td>
+</tr>
+<tr>
+<td>🔢</td>
+<td>Matrix field.</td>
+</tr>
+<tr>
+<td>🔑</td>
+<td>Shader keyword. Selecting this property switches the effect's shader between <code>shader_feature</code> variants. See <a href="shader-stripping.html">Shader Stripping</a> if you plan to change one of these dynamically at runtime rather than through the Inspector.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="common-properties">Common Properties</h2>
 <p>The following properties are shared by all map renderers, regardless of map type or render pipeline.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Render Target</td>
 <td>The render texture the map is written into.</td>
 </tr>
 <tr>
+<td></td>
 <td>Layer Mask</td>
 <td>Which object layers are included in the map. Defaults to Everything.</td>
 </tr>
 <tr>
+<td></td>
 <td>Update Render List Each Frame</td>
 <td>Refreshes the renderer list every frame in play mode. Disable for better performance and call <code>RefreshRendererList</code> manually when the scene changes.</td>
 </tr>
 <tr>
+<td></td>
 <td>Update Render List Each Frame (Editor)</td>
 <td>Same as above, for edit mode.</td>
 </tr>
 <tr>
+<td></td>
 <td>Source Camera <em>(Built-in only)</em></td>
 <td>The scene camera whose settings are copied for map rendering.</td>
 </tr>
 <tr>
+<td></td>
 <td>Update Camera Each Frame <em>(Built-in only)</em></td>
 <td>Re-syncs the internal render camera to the source camera every frame. Enable if the source camera is animated or moved by script.</td>
 </tr>
@@ -139,6 +174,7 @@ driving effects like fog or outlines, or serving as an intermediate buffer for o
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -146,16 +182,19 @@ driving effects like fog or outlines, or serving as an intermediate buffer for o
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Encoding</td>
 <td>{0, 1}</td>
 <td>Selects the depth encoding mode. <code>0</code> = Linear depth, <code>1</code> = Logarithmic depth</td>
 </tr>
 <tr>
+<td></td>
 <td>Near Plane</td>
 <td>(0, ∞)</td>
 <td>Camera near-plane distance used for depth normalization</td>
 </tr>
 <tr>
+<td></td>
 <td>Far Plane</td>
 <td>(0, ∞)</td>
 <td>Camera far-plane distance used for depth normalization</td>
@@ -217,6 +256,7 @@ folds normals toward a reference direction.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -224,6 +264,7 @@ folds normals toward a reference direction.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Encoding</td>
 <td>{0, 1}</td>
 <td>Selects the normal encoding mode. <code>0</code> = Raw normals, <code>1</code> = Hemispherical flip</td>
@@ -264,6 +305,7 @@ object distance to the camera, or object scale.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -271,11 +313,13 @@ object distance to the camera, or object scale.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Main Texture</td>
 <td>🖼️</td>
 <td>Reference texture used only for material tiling and offset.</td>
 </tr>
 <tr>
+<td></td>
 <td>UV Scale Offset</td>
 <td>—</td>
 <td>Scale and offset applied to UVs when material tiling adjustment is enabled.</td>
@@ -289,6 +333,7 @@ allowing you to control how empty areas of the map appear.</p>
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -296,11 +341,13 @@ allowing you to control how empty areas of the map appear.</p>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>Background UV Scale</td>
 <td>—</td>
 <td>Scales the UV coordinates used for the background pattern.</td>
 </tr>
 <tr>
+<td></td>
 <td>Background UV Offset</td>
 <td>—</td>
 <td>Offsets the UV coordinates used for the background pattern.</td>
@@ -314,19 +361,20 @@ allowing you to control how empty areas of the map appear.</p>
 <li>Maintaining consistent UV context across the entire render target</li>
 </ul>
 <h3 id="uv-adjustments">UV Adjustments</h3>
-<p>The following adjustments are controlled via shader variants and may be enabled
-from either the map renderer (BI) or map renderer feature (URP):</p>
+<p>The following adjustments are controlled via shader variants (🔑, see the
+<a href="icon-key.html">Icon Key</a>) and may be enabled from either the map renderer (BI) or map renderer
+feature (URP):</p>
 <ul>
-<li><p><strong>Adjust by Material Tiling</strong><br>
+<li><p>🔑 <strong>Adjust by Material Tiling</strong><br>
 Applies the material’s texture scale and offset (<code>_MainTex_ST</code>) to the UVs.
 This matches how the texture would normally be sampled in a standard shader.</p>
 </li>
-<li><p><strong>Adjust by Object Distance</strong><br>
+<li><p>🔑 <strong>Adjust by Object Distance</strong><br>
 Scales UVs inversely with the object’s distance from the camera.
 Objects farther away produce denser UV patterns, which can be useful for
 debugging scale-dependent effects.</p>
 </li>
-<li><p><strong>Adjust by Object Scale</strong><br>
+<li><p>🔑 <strong>Adjust by Object Scale</strong><br>
 Scales UVs based on the average world-space scale of the object.
 This helps visualize how non-uniform object scaling affects UV-driven effects.</p>
 </li>

@@ -94,6 +94,34 @@
         <article data-uid="">
 <h1 id="effects-reference-cross-hatching">Effects reference: Cross-hatching</h1>
 
+<h2 id="icon-key">Icon Key</h2>
+<p>Symbols used in the property reference tables throughout these docs.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🖼️</td>
+<td>Texture field.</td>
+</tr>
+<tr>
+<td>🎨</td>
+<td>Color field.</td>
+</tr>
+<tr>
+<td>🔢</td>
+<td>Matrix field.</td>
+</tr>
+<tr>
+<td>🔑</td>
+<td>Shader keyword. Selecting this property switches the effect's shader between <code>shader_feature</code> variants. See <a href="../../common/docs/shader-stripping.html">Shader Stripping</a> if you plan to change one of these dynamically at runtime rather than through the Inspector.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="convex-hull-hatch">Convex Hull Hatch</h2>
 <p>Maps each pixel’s color toward a set of primary colors using iterative convex-hull projection, while applying <strong>layered cross-hatching</strong> to modulate how strongly each primary influences the result.
 This produces stylized, textured palette mapping that blends palette reduction with drawing-like shading.</p>
@@ -101,6 +129,7 @@ This produces stylized, textured palette mapping that blends palette reduction w
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
@@ -108,76 +137,91 @@ This produces stylized, textured palette mapping that blends palette reduction w
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td><strong>Layer Count</strong></td>
 <td>[1, 10]</td>
 <td>Number of hatching layers used to modulate convex-hull projection. More layers increase texture density and color variation.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Background Color</strong></td>
 <td>🎨</td>
 <td>Base reference color used as the starting point for convex-hull projection.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Primary Colors (0–9)</strong></td>
 <td>🎨</td>
 <td>Palette colors that define the convex hull. Each pixel is iteratively projected toward these anchors.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Orientation Scheme</strong></td>
 <td>Fixed, Uniform, Golden, Parallel</td>
 <td>Determines how hatch angles are rotated across successive layers.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Base Orientation</strong></td>
 <td>[0, 180]</td>
 <td>Base rotation offset in degrees applied before layer-based orientation.</td>
 </tr>
 <tr>
+<td>🔑</td>
 <td><strong>Use Orientation Map</strong></td>
 <td>true / false</td>
 <td>When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Orientation Texture</strong></td>
 <td>🖼️</td>
 <td>Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Hatch Texture</strong></td>
 <td>🖼️</td>
 <td>Tileable line or stipple texture used to modulate convex-hull projection.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Mip Map Bias</strong></td>
 <td>[0, 2]</td>
 <td>Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Layer Offset</strong></td>
 <td>[0, 0.5]</td>
 <td>Per-layer UV offset applied to the hatch texture. When locked, Y follows X.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Hatch Strength</strong></td>
 <td>[0, 5]</td>
 <td>Controls how dark the hatch layers are.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Background Strength</strong></td>
 <td>[0, 1]</td>
 <td>How much of the original image to show compared to the background color.</td>
 </tr>
 <tr>
+<td>🔑</td>
 <td><strong>Use UV Map</strong></td>
 <td>true / false</td>
 <td>Enables UV-map–driven sampling of hatch textures instead of screen-space UVs.</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>UV Map</strong></td>
 <td>🖼️</td>
 <td>UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.</td>
 </tr>
 <tr>
+<td>🔑</td>
 <td><strong>Use Depth Compensation</strong></td>
 <td>true / false</td>
 <td>When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
@@ -200,97 +244,24 @@ for the built-in pipeline, or the corresponding renderer feature for URP. There 
 This produces pigment-like transitions, watercolor and gouache–style layering, and more natural blending than standard linear interpolation.</p>
 <p>Hatching is applied across multiple layers, each rotated according to the selected orientation scheme, allowing expressive, drawing-like texture embedded into the palette projection.</p>
 <p>If Mixbox is unavailable, the shader outputs a flat yellow fallback.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Range</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Layer Count</strong></td>
-<td>[1, 10]</td>
-<td>Number of hatching layers used to modulate the convex-hull palette projection. Higher values increase texture density and layering depth.</td>
-</tr>
-<tr>
-<td><strong>Background Color</strong></td>
-<td>🎨</td>
-<td>Base reference color used as the starting point for convex-hull projection before Mixbox blending.</td>
-</tr>
-<tr>
-<td><strong>Primary Colors (0–9)</strong></td>
-<td>🎨</td>
-<td>Palette colors that define the convex hull. Pixels are iteratively blended toward these anchors using Mixbox.</td>
-</tr>
-<tr>
-<td><strong>Mixbox LUT</strong></td>
-<td>🖼️</td>
-<td>Lookup texture required for Mixbox’s perceptually accurate subtractive color blending.</td>
-</tr>
-<tr>
-<td><strong>Orientation Scheme</strong></td>
-<td>Fixed, Uniform, Golden, Parallel</td>
-<td>Determines how hatch angles are rotated across successive layers.</td>
-</tr>
-<tr>
-<td><strong>Base Orientation</strong></td>
-<td>[0, 180]</td>
-<td>Base rotation offset in degrees applied before per-layer orientation is added.</td>
-</tr>
-<tr>
-<td><strong>Use Orientation Map</strong></td>
-<td>true / false</td>
-<td>When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.</td>
-</tr>
-<tr>
-<td><strong>Orientation Texture</strong></td>
-<td>🖼️</td>
-<td>Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.</td>
-</tr>
-<tr>
-<td><strong>Hatch Texture</strong></td>
-<td>🖼️</td>
-<td>Tileable line or stipple texture used to modulate Mixbox convex-hull projection.</td>
-</tr>
-<tr>
-<td><strong>Mip Map Bias</strong></td>
-<td>[0, 2]</td>
-<td>Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.</td>
-</tr>
-<tr>
-<td><strong>Layer Offset</strong></td>
-<td>[0, 0.5]</td>
-<td>Per-layer UV offset applied to the hatch texture. When locked, Y follows X.</td>
-</tr>
-<tr>
-<td><strong>Hatch Strength</strong></td>
-<td>[0, 5]</td>
-<td>Controls how strongly the hatch pattern influences Mixbox color projection.</td>
-</tr>
-<tr>
-<td><strong>Background Strength</strong></td>
-<td>[0, 1]</td>
-<td>Blends between the original pixel color and the background color.</td>
-</tr>
-<tr>
-<td><strong>Use UV Map</strong></td>
-<td>true / false</td>
-<td>Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.</td>
-</tr>
-<tr>
-<td><strong>UV Map</strong></td>
-<td>🖼️</td>
-<td>UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.</td>
-</tr>
-<tr>
-<td><strong>Use Depth Compensation</strong></td>
-<td>true / false</td>
-<td>When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to reduce popping and discontinuities.</td>
-</tr>
-</tbody>
-</table>
+<p>| 🔑 |  Property                     | Range                            | Description                                                                                                                              |
+|---|--- ---------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+|  | <strong>Layer Count</strong>              | [1, 10]                          | Number of hatching layers used to modulate the convex-hull palette projection. Higher values increase texture density and layering depth. |
+|  | <strong>Background Color</strong>         | 🎨                               | Base reference color used as the starting point for convex-hull projection before Mixbox blending.                                       |
+|  | <strong>Primary Colors (0–9)</strong>     | 🎨                               | Palette colors that define the convex hull. Pixels are iteratively blended toward these anchors using Mixbox.                            |
+|  | <strong>Mixbox LUT</strong>               | 🖼️                               | Lookup texture required for Mixbox’s perceptually accurate subtractive color blending.                                                   |
+|  | <strong>Orientation Scheme</strong>       | Fixed, Uniform, Golden, Parallel | Determines how hatch angles are rotated across successive layers.                                                                        |
+|  | <strong>Base Orientation</strong>         | [0, 180]                         | Base rotation offset in degrees applied before per-layer orientation is added.                                                           |
+| 🔑 | <strong>Use Orientation Map</strong>      | true / false                     | When enabled, hatch orientation is sampled from an orientation texture instead of using only the orientation scheme.                     |
+|  | <strong>Orientation Texture</strong>      | 🖼️                               | Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.                                              |
+|  | <strong>Hatch Texture</strong>            | 🖼️                               | Tileable line or stipple texture used to modulate Mixbox convex-hull projection.                                                         |
+|  | <strong>Mip Map Bias</strong>             | [0, 2]                           | Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.   |
+|  | <strong>Layer Offset</strong>             | [0, 0.5]                         | Per-layer UV offset applied to the hatch texture. When locked, Y follows X.                                                              |
+|  | <strong>Hatch Strength</strong>           | [0, 5]                           | Controls how strongly the hatch pattern influences Mixbox color projection.                                                              |
+|  | <strong>Background Strength</strong>      | [0, 1]                           | Blends between the original pixel color and the background color.                                           |
+| 🔑 | <strong>Use UV Map</strong>             | true / false | Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.                                                                                                |
+|  | <strong>UV Map</strong>                 | 🖼️       | UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.                                                                                                       |
+| 🔑 | <strong>Use Depth Compensation</strong> | true / false | When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to reduce popping and discontinuities. |</p>
 <p><img src="effects/images/mixbox-convex-hull-hatch.png" alt=""></p>
 <div class="TIP">
 <h5>Tip</h5>
@@ -304,97 +275,24 @@ for the built-in pipeline, or the corresponding renderer feature for URP. There 
 Darker regions receive more hatch layers; bright regions remain mostly untouched.
 The hatch texture is rotated per layer according to the selected orientation scheme, producing rich, multidirectional hatching styles.</p>
 <p>This shader mixes colors using <code>A + B - 1</code>, visually similar to multiplicative blending (<code>A * B</code>) for values in the <code>[0,1]</code> range.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Range</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Layer Count</strong></td>
-<td>[1, 10]</td>
-<td>Number of hatch layers. Darker areas accumulate more layers.</td>
-</tr>
-<tr>
-<td><strong>Black Level</strong></td>
-<td>[0, 1]</td>
-<td>Brightness threshold below which pixels are fully hatched.</td>
-</tr>
-<tr>
-<td><strong>White Level</strong></td>
-<td>[0, 1]</td>
-<td>Brightness threshold above which pixels receive no hatching.</td>
-</tr>
-<tr>
-<td><strong>Orientation Scheme</strong></td>
-<td>Fixed, Uniform, Golden, Parallel</td>
-<td>Determines how hatch angles are rotated across layers.</td>
-</tr>
-<tr>
-<td><strong>Base Orientation</strong></td>
-<td>[0, 180]</td>
-<td>Base rotation in degrees applied before layer-based rotation.</td>
-</tr>
-<tr>
-<td><strong>Use Orientation Map</strong></td>
-<td>true / false</td>
-<td>When enabled, hatch orientation is sampled from the orientation texture instead of using the base angle.</td>
-</tr>
-<tr>
-<td><strong>Orientation Texture</strong></td>
-<td>🖼️</td>
-<td>Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.</td>
-</tr>
-<tr>
-<td><strong>Hatch Texture</strong></td>
-<td>🖼️</td>
-<td>The texture used for hatching. Typically a tileable line or stipple pattern.</td>
-</tr>
-<tr>
-<td><strong>Mip Map Bias</strong></td>
-<td>[0, 2]</td>
-<td>Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance.</td>
-</tr>
-<tr>
-<td><strong>Layer Offset</strong></td>
-<td>[0, 0.5]</td>
-<td>Per-layer UV offset applied to the hatch texture. When locked, Y follows X.</td>
-</tr>
-<tr>
-<td><strong>Hatch Strength</strong></td>
-<td>[0, 5]</td>
-<td>Controls the darkness of each hatch layer.</td>
-</tr>
-<tr>
-<td><strong>Background Strength</strong></td>
-<td>[0, 1]</td>
-<td>Controls the amount of background tone visible in the background layer.</td>
-</tr>
-<tr>
-<td><strong>Smoothness</strong></td>
-<td>[0, 1]</td>
-<td>Blends transitions between hatch layers for smoother tonal changes.</td>
-</tr>
-<tr>
-<td><strong>Use UV Map</strong></td>
-<td>On / Off</td>
-<td>Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.</td>
-</tr>
-<tr>
-<td><strong>UV Map</strong></td>
-<td>🖼️</td>
-<td>UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.</td>
-</tr>
-<tr>
-<td><strong>Use Depth Compensation</strong></td>
-<td>On / Off</td>
-<td>When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping.</td>
-</tr>
-</tbody>
-</table>
+<p>| 🔑 |  Property                     | Range                            | Description                                                                                              |
+|---|--- ---------------------------- | -------------------------------- |----------------------------------------------------------------------------------------------------------|
+|  | <strong>Layer Count</strong>              | [1, 10]                          | Number of hatch layers. Darker areas accumulate more layers.                                             |
+|  | <strong>Black Level</strong>              | [0, 1]                           | Brightness threshold below which pixels are fully hatched.                                               |
+|  | <strong>White Level</strong>              | [0, 1]                           | Brightness threshold above which pixels receive no hatching.                                             |
+|  | <strong>Orientation Scheme</strong>       | Fixed, Uniform, Golden, Parallel | Determines how hatch angles are rotated across layers.                                                   |
+|  | <strong>Base Orientation</strong>         | [0, 180]                         | Base rotation in degrees applied before layer-based rotation.                                            |
+| 🔑 | <strong>Use Orientation Map</strong>      | true / false                     | When enabled, hatch orientation is sampled from the orientation texture instead of using the base angle. |
+|  | <strong>Orientation Texture</strong>      | 🖼️                               | Texture used to control per-region hatch orientation when <em>Use Orientation Map</em> is enabled.              |
+|  | <strong>Hatch Texture</strong>            | 🖼️                               | The texture used for hatching. Typically a tileable line or stipple pattern.                             |
+|  | <strong>Mip Map Bias</strong>             | [0, 2]                           | Bias applied to the mip level when sampling the hatch texture. Higher values select coarser mips, softening fine detail at a distance. |
+|  | <strong>Layer Offset</strong>             | [0, 0.5]                         | Per-layer UV offset applied to the hatch texture. When locked, Y follows X.                              |
+|  | <strong>Hatch Strength</strong>           | [0, 5]                           | Controls the darkness of each hatch layer.                                                               |
+|  | <strong>Background Strength</strong>      | [0, 1]                           | Controls the amount of background tone visible in the background layer.                                  |
+|  | <strong>Smoothness</strong>               | [0, 1]                           | Blends transitions between hatch layers for smoother tonal changes.                                      |
+| 🔑 | <strong>Use UV Map</strong>             | On / Off | Enables UV-map–driven sampling of the hatch texture instead of screen-space UVs.                                                                                                   |
+|  | <strong>UV Map</strong>                 | 🖼️       | UV map texture used to drive hatch sampling when <em>Use UV Map</em> is enabled.                                                                                                          |
+| 🔑 | <strong>Use Depth Compensation</strong> | On / Off | When using a UV map, compensates for depth so hatch scale appears consistent at different distances. Blends between adjacent depth bands to smooth transitions and reduce popping. |</p>
 <p><img src="effects/images/simple-hatch.png" alt=""></p>
 <div class="TIP">
 <h5>Tip</h5>

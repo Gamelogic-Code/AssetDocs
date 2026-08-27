@@ -99,41 +99,62 @@ Edges can be detected from the original image, scene depth, scene normals, or an
 <table>
 <thead>
 <tr>
+<th>🔑</th>
 <th>Property</th>
 <th>Range</th>
 <th>Description</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>🔑</td>
 <td>Outline Source</td>
 <td>{0, 1, 2, 3}</td>
 <td>Selects the source used for edge detection. See <strong>Outline Sources</strong> below.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td>Jump Size</td>
 <td>[0, ∞)</td>
 <td>Multiplies the sampling offset. Larger values produce thicker, coarser outlines.</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Edge Factor</td>
 <td>[0, ∞)</td>
 <td>Scales the detected edge strength before thresholding. Used to make threshold tuning easier.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Threshold</td>
 <td>[0, ∞)</td>
 <td>Edge strength above which a pixel is considered part of an outline.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Line Color</td>
 <td>🎨</td>
 <td>Color used to draw detected edges. Alpha controls how much it blends over the original image.</td>
+<td></td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td>Background Color</td>
 <td>🎨</td>
 <td>Color used where no edge is detected. Alpha controls blending with the original image.</td>
+<td></td>
 </tr>
 </tbody>
 </table>

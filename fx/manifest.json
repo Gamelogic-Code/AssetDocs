@@ -12,6 +12,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.ApplyDepthCompensationKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.ApplyDepthCompensationKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.ApplyDepthCompensationKeyword",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.BoolKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.BoolKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.BoolKeyword",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.BoolKeyword.yml\" sourcestartlinenumber=\"1\">A serialized bool that drives a single shader_feature keyword when true. Subclass and\noverride <xref href=\"Gamelogic.Fx.BoolKeyword.Keyword\" data-throw-if-not-resolved=\"false\"></xref> to name the keyword - the identity is code, not serialized\ndata, so it can never drift from a renamed shader keyword.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.BuiltIn.Mapping.MapRenderer-1.yml",
       "output": {
         ".html": {
@@ -1594,6 +1622,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.EnumKeyword-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.EnumKeyword-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.EnumKeyword<TEnum>",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.EnumKeyword-1.yml\" sourcestartlinenumber=\"1\">A serialized enum that drives one shader_feature keyword from a fixed set, based on its\ncurrent value. Subclass and override <xref href=\"Gamelogic.Fx.EnumKeyword%601.Keywords\" data-throw-if-not-resolved=\"false\"></xref> to name them (positional,\nmatching the enum's underlying int values; use <code>&quot;_&quot;</code> for a value that maps to no\nkeyword) - identity is code, not serialized data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.FloatMatrix.yml",
       "output": {
         ".html": {
@@ -1622,6 +1664,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.HexGridKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.HexGridKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.HexGridKeyword",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.HexGridKeyword.yml\" sourcestartlinenumber=\"1\">Drives the <code>HEX_GRID</code> keyword when <xref href=\"Gamelogic.Fx.GridType\" data-throw-if-not-resolved=\"false\"></xref> is <xref href=\"Gamelogic.Fx.GridType.Hex\" data-throw-if-not-resolved=\"false\"></xref>.\nShared across every effect that offers a hex/rect grid choice (Pixelate, dither bias, ...).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.IFloatMatrix.yml",
       "output": {
         ".html": {
@@ -1633,6 +1689,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.IFloatMatrix",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.IFloatMatrix.yml\" sourcestartlinenumber=\"1\">Represents a read-only view of a two-dimensional matrix of float values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.IShaderFeatureKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.IShaderFeatureKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.IShaderFeatureKeyword",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.IShaderFeatureKeyword.yml\" sourcestartlinenumber=\"1\">A serialized field type that drives one or more shader_feature keywords. Implementing this\nlets <xref href=\"Gamelogic.Fx.PostProcessing.ShaderProperties.GetActiveShaderFeatureKeywords\" data-throw-if-not-resolved=\"false\"></xref>\ndiscover the field via reflection instead of each Properties class listing it by hand.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2277,6 +2347,20 @@
       "IsMRef": true,
       "Title": "Gamelogic.Fx.RequiresMixboxAttribute",
       "Summary": "<p sourcefile=\"api/Gamelogic.Fx.RequiresMixboxAttribute.yml\" sourcestartlinenumber=\"1\">Used to flag components that need Mixbox to work.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.StringKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.StringKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.StringKeyword",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.StringKeyword.yml\" sourcestartlinenumber=\"1\">A serialized string that drives one shader_feature keyword picked from a popup, backed by\nthe same <code>PropertyDrawerData</code> value-registry used by <code>[StringPopup]</code> fields.\nSubclass and override <xref href=\"Gamelogic.Fx.StringKeyword.RetrieverKey\" data-throw-if-not-resolved=\"false\"></xref> to name the value-list registry key -\nidentity is code, not serialized data.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3274,6 +3358,202 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.UseUvMapKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.UseUvMapKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.UseUvMapKeyword",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.UvAdaptiveBackgroundBlendKeyword",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.LayerPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that thresholds each color channel into a binary band mask.\nSee <a href=\"../watercolor/docs/effects-reference-watercolor.html#layer\">../watercolor/docs/effects-reference-watercolor.html#layer</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.MultiWashPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that thresholds, blurs, and washes the source image into up to\n<xref href=\"Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.MaxLayerCount\" data-throw-if-not-resolved=\"false\"></xref> layers, then blends them into a single organic\nwatercolor look. The full effect, composed from <code>Layer</code> and <code>Wash</code>.\nSee <a href=\"../watercolor/docs/effects-reference-watercolor.html#multi-wash\">../watercolor/docs/effects-reference-watercolor.html#multi-wash</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.WashPostProcess.yml\" sourcestartlinenumber=\"1\">A post process that blurs the source image and perturbs it with noise to produce an organic\nink-bleed &quot;wash&quot; look. A single-layer building block of <code>MultiWashPostProcess</code> — also useful\nstandalone, for testing the wash look in isolation.\nSee <a href=\"../watercolor/docs/effects-reference-watercolor.html#wash\">../watercolor/docs/effects-reference-watercolor.html#wash</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.BuiltIn.PostProcessing.Effects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.LayerProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the Layer post-processing effect — thresholds each color channel into a binary band mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the MultiWash post-processing effect — thresholds, blurs, and washes the\nsource image into up to <xref href=\"Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.MaxLayerCount\" data-throw-if-not-resolved=\"false\"></xref> layers, then blends them together into a\nsingle organic watercolor look.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.WashProperties.yml\" sourcestartlinenumber=\"1\">Shader properties for the Wash post-processing effect — blurs a source image and perturbs it with\nnoise to produce an organic ink-bleed &quot;wash&quot; look.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.PostProcessing.Effects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.PostProcessing.Effects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLLayerRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that thresholds each color channel into a binary band mask.\nSee <a href=\"../watercolor/docs/effects-reference-watercolor.html#layer\">../watercolor/docs/effects-reference-watercolor.html#layer</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLMultiWashRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that thresholds, blurs, and washes the source image into up to\n<xref href=\"Gamelogic.Fx.WaterColor.PostProcessing.Effects.MultiWashProperties.MaxLayerCount\" data-throw-if-not-resolved=\"false\"></xref> layers, then blends them into a single organic\nwatercolor look. The full effect, composed from <code>Layer</code> and <code>Wash</code>.\nSee <a href=\"../watercolor/docs/effects-reference-watercolor.html#multi-wash\">../watercolor/docs/effects-reference-watercolor.html#multi-wash</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature",
+      "Summary": "<p sourcefile=\"api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.GLWashRendererFeature.yml\" sourcestartlinenumber=\"1\">A post process that blurs the source image and perturbs it with noise to produce an organic\nink-bleed &quot;wash&quot; look. A single-layer building block of <code>GLMultiWashRendererFeature</code> — also\nuseful standalone, for testing the wash look in isolation.\nSee <a href=\"../watercolor/docs/effects-reference-watercolor.html#wash\">../watercolor/docs/effects-reference-watercolor.html#wash</a>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gamelogic.Fx.WaterColor.URP.PostProcessing.Effects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gamelogic.Fx.yml",
       "output": {
         ".html": {
@@ -3811,6 +4091,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "common/docs/icon-key.md",
+      "output": {
+        ".html": {
+          "relative_path": "common/docs/icon-key.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "common/docs/index-samples.md",
       "output": {
         ".html": {
@@ -3935,6 +4225,16 @@
       "output": {
         ".html": {
           "relative_path": "common/docs/separable-effects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "common/docs/shader-stripping.md",
+      "output": {
+        ".html": {
+          "relative_path": "common/docs/shader-stripping.html"
         }
       },
       "version": ""

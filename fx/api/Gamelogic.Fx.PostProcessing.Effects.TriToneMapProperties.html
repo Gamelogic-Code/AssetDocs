@@ -146,6 +146,12 @@ public sealed class TriToneMapProperties : ShaderProperties</code></pre>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_RequiresNormalsTexture">ShaderProperties.RequiresNormalsTexture</a>
     </div>
     <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_Requirements">ShaderProperties.Requirements</a>
+    </div>
+    <div>
+      <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_GetActiveShaderFeatureKeywords">ShaderProperties.GetActiveShaderFeatureKeywords()</a>
+    </div>
+    <div>
       <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">ShaderProperties.CheckMaterialVersion()</a>
     </div>
     <div>
@@ -447,9 +453,9 @@ It should match the full shader path as defined in the shader file.</p>
   <div class="markdown level1 remarks"><p>Subclasses should override this method and set all relevant shader uniforms
 (for example, floats, vectors, colors, textures, and keywords).</p>
 <p></p>
-Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
+<p>Do not call <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_IncMaterialVersion">IncMaterialVersion()</a> here. By the time this method is called the
 material has already been fetched, so any increment would take effect one frame late.
-Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.
+Staleness checks belong in <a class="xref" href="Gamelogic.Fx.PostProcessing.ShaderProperties.html#Gamelogic_Fx_PostProcessing_ShaderProperties_CheckMaterialVersion">CheckMaterialVersion()</a>.</p>
 </div>
 
 
