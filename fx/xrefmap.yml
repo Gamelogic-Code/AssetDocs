@@ -3221,6 +3221,19 @@ references:
   isSpec: "True"
   fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.Smoothness
   nameWithType: DitherMatrixBiasProperties.Smoothness
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.ToolMode
+  name: ToolMode
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_ToolMode
+  commentId: P:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.ToolMode
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.ToolMode
+  nameWithType: DitherMatrixBiasProperties.ToolMode
+- uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.ToolMode*
+  name: ToolMode
+  href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html#Gamelogic_Fx_Dithering_PostProcessing_Effects_DitherMatrixBiasProperties_ToolMode_
+  commentId: Overload:Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.ToolMode
+  isSpec: "True"
+  fullName: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.ToolMode
+  nameWithType: DitherMatrixBiasProperties.ToolMode
 - uid: Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties
   name: DitherTextureBiasProperties
   href: api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherTextureBiasProperties.html

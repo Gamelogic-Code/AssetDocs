@@ -3581,6 +3581,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "common/docs/ai.md",
+      "output": {
+        ".html": {
+          "relative_path": "common/docs/ai.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "common/docs/changes.md",
       "output": {
         ".html": {
@@ -4494,6 +4504,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "crosshatching/docs/ai.md",
+      "output": {
+        ".html": {
+          "relative_path": "crosshatching/docs/ai.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "crosshatching/docs/changes.md",
       "output": {
         ".html": {
@@ -4751,6 +4771,16 @@
         },
         ".json": {
           "relative_path": "crosshatching/docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dithering/docs/ai.md",
+      "output": {
+        ".html": {
+          "relative_path": "dithering/docs/ai.html"
         }
       },
       "version": ""

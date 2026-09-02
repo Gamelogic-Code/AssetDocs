@@ -94,8 +94,23 @@
         <article data-uid="">
 <h1 id="changes">Changes</h1>
 
-<h2 id="600-2026-08-27">[6.0.0] 2026-08-27</h2>
+<h2 id="610-2026-08-30">[6.1.0] 2026-08-30</h2>
+<h3 id="-new-features">🎉 New Features</h3>
+<ul>
+<li>Added AI Skills, so this package's features can be used with Unity's AI Assistant.</li>
+</ul>
 <h3 id="-bug-fixes">🐞 Bug Fixes</h3>
+<ul>
+<li>Fixed editing a Dither Matrix Bias matrix cell directly (or resizing the matrix) in the Dither Pattern Designer appearing to have no effect -- the edit was silently reverted on the next repaint.</li>
+<li>Fixed Dither Grid Bias ignoring <strong>Use UV Map</strong> whenever <strong>Pixelate</strong> was enabled (the default): the pixelated rendering path never sampled the UV map, so the pattern stayed screen-space-locked regardless of the UV Map setting. Pixelate is now automatically bypassed when Use UV Map is enabled, falling through to the (already correct) non-pixelated UV-map-aware path.</li>
+<li>Fixed the Dither Pattern Designer preview and the Dither Grid Bias / Dither Matrix Bias Texture Generator windows rendering solid black under URP in Unity 6.</li>
+</ul>
+<h3 id="-engineering">🔧 Engineering</h3>
+<ul>
+<li>Updated to Gamelogic.Fx version 6.1.0.</li>
+</ul>
+<h2 id="600-2026-08-27">[6.0.0] 2026-08-27</h2>
+<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed effects sometimes rendering with the wrong variant, or going black, depending on the active render pipeline: Unity's shader stripping could remove the pipeline-dependent variant actually in use. Fixed by auto-generating a <code>ShaderVariantCollection</code> that records the variants actually configured in the project and keeping it registered in Preloaded Shaders.</li>
 <li>Fixed scenes sometimes rendering black under URP RenderGraph.</li>
@@ -106,16 +121,16 @@
 <ul>
 <li>RenderGraph is now always used when available under URP, regardless of URP's <strong>Render Compatibility Mode</strong> setting.</li>
 </ul>
-<h3 id="-engineering">🔧 Engineering</h3>
+<h3 id="-engineering-1">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 6.0.0.</li>
 </ul>
 <h2 id="510-2026-07-18">[5.1.0] 2026-07-18</h2>
-<h3 id="-new-features">🎉 New Features</h3>
+<h3 id="-new-features-1">🎉 New Features</h3>
 <ul>
 <li>Added <code>HexFundamentalRegionPresets.Hex9x9Bayer</code> — a 9×9 hex preset.</li>
 </ul>
-<h3 id="-bug-fixes-1">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed: resizing the Dither Grid Bias / Dither Matrix Bias matrix did not refresh materials or version fields (URP renderer features, designer previews, and Inspector).</li>
 </ul>
@@ -123,12 +138,12 @@
 <ul>
 <li><strong>Dither Matrix Bias Texture Generator</strong> now generates via the shader (matching <strong>Dither Grid Bias Texture Generator</strong>) instead of pixel-by-pixel CPU generation. The existing <strong>All / R / G / B</strong> tabs on the matrix field now directly select grayscale vs. independent-channel output, replacing the separate Mode dropdown.</li>
 </ul>
-<h3 id="-engineering-1">🔧 Engineering</h3>
+<h3 id="-engineering-2">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 5.1.0. This fixes some material management issues in URP.</li>
 </ul>
 <h2 id="500-2026-07-15">[5.0.0] 2026-07-15</h2>
-<h3 id="-new-features-1">🎉 New Features</h3>
+<h3 id="-new-features-2">🎉 New Features</h3>
 <ul>
 <li>Added <strong>Dither Grid Bias</strong> effect — applies a data-driven dither bias using three independent per-channel floating-point matrices, snapped to either a hexagonal or rectangular pixel grid. See <a class="xref" href="../../api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherGridBiasProperties.html">DitherGridBiasProperties</a>.</li>
 <li>Added <strong>Dither Grid Bias Designer</strong> — an interactive editor window for designing and previewing the dither matrices used by the Dither Grid Bias effect. Open it from the component Inspector or via <strong>Window &gt; Gamelogic &gt; Fx &gt; Dither Grid Bias Designer</strong>.</li>
@@ -144,13 +159,13 @@
 <ul>
 <li>The Dither Pattern Designer and Dither Grid Bias Designer share a unified preview infrastructure, with a toolbar toggle between <strong>Test Image</strong> and <strong>Matrix</strong> views and a <strong>Zoom</strong> slider that scales the preview without modifying the bound properties.</li>
 </ul>
-<h3 id="-bug-fixes-2">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
 <ul>
 <li><code>FundamentalRegion</code> now implements <code>ISerializationCallbackReceiver</code>; <code>OnAfterDeserialize</code> nulls the lookup dictionary so it always rebuilds from the correct deserialized state. Fixes stale-dictionary issues after domain reloads and Undo.</li>
 <li><code>GridTypeFieldAttribute</code> default <code>hexEnumValue</code> corrected from <code>0</code> (Rect) to <code>1</code> (Hex), fixing inverted Rect/Hex rendering in the inspector.</li>
 <li><code>ResolveIsHex</code> in <code>FundamentalRegionDrawer</code> and <code>FundamentalRegionRGBDrawer</code> now defaults to rect (<code>false</code>) when the conditional property is not found, instead of hex.</li>
 </ul>
-<h3 id="-engineering-2">🔧 Engineering</h3>
+<h3 id="-engineering-3">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 5.0.0.</li>
 </ul>
@@ -165,27 +180,27 @@
 <li>Corrected various spelling errors across effect and how-to documentation.</li>
 </ul>
 <h2 id="400-2026-05-23">[4.0.0] 2026-05-23</h2>
-<h3 id="-new-features-2">🎉 New Features</h3>
+<h3 id="-new-features-3">🎉 New Features</h3>
 <ul>
 <li>Added <code>PixelOffset</code> to <a class="xref" href="../../api/Gamelogic.Fx.Dithering.PostProcessing.Effects.DitherMatrixBiasProperties.html">DitherMatrixBiasProperties</a>, allowing the pixel grid to be shifted in screen pixels.</li>
 </ul>
-<h3 id="-engineering-3">🔧 Engineering</h3>
+<h3 id="-engineering-4">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 4.0.0.</li>
 </ul>
 <h2 id="301-2026-04-15">[3.0.1] 2026-04-15</h2>
-<h3 id="-engineering-4">🔧 Engineering</h3>
+<h3 id="-engineering-5">🔧 Engineering</h3>
 <ul>
 <li>Updated to Gamelogic.Fx version 3.0.1.</li>
 <li>Updated to Extensions 4.6.1.</li>
 </ul>
 <h2 id="300-2026-03-15">[3.0.0] 2026-03-15</h2>
-<h3 id="-new-features-3">🎉 New Features</h3>
+<h3 id="-new-features-4">🎉 New Features</h3>
 <ul>
 <li>Now URP works fully with RenderGraph!</li>
 <li>Added layer masking for map renderers.</li>
 </ul>
-<h3 id="-bug-fixes-3">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
 <ul>
 <li>Effects stay active when changing scenes in the editor.</li>
 </ul>
@@ -195,11 +210,11 @@
 <li>A startup wizard makes it easier to import samples, find documentation, support email, and uninstall instructions.</li>
 <li>The same features are also added to menus <em>Tools/Gamelogic/Fx Dithering/</em>.</li>
 </ul>
-<h3 id="-bug-fixes-4">🐞 Bug Fixes</h3>
+<h3 id="-bug-fixes-5">🐞 Bug Fixes</h3>
 <ul>
 <li>Fixed a wrong <code>HelpURL</code> on <a class="xref" href="../../api/Gamelogic.Fx.Dithering.URP.GLDitherTextureBiasRendererFeature.html">GLDitherTextureBiasRendererFeature</a> which pointed to <code>DitherMatrixBias</code> instead of <code>DitherTextureBias</code>.</li>
 </ul>
-<h3 id="-engineering-5">🔧 Engineering</h3>
+<h3 id="-engineering-6">🔧 Engineering</h3>
 <ul>
 <li>Updated to the Gamelogic.Fx version 2.0.1.</li>
 <li>Updated to Extensions 4.6.0.</li>
@@ -209,14 +224,14 @@
 <li>Updated documentation fixing typos and other errors, and adding missing documentation.</li>
 </ul>
 <h2 id="200---2026">[2.0.0] - 2026</h2>
-<h3 id="-new-features-4">🎉 New Features</h3>
+<h3 id="-new-features-5">🎉 New Features</h3>
 <ul>
 <li>Added a <a href="../../common/docs/effects-reference-common.html#simple-outline">simple Outline</a> effect that often makes scenes easier to read.</li>
 <li>Added <a href="../../common/docs/map-renderers-reference-common.html">map renderers</a> (UV, normal, depth and instance ID).</li>
 <li>Added support for using UV map instead of screen UVs to sample the dithering texture or matrix. See
 <a href="effects-reference-dithering.html#dither-matrix-bias">Dither Matrix Bias</a>, for example.</li>
 </ul>
-<h3 id="-engineering-6">🔧 Engineering</h3>
+<h3 id="-engineering-7">🔧 Engineering</h3>
 <ul>
 <li>Updated to the Gamelogic.Fx version 2.0.0.</li>
 </ul>
@@ -233,12 +248,12 @@
 <li>It is best to uninstall and reinstall the package when upgrading.</li>
 </ul>
 <h2 id="110---2025-12-11">[1.1.0] - 2025-12-11</h2>
-<h3 id="-new-features-5">🎉 New Features</h3>
+<h3 id="-new-features-6">🎉 New Features</h3>
 <ul>
 <li>Added public properties to all post process effects (both Built-In and URP).</li>
 <li>Fixed shader serialization so shaders are now automatically included in builds.</li>
 </ul>
-<h3 id="-engineering-7">🔧 Engineering</h3>
+<h3 id="-engineering-8">🔧 Engineering</h3>
 <ul>
 <li>Updated to use Gamelogic Fx 1.1.0. This includes
 <ul>

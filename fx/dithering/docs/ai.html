@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Gamelogic Fx | Gamelogic Fx </title>
+      <title> | Gamelogic Fx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Gamelogic Fx | Gamelogic Fx ">
+      <meta name="title" content=" | Gamelogic Fx ">
       
       
       <link rel="icon" href="../../images/gamelogic_favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/common/docs/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/hermantulleken/fx_package/blob/main/DocSrc/dithering/docs/ai.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -46,7 +46,7 @@
       </script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -92,15 +92,34 @@
         </div>
 
         <article data-uid="">
-<h1 id="gamelogic-fx">Gamelogic Fx</h1>
 
-<p><em>Version 6.1.0</em></p>
-<p>Gamelogic Fx is the shared foundation included with every Gamelogic effects package (Dithering, Cross-hatching, and others). You do not need to install it separately — it ships as part of any Gamelogic Fx effects package you buy. It contains:</p>
+<h2 id="ai-skills">AI Skills</h2>
+<p>Gamelogic Fx ships <strong>AI Skills</strong> -- structured <code>SKILL.md</code> files that let Unity's built-in AI Assistant understand and drive this package's effects, map renderers, and tools directly from natural-language requests, instead of you having to know the exact component names and menu paths yourself.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>🧪 <strong>Experimental.</strong> AI Skills are a new, actively-evolving feature of both this package and of Unity's own AI Assistant. Behavior, accuracy, and the exact setup steps may change between Unity versions. Treat any AI-driven change to your project the way you would treat any other automated edit -- review it before committing.</p>
+</div>
+<h3 id="getting-it-going">Getting it going</h3>
+<p>Unity's AI Assistant discovers skills automatically once it's installed and skills are allowed to run -- there's no manual step needed to &quot;load&quot; this package's skills beyond having the AI Assistant enabled in your project and pointed at a conversation that can see this package. Because the exact enablement flow (menus, preference toggles, permission prompts) lives inside Unity's own evolving AI tooling rather than this package, we don't document the click-by-click steps here -- consult Unity's own AI Assistant documentation for the current setup flow, then just ask it for what you want in plain language, using the kinds of prompts below as a starting point.</p>
+<h3 id="example-prompts">Example prompts</h3>
+<p>These exercise the core Gamelogic Fx skills directly -- map renderers, the general-purpose post effects, and the texture-generation tools:</p>
 <ul>
-<li><a href="post-effects-framework.html">The framework for our post-effects</a>.</li>
-<li><a href="texture-generation-tools.html">Texture generation tools</a> useful creating effects textures and debugging textures.</li>
-<li>Several <a href="effects-reference-common.html">effects</a> that improve how other effects look, and often are useful by themselves.</li>
-<li>Several <a href="map-renderers-reference-common.html">map renderers</a> that can be used to render maps in different ways.</li>
+<li>&quot;render a depth map for my scene and use it to drive an outline effect&quot;</li>
+<li>&quot;make hatching/dithering follow surface curvature using a normal map&quot; <em>(see the Dithering/Cross-hatching examples below for the effect-specific side of this)</em></li>
+<li>&quot;add a blur, then posterize the result&quot;</li>
+<li>&quot;generate a Voronoi texture I can use as a pattern&quot;</li>
+<li>&quot;what post effects does gamelogic fx include for tone mapping?&quot;</li>
+</ul>
+<h3 id="example-prompts-for-dithering">Example prompts for Dithering</h3>
+<ul>
+<li>&quot;give my game a retro dithered look, classic bayer style&quot;</li>
+<li>&quot;i want screen dithering in URP driven by my own blue-noise texture, not a built-in matrix&quot;</li>
+<li>&quot;the dither pattern slides around when i move the camera, i want it to stick to the objects instead&quot;</li>
+<li>&quot;i want a monochrome dithered look, but then recolor it back afterwards -- what's the right effect order?&quot;</li>
+<li>&quot;i want to design my own dither matrix pattern for the effect on my camera, interactively&quot;</li>
+<li>&quot;can you bake a hex-grid dither pattern to a png i can use with dither texture bias&quot;</li>
+<li>&quot;does this project have dithering installed and set up correctly?&quot;</li>
+<li>&quot;my UV-map dithering works fine in the editor but goes flat in the actual build, no idea why&quot;</li>
 </ul>
 
 </article>
